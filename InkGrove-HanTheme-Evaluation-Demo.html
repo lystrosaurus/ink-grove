@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InkGrove · Final Product Demo</title>
+<style>
+:root{
+  --bg:#070a11;--bg2:#0b1019;--side:#090d15;--panel:#101622;--panel2:#141b29;--line:#202a3b;
+  --text:#edf2ff;--muted:#8d98aa;--dim:#5d687b;--accent:#8a7cff;--cyan:#59d5ff;--gold:#e4ba67;
+  --green:#61d4a1;--red:#ff7b88;--shadow:0 24px 70px rgba(0,0,0,.32);
+  --serif:Georgia,"Noto Serif SC","Songti SC",serif;
+}
+[data-theme="warm"]{--bg:#15100c;--bg2:#1b1510;--side:#17110d;--panel:#201914;--panel2:#261e17;--line:#3a2c22;--text:#f3e8d9;--muted:#b29e87;--dim:#7d6a58;--accent:#d88456;--cyan:#8fb5a7;--gold:#e0ad62;--green:#9abf78;--red:#d96b5f}
+[data-theme="ink"]{--bg:#0e1114;--bg2:#13171a;--side:#0f1215;--panel:#171b1e;--panel2:#1b2024;--line:#2b3339;--text:#ece9e2;--muted:#9d9990;--dim:#6f6b64;--accent:#b64a3b;--cyan:#6f8d98;--gold:#b99356;--green:#778f6a;--red:#b94b4b}
+[data-theme="light"]{--bg:#f4f5f8;--bg2:#ffffff;--side:#f7f8fb;--panel:#ffffff;--panel2:#f3f4f8;--line:#dfe3ea;--text:#1d2230;--muted:#6d7688;--dim:#9ba3b0;--accent:#6e60dc;--cyan:#1587a8;--gold:#a77828;--green:#2f8f67;--red:#c5515f;--shadow:0 20px 60px rgba(43,52,72,.12)}
+
+[data-theme="song"]{
+  --bg:#f2efe7;--bg2:#faf8f2;--side:#e9e5dc;--panel:#f8f5ed;--panel2:#eee9df;--line:#d8d0c2;
+  --text:#2a2926;--muted:#746f66;--dim:#9a9286;--accent:#6d7b78;--cyan:#6a8783;--gold:#a48654;
+  --green:#738a70;--red:#9f5f55;--shadow:0 24px 70px rgba(67,59,48,.12)
+}
+[data-theme="qinhan"]{
+  --bg:#120f0d;--bg2:#181310;--side:#15100d;--panel:#201713;--panel2:#281d17;--line:#453329;
+  --text:#efe2d0;--muted:#b29b83;--dim:#786552;--accent:#9e3e32;--cyan:#657d78;--gold:#b88a4b;
+  --green:#718065;--red:#b54a3e;--shadow:0 24px 70px rgba(0,0,0,.40)
+}
+[data-theme="ink"]{
+  --bg:#ecebe6;--bg2:#f7f6f1;--side:#e3e1da;--panel:#f5f3ed;--panel2:#eae7df;--line:#d1cec5;
+  --text:#252624;--muted:#6e716b;--dim:#9a9d95;--accent:#37464a;--cyan:#60777b;--gold:#8c7652;
+  --green:#687966;--red:#8f514c;--shadow:0 24px 70px rgba(52,52,45,.12)
+}
+[data-theme="dunhuang"]{
+  --bg:#18110e;--bg2:#211713;--side:#1c1310;--panel:#281b17;--panel2:#34231c;--line:#51392d;
+  --text:#f0dfc3;--muted:#bea485;--dim:#806c56;--accent:#a94f3c;--cyan:#53848a;--gold:#d19a4a;
+  --green:#6d8b68;--red:#bd5847;--shadow:0 24px 70px rgba(0,0,0,.40)
+}
+[data-theme="celadon"]{
+  --bg:#e8eee9;--bg2:#f5f8f5;--side:#e1e9e3;--panel:#f2f6f2;--panel2:#e5ece6;--line:#cad7cc;
+  --text:#26312c;--muted:#68796f;--dim:#93a197;--accent:#657f73;--cyan:#6f9592;--gold:#9b8558;
+  --green:#65806a;--red:#9b5d56;--shadow:0 24px 70px rgba(50,77,63,.12)
+}
+/* Art-direction differences beyond color */
+[data-theme="song"] .article h1,[data-theme="song"] .chapter-break strong,[data-theme="ink"] .article h1,[data-theme="ink"] .chapter-break strong,[data-theme="celadon"] .article h1{font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-weight:500}
+[data-theme="song"] .hero-visual,[data-theme="ink"] .hero-visual,[data-theme="celadon"] .hero-visual{box-shadow:none;border-radius:8px}
+[data-theme="qinhan"] .card,[data-theme="qinhan"] .insight,[data-theme="dunhuang"] .card,[data-theme="dunhuang"] .insight{border-radius:6px}
+[data-theme="qinhan"] .chapter-break{border-color:color-mix(in srgb,var(--gold) 35%,var(--line));letter-spacing:.03em}
+[data-theme="dunhuang"] .chapter-break{background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--gold) 10%,transparent),transparent)}
+[data-theme="ink"] .article p{letter-spacing:.02em}
+[data-theme="celadon"] .box,[data-theme="song"] .box{box-shadow:none}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);background:
+  radial-gradient(circle at 76% -8%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 30%),
+  radial-gradient(circle at 16% 8%,color-mix(in srgb,var(--cyan) 7%,transparent),transparent 22%),
+  var(--bg);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+button{font:inherit}
+.app{display:grid;grid-template-columns:292px minmax(0,1fr);min-height:100vh;transition:.25s}
+.app.slim{grid-template-columns:72px minmax(0,1fr)}
+.sidebar{height:100vh;position:sticky;top:0;padding:18px 13px;border-right:1px solid var(--line);background:color-mix(in srgb,var(--side) 96%,transparent);backdrop-filter:blur(18px);overflow:auto;z-index:20}
+.brand{display:flex;align-items:center;gap:10px;padding:3px 7px 18px;font-weight:800}
+.logo{width:36px;height:36px;border-radius:12px;font-size:10px;letter-spacing:-.5px;background:linear-gradient(135deg,var(--accent),var(--cyan));display:grid;place-items:center;flex:none;color:white;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 24%,transparent)}
+.bt{white-space:nowrap}.bt small{display:block;color:var(--dim);font-size:9px;font-weight:500;letter-spacing:.8px;margin-top:2px}
+.search{padding:10px 11px;border:1px solid var(--line);border-radius:11px;color:var(--muted);font-size:12px;background:var(--panel);white-space:nowrap;overflow:hidden;cursor:pointer}
+.group{margin-top:20px}.gt{padding:0 9px 7px;color:var(--dim);font-size:9px;letter-spacing:1.55px;white-space:nowrap}
+.item{display:flex;align-items:center;gap:9px;padding:9px;border-radius:9px;color:var(--muted);font-size:12px;cursor:pointer;white-space:nowrap;overflow:hidden}
+.item:hover,.item.on{background:color-mix(in srgb,var(--panel2) 92%,transparent);color:var(--text)}
+.item .count{margin-left:auto;color:var(--dim);font-size:9px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}.gold{background:var(--gold)}.green{background:var(--green)}
+.slim .bt,.slim .search span,.slim .gt,.slim .item .label,.slim .count{display:none}.slim .item{justify-content:center}.slim .search{text-align:center}
+.main{min-width:0}
+.topbar{height:62px;position:sticky;top:0;z-index:15;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between;padding:0 26px}
+.lefttools,.tools{display:flex;align-items:center;gap:8px}.btn,.pill{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:9px;padding:6px 9px;cursor:pointer;font-size:10.5px}.btn:hover,.pill:hover{color:var(--text)}
+.crumb{font-size:10.5px;color:var(--muted)}
+.shell{display:grid;grid-template-columns:minmax(0,940px) 190px;justify-content:center;gap:46px;padding:0 34px}
+.article{padding:68px 0 120px;min-width:0}
+.rail{position:sticky;top:96px;height:max-content;margin-top:77px;border-left:1px solid var(--line);padding-left:18px}
+.rail small{font-size:9px;color:var(--dim);letter-spacing:1.4px}.rail a{display:block;color:var(--muted);text-decoration:none;font-size:11px;margin:12px 0;line-height:1.5}.rail a:hover{color:var(--text)}
+.eyebrow{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:700}.eyebrow.goldtxt{color:var(--gold)}
+h1{font-size:50px;line-height:1.14;letter-spacing:-1.8px;margin:14px 0}.dek{font-size:17.5px;line-height:1.86;color:var(--muted);max-width:810px}
+.meta{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 44px}.tag{font-size:10px;padding:5px 9px;border:1px solid var(--line);border-radius:99px;color:var(--muted);background:color-mix(in srgb,var(--panel) 80%,transparent)}
+.lead{font-size:18px;line-height:1.95;color:color-mix(in srgb,var(--text) 90%,var(--muted));border-left:3px solid var(--accent);padding-left:21px;margin:30px 0}
+h2{font-size:28px;margin:58px 0 17px;scroll-margin-top:90px}h3{font-size:19px}.article p{font-family:var(--serif);font-size:16.9px;line-height:2;color:color-mix(in srgb,var(--text) 79%,var(--muted))}
+.hero-visual:before{content:"";position:absolute;right:8%;top:8%;width:180px;height:180px;border-radius:55% 45% 60% 40%;border:1px solid color-mix(in srgb,var(--green) 18%,transparent);transform:rotate(18deg);pointer-events:none}
+.hero-visual{margin:34px 0 44px;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:
+linear-gradient(145deg,color-mix(in srgb,var(--accent) 14%,var(--panel2)),color-mix(in srgb,var(--cyan) 6%,var(--panel)));position:relative;min-height:430px;box-shadow:var(--shadow)}
+.hero-visual svg{width:100%;height:430px;display:block}.hero-caption{position:absolute;left:24px;bottom:22px;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(14px);font-size:10px;color:var(--muted);border:1px solid var(--line)}
+.chapter-break{margin:72px 0 54px;padding:54px 38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent) 5%,transparent),transparent)}
+.chapter-break .no{font-size:11px;color:var(--gold);letter-spacing:3px}.chapter-break strong{display:block;font-family:var(--serif);font-size:34px;line-height:1.45;margin-top:14px;font-weight:500}
+.inline-concept{color:color-mix(in srgb,var(--accent) 70%,var(--text));border-bottom:1px dashed var(--accent);cursor:pointer}
+.insight{margin:30px 0;padding:24px;border:1px solid #2a354a;border-color:color-mix(in srgb,var(--line) 80%,var(--accent));border-radius:18px;background:linear-gradient(145deg,color-mix(in srgb,var(--panel2) 92%,var(--accent)),var(--panel));box-shadow:0 15px 45px rgba(0,0,0,.13)}
+.insight small{color:var(--gold);letter-spacing:1.4px}.insight h3{margin:8px 0}.insight p{font-family:inherit;font-size:13.5px;color:var(--muted);line-height:1.8}
+.design-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 36px}.ds{padding:14px;border:1px solid var(--line);border-radius:13px;background:var(--panel);font-size:11px;color:var(--muted)}.ds i{display:block;width:28px;height:4px;border-radius:9px;margin-bottom:10px}.info i{background:var(--cyan)}.success i{background:var(--green)}.warning i{background:var(--gold)}.danger i{background:var(--red)}
+.quote{margin:30px 0;padding:21px 23px;border-left:3px solid var(--gold);background:var(--panel);border-radius:0 14px 14px 0;font-family:var(--serif);font-size:16px;line-height:1.9;color:color-mix(in srgb,var(--text) 86%,var(--muted))}
+.quote .cite{font-family:Inter,sans-serif;font-size:10px;color:var(--dim);margin-top:8px;cursor:pointer}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:26px 0}.card{padding:20px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.card small{color:var(--muted)}.card strong{display:block;margin:8px 0}.card p{font-family:inherit;font-size:12.5px;line-height:1.7;color:var(--muted)}
+.process{display:flex;align-items:stretch;gap:8px;margin:30px 0}.step{flex:1;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.step b{display:block;color:var(--cyan);font-size:12px;margin-bottom:6px}.step span{font-size:11px;color:var(--muted);line-height:1.55}.arrow{align-self:center;color:var(--dim)}
+.graph{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);margin:30px 0}.graph svg{width:100%;height:auto;display:block}.graph .legend{font-size:10px;color:var(--dim);margin-top:7px}
+.case{padding:22px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(135deg,var(--panel2),var(--panel));margin:30px 0}.case .casehead{display:flex;justify-content:space-between;gap:15px}.case small{color:var(--green);letter-spacing:1.3px}.case h3{margin:7px 0}.case p{font-family:inherit;font-size:13px;line-height:1.8;color:var(--muted)}
+.timeline{position:relative;margin:30px 0;padding-left:24px}.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--line)}.tl{position:relative;padding:0 0 22px 16px}.tl:before{content:"";position:absolute;left:-22px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent)}.tl b{font-size:13px}.tl p{font-family:inherit;font-size:12px;line-height:1.65;margin:5px 0;color:var(--muted)}
+.note{margin:30px 0;padding:18px 20px;border-radius:14px;background:color-mix(in srgb,var(--accent) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent) 28%,transparent)}.note .nhead{font-size:10px;color:color-mix(in srgb,var(--accent) 70%,var(--text));letter-spacing:1.2px;margin-bottom:7px}.note p{font-family:inherit;font-size:13px;line-height:1.75;margin:0;color:var(--muted)}
+.callout{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:18px;border-radius:14px;background:color-mix(in srgb,var(--gold) 5%,transparent);border:1px solid color-mix(in srgb,var(--gold) 22%,transparent);margin:27px 0}.callout .ico{width:42px;height:42px;border-radius:12px;background:color-mix(in srgb,var(--gold) 12%,transparent);display:grid;place-items:center;color:var(--gold);font-weight:800}.callout b{font-size:13px}.callout .desc{font-size:12px;color:var(--muted);line-height:1.65;margin-top:5px}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:30px 0}.sum{padding:18px;border-radius:14px;background:color-mix(in srgb,var(--green) 4%,transparent);border:1px solid color-mix(in srgb,var(--green) 22%,transparent)}.sum strong{color:var(--green);font-size:18px}.sum div{font-size:12px;color:var(--muted);line-height:1.65;margin-top:7px}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rel{padding:15px;border:1px solid var(--line);border-radius:13px;background:var(--panel);cursor:pointer}.rel:hover{border-color:color-mix(in srgb,var(--line) 50%,var(--accent))}.rel b{display:block;margin-bottom:5px}.rel span{font-size:11px;color:var(--muted);line-height:1.55}
+.sourcebox{margin-top:50px;padding-top:24px;border-top:1px solid var(--line)}.sourceitem{padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--line) 45%,transparent);display:grid;grid-template-columns:90px 1fr;gap:16px}.sourceitem small{color:var(--dim)}.sourceitem div{font-size:12px;color:var(--muted)}
+.bookhero{padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,var(--panel2),var(--panel));display:grid;grid-template-columns:130px 1fr;gap:28px;box-shadow:var(--shadow)}.cover{height:190px;border-radius:10px;background:linear-gradient(155deg,color-mix(in srgb,var(--accent) 50%,#22345f),#11182a);display:grid;place-items:center;text-align:center;color:#dfe5f5;padding:12px;font-weight:700;box-shadow:0 15px 35px #0007}.metric{display:flex;gap:24px;margin-top:18px}.metric b{font-size:21px}.metric span{display:block;font-size:9px;color:var(--muted)}
+.articlelist{display:grid;gap:10px}.row{padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:var(--panel);cursor:pointer}.row:hover{border-color:color-mix(in srgb,var(--line) 55%,var(--accent))}.row small{color:var(--cyan)}.row b{display:block;margin:5px 0}.row span{font-size:11px;color:var(--muted)}
+.homegrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.feature{padding:26px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(145deg,var(--panel2),var(--panel));cursor:pointer}.feature:hover{border-color:color-mix(in srgb,var(--line) 55%,var(--accent))}
+.concept-hero{display:grid;grid-template-columns:130px 1fr;gap:28px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,var(--panel2),var(--panel))}.concept-symbol{width:120px;height:120px;border-radius:32px;background:radial-gradient(circle at 35% 25%,color-mix(in srgb,var(--gold) 35%,transparent),transparent 34%),linear-gradient(145deg,color-mix(in srgb,var(--accent) 28%,var(--panel)),var(--panel));display:grid;place-items:center;font-size:42px;color:var(--gold);box-shadow:var(--shadow)}
+.drawer{position:fixed;right:-390px;top:0;width:390px;height:100vh;background:var(--bg2);border-left:1px solid var(--line);box-shadow:var(--shadow);z-index:40;transition:.28s;padding:28px;overflow:auto}.drawer.open{right:0}.drawer .close{float:right}.drawer .kicker{margin-top:50px;font-size:9px;color:var(--cyan);letter-spacing:1.5px}.drawer h2{font-size:28px;margin:10px 0}.drawer p{font-size:13.5px;line-height:1.8;color:var(--muted)}.drawer .mini{margin-top:20px;padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.drawer .mini small{color:var(--gold)}
+.pop{position:fixed;inset:auto 24px 24px auto;width:360px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);box-shadow:var(--shadow);z-index:35;display:none}.pop.show{display:block}.pop small{color:var(--cyan)}.pop p{font-family:inherit;font-size:12px;line-height:1.7;margin:8px 0;color:var(--muted)}
+.theme-menu{display:flex;gap:6px}.theme-dot{width:18px;height:18px;border-radius:50%;border:1px solid var(--line);cursor:pointer}.td1{background:linear-gradient(135deg,#8a7cff,#59d5ff)}.td2{background:linear-gradient(135deg,#d88456,#e0ad62)}.td3{background:linear-gradient(135deg,#b64a3b,#6f8d98)}.td4{background:linear-gradient(135deg,#ffffff,#6e60dc)}
+.focus .sidebar,.focus .rail{display:none}.focus .app{grid-template-columns:1fr}.focus .shell{grid-template-columns:minmax(0,940px)}
+@media(max-width:1060px){.shell{grid-template-columns:minmax(0,900px)}.rail{display:none}}
+@media(max-width:760px){.app,.app.slim{grid-template-columns:1fr}.sidebar{display:none}.shell{padding:0 20px}.article{padding-top:44px}h1{font-size:36px}.compare,.related,.summary,.design-strip,.homegrid{grid-template-columns:1fr}.process{flex-direction:column}.arrow{transform:rotate(90deg)}.bookhero,.concept-hero{grid-template-columns:1fr}.cover{width:125px}.drawer{width:100%;right:-100%}.crumb{display:none}.hero-visual,.hero-visual svg{height:320px;min-height:320px}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">IG</div><div class="bt">InkGrove<small>WHERE KNOWLEDGE TAKES ROOT</small></div></div>
+  <div class="search" onclick="toast('搜索：标题 / 正文 / 概念 / 来源')">⌕ <span>搜索文章、书籍、概念</span></div>
+  <div class="group"><div class="gt">LIBRARY</div>
+    <div class="item" onclick="showPage('home')">✦ <span class="label">知识首页</span></div>
+    <div class="item">⌘ <span class="label">全部文章</span><span class="count">126</span></div>
+    <div class="item" onclick="showPage('concept')">◇ <span class="label">概念索引</span><span class="count">74</span></div>
+  </div>
+  <div class="group"><div class="gt">书籍精炼</div>
+    <div class="item" onclick="showPage('book')"><i class="dot"></i><span class="label">《思考，快与慢》</span></div>
+    <div class="item"><i class="dot"></i><span class="label">《投资最重要的事》</span></div>
+    <div class="item"><i class="dot"></i><span class="label">《原则》</span></div>
+  </div>
+  <div class="group"><div class="gt">贯通思考</div>
+    <div class="item" onclick="showPage('cross')"><i class="dot gold"></i><span class="label">如何做高质量决策</span></div>
+    <div class="item"><i class="dot gold"></i><span class="label">不确定性下的判断</span></div>
+  </div>
+  <div class="group"><div class="gt">我的方法论</div>
+    <div class="item"><i class="dot green"></i><span class="label">决策检查清单</span></div>
+    <div class="item"><i class="dot green"></i><span class="label">复盘框架</span></div>
+  </div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="lefttools"><button class="btn" onclick="toggleSide()">☰</button><span class="crumb" id="crumb">知识首页</span></div>
+    <div class="tools">
+      <div class="theme-menu"><i class="theme-dot td1" onclick="theme('')"></i><i class="theme-dot td2" onclick="theme('warm')"></i><i class="theme-dot td3" onclick="theme('ink')"></i><i class="theme-dot td4" onclick="theme('light')"></i></div>
+      <button class="pill" onclick="toggleFocus()">◐ 专注</button><span class="pill">⌘ K</span><span class="pill">···</span>
+    </div>
+  </div>
+  <div class="shell"><article class="article" id="page" data-han-scope></article><nav class="rail" id="rail"></nav></div>
+</main>
+</div>
+
+<aside class="drawer" id="drawer">
+  <button class="btn close" onclick="closeConcept()">×</button>
+  <div class="kicker">CONCEPT · 概念节点</div><h2>损失厌恶</h2>
+  <p>概念侧栏用于“原地继续理解”，不打断文章。这里展示的内容由上游 Agent 生成，InkGrove 只负责呈现。</p>
+  <div class="mini"><small>一句话理解</small><p>概念摘要与核心定义。</p></div>
+  <div class="mini"><small>来源分布</small><p>《思考，快与慢》 · 2 篇<br>《投资最重要的事》 · 1 篇<br>贯通思考 · 4 篇</p></div>
+  <div class="mini"><small>继续阅读</small><p>损失厌恶：关键概念精炼<br>不确定性下的判断</p></div>
+</aside>
+<div class="pop" id="pop"><small>SOURCE CONTEXT</small><p>这里展示书籍、章节、页码、原文摘录或上游 Agent 保留的来源定位。</p><button class="btn" onclick="hideCitation()">关闭</button></div>
+
+<script>
+const heroSVG = `
+<div class="hero-visual">
+<svg viewBox="0 0 900 430" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#0a0f18"/></linearGradient>
+<radialGradient id="orb" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8a7cff" stop-opacity=".7"/><stop offset="1" stop-color="#8a7cff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="430" fill="url(#bgG)"/>
+<circle cx="305" cy="200" r="125" fill="url(#orb)"/>
+<circle cx="585" cy="210" r="105" fill="none" stroke="#59d5ff" stroke-opacity=".36" stroke-width="1.5"/>
+<circle cx="585" cy="210" r="68" fill="none" stroke="#e4ba67" stroke-opacity=".36" stroke-width="1.5"/>
+<path d="M170 318 C300 240, 380 300, 465 218 S660 135,760 170" fill="none" stroke="#ffffff" stroke-opacity=".11" stroke-width="2"/>
+<path d="M180 320 C300 270, 410 345, 530 260 S680 150,790 215" fill="none" stroke="#8a7cff" stroke-opacity=".55" stroke-width="2"/>
+<circle cx="465" cy="218" r="7" fill="#e4ba67"/>
+<circle cx="585" cy="210" r="8" fill="#59d5ff"/>
+<text x="70" y="90" fill="#eef2ff" font-size="30" font-weight="700">DECISION</text>
+<text x="70" y="120" fill="#7d899b" font-size="12" letter-spacing="3">SEE THE SYSTEM BEFORE THE ANSWER</text>
+</svg>
+<div class="hero-caption">Visual Narrative · 视觉不是装饰，而是文章的一部分</div></div>`;
+
+const home = `
+<div class="eyebrow">INKGROVE · WHERE KNOWLEDGE TAKES ROOT</div>
+<h1>让读过的知识，<br>在这里扎根、生长、彼此连接。</h1>
+<div class="dek">书籍是种子，概念是根系，文章是生长出来的枝叶。上游 Agent 负责精炼与贯通，InkGrove 负责组织、阅读、关联与展示。这里不是文件仓库，而是一片持续生长的个人知识林。</div>
+<div class="meta"><span class="tag">28 本书</span><span class="tag">126 篇知识文章</span><span class="tag">74 个概念</span><span class="tag">18 篇贯通思考</span></div>
+${heroSVG}
+
+<div class="box" style="margin-top:34px">
+<small>THEME ENGINE · HAN-DESIGN INTEGRATION PREVIEW</small>
+<h3>同一套知识结构，不同出版气质</h3>
+<p>右上角可切换宋、秦汉、水墨、敦煌、青瓷。这里不仅换颜色，也轻微改变标题字体、圆角、留白、章节过场与材质感。实际落地建议 InkGrove 负责交互骨架，Han 只负责文章区域的 Art Direction。</p>
+</div>
+<h2 id="h1">继续阅读</h2>
+<div class="homegrid">
+<div class="feature" onclick="showPage('cross')"><small style="color:var(--gold)">贯通思考 · 8 MIN</small><h3>真正困难的不是做决定，而是看见自己正在如何做决定</h3><div class="dek" style="font-size:13px">3 本书 · 6 个概念</div></div>
+<div class="feature" onclick="showPage('book')"><small style="color:var(--cyan)">最近精炼</small><h3>《思考，快与慢》</h3><div class="dek" style="font-size:13px">12 篇精炼文章 · 18 个概念</div></div>
+</div>
+<h2 id="h2">最近形成的知识</h2>
+<div class="articlelist"><div class="row" onclick="showPage('article')"><small>书籍精炼</small><b>系统 1 与系统 2：理解整本书的入口</b><span>8 min · 单书核心框架</span></div>
+<div class="row" onclick="showPage('cross')"><small>贯通思考</small><b>如何在不确定性下做高质量决策</b><span>多来源重新组织</span></div>
+<div class="row"><small>我的方法论</small><b>重大决策前，我需要检查的 7 件事</b><span>由理解进一步沉淀出的实践文章</span></div></div>`;
+
+const book = `
+<div class="eyebrow">BOOK KNOWLEDGE HOME · 书籍知识主页</div>
+<div class="bookhero"><div class="cover">THINKING<br>FAST<br>AND SLOW</div><div><h1 style="font-size:38px;margin-top:3px">《思考，快与慢》</h1><div class="dek" style="font-size:14px">一本书在 InkGrove 中不是电子书文件，而是一组已经精炼好的知识内容及其关系。</div><div class="meta" style="margin:16px 0 0"><span class="tag">推荐主题：InkGrove Night / Song</span></div><div class="metric"><div><b>12</b><span>精炼文章</span></div><div><b>18</b><span>核心概念</span></div><div><b>6</b><span>关联主题</span></div></div></div></div>
+<h2 id="b1">一句话理解这本书</h2><div class="lead">这里承载上游 Agent 生成的全书主旨，让进入细节前先有一个稳定的认知锚点。</div>
+<h2 id="b2">全书知识地图</h2>
+<div class="graph"><svg viewBox="0 0 760 240"><line x1="380" y1="120" x2="180" y2="70" stroke="#344158"/><line x1="380" y1="120" x2="585" y2="70" stroke="#344158"/><line x1="380" y1="120" x2="250" y2="195" stroke="#344158"/><line x1="380" y1="120" x2="510" y2="195" stroke="#344158"/>
+<circle cx="380" cy="120" r="56" fill="#8a7cff"/><text x="380" y="116" text-anchor="middle" fill="white" font-size="15">全书核心</text><text x="380" y="137" text-anchor="middle" fill="#e9e7ff" font-size="10">知识地图</text>
+<circle cx="180" cy="70" r="42" fill="#141b29" stroke="#59d5ff"/><text x="180" y="75" text-anchor="middle" fill="#eef2ff" font-size="12">判断机制</text>
+<circle cx="585" cy="70" r="42" fill="#141b29" stroke="#e4ba67"/><text x="585" y="75" text-anchor="middle" fill="#eef2ff" font-size="12">认知偏差</text>
+<circle cx="250" cy="195" r="38" fill="#141b29" stroke="#61d4a1"/><text x="250" y="200" text-anchor="middle" fill="#eef2ff" font-size="12">决策</text>
+<circle cx="510" cy="195" r="38" fill="#141b29" stroke="#ff7b88"/><text x="510" y="200" text-anchor="middle" fill="#eef2ff" font-size="12">风险</text></svg><div class="legend">书籍主页使用大型结构组件建立全景，而不是复制原书目录。</div></div>
+<h2 id="b3">精炼文章</h2>
+<div class="articlelist"><div class="row" onclick="showPage('article')"><small>01 · 核心框架</small><b>系统 1 与系统 2：理解整本书的入口</b><span>8 min · 5 个概念</span></div><div class="row" onclick="openConcept()"><small>02 · 关键概念</small><b>损失厌恶：为什么失去带来的感受更强烈</b><span>6 min · 关联 4 篇贯通文章</span></div><div class="row"><small>03 · 判断机制</small><b>锚定、可得性与代表性：直觉如何制造偏差</b><span>11 min · 7 个概念</span></div></div>`;
+
+const article = `
+<div class="eyebrow">BOOK DISTILLATION · 单书精炼</div><h1>系统 1 与系统 2：<br>理解整本书的入口</h1>
+<div class="dek">标准知识文章：正文负责讲清楚，结构组件负责看明白，概念与来源负责按需下钻。</div>
+<div class="meta"><span class="tag">核心框架</span><span class="tag">认知</span><span class="tag">8 min</span></div>
+${heroSVG}
+<div class="design-strip"><div class="ds info"><i></i><b>定义 / 概念</b><br>蓝色语义</div><div class="ds success"><i></i><b>案例 / 总结</b><br>绿色语义</div><div class="ds warning"><i></i><b>注意 / 边界</b><br>金色语义</div><div class="ds danger"><i></i><b>偏差 / 风险</b><br>红色语义</div></div>
+<div class="lead">上游 Agent 生成内容，InkGrove 不再重新生成，而是把内容转成统一的 Article + Blocks 展示协议。</div>
+<h2 id="a1">01 · 正文是主角</h2><p>文章可以自然连续阅读。遇到 <span class="inline-concept" onclick="openConcept()">损失厌恶</span> 这样的概念时，可以原地展开，不必跳离阅读上下文。</p>
+<div class="compare"><div class="card"><small>SYSTEM A</small><strong>快速、自动、直觉</strong><p>适合对照型知识结构。</p></div><div class="card"><small>SYSTEM B</small><strong>缓慢、费力、审慎</strong><p>组件表达关系，不规定内容。</p></div></div>
+<div class="chapter-break"><span class="no">CHAPTER 02</span><strong>一篇知识文章，应该既能读，<br>也能“看懂结构”</strong></div>
+<h2 id="a2">02 · 知识组件是文章语言</h2>
+<div class="process"><div class="step"><b>01 定义</b><span>先建立核心概念</span></div><div class="arrow">→</div><div class="step"><b>02 关系</b><span>看清概念如何连接</span></div><div class="arrow">→</div><div class="step"><b>03 案例</b><span>把抽象知识落到情境</span></div><div class="arrow">→</div><div class="step"><b>04 回看</b><span>沉淀自己的理解</span></div></div>
+<div class="insight"><small>CORE IDEA</small><h3>Article + Blocks</h3><p>段落、洞见、引用、比较、流程、图、案例、表格都作为文章内部 Block。上游负责内容，展示层负责选择视觉语言。</p></div>
+<div class="case"><div class="casehead"><div><small>CASE · 案例</small><h3>抽象概念什么时候需要案例？</h3></div><span class="tag">场景化理解</span></div><p>当概念定义本身不足以形成直觉时，用案例把知识落到一个真实场景。案例不是装饰，而是帮助理解。</p></div>
+<div class="note"><div class="nhead">MY NOTE · 我的批注</div><p>个人批注视觉上独立于书籍内容和 Agent 综合，长期回看时不会混淆不同声音。</p></div>
+<div class="callout"><div class="ico">!</div><div><b>边界提醒</b><div class="desc">不是每段文字都要卡片化。只有当结构本身能降低理解成本时，才使用组件。</div></div></div>
+<div class="sources"><div class="eyebrow" style="color:var(--dim)">SOURCES</div><div class="sourceitem"><small>BOOK</small><div>原书章节 / 页码 / 上游 Agent 保留的来源定位</div></div></div>`;
+
+const cross = `
+<div class="eyebrow goldtxt">CROSS-BOOK SYNTHESIS · 贯通思考</div><h1>真正困难的不是做决定，<br>而是看见自己正在如何做决定</h1>
+<div class="dek">由多本书、多个概念和阶段性思考重新组织而成。InkGrove 把复杂知识呈现成一条可以理解、回看和继续延伸的阅读路径。</div>
+<div class="meta"><span class="tag">决策</span><span class="tag">认知偏差</span><span class="tag">二阶思维</span><span class="tag">3 本书 · 6 个概念</span></div>
+${heroSVG}
+<div class="lead">高质量决策的起点，可能不是“我应该选 A 还是 B”，而是先意识到：我正在用什么方式理解这个问题，以及这种理解本身可能遗漏了什么。</div>
+<h2 id="c1">01 · 决策之前，先识别判断系统</h2>
+<p>面对复杂问题，人会自然依赖快速判断。它很有效，但也意味着我们常常在没有意识到的情况下，把熟悉感、最近发生的事、已有立场和即时情绪当作证据。这里可以把 <span class="inline-concept" onclick="openConcept()">损失厌恶</span>、锚定、可得性等概念作为文章里的可展开知识节点。</p>
+<div class="insight"><small>CORE IDEA · 核心洞见</small><h3>先看见“我是怎么判断的”，再讨论“判断是什么”</h3><p>正文给结论，洞见块压缩认知，概念节点按需下钻，来源引用负责追溯。</p></div>
+<div class="quote">一篇知识文章不需要把所有背景都摊在正文里。真正重要的是：用户随时可以继续向下理解，但默认阅读路径仍然保持干净。<div class="cite" onclick="showCitation()">查看来源与上下文 ↗</div></div>
+<div class="chapter-break"><span class="no">CHAPTER 02</span><strong>一本书给你一个世界，<br>跨书连接让你看见世界的边界</strong></div>
+<h2 id="c2">02 · 单本书给视角，跨书连接给边界</h2>
+<p>跨书文章的价值不是把更多观点堆进来，而是让不同视角之间的关系变得可见。</p>
+<div class="compare"><div class="card"><small>来源视角 A</small><strong>认知偏差</strong><p>关注人在判断时如何受到直觉、启发式和心理机制影响。</p></div><div class="card"><small>来源视角 B</small><strong>二阶影响</strong><p>关注一个选择发生之后，后续连锁反应和长期结果如何展开。</p></div></div>
+<div class="graph"><svg viewBox="0 0 760 260">
+<line x1="165" y1="80" x2="375" y2="128" stroke="#344158" stroke-width="2"/><line x1="590" y1="72" x2="390" y2="128" stroke="#344158" stroke-width="2"/><line x1="375" y1="142" x2="255" y2="218" stroke="#344158" stroke-width="2"/><line x1="390" y1="142" x2="515" y2="218" stroke="#344158" stroke-width="2"/>
+<circle cx="165" cy="80" r="48" fill="#141b2a" stroke="#8a7cff"/><text x="165" y="76" text-anchor="middle" fill="#eef2ff" font-size="15">认知偏差</text><text x="165" y="98" text-anchor="middle" fill="#8792a6" font-size="10">如何判断</text>
+<circle cx="590" cy="72" r="48" fill="#141b2a" stroke="#59d5ff"/><text x="590" y="68" text-anchor="middle" fill="#eef2ff" font-size="15">二阶思维</text><text x="590" y="90" text-anchor="middle" fill="#8792a6" font-size="10">然后呢</text>
+<circle cx="382" cy="132" r="58" fill="#8a7cff"/><text x="382" y="128" text-anchor="middle" fill="white" font-size="16" font-weight="700">高质量决策</text><text x="382" y="151" text-anchor="middle" fill="#eef2ff" font-size="10">综合理解</text>
+<circle cx="255" cy="218" r="34" fill="#111724" stroke="#e4ba67"/><text x="255" y="222" text-anchor="middle" fill="#e4ba67" font-size="12">反馈</text><circle cx="515" cy="218" r="34" fill="#111724" stroke="#61d4a1"/><text x="515" y="222" text-anchor="middle" fill="#61d4a1" font-size="12">复盘</text></svg>
+<div class="legend">只有当“关系本身”值得理解时，才在正文插入关系图。</div></div>
+<div class="timeline"><div class="tl"><b>来源观点</b><p>保留书籍或文章本身的论述。</p></div><div class="tl"><b>Agent 贯通</b><p>比较多个来源，形成新的组织结构。</p></div><div class="tl"><b>我的判断</b><p>阅读之后留下自己的补充、异议与阶段性理解。</p></div></div>
+<div class="note"><div class="nhead">MY INSIGHT · 我的洞见</div><p>未来“我的洞见”应该成为独立知识资产，它不是普通批注，而是多次阅读后真正沉淀下来的个人判断。</p></div>
+<h2 id="c3">03 · 理解完成后，知识才有资格进入实践</h2><p>并不是所有知识都应该立即变成方法论。InkGrove 首先承担理解与组织的角色；如果某篇文章进一步沉淀为检查清单、工作流或 Skill，它可以出现在文章结尾。</p>
+<div class="summary"><div class="sum"><strong>01</strong><div>先理解判断方式，再判断结论。</div></div><div class="sum"><strong>02</strong><div>用多来源看见单一解释的边界。</div></div><div class="sum"><strong>03</strong><div>理解充分后，再决定是否沉淀为实践。</div></div></div>
+<h2 id="related">继续理解</h2><div class="related"><div class="rel" onclick="showPage('concept')"><b>损失厌恶</b><span>概念专题 · 来自 4 篇文章</span></div><div class="rel" onclick="showPage('article')"><b>系统 1 / 系统 2</b><span>单书精炼 · 《思考，快与慢》</span></div><div class="rel"><b>不确定性下的判断</b><span>贯通思考 · 11 min</span></div></div>
+<div class="sourcebox"><div class="eyebrow" style="color:var(--dim)">SOURCES · 来源</div><div class="sourceitem"><small>BOOK 01</small><div>《思考，快与慢》 · 用于认知偏差与判断机制相关材料</div></div><div class="sourceitem"><small>BOOK 02</small><div>《投资最重要的事》 · 用于二阶思维与不确定性相关材料</div></div><div class="sourceitem"><small>NOTE</small><div>阶段性复盘 · Agent 综合后的组织框架</div></div></div>`;
+
+const concept = `
+<div class="eyebrow">CONCEPT TOPIC · 概念专题</div>
+<div class="concept-hero"><div class="concept-symbol">⚖</div><div><h1 style="font-size:40px;margin:0 0 10px">损失厌恶</h1><div class="dek" style="font-size:14px">概念不是默认阅读单位，但它是跨文章连接知识的重要入口。专题页把一个概念在不同来源中的位置与演化集中展示。</div><div class="meta" style="margin-bottom:0"><span class="tag">行为决策</span><span class="tag">4 本书</span><span class="tag">7 篇文章</span><span class="tag">3 条我的洞见</span></div></div></div>
+<h2 id="p1">一句话理解</h2><div class="lead">这里展示上游 Agent 产出的概念核心解释，帮助用户快速建立稳定的概念锚点。</div>
+<h2 id="p2">它在哪里出现</h2><div class="articlelist"><div class="row" onclick="showPage('book')"><small>书籍来源</small><b>《思考，快与慢》</b><span>理论与实验视角</span></div><div class="row"><small>书籍来源</small><b>《投资最重要的事》</b><span>风险与投资决策视角</span></div><div class="row" onclick="showPage('cross')"><small>贯通文章</small><b>如何做高质量决策</b><span>作为判断偏差的一部分被重新组织</span></div></div>
+<h2 id="p3">概念关系</h2><div class="graph"><svg viewBox="0 0 760 240"><line x1="380" y1="120" x2="190" y2="70" stroke="#344158"/><line x1="380" y1="120" x2="570" y2="70" stroke="#344158"/><line x1="380" y1="120" x2="260" y2="195" stroke="#344158"/><line x1="380" y1="120" x2="500" y2="195" stroke="#344158"/>
+<circle cx="380" cy="120" r="58" fill="#e4ba67"/><text x="380" y="125" text-anchor="middle" fill="#17120a" font-size="15" font-weight="700">损失厌恶</text><circle cx="190" cy="70" r="40" fill="#141b29" stroke="#8a7cff"/><text x="190" y="75" text-anchor="middle" fill="#eef2ff" font-size="12">前景理论</text><circle cx="570" cy="70" r="40" fill="#141b29" stroke="#59d5ff"/><text x="570" y="75" text-anchor="middle" fill="#eef2ff" font-size="12">禀赋效应</text><circle cx="260" cy="195" r="36" fill="#141b29" stroke="#61d4a1"/><text x="260" y="200" text-anchor="middle" fill="#eef2ff" font-size="12">风险</text><circle cx="500" cy="195" r="36" fill="#141b29" stroke="#ff7b88"/><text x="500" y="200" text-anchor="middle" fill="#eef2ff" font-size="12">决策</text></svg></div>
+<h2 id="p4">我的理解</h2><div class="note"><div class="nhead">MY INSIGHT</div><p>这里承载真正沉淀下来的个人洞见，并与普通阅读批注区分。随着时间累积，BookLens 最终记录的是“我的认知如何形成”。</p></div>`;
+
+const crumbs={home:'知识首页',book:'书籍精炼 / 《思考，快与慢》',article:'书籍精炼 / 《思考，快与慢》 / 系统 1 与系统 2',cross:'贯通思考 / 如何做高质量决策',concept:'概念索引 / 损失厌恶'};
+const rails={
+home:[['h1','继续阅读'],['h2','最近形成']],
+book:[['b1','一句话理解'],['b2','全书地图'],['b3','精炼文章']],
+article:[['a1','正文主线'],['a2','知识组件']],
+cross:[['c1','判断系统'],['c2','多来源连接'],['c3','理解到实践'],['related','继续理解']],
+concept:[['p1','一句话理解'],['p2','出现位置'],['p3','概念关系'],['p4','我的理解']]
+};
+const pages={home,book,article,cross,concept};
+function showPage(k){document.getElementById('page').innerHTML=pages[k];document.getElementById('crumb').textContent=crumbs[k];document.getElementById('rail').innerHTML='<small>ON THIS PAGE</small>'+rails[k].map(x=>`<a href="#${x[0]}">${x[1]}</a>`).join('');window.scrollTo(0,0)}
+function toggleSide(){document.getElementById('app').classList.toggle('slim')}
+function toggleFocus(){document.body.classList.toggle('focus')}
+function openConcept(){document.getElementById('drawer').classList.add('open')}
+function closeConcept(){document.getElementById('drawer').classList.remove('open')}
+function showCitation(){document.getElementById('pop').classList.add('show')}
+function hideCitation(){document.getElementById('pop').classList.remove('show')}
+function theme(t){
+      const page=document.getElementById('page');
+      if(t){page.setAttribute('data-theme',t);document.documentElement.setAttribute('data-theme',t)}
+      else{page.removeAttribute('data-theme');document.documentElement.removeAttribute('data-theme')}
+    }
+function toast(m){alert(m)}
+showPage('home');
+</script>
+</body></html>
