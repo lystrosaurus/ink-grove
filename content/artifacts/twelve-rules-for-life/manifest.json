@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "twelve-rules-for-life",
+  "slug": "twelve-rules-for-life",
+  "title": "人生十二法则",
+  "subtitle": "在秩序与混乱之间，以责任、诚实与意义站稳自己",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Jordan B. Peterson",
+  "topics": [
+    "哲学",
+    "成长",
+    "心理"
+  ],
+  "concepts": [
+    "责任与意义",
+    "原则",
+    "主动选择",
+    "不断更新"
+  ],
+  "visualStyle": "order-and-chaos-life-map",
+  "related": [
+    "seven-habits",
+    "cognitive-awakening-inner-os",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "principles",
+      "label": "从影响圈开始，以原则和责任安排长期行动"
+    },
+    {
+      "target": "cognitive-awakening-inner-os",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "准确命名模糊的问题，把退缩转为可以承担的行动"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "contrasts",
+      "concept": "responsibility",
+      "label": "一方从责任与意义进入人生，另一方从自由与欲望校准选择"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/twelve-rules-for-life/index.html"
+  },
+  "cover": "/artifacts/twelve-rules-for-life/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:12_rules_for_life_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

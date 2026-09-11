@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>纳瓦尔宝典｜财富与幸福的原则</title>
+<style>
+:root{
+  --bg:#0b0b0a;
+  --panel:#121210;
+  --panel2:#171612;
+  --text:#f3efe7;
+  --muted:#aaa397;
+  --gold:#c9a45a;
+  --gold2:#e0c17d;
+  --line:#2a2924;
+  --green:#8ea98e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(201,164,90,.08), transparent 26%),
+    linear-gradient(180deg,#0b0b0a 0%,#0f0f0d 100%);
+  color:var(--text);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+}
+.wrap{
+  width:min(1360px,94vw);
+  margin:24px auto 56px;
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,#10100e,#0d0d0c);
+  min-height:520px;
+}
+.hero-main{
+  padding:48px;
+  border-right:1px solid var(--line);
+  position:relative;
+}
+.kicker{
+  font-size:11px;
+  letter-spacing:.22em;
+  font-weight:800;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+h1{
+  font-size:clamp(64px,9vw,122px);
+  line-height:.9;
+  letter-spacing:-.06em;
+  margin:18px 0 22px;
+}
+.lead{
+  max-width:760px;
+  font-size:24px;
+  color:#d9d2c7;
+}
+.quote{
+  margin-top:36px;
+  border-left:3px solid var(--gold);
+  padding:16px 20px;
+  background:#15140f;
+  color:#e9e0d0;
+  font-size:19px;
+}
+.hero-side{
+  display:flex;
+  flex-direction:column;
+}
+.side-block{
+  flex:1;
+  padding:28px;
+  border-bottom:1px solid var(--line);
+}
+.side-block:last-child{border-bottom:0}
+.side-block strong{
+  display:block;
+  font-size:30px;
+  line-height:1.25;
+  margin-top:8px;
+}
+.side-block.gold{
+  background:var(--gold);
+  color:#111;
+}
+.side-block.dark{
+  background:#141410;
+}
+.side-block.green{
+  background:#172018;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  border-left:1px solid var(--line);
+  border-top:1px solid var(--line);
+}
+.card{
+  padding:28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--panel);
+  min-height:220px;
+}
+.span4{grid-column:span 4}
+.span5{grid-column:span 5}
+.span6{grid-column:span 6}
+.span7{grid-column:span 7}
+.span8{grid-column:span 8}
+.span12{grid-column:span 12}
+.card h2{
+  margin:4px 0 14px;
+  font-size:29px;
+}
+.card p{color:var(--muted)}
+.big{
+  font-size:42px;
+  font-weight:800;
+  line-height:1.15;
+  color:var(--gold2);
+  margin:12px 0 20px;
+}
+.list{
+  display:grid;
+  gap:10px;
+  margin-top:16px;
+}
+.item{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:14px;
+  padding:14px 0;
+  border-top:1px solid var(--line);
+}
+.item:first-child{border-top:0}
+.num{
+  width:40px;height:40px;
+  border:1px solid var(--gold);
+  display:grid;place-items:center;
+  color:var(--gold);
+  font-weight:800;
+}
+.item b{font-size:18px}
+.item span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+
+.framework{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+.box{
+  min-height:150px;
+  border:1px solid var(--line);
+  padding:18px;
+  background:#0f0f0d;
+}
+.box b{display:block;font-size:19px;margin-bottom:8px}
+.box p{margin:0;font-size:14px}
+.box .tag{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:800;
+}
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:16px;
+}
+.col{
+  border:1px solid var(--line);
+  padding:20px;
+  background:#0f0f0d;
+}
+.col h3{margin-top:0}
+.col.good{border-top:3px solid var(--gold)}
+.col.bad{border-top:3px solid #555}
+.row{
+  padding:10px 0;
+  border-top:1px dashed var(--line);
+  color:var(--muted);
+}
+.row:first-of-type{border-top:0}
+.principles{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:16px;
+}
+.principle{
+  border:1px solid var(--line);
+  padding:18px;
+  background:#10100e;
+  min-height:155px;
+}
+.principle b{display:block;color:var(--gold2);font-size:20px}
+.principle span{font-size:14px;color:var(--muted)}
+.footer{
+  margin-top:20px;
+  padding:30px 34px;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:#11110f;
+}
+.footer strong{font-size:28px}
+.footer .stamp{
+  border:1px solid var(--gold);
+  padding:10px 14px;
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:.12em;
+}
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .hero-main{border-right:0;border-bottom:1px solid var(--line)}
+  .span4,.span5,.span6,.span7,.span8,.span12{grid-column:span 12}
+  .framework,.principles,.compare{grid-template-columns:1fr}
+  .footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">THE ALMANACK OF NAVAL RAVIKANT</div>
+    <h1>纳瓦尔宝典</h1>
+    <div class="lead">
+      关于财富、判断力、自由与幸福的一套极简原则。
+      核心不是“如何更忙”，而是如何让自己的<strong>时间、判断和杠杆</strong>产生复利。
+    </div>
+    <div class="quote">
+      真正值得追求的，是拥有自己的时间，并建立一种不依赖持续出售时间的生活方式。
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="side-block gold">
+      <div class="kicker" style="color:#111">核心命题</div>
+      <strong>财富，是你睡觉时仍然能创造价值的资产。</strong>
+    </div>
+    <div class="side-block dark">
+      <div class="kicker">长期主义</div>
+      <strong>选择长期伙伴，做长期游戏。</strong>
+    </div>
+    <div class="side-block green">
+      <div class="kicker">终极目标</div>
+      <strong>自由不是拥有更多，而是对时间拥有更多选择权。</strong>
+    </div>
+  </aside>
+</section>
+
+<section class="grid">
+
+  <article class="card span5">
+    <div class="kicker">01 / WEALTH</div>
+    <h2>财富 ≠ 金钱 ≠ 地位</h2>
+    <div class="big">财富，是可以持续产生价值的资产。</div>
+    <div class="list">
+      <div class="item"><div class="num">01</div><div><b>金钱</b><span>财富交换的媒介。</span></div></div>
+      <div class="item"><div class="num">02</div><div><b>地位</b><span>社会排名，常常是零和博弈。</span></div></div>
+      <div class="item"><div class="num">03</div><div><b>财富</b><span>产品、股权、系统、代码、内容等能持续创造价值的东西。</span></div></div>
+    </div>
+  </article>
+
+  <article class="card span7">
+    <div class="kicker">02 / BUILD WEALTH</div>
+    <h2>创造财富的五个关键词</h2>
+    <div class="framework">
+      <div class="box"><div class="tag">01</div><b>专长</b><p>找到难以被标准化培训替代的独特能力。</p></div>
+      <div class="box"><div class="tag">02</div><b>责任</b><p>用自己的名字承担结果，让信誉形成复利。</p></div>
+      <div class="box"><div class="tag">03</div><b>杠杆</b><p>利用资本、代码、媒体和团队放大产出。</p></div>
+      <div class="box"><div class="tag">04</div><b>判断</b><p>高质量决策，比单纯延长工作时间更重要。</p></div>
+      <div class="box"><div class="tag">05</div><b>长期</b><p>和长期的人做长期的事，让信任与能力复利。</p></div>
+    </div>
+  </article>
+
+  <article class="card span6">
+    <div class="kicker">03 / SPECIFIC KNOWLEDGE</div>
+    <h2>真正有价值的专长，通常带有个人独特性</h2>
+    <p>
+      它往往来自兴趣、天赋、长期积累与真实问题的交叉点，
+      很难通过短期标准化培训批量复制。
+    </p>
+    <div class="principles">
+      <div class="principle"><b>兴趣驱动</b><span>你愿意长期投入，而别人觉得辛苦。</span></div>
+      <div class="principle"><b>难以替代</b><span>不是简单流程，而是判断、创造与经验。</span></div>
+      <div class="principle"><b>可被放大</b><span>能借助杠杆触达更多人。</span></div>
+    </div>
+  </article>
+
+  <article class="card span6">
+    <div class="kicker">04 / LEVERAGE</div>
+    <h2>最重要的杠杆，是“不需要许可”的杠杆</h2>
+    <div class="compare">
+      <div class="col bad">
+        <h3>传统杠杆</h3>
+        <div class="row">雇佣更多人</div>
+        <div class="row">依赖资本</div>
+        <div class="row">扩张成本较高</div>
+      </div>
+      <div class="col good">
+        <h3>现代杠杆</h3>
+        <div class="row">代码</div>
+        <div class="row">媒体</div>
+        <div class="row">产品可以低成本复制</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="card span4">
+    <div class="kicker">05 / JUDGMENT</div>
+    <h2>判断力决定杠杆的方向</h2>
+    <p>
+      当杠杆越来越大，关键就不再是“做得多快”，而是“方向是否正确”。
+    </p>
+    <div class="big">少做，但做对。</div>
+  </article>
+
+  <article class="card span8">
+    <div class="kicker">06 / LONG-TERM GAMES</div>
+    <h2>所有真正巨大的回报，都来自复利</h2>
+    <div class="principles">
+      <div class="principle"><b>关系复利</b><span>长期合作减少交易成本，增加信任。</span></div>
+      <div class="principle"><b>能力复利</b><span>长期专注会形成越来越难被替代的优势。</span></div>
+      <div class="principle"><b>声誉复利</b><span>持续兑现承诺，会让机会主动找到你。</span></div>
+      <div class="principle"><b>资本复利</b><span>让资产持续产生回报，而不是只依赖工资。</span></div>
+      <div class="principle"><b>知识复利</b><span>基础理解越深，新知识吸收越快。</span></div>
+      <div class="principle"><b>时间复利</b><span>减少低价值选择，把时间留给高杠杆事项。</span></div>
+    </div>
+  </article>
+
+  <article class="card span6">
+    <div class="kicker">07 / FREEDOM</div>
+    <h2>财富的真正意义，是获得时间自主权</h2>
+    <p>
+      如果收入增长却让你失去所有时间，那不一定是真正的自由。
+      更理想的状态，是逐渐减少“必须出售时间才能维持生活”的程度。
+    </p>
+    <div class="list">
+      <div class="item"><div class="num">A</div><div><b>拥有资产</b><span>让价值创造不再完全依赖实时劳动。</span></div></div>
+      <div class="item"><div class="num">B</div><div><b>减少欲望</b><span>降低被外部标准控制的程度。</span></div></div>
+      <div class="item"><div class="num">C</div><div><b>提高选择权</b><span>有能力对不想做的事说“不”。</span></div></div>
+    </div>
+  </article>
+
+  <article class="card span6">
+    <div class="kicker">08 / HAPPINESS</div>
+    <h2>幸福不是外部奖励，而是一种内部状态</h2>
+    <p>
+      当一个人的幸福完全依赖外部比较、身份和未来奖励时，就很难真正稳定。
+      纳瓦尔强调减少欲望、减少比较、重视当下。
+    </p>
+    <div class="principles">
+      <div class="principle"><b>少比较</b><span>地位竞争几乎没有终点。</span></div>
+      <div class="principle"><b>少欲望</b><span>每一个欲望，都是对当前状态“不够好”的承诺。</span></div>
+      <div class="principle"><b>活在当下</b><span>幸福更接近一种不再抗拒此刻的状态。</span></div>
+    </div>
+  </article>
+
+  <article class="card span12">
+    <div class="kicker">09 / OPERATING SYSTEM</div>
+    <h2>把《纳瓦尔宝典》压缩成一套人生操作系统</h2>
+    <div class="framework">
+      <div class="box"><div class="tag">STEP 01</div><b>找到专长</b><p>做那些最像你自己的事情。</p></div>
+      <div class="box"><div class="tag">STEP 02</div><b>建立信誉</b><p>对结果负责，让别人愿意长期合作。</p></div>
+      <div class="box"><div class="tag">STEP 03</div><b>使用杠杆</b><p>让一次努力可以被复制和放大。</p></div>
+      <div class="box"><div class="tag">STEP 04</div><b>长期复利</b><p>少换方向，少换伙伴，让优势不断累积。</p></div>
+      <div class="box"><div class="tag">STEP 05</div><b>换取自由</b><p>最终目标不是忙碌，而是时间与选择权。</p></div>
+    </div>
+  </article>
+
+</section>
+
+<footer class="footer">
+  <strong>赚取财富的目的，不是炫耀，而是买回自己的时间。</strong>
+  <div class="stamp">WEALTH · FREEDOM · PEACE</div>
+</footer>
+
+</main>
+</body>
+</html>

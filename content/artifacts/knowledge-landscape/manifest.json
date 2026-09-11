@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "knowledge-landscape",
+  "slug": "knowledge-landscape",
+  "title": "知识生长的地形",
+  "subtitle": "当孤立的想法开始彼此连接",
+  "artifactType": "idea",
+  "sourceType": "original",
+  "author": "Ink Grove",
+  "topics": [
+    "思考",
+    "系统",
+    "连接"
+  ],
+  "concepts": [
+    "系统思维",
+    "复利",
+    "元认知"
+  ],
+  "visualStyle": "ink-landscape",
+  "related": [
+    "thinking-framework",
+    "personal-growth-os",
+    "attention-loop"
+  ],
+  "connections": [
+    {
+      "target": "thinking-framework",
+      "type": "inspired-by",
+      "concept": "systems-thinking",
+      "label": "一个节点的意义，来自它与其他节点的关系"
+    },
+    {
+      "target": "personal-growth-os",
+      "type": "related",
+      "concept": "compounding",
+      "label": "连接已有理解，生长出新的理解"
+    }
+  ],
+  "artifact": {
+    "renderer": "image",
+    "src": "/artifacts/knowledge-landscape/landscape.svg"
+  },
+  "cover": "/artifacts/knowledge-landscape/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [],
+    "derivedFrom": [
+      "thinking-framework",
+      "personal-growth-os"
+    ]
+  }
+}

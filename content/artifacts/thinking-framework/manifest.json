@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "thinking-framework",
+  "slug": "thinking-framework",
+  "title": "思考的框架",
+  "subtitle": "从问题到答案，一张思维工具地图",
+  "artifactType": "system",
+  "sourceType": "framework",
+  "author": "原始作品 · 作者未标注",
+  "topics": [
+    "思考",
+    "决策",
+    "认知"
+  ],
+  "concepts": [
+    "第一性原理",
+    "系统思维",
+    "判断力",
+    "反馈"
+  ],
+  "visualStyle": "architectural-atlas",
+  "related": [
+    "naval-almanack",
+    "personal-growth-os",
+    "learning-cycle",
+    "knowledge-landscape",
+    "great-mental-models"
+  ],
+  "connections": [
+    {
+      "target": "naval-almanack",
+      "type": "supports",
+      "concept": "judgment",
+      "label": "用多种思维框架校准判断"
+    },
+    {
+      "target": "personal-growth-os",
+      "type": "supports",
+      "concept": "systems-thinking",
+      "label": "理解要素之间如何相互影响"
+    },
+    {
+      "target": "knowledge-landscape",
+      "type": "inspired-by",
+      "concept": "systems-thinking",
+      "label": "从知识清单走向关系地图"
+    },
+    {
+      "target": "great-mental-models",
+      "type": "related",
+      "concept": "mental-models",
+      "label": "换上九种通用模型，检验自己的思考框架"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/thinking-framework/index.html"
+  },
+  "cover": "/artifacts/thinking-framework/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:thinking-framework-core-map.html"
+    ],
+    "derivedFrom": []
+  }
+}

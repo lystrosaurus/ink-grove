@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "checkedAt": "2026-09-11T16:51:37.6912645+08:00",
+  "sourceFilesUnchanged": 20,
+  "protectedFiles": [
+    {
+      "path": "12_rules_for_life_single_page.html",
+      "sha256": "07EA9C55635E3A698BDB784210479744786B4DF791915AF8038599458C421BFC"
+    },
+    {
+      "path": "cognitive_awakening_editorial.html",
+      "sha256": "E090E59871EBDAE6224239927D2AC872312945E1CEB037294721C927556CDDE0"
+    },
+    {
+      "path": "cognitive_awakening_inner_os_single_page.html",
+      "sha256": "DAB18DCE891CBFC4153367CB5FEC8195BD3BD057A5708896E7D790ACD975E8C8"
+    },
+    {
+      "path": "deliberate_practice_lab_style.html",
+      "sha256": "938929E13FBF0A7E5F036C16AD2108E6B0AE532FC8D641EE1BECF997EC4702F6"
+    },
+    {
+      "path": "deliberate_practice_modern.html",
+      "sha256": "5964006E114A9338756BD963297EA821F7F4CA904CC1AF37B275F565BF09A5B9"
+    },
+    {
+      "path": "great_mental_models_single_page.html",
+      "sha256": "E49077EEE73316A5B02CD1EB97F46A46B146CD2750C83F8AC5A14268F0BB80DF"
+    },
+    {
+      "path": "how_to_read_a_book_single_page.html",
+      "sha256": "269CAFE479824F5DE71BB17B323DF31A95820D6A4E672F1E481A574F0764E8E7"
+    },
+    {
+      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part0.md",
+      "sha256": "DF7835C72206A06BBC651D4A28FDD339E6812E25602610DE2F5C61303C272CB5"
+    },
+    {
+      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part1.md",
+      "sha256": "EEBDE5C3D0D1527DB96B7968F0A27AFEA5EE31EA3EC2F60D851AD3CB8A1DDDEC"
+    },
+    {
+      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part2.md",
+      "sha256": "4CE474B57B4594D737B06A86B37B68EE922DBD92EF766058583B6F07F1C1946C"
+    },
+    {
+      "path": "Ink Grove｜Visual Knowledge Garden 产品与系统设计文档.md",
+      "sha256": "0BE5A029850900D4953B404D4E0245BE00338AB78F35BCD3CE195A2173BDF5E3"
+    },
+    {
+      "path": "innovators_dilemma_single_page.html",
+      "sha256": "857A7B3F91C4178C8CB1D2873263D3ACBAD4B18B8493F3F39C7C36FD78FF2BB3"
+    },
+    {
+      "path": "integrated_thinking_intellectual_atlas.html",
+      "sha256": "6C1BD88D275B6947F01A5211C07C10E7A1C81F718D44DF109BBAD703527391CA"
+    },
+    {
+      "path": "integrated_thinking_personal_os.html",
+      "sha256": "AAAFDC26D96ED245E09AD83A34758D5D5B4C9B04269F7335AFE281758011403E"
+    },
+    {
+      "path": "mindware_logic_thinking_single_page.html",
+      "sha256": "16F28DCB4E6D2173A61F95CDA6CE6454B6521418F31FD1108CE65DFAA4E0D276"
+    },
+    {
+      "path": "naval_almanack_black_gold.html",
+      "sha256": "3A9D74CD807D2E3C65486EDBD22184408DC9D3E0A70146065468EBF4989FBE10"
+    },
+    {
+      "path": "seven_habits_core_map.html",
+      "sha256": "6CBCB812664E904AC4CA413AA34A265B45898CE2833BFD20928E957D5C986892"
+    },
+    {
+      "path": "the_mckinsey_way_single_page.html",
+      "sha256": "C6169D009493FA809B38938C2116F0D50E7091742272D169F151CD1BB351D797"
+    },
+    {
+      "path": "thinking_in_systems_single_page.html",
+      "sha256": "A77CEC281F5A185CBA750432D6601C21448AA46F395D64CDFC517B389D7DF3C6"
+    },
+    {
+      "path": "thinking-framework-core-map.html",
+      "sha256": "20ADD0A545C41B217A89C6235321D2447DB78CCECD75B0E6C02CF7F6D566A3F0"
+    }
+  ],
+  "content": {
+    "artifacts": 19,
+    "htmlArtifacts": 16,
+    "collections": 5,
+    "concepts": 24,
+    "connections": 82,
+    "editorialChanges": "content/EDITORIAL.md"
+  },
+  "contentAndModelTests": {
+    "command": "npm test",
+    "passed": 52,
+    "failed": 0
+  },
+  "browserTests": {
+    "command": "npm run test:e2e",
+    "passed": 46,
+    "failed": 0
+  },
+  "productionBuild": {
+    "command": "npm run build",
+    "passed": true
+  },
+  "productionSmoke": {
+    "command": "node app/scripts/verify-production.mjs",
+    "passed": true,
+    "htmlArtifacts": 16,
+    "externalRequests": 0
+  },
+  "urls": {
+    "development": "http://127.0.0.1:5173",
+    "preview": "http://127.0.0.1:4173"
+  },
+  "aiGeneration": "provider interface reserved; default local and unconfigured; no real provider connected",
+  "publicDeployment": false
+}

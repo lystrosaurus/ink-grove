@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刻意练习｜训练实验室</title>
+<style>
+:root{
+  --bg:#edf1f4;
+  --paper:#f9fbfc;
+  --ink:#14202b;
+  --muted:#65727f;
+  --line:#cfd8df;
+  --navy:#1d3448;
+  --blue:#315f7c;
+  --orange:#ff7a2f;
+  --lime:#b7d65d;
+  --cyan:#6cc7cf;
+  --soft:#e7edf1;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:
+    linear-gradient(rgba(29,52,72,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,52,72,.035) 1px, transparent 1px),
+    var(--bg);
+  background-size:24px 24px;
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.wrapper{
+  width:min(1400px,95vw);
+  margin:24px auto 50px;
+}
+.sheet{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 24px 60px rgba(38,55,70,.12);
+}
+.header{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  min-height:440px;
+  border-bottom:1px solid var(--line);
+}
+.head-main{
+  padding:46px;
+  position:relative;
+}
+.micro{
+  font:700 11px/1 Arial,sans-serif;
+  letter-spacing:.22em;
+  color:var(--orange);
+}
+h1{
+  font-size:clamp(64px,9vw,120px);
+  margin:18px 0 12px;
+  line-height:.9;
+  letter-spacing:-.06em;
+}
+.sub{
+  font-size:24px;
+  max-width:760px;
+  line-height:1.5;
+}
+.callout{
+  margin-top:32px;
+  padding:18px 22px;
+  border-left:6px solid var(--orange);
+  background:#f1f5f7;
+  font-size:18px;
+}
+.head-side{
+  border-left:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+}
+.side-top{
+  padding:28px;
+  background:var(--navy);
+  color:white;
+  flex:1;
+}
+.side-top strong{
+  display:block;
+  font-size:34px;
+  margin-top:10px;
+  line-height:1.25;
+}
+.side-bottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  flex:1;
+}
+.metric{
+  padding:24px;
+  border-top:1px solid var(--line);
+  border-right:1px solid var(--line);
+}
+.metric:nth-child(even){border-right:0}
+.metric b{
+  font-size:34px;
+  color:var(--orange);
+  display:block;
+}
+.metric span{color:var(--muted);font-size:13px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+}
+.block{
+  padding:28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:220px;
+}
+.span4{grid-column:span 4}
+.span5{grid-column:span 5}
+.span6{grid-column:span 6}
+.span7{grid-column:span 7}
+.span8{grid-column:span 8}
+.span12{grid-column:span 12}
+.label{
+  font:700 10px/1 Arial,sans-serif;
+  letter-spacing:.2em;
+  color:var(--blue);
+  margin-bottom:10px;
+}
+.block h2{
+  margin:0 0 14px;
+  font-size:28px;
+}
+.block p{
+  color:var(--muted);
+  line-height:1.7;
+}
+.protocol{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+.proto{
+  padding:18px;
+  background:#f0f4f6;
+  border:1px solid var(--line);
+  position:relative;
+}
+.proto .n{
+  width:34px;height:34px;
+  display:grid;place-items:center;
+  background:var(--navy);
+  color:white;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.proto b{font-size:18px}
+.proto small{display:block;color:var(--muted);margin-top:6px;line-height:1.55}
+
+.gauge{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+.zone{
+  border:1px solid var(--line);
+  padding:18px;
+  min-height:160px;
+}
+.zone:nth-child(1){border-top:7px solid var(--cyan)}
+.zone:nth-child(2){border-top:7px solid var(--orange)}
+.zone:nth-child(3){border-top:7px solid var(--lime)}
+.zone h3{margin:0 0 8px;font-size:20px}
+.zone p{margin:0;font-size:14px}
+
+.loop{
+  display:grid;
+  grid-template-columns:1fr 48px 1fr 48px 1fr 48px 1fr;
+  align-items:center;
+  margin-top:20px;
+}
+.node{
+  padding:20px;
+  border:1px solid var(--line);
+  background:#f4f7f9;
+  min-height:130px;
+}
+.node b{font-size:20px;display:block}
+.node span{color:var(--muted);font-size:14px}
+.arrow{text-align:center;color:var(--orange);font-size:28px;font-weight:800}
+
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:16px;
+}
+.col{
+  border:1px solid var(--line);
+  padding:20px;
+}
+.bad{border-top:7px solid #929da6}
+.good{border-top:7px solid var(--orange)}
+.col h3{margin-top:0}
+.line{
+  padding:10px 0;
+  border-top:1px dashed var(--line);
+  color:var(--muted);
+}
+.line:first-of-type{border-top:0}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+.table th,.table td{
+  border-top:1px solid var(--line);
+  padding:12px 10px;
+  text-align:left;
+  vertical-align:top;
+}
+.table th{
+  color:var(--blue);
+  font-size:12px;
+  letter-spacing:.08em;
+}
+.table td{color:var(--muted)}
+
+.footer{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center;
+  padding:28px 34px;
+  background:var(--navy);
+  color:white;
+}
+.footer strong{
+  font-size:28px;
+}
+.stamp{
+  border:2px solid var(--orange);
+  color:var(--orange);
+  padding:10px 14px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+@media(max-width:960px){
+  .header{grid-template-columns:1fr}
+  .head-side{border-left:0}
+  .span4,.span5,.span6,.span7,.span8,.span12{grid-column:span 12}
+  .protocol,.gauge,.compare{grid-template-columns:1fr}
+  .loop{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .footer{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <main class="sheet">
+    <section class="header">
+      <div class="head-main">
+        <div class="micro">TRAINING LAB / DELIBERATE PRACTICE</div>
+        <h1>刻意练习</h1>
+        <div class="sub">
+          把“重复”升级为“训练”，把“努力”升级为“可验证的能力增长”。
+        </div>
+        <div class="callout">
+          <strong>核心原则：</strong>
+          真正有效的练习，必须围绕明确目标、能力边缘、及时反馈和持续修正展开。
+        </div>
+      </div>
+      <aside class="head-side">
+        <div class="side-top">
+          <div class="micro" style="color:#9ed4e1">LAB NOTE 001</div>
+          <strong>不是练得更多，<br>而是练得更准。</strong>
+        </div>
+        <div class="side-bottom">
+          <div class="metric"><b>01</b><span>明确目标</span></div>
+          <div class="metric"><b>02</b><span>专注训练</span></div>
+          <div class="metric"><b>03</b><span>获得反馈</span></div>
+          <div class="metric"><b>04</b><span>纠错迭代</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="block span4">
+        <div class="label">01 / WHY NORMAL PRACTICE FAILS</div>
+        <h2>为什么普通练习常常无效？</h2>
+        <p>因为大多数练习只是重复已经会的东西。它能保持熟练，却不一定推动能力边界。</p>
+        <table class="table">
+          <tr><th>普通练习</th><th>结果</th></tr>
+          <tr><td>重复熟悉动作</td><td>熟练，但不突破</td></tr>
+          <tr><td>缺乏反馈</td><td>错误被长期固化</td></tr>
+          <tr><td>目标模糊</td><td>不知道进步发生在哪里</td></tr>
+        </table>
+      </article>
+
+      <article class="block span8">
+        <div class="label">02 / TRAINING PROTOCOL</div>
+        <h2>刻意练习：五步训练协议</h2>
+        <div class="protocol">
+          <div class="proto"><div class="n">1</div><b>定义目标</b><small>把“变强”拆成可以观察和判断的具体目标。</small></div>
+          <div class="proto"><div class="n">2</div><b>拆分技能</b><small>找到真正限制表现的关键子技能。</small></div>
+          <div class="proto"><div class="n">3</div><b>挑战边缘</b><small>任务略高于当前水平，但仍可通过努力完成。</small></div>
+          <div class="proto"><div class="n">4</div><b>获得反馈</b><small>尽快知道哪里做对、哪里需要改。</small></div>
+          <div class="proto"><div class="n">5</div><b>重复修正</b><small>带着明确问题进入下一轮训练。</small></div>
+        </div>
+      </article>
+
+      <article class="block span6">
+        <div class="label">03 / DIFFICULTY WINDOW</div>
+        <h2>训练难度要落在正确区间</h2>
+        <div class="gauge">
+          <div class="zone">
+            <h3>舒适区</h3>
+            <p>任务太熟悉，几乎不出错。适合维持，不适合突破。</p>
+          </div>
+          <div class="zone">
+            <h3>学习区</h3>
+            <p>有挑战、会犯错、可以纠正。最适合产生能力增长。</p>
+          </div>
+          <div class="zone">
+            <h3>过载区</h3>
+            <p>任务远超当前水平，反馈变得模糊，容易失去控制。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="block span6">
+        <div class="label">04 / FEEDBACK LOOP</div>
+        <h2>训练真正发生在“反馈回路”里</h2>
+        <div class="loop">
+          <div class="node"><b>目标</b><span>今天具体训练什么？</span></div>
+          <div class="arrow">→</div>
+          <div class="node"><b>执行</b><span>高专注完成一次训练。</span></div>
+          <div class="arrow">→</div>
+          <div class="node"><b>反馈</b><span>发现误差、盲区和薄弱点。</span></div>
+          <div class="arrow">→</div>
+          <div class="node"><b>修正</b><span>把问题带入下一轮。</span></div>
+        </div>
+      </article>
+
+      <article class="block span5">
+        <div class="label">05 / MENTAL REPRESENTATIONS</div>
+        <h2>高手真正拥有的是更好的“内部模型”</h2>
+        <p>
+          随着长期训练，高手会形成更精细的心理表征：
+          更快识别模式，更准确判断重点，也更容易预测下一步。
+        </p>
+        <table class="table">
+          <tr><th>新手</th><th>高手</th></tr>
+          <tr><td>看到零散信息</td><td>看到结构与模式</td></tr>
+          <tr><td>依赖表面规则</td><td>理解关键关系</td></tr>
+          <tr><td>反应较慢</td><td>判断更快更准</td></tr>
+        </table>
+      </article>
+
+      <article class="block span7">
+        <div class="label">06 / PRACTICE DESIGN</div>
+        <h2>一次高质量练习怎么设计？</h2>
+        <table class="table">
+          <tr><th>问题</th><th>训练设计</th></tr>
+          <tr><td>目标太大</td><td>缩小到一个具体技能点</td></tr>
+          <tr><td>练习太轻松</td><td>增加一点难度，让自己进入学习区</td></tr>
+          <tr><td>不知道哪里错</td><td>用导师、数据、录像、作品结果获得反馈</td></tr>
+          <tr><td>练完就结束</td><td>记录错误原因与下一轮修正方式</td></tr>
+        </table>
+      </article>
+
+      <article class="block span6">
+        <div class="label">07 / WRONG VS RIGHT</div>
+        <h2>普通练习 vs 刻意练习</h2>
+        <div class="compare">
+          <div class="col bad">
+            <h3>普通练习</h3>
+            <div class="line">以时长衡量努力</div>
+            <div class="line">做自己已经会的事</div>
+            <div class="line">少犯错就是“练得好”</div>
+            <div class="line">反馈不及时</div>
+          </div>
+          <div class="col good">
+            <h3>刻意练习</h3>
+            <div class="line">以能力变化衡量进步</div>
+            <div class="line">训练薄弱环节</div>
+            <div class="line">主动制造可纠正的错误</div>
+            <div class="line">持续获取明确反馈</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="block span6">
+        <div class="label">08 / DAILY LOG</div>
+        <h2>每天可以这样记录</h2>
+        <table class="table">
+          <tr><th>字段</th><th>记录内容</th></tr>
+          <tr><td>今日目标</td><td>今天只训练哪一个具体技能？</td></tr>
+          <tr><td>最大错误</td><td>哪一步最容易失败？</td></tr>
+          <tr><td>反馈来源</td><td>导师 / 数据 / 录像 / 结果</td></tr>
+          <tr><td>下一轮修正</td><td>下一次具体改变什么？</td></tr>
+        </table>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <strong>不要问“我今天练了多久”，要问“我今天修正了什么”。</strong>
+      <div class="stamp">TRAIN → FEEDBACK → CORRECT</div>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

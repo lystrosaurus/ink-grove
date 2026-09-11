@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "cognitive-awakening",
+  "slug": "cognitive-awakening",
+  "title": "认知觉醒",
+  "subtitle": "看见自己，是一切改变的开始",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "周岭",
+  "topics": [
+    "认知",
+    "成长",
+    "心理"
+  ],
+  "concepts": [
+    "注意力",
+    "元认知",
+    "主动选择",
+    "反馈"
+  ],
+  "visualStyle": "editorial-magazine",
+  "related": [
+    "attention-loop",
+    "seven-habits",
+    "deliberate-practice",
+    "personal-growth-os",
+    "cognitive-awakening-inner-os"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "supports",
+      "concept": "attention",
+      "label": "专注让练习真正发生"
+    },
+    {
+      "target": "seven-habits",
+      "type": "extends",
+      "concept": "active-choice",
+      "label": "从看见惯性到主动选择"
+    },
+    {
+      "target": "attention-loop",
+      "type": "inspired-by",
+      "concept": "metacognition",
+      "label": "把觉察落实为一次注意力实验"
+    },
+    {
+      "target": "cognitive-awakening-inner-os",
+      "type": "related",
+      "concept": "metacognition",
+      "label": "同一本书的两种表达：觉察札记与内在操作系统"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/cognitive-awakening/index.html"
+  },
+  "cover": "/artifacts/cognitive-awakening/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:cognitive_awakening_editorial.html"
+    ],
+    "derivedFrom": []
+  }
+}

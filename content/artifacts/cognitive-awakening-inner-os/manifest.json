@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "cognitive-awakening-inner-os",
+  "slug": "cognitive-awakening-inner-os",
+  "title": "认知觉醒 · 内在操作系统",
+  "subtitle": "从自动反应到觉察、选择与行动的自我调节回路",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "周岭",
+  "topics": [
+    "认知",
+    "成长",
+    "心理",
+    "学习"
+  ],
+  "concepts": [
+    "元认知",
+    "注意力",
+    "主动选择",
+    "反馈",
+    "学习区"
+  ],
+  "visualStyle": "sage-inner-operating-system",
+  "related": [
+    "cognitive-awakening",
+    "deliberate-practice",
+    "attention-loop",
+    "how-to-read-a-book"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "related",
+      "concept": "metacognition",
+      "label": "同一本书：从杂志式觉察札记到内在系统图"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "supports",
+      "concept": "learning-zone",
+      "label": "在舒适区边缘，把清晰认知转成可训练行动"
+    },
+    {
+      "target": "attention-loop",
+      "type": "supports",
+      "concept": "attention",
+      "label": "先看见注意力被什么带走，再重新分配投入"
+    },
+    {
+      "target": "how-to-read-a-book",
+      "type": "supports",
+      "concept": "active-reading",
+      "label": "深度学习需要主动解释与建立关联"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/cognitive-awakening-inner-os/index.html"
+  },
+  "cover": "/artifacts/cognitive-awakening-inner-os/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:cognitive_awakening_inner_os_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

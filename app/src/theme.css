@@ -1,0 +1,520 @@
+/* Shell themes never reach into independently rendered artifacts. */
+.list-view .artifact-cover > img {
+  object-fit: contain;
+}
+@media (max-width: 620px) {
+  .artifact-grid:not(.list-view) .artifact-cover {
+    aspect-ratio: 1.37;
+  }
+}
+.search-result.keyboard-active {
+  background: #eef3e4;
+}
+[data-theme='dark'] .search-result.keyboard-active {
+  background: #344a26;
+}
+:root {
+  font-family: 'DM Sans Variable', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --serif: 'Noto Serif SC Variable', 'Songti SC', 'SimSun', serif;
+}
+.footer-journey {
+  font-size: 9px;
+  color: #8e9b80;
+}
+.theme-toggle {
+  white-space: nowrap;
+}
+.command-actions {
+  display: flex;
+  gap: 8px;
+  padding: 13px 0 5px;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.command-actions > a {
+  font-size: 9px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  background: #edf2e4;
+  border-radius: 4px;
+  color: #81966b;
+  padding: 8px 10px;
+}
+.command-actions > a:hover {
+  background: #e0ebd1;
+}
+.search-concepts {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 13px 0 4px;
+}
+.search-concepts > span {
+  font-size: 8px;
+  color: #a0ad91;
+  letter-spacing: 1px;
+}
+.search-concepts > a {
+  padding: 5px 8px;
+  border: 1px solid #d9e4cc;
+  border-radius: 4px;
+  font-size: 9px;
+  color: #849970;
+}
+.home-concepts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 22px 0 0;
+}
+.home-concepts > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #98a38a;
+  margin-right: 10px;
+}
+.home-concepts > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid #dce5cf;
+  border-radius: 4px;
+  font-size: 9px;
+  color: #889c73;
+}
+.home-concepts > a:hover {
+  background: #e9f0de;
+  color: #597440;
+}
+[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #181e19;
+  --ink: #d5ddcb;
+  --green: #9cb384;
+  --muted: #98a58b;
+  --line: #343e30;
+  background: #181e19;
+  color: #d5ddcb;
+}
+[data-theme='dark'] .site-header {
+  background: #181e19f5;
+}
+[data-theme='dark'] .brand-mark {
+  background: #263121;
+  border-color: #46573a;
+  color: #b0c594;
+}
+[data-theme='dark'] .main-nav a {
+  color: #8e9f80;
+}
+[data-theme='dark'] .main-nav a.active,
+[data-theme='dark'] .main-nav a:hover {
+  color: #bfd3a3;
+}
+[data-theme='dark'] .main-nav a.active:after {
+  background: #a7bd8f;
+}
+[data-theme='dark'] .main-nav.open {
+  background: #1b2419f5;
+  border-color: #384830;
+}
+[data-theme='dark'] .button.primary {
+  background: #809f64;
+  color: #141d0f;
+  border-color: #809f64;
+}
+[data-theme='dark'] .button.primary:hover {
+  background: #9aba7d;
+}
+[data-theme='dark'] .button.secondary {
+  color: #b1c39d;
+  border-color: #45563a;
+}
+[data-theme='dark'] .button.secondary:hover {
+  background: #293923;
+  border-color: #718a59;
+}
+[data-theme='dark'] .icon-button {
+  color: #9baf87;
+}
+[data-theme='dark'] .icon-button:hover {
+  background: #31412a;
+  color: #c2d5ad;
+}
+[data-theme='dark'] .saved {
+  color: #b8d094 !important;
+}
+[data-theme='dark'] .hero-copy h1 > span {
+  color: #9fb984;
+}
+[data-theme='dark'] .hero-english {
+  color: #8e9f79;
+}
+[data-theme='dark'] .hero-secondary,
+[data-theme='dark'] .text-link {
+  color: #a3ba8a;
+}
+[data-theme='dark'] .hero-description {
+  color: #97a48b;
+}
+[data-theme='dark'] .hero-footnote {
+  color: #829474;
+}
+[data-theme='dark'] .garden-illustration {
+  opacity: 0.8;
+}
+[data-theme='dark'] .garden-illustration > circle {
+  opacity: 0.04;
+}
+[data-theme='dark'] .garden-illustration text {
+  fill: #94a47f;
+}
+[data-theme='dark'] .garden-illustration g[fill='url(#leaf-shade)'] {
+  filter: brightness(1.4);
+}
+[data-theme='dark'] .section-mini {
+  border-color: #343f2d;
+}
+[data-theme='dark'] .featured-artifact {
+  background: #242e20;
+  border-color: #3b4b30;
+}
+[data-theme='dark'] .featured-copy h2 {
+  color: #cbd6b9;
+}
+[data-theme='dark'] .featured-copy > p {
+  color: #92a47d;
+}
+[data-theme='dark'] .featured-link {
+  color: #acc68c;
+}
+[data-theme='dark'] .featured-visual {
+  background: radial-gradient(ellipse at 50% 50%, #607d3615, transparent 65%);
+}
+[data-theme='dark'] .system-center {
+  background: #273722;
+  border-color: #516641;
+  box-shadow: 0 0 0 7px #35472c35;
+  color: #94ad73;
+}
+[data-theme='dark'] .system-center > span {
+  color: #bdcda5;
+}
+[data-theme='dark'] .system-node {
+  background: #2c3924ee;
+  border-color: #465b36;
+  color: #aabf92;
+}
+[data-theme='dark'] .system-orbit {
+  border-color: #67814c40;
+}
+[data-theme='dark'] .system-node small {
+  color: #7d9565;
+}
+[data-theme='dark'] .system-center > small {
+  color: #839c6d;
+}
+[data-theme='dark'] .artifact-cover {
+  border-color: #36432c;
+  background: #263122;
+}
+[data-theme='dark'] .card-topics > a {
+  background: #283422;
+  color: #94a67e;
+}
+[data-theme='dark'] .card-topics > a:hover {
+  background: #405a32;
+  color: #d3e2c1;
+}
+[data-theme='dark'] .artifact-card h3 {
+  color: #c4d1b2;
+}
+[data-theme='dark'] .local-cover {
+  background: radial-gradient(ellipse at 60% 10%, #3b4e2d, transparent), #2b3222;
+  color: #aabd8e;
+}
+[data-theme='dark'] .local-cover.synthesis {
+  background: #29343c;
+  color: #aec4ce;
+}
+[data-theme='dark'] .journey-marker > span {
+  background: #293622;
+  border-color: #495e36;
+  color: #a3bb84;
+}
+[data-theme='dark'] .journey-marker:after {
+  background: #3d4f2f;
+}
+[data-theme='dark'] .journey-step h3 {
+  color: #b9cba1;
+}
+[data-theme='dark'] .journey-book {
+  color: #96ae7b;
+}
+[data-theme='dark'] .synthesis-callout {
+  background: linear-gradient(90deg, transparent, #374d251c, transparent);
+  border-color: #37452c;
+}
+[data-theme='dark'] input,
+[data-theme='dark'] textarea,
+[data-theme='dark'] select {
+  background: #202a1c;
+  border-color: #405034;
+  color: #bccdaf;
+}
+[data-theme='dark'] input::placeholder,
+[data-theme='dark'] textarea::placeholder {
+  color: #687d58;
+}
+[data-theme='dark'] .search-field input {
+  background: none;
+}
+[data-theme='dark'] kbd {
+  background: #273422;
+  border-color: #415535;
+  color: #819b6c;
+}
+[data-theme='dark'] .explore-search {
+  background: #202c1b;
+  border-color: #3a4d2d;
+}
+[data-theme='dark'] .topic-filter button.active,
+[data-theme='dark'] .type-tabs > button.active {
+  background: #34482a;
+  color: #c0d4a7;
+  border-color: #536c3e;
+}
+[data-theme='dark'] .topic-filter button:hover,
+[data-theme='dark'] .type-tabs > button:hover {
+  background: #293e20;
+}
+[data-theme='dark'] .type-tabs > button > span {
+  background: #445e32;
+  color: #b9cc9d;
+}
+[data-theme='dark'] .layout-buttons > button.active {
+  background: #34482a;
+  color: #b9d49c;
+}
+[data-theme='dark'] .results-bar select {
+  background: none;
+}
+[data-theme='dark'] .collection-card {
+  background: #202b1d;
+  border-color: #3c4c31;
+}
+[data-theme='dark'] .collection-art {
+  background: #2b3b23;
+}
+[data-theme='dark'] .favorites-art {
+  background: radial-gradient(circle, #4a4129, transparent 80%), #332f21;
+  color: #ad9b7b;
+}
+[data-theme='dark'] .collection-art-1 {
+  background: #2b3930;
+}
+[data-theme='dark'] .collection-art-2 {
+  background: #363525;
+}
+[data-theme='dark'] .stack-cover {
+  border-color: #344c28;
+}
+[data-theme='dark'] .collection-new {
+  border-color: #4b6438;
+  color: #829e68;
+}
+[data-theme='dark'] .collection-new:hover {
+  background: #2b3d21;
+}
+[data-theme='dark'] .collection-new > strong {
+  color: #a8bc91;
+}
+[data-theme='dark'] .segmented-control {
+  background: #293821;
+  border-color: #3c502d;
+}
+[data-theme='dark'] .segmented-control > button.active {
+  background: #3b4f2d;
+  color: #bfcea9;
+}
+[data-theme='dark'] .network-layout {
+  background: #202a1b;
+  border-color: #3e512e;
+}
+[data-theme='dark'] .network-sidebar {
+  background: #25331ee8;
+  border-color: #3e512e;
+}
+[data-theme='dark'] .graph-title {
+  fill: #b7cba0;
+}
+[data-theme='dark'] .graph-type {
+  fill: #90a877;
+}
+[data-theme='dark'] .graph-node > circle {
+  fill: #293c20;
+  stroke: #5c7844;
+}
+[data-theme='dark'] .graph-node > text:first-of-type {
+  fill: #a8c18f;
+}
+[data-theme='dark'] .graph-node:hover > circle,
+[data-theme='dark'] .graph-node.selected > circle,
+[data-theme='dark'] .graph-node:focus-visible > circle {
+  fill: #476535;
+  stroke: #9eba7b;
+}
+[data-theme='dark'] .graph-node.selected .graph-title {
+  fill: #cfdfb5;
+}
+[data-theme='dark'] .graph-bottomline {
+  border-color: #384c2a;
+}
+[data-theme='dark'] .concept-frequency a,
+[data-theme='dark'] .edge-row {
+  border-color: #3d512e;
+}
+[data-theme='dark'] .edge-row > div > span {
+  background: #354a27;
+  color: #a5b78d;
+}
+[data-theme='dark'] .edge-row > div > a {
+  color: #acbe98;
+}
+[data-theme='dark'] .synthesis-prompt {
+  background: #29351f;
+  border-color: #41512f;
+}
+[data-theme='dark'] .synthesis-prompt:hover {
+  background: #344628;
+}
+[data-theme='dark'] .create-form {
+  background: #20291a;
+  border-color: #3d4e2e;
+}
+[data-theme='dark'] .create-modes {
+  background: #26331f;
+  border-color: #3d502e;
+}
+[data-theme='dark'] .create-modes > button.active {
+  background: #3b512b;
+  color: #bfd3a8;
+}
+[data-theme='dark'] .source-selector {
+  background: #283a1e;
+  border-color: #40572e;
+}
+[data-theme='dark'] .source-options > button {
+  background: #263b1c;
+  border-color: #435d30;
+  color: #9ab082;
+}
+[data-theme='dark'] .source-options > button.selected {
+  background: #476b2e;
+  border-color: #739c50;
+  color: #cee4b8;
+}
+[data-theme='dark'] .shared-concepts > span {
+  background: #3b5728;
+  color: #bdd69f;
+}
+[data-theme='dark'] .file-drop {
+  background: #273d1c;
+  border-color: #597e3d;
+}
+[data-theme='dark'] .create-note {
+  background: #263a1c;
+  color: #a1ba86;
+}
+[data-theme='dark'] .publish-row {
+  border-color: #3a502a;
+}
+[data-theme='dark'] .editor-preview {
+  border-color: #3d542b;
+}
+[data-theme='dark'] .preview-empty {
+  background: #23341a;
+  color: #94ad79;
+}
+[data-theme='dark'] .modal {
+  background: #242f1e;
+  border-color: #465d33;
+}
+[data-theme='dark'] .search-field.large {
+  background: #2d4021;
+  border-color: #4a6535;
+}
+[data-theme='dark'] .search-result:hover {
+  background: #344a26;
+}
+[data-theme='dark'] .search-result strong {
+  color: #bdcfa6;
+}
+[data-theme='dark'] .search-suggestions > button,
+[data-theme='dark'] .search-concepts > a {
+  border-color: #4b6237;
+  color: #9fb58a;
+}
+[data-theme='dark'] .command-actions > a {
+  background: #344a24;
+  color: #b3c696;
+}
+[data-theme='dark'] .search-bottom,
+[data-theme='dark'] .command-actions {
+  border-color: #40572e;
+}
+[data-theme='dark'] .collection-options label {
+  border-color: #42562e;
+}
+[data-theme='dark'] .collection-options label.selected {
+  background: #344d23;
+  border-color: #6a8c47;
+}
+[data-theme='dark'] .import-confirm {
+  background: #2e441e;
+  border-color: #597a3a;
+}
+[data-theme='dark'] .empty-state > span {
+  background: #293e1d;
+  border-color: #4b6731;
+  color: #a6c185;
+}
+[data-theme='dark'] .empty-state h3 {
+  color: #c1d3a7;
+}
+[data-theme='dark'] .home-concepts > a {
+  border-color: #455e31;
+  color: #a6bc8d;
+}
+@media (max-width: 620px) {
+  .footer-journey {
+    font-size: 8px;
+  }
+  .site-footer > div:last-child {
+    gap: 14px;
+  }
+  .footer-year {
+    display: none;
+  }
+  .home-concepts {
+    gap: 8px;
+    padding-top: 18px;
+  }
+  .home-concepts > span {
+    width: 100%;
+    font-size: 7px;
+  }
+  .home-concepts > a {
+    font-size: 8px;
+    padding: 5px 8px;
+  }
+  .command-actions > a {
+    font-size: 8px;
+    padding: 7px;
+  }
+}

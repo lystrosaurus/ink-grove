@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>麦肯锡方法｜The McKinsey Way</title>
+<style>
+:root{
+  --bg:#f1f3f5;
+  --paper:#fbfbfa;
+  --ink:#182029;
+  --muted:#6e7780;
+  --line:#d7dce1;
+  --blue:#1f5f8f;
+  --blue2:#5f8eb1;
+  --blue-soft:#e4eef5;
+  --graphite:#2f3740;
+  --red:#b8534d;
+  --red-soft:#f2dfdd;
+  --green:#6e8f75;
+  --green-soft:#e5ede7;
+  --gold:#aa8750;
+  --gold-soft:#efe7d8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    linear-gradient(rgba(31,95,143,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(31,95,143,.03) 1px,transparent 1px),
+    var(--bg);
+  background-size:30px 30px;
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.65;
+}
+.page{width:min(1450px,95vw);margin:24px auto 60px}
+.sheet{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 24px 70px rgba(34,45,56,.11);
+}
+.hero{
+  min-height:600px;
+  display:grid;
+  grid-template-columns:1.06fr .94fr;
+  gap:34px;
+  padding:50px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.18em}
+h1{
+  margin:18px 0 10px;
+  font-size:clamp(64px,8vw,112px);
+  line-height:.92;
+  letter-spacing:-.06em;
+}
+.english{font-size:18px;letter-spacing:.15em;color:#6c7780}
+.author{margin-top:8px;color:var(--muted);font-size:14px}
+.lead{margin-top:34px;max-width:760px;font-size:24px;line-height:1.55}
+.lead strong{color:var(--blue)}
+.thesis{
+  margin-top:28px;padding:18px 20px;border-left:5px solid var(--blue);background:#f0f5f8
+}
+.thesis b{display:block;margin-bottom:6px}.thesis span{color:var(--muted)}
+
+.warroom{
+  align-self:center;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:white;
+  padding:24px;
+}
+.warroom-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.warroom-head b{font-size:18px}.warroom-head span{font-size:10px;color:var(--muted);letter-spacing:.13em}
+.pipeline{display:grid;gap:10px}
+.pipe{
+  position:relative;
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:12px;
+  align-items:start;
+  padding:13px 0;
+  border-top:1px solid var(--line);
+}
+.pipe:first-child{border-top:0}
+.pipe:not(:last-child):after{
+  content:"";
+  position:absolute;left:22px;top:52px;height:26px;width:2px;background:var(--blue2)
+}
+.badge{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:var(--blue-soft);color:var(--blue);font-weight:800
+}
+.pipe:nth-child(3) .badge{background:var(--red-soft);color:var(--red)}
+.pipe:nth-child(5) .badge{background:var(--green-soft);color:var(--green)}
+.pipe:nth-child(7) .badge{background:var(--gold-soft);color:#8a6b3d}
+.pipe b{display:block}.pipe span{font-size:12px;color:var(--muted)}
+
+.section{padding:42px 46px;border-bottom:1px solid var(--line)}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:22px
+}
+.section-head h2{margin:4px 0 0;font-size:34px}
+.section-head p{margin:0;max-width:660px;color:var(--muted)}
+.chapter{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--blue)}
+
+.core{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:18px
+}
+.card,.principle,.tool,.stage,.question{
+  border:1px solid var(--line);border-radius:20px;background:white
+}
+.card{padding:28px}
+.card .quote{font-size:30px;line-height:1.48}
+.card .quote strong{color:var(--blue)}
+.card p{color:var(--muted)}
+.triad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.triad-item{
+  padding:16px;border-radius:14px;border:1px solid var(--line);background:#f7f9fa
+}
+.triad-item:nth-child(1){background:var(--blue-soft)}
+.triad-item:nth-child(2){background:var(--red-soft)}
+.triad-item:nth-child(3){background:var(--green-soft)}
+.triad-item b{display:block}.triad-item span{font-size:12px;color:var(--muted)}
+
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.principle{padding:20px;min-height:205px}
+.principle .tag{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--blue)}
+.principle h3{font-size:19px;margin:8px 0}
+.principle p{font-size:13px;color:var(--muted)}
+.principle .use{padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:#4d5861}
+
+.issue-tree{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:18px;
+}
+.root{
+  align-self:center;
+  padding:22px;border:2px solid var(--blue);border-radius:18px;background:var(--blue-soft)
+}
+.root b{font-size:21px}
+.root span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.branch{
+  padding:18px;border:1px solid var(--line);border-radius:16px;background:white;position:relative
+}
+.branch:before{
+  content:"";
+  position:absolute;left:-18px;top:50%;width:18px;height:1px;background:var(--blue2)
+}
+.branch h3{margin:0 0 8px;font-size:18px}
+.branch p{font-size:12px;color:var(--muted)}
+.sub{
+  margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:#56616a
+}
+
+.tools{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tool{padding:18px;min-height:190px}
+.tool .n{font-size:10px;color:var(--red);font-weight:800;letter-spacing:.13em}
+.tool h3{font-size:17px;margin:8px 0}
+.tool p{font-size:12px;color:var(--muted);margin:0}
+
+.work{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.stage{padding:20px;min-height:210px}
+.stage .n{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:.13em}
+.stage h3{font-size:19px;margin:8px 0}
+.stage p{font-size:13px;color:var(--muted)}
+.stage .rule{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:#48555f}
+
+.communication{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px
+}
+.comm-card{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:white
+}
+.comm-card h3{margin:0 0 12px}
+.check{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+.check:first-child{border-top:0}
+.check i{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  background:var(--blue-soft);color:var(--blue);font-style:normal;font-weight:800
+}
+.check b{display:block}.check span{font-size:12px;color:var(--muted)}
+
+.questions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.question{padding:20px;min-height:175px}
+.question .id{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:.13em}
+.question h3{font-size:18px;margin:8px 0}
+.question p{font-size:13px;color:var(--muted);margin:0}
+
+.final{
+  padding:44px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+  background:linear-gradient(135deg,#e9f0f5,#f2eee5)
+}
+.final-quote{font-size:32px;line-height:1.5;border-left:5px solid var(--blue);padding-left:24px}
+.final-quote strong{color:var(--blue)}
+.final-side{padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.78)}
+.final-side b{font-size:19px}.final-side p{color:var(--muted);margin-bottom:0}
+.footer{
+  padding:20px 46px;background:var(--graphite);color:#c7d0d7;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px
+}
+.footer strong{color:white}
+
+@media(max-width:1050px){
+  .hero,.core,.communication,.final{grid-template-columns:1fr}
+  .principles,.work,.questions{grid-template-columns:1fr 1fr}
+  .tools{grid-template-columns:1fr 1fr}
+  .issue-tree{grid-template-columns:1fr}
+  .branches{grid-template-columns:1fr 1fr}
+  .branch:before{display:none}
+}
+@media(max-width:700px){
+  .hero,.section{padding:28px 22px}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .principles,.tools,.work,.questions,.branches,.triad{grid-template-columns:1fr}
+  .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">BOOK ARTIFACT · PROBLEM-SOLVING BLUEPRINT</div>
+    <h1>麦肯锡方法</h1>
+    <div class="english">THE McKINSEY WAY</div>
+    <div class="author">Ethan M. Rasiel</div>
+
+    <div class="lead">
+      面对复杂商业问题，真正重要的不是“知道很多”，而是能够<strong>把问题拆清楚、提出可验证假设、快速找到关键事实，并把结论讲到别人愿意行动</strong>。
+    </div>
+
+    <div class="thesis">
+      <b>核心不是神秘框架，而是一种可重复的问题解决纪律。</b>
+      <span>与事实为友、MECE、初始假设、80/20、研究、访谈、头脑风暴、图表表达和客户买入，共同构成从问题到行动的完整闭环。</span>
+    </div>
+  </div>
+
+  <div class="warroom">
+    <div class="warroom-head">
+      <b>CONSULTING WAR ROOM</b>
+      <span>PROBLEM → BUY-IN</span>
+    </div>
+    <div class="pipeline">
+      <div class="pipe"><div class="badge">01</div><div><b>定义问题</b><span>不要被表面症状带走。</span></div></div>
+      <div class="pipe"><div class="badge">02</div><div><b>建立初始假设</b><span>先形成可验证方向，再去找证据。</span></div></div>
+      <div class="pipe"><div class="badge">03</div><div><b>MECE 拆解</b><span>互斥、穷尽地形成问题树。</span></div></div>
+      <div class="pipe"><div class="badge">04</div><div><b>抓关键驱动</b><span>用 80/20 避免“烧干大海”。</span></div></div>
+      <div class="pipe"><div class="badge">05</div><div><b>研究与访谈</b><span>事实、数据与一线信息验证假设。</span></div></div>
+      <div class="pipe"><div class="badge">06</div><div><b>形成洞见</b><span>让分析回答真正的商业问题。</span></div></div>
+      <div class="pipe"><div class="badge">07</div><div><b>清晰呈现</b><span>一图一事，结论先行，推动 buy-in。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">01 · THE OPERATING SYSTEM</div><h2>麦肯锡方法的底层，不是模板，而是三种纪律</h2></div>
+    <p>公开目录把“与事实为友、MECE、初始假设”放在全书开头，后续再延伸到研究、访谈、团队和呈现。citeturn186988search3turn186988search6</p>
+  </div>
+
+  <div class="core">
+    <div class="card">
+      <div class="quote">
+        复杂问题不可怕。<br>
+        可怕的是在<strong>没有结构</strong>的情况下，用更多努力掩盖混乱。
+      </div>
+      <p>结构化不是为了让报告看起来专业，而是为了减少遗漏、缩小搜索空间，并让团队能围绕同一张问题地图工作。</p>
+    </div>
+    <div class="card">
+      <h3>三根支柱</h3>
+      <div class="triad">
+        <div class="triad-item"><b>Facts</b><span>用事实约束观点</span></div>
+        <div class="triad-item"><b>Structure</b><span>把问题拆成可处理部分</span></div>
+        <div class="triad-item"><b>Hypothesis</b><span>让研究有方向</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">02 · FOUR CORE PRINCIPLES</div><h2>四个最值得带走的思考原则</h2></div>
+    <p>这些方法在中文公开目录中被明确列为全书最核心的思考工具：事实、MECE、初始假设，以及 80/20 等工作规则。citeturn186988search3turn186988search4</p>
+  </div>
+
+  <div class="principles">
+    <div class="principle">
+      <div class="tag">FACTS FIRST</div>
+      <h3>与事实为友</h3>
+      <p>不要因为已经喜欢某个答案，就只寻找支持它的事实。让事实能够推翻你。</p>
+      <div class="use">问：什么证据会让我改变结论？</div>
+    </div>
+    <div class="principle">
+      <div class="tag">MECE</div>
+      <h3>互斥且穷尽</h3>
+      <p>拆解问题时避免重复，也尽量避免遗漏，让每一部分都有清晰边界。</p>
+      <div class="use">问：这些分支是否重叠？有没有明显缺口？</div>
+    </div>
+    <div class="principle">
+      <div class="tag">INITIAL HYPOTHESIS</div>
+      <h3>假设驱动</h3>
+      <p>先提出一个可能的答案，再设计分析去证实或证伪，而不是漫无目的地搜集信息。</p>
+      <div class="use">问：如果今天必须回答，我最可能的答案是什么？</div>
+    </div>
+    <div class="principle">
+      <div class="tag">80 / 20</div>
+      <h3>抓关键驱动</h3>
+      <p>不是所有分析都同等重要。优先找到最可能解释大部分结果的少数因素。</p>
+      <div class="use">问：哪 20% 的因素最可能决定 80% 的结果？</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">03 · ISSUE TREE</div><h2>把“一个大问题”变成一棵可以工作的树</h2></div>
+    <p>结构化拆解的目标，不是制造很多框，而是把一个无法直接回答的问题，转化为一组可以分别验证的小问题。</p>
+  </div>
+
+  <div class="issue-tree">
+    <div class="root">
+      <b>利润为什么下降？</b>
+      <span>示例问题</span>
+    </div>
+    <div class="branches">
+      <div class="branch">
+        <h3>收入下降？</h3>
+        <p>价格、销量、产品组合、客户流失。</p>
+        <div class="sub">验证：收入变化贡献度</div>
+      </div>
+      <div class="branch">
+        <h3>成本上升？</h3>
+        <p>采购、制造、物流、人力、营销。</p>
+        <div class="sub">验证：成本增长驱动因素</div>
+      </div>
+      <div class="branch">
+        <h3>结构变化？</h3>
+        <p>区域、渠道、客户、产品之间的利润组合发生变化。</p>
+        <div class="sub">验证：利润池迁移</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">04 · RULES FOR SPEED</div><h2>不要“烧干大海”：高效分析的五个工作习惯</h2></div>
+    <p>公开目录中，“不要妄想烧干大海、找到关键驱动、电梯法则、先摘好摘的果实、每天绘制一张图表”等都被列为实用规则。citeturn186988search3turn186988search8</p>
+  </div>
+
+  <div class="tools">
+    <div class="tool"><div class="n">01</div><h3>不要烧干大海</h3><p>不要试图把所有数据都分析完再开始思考。</p></div>
+    <div class="tool"><div class="n">02</div><h3>抓关键驱动</h3><p>优先解决最可能改变结论的变量。</p></div>
+    <div class="tool"><div class="n">03</div><h3>电梯法则</h3><p>如果不能在极短时间讲清核心结论，说明思路还不够清楚。</p></div>
+    <div class="tool"><div class="n">04</div><h3>先摘低垂果实</h3><p>先解决容易验证、能快速产生价值的问题。</p></div>
+    <div class="tool"><div class="n">05</div><h3>每天画一张图</h3><p>强迫自己把当天最重要的发现变成可视化结论。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">05 · HOW THE WORK GETS DONE</div><h2>分析只是中段：研究、访谈、团队与头脑风暴都很重要</h2></div>
+    <p>全书第二部分专门讨论组队、层级管理、研究、访谈和头脑风暴，说明问题解决从来不是“一个聪明人独自想出来”。citeturn186988search1turn186988search2</p>
+  </div>
+
+  <div class="work">
+    <div class="stage">
+      <div class="n">WORK 01</div>
+      <h3>研究</h3>
+      <p>先利用已有经验和内部知识，再做专题研究，避免重复劳动。</p>
+      <div class="rule">原则：先问“别人是否已经做过？”</div>
+    </div>
+    <div class="stage">
+      <div class="n">WORK 02</div>
+      <h3>访谈</h3>
+      <p>准备提纲，但不要机械照读；真正高质量的信息往往来自倾听和追问。</p>
+      <div class="rule">原则：准备问题，更要准备好改变问题。</div>
+    </div>
+    <div class="stage">
+      <div class="n">WORK 03</div>
+      <h3>头脑风暴</h3>
+      <p>先准备事实，再创造暂时不批判的空间，让不同假设真正出现。</p>
+      <div class="rule">原则：有准备的开放，而不是无结构闲聊。</div>
+    </div>
+    <div class="stage">
+      <div class="n">WORK 04</div>
+      <h3>团队</h3>
+      <p>选对成员、管理层级、维持士气，让不同人承担不同问题模块。</p>
+      <div class="rule">原则：复杂问题需要协同结构。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">06 · FROM INSIGHT TO BUY-IN</div><h2>一个好答案，如果不能被理解和采纳，价值仍然有限</h2></div>
+    <p>官方目录的第三部分集中在演示、图表、内部沟通和客户合作；出版社也特别提到瀑布图、presentation 和获得 buy-in。citeturn186988search1turn186988search4</p>
+  </div>
+
+  <div class="communication">
+    <div class="comm-card">
+      <h3>把洞见讲清楚</h3>
+      <div class="check"><i>1</i><div><b>结论先行</b><span>先告诉听众最重要的答案，再给证据。</span></div></div>
+      <div class="check"><i>2</i><div><b>一图一事</b><span>每一张图只承担一个明确的信息任务。</span></div></div>
+      <div class="check"><i>3</i><div><b>结构统一</b><span>问题、分析、结论和建议必须彼此对应。</span></div></div>
+      <div class="check"><i>4</i><div><b>为决策服务</b><span>图表不是装饰，必须帮助听众做决定。</span></div></div>
+    </div>
+
+    <div class="comm-card">
+      <h3>让客户真正买入</h3>
+      <div class="check"><i>A</i><div><b>提前沟通</b><span>不要让最终会议成为第一次听到结论的地方。</span></div></div>
+      <div class="check"><i>B</i><div><b>让客户参与</b><span>参与过形成过程的人，更容易拥有结论。</span></div></div>
+      <div class="check"><i>C</i><div><b>适配现实</b><span>最“聪明”的方案如果无法执行，也不是好方案。</span></div></div>
+      <div class="check"><i>D</i><div><b>实施严谨</b><span>咨询不是在建议交付那一刻结束。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">07 · SIX QUESTIONS</div><h2>把《麦肯锡方法》压缩成六个问题</h2></div>
+    <p>遇到一个复杂工作问题时，不必先找框架名词。先用这六问把思路拉回正确轨道。</p>
+  </div>
+
+  <div class="questions">
+    <div class="question"><div class="id">Q1 · PROBLEM</div><h3>我们真正要解决的问题是什么？</h3><p>症状、原因和决策问题不要混在一起。</p></div>
+    <div class="question"><div class="id">Q2 · HYPOTHESIS</div><h3>如果现在必须回答，我的初始假设是什么？</h3><p>让后续研究有方向，而不是无限搜集资料。</p></div>
+    <div class="question"><div class="id">Q3 · STRUCTURE</div><h3>问题是否拆得 MECE？</h3><p>有没有重复、遗漏或不同层级混杂？</p></div>
+    <div class="question"><div class="id">Q4 · DRIVER</div><h3>真正决定结果的关键驱动是什么？</h3><p>别把所有变量都当成同等重要。</p></div>
+    <div class="question"><div class="id">Q5 · FACT</div><h3>什么事实会证伪我的假设？</h3><p>不要只搜集支持自己观点的数据。</p></div>
+    <div class="question"><div class="id">Q6 · ACTION</div><h3>这个答案最终要推动谁做什么？</h3><p>如果没有行动对象，分析很容易停在漂亮报告。</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-quote">
+    《麦肯锡方法》的核心不是“像咨询顾问一样说话”，<br>
+    而是<strong>像问题解决者一样工作</strong>。
+  </div>
+  <div class="final-side">
+    <b>如果只带走一个闭环：</b>
+    <p><strong>结构化问题 → 提出假设 → 用事实验证 → 聚焦关键驱动 → 清晰表达 → 推动行动。</strong></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>The McKinsey Way · Ethan M. Rasiel</strong>
+  <span>Facts · MECE · Hypothesis · 80/20 · Research · Interview · Presentation · Buy-in</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

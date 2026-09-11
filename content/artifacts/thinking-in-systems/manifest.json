@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "thinking-in-systems",
+  "slug": "thinking-in-systems",
+  "title": "系统之美",
+  "subtitle": "看见存量、流量与反馈，理解结构如何产生行为",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Donella H. Meadows",
+  "topics": [
+    "系统",
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "系统思维",
+    "反馈",
+    "杠杆",
+    "复利"
+  ],
+  "visualStyle": "sage-systems-fieldbook",
+  "related": [
+    "thinking-framework",
+    "learning-cycle",
+    "innovators-dilemma",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "thinking-framework",
+      "type": "extends",
+      "concept": "systems-thinking",
+      "label": "将框架中的系统视角展开为存量、流量与反馈"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "supports",
+      "concept": "feedback",
+      "label": "用增强与调节回路解释学习系统如何演化"
+    },
+    {
+      "target": "innovators-dilemma",
+      "type": "supports",
+      "concept": "systems-thinking",
+      "label": "从组织结构解释优秀企业为何反复错过新市场"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "compounding",
+      "label": "增强回路让长期积累产生复利，也可能放大失控"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/thinking-in-systems/index.html"
+  },
+  "cover": "/artifacts/thinking-in-systems/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:thinking_in_systems_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

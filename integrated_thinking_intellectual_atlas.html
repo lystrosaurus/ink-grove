@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>贯通思考 II｜Intellectual Atlas</title>
+<style>
+:root{
+  --bg:#11161c;
+  --paper:#151c23;
+  --paper2:#1a232c;
+  --line:#2d3945;
+  --text:#edf3f6;
+  --muted:#9aa8b3;
+  --cyan:#69c7c1;
+  --blue:#6e92d4;
+  --violet:#9c86c8;
+  --amber:#d6ae61;
+  --coral:#dc7766;
+  --green:#7fa47d;
+  --cream:#ebe3d5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 6%,rgba(105,199,193,.08),transparent 23%),
+    radial-gradient(circle at 88% 5%,rgba(156,134,200,.08),transparent 22%),
+    var(--bg);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.68;
+}
+.page{width:min(1480px,95vw);margin:24px auto 60px}
+.sheet{
+  background:linear-gradient(180deg,#151b22,#11171d);
+  border:1px solid var(--line);
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 28px 80px rgba(0,0,0,.32);
+}
+.hero{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+  padding:54px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.18em}
+h1{
+  margin:18px 0 12px;
+  font-size:clamp(62px,8vw,116px);
+  line-height:.92;
+  letter-spacing:-.06em;
+}
+.subtitle{font-size:19px;color:#aeb9c1;letter-spacing:.08em}
+.lead{margin-top:34px;max-width:780px;font-size:24px;line-height:1.58}
+.lead strong{color:var(--amber)}
+.thesis{
+  margin-top:28px;
+  padding:20px 22px;
+  border-left:5px solid var(--amber);
+  background:#18212a;
+}
+.thesis b{display:block;margin-bottom:6px}
+.thesis span{color:var(--muted)}
+
+.constellation{
+  align-self:center;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:
+    radial-gradient(circle at center,rgba(105,199,193,.07),transparent 38%),
+    #121920;
+  min-height:500px;
+  position:relative;
+  overflow:hidden;
+}
+.constellation:before,
+.constellation:after{
+  content:"";
+  position:absolute;
+  border:1px dashed rgba(255,255,255,.09);
+  border-radius:50%;
+  left:50%;top:50%;transform:translate(-50%,-50%);
+}
+.constellation:before{width:330px;height:330px}
+.constellation:after{width:470px;height:470px}
+.center{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:150px;height:150px;border-radius:50%;
+  display:grid;place-items:center;text-align:center;
+  background:#1e2a33;border:1px solid #3d4f5b;
+  z-index:3;
+}
+.center b{font-size:22px}.center span{font-size:11px;color:var(--muted)}
+.star{
+  position:absolute;width:126px;min-height:74px;
+  padding:12px;border:1px solid var(--line);border-radius:18px;
+  background:#161f27;z-index:2;
+}
+.star b{display:block;font-size:14px}.star small{color:var(--muted);font-size:10px}
+.s1{left:8%;top:10%}.s2{right:8%;top:10%}.s3{right:3%;top:42%}.s4{right:10%;bottom:8%}
+.s5{left:38%;bottom:2%}.s6{left:8%;bottom:9%}.s7{left:2%;top:42%}.s8{left:39%;top:3%}
+.s9{left:23%;top:28%}.s10{right:22%;top:28%}.s11{left:42%;bottom:22%}
+.star:nth-of-type(odd){border-color:#34545b}
+.star:nth-of-type(even){border-color:#51445f}
+
+.section{padding:42px 46px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:24px
+}
+.section-head h2{margin:4px 0 0;font-size:34px}
+.section-head p{margin:0;max-width:680px;color:var(--muted)}
+.chapter{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--cyan)}
+
+.layers{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.layer{
+  min-height:230px;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--paper)
+}
+.layer .n{font-size:10px;font-weight:800;letter-spacing:.12em}
+.layer h3{font-size:18px;margin:8px 0}
+.layer p{font-size:12px;color:var(--muted)}
+.layer .books{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font-size:11px;color:#c8d3d9}
+.layer:nth-child(1){border-top:5px solid var(--cyan)} .layer:nth-child(1) .n{color:var(--cyan)}
+.layer:nth-child(2){border-top:5px solid var(--blue)} .layer:nth-child(2) .n{color:var(--blue)}
+.layer:nth-child(3){border-top:5px solid var(--violet)} .layer:nth-child(3) .n{color:var(--violet)}
+.layer:nth-child(4){border-top:5px solid var(--coral)} .layer:nth-child(4) .n{color:var(--coral)}
+.layer:nth-child(5){border-top:5px solid var(--green)} .layer:nth-child(5) .n{color:var(--green)}
+.layer:nth-child(6){border-top:5px solid var(--amber)} .layer:nth-child(6) .n{color:var(--amber)}
+.layer:nth-child(7){border-top:5px solid #b9b4a8} .layer:nth-child(7) .n{color:#b9b4a8}
+
+.matrix{
+  display:grid;
+  grid-template-columns:180px repeat(5,1fr);
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+}
+.cell{
+  padding:15px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:92px;
+  background:#141c23;
+}
+.cell:nth-child(6n){border-right:0}
+.cell.head{background:#1b2630;font-weight:800}
+.cell.rowhead{background:#182028;font-weight:800}
+.cell p{margin:0;color:var(--muted);font-size:12px}
+.cell b{display:block;margin-bottom:4px;font-size:13px}
+
+.engine{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px
+}
+.loop{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--paper)
+}
+.loop-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:18px}
+.step{
+  min-height:150px;padding:16px;border:1px solid var(--line);border-radius:16px;background:#121920
+}
+.step .n{font-size:10px;color:var(--amber);font-weight:800;letter-spacing:.12em}
+.step b{display:block;margin:8px 0;font-size:17px}
+.step span{font-size:11px;color:var(--muted)}
+
+.rules{display:grid;gap:10px}
+.rule{
+  padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--paper)
+}
+.rule b{font-size:17px}
+.rule span{display:block;margin-top:4px;font-size:12px;color:var(--muted)}
+.rule:nth-child(1){border-left:5px solid var(--cyan)}
+.rule:nth-child(2){border-left:5px solid var(--blue)}
+.rule:nth-child(3){border-left:5px solid var(--coral)}
+.rule:nth-child(4){border-left:5px solid var(--green)}
+.rule:nth-child(5){border-left:5px solid var(--amber)}
+
+.transitions{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:12px
+}
+.transition{
+  padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--paper);min-height:205px
+}
+.transition .tag{font-size:10px;color:var(--violet);font-weight:800;letter-spacing:.12em}
+.transition h3{font-size:18px;margin:8px 0}
+.transition p{font-size:12px;color:var(--muted)}
+.transition .fromto{
+  margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font-size:11px;color:#cbd5dc
+}
+
+.questions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.q{
+  padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--paper);min-height:180px
+}
+.q .id{font-size:10px;color:var(--cyan);font-weight:800;letter-spacing:.12em}
+.q h3{font-size:18px;margin:8px 0}
+.q p{font-size:12px;color:var(--muted);margin:0}
+
+.books{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+}
+.book{
+  padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--paper);min-height:180px
+}
+.book .name{font-size:19px;font-weight:800}
+.book .role{font-size:11px;color:var(--amber);margin:4px 0 10px}
+.book p{font-size:12px;color:var(--muted);margin:0}
+
+.final{
+  padding:46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+  background:linear-gradient(135deg,#17222b,#151a22)
+}
+.final-quote{
+  font-size:32px;line-height:1.5;border-left:5px solid var(--amber);padding-left:24px
+}
+.final-quote strong{color:var(--amber)}
+.final-side{padding:22px;border:1px solid var(--line);border-radius:18px;background:#182129}
+.final-side b{font-size:19px}.final-side p{color:var(--muted);margin-bottom:0}
+.footer{
+  padding:20px 46px;background:#0a0f14;color:#a8b4bc;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px
+}
+.footer strong{color:white}
+
+@media(max-width:1100px){
+  .hero,.engine,.final{grid-template-columns:1fr}
+  .layers{grid-template-columns:1fr 1fr}
+  .transitions,.questions{grid-template-columns:1fr 1fr}
+  .books{grid-template-columns:1fr 1fr}
+  .loop-grid{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:760px){
+  .hero,.section{padding:28px 22px}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .layers,.transitions,.questions,.books,.loop-grid{grid-template-columns:1fr}
+  .matrix{display:block;border:0}
+  .cell{border:1px solid var(--line);margin-bottom:8px}
+  .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">SYNTHESIS ARTIFACT · INTELLECTUAL ATLAS</div>
+    <h1>贯通思考 II</h1>
+    <div class="subtitle">从看清世界，到构建自己的判断、能力与人生结构</div>
+
+    <div class="lead">
+      当这些书被放在一起，它们讨论的其实不是十几个独立主题，
+      而是一条更大的路径：<strong>如何看清世界、如何不被自己欺骗、如何解决复杂问题、如何训练能力、如何承担人生、如何理解组织与创新，最终如何获得更大的选择权。</strong>
+    </div>
+
+    <div class="thesis">
+      <b>真正的“贯通”，不是把观点排在一起，而是找到它们在不同层次上各自解决什么问题。</b>
+      <span>有的书帮你看清，有的书帮你判断，有的书帮你行动，有的书帮你训练，有的书帮你理解组织与竞争，有的书则提醒你：所有方法最终都要回到“你想成为什么样的人”。</span>
+    </div>
+  </div>
+
+  <div class="constellation">
+    <div class="center"><div><b>你的思想地图</b><span>See · Think · Act · Build</span></div></div>
+
+    <div class="star s1"><b>认知觉醒</b><small>看见自己</small></div>
+    <div class="star s2"><b>系统之美</b><small>看见结构</small></div>
+    <div class="star s3"><b>思维模型</b><small>切换视角</small></div>
+    <div class="star s4"><b>逻辑思维</b><small>校准推理</small></div>
+    <div class="star s5"><b>麦肯锡方法</b><small>解决问题</small></div>
+    <div class="star s6"><b>刻意练习</b><small>形成能力</small></div>
+    <div class="star s7"><b>七个习惯</b><small>建立原则</small></div>
+    <div class="star s8"><b>如何阅读一本书</b><small>学习方法</small></div>
+    <div class="star s9"><b>人生十二法则</b><small>承担人生</small></div>
+    <div class="star s10"><b>创新者的窘境</b><small>理解组织</small></div>
+    <div class="star s11"><b>纳瓦尔宝典</b><small>杠杆与自由</small></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">01 · THE SEVEN LAYERS</div><h2>十一本文本，可以压成七层“个人认知操作系统”</h2></div>
+    <p>每一层解决不同类型的问题。很多困惑之所以反复出现，是因为我们拿“执行层”的方法去解决“认知层”或“结构层”的问题。</p>
+  </div>
+
+  <div class="layers">
+    <div class="layer"><div class="n">LAYER 01</div><h3>觉察自己</h3><p>先看见注意力、情绪、欲望、惯性与自动反应。</p><div class="books">认知觉醒 · 人生十二法则</div></div>
+    <div class="layer"><div class="n">LAYER 02</div><h3>看见结构</h3><p>从事件升级到反馈、系统、边界、激励与价值网络。</p><div class="books">系统之美 · 创新者的窘境</div></div>
+    <div class="layer"><div class="n">LAYER 03</div><h3>校准判断</h3><p>通过模型、概率、因果、逻辑与多视角减少认知盲点。</p><div class="books">思维模型 · 逻辑思维</div></div>
+    <div class="layer"><div class="n">LAYER 04</div><h3>定义问题</h3><p>把模糊问题变成结构化问题，并用事实验证假设。</p><div class="books">麦肯锡方法 · 系统之美</div></div>
+    <div class="layer"><div class="n">LAYER 05</div><h3>形成能力</h3><p>把知识转成可训练、可反馈、可重复提升的具体能力。</p><div class="books">刻意练习 · 如何阅读一本书</div></div>
+    <div class="layer"><div class="n">LAYER 06</div><h3>建立原则</h3><p>决定什么值得做、什么先做、如何与他人合作与承担责任。</p><div class="books">七个习惯 · 人生十二法则</div></div>
+    <div class="layer"><div class="n">LAYER 07</div><h3>放大价值</h3><p>找到专长、长期主义与杠杆，让价值逐渐脱离线性时间。</p><div class="books">纳瓦尔宝典 · 创新者的窘境</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">02 · CROSS-BOOK MATRIX</div><h2>同一个现实问题，不同书分别解决哪一层？</h2></div>
+    <p>真正强大的地方不是“选一本最对的书”，而是让不同工具在正确层次上协同。</p>
+  </div>
+
+  <div class="matrix">
+    <div class="cell head">问题</div>
+    <div class="cell head">看自己</div>
+    <div class="cell head">看世界</div>
+    <div class="cell head">做判断</div>
+    <div class="cell head">采取行动</div>
+    <div class="cell head">长期结构</div>
+
+    <div class="cell rowhead">为什么我总改变不了？</div>
+    <div class="cell"><p>认知觉醒：先看见本能、情绪与模糊。</p></div>
+    <div class="cell"><p>系统之美：检查环境与反馈是否在强化旧行为。</p></div>
+    <div class="cell"><p>逻辑思维：别把失败简单归因“意志力差”。</p></div>
+    <div class="cell"><p>刻意练习：拆成可训练的小技能。</p></div>
+    <div class="cell"><p>七个习惯：让长期原则优先于即时反应。</p></div>
+
+    <div class="cell rowhead">一个复杂问题怎么解决？</div>
+    <div class="cell"><p>认知觉醒：先消除自己的情绪和模糊。</p></div>
+    <div class="cell"><p>系统之美：寻找结构、反馈和延迟。</p></div>
+    <div class="cell"><p>思维模型：换多个模型重新看问题。</p></div>
+    <div class="cell"><p>麦肯锡方法：假设驱动 + MECE + 事实验证。</p></div>
+    <div class="cell"><p>纳瓦尔：问这件事是否值得长期投入。</p></div>
+
+    <div class="cell rowhead">怎么真正变强？</div>
+    <div class="cell"><p>认知觉醒：提升元认知与专注。</p></div>
+    <div class="cell"><p>如何阅读一本书：主动阅读，建立问题意识。</p></div>
+    <div class="cell"><p>思维模型：形成多模型网络。</p></div>
+    <div class="cell"><p>刻意练习：挑战 → 反馈 → 修正。</p></div>
+    <div class="cell"><p>纳瓦尔：把能力沉淀成独特专长。</p></div>
+
+    <div class="cell rowhead">如何面对人生的不确定？</div>
+    <div class="cell"><p>人生十二法则：承担责任、诚实面对现实。</p></div>
+    <div class="cell"><p>系统之美：接受复杂系统不可完全控制。</p></div>
+    <div class="cell"><p>逻辑思维：用概率代替绝对确定。</p></div>
+    <div class="cell"><p>七个习惯：专注影响圈与要事。</p></div>
+    <div class="cell"><p>纳瓦尔：减少欲望，增加选择权。</p></div>
+
+    <div class="cell rowhead">组织为什么会失败？</div>
+    <div class="cell"><p>逻辑思维：不要只归因个人能力。</p></div>
+    <div class="cell"><p>创新者的窘境：价值网络与资源依赖塑造选择。</p></div>
+    <div class="cell"><p>系统之美：结构产生行为。</p></div>
+    <div class="cell"><p>麦肯锡方法：定义真正问题与关键驱动。</p></div>
+    <div class="cell"><p>创新者的窘境：旧成功逻辑可能阻碍新增长。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">03 · THE INTEGRATED LOOP</div><h2>把这些书真正串起来：一个完整的认知—行动闭环</h2></div>
+    <p>这条闭环不是一次走完，而是不断重复。每次循环都会让你的模型、判断和能力稍微变好。</p>
+  </div>
+
+  <div class="engine">
+    <div class="loop">
+      <div class="loop-grid">
+        <div class="step"><div class="n">01</div><b>觉察</b><span>我现在被什么驱动？哪里仍模糊？</span></div>
+        <div class="step"><div class="n">02</div><b>建模</b><span>问题背后有哪些系统结构和模型？</span></div>
+        <div class="step"><div class="n">03</div><b>判断</b><span>事实、概率、因果和假设分别是什么？</span></div>
+        <div class="step"><div class="n">04</div><b>行动</b><span>把问题拆成可以验证和执行的小步骤。</span></div>
+        <div class="step"><div class="n">05</div><b>反馈</b><span>结果和预期差在哪里？哪里需要修正？</span></div>
+        <div class="step"><div class="n">06</div><b>复利</b><span>哪些经验应沉淀为能力、原则或资产？</span></div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule"><b>原则 01｜先把现实看清，再急着行动</b><span>认知觉醒 + 系统之美 + 逻辑思维</span></div>
+      <div class="rule"><b>原则 02｜不要只用一个模型解释世界</b><span>思维模型 + 如何阅读一本书</span></div>
+      <div class="rule"><b>原则 03｜问题必须进入可验证状态</b><span>麦肯锡方法 + 刻意练习</span></div>
+      <div class="rule"><b>原则 04｜能力必须通过反馈获得</b><span>刻意练习 + 七个习惯</span></div>
+      <div class="rule"><b>原则 05｜长期自由来自能力、结构与杠杆</b><span>纳瓦尔宝典 + 创新者的窘境</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">04 · FIVE BIG TRANSITIONS</div><h2>真正的成长，不是增加知识，而是发生五次“认知跃迁”</h2></div>
+    <p>这些书共同推动的，不是“懂得更多”，而是一个人面对世界的方式发生变化。</p>
+  </div>
+
+  <div class="transitions">
+    <div class="transition"><div class="tag">SHIFT 01</div><h3>从事件 → 结构</h3><p>不再只问发生了什么，而开始问什么反馈、规则与激励让它持续发生。</p><div class="fromto">系统之美 · 创新者的窘境</div></div>
+    <div class="transition"><div class="tag">SHIFT 02</div><h3>从答案 → 模型</h3><p>不再执着一个标准答案，而是建立多个能够互相校验的解释框架。</p><div class="fromto">思维模型 · 逻辑思维</div></div>
+    <div class="transition"><div class="tag">SHIFT 03</div><h3>从知道 → 能力</h3><p>不再满足于“我懂了”，而是让知识经过练习、反馈和复盘变成稳定能力。</p><div class="fromto">刻意练习 · 如何阅读一本书</div></div>
+    <div class="transition"><div class="tag">SHIFT 04</div><h3>从效率 → 原则</h3><p>不再只追求做得快，而是先判断什么值得做、什么必须承担。</p><div class="fromto">七个习惯 · 人生十二法则</div></div>
+    <div class="transition"><div class="tag">SHIFT 05</div><h3>从劳动 → 复利</h3><p>不再把成长等同于投入更多时间，而是积累专长、系统、关系、作品与杠杆。</p><div class="fromto">纳瓦尔宝典 · 创新者的窘境</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">05 · TWELVE QUESTIONS</div><h2>如果只保留一张卡片：这 12 个问题足够长期使用</h2></div>
+    <p>它们不是书摘，而是一套可以直接带进工作、学习和人生决策里的通用提问框架。</p>
+  </div>
+
+  <div class="questions">
+    <div class="q"><div class="id">Q1</div><h3>我现在真正发生了什么？</h3><p>事实、情绪和解释先分开。</p></div>
+    <div class="q"><div class="id">Q2</div><h3>什么结构让它不断发生？</h3><p>寻找反馈、规则、激励和延迟。</p></div>
+    <div class="q"><div class="id">Q3</div><h3>我正在使用哪个模型？</h3><p>还有哪些完全不同的看法？</p></div>
+    <div class="q"><div class="id">Q4</div><h3>这是相关，还是因果？</h3><p>基准率、第三变量、反向因果呢？</p></div>
+    <div class="q"><div class="id">Q5</div><h3>真正要解决的问题是什么？</h3><p>症状、原因和决策问题不要混淆。</p></div>
+    <div class="q"><div class="id">Q6</div><h3>我的初始假设是什么？</h3><p>什么事实会证伪它？</p></div>
+    <div class="q"><div class="id">Q7</div><h3>哪一项能力限制了结果？</h3><p>把抽象目标拆成可训练技能。</p></div>
+    <div class="q"><div class="id">Q8</div><h3>我怎样更快获得反馈？</h3><p>导师、数据、市场、作品、实验。</p></div>
+    <div class="q"><div class="id">Q9</div><h3>什么是真正的要事？</h3><p>别让紧急事项替代长期重要事项。</p></div>
+    <div class="q"><div class="id">Q10</div><h3>什么值得我承担？</h3><p>意义通常来自责任而非便利。</p></div>
+    <div class="q"><div class="id">Q11</div><h3>这套成功逻辑会不会过期？</h3><p>过去优势是否正在变成未来约束？</p></div>
+    <div class="q"><div class="id">Q12</div><h3>如何让这次努力产生复利？</h3><p>沉淀为能力、作品、系统、关系或资产。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">06 · THE LIBRARY AS A SYSTEM</div><h2>回头看，这些书分别在整张地图里承担什么角色？</h2></div>
+    <p>它们不是同一种书，因此也不该用同一种方式阅读。每一本都更像整个系统中的一个模块。</p>
+  </div>
+
+  <div class="books">
+    <div class="book"><div class="name">《认知觉醒》</div><div class="role">SELF-AWARENESS</div><p>解决“我为什么总被自己带着走”。</p></div>
+    <div class="book"><div class="name">《系统之美》</div><div class="role">SYSTEM STRUCTURE</div><p>解决“为什么类似问题会反复出现”。</p></div>
+    <div class="book"><div class="name">《思维模型》</div><div class="role">MULTI-MODEL THINKING</div><p>解决“我是不是只用一个视角看问题”。</p></div>
+    <div class="book"><div class="name">《逻辑思维》</div><div class="role">REASONING CALIBRATION</div><p>解决“我的因果、概率和归因可靠吗”。</p></div>
+    <div class="book"><div class="name">《麦肯锡方法》</div><div class="role">PROBLEM SOLVING</div><p>解决“如何把复杂问题变成可工作的结构”。</p></div>
+    <div class="book"><div class="name">《如何阅读一本书》</div><div class="role">LEARNING METHOD</div><p>解决“如何真正理解，而不是只是看完”。</p></div>
+    <div class="book"><div class="name">《刻意练习》</div><div class="role">SKILL BUILDING</div><p>解决“如何把理解转成真实能力”。</p></div>
+    <div class="book"><div class="name">《七个习惯》</div><div class="role">PERSONAL PRINCIPLES</div><p>解决“长期如何选择与安排优先级”。</p></div>
+    <div class="book"><div class="name">《人生十二法则》</div><div class="role">RESPONSIBILITY & MEANING</div><p>解决“如何承担人生的不确定与痛苦”。</p></div>
+    <div class="book"><div class="name">《创新者的窘境》</div><div class="role">ORGANIZATION & DISRUPTION</div><p>解决“为什么优秀组织也会被自己的成功困住”。</p></div>
+    <div class="book"><div class="name">《纳瓦尔宝典》</div><div class="role">LEVERAGE & FREEDOM</div><p>解决“如何把专长、判断和长期主义转成自由”。</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-quote">
+    真正的贯通，不是拥有一套万能答案。<br>
+    而是逐渐拥有一套<strong>能够看清、判断、行动、学习、承担和复利</strong>的个人思想系统。
+  </div>
+  <div class="final-side">
+    <b>如果把十一本文本压缩成一句话：</b>
+    <p><strong>先看清现实，再校准判断；先解决真正的问题，再训练真正的能力；最后把能力放进正确的原则、组织与长期结构中。</strong></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>贯通思考 II · Intellectual Atlas</strong>
+  <span>Awareness · Systems · Models · Logic · Problem Solving · Practice · Principles · Responsibility · Innovation · Leverage</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

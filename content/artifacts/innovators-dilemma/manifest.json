@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "innovators-dilemma",
+  "slug": "innovators-dilemma",
+  "title": "创新者的窘境",
+  "subtitle": "当成功逻辑变成约束，重新看见破坏性创新的轨迹",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Clayton M. Christensen",
+  "topics": [
+    "创新",
+    "组织",
+    "系统",
+    "商业"
+  ],
+  "concepts": [
+    "破坏性创新",
+    "系统思维",
+    "假设验证",
+    "判断力"
+  ],
+  "visualStyle": "midnight-disruption-radar",
+  "related": [
+    "thinking-in-systems",
+    "mckinsey-way",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "applies",
+      "concept": "systems-thinking",
+      "label": "客户、利润与资源配置形成组织的行为结构"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "contrasts",
+      "concept": "hypothesis-testing",
+      "label": "未知市场缺少历史数据，需要用小规模试探发现需求"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "judgment",
+      "label": "放大价值之前，先判断所处价值网络是否仍然适用"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/innovators-dilemma/index.html"
+  },
+  "cover": "/artifacts/innovators-dilemma/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:innovators_dilemma_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

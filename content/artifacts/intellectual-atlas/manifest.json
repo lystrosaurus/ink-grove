@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "intellectual-atlas",
+  "slug": "intellectual-atlas",
+  "title": "贯通思考 II · 思想地图",
+  "subtitle": "十一本文本，七个层次，一套认知与行动的思想系统",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove",
+  "topics": [
+    "思考",
+    "系统",
+    "成长",
+    "决策"
+  ],
+  "concepts": [
+    "元认知",
+    "系统思维",
+    "思维模型",
+    "因果推理",
+    "结构化问题解决",
+    "主题阅读",
+    "刻意练习",
+    "原则",
+    "责任与意义",
+    "破坏性创新",
+    "杠杆",
+    "复利"
+  ],
+  "visualStyle": "dark-intellectual-atlas",
+  "related": [
+    "cognitive-awakening-inner-os",
+    "thinking-in-systems",
+    "great-mental-models",
+    "mindware",
+    "mckinsey-way",
+    "how-to-read-a-book",
+    "deliberate-practice",
+    "seven-habits",
+    "twelve-rules-for-life",
+    "innovators-dilemma",
+    "naval-almanack",
+    "personal-growth-os"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening-inner-os",
+      "type": "synthesizes",
+      "concept": "metacognition",
+      "label": "觉察层：看见情绪、注意力与自动反应"
+    },
+    {
+      "target": "thinking-in-systems",
+      "type": "synthesizes",
+      "concept": "systems-thinking",
+      "label": "结构层：从重复事件看见反馈、边界与延迟"
+    },
+    {
+      "target": "great-mental-models",
+      "type": "synthesizes",
+      "concept": "mental-models",
+      "label": "判断层：让多种模型彼此校验"
+    },
+    {
+      "target": "mindware",
+      "type": "synthesizes",
+      "concept": "causal-reasoning",
+      "label": "判断层：检查概率、因果与替代解释"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "synthesizes",
+      "concept": "structured-problem-solving",
+      "label": "问题层：用结构和事实让问题可以验证"
+    },
+    {
+      "target": "how-to-read-a-book",
+      "type": "synthesizes",
+      "concept": "syntopical-reading",
+      "label": "能力层：围绕共同问题组织多本书"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "synthesizes",
+      "concept": "deliberate-practice",
+      "label": "能力层：通过挑战、反馈与修正形成技能"
+    },
+    {
+      "target": "seven-habits",
+      "type": "synthesizes",
+      "concept": "principles",
+      "label": "原则层：为长期选择与合作建立方向"
+    },
+    {
+      "target": "twelve-rules-for-life",
+      "type": "synthesizes",
+      "concept": "responsibility",
+      "label": "原则层：以责任和意义面对人生的不确定"
+    },
+    {
+      "target": "innovators-dilemma",
+      "type": "synthesizes",
+      "concept": "disruptive-innovation",
+      "label": "价值层：检查成功逻辑如何变成组织约束"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "synthesizes",
+      "concept": "leverage",
+      "label": "价值层：把专长与长期积累转化为选择权"
+    },
+    {
+      "target": "personal-growth-os",
+      "type": "extends",
+      "concept": "systems-thinking",
+      "label": "从个人成长路径，扩展到判断、组织与创新"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/intellectual-atlas/index.html"
+  },
+  "cover": "/artifacts/intellectual-atlas/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:integrated_thinking_intellectual_atlas.html"
+    ],
+    "derivedFrom": [
+      "cognitive-awakening-inner-os",
+      "thinking-in-systems",
+      "great-mental-models",
+      "mindware",
+      "mckinsey-way",
+      "how-to-read-a-book",
+      "deliberate-practice",
+      "seven-habits",
+      "twelve-rules-for-life",
+      "innovators-dilemma",
+      "naval-almanack"
+    ]
+  }
+}

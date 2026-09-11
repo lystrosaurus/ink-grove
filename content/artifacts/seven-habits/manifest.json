@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "seven-habits",
+  "slug": "seven-habits",
+  "title": "高效能人士的七个习惯",
+  "subtitle": "从依赖到独立，再走向互赖",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "史蒂芬·柯维",
+  "topics": [
+    "成长",
+    "原则",
+    "效能"
+  ],
+  "concepts": [
+    "主动选择",
+    "原则",
+    "注意力",
+    "不断更新"
+  ],
+  "visualStyle": "vintage-growth-map",
+  "related": [
+    "cognitive-awakening",
+    "naval-almanack",
+    "personal-growth-os",
+    "learning-cycle",
+    "twelve-rules-for-life"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "supports",
+      "concept": "active-choice",
+      "label": "影响圈是主动选择的边界"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "principles",
+      "label": "长期原则与时间自主权"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "applies",
+      "concept": "renewal",
+      "label": "不断更新是一场持续的循环"
+    },
+    {
+      "target": "twelve-rules-for-life",
+      "type": "related",
+      "concept": "principles",
+      "label": "从主动选择走向可以承担的责任与意义"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/seven-habits/index.html"
+  },
+  "cover": "/artifacts/seven-habits/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:seven_habits_core_map.html"
+    ],
+    "derivedFrom": []
+  }
+}

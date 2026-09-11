@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "mckinsey-way",
+  "slug": "mckinsey-way",
+  "title": "麦肯锡方法",
+  "subtitle": "以事实、MECE 与假设驱动，把复杂问题推向行动",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Ethan M. Rasiel",
+  "topics": [
+    "思考",
+    "决策",
+    "工作",
+    "组织"
+  ],
+  "concepts": [
+    "结构化问题解决",
+    "假设验证",
+    "判断力",
+    "因果推理"
+  ],
+  "visualStyle": "consulting-problem-blueprint",
+  "related": [
+    "mindware",
+    "thinking-framework",
+    "innovators-dilemma"
+  ],
+  "connections": [
+    {
+      "target": "mindware",
+      "type": "applies",
+      "concept": "hypothesis-testing",
+      "label": "用事实验证问题树中的假设，而非只寻找支持"
+    },
+    {
+      "target": "thinking-framework",
+      "type": "applies",
+      "concept": "structured-problem-solving",
+      "label": "让定义、拆解、分析与表达成为可重复工作流程"
+    },
+    {
+      "target": "innovators-dilemma",
+      "type": "contrasts",
+      "concept": "hypothesis-testing",
+      "label": "成熟问题依靠已有事实，未知市场还需要行动式学习"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/mckinsey-way/index.html"
+  },
+  "cover": "/artifacts/mckinsey-way/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:the_mckinsey_way_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

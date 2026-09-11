@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>创新者的窘境｜The Innovator's Dilemma</title>
+<style>
+:root{
+  --bg:#0d1520;
+  --panel:#131f2d;
+  --panel2:#172637;
+  --line:#2d4053;
+  --text:#eef4f8;
+  --muted:#97a8b6;
+  --navy:#152b42;
+  --blue:#5f8fb8;
+  --orange:#ff8a3d;
+  --green:#8fbf64;
+  --red:#dd6758;
+  --steel:#8da0ae;
+  --cream:#f3efe5;
+  --ink:#18232d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(95,143,184,.10),transparent 24%),
+    radial-gradient(circle at 88% 4%,rgba(255,138,61,.07),transparent 22%),
+    var(--bg);
+  color:var(--text);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.65;
+}
+.page{width:min(1450px,95vw);margin:24px auto 60px}
+.sheet{
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#101a25,#0d151e);
+  box-shadow:0 26px 80px rgba(0,0,0,.28);
+}
+.hero{
+  min-height:610px;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:34px;
+  padding:50px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{color:var(--orange);font-size:11px;font-weight:800;letter-spacing:.18em}
+h1{
+  margin:18px 0 10px;
+  font-size:clamp(60px,8vw,110px);
+  line-height:.92;
+  letter-spacing:-.06em;
+}
+.english{font-size:18px;letter-spacing:.15em;color:#a8b6c1}
+.author{margin-top:8px;color:var(--muted);font-size:14px}
+.lead{
+  margin-top:34px;
+  max-width:760px;
+  font-size:24px;
+  line-height:1.55;
+}
+.lead strong{color:var(--orange)}
+.thesis{
+  margin-top:28px;
+  padding:18px 20px;
+  border-left:5px solid var(--orange);
+  background:#142231;
+}
+.thesis b{display:block;margin-bottom:6px}
+.thesis span{color:var(--muted)}
+
+.radar{
+  align-self:center;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#0f1a25;
+  padding:26px;
+}
+.radar-head{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:18px
+}
+.radar-head b{font-size:18px}
+.radar-head span{font-size:10px;color:var(--muted);letter-spacing:.13em}
+.chart{
+  position:relative;
+  height:400px;
+  border-left:1px solid #4a6074;
+  border-bottom:1px solid #4a6074;
+  margin:18px 16px 10px 42px;
+  background:
+    linear-gradient(rgba(95,143,184,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(95,143,184,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.axis-y{
+  position:absolute;left:-58px;top:50%;transform:rotate(-90deg) translateX(-50%);
+  transform-origin:center;
+  font-size:11px;color:var(--muted);white-space:nowrap
+}
+.axis-x{
+  position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);
+  font-size:11px;color:var(--muted);white-space:nowrap
+}
+.trajectory{
+  position:absolute;
+  left:4%;bottom:12%;
+  width:86%;height:4px;
+  background:var(--blue);
+  transform:rotate(-27deg);
+  transform-origin:left center;
+}
+.trajectory:after{
+  content:"主流性能进步";
+  position:absolute;right:0;top:-25px;color:var(--blue);font-size:11px;font-weight:700
+}
+.disrupt{
+  position:absolute;
+  left:7%;bottom:9%;
+  width:80%;height:4px;
+  background:var(--orange);
+  transform:rotate(-15deg);
+  transform-origin:left center;
+}
+.disrupt:before{
+  content:"低端 / 新市场切入";
+  position:absolute;left:6%;top:12px;color:var(--orange);font-size:11px;font-weight:700
+}
+.customer-line{
+  position:absolute;
+  left:4%;bottom:24%;
+  width:86%;height:2px;
+  border-top:2px dashed var(--green);
+  transform:rotate(-18deg);
+  transform-origin:left center;
+}
+.customer-line:after{
+  content:"客户可吸收的性能需求";
+  position:absolute;right:0;top:-23px;color:var(--green);font-size:10px
+}
+.dot{
+  position:absolute;width:15px;height:15px;border-radius:50%;
+  background:var(--orange);box-shadow:0 0 0 5px rgba(255,138,61,.13)
+}
+.d1{left:18%;bottom:20%}.d2{left:52%;bottom:37%}.d3{left:76%;bottom:50%}
+
+.section{padding:42px 46px;border-bottom:1px solid var(--line)}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:22px
+}
+.section-head h2{margin:4px 0 0;font-size:34px}
+.section-head p{margin:0;max-width:660px;color:var(--muted)}
+.chapter{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--orange)}
+
+.paradox{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px
+}
+.card,.type,.force,.case,.move,.question{
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--panel);
+}
+.card{padding:28px}
+.card .quote{font-size:30px;line-height:1.48}
+.card .quote strong{color:var(--orange)}
+.card p{color:var(--muted)}
+.logic-chain{display:grid;gap:10px;margin-top:14px}
+.logic-item{
+  padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel2)
+}
+.logic-item b{display:block}
+.logic-item span{font-size:12px;color:var(--muted)}
+
+.types{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.type{padding:24px;min-height:275px}
+.type.sustain{border-top:6px solid var(--blue)}
+.type.disruptive{border-top:6px solid var(--orange)}
+.type .tag{font-size:10px;letter-spacing:.13em;font-weight:800}
+.sustain .tag{color:var(--blue)} .disruptive .tag{color:var(--orange)}
+.type h3{font-size:24px;margin:10px 0}
+.type p{color:var(--muted);font-size:14px}
+.type ul{padding-left:18px;color:var(--muted);font-size:13px}
+
+.forces{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.force{padding:18px;min-height:195px}
+.force .n{font-size:10px;color:var(--orange);font-weight:800;letter-spacing:.13em}
+.force h3{font-size:17px;margin:8px 0}
+.force p{font-size:12px;color:var(--muted);margin:0}
+
+.value-network{
+  display:grid;grid-template-columns:1fr 50px 1fr;align-items:center;gap:12px
+}
+.network{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--panel)
+}
+.network h3{margin:0 0 8px;font-size:22px}
+.network p{color:var(--muted);font-size:13px}
+.network-list{display:grid;gap:9px;margin-top:16px}
+.network-item{
+  padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);
+  font-size:13px;color:#d8e1e7
+}
+.cross{text-align:center;font-size:28px;color:var(--orange);font-weight:800}
+
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.case{padding:22px;min-height:220px}
+.case .tag{font-size:10px;color:var(--orange);font-weight:800;letter-spacing:.12em}
+.case h3{font-size:19px;margin:8px 0}
+.case p{font-size:13px;color:var(--muted)}
+.case .lesson{
+  margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);
+  font-size:12px;color:#c8d4db
+}
+
+.moves{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.move{padding:20px;min-height:205px}
+.move .num{font-size:10px;color:var(--green);font-weight:800;letter-spacing:.12em}
+.move h3{font-size:18px;margin:8px 0}
+.move p{font-size:13px;color:var(--muted)}
+
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.check-panel{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--panel)
+}
+.check-panel h3{margin:0 0 12px}
+.check{
+  display:grid;grid-template-columns:30px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--line)
+}
+.check:first-child{border-top:0}
+.check i{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  background:#1b3040;color:var(--orange);font-style:normal;font-weight:800
+}
+.check b{display:block}.check span{font-size:12px;color:var(--muted)}
+
+.questions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.question{padding:20px;min-height:175px}
+.question .id{font-size:10px;color:var(--orange);font-weight:800;letter-spacing:.13em}
+.question h3{font-size:18px;margin:8px 0}
+.question p{font-size:13px;color:var(--muted);margin:0}
+
+.final{
+  padding:44px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+  background:linear-gradient(135deg,#172637,#101a25)
+}
+.final-quote{font-size:32px;line-height:1.5;border-left:5px solid var(--orange);padding-left:24px}
+.final-quote strong{color:var(--orange)}
+.final-side{padding:22px;border:1px solid var(--line);border-radius:18px;background:#142230}
+.final-side b{font-size:19px}.final-side p{color:var(--muted);margin-bottom:0}
+.footer{
+  padding:20px 46px;background:#081018;color:#a6b4be;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px
+}
+.footer strong{color:white}
+
+@media(max-width:1050px){
+  .hero,.paradox,.checklist,.final{grid-template-columns:1fr}
+  .forces{grid-template-columns:1fr 1fr}
+  .cases,.moves,.questions{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero,.section{padding:28px 22px}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .types,.forces,.cases,.moves,.questions{grid-template-columns:1fr}
+  .value-network{grid-template-columns:1fr}
+  .cross{transform:rotate(90deg)}
+  .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">BOOK ARTIFACT · STRATEGIC DISRUPTION MAP</div>
+    <h1>创新者的窘境</h1>
+    <div class="english">THE INNOVATOR'S DILEMMA</div>
+    <div class="author">Clayton M. Christensen · 1997</div>
+
+    <div class="lead">
+      最危险的竞争者，未必一开始就拥有更好的产品。
+      真正的窘境在于：一家优秀公司可能因为<strong>认真倾听最重要的客户、追求更高利润、合理配置资源</strong>，
+      最终错过一个最初看起来并不值得重视的新市场。
+    </div>
+
+    <div class="thesis">
+      <b>“做正确的事”，为什么仍然可能失败？</b>
+      <span>因为管理体系往往被现有客户、利润结构与成长目标塑造；而破坏性创新恰恰从这些体系“不愿意服务”的地方开始。</span>
+    </div>
+  </div>
+
+  <div class="radar">
+    <div class="radar-head">
+      <b>DISRUPTION RADAR</b>
+      <span>PERFORMANCE TRAJECTORIES</span>
+    </div>
+    <div class="chart">
+      <div class="axis-y">产品性能 / Performance</div>
+      <div class="axis-x">时间 / Time</div>
+      <div class="trajectory"></div>
+      <div class="customer-line"></div>
+      <div class="disrupt"></div>
+      <div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">01 · THE PARADOX</div><h2>优秀公司的失败，常常不是因为管理太差</h2></div>
+    <p>Christensen 的核心发现是：成熟企业按照既有客户需求和财务逻辑做出的“合理决策”，反而可能使它们系统性忽略早期破坏性机会。citeturn572021search0turn572021search4</p>
+  </div>
+
+  <div class="paradox">
+    <div class="card">
+      <div class="quote">
+        问题不是“为什么愚蠢公司失败”，而是：<br>
+        为什么<strong>管理良好的公司</strong>也会被后来者取代？
+      </div>
+      <p>它们通常在客户、利润、流程和资源配置上都很理性。问题恰恰在于，这套理性最适合优化现有业务，却未必适合孕育一个最初更小、更低利润、更不成熟的新市场。</p>
+    </div>
+    <div class="card">
+      <h3>典型决策链</h3>
+      <div class="logic-chain">
+        <div class="logic-item"><b>倾听最好客户</b><span>他们想要性能更高的产品。</span></div>
+        <div class="logic-item"><b>投资高回报项目</b><span>成熟市场规模更大、利润更高。</span></div>
+        <div class="logic-item"><b>忽略小市场</b><span>规模不足以支撑大公司的增长要求。</span></div>
+        <div class="logic-item"><b>后来者成长</b><span>新技术逐渐“足够好”，开始进入主流市场。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">02 · TWO KINDS OF INNOVATION</div><h2>先分清：持续性创新 ≠ 破坏性创新</h2></div>
+    <p>HBS 对 Christensen 理论的总结明确区分：持续性创新沿主流客户看重的性能维度持续改进；破坏性创新则建立新的性能轨迹。citeturn572021search0</p>
+  </div>
+
+  <div class="types">
+    <div class="type sustain">
+      <div class="tag">SUSTAINING INNOVATION</div>
+      <h3>持续性创新</h3>
+      <p>让现有产品在主流客户已经重视的维度上表现得更好。</p>
+      <ul>
+        <li>可以是渐进改良，也可以技术非常激进</li>
+        <li>主要客户愿意为更高性能付费</li>
+        <li>成熟企业通常非常擅长</li>
+        <li>与现有利润模型高度兼容</li>
+      </ul>
+    </div>
+
+    <div class="type disruptive">
+      <div class="tag">DISRUPTIVE INNOVATION</div>
+      <h3>破坏性创新</h3>
+      <p>早期在传统性能指标上往往更差，但可能更便宜、更简单、更方便，或者首先服务新的使用场景。</p>
+      <ul>
+        <li>开始时常被主流客户拒绝</li>
+        <li>市场规模小、利润率低</li>
+        <li>先在低端或新市场找到立足点</li>
+        <li>随着性能改善，逐步侵入主流市场</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">03 · FIVE FORCES</div><h2>为什么成熟组织会系统性错过破坏性创新？</h2></div>
+    <p>它不是一个“CEO 看走眼”的故事，而是一整套组织、客户与资本配置机制共同作用的结果。</p>
+  </div>
+
+  <div class="forces">
+    <div class="force"><div class="n">FORCE 01</div><h3>资源依赖客户</h3><p>真正决定资源去向的，往往是能产生收入和利润的客户，而不只是管理者的战略口号。</p></div>
+    <div class="force"><div class="n">FORCE 02</div><h3>小市场解决不了大公司的增长</h3><p>公司越大，新市场早期规模就越难对总体增长产生意义。citeturn572021search4</p></div>
+    <div class="force"><div class="n">FORCE 03</div><h3>不存在的市场无法分析</h3><p>新市场缺少历史数据，传统市场研究与预测工具反而最不可靠。</p></div>
+    <div class="force"><div class="n">FORCE 04</div><h3>流程与价值观形成能力边界</h3><p>让组织在成熟业务上高效的流程，也可能让它无法接受低利润、模糊和快速试错的新业务。</p></div>
+    <div class="force"><div class="n">FORCE 05</div><h3>技术进步可能超过客户需求</h3><p>企业不断提升性能，而客户真正需要的性能增长更慢，于是“性能过剩”为后来者留下空间。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">04 · VALUE NETWORKS</div><h2>公司不是孤立竞争，它被“价值网络”锁定</h2></div>
+    <p>同一项技术放进不同客户、成本结构、销售渠道和利润要求中，会拥有完全不同的商业意义。</p>
+  </div>
+
+  <div class="value-network">
+    <div class="network">
+      <h3>成熟价值网络</h3>
+      <p>组织已经建立完成，所有机制都围绕现有成功方式优化。</p>
+      <div class="network-list">
+        <div class="network-item">大客户要求更高性能</div>
+        <div class="network-item">销售团队追求更大订单</div>
+        <div class="network-item">财务要求更高毛利</div>
+        <div class="network-item">项目必须支撑公司增长目标</div>
+      </div>
+    </div>
+
+    <div class="cross">↔</div>
+
+    <div class="network">
+      <h3>新兴价值网络</h3>
+      <p>早期市场规模更小、需求不同，产品甚至看起来“更差”。</p>
+      <div class="network-list">
+        <div class="network-item">客户重视简单、方便或便宜</div>
+        <div class="network-item">允许较低绝对收入</div>
+        <div class="network-item">可以快速试错寻找用途</div>
+        <div class="network-item">建立与新市场匹配的成本结构</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">05 · THE DISK DRIVE LESSON</div><h2>经典案例：磁盘驱动器为什么反复发生“王朝更替”？</h2></div>
+    <p>Christensen 的经典研究来自磁盘驱动器产业。更小尺寸的架构早期往往在主流性能上较弱，却适配了新的计算市场，之后逐步成长。citeturn572021search12</p>
+  </div>
+
+  <div class="cases">
+    <div class="case">
+      <div class="tag">PATTERN 01</div>
+      <h3>领先者服务现有客户</h3>
+      <p>原有架构继续沿客户要求提高容量、速度和可靠性。</p>
+      <div class="lesson">这不是错误，而是合理经营。</div>
+    </div>
+    <div class="case">
+      <div class="tag">PATTERN 02</div>
+      <h3>新架构先进入新市场</h3>
+      <p>更小的驱动器在旧市场性能不足，却非常适合新兴计算设备。</p>
+      <div class="lesson">新市场重新定义“什么性能重要”。</div>
+    </div>
+    <div class="case">
+      <div class="tag">PATTERN 03</div>
+      <h3>性能改善后向上侵入</h3>
+      <p>随着技术成熟，新架构开始满足原本更高端客户的要求，竞争边界发生变化。</p>
+      <div class="lesson">威胁通常在“足够好”之后突然显现。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">06 · WHAT MANAGERS CAN DO</div><h2>面对破坏性创新，不是“更加努力管理”</h2></div>
+    <p>核心是让组织结构、市场大小、成本模型和学习方式与新机会匹配，而不是强迫成熟组织用原有成功逻辑去做完全不同的事。</p>
+  </div>
+
+  <div class="moves">
+    <div class="move"><div class="num">MOVE 01</div><h3>让新业务靠近真正需要它的客户</h3><p>不要要求主流客户替你证明新市场存在。</p></div>
+    <div class="move"><div class="num">MOVE 02</div><h3>让组织规模与机会规模匹配</h3><p>小机会需要小组织，才能在早期收入水平下仍然感到成功。</p></div>
+    <div class="move"><div class="num">MOVE 03</div><h3>把早期战略当作学习过程</h3><p>新市场无法精确分析时，与其预测，不如低成本试探、发现用途。</p></div>
+    <div class="move"><div class="num">MOVE 04</div><h3>建立独立的成本与价值逻辑</h3><p>如果新业务必须满足旧业务的毛利率和流程，它通常还没开始就会被判死刑。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">07 · MANAGER'S CHECKLIST</div><h2>一个新技术出现时，不要只问“它现在够不够好”</h2></div>
+    <p>更重要的是判断：它是否正在建立一条新的性能轨迹，以及有没有一群客户因为别的优势而愿意先使用它。</p>
+  </div>
+
+  <div class="checklist">
+    <div class="check-panel">
+      <h3>判断是否可能具有破坏性</h3>
+      <div class="check"><i>1</i><div><b>它在主流指标上是否更差？</b><span>如果全面更好，它更可能只是持续性创新。</span></div></div>
+      <div class="check"><i>2</i><div><b>它是否在其他维度更简单、更便宜、更方便？</b><span>看看是否存在另一种价值定义。</span></div></div>
+      <div class="check"><i>3</i><div><b>有没有非消费者或低端客户愿意先用？</b><span>早期市场通常不在主战场。</span></div></div>
+      <div class="check"><i>4</i><div><b>性能是否有持续改善空间？</b><span>今天“不够好”不代表未来不会进入主流。</span></div></div>
+    </div>
+
+    <div class="check-panel">
+      <h3>检查自己的组织为什么可能忽略它</h3>
+      <div class="check"><i>A</i><div><b>客户是否明确说“不需要”？</b><span>这可能正是破坏性机会早期的典型信号。</span></div></div>
+      <div class="check"><i>B</i><div><b>市场是否“小到不值得做”？</b><span>对大公司太小，不代表对小团队太小。</span></div></div>
+      <div class="check"><i>C</i><div><b>毛利率是否低于现有业务？</b><span>旧成本结构可能根本不适用于新价值网络。</span></div></div>
+      <div class="check"><i>D</i><div><b>我们是在学习，还是假装可以预测？</b><span>不存在的市场无法靠 Excel 预测出来。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">08 · SIX QUESTIONS</div><h2>把整本书压缩成六个战略问题</h2></div>
+    <p>当行业出现一个看起来“不成熟、不赚钱、不重要”的新东西时，用这六问重新检查。</p>
+  </div>
+
+  <div class="questions">
+    <div class="question"><div class="id">Q1 · CUSTOMER</div><h3>我们究竟在听谁的声音？</h3><p>最赚钱客户的需求，会不会让我们看不见另一群用户？</p></div>
+    <div class="question"><div class="id">Q2 · PERFORMANCE</div><h3>什么才算“好产品”？</h3><p>新市场会不会使用完全不同的性能标准？</p></div>
+    <div class="question"><div class="id">Q3 · MARKET</div><h3>这个市场是不是小得“不值得做”？</h3><p>如果是，它也许正需要一个更小的组织。</p></div>
+    <div class="question"><div class="id">Q4 · BUSINESS MODEL</div><h3>旧利润模型是否扼杀新业务？</h3><p>是否要求一个婴儿业务立刻拥有成年业务的经济性？</p></div>
+    <div class="question"><div class="id">Q5 · LEARNING</div><h3>我们是在预测市场，还是发现市场？</h3><p>早期破坏性市场通常需要行动式学习。</p></div>
+    <div class="question"><div class="id">Q6 · TRAJECTORY</div><h3>它今天很差，但进步速度如何？</h3><p>不要只看当前位置，要看性能轨迹。</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-quote">
+    《创新者的窘境》最重要的提醒不是“要创新”，<br>
+    而是：<strong>过去让你成功的管理逻辑，也可能成为未来创新最大的阻力。</strong>
+  </div>
+  <div class="final-side">
+    <b>如果只带走一个核心：</b>
+    <p>当一个新机会因为<strong>客户不喜欢、市场太小、利润太低、数据不足</strong>而被组织自然淘汰时——不要急着庆幸决策很理性。那可能正是最需要重新审视的时候。</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>The Innovator's Dilemma · Clayton M. Christensen</strong>
+  <span>Sustaining Innovation · Disruption · Value Networks · Resource Dependence · Performance Trajectories</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "deliberate-practice",
+  "slug": "deliberate-practice",
+  "title": "刻意练习",
+  "subtitle": "把重复升级为有反馈的能力训练",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "安德斯·艾利克森 / 罗伯特·普尔",
+  "topics": [
+    "学习",
+    "成长",
+    "能力"
+  ],
+  "concepts": [
+    "刻意练习",
+    "心理表征",
+    "反馈",
+    "学习区",
+    "注意力"
+  ],
+  "visualStyle": "training-laboratory",
+  "related": [
+    "cognitive-awakening",
+    "deliberate-practice-modern",
+    "learning-cycle",
+    "personal-growth-os"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "extends",
+      "concept": "attention",
+      "label": "高质量训练从高质量注意力开始"
+    },
+    {
+      "target": "deliberate-practice-modern",
+      "type": "related",
+      "concept": "mental-representation",
+      "label": "同一思想的另一种视觉表达"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "applies",
+      "concept": "feedback",
+      "label": "把反馈变成下一轮训练的输入"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/deliberate-practice/index.html"
+  },
+  "cover": "/artifacts/deliberate-practice/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:deliberate_practice_lab_style.html"
+    ],
+    "derivedFrom": []
+  }
+}

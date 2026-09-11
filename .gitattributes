@@ -1,0 +1,4 @@
+# Preserve the byte identity of supplied originals and independent HTML presentations.
+/*.html -text
+/content/artifacts/*/*.html -text
+/Ink*.md -text

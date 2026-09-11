@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "great-mental-models",
+  "slug": "great-mental-models",
+  "title": "思维模型 · 通用思维工具",
+  "subtitle": "九个模型，建立彼此校验、不断更新的判断网络",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Shane Parrish / Rhiannon Beaubien",
+  "topics": [
+    "思考",
+    "决策",
+    "认知"
+  ],
+  "concepts": [
+    "思维模型",
+    "第一性原理",
+    "概率思维",
+    "判断力",
+    "因果推理"
+  ],
+  "visualStyle": "dark-decision-laboratory",
+  "related": [
+    "mindware",
+    "thinking-framework",
+    "naval-almanack",
+    "thinking-in-systems"
+  ],
+  "connections": [
+    {
+      "target": "mindware",
+      "type": "related",
+      "concept": "probability",
+      "label": "用概率、因果与可证伪性校准模型的解释"
+    },
+    {
+      "target": "thinking-framework",
+      "type": "extends",
+      "concept": "mental-models",
+      "label": "把思考框架展开为九种可切换的观察透镜"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "supports",
+      "concept": "judgment",
+      "label": "能力圈与多模型思考，为杠杆校准方向"
+    },
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "二阶思考追问后果，系统思维追踪反馈"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/great-mental-models/index.html"
+  },
+  "cover": "/artifacts/great-mental-models/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:great_mental_models_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

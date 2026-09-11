@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "mindware",
+  "slug": "mindware",
+  "title": "逻辑思维",
+  "subtitle": "用情境、概率、因果与实验，校准直觉的解释",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Richard E. Nisbett",
+  "topics": [
+    "思考",
+    "决策",
+    "心理"
+  ],
+  "concepts": [
+    "概率思维",
+    "因果推理",
+    "假设验证",
+    "判断力",
+    "元认知"
+  ],
+  "visualStyle": "blue-reasoning-circuit",
+  "related": [
+    "great-mental-models",
+    "mckinsey-way",
+    "thinking-in-systems"
+  ],
+  "connections": [
+    {
+      "target": "great-mental-models",
+      "type": "extends",
+      "concept": "causal-reasoning",
+      "label": "从模型网络深入基准率、样本与因果检验"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "supports",
+      "concept": "hypothesis-testing",
+      "label": "让实验与替代解释检验初始假设"
+    },
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "把行为放回情境，避免把结构问题归咎个人"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/mindware/index.html"
+  },
+  "cover": "/artifacts/mindware/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:mindware_logic_thinking_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

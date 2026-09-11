@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-growth-os",
+  "slug": "personal-growth-os",
+  "title": "贯通思考篇",
+  "subtitle": "从认知到自由，一套个人成长操作系统",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove",
+  "topics": [
+    "成长",
+    "认知",
+    "系统"
+  ],
+  "concepts": [
+    "注意力",
+    "原则",
+    "刻意练习",
+    "复利",
+    "杠杆",
+    "系统思维"
+  ],
+  "visualStyle": "indigo-system-map",
+  "related": [
+    "cognitive-awakening",
+    "seven-habits",
+    "deliberate-practice",
+    "naval-almanack",
+    "learning-cycle",
+    "intellectual-atlas"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "synthesizes",
+      "concept": "attention",
+      "label": "觉察是成长系统的入口"
+    },
+    {
+      "target": "seven-habits",
+      "type": "synthesizes",
+      "concept": "principles",
+      "label": "让原则决定行动的方向"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "synthesizes",
+      "concept": "deliberate-practice",
+      "label": "把选择转化为可训练的能力"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "synthesizes",
+      "concept": "compounding",
+      "label": "让能力产生长期复利"
+    },
+    {
+      "target": "intellectual-atlas",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "继续探索十一本文本如何形成七层思想系统"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/personal-growth-os/index.html"
+  },
+  "cover": "/artifacts/personal-growth-os/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:integrated_thinking_personal_os.html"
+    ],
+    "derivedFrom": [
+      "cognitive-awakening",
+      "seven-habits",
+      "deliberate-practice",
+      "naval-almanack"
+    ]
+  }
+}

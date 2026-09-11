@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "learning-cycle",
+  "slug": "learning-cycle",
+  "title": "学习如何真正发生",
+  "subtitle": "一张从输入到能力的反馈循环图",
+  "artifactType": "system",
+  "sourceType": "original",
+  "author": "Ink Grove",
+  "topics": [
+    "学习",
+    "系统",
+    "成长"
+  ],
+  "concepts": [
+    "反馈",
+    "学习区",
+    "刻意练习",
+    "不断更新"
+  ],
+  "visualStyle": "botanical-system-diagram",
+  "related": [
+    "deliberate-practice",
+    "attention-loop",
+    "seven-habits",
+    "personal-growth-os"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "derived-from",
+      "concept": "feedback",
+      "label": "把训练协议展开成一个可重复的系统"
+    },
+    {
+      "target": "seven-habits",
+      "type": "extends",
+      "concept": "renewal",
+      "label": "让身心更新成为循环的一部分"
+    }
+  ],
+  "artifact": {
+    "renderer": "svg",
+    "src": "/artifacts/learning-cycle/index.svg"
+  },
+  "cover": "/artifacts/learning-cycle/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [],
+    "derivedFrom": [
+      "deliberate-practice",
+      "seven-habits"
+    ]
+  }
+}

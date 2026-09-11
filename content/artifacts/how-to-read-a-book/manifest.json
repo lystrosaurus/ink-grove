@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "how-to-read-a-book",
+  "slug": "how-to-read-a-book",
+  "title": "如何阅读一本书",
+  "subtitle": "从主动提问到主题阅读，让多本书服务于一个问题",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Mortimer J. Adler / Charles Van Doren",
+  "topics": [
+    "阅读",
+    "学习",
+    "思考"
+  ],
+  "concepts": [
+    "主动阅读",
+    "主题阅读",
+    "判断力",
+    "思维模型"
+  ],
+  "visualStyle": "warm-reading-workshop",
+  "related": [
+    "intellectual-atlas",
+    "personal-growth-os",
+    "deliberate-practice",
+    "great-mental-models"
+  ],
+  "connections": [
+    {
+      "target": "intellectual-atlas",
+      "type": "supports",
+      "concept": "syntopical-reading",
+      "label": "主题阅读为十一本文本建立共同问题与语言"
+    },
+    {
+      "target": "personal-growth-os",
+      "type": "supports",
+      "concept": "syntopical-reading",
+      "label": "让书籍围绕成长问题形成综合理解"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "supports",
+      "concept": "active-reading",
+      "label": "先主动理解与判断，再把知识转化为可训练能力"
+    },
+    {
+      "target": "great-mental-models",
+      "type": "related",
+      "concept": "mental-models",
+      "label": "比较不同作者与模型，保留分歧而不寻找万能答案"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/how-to-read-a-book/index.html"
+  },
+  "cover": "/artifacts/how-to-read-a-book/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:how_to_read_a_book_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

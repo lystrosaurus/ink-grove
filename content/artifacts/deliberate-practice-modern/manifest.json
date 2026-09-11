@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "deliberate-practice-modern",
+  "slug": "deliberate-practice-modern",
+  "title": "刻意练习 · 知识系统",
+  "subtitle": "目标、挑战、反馈与修正的可视化引擎",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "安德斯·艾利克森 / 罗伯特·普尔",
+  "topics": [
+    "学习",
+    "能力",
+    "系统"
+  ],
+  "concepts": [
+    "刻意练习",
+    "反馈",
+    "学习区",
+    "心理表征"
+  ],
+  "visualStyle": "dark-modernist",
+  "related": [
+    "deliberate-practice",
+    "learning-cycle",
+    "thinking-framework"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "related",
+      "concept": "deliberate-practice",
+      "label": "相同训练原则，两种阅读体验"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "supports",
+      "concept": "learning-zone",
+      "label": "在能力边缘设计可纠正的挑战"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/deliberate-practice-modern/index.html"
+  },
+  "cover": "/artifacts/deliberate-practice-modern/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:deliberate_practice_modern.html"
+    ],
+    "derivedFrom": []
+  }
+}

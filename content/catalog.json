@@ -1,0 +1,1629 @@
+{
+  "schemaVersion": 1,
+  "artifacts": [
+    {
+      "schemaVersion": 1,
+      "id": "personal-growth-os",
+      "slug": "personal-growth-os",
+      "title": "贯通思考篇",
+      "subtitle": "从认知到自由，一套个人成长操作系统",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove",
+      "topics": [
+        "成长",
+        "认知",
+        "系统"
+      ],
+      "concepts": [
+        "注意力",
+        "原则",
+        "刻意练习",
+        "复利",
+        "杠杆",
+        "系统思维"
+      ],
+      "visualStyle": "indigo-system-map",
+      "related": [
+        "cognitive-awakening",
+        "seven-habits",
+        "deliberate-practice",
+        "naval-almanack",
+        "learning-cycle",
+        "intellectual-atlas"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "synthesizes",
+          "concept": "attention",
+          "label": "觉察是成长系统的入口"
+        },
+        {
+          "target": "seven-habits",
+          "type": "synthesizes",
+          "concept": "principles",
+          "label": "让原则决定行动的方向"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "synthesizes",
+          "concept": "deliberate-practice",
+          "label": "把选择转化为可训练的能力"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "synthesizes",
+          "concept": "compounding",
+          "label": "让能力产生长期复利"
+        },
+        {
+          "target": "intellectual-atlas",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "继续探索十一本文本如何形成七层思想系统"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/personal-growth-os/index.html"
+      },
+      "cover": "/artifacts/personal-growth-os/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:integrated_thinking_personal_os.html"
+        ],
+        "derivedFrom": [
+          "cognitive-awakening",
+          "seven-habits",
+          "deliberate-practice",
+          "naval-almanack"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "intellectual-atlas",
+      "slug": "intellectual-atlas",
+      "title": "贯通思考 II · 思想地图",
+      "subtitle": "十一本文本，七个层次，一套认知与行动的思想系统",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove",
+      "topics": [
+        "思考",
+        "系统",
+        "成长",
+        "决策"
+      ],
+      "concepts": [
+        "元认知",
+        "系统思维",
+        "思维模型",
+        "因果推理",
+        "结构化问题解决",
+        "主题阅读",
+        "刻意练习",
+        "原则",
+        "责任与意义",
+        "破坏性创新",
+        "杠杆",
+        "复利"
+      ],
+      "visualStyle": "dark-intellectual-atlas",
+      "related": [
+        "cognitive-awakening-inner-os",
+        "thinking-in-systems",
+        "great-mental-models",
+        "mindware",
+        "mckinsey-way",
+        "how-to-read-a-book",
+        "deliberate-practice",
+        "seven-habits",
+        "twelve-rules-for-life",
+        "innovators-dilemma",
+        "naval-almanack",
+        "personal-growth-os"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening-inner-os",
+          "type": "synthesizes",
+          "concept": "metacognition",
+          "label": "觉察层：看见情绪、注意力与自动反应"
+        },
+        {
+          "target": "thinking-in-systems",
+          "type": "synthesizes",
+          "concept": "systems-thinking",
+          "label": "结构层：从重复事件看见反馈、边界与延迟"
+        },
+        {
+          "target": "great-mental-models",
+          "type": "synthesizes",
+          "concept": "mental-models",
+          "label": "判断层：让多种模型彼此校验"
+        },
+        {
+          "target": "mindware",
+          "type": "synthesizes",
+          "concept": "causal-reasoning",
+          "label": "判断层：检查概率、因果与替代解释"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "synthesizes",
+          "concept": "structured-problem-solving",
+          "label": "问题层：用结构和事实让问题可以验证"
+        },
+        {
+          "target": "how-to-read-a-book",
+          "type": "synthesizes",
+          "concept": "syntopical-reading",
+          "label": "能力层：围绕共同问题组织多本书"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "synthesizes",
+          "concept": "deliberate-practice",
+          "label": "能力层：通过挑战、反馈与修正形成技能"
+        },
+        {
+          "target": "seven-habits",
+          "type": "synthesizes",
+          "concept": "principles",
+          "label": "原则层：为长期选择与合作建立方向"
+        },
+        {
+          "target": "twelve-rules-for-life",
+          "type": "synthesizes",
+          "concept": "responsibility",
+          "label": "原则层：以责任和意义面对人生的不确定"
+        },
+        {
+          "target": "innovators-dilemma",
+          "type": "synthesizes",
+          "concept": "disruptive-innovation",
+          "label": "价值层：检查成功逻辑如何变成组织约束"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "synthesizes",
+          "concept": "leverage",
+          "label": "价值层：把专长与长期积累转化为选择权"
+        },
+        {
+          "target": "personal-growth-os",
+          "type": "extends",
+          "concept": "systems-thinking",
+          "label": "从个人成长路径，扩展到判断、组织与创新"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/intellectual-atlas/index.html"
+      },
+      "cover": "/artifacts/intellectual-atlas/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:integrated_thinking_intellectual_atlas.html"
+        ],
+        "derivedFrom": [
+          "cognitive-awakening-inner-os",
+          "thinking-in-systems",
+          "great-mental-models",
+          "mindware",
+          "mckinsey-way",
+          "how-to-read-a-book",
+          "deliberate-practice",
+          "seven-habits",
+          "twelve-rules-for-life",
+          "innovators-dilemma",
+          "naval-almanack"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cognitive-awakening-inner-os",
+      "slug": "cognitive-awakening-inner-os",
+      "title": "认知觉醒 · 内在操作系统",
+      "subtitle": "从自动反应到觉察、选择与行动的自我调节回路",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "周岭",
+      "topics": [
+        "认知",
+        "成长",
+        "心理",
+        "学习"
+      ],
+      "concepts": [
+        "元认知",
+        "注意力",
+        "主动选择",
+        "反馈",
+        "学习区"
+      ],
+      "visualStyle": "sage-inner-operating-system",
+      "related": [
+        "cognitive-awakening",
+        "deliberate-practice",
+        "attention-loop",
+        "how-to-read-a-book"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "related",
+          "concept": "metacognition",
+          "label": "同一本书：从杂志式觉察札记到内在系统图"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "supports",
+          "concept": "learning-zone",
+          "label": "在舒适区边缘，把清晰认知转成可训练行动"
+        },
+        {
+          "target": "attention-loop",
+          "type": "supports",
+          "concept": "attention",
+          "label": "先看见注意力被什么带走，再重新分配投入"
+        },
+        {
+          "target": "how-to-read-a-book",
+          "type": "supports",
+          "concept": "active-reading",
+          "label": "深度学习需要主动解释与建立关联"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/cognitive-awakening-inner-os/index.html"
+      },
+      "cover": "/artifacts/cognitive-awakening-inner-os/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:cognitive_awakening_inner_os_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "thinking-in-systems",
+      "slug": "thinking-in-systems",
+      "title": "系统之美",
+      "subtitle": "看见存量、流量与反馈，理解结构如何产生行为",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Donella H. Meadows",
+      "topics": [
+        "系统",
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "系统思维",
+        "反馈",
+        "杠杆",
+        "复利"
+      ],
+      "visualStyle": "sage-systems-fieldbook",
+      "related": [
+        "thinking-framework",
+        "learning-cycle",
+        "innovators-dilemma",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "thinking-framework",
+          "type": "extends",
+          "concept": "systems-thinking",
+          "label": "将框架中的系统视角展开为存量、流量与反馈"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "supports",
+          "concept": "feedback",
+          "label": "用增强与调节回路解释学习系统如何演化"
+        },
+        {
+          "target": "innovators-dilemma",
+          "type": "supports",
+          "concept": "systems-thinking",
+          "label": "从组织结构解释优秀企业为何反复错过新市场"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "compounding",
+          "label": "增强回路让长期积累产生复利，也可能放大失控"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/thinking-in-systems/index.html"
+      },
+      "cover": "/artifacts/thinking-in-systems/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:thinking_in_systems_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "great-mental-models",
+      "slug": "great-mental-models",
+      "title": "思维模型 · 通用思维工具",
+      "subtitle": "九个模型，建立彼此校验、不断更新的判断网络",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Shane Parrish / Rhiannon Beaubien",
+      "topics": [
+        "思考",
+        "决策",
+        "认知"
+      ],
+      "concepts": [
+        "思维模型",
+        "第一性原理",
+        "概率思维",
+        "判断力",
+        "因果推理"
+      ],
+      "visualStyle": "dark-decision-laboratory",
+      "related": [
+        "mindware",
+        "thinking-framework",
+        "naval-almanack",
+        "thinking-in-systems"
+      ],
+      "connections": [
+        {
+          "target": "mindware",
+          "type": "related",
+          "concept": "probability",
+          "label": "用概率、因果与可证伪性校准模型的解释"
+        },
+        {
+          "target": "thinking-framework",
+          "type": "extends",
+          "concept": "mental-models",
+          "label": "把思考框架展开为九种可切换的观察透镜"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "supports",
+          "concept": "judgment",
+          "label": "能力圈与多模型思考，为杠杆校准方向"
+        },
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "二阶思考追问后果，系统思维追踪反馈"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/great-mental-models/index.html"
+      },
+      "cover": "/artifacts/great-mental-models/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:great_mental_models_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mindware",
+      "slug": "mindware",
+      "title": "逻辑思维",
+      "subtitle": "用情境、概率、因果与实验，校准直觉的解释",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Richard E. Nisbett",
+      "topics": [
+        "思考",
+        "决策",
+        "心理"
+      ],
+      "concepts": [
+        "概率思维",
+        "因果推理",
+        "假设验证",
+        "判断力",
+        "元认知"
+      ],
+      "visualStyle": "blue-reasoning-circuit",
+      "related": [
+        "great-mental-models",
+        "mckinsey-way",
+        "thinking-in-systems"
+      ],
+      "connections": [
+        {
+          "target": "great-mental-models",
+          "type": "extends",
+          "concept": "causal-reasoning",
+          "label": "从模型网络深入基准率、样本与因果检验"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "supports",
+          "concept": "hypothesis-testing",
+          "label": "让实验与替代解释检验初始假设"
+        },
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "把行为放回情境，避免把结构问题归咎个人"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/mindware/index.html"
+      },
+      "cover": "/artifacts/mindware/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:mindware_logic_thinking_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mckinsey-way",
+      "slug": "mckinsey-way",
+      "title": "麦肯锡方法",
+      "subtitle": "以事实、MECE 与假设驱动，把复杂问题推向行动",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Ethan M. Rasiel",
+      "topics": [
+        "思考",
+        "决策",
+        "工作",
+        "组织"
+      ],
+      "concepts": [
+        "结构化问题解决",
+        "假设验证",
+        "判断力",
+        "因果推理"
+      ],
+      "visualStyle": "consulting-problem-blueprint",
+      "related": [
+        "mindware",
+        "thinking-framework",
+        "innovators-dilemma"
+      ],
+      "connections": [
+        {
+          "target": "mindware",
+          "type": "applies",
+          "concept": "hypothesis-testing",
+          "label": "用事实验证问题树中的假设，而非只寻找支持"
+        },
+        {
+          "target": "thinking-framework",
+          "type": "applies",
+          "concept": "structured-problem-solving",
+          "label": "让定义、拆解、分析与表达成为可重复工作流程"
+        },
+        {
+          "target": "innovators-dilemma",
+          "type": "contrasts",
+          "concept": "hypothesis-testing",
+          "label": "成熟问题依靠已有事实，未知市场还需要行动式学习"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/mckinsey-way/index.html"
+      },
+      "cover": "/artifacts/mckinsey-way/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:the_mckinsey_way_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "how-to-read-a-book",
+      "slug": "how-to-read-a-book",
+      "title": "如何阅读一本书",
+      "subtitle": "从主动提问到主题阅读，让多本书服务于一个问题",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Mortimer J. Adler / Charles Van Doren",
+      "topics": [
+        "阅读",
+        "学习",
+        "思考"
+      ],
+      "concepts": [
+        "主动阅读",
+        "主题阅读",
+        "判断力",
+        "思维模型"
+      ],
+      "visualStyle": "warm-reading-workshop",
+      "related": [
+        "intellectual-atlas",
+        "personal-growth-os",
+        "deliberate-practice",
+        "great-mental-models"
+      ],
+      "connections": [
+        {
+          "target": "intellectual-atlas",
+          "type": "supports",
+          "concept": "syntopical-reading",
+          "label": "主题阅读为十一本文本建立共同问题与语言"
+        },
+        {
+          "target": "personal-growth-os",
+          "type": "supports",
+          "concept": "syntopical-reading",
+          "label": "让书籍围绕成长问题形成综合理解"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "supports",
+          "concept": "active-reading",
+          "label": "先主动理解与判断，再把知识转化为可训练能力"
+        },
+        {
+          "target": "great-mental-models",
+          "type": "related",
+          "concept": "mental-models",
+          "label": "比较不同作者与模型，保留分歧而不寻找万能答案"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/how-to-read-a-book/index.html"
+      },
+      "cover": "/artifacts/how-to-read-a-book/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:how_to_read_a_book_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "twelve-rules-for-life",
+      "slug": "twelve-rules-for-life",
+      "title": "人生十二法则",
+      "subtitle": "在秩序与混乱之间，以责任、诚实与意义站稳自己",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Jordan B. Peterson",
+      "topics": [
+        "哲学",
+        "成长",
+        "心理"
+      ],
+      "concepts": [
+        "责任与意义",
+        "原则",
+        "主动选择",
+        "不断更新"
+      ],
+      "visualStyle": "order-and-chaos-life-map",
+      "related": [
+        "seven-habits",
+        "cognitive-awakening-inner-os",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "principles",
+          "label": "从影响圈开始，以原则和责任安排长期行动"
+        },
+        {
+          "target": "cognitive-awakening-inner-os",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "准确命名模糊的问题，把退缩转为可以承担的行动"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "contrasts",
+          "concept": "responsibility",
+          "label": "一方从责任与意义进入人生，另一方从自由与欲望校准选择"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/twelve-rules-for-life/index.html"
+      },
+      "cover": "/artifacts/twelve-rules-for-life/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:12_rules_for_life_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "innovators-dilemma",
+      "slug": "innovators-dilemma",
+      "title": "创新者的窘境",
+      "subtitle": "当成功逻辑变成约束，重新看见破坏性创新的轨迹",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Clayton M. Christensen",
+      "topics": [
+        "创新",
+        "组织",
+        "系统",
+        "商业"
+      ],
+      "concepts": [
+        "破坏性创新",
+        "系统思维",
+        "假设验证",
+        "判断力"
+      ],
+      "visualStyle": "midnight-disruption-radar",
+      "related": [
+        "thinking-in-systems",
+        "mckinsey-way",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "applies",
+          "concept": "systems-thinking",
+          "label": "客户、利润与资源配置形成组织的行为结构"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "contrasts",
+          "concept": "hypothesis-testing",
+          "label": "未知市场缺少历史数据，需要用小规模试探发现需求"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "judgment",
+          "label": "放大价值之前，先判断所处价值网络是否仍然适用"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/innovators-dilemma/index.html"
+      },
+      "cover": "/artifacts/innovators-dilemma/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:innovators_dilemma_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cognitive-awakening",
+      "slug": "cognitive-awakening",
+      "title": "认知觉醒",
+      "subtitle": "看见自己，是一切改变的开始",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "周岭",
+      "topics": [
+        "认知",
+        "成长",
+        "心理"
+      ],
+      "concepts": [
+        "注意力",
+        "元认知",
+        "主动选择",
+        "反馈"
+      ],
+      "visualStyle": "editorial-magazine",
+      "related": [
+        "attention-loop",
+        "seven-habits",
+        "deliberate-practice",
+        "personal-growth-os",
+        "cognitive-awakening-inner-os"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "supports",
+          "concept": "attention",
+          "label": "专注让练习真正发生"
+        },
+        {
+          "target": "seven-habits",
+          "type": "extends",
+          "concept": "active-choice",
+          "label": "从看见惯性到主动选择"
+        },
+        {
+          "target": "attention-loop",
+          "type": "inspired-by",
+          "concept": "metacognition",
+          "label": "把觉察落实为一次注意力实验"
+        },
+        {
+          "target": "cognitive-awakening-inner-os",
+          "type": "related",
+          "concept": "metacognition",
+          "label": "同一本书的两种表达：觉察札记与内在操作系统"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/cognitive-awakening/index.html"
+      },
+      "cover": "/artifacts/cognitive-awakening/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:cognitive_awakening_editorial.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "seven-habits",
+      "slug": "seven-habits",
+      "title": "高效能人士的七个习惯",
+      "subtitle": "从依赖到独立，再走向互赖",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "史蒂芬·柯维",
+      "topics": [
+        "成长",
+        "原则",
+        "效能"
+      ],
+      "concepts": [
+        "主动选择",
+        "原则",
+        "注意力",
+        "不断更新"
+      ],
+      "visualStyle": "vintage-growth-map",
+      "related": [
+        "cognitive-awakening",
+        "naval-almanack",
+        "personal-growth-os",
+        "learning-cycle",
+        "twelve-rules-for-life"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "supports",
+          "concept": "active-choice",
+          "label": "影响圈是主动选择的边界"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "principles",
+          "label": "长期原则与时间自主权"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "applies",
+          "concept": "renewal",
+          "label": "不断更新是一场持续的循环"
+        },
+        {
+          "target": "twelve-rules-for-life",
+          "type": "related",
+          "concept": "principles",
+          "label": "从主动选择走向可以承担的责任与意义"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/seven-habits/index.html"
+      },
+      "cover": "/artifacts/seven-habits/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:seven_habits_core_map.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "deliberate-practice",
+      "slug": "deliberate-practice",
+      "title": "刻意练习",
+      "subtitle": "把重复升级为有反馈的能力训练",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "安德斯·艾利克森 / 罗伯特·普尔",
+      "topics": [
+        "学习",
+        "成长",
+        "能力"
+      ],
+      "concepts": [
+        "刻意练习",
+        "心理表征",
+        "反馈",
+        "学习区",
+        "注意力"
+      ],
+      "visualStyle": "training-laboratory",
+      "related": [
+        "cognitive-awakening",
+        "deliberate-practice-modern",
+        "learning-cycle",
+        "personal-growth-os"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "extends",
+          "concept": "attention",
+          "label": "高质量训练从高质量注意力开始"
+        },
+        {
+          "target": "deliberate-practice-modern",
+          "type": "related",
+          "concept": "mental-representation",
+          "label": "同一思想的另一种视觉表达"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "applies",
+          "concept": "feedback",
+          "label": "把反馈变成下一轮训练的输入"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/deliberate-practice/index.html"
+      },
+      "cover": "/artifacts/deliberate-practice/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:deliberate_practice_lab_style.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "naval-almanack",
+      "slug": "naval-almanack",
+      "title": "纳瓦尔宝典",
+      "subtitle": "用专长、判断与复利，换回自己的时间",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "埃里克·乔根森 / 纳瓦尔·拉维坎特",
+      "topics": [
+        "财富",
+        "哲学",
+        "自由"
+      ],
+      "concepts": [
+        "专长",
+        "杠杆",
+        "判断力",
+        "复利"
+      ],
+      "visualStyle": "black-gold-philosophy",
+      "related": [
+        "seven-habits",
+        "thinking-framework",
+        "personal-growth-os"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "extends",
+          "concept": "specific-knowledge",
+          "label": "训练让独特专长逐渐成形"
+        },
+        {
+          "target": "thinking-framework",
+          "type": "supports",
+          "concept": "judgment",
+          "label": "判断力为杠杆选择方向"
+        },
+        {
+          "target": "personal-growth-os",
+          "type": "supports",
+          "concept": "compounding",
+          "label": "把能力积累转化为长期选择权"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/naval-almanack/index.html"
+      },
+      "cover": "/artifacts/naval-almanack/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:naval_almanack_black_gold.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "deliberate-practice-modern",
+      "slug": "deliberate-practice-modern",
+      "title": "刻意练习 · 知识系统",
+      "subtitle": "目标、挑战、反馈与修正的可视化引擎",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "安德斯·艾利克森 / 罗伯特·普尔",
+      "topics": [
+        "学习",
+        "能力",
+        "系统"
+      ],
+      "concepts": [
+        "刻意练习",
+        "反馈",
+        "学习区",
+        "心理表征"
+      ],
+      "visualStyle": "dark-modernist",
+      "related": [
+        "deliberate-practice",
+        "learning-cycle",
+        "thinking-framework"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "related",
+          "concept": "deliberate-practice",
+          "label": "相同训练原则，两种阅读体验"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "supports",
+          "concept": "learning-zone",
+          "label": "在能力边缘设计可纠正的挑战"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/deliberate-practice-modern/index.html"
+      },
+      "cover": "/artifacts/deliberate-practice-modern/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:deliberate_practice_modern.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "thinking-framework",
+      "slug": "thinking-framework",
+      "title": "思考的框架",
+      "subtitle": "从问题到答案，一张思维工具地图",
+      "artifactType": "system",
+      "sourceType": "framework",
+      "author": "原始作品 · 作者未标注",
+      "topics": [
+        "思考",
+        "决策",
+        "认知"
+      ],
+      "concepts": [
+        "第一性原理",
+        "系统思维",
+        "判断力",
+        "反馈"
+      ],
+      "visualStyle": "architectural-atlas",
+      "related": [
+        "naval-almanack",
+        "personal-growth-os",
+        "learning-cycle",
+        "knowledge-landscape",
+        "great-mental-models"
+      ],
+      "connections": [
+        {
+          "target": "naval-almanack",
+          "type": "supports",
+          "concept": "judgment",
+          "label": "用多种思维框架校准判断"
+        },
+        {
+          "target": "personal-growth-os",
+          "type": "supports",
+          "concept": "systems-thinking",
+          "label": "理解要素之间如何相互影响"
+        },
+        {
+          "target": "knowledge-landscape",
+          "type": "inspired-by",
+          "concept": "systems-thinking",
+          "label": "从知识清单走向关系地图"
+        },
+        {
+          "target": "great-mental-models",
+          "type": "related",
+          "concept": "mental-models",
+          "label": "换上九种通用模型，检验自己的思考框架"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/thinking-framework/index.html"
+      },
+      "cover": "/artifacts/thinking-framework/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:thinking-framework-core-map.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "attention-loop",
+      "slug": "attention-loop",
+      "title": "注意力的回路",
+      "subtitle": "为什么知道很多，仍然难以行动？",
+      "artifactType": "idea",
+      "sourceType": "original",
+      "author": "Ink Grove",
+      "topics": [
+        "认知",
+        "学习",
+        "行动"
+      ],
+      "concepts": [
+        "注意力",
+        "元认知",
+        "反馈",
+        "主动选择"
+      ],
+      "visualStyle": "quiet-field-notes",
+      "related": [
+        "cognitive-awakening",
+        "deliberate-practice",
+        "learning-cycle"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "derived-from",
+          "concept": "attention",
+          "label": "从觉察分心到重新分配注意力"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "derived-from",
+          "concept": "feedback",
+          "label": "用可见反馈连接理解与行动"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "applies",
+          "concept": "active-choice",
+          "label": "以一个足够小的动作开始新循环"
+        }
+      ],
+      "artifact": {
+        "renderer": "markdown",
+        "src": "/artifacts/attention-loop/index.md"
+      },
+      "cover": "/artifacts/attention-loop/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [],
+        "derivedFrom": [
+          "cognitive-awakening",
+          "deliberate-practice"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "learning-cycle",
+      "slug": "learning-cycle",
+      "title": "学习如何真正发生",
+      "subtitle": "一张从输入到能力的反馈循环图",
+      "artifactType": "system",
+      "sourceType": "original",
+      "author": "Ink Grove",
+      "topics": [
+        "学习",
+        "系统",
+        "成长"
+      ],
+      "concepts": [
+        "反馈",
+        "学习区",
+        "刻意练习",
+        "不断更新"
+      ],
+      "visualStyle": "botanical-system-diagram",
+      "related": [
+        "deliberate-practice",
+        "attention-loop",
+        "seven-habits",
+        "personal-growth-os"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "derived-from",
+          "concept": "feedback",
+          "label": "把训练协议展开成一个可重复的系统"
+        },
+        {
+          "target": "seven-habits",
+          "type": "extends",
+          "concept": "renewal",
+          "label": "让身心更新成为循环的一部分"
+        }
+      ],
+      "artifact": {
+        "renderer": "svg",
+        "src": "/artifacts/learning-cycle/index.svg"
+      },
+      "cover": "/artifacts/learning-cycle/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [],
+        "derivedFrom": [
+          "deliberate-practice",
+          "seven-habits"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "knowledge-landscape",
+      "slug": "knowledge-landscape",
+      "title": "知识生长的地形",
+      "subtitle": "当孤立的想法开始彼此连接",
+      "artifactType": "idea",
+      "sourceType": "original",
+      "author": "Ink Grove",
+      "topics": [
+        "思考",
+        "系统",
+        "连接"
+      ],
+      "concepts": [
+        "系统思维",
+        "复利",
+        "元认知"
+      ],
+      "visualStyle": "ink-landscape",
+      "related": [
+        "thinking-framework",
+        "personal-growth-os",
+        "attention-loop"
+      ],
+      "connections": [
+        {
+          "target": "thinking-framework",
+          "type": "inspired-by",
+          "concept": "systems-thinking",
+          "label": "一个节点的意义，来自它与其他节点的关系"
+        },
+        {
+          "target": "personal-growth-os",
+          "type": "related",
+          "concept": "compounding",
+          "label": "连接已有理解，生长出新的理解"
+        }
+      ],
+      "artifact": {
+        "renderer": "image",
+        "src": "/artifacts/knowledge-landscape/landscape.svg"
+      },
+      "cover": "/artifacts/knowledge-landscape/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-11",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [],
+        "derivedFrom": [
+          "thinking-framework",
+          "personal-growth-os"
+        ]
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "personal-growth",
+      "title": "从觉醒到自由",
+      "subtitle": "A journey of becoming",
+      "description": "看见自己，建立原则，训练能力，再让长期积累带来更多选择。五件作品，连成一条持续生长的路径。",
+      "artifactIds": [
+        "cognitive-awakening",
+        "seven-habits",
+        "deliberate-practice",
+        "naval-almanack",
+        "personal-growth-os"
+      ],
+      "color": "#6c775b"
+    },
+    {
+      "id": "learning-laboratory",
+      "title": "学习的反馈回路",
+      "subtitle": "The art of getting better",
+      "description": "从注意力到主动阅读，从学习区到反馈循环。探索理解如何通过深度加工与练习，转化为真正可用的能力。",
+      "artifactIds": [
+        "attention-loop",
+        "cognitive-awakening",
+        "deliberate-practice",
+        "deliberate-practice-modern",
+        "learning-cycle",
+        "cognitive-awakening-inner-os",
+        "how-to-read-a-book"
+      ],
+      "color": "#537c69"
+    },
+    {
+      "id": "connected-thinking",
+      "title": "让思想彼此连接",
+      "subtitle": "Where ideas meet",
+      "description": "从一张思考框架到多模型网络，再从四本书走向十一本文本的贯通。看见知识之间的关系，生长出自己的理解。",
+      "artifactIds": [
+        "thinking-framework",
+        "great-mental-models",
+        "thinking-in-systems",
+        "personal-growth-os",
+        "intellectual-atlas",
+        "knowledge-landscape"
+      ],
+      "color": "#737094"
+    },
+    {
+      "id": "clearer-judgment",
+      "title": "让判断更清醒",
+      "subtitle": "Tools for clearer thinking",
+      "description": "换一副模型，检查概率与因果，用事实验证假设，再回到原文主动提问。让每一个判断都留有被现实修正的空间。",
+      "artifactIds": [
+        "great-mental-models",
+        "mindware",
+        "mckinsey-way",
+        "how-to-read-a-book",
+        "thinking-framework"
+      ],
+      "color": "#4d7790"
+    },
+    {
+      "id": "acting-in-complexity",
+      "title": "在复杂世界中行动",
+      "subtitle": "Structure, responsibility and change",
+      "description": "从系统结构看见反复出现的问题，从责任与原则校准方向，再理解组织为什么被成功经验困住。把方法放回真实世界。",
+      "artifactIds": [
+        "thinking-in-systems",
+        "twelve-rules-for-life",
+        "seven-habits",
+        "mckinsey-way",
+        "innovators-dilemma",
+        "intellectual-atlas"
+      ],
+      "color": "#9b7455"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "attention",
+      "name": "注意力",
+      "description": "决定哪些信息进入理解，也决定哪些行动得到持续投入。",
+      "related": [
+        "metacognition",
+        "active-choice",
+        "deliberate-practice"
+      ]
+    },
+    {
+      "id": "feedback",
+      "name": "反馈",
+      "description": "让结果返回行动过程，使下一次尝试比上一次更准确。",
+      "related": [
+        "deliberate-practice",
+        "learning-zone",
+        "mental-representation"
+      ]
+    },
+    {
+      "id": "mental-representation",
+      "name": "心理表征",
+      "description": "在长期训练中形成的内部结构，帮助我们识别模式与判断重点。",
+      "related": [
+        "deliberate-practice",
+        "judgment"
+      ]
+    },
+    {
+      "id": "learning-zone",
+      "name": "学习区",
+      "description": "略高于当前能力、允许犯错并能获得明确修正的任务区间。",
+      "related": [
+        "deliberate-practice",
+        "feedback"
+      ]
+    },
+    {
+      "id": "active-choice",
+      "name": "主动选择",
+      "description": "在刺激与反应之间留出空间，把精力放在可以影响的事上。",
+      "related": [
+        "attention",
+        "principles",
+        "metacognition"
+      ]
+    },
+    {
+      "id": "principles",
+      "name": "原则",
+      "description": "为长期选择提供方向，而不是只对眼前事件作出反应。",
+      "related": [
+        "active-choice",
+        "judgment",
+        "renewal"
+      ]
+    },
+    {
+      "id": "compounding",
+      "name": "复利",
+      "description": "把能够复用的能力、关系与作品留存下来，让积累彼此增强。",
+      "related": [
+        "leverage",
+        "specific-knowledge",
+        "systems-thinking"
+      ]
+    },
+    {
+      "id": "leverage",
+      "name": "杠杆",
+      "description": "通过可复制的作品、代码和系统，让一次创造服务于更多场景。",
+      "related": [
+        "specific-knowledge",
+        "judgment",
+        "compounding"
+      ]
+    },
+    {
+      "id": "systems-thinking",
+      "name": "系统思维",
+      "description": "看见要素、连接与反馈，理解局部变化如何影响整体。",
+      "related": [
+        "feedback",
+        "first-principles",
+        "compounding"
+      ]
+    },
+    {
+      "id": "specific-knowledge",
+      "name": "专长",
+      "description": "由好奇心、独特经历和长期实践交织形成的能力。",
+      "related": [
+        "deliberate-practice",
+        "leverage",
+        "compounding"
+      ]
+    },
+    {
+      "id": "first-principles",
+      "name": "第一性原理",
+      "description": "辨认事实与假设，从基本约束重新构建对问题的理解。",
+      "related": [
+        "systems-thinking",
+        "judgment"
+      ]
+    },
+    {
+      "id": "metacognition",
+      "name": "元认知",
+      "description": "观察自己的注意力、判断和学习过程，并据此作出调整。",
+      "related": [
+        "attention",
+        "feedback",
+        "active-choice"
+      ]
+    },
+    {
+      "id": "deliberate-practice",
+      "name": "刻意练习",
+      "description": "以明确目标和及时反馈为核心，在能力边缘修正具体技能。",
+      "related": [
+        "feedback",
+        "learning-zone",
+        "mental-representation"
+      ]
+    },
+    {
+      "id": "judgment",
+      "name": "判断力",
+      "description": "在不确定性中辨认关键事实、权衡后果并选择行动方向。",
+      "related": [
+        "first-principles",
+        "mental-representation",
+        "principles"
+      ]
+    },
+    {
+      "id": "renewal",
+      "name": "不断更新",
+      "description": "照顾身体、心智、关系与内在方向，使长期成长能够持续。",
+      "related": [
+        "principles",
+        "feedback"
+      ]
+    },
+    {
+      "id": "mental-models",
+      "name": "思维模型",
+      "description": "用不同学科的解释框架相互校验，持续区分现实与对现实的简化。",
+      "related": [
+        "first-principles",
+        "probability",
+        "judgment"
+      ]
+    },
+    {
+      "id": "probability",
+      "name": "概率思维",
+      "description": "结合基准率、样本与证据强度，在不确定性中形成可以更新的判断。",
+      "related": [
+        "causal-reasoning",
+        "hypothesis-testing",
+        "judgment"
+      ]
+    },
+    {
+      "id": "causal-reasoning",
+      "name": "因果推理",
+      "description": "区分相关与原因，检查情境、第三变量、反向因果及实验依据。",
+      "related": [
+        "probability",
+        "hypothesis-testing",
+        "systems-thinking"
+      ]
+    },
+    {
+      "id": "hypothesis-testing",
+      "name": "假设验证",
+      "description": "提出可能的解释，主动寻找能够证实或推翻它的事实与实验。",
+      "related": [
+        "causal-reasoning",
+        "feedback",
+        "structured-problem-solving"
+      ]
+    },
+    {
+      "id": "structured-problem-solving",
+      "name": "结构化问题解决",
+      "description": "定义真正的问题，拆解关键驱动，并让分析、表达与行动彼此对应。",
+      "related": [
+        "hypothesis-testing",
+        "systems-thinking",
+        "judgment"
+      ]
+    },
+    {
+      "id": "active-reading",
+      "name": "主动阅读",
+      "description": "先理解一本书的结构、主张与论证，再判断它如何改变自己的理解。",
+      "related": [
+        "syntopical-reading",
+        "attention",
+        "judgment"
+      ]
+    },
+    {
+      "id": "syntopical-reading",
+      "name": "主题阅读",
+      "description": "围绕同一问题组织多本书，以共同语言比较共识、分歧与尚未回答的部分。",
+      "related": [
+        "active-reading",
+        "mental-models",
+        "systems-thinking"
+      ]
+    },
+    {
+      "id": "responsibility",
+      "name": "责任与意义",
+      "description": "从能够承担的现实开始，以诚实、关系和长期价值面对人生的不确定。",
+      "related": [
+        "principles",
+        "active-choice",
+        "renewal"
+      ]
+    },
+    {
+      "id": "disruptive-innovation",
+      "name": "破坏性创新",
+      "description": "从被主流忽视的市场起步，以不同价值和性能轨迹逐渐改变竞争结构。",
+      "related": [
+        "systems-thinking",
+        "hypothesis-testing",
+        "judgment"
+      ]
+    }
+  ]
+}

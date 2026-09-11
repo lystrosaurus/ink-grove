@@ -1,0 +1,50 @@
+.connections-page .graph-viewport {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+}
+
+.connections-page .graph-viewport.is-expanded {
+  display: block;
+  overflow: auto;
+  max-height: min(72vh, 760px);
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b3c1a6 transparent;
+}
+
+.connections-page .graph-viewport.is-expanded:focus-visible {
+  outline: 2px solid #789766;
+  outline-offset: -2px;
+}
+
+.connections-page .knowledge-graph.is-expanded {
+  display: block;
+  flex: none;
+  min-height: 0;
+  height: auto;
+  max-width: none;
+  margin-inline: auto;
+}
+
+.connections-page .knowledge-graph.is-expanded .graph-title {
+  font-size: 14px;
+}
+
+.connections-page .knowledge-graph.is-expanded .graph-type {
+  font-size: 10px;
+}
+
+.connections-page .graph-label-background {
+  fill: #fafbf6;
+}
+
+[data-theme='dark'] .connections-page .graph-label-background {
+  fill: #202a1b;
+}
+
+@media (max-width: 620px) {
+  .connections-page .graph-viewport.is-expanded {
+    max-height: 66vh;
+  }
+}

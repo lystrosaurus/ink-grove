@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>贯通思考篇｜个人成长操作系统</title>
+<style>
+:root{
+  --bg:#eef1f6;
+  --paper:#f8fafc;
+  --ink:#18202b;
+  --muted:#667180;
+  --line:#d7dde5;
+  --indigo:#273f72;
+  --violet:#7065b0;
+  --coral:#d86d5c;
+  --teal:#4d8f8b;
+  --amber:#d6a446;
+  --green:#6f9272;
+  --soft-indigo:#e9edf7;
+  --soft-coral:#f6e7e2;
+  --soft-teal:#e4f0ef;
+  --soft-amber:#f6eedc;
+  --soft-green:#e8f0e8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(112,101,176,.08), transparent 22%),
+    radial-gradient(circle at 88% 4%, rgba(77,143,139,.08), transparent 25%),
+    var(--bg);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.65;
+}
+.page{
+  width:min(1500px,95vw);
+  margin:24px auto 60px;
+}
+.shell{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 24px 70px rgba(43,55,75,.12);
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  min-height:520px;
+  border-bottom:1px solid var(--line);
+}
+.hero-main{
+  padding:52px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-main:before{
+  content:"";
+  position:absolute;
+  width:460px;height:460px;border-radius:50%;
+  right:-140px;top:-120px;
+  background:radial-gradient(circle,rgba(39,63,114,.12),rgba(39,63,114,0) 70%);
+}
+.eyebrow{
+  color:var(--indigo);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+h1{
+  font-size:clamp(58px,8vw,116px);
+  line-height:.93;
+  margin:18px 0 20px;
+  letter-spacing:-.055em;
+}
+.hero-lead{
+  max-width:850px;
+  font-size:24px;
+  color:#35404e;
+}
+.hero-thesis{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:96px 1fr;
+  gap:18px;
+  align-items:start;
+}
+.hero-thesis .mark{
+  width:76px;height:76px;border-radius:22px;
+  display:grid;place-items:center;
+  background:var(--indigo);
+  color:white;
+  font-size:30px;font-weight:900;
+}
+.hero-thesis b{font-size:24px}
+.hero-thesis p{margin:6px 0 0;color:var(--muted)}
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;
+  grid-template-rows:repeat(4,1fr);
+}
+.book{
+  padding:24px 26px;
+  border-bottom:1px solid var(--line);
+}
+.book:last-child{border-bottom:0}
+.book .num{
+  font-size:11px;
+  letter-spacing:.15em;
+  font-weight:800;
+  color:var(--muted);
+}
+.book strong{
+  display:block;
+  font-size:24px;
+  margin:5px 0 4px;
+}
+.book span{font-size:14px;color:var(--muted)}
+.book.h7{background:var(--soft-indigo)}
+.book.dp{background:var(--soft-coral)}
+.book.ca{background:var(--soft-teal)}
+.book.na{background:var(--soft-amber)}
+
+.section{
+  padding:38px 42px;
+  border-bottom:1px solid var(--line);
+}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-end;
+  margin-bottom:22px;
+}
+.section-head h2{
+  margin:0;
+  font-size:34px;
+}
+.section-head p{
+  margin:0;
+  color:var(--muted);
+  max-width:620px;
+}
+.map{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:12px;
+}
+.stage{
+  position:relative;
+  min-height:230px;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:white;
+}
+.stage:after{
+  content:"→";
+  position:absolute;
+  right:-16px;top:46%;
+  color:#aab3bf;font-size:24px;font-weight:800;
+  z-index:3;
+}
+.stage:last-child:after{display:none}
+.stage .topline{
+  height:6px;border-radius:99px;margin:-20px -20px 18px;
+}
+.stage:nth-child(1) .topline{background:var(--teal)}
+.stage:nth-child(2) .topline{background:var(--indigo)}
+.stage:nth-child(3) .topline{background:var(--coral)}
+.stage:nth-child(4) .topline{background:var(--violet)}
+.stage:nth-child(5) .topline{background:var(--amber)}
+.stage:nth-child(6) .topline{background:var(--green)}
+.stage .snum{
+  font-size:11px;letter-spacing:.14em;font-weight:800;color:var(--muted)
+}
+.stage h3{
+  margin:7px 0 8px;
+  font-size:22px;
+}
+.stage p{
+  margin:0;color:var(--muted);font-size:14px
+}
+.stage .src{
+  margin-top:18px;
+  font-size:12px;
+  color:#4d5967;
+  font-weight:700;
+}
+
+.matrix{
+  display:grid;
+  grid-template-columns:180px repeat(4,1fr);
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+}
+.cell{
+  padding:16px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:92px;
+  background:white;
+}
+.cell:nth-child(5n){border-right:0}
+.cell.head{
+  font-weight:800;
+  background:#f1f4f8;
+}
+.cell.rowhead{
+  font-weight:800;
+  background:#f7f9fb;
+}
+.cell p{margin:0;color:var(--muted);font-size:14px}
+.cell b{display:block;margin-bottom:4px}
+
+.engine{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+}
+.loop{
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:26px;
+  background:white;
+}
+.loop-grid{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+.loop-step{
+  min-height:155px;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid var(--line);
+  background:#f9fafc;
+}
+.loop-step .n{
+  font-size:11px;letter-spacing:.14em;font-weight:800;color:var(--coral)
+}
+.loop-step b{display:block;font-size:19px;margin:8px 0}
+.loop-step span{color:var(--muted);font-size:13px}
+
+.rules{
+  display:grid;
+  gap:12px;
+}
+.rule{
+  padding:20px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:white;
+}
+.rule b{font-size:18px}
+.rule span{display:block;color:var(--muted);font-size:14px;margin-top:5px}
+.rule:nth-child(1){border-left:6px solid var(--teal)}
+.rule:nth-child(2){border-left:6px solid var(--indigo)}
+.rule:nth-child(3){border-left:6px solid var(--coral)}
+.rule:nth-child(4){border-left:6px solid var(--amber)}
+
+.layers{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.layer{
+  padding:22px;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:white;
+  min-height:230px;
+}
+.layer .icon{
+  width:48px;height:48px;border-radius:14px;
+  display:grid;place-items:center;
+  font-weight:900;
+  margin-bottom:16px;
+}
+.layer:nth-child(1) .icon{background:var(--soft-teal);color:var(--teal)}
+.layer:nth-child(2) .icon{background:var(--soft-indigo);color:var(--indigo)}
+.layer:nth-child(3) .icon{background:var(--soft-coral);color:var(--coral)}
+.layer:nth-child(4) .icon{background:var(--soft-amber);color:#a8751e}
+.layer h3{margin:0 0 8px;font-size:22px}
+.layer p{margin:0;color:var(--muted);font-size:14px}
+.layer ul{padding-left:18px;color:var(--muted);font-size:14px}
+
+.questions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.q{
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+}
+.q .tag{
+  font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--violet)
+}
+.q h3{margin:8px 0;font-size:21px}
+.q p{margin:0;color:var(--muted)}
+
+.daily{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.daily-item{
+  padding:20px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:white;
+}
+.daily-item b{display:block;font-size:19px;margin-bottom:6px}
+.daily-item span{color:var(--muted);font-size:14px}
+.daily-item:nth-child(1){background:var(--soft-teal)}
+.daily-item:nth-child(2){background:var(--soft-indigo)}
+.daily-item:nth-child(3){background:var(--soft-coral)}
+.daily-item:nth-child(4){background:var(--soft-amber)}
+
+.final{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+}
+.final-quote{
+  padding:30px;
+  border-radius:22px;
+  background:var(--indigo);
+  color:white;
+}
+.final-quote .big{
+  font-size:36px;
+  font-weight:800;
+  line-height:1.4;
+}
+.final-quote p{color:#d8e0ef}
+.final-stack{
+  display:grid;
+  gap:12px;
+}
+.stack{
+  padding:18px 20px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:white;
+}
+.stack b{display:block}
+.stack span{color:var(--muted);font-size:14px}
+.footer{
+  padding:24px 42px;
+  background:#141b26;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+.footer strong{font-size:23px}
+.footer span{color:#adb8c6;font-size:13px}
+
+@media(max-width:1100px){
+  .hero,.engine,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .book{border-right:1px solid var(--line)}
+  .map{grid-template-columns:1fr 1fr}
+  .stage:after{display:none}
+  .layers{grid-template-columns:1fr 1fr}
+  .questions{grid-template-columns:1fr}
+  .daily{grid-template-columns:1fr 1fr}
+  .matrix{grid-template-columns:150px repeat(4,1fr);overflow:auto}
+}
+@media(max-width:720px){
+  .hero-main,.section{padding:26px}
+  .hero-side{grid-template-columns:1fr}
+  .map,.layers,.daily,.loop-grid{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .matrix{display:block;border:0}
+  .cell{border:1px solid var(--line);margin-bottom:8px}
+  .footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="shell">
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="eyebrow">INTEGRATED THINKING · PERSONAL OPERATING SYSTEM</div>
+    <h1>贯通思考篇</h1>
+    <div class="hero-lead">
+      把《认知觉醒》《高效能人士的七个习惯》《刻意练习》《纳瓦尔宝典》
+      重新组合成一套完整路径：<strong>先看见自己，再建立原则；再训练能力，最后放大价值与自由。</strong>
+    </div>
+
+    <div class="hero-thesis">
+      <div class="mark">∞</div>
+      <div>
+        <b>成长不是“知道更多”，而是让认知、选择、能力与人生结构彼此咬合。</b>
+        <p>一本书解决一个局部问题；贯通之后，它们共同回答的是：我如何成为一个更清醒、更有效、更自由的人？</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="book ca">
+      <div class="num">BOOK 01</div>
+      <strong>认知觉醒</strong>
+      <span>看见注意力、情绪、惯性与选择。</span>
+    </div>
+    <div class="book h7">
+      <div class="num">BOOK 02</div>
+      <strong>高效能人士的七个习惯</strong>
+      <span>建立原则、责任感与长期有效的行为方式。</span>
+    </div>
+    <div class="book dp">
+      <div class="num">BOOK 03</div>
+      <strong>刻意练习</strong>
+      <span>把原则落成可重复、可反馈的能力训练。</span>
+    </div>
+    <div class="book na">
+      <div class="num">BOOK 04</div>
+      <strong>纳瓦尔宝典</strong>
+      <span>用专长、杠杆与长期复利换取自由。</span>
+    </div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">01 · THE WHOLE MAP</div>
+      <h2>四本书，其实是一条成长链</h2>
+    </div>
+    <p>从内在觉察开始，经过原则与训练，最终走向价值放大与人生自由。</p>
+  </div>
+
+  <div class="map">
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 01</div>
+      <h3>觉醒</h3>
+      <p>发现自己为什么会分心、拖延、焦虑、被情绪牵着走。</p>
+      <div class="src">来源：认知觉醒</div>
+    </div>
+
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 02</div>
+      <h3>选择</h3>
+      <p>从自动反应转向主动决定，把注意力放到可影响的事情上。</p>
+      <div class="src">来源：认知觉醒 + 七个习惯</div>
+    </div>
+
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 03</div>
+      <h3>原则</h3>
+      <p>以终为始、要事第一、双赢与长期合作，建立稳定行为框架。</p>
+      <div class="src">来源：七个习惯</div>
+    </div>
+
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 04</div>
+      <h3>训练</h3>
+      <p>把抽象目标拆成具体技能，通过反馈与修正持续提升。</p>
+      <div class="src">来源：刻意练习</div>
+    </div>
+
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 05</div>
+      <h3>放大</h3>
+      <p>把专长和判断力借助代码、媒体、资本、系统进行放大。</p>
+      <div class="src">来源：纳瓦尔宝典</div>
+    </div>
+
+    <div class="stage">
+      <div class="topline"></div>
+      <div class="snum">STAGE 06</div>
+      <h3>自由</h3>
+      <p>最终目标不是更忙，而是拥有更高质量的时间与选择权。</p>
+      <div class="src">来源：纳瓦尔宝典</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">02 · CROSS-BOOK MATRIX</div>
+      <h2>同一个问题，四本书分别怎么看？</h2>
+    </div>
+    <p>把四本书放到同一张表里，会发现它们并不是重复，而是分别解决“认知、行为、能力、人生结构”的不同层次。</p>
+  </div>
+
+  <div class="matrix">
+    <div class="cell head">问题</div>
+    <div class="cell head">认知觉醒</div>
+    <div class="cell head">七个习惯</div>
+    <div class="cell head">刻意练习</div>
+    <div class="cell head">纳瓦尔宝典</div>
+
+    <div class="cell rowhead">为什么改变难？</div>
+    <div class="cell"><p>注意力、情绪和惯性在自动驾驶。</p></div>
+    <div class="cell"><p>缺少原则与主动责任。</p></div>
+    <div class="cell"><p>练习方式没有推动能力边界。</p></div>
+    <div class="cell"><p>努力仍停留在出售时间。</p></div>
+
+    <div class="cell rowhead">应该先做什么？</div>
+    <div class="cell"><p>觉察自己正在发生什么。</p></div>
+    <div class="cell"><p>明确终点与真正重要的事。</p></div>
+    <div class="cell"><p>定义一个具体技能目标。</p></div>
+    <div class="cell"><p>找到自己的独特专长。</p></div>
+
+    <div class="cell rowhead">如何持续进步？</div>
+    <div class="cell"><p>认知 → 行动 → 反馈。</p></div>
+    <div class="cell"><p>要事第一，不断更新。</p></div>
+    <div class="cell"><p>挑战 → 反馈 → 修正。</p></div>
+    <div class="cell"><p>长期主义 + 复利。</p></div>
+
+    <div class="cell rowhead">最终追求什么？</div>
+    <div class="cell"><p>从被动反应走向主动选择。</p></div>
+    <div class="cell"><p>独立、互赖与高效能。</p></div>
+    <div class="cell"><p>持续构建更高水平能力。</p></div>
+    <div class="cell"><p>财富、自由与内在平静。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">03 · THE CORE ENGINE</div>
+      <h2>贯通之后，真正的成长引擎</h2>
+    </div>
+    <p>四本书可以被压缩成一个持续循环的个人成长发动机。</p>
+  </div>
+
+  <div class="engine">
+    <div class="loop">
+      <div class="eyebrow">PERSONAL GROWTH LOOP</div>
+      <div class="loop-grid">
+        <div class="loop-step">
+          <div class="n">STEP 01</div>
+          <b>觉察</b>
+          <span>我现在被什么驱动？注意力和情绪去了哪里？</span>
+        </div>
+        <div class="loop-step">
+          <div class="n">STEP 02</div>
+          <b>选择</b>
+          <span>什么是我真正想要的？什么属于我的影响圈？</span>
+        </div>
+        <div class="loop-step">
+          <div class="n">STEP 03</div>
+          <b>训练</b>
+          <span>哪个具体能力是当前瓶颈？怎样进入学习区？</span>
+        </div>
+        <div class="loop-step">
+          <div class="n">STEP 04</div>
+          <b>反馈</b>
+          <span>结果告诉了我什么？哪一部分需要修正？</span>
+        </div>
+        <div class="loop-step">
+          <div class="n">STEP 05</div>
+          <b>复利</b>
+          <span>哪些能力、关系和资产值得长期积累与放大？</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule">
+        <b>原则 01｜先管理自己，再管理世界</b>
+        <span>先看见自己的注意力、情绪和选择，再谈效率与结果。</span>
+      </div>
+      <div class="rule">
+        <b>原则 02｜先做正确的事，再把事做对</b>
+        <span>方向与判断优先于速度；目标错误，效率越高偏离越快。</span>
+      </div>
+      <div class="rule">
+        <b>原则 03｜能力必须通过反馈获得</b>
+        <span>没有反馈的努力，很容易变成自我感动。</span>
+      </div>
+      <div class="rule">
+        <b>原则 04｜最终要让价值脱离时间线性增长</b>
+        <span>从“做更多”逐渐走向“让一次创造被持续复用和放大”。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">04 · FOUR-LAYER OS</div>
+      <h2>把个人成长理解成四层操作系统</h2>
+    </div>
+    <p>很多问题之所以反复发生，是因为只解决了表层执行，没有处理更底层的认知、原则和结构。</p>
+  </div>
+
+  <div class="layers">
+    <div class="layer">
+      <div class="icon">01</div>
+      <h3>认知层</h3>
+      <p>决定你如何解释世界与自己。</p>
+      <ul>
+        <li>注意力在哪里？</li>
+        <li>情绪在告诉我什么？</li>
+        <li>我是在自动反应还是主动选择？</li>
+      </ul>
+    </div>
+
+    <div class="layer">
+      <div class="icon">02</div>
+      <h3>原则层</h3>
+      <p>决定你长期如何做选择。</p>
+      <ul>
+        <li>什么是终点？</li>
+        <li>什么才是真正的要事？</li>
+        <li>如何兼顾自己与他人？</li>
+      </ul>
+    </div>
+
+    <div class="layer">
+      <div class="icon">03</div>
+      <h3>能力层</h3>
+      <p>决定你能不能把选择变成结果。</p>
+      <ul>
+        <li>当前瓶颈是什么？</li>
+        <li>怎样获得高质量反馈？</li>
+        <li>如何形成更好的心理表征？</li>
+      </ul>
+    </div>
+
+    <div class="layer">
+      <div class="icon">04</div>
+      <h3>结构层</h3>
+      <p>决定你的成果能否产生复利。</p>
+      <ul>
+        <li>是否拥有独特专长？</li>
+        <li>是否使用杠杆？</li>
+        <li>是否把时间换成了选择权？</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">05 · SIX QUESTIONS</div>
+      <h2>遇到问题时，可以连续问自己这六个问题</h2>
+    </div>
+    <p>它们把四本书压缩成一套随时可用的思考框架。</p>
+  </div>
+
+  <div class="questions">
+    <div class="q">
+      <div class="tag">Q1 · AWARENESS</div>
+      <h3>我现在真正发生了什么？</h3>
+      <p>事实、情绪、注意力和自动反应分别是什么？</p>
+    </div>
+    <div class="q">
+      <div class="tag">Q2 · END</div>
+      <h3>我真正想要的结果是什么？</h3>
+      <p>先定义终点，避免被眼前忙碌牵着走。</p>
+    </div>
+    <div class="q">
+      <div class="tag">Q3 · PRIORITY</div>
+      <h3>现在最重要的一件事是什么？</h3>
+      <p>把真正重要但不紧急的事项排到前面。</p>
+    </div>
+    <div class="q">
+      <div class="tag">Q4 · SKILL</div>
+      <h3>哪项能力限制了我的结果？</h3>
+      <p>不要笼统努力，找到一个可以训练的具体瓶颈。</p>
+    </div>
+    <div class="q">
+      <div class="tag">Q5 · FEEDBACK</div>
+      <h3>我怎样才能更快知道自己错在哪里？</h3>
+      <p>导师、数据、市场、作品和结果都是反馈。</p>
+    </div>
+    <div class="q">
+      <div class="tag">Q6 · LEVERAGE</div>
+      <h3>怎样让这次努力产生长期复利？</h3>
+      <p>沉淀为能力、作品、系统、关系、资产或可复用知识。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">06 · DAILY PRACTICE</div>
+      <h2>如果只保留一个每日实践</h2>
+    </div>
+    <p>每天不需要做复杂系统，只要持续完成四个动作。</p>
+  </div>
+
+  <div class="daily">
+    <div class="daily-item">
+      <b>① 晨间定向</b>
+      <span>今天最重要的结果是什么？如果只能完成一件事，会是哪件？</span>
+    </div>
+    <div class="daily-item">
+      <b>② 深度训练</b>
+      <span>选择一个关键能力，在学习区进行高专注练习。</span>
+    </div>
+    <div class="daily-item">
+      <b>③ 晚间复盘</b>
+      <span>今天哪里判断错了？哪里执行错了？下一次如何修正？</span>
+    </div>
+    <div class="daily-item">
+      <b>④ 沉淀资产</b>
+      <span>把今天的认知、作品或经验变成可复用、可积累的东西。</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-quote">
+      <div class="eyebrow" style="color:#b9c9ed">FINAL SYNTHESIS</div>
+      <div class="big">
+        认知让你看见问题，原则让你做出选择，练习让你形成能力，杠杆让能力产生复利。
+      </div>
+      <p>最终，所谓“成长”，就是不断把自己从被环境推动的人，变成能够主动设计人生结构的人。</p>
+    </div>
+
+    <div class="final-stack">
+      <div class="stack">
+        <b>从“被动反应”到“主动选择”</b>
+        <span>这是认知层的升级。</span>
+      </div>
+      <div class="stack">
+        <b>从“忙碌”到“要事第一”</b>
+        <span>这是原则层的升级。</span>
+      </div>
+      <div class="stack">
+        <b>从“努力”到“刻意训练”</b>
+        <span>这是能力层的升级。</span>
+      </div>
+      <div class="stack">
+        <b>从“出售时间”到“建立复利”</b>
+        <span>这是人生结构的升级。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>真正的自由：清醒地选择，持续地成长，让价值不断复利。</strong>
+  <span>贯通思考篇 · Personal Operating System</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

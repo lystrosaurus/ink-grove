@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>认知觉醒｜知识特刊</title>
+  <style>
+    :root{
+      --paper:#f4efe5;
+      --paper2:#ebe3d6;
+      --ink:#22211f;
+      --muted:#6f6a63;
+      --red:#b44a3b;
+      --green:#627b68;
+      --mustard:#c99a45;
+      --blue:#63788f;
+      --line:#cfc3b2;
+      --dark:#2d302d;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        linear-gradient(rgba(65,54,42,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(65,54,42,.025) 1px, transparent 1px),
+        var(--paper);
+      background-size:28px 28px;
+      font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+      line-height:1.75;
+    }
+    .page{
+      width:min(1360px,94vw);
+      margin:24px auto 54px;
+    }
+    .cover{
+      display:grid;
+      grid-template-columns:1.4fr .6fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .cover-main,.cover-side,.card{
+      border:1px solid var(--line);
+      background:rgba(249,245,237,.92);
+    }
+    .cover-main{
+      min-height:520px;
+      padding:42px;
+      position:relative;
+      overflow:hidden;
+    }
+    .cover-main:after{
+      content:"";
+      position:absolute;
+      right:-110px;
+      bottom:-120px;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      background:var(--red);
+      opacity:.08;
+    }
+    .issue{
+      font-family:Arial,sans-serif;
+      letter-spacing:.18em;
+      font-size:12px;
+      font-weight:700;
+      color:var(--red);
+      text-transform:uppercase;
+    }
+    h1{
+      font-size:clamp(64px,9vw,128px);
+      line-height:.92;
+      margin:18px 0 20px;
+      letter-spacing:-.04em;
+    }
+    .deck{
+      font-size:25px;
+      max-width:760px;
+      border-left:6px solid var(--red);
+      padding-left:22px;
+      margin-top:30px;
+    }
+    .big-idea{
+      margin-top:42px;
+      display:grid;
+      grid-template-columns:140px 1fr;
+      gap:20px;
+      align-items:start;
+    }
+    .big-idea .num{
+      font-family:Georgia,serif;
+      font-size:86px;
+      line-height:.8;
+      color:var(--mustard);
+    }
+    .big-idea b{
+      display:block;
+      font-size:26px;
+      margin-bottom:6px;
+    }
+    .big-idea p{margin:0;color:var(--muted)}
+
+    .cover-side{
+      display:flex;
+      flex-direction:column;
+      min-height:520px;
+    }
+    .side-block{
+      flex:1;
+      padding:28px;
+      border-bottom:1px solid var(--line);
+    }
+    .side-block:last-child{border-bottom:0}
+    .side-block h3{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+    .side-block strong{
+      display:block;
+      font-size:30px;
+      line-height:1.25;
+      margin-top:8px;
+    }
+    .side-block.red{background:#b44a3b;color:#fff}
+    .side-block.green{background:#627b68;color:#fff}
+    .side-block.gold{background:#c99a45;color:#1e1d1b}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+    }
+    .card{
+      padding:28px;
+      min-height:220px;
+    }
+    .span-4{grid-column:span 4}
+    .span-5{grid-column:span 5}
+    .span-6{grid-column:span 6}
+    .span-7{grid-column:span 7}
+    .span-8{grid-column:span 8}
+    .span-12{grid-column:span 12}
+
+    .label{
+      font-family:Arial,sans-serif;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.16em;
+      color:var(--red);
+      text-transform:uppercase;
+    }
+    .card h2{
+      font-size:30px;
+      line-height:1.3;
+      margin:6px 0 16px;
+    }
+    .card p{color:var(--muted)}
+    .quote{
+      font-size:30px;
+      line-height:1.5;
+      border-top:6px solid var(--dark);
+      padding-top:20px;
+      margin:0;
+    }
+
+    .awakening{
+      display:grid;
+      gap:10px;
+      margin-top:16px;
+    }
+    .row{
+      display:grid;
+      grid-template-columns:58px 1fr;
+      gap:14px;
+      padding:14px 0;
+      border-top:1px solid var(--line);
+    }
+    .row:first-child{border-top:0}
+    .index{
+      width:48px;height:48px;border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid var(--line);
+      font-family:Georgia,serif;
+      font-size:22px;
+    }
+    .row b{font-size:19px}
+    .row small{display:block;color:var(--muted)}
+
+    .brain{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:16px;
+    }
+    .brain .unit{
+      padding:18px;
+      border:1px solid var(--line);
+      background:#f0e9dd;
+    }
+    .brain .unit:nth-child(2){background:#e4ece5}
+    .brain .unit:nth-child(3){background:#eee3de}
+    .brain .unit:nth-child(4){background:#e4e9ee}
+    .brain h3{margin:0 0 8px}
+    .brain p{margin:0;font-size:14px}
+
+    .ladder{
+      margin-top:16px;
+      display:grid;
+      gap:8px;
+    }
+    .step{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      align-items:center;
+      border-top:1px solid var(--line);
+      padding:14px 0;
+    }
+    .step:first-child{border-top:0}
+    .step b{
+      color:var(--red);
+      font-size:18px;
+    }
+
+    .formula{
+      display:grid;
+      grid-template-columns:1fr 50px 1fr 50px 1fr;
+      gap:12px;
+      align-items:center;
+      margin-top:22px;
+    }
+    .formula-box{
+      border:1px solid var(--line);
+      padding:22px;
+      min-height:130px;
+      background:#f0e9dd;
+    }
+    .formula-box:nth-child(3){background:#e2e9e3}
+    .formula-box:nth-child(5){background:#eee4d4}
+    .arrow{
+      text-align:center;
+      font-size:28px;
+      color:var(--muted);
+    }
+
+    .practice{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:16px;
+    }
+    .practice .p{
+      padding:18px;
+      border:1px solid var(--line);
+      min-height:170px;
+      background:#f2ece2;
+    }
+    .practice .p b{display:block;font-size:20px;margin:6px 0}
+    .practice .p span{color:var(--muted);font-size:14px}
+
+    .footer{
+      margin-top:18px;
+      padding:30px 34px;
+      background:var(--dark);
+      color:#f7f2e8;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .footer strong{font-size:28px}
+    .footer span{color:#c8c5bf}
+
+    @media(max-width:980px){
+      .cover{grid-template-columns:1fr}
+      .cover-side{min-height:auto}
+      .span-4,.span-5,.span-6,.span-7,.span-8,.span-12{grid-column:span 12}
+      .practice,.brain,.formula{grid-template-columns:1fr}
+      .arrow{transform:rotate(90deg)}
+      .big-idea{grid-template-columns:1fr}
+      .footer{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <section class="cover">
+      <div class="cover-main">
+        <div class="issue">COGNITIVE AWAKENING · SPECIAL ISSUE</div>
+        <h1>认知<br>觉醒</h1>
+        <div class="deck">
+          真正的成长，不只是“知道更多”，而是逐渐拥有
+          <strong>看见自己、理解自己、改变自己</strong>的能力。
+        </div>
+
+        <div class="big-idea">
+          <div class="num">01</div>
+          <div>
+            <b>觉醒的第一步，是从“自动驾驶”中醒来。</b>
+            <p>看见注意力如何被占用、情绪如何影响判断、习惯如何塑造每天的选择，才有机会重新获得主动权。</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="cover-side">
+        <div class="side-block red">
+          <h3>核心命题</h3>
+          <strong>人与人的差距，常常来自认知方式，而不仅仅是努力程度。</strong>
+        </div>
+        <div class="side-block green">
+          <h3>成长路径</h3>
+          <strong>觉察 → 理解 → 选择 → 行动 → 反馈</strong>
+        </div>
+        <div class="side-block gold">
+          <h3>最终目标</h3>
+          <strong>让大脑、情绪与行动形成更稳定的协同。</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+
+      <article class="card span-5">
+        <div class="label">01 · self-awareness</div>
+        <h2>认知觉醒，先从看见自己开始</h2>
+        <div class="awakening">
+          <div class="row"><div class="index">A</div><div><b>看见注意力</b><small>你每天真正把精力花在了哪里？</small></div></div>
+          <div class="row"><div class="index">B</div><div><b>看见情绪</b><small>情绪不是敌人，而是信息。</small></div></div>
+          <div class="row"><div class="index">C</div><div><b>看见惯性</b><small>很多行为并非选择，而是未经思考的自动反应。</small></div></div>
+          <div class="row"><div class="index">D</div><div><b>看见局限</b><small>真正的改变，往往始于承认自己的盲区。</small></div></div>
+        </div>
+      </article>
+
+      <article class="card span-7">
+        <div class="label">02 · brain mechanism</div>
+        <h2>理解大脑：为什么“明白了”却依然做不到？</h2>
+        <p>成长的难点，常常不是缺少知识，而是旧有习惯、即时满足与情绪系统依旧更强。</p>
+        <div class="brain">
+          <div class="unit"><h3>即时满足</h3><p>大脑天然偏好更快、更轻松、更确定的奖励。</p></div>
+          <div class="unit"><h3>延迟满足</h3><p>长期目标需要主动对抗眼前诱惑。</p></div>
+          <div class="unit"><h3>情绪驱动</h3><p>疲惫、焦虑、挫败会显著影响判断与执行。</p></div>
+          <div class="unit"><h3>理性调节</h3><p>通过觉察、计划和环境设计，为正确选择降低阻力。</p></div>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <div class="label">03 · attention</div>
+        <h2>注意力，是认知成长的第一资源</h2>
+        <p class="quote">你关注什么，什么就在塑造你。</p>
+        <p>碎片化信息不断切换，会让人产生“很忙”的感觉，却削弱深度思考与真正的掌控感。</p>
+      </article>
+
+      <article class="card span-8">
+        <div class="label">04 · growth ladder</div>
+        <h2>从模糊到清醒：一个人的认知升级阶梯</h2>
+        <div class="ladder">
+          <div class="step"><b>觉察</b><span>发现自己正在重复什么、逃避什么、消耗什么。</span></div>
+          <div class="step"><b>理解</b><span>理解行为背后的动机、情绪、需求与环境因素。</span></div>
+          <div class="step"><b>选择</b><span>不再只靠本能反应，而是主动决定下一步。</span></div>
+          <div class="step"><b>行动</b><span>把抽象认知转化为具体、可执行的小动作。</span></div>
+          <div class="step"><b>反馈</b><span>通过结果反向修正认知，让系统越来越成熟。</span></div>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <div class="label">05 · transformation formula</div>
+        <h2>真正有效的成长公式</h2>
+        <div class="formula">
+          <div class="formula-box">
+            <h3>认知</h3>
+            <p>理解规律，看见问题，重新解释发生的一切。</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="formula-box">
+            <h3>行动</h3>
+            <p>把认知转成一个足够小、足够具体的行为。</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="formula-box">
+            <h3>反馈</h3>
+            <p>从结果中修正判断，形成新的认知与行为模式。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="label">06 · emotional system</div>
+        <h2>情绪不是问题，失去觉察才是</h2>
+        <p>焦虑、拖延、逃避、冲动，很多时候都不是单纯的意志力问题，而是内部系统在发出信号。</p>
+        <div class="awakening">
+          <div class="row"><div class="index">1</div><div><b>先命名</b><small>我现在到底是什么感受？</small></div></div>
+          <div class="row"><div class="index">2</div><div><b>再理解</b><small>这个情绪在提醒我什么？</small></div></div>
+          <div class="row"><div class="index">3</div><div><b>后选择</b><small>什么行动对长期目标更有利？</small></div></div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <div class="label">07 · practice</div>
+        <h2>把认知觉醒落到每天</h2>
+        <div class="practice">
+          <div class="p"><div class="label">01</div><b>每天留白</b><span>给大脑一点没有输入的时间。</span></div>
+          <div class="p"><div class="label">02</div><b>记录触发点</b><span>观察情绪、拖延和分心发生的时刻。</span></div>
+          <div class="p"><div class="label">03</div><b>做最小行动</b><span>不要等状态完美，先推动一点点。</span></div>
+          <div class="p"><div class="label">04</div><b>持续复盘</b><span>记录什么有效、什么无效，以及为什么。</span></div>
+        </div>
+      </article>
+
+      <article class="card span-5">
+        <div class="label">08 · cognitive shift</div>
+        <h2>低水平努力 vs 高质量成长</h2>
+        <div class="awakening">
+          <div class="row"><div class="index">×</div><div><b>只追求忙碌</b><small>用投入时间制造安全感。</small></div></div>
+          <div class="row"><div class="index">×</div><div><b>只收集知识</b><small>知道很多，却没有改变行为。</small></div></div>
+          <div class="row"><div class="index">✓</div><div><b>持续行动</b><small>让认知在真实世界中接受检验。</small></div></div>
+          <div class="row"><div class="index">✓</div><div><b>持续修正</b><small>不断重构自己的理解框架。</small></div></div>
+        </div>
+      </article>
+
+      <article class="card span-7">
+        <div class="label">09 · final idea</div>
+        <h2>真正的觉醒，不是突然想明白，而是逐渐活明白</h2>
+        <p class="quote">知道自己为什么这样想，为什么这样做，以及下一步要怎么选。</p>
+        <p>当一个人越来越能看见自己的注意力、情绪、行为与长期目标之间的关系，他就开始从被动反应，走向主动塑造。</p>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <strong>认知决定选择，选择塑造行动，行动最终塑造人生。</strong>
+      <span>认知觉醒 · 编辑特刊版</span>
+    </footer>
+
+  </main>
+</body>
+</html>

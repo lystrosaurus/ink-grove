@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>思维模型｜The Great Mental Models</title>
+<style>
+:root{
+  --bg:#0f1418; --panel:#151c22; --panel2:#1b242c; --line:#2b3944;
+  --text:#edf3f5; --muted:#94a3ad; --cyan:#61d0c7; --amber:#f0b35b;
+  --coral:#ee7b69; --blue:#6c91d8; --lime:#9cc56b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 5%,rgba(97,208,199,.08),transparent 22%),
+    radial-gradient(circle at 90% 10%,rgba(240,179,91,.07),transparent 24%),
+    var(--bg);
+  color:var(--text);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.65;
+}
+.page{width:min(1450px,95vw);margin:24px auto 60px}
+.sheet{border:1px solid var(--line);border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#12181d,#10161a);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.hero{min-height:590px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:48px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.18em}
+h1{font-size:clamp(64px,9vw,118px);line-height:.92;letter-spacing:-.06em;margin:18px 0 12px}
+.english{font-size:18px;letter-spacing:.16em;color:#a7b6c0}
+.author{margin-top:8px;color:var(--muted);font-size:14px}
+.lead{max-width:780px;margin-top:34px;font-size:24px;line-height:1.55}
+.lead strong{color:var(--amber)}
+.thesis{margin-top:28px;padding:18px 20px;border-left:4px solid var(--cyan);background:#141d22;max-width:760px;color:#d8e1e6}
+.thesis span{color:var(--muted)}
+.console{border:1px solid var(--line);border-radius:22px;background:#11181d;padding:24px;align-self:center}
+.console-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.console-head b{font-size:18px}.console-head span{font-size:11px;color:var(--muted);letter-spacing:.12em}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tool{min-height:110px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.tool .id{font-size:10px;color:var(--cyan);letter-spacing:.12em;font-weight:800}
+.tool b{display:block;margin:7px 0 5px;font-size:15px}.tool span{font-size:11px;color:var(--muted)}
+.tool:nth-child(2n) .id{color:var(--amber)} .tool:nth-child(3n) .id{color:var(--coral)}
+.section{padding:42px 46px;border-bottom:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:22px}
+.section-head h2{margin:4px 0 0;font-size:34px}.section-head p{margin:0;max-width:650px;color:var(--muted)}
+.chapter{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--cyan)}
+.foundation{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.big-card,.card,.model,.workflow,.lens{border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+.big-card{padding:28px}.big-card h3{margin:0 0 12px;font-size:24px}.big-card p{color:var(--muted)}
+.formula{margin-top:20px;display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:center}
+.formula-box{padding:18px;border-radius:15px;border:1px solid var(--line);background:var(--panel2);text-align:center}
+.formula-box b{display:block}.formula-box span{font-size:12px;color:var(--muted)}.arrow{text-align:center;color:var(--amber);font-size:24px}
+.card{padding:28px;background:linear-gradient(145deg,#172127,#12181d)}
+.card .quote{font-size:28px;line-height:1.45;margin:8px 0 16px}.card .quote strong{color:var(--cyan)}.card p{color:var(--muted)}
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.model{padding:22px;min-height:250px;position:relative;overflow:hidden}
+.model:before{content:attr(data-id);position:absolute;right:14px;top:2px;font-size:64px;font-weight:900;color:rgba(255,255,255,.035)}
+.model .tag{font-size:10px;letter-spacing:.13em;font-weight:800;color:var(--cyan)}
+.model:nth-child(2n) .tag{color:var(--amber)} .model:nth-child(3n) .tag{color:var(--coral)}
+.model h3{font-size:21px;margin:10px 0 8px}.model p{color:var(--muted);font-size:13px}
+.model .ask{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);color:#c7d2d8;font-size:12px}
+.support{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lens{padding:22px;min-height:190px}.lens h3{margin:0 0 8px;font-size:20px}.lens p{margin:0;color:var(--muted);font-size:13px}
+.lens .icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;background:#1f2b32;color:var(--cyan);font-weight:800}
+.workflow{padding:24px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.step{min-height:150px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#11181d}
+.step .n{font-size:10px;letter-spacing:.12em;color:var(--amber);font-weight:800}
+.step b{display:block;font-size:18px;margin:9px 0}.step span{font-size:12px;color:var(--muted)}
+.matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.matrix-item{padding:20px;border:1px solid var(--line);border-radius:17px;background:var(--panel)}
+.matrix-item b{display:block;font-size:18px;margin-bottom:6px}.matrix-item span{font-size:13px;color:var(--muted)}
+.matrix-item:nth-child(1){border-top:5px solid var(--cyan)} .matrix-item:nth-child(2){border-top:5px solid var(--blue)}
+.matrix-item:nth-child(3){border-top:5px solid var(--amber)} .matrix-item:nth-child(4){border-top:5px solid var(--coral)}
+.practice{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.practice-panel{padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+.practice-panel h3{margin:0 0 12px}
+.check{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+.check:first-child{border-top:0}.check i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:#1c292f;color:var(--cyan);font-style:normal;font-weight:800}
+.check b{display:block}.check span{font-size:12px;color:var(--muted)}
+.final{padding:44px 46px;display:grid;grid-template-columns:1.15fr .85fr;gap:18px;background:linear-gradient(135deg,#182127,#11171b)}
+.final-quote{font-size:32px;line-height:1.5;border-left:5px solid var(--amber);padding-left:24px}.final-quote strong{color:var(--amber)}
+.final-side{padding:22px;border:1px solid var(--line);border-radius:18px;background:#151c22}.final-side b{font-size:19px}.final-side p{color:var(--muted);margin-bottom:0}
+.footer{padding:20px 46px;background:#0a0f12;color:#a9b6bd;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}
+.footer strong{color:white}
+@media(max-width:1050px){
+  .hero,.foundation,.practice,.final{grid-template-columns:1fr}
+  .models{grid-template-columns:1fr 1fr}.support,.matrix{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .hero,.section{padding:28px 22px}.section-head{flex-direction:column;align-items:flex-start}
+  .grid9,.models,.support,.matrix{grid-template-columns:1fr}.formula{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}
+  .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">BOOK ARTIFACT · DECISION LAB</div>
+    <h1>思维模型</h1>
+    <div class="english">THE GREAT MENTAL MODELS · VOLUME 1</div>
+    <div class="author">Shane Parrish · Rhiannon Beaubien</div>
+
+    <div class="lead">
+      真正好的思考，不是记住更多答案，而是拥有更多<strong>看问题的方式</strong>。
+      思维模型的价值，在于帮你减少盲点、跨学科理解现实，并在复杂情境中做出更好的判断。
+    </div>
+
+    <div class="thesis">
+      <b>一个模型不是现实本身，它只是观察现实的一种透镜。</b>
+      <span>高质量判断往往来自“多模型并用”，而不是把所有问题都塞进一个熟悉框架。</span>
+    </div>
+  </div>
+
+  <div class="console">
+    <div class="console-head">
+      <b>MENTAL TOOLKIT</b>
+      <span>9 GENERAL THINKING MODELS</span>
+    </div>
+    <div class="grid9">
+      <div class="tool"><div class="id">01</div><b>地图不等于疆域</b><span>模型 ≠ 现实</span></div>
+      <div class="tool"><div class="id">02</div><b>能力圈</b><span>知道自己真正懂什么</span></div>
+      <div class="tool"><div class="id">03</div><b>第一性原理</b><span>回到底层事实</span></div>
+      <div class="tool"><div class="id">04</div><b>思想实验</b><span>在脑中测试世界</span></div>
+      <div class="tool"><div class="id">05</div><b>二阶思考</b><span>然后会发生什么？</span></div>
+      <div class="tool"><div class="id">06</div><b>概率思维</b><span>用可能性代替确定性</span></div>
+      <div class="tool"><div class="id">07</div><b>逆向思考</b><span>从失败倒推</span></div>
+      <div class="tool"><div class="id">08</div><b>奥卡姆剃刀</b><span>优先简单解释</span></div>
+      <div class="tool"><div class="id">09</div><b>汉隆剃刀</b><span>别急着归因恶意</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">01 · WHAT IS A MENTAL MODEL?</div><h2>思维模型，是大脑理解世界的“压缩算法”</h2></div>
+    <p>现实无限复杂，模型帮助我们抽取关键关系。问题不在于“要不要用模型”，而在于你是否意识到自己正在用什么模型。</p>
+  </div>
+
+  <div class="foundation">
+    <div class="big-card">
+      <h3>从现实，到判断，再到行动</h3>
+      <p>每一次决策，都经过一层看不见的认知过滤。</p>
+      <div class="formula">
+        <div class="formula-box"><b>Reality</b><span>真实世界</span></div><div class="arrow">→</div>
+        <div class="formula-box"><b>Model</b><span>你的解释框架</span></div><div class="arrow">→</div>
+        <div class="formula-box"><b>Decision</b><span>你的选择</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="quote">真正危险的不是没有模型，而是<strong>只有一个模型</strong>。</div>
+      <p>当一个人只掌握一种解释工具时，所有问题都容易被看成同一种问题。更强的思考来自“模型网络”，而不是单一框架。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">02 · THE NINE MODELS</div><h2>九个通用模型，九种不同的看法</h2></div>
+    <p>这些模型不是答案，而是帮助你提出更好问题的认知工具。</p>
+  </div>
+
+  <div class="models">
+    <div class="model" data-id="01"><div class="tag">THE MAP IS NOT THE TERRITORY</div><h3>地图不等于疆域</h3><p>任何模型、指标、报告、标签都只是现实的简化版本。现实发生变化时，地图也必须更新。</p><div class="ask">问自己：我看到的是现实，还是别人画出来的地图？</div></div>
+    <div class="model" data-id="02"><div class="tag">CIRCLE OF COMPETENCE</div><h3>能力圈</h3><p>优势不仅来自知道得多，更来自清楚知道自己真正理解到哪里，以及边界在哪里。</p><div class="ask">问自己：这是我真正理解的问题，还是我只是听说过？</div></div>
+    <div class="model" data-id="03"><div class="tag">FIRST PRINCIPLES</div><h3>第一性原理</h3><p>把问题拆回不能再拆的基本事实，区分事实、假设、惯例和历史遗留，再从底层重新构建。</p><div class="ask">问自己：如果不能引用“大家都这样做”，还剩下什么是真的？</div></div>
+    <div class="model" data-id="04"><div class="tag">THOUGHT EXPERIMENT</div><h3>思想实验</h3><p>在现实成本太高、条件不允许或无法重复时，先在头脑里改变变量、推演极端情境。</p><div class="ask">问自己：如果把这个条件拿掉，世界会怎样？</div></div>
+    <div class="model" data-id="05"><div class="tag">SECOND-ORDER THINKING</div><h3>二阶思考</h3><p>不要停在第一层结果。真正重要的影响，常常来自“结果之后的结果”。</p><div class="ask">问自己：然后呢？再然后呢？</div></div>
+    <div class="model" data-id="06"><div class="tag">PROBABILISTIC THINKING</div><h3>概率思维</h3><p>现实充满不确定性。更好的决策不是假装确定，而是比较可能性、基础概率和证据强度。</p><div class="ask">问自己：我有多大把握？什么证据会改变这个概率？</div></div>
+    <div class="model" data-id="07"><div class="tag">INVERSION</div><h3>逆向思考</h3><p>有时“如何成功”很难回答，但“怎样一定会失败”却很清楚。先避免愚蠢，再追求卓越。</p><div class="ask">问自己：如果我想把这件事彻底搞砸，我会怎么做？</div></div>
+    <div class="model" data-id="08"><div class="tag">OCCAM'S RAZOR</div><h3>奥卡姆剃刀</h3><p>在多个同样能够解释事实的假设中，优先考虑需要更少额外假设的那一个。</p><div class="ask">问自己：是否有一个更简单、却同样解释得通的答案？</div></div>
+    <div class="model" data-id="09"><div class="tag">HANLON'S RAZOR</div><h3>汉隆剃刀</h3><p>面对糟糕结果，不要第一时间假定恶意；疏忽、信息不足、能力不足往往是更常见解释。</p><div class="ask">问自己：这真的需要“恶意”才能解释吗？</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">03 · SUPPORTING LENSES</div><h2>模型旁边，还有三副重要的“校准镜片”</h2></div>
+    <p>书中还穿插了若干支撑概念，用来帮助你检验模型、区分因果，并判断条件关系。</p>
+  </div>
+  <div class="support">
+    <div class="lens"><div class="icon">F</div><h3>可证伪性</h3><p>一个判断如果无论发生什么都能被解释为正确，就很难真正接受现实检验。好的模型应该允许自己被证明是错的。</p></div>
+    <div class="lens"><div class="icon">N/S</div><h3>必要条件 vs 充分条件</h3><p>“没有它不行”不等于“有它就一定行”。混淆必要和充分，是很多错误推理的来源。</p></div>
+    <div class="lens"><div class="icon">≠</div><h3>相关 ≠ 因果</h3><p>两个现象一起出现，并不能自动证明其中一个造成另一个。第三变量、反向因果都可能存在。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">04 · DECISION WORKFLOW</div><h2>把模型真正用起来：一套决策流程</h2></div>
+    <p>模型的价值不在背诵，而在关键时刻帮助你改变提问方式。</p>
+  </div>
+  <div class="workflow">
+    <div class="flow">
+      <div class="step"><div class="n">STEP 01</div><b>定义现实</b><span>区分事实、解释与假设。</span></div>
+      <div class="step"><div class="n">STEP 02</div><b>选择模型</b><span>至少尝试两到三个不同视角。</span></div>
+      <div class="step"><div class="n">STEP 03</div><b>推演后果</b><span>看二阶效应、概率与极端情形。</span></div>
+      <div class="step"><div class="n">STEP 04</div><b>逆向检查</b><span>问怎样会失败，找出可避免风险。</span></div>
+      <div class="step"><div class="n">STEP 05</div><b>更新地图</b><span>让结果反过来修正你的模型。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">05 · WHICH MODEL WHEN?</div><h2>遇到不同问题，先换不同镜头</h2></div>
+    <p>思维模型真正强大的地方，是帮助你在问题发生时迅速切换认知视角。</p>
+  </div>
+  <div class="matrix">
+    <div class="matrix-item"><b>信息可能失真</b><span>地图不等于疆域 · 可证伪性</span></div>
+    <div class="matrix-item"><b>问题过于复杂</b><span>第一性原理 · 奥卡姆剃刀</span></div>
+    <div class="matrix-item"><b>结果充满不确定</b><span>概率思维 · 思想实验</span></div>
+    <div class="matrix-item"><b>决策影响很长远</b><span>二阶思考 · 逆向思考</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="chapter">06 · DAILY PRACTICE</div><h2>真正建立“模型网络”，需要刻意使用</h2></div>
+    <p>读懂模型只是第一步。只有反复应用、犯错、修正，它们才会从概念变成判断习惯。</p>
+  </div>
+
+  <div class="practice">
+    <div class="practice-panel">
+      <h3>决策前 · 5 问</h3>
+      <div class="check"><i>1</i><div><b>我现在把什么当成了事实？</b><span>地图还是现实？</span></div></div>
+      <div class="check"><i>2</i><div><b>这件事在我的能力圈内吗？</b><span>哪里是我不知道自己不知道的？</span></div></div>
+      <div class="check"><i>3</i><div><b>还有什么不同模型可以解释？</b><span>至少换一个视角。</span></div></div>
+      <div class="check"><i>4</i><div><b>然后会发生什么？</b><span>至少看一层二阶结果。</span></div></div>
+      <div class="check"><i>5</i><div><b>怎样最容易失败？</b><span>先避开明显的灾难路径。</span></div></div>
+    </div>
+
+    <div class="practice-panel">
+      <h3>决策后 · 4 复盘</h3>
+      <div class="check"><i>A</i><div><b>结果和预测差在哪里？</b><span>不要只看结果好坏，看预测误差。</span></div></div>
+      <div class="check"><i>B</i><div><b>哪个假设错了？</b><span>找到模型与现实不一致的位置。</span></div></div>
+      <div class="check"><i>C</i><div><b>是否混淆了相关与因果？</b><span>重新检查解释链条。</span></div></div>
+      <div class="check"><i>D</i><div><b>我的地图需要怎样更新？</b><span>让经验沉淀成更好的下一次判断。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-quote">
+    更好的思考，不是找到一个万能模型，<br>
+    而是建立一张<strong>彼此校验、不断更新的模型网络</strong>。
+  </div>
+  <div class="final-side">
+    <b>如果只带走一个习惯：</b>
+    <p>下一次遇到重要问题时，不要急着问“答案是什么”，先问：<strong>“还有哪一种模型，可以让我重新看这件事？”</strong></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>The Great Mental Models · Volume 1 · Shane Parrish & Rhiannon Beaubien</strong>
+  <span>Map · Competence · First Principles · Thought Experiment · Second Order · Probability · Inversion · Occam · Hanlon</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

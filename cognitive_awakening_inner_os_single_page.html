@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>认知觉醒｜内在操作系统</title>
+<style>
+:root{
+  --bg:#f2f5f1;
+  --paper:#fbfcf9;
+  --ink:#20302a;
+  --muted:#6d7b74;
+  --line:#d8e0da;
+  --mint:#7fa294;
+  --mint2:#dce9e3;
+  --teal:#4d7c73;
+  --blue:#7f9fb3;
+  --blue2:#e1ebf1;
+  --amber:#c6a15f;
+  --amber2:#f1e8d6;
+  --coral:#c97866;
+  --coral2:#f3e2dd;
+  --lav:#9a90b5;
+  --lav2:#eae6f1;
+  --dark:#22332d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 4%,rgba(127,162,148,.11),transparent 26%),
+    radial-gradient(circle at 90% 10%,rgba(154,144,181,.09),transparent 22%),
+    var(--bg);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.68;
+}
+.page{width:min(1420px,95vw);margin:24px auto 60px}
+.sheet{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 24px 70px rgba(40,60,50,.10);
+}
+.hero{
+  min-height:610px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:36px;
+  padding:52px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  color:var(--teal);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+h1{
+  margin:18px 0 10px;
+  font-size:clamp(66px,9vw,118px);
+  line-height:.92;
+  letter-spacing:-.06em;
+}
+.subtitle{
+  font-size:18px;
+  color:#6d7d75;
+  letter-spacing:.08em;
+}
+.author{margin-top:8px;color:var(--muted);font-size:14px}
+.lead{
+  margin-top:34px;
+  max-width:760px;
+  font-size:24px;
+  line-height:1.58;
+}
+.lead strong{color:var(--teal)}
+.thesis{
+  margin-top:28px;
+  padding:18px 20px;
+  border-left:5px solid var(--teal);
+  background:#f1f6f3;
+}
+.thesis b{display:block;margin-bottom:6px}
+.thesis span{color:var(--muted)}
+
+.inner-os{
+  align-self:center;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:white;
+  padding:26px;
+}
+.os-head{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  margin-bottom:18px;
+}
+.os-head b{font-size:18px}
+.os-head span{font-size:10px;color:var(--muted);letter-spacing:.14em}
+.ring{
+  width:min(440px,92%);
+  aspect-ratio:1;
+  margin:auto;
+  position:relative;
+  border-radius:50%;
+  border:1px dashed #b9c9c0;
+  background:
+    radial-gradient(circle,rgba(220,233,227,.55) 0 24%,transparent 25%),
+    radial-gradient(circle,transparent 0 51%,rgba(127,162,148,.08) 52% 64%,transparent 65%);
+}
+.center{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:140px;height:140px;border-radius:50%;
+  display:grid;place-items:center;text-align:center;
+  background:var(--dark);color:white;padding:18px;
+}
+.center b{font-size:23px}
+.center span{font-size:11px;color:#d4dfd9}
+.node{
+  position:absolute;
+  width:106px;height:106px;border-radius:50%;
+  display:grid;place-items:center;text-align:center;
+  background:#fff;border:1px solid var(--line);padding:12px;
+  box-shadow:0 9px 24px rgba(40,60,50,.06)
+}
+.node b{font-size:15px}.node small{color:var(--muted)}
+.n1{top:-10px;left:50%;transform:translateX(-50%)}
+.n2{right:-12px;top:34%}
+.n3{right:11%;bottom:-16px}
+.n4{left:11%;bottom:-16px}
+.n5{left:-12px;top:34%}
+
+.section{padding:42px 46px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:22px
+}
+.section-head h2{margin:4px 0 0;font-size:34px}
+.section-head p{margin:0;max-width:660px;color:var(--muted)}
+.chapter{color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.16em}
+
+.brain-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px
+}
+.brain-card{
+  padding:22px;border:1px solid var(--line);border-radius:20px;background:white;min-height:220px
+}
+.brain-card:nth-child(1){border-top:6px solid var(--coral)}
+.brain-card:nth-child(2){border-top:6px solid var(--amber)}
+.brain-card:nth-child(3){border-top:6px solid var(--blue)}
+.brain-card .tag{font-size:10px;letter-spacing:.13em;font-weight:800;color:var(--muted)}
+.brain-card h3{font-size:22px;margin:10px 0 8px}
+.brain-card p{color:var(--muted);font-size:13px}
+.brain-card .signal{
+  margin-top:14px;padding-top:11px;border-top:1px dashed var(--line);font-size:12px;color:#46574f
+}
+
+.loop{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px
+}
+.step{
+  min-height:150px;padding:18px;border-radius:18px;border:1px solid var(--line);background:white
+}
+.step .n{font-size:10px;color:var(--teal);font-weight:800;letter-spacing:.13em}
+.step b{display:block;font-size:18px;margin:8px 0}
+.step span{font-size:12px;color:var(--muted)}
+
+.clear{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px
+}
+.card{
+  padding:26px;border:1px solid var(--line);border-radius:20px;background:white
+}
+.card h3{margin:0 0 10px;font-size:22px}
+.card p{color:var(--muted)}
+.card .quote{
+  font-size:28px;line-height:1.48;margin:8px 0 16px
+}
+.card .quote strong{color:var(--coral)}
+.list{display:grid;gap:10px;margin-top:14px}
+.item{
+  display:grid;grid-template-columns:32px 1fr;gap:10px;padding-top:10px;border-top:1px dashed var(--line)
+}
+.item:first-child{border-top:0}
+.ico{
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  background:var(--mint2);color:var(--teal);font-weight:800
+}
+.item b{display:block}
+.item span{font-size:12px;color:var(--muted)}
+
+.focus{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.focus-card{
+  padding:20px;border-radius:18px;border:1px solid var(--line);background:white;min-height:190px
+}
+.focus-card .tag{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--lav)}
+.focus-card h3{font-size:19px;margin:8px 0}
+.focus-card p{font-size:13px;color:var(--muted)}
+.focus-card:nth-child(1){background:linear-gradient(180deg,var(--mint2),white 58%)}
+.focus-card:nth-child(2){background:linear-gradient(180deg,var(--blue2),white 58%)}
+.focus-card:nth-child(3){background:linear-gradient(180deg,var(--amber2),white 58%)}
+.focus-card:nth-child(4){background:linear-gradient(180deg,var(--lav2),white 58%)}
+
+.learning{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.learn{
+  padding:20px;border:1px solid var(--line);border-radius:18px;background:white;min-height:205px
+}
+.learn .num{font-size:11px;font-weight:800;color:var(--teal);letter-spacing:.12em}
+.learn h3{font-size:19px;margin:8px 0}
+.learn p{font-size:13px;color:var(--muted)}
+.learn .use{padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:#51625a}
+
+.action{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px
+}
+.action-map{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:white
+}
+.action-flow{
+  display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:center;margin-top:16px
+}
+.action-box{
+  padding:18px;border:1px solid var(--line);border-radius:15px;text-align:center;background:#f7faf8
+}
+.action-box b{display:block}
+.action-box span{font-size:12px;color:var(--muted)}
+.arrow{text-align:center;font-size:24px;color:var(--coral)}
+.daily{
+  padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#eef6f2,#fff)
+}
+.daily h3{margin-top:0}
+.daily p{color:var(--muted)}
+.daily ul{padding-left:20px;color:var(--muted);font-size:13px}
+
+.questions{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+}
+.q{
+  padding:20px;border:1px solid var(--line);border-radius:18px;background:white;min-height:175px
+}
+.q .id{font-size:10px;color:var(--teal);font-weight:800;letter-spacing:.13em}
+.q h3{font-size:18px;margin:8px 0}
+.q p{font-size:13px;color:var(--muted);margin:0}
+
+.final{
+  padding:44px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+  background:linear-gradient(135deg,#e6f0eb,#eee9f3)
+}
+.final-quote{
+  border-left:5px solid var(--teal);padding-left:24px;font-size:32px;line-height:1.52
+}
+.final-quote strong{color:var(--teal)}
+.final-side{
+  padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.75)
+}
+.final-side b{font-size:19px}
+.final-side p{color:var(--muted);margin-bottom:0}
+.footer{
+  padding:20px 46px;background:var(--dark);color:#c4d0ca;
+  display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px
+}
+.footer strong{color:white}
+
+@media(max-width:1050px){
+  .hero,.clear,.action,.final{grid-template-columns:1fr}
+  .brain-grid,.focus,.learning,.questions{grid-template-columns:1fr 1fr}
+  .loop{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .hero,.section{padding:28px 22px}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .brain-grid,.focus,.learning,.questions{grid-template-columns:1fr}
+  .action-flow{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">BOOK ARTIFACT · INNER OPERATING SYSTEM</div>
+    <h1>认知觉醒</h1>
+    <div class="subtitle">开启自我改变的原动力</div>
+    <div class="author">周岭</div>
+
+    <div class="lead">
+      成长的起点，不是逼自己更自律，而是<strong>先看见自己为什么总被本能、情绪和模糊感牵着走</strong>。
+      当认知开始变清晰，行动才会逐渐变坚定。
+    </div>
+
+    <div class="thesis">
+      <b>所谓觉醒，是从“被大脑推着走”，转向“能看见、能选择、能调节”。</b>
+      <span>这本书从大脑、潜意识、元认知、专注力与学习力展开，试图解释：为什么我们明明知道，却总是做不到。</span>
+    </div>
+  </div>
+
+  <div class="inner-os">
+    <div class="os-head">
+      <b>INNER OS</b>
+      <span>FROM REACTION TO AWARENESS</span>
+    </div>
+    <div class="ring">
+      <div class="center"><div><b>觉醒</b><span>See · Choose · Act</span></div></div>
+      <div class="node n1"><div><b>元认知</b><small>看见思维</small></div></div>
+      <div class="node n2"><div><b>专注</b><small>管理注意力</small></div></div>
+      <div class="node n3"><div><b>学习</b><small>建立连接</small></div></div>
+      <div class="node n4"><div><b>行动</b><small>清晰推进</small></div></div>
+      <div class="node n5"><div><b>情绪</b><small>理解信号</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">01 · KNOW YOUR BRAIN</div>
+      <h2>先认识大脑：为什么我们总是急于求成、避难趋易？</h2>
+    </div>
+    <p>书中从“大脑”切入，强调人的行为并非完全由理性决定。理解本能、情绪与理性之间的拉扯，是自我改变的起点。citeturn706987search0turn706987search2</p>
+  </div>
+
+  <div class="brain-grid">
+    <div class="brain-card">
+      <div class="tag">INSTINCT</div>
+      <h3>本能倾向</h3>
+      <p>偏好即时满足、趋利避害、节省能量。它让人天然喜欢轻松、确定、马上有回报的事情。</p>
+      <div class="signal">表现：拖延、刷手机、回避困难。</div>
+    </div>
+    <div class="brain-card">
+      <div class="tag">EMOTION</div>
+      <h3>情绪系统</h3>
+      <p>很多决定先被情绪推动，再由理性补上解释。焦虑、恐惧和兴奋都会改变注意力与行动。</p>
+      <div class="signal">表现：情绪化判断、冲动、内耗。</div>
+    </div>
+    <div class="brain-card">
+      <div class="tag">REASON</div>
+      <h3>理性调节</h3>
+      <p>真正的成长不是消灭本能与情绪，而是让理性逐渐获得观察、调节和重新选择的能力。</p>
+      <div class="signal">目标：成为“思维的舵手”。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">02 · THE AWAKENING LOOP</div>
+      <h2>从自动反应到主动选择：觉醒的基本闭环</h2>
+    </div>
+    <p>认知改变并不是一次性的“想明白”，而是不断觉察、命名、选择、行动和反馈的循环。</p>
+  </div>
+
+  <div class="loop">
+    <div class="step"><div class="n">STEP 01</div><b>觉察</b><span>我现在被什么情绪和惯性推动？</span></div>
+    <div class="step"><div class="n">STEP 02</div><b>看清</b><span>真正的问题是什么？哪里仍然模糊？</span></div>
+    <div class="step"><div class="n">STEP 03</div><b>选择</b><span>什么行动更符合长期目标？</span></div>
+    <div class="step"><div class="n">STEP 04</div><b>行动</b><span>把目标缩小到可以立即执行。</span></div>
+    <div class="step"><div class="n">STEP 05</div><b>反馈</b><span>结果告诉我哪里需要修正？</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">03 · CLARITY</div>
+      <h2>很多焦虑，本质上来自“模糊”</h2>
+    </div>
+    <p>书中把“模糊”放在潜意识部分重点讨论，并强调成长往往是不断消除认知、情绪和行动模糊的过程。citeturn706987search0turn706987search5</p>
+  </div>
+
+  <div class="clear">
+    <div class="card">
+      <div class="quote">模糊让人焦虑，<strong>清晰让人获得控制感。</strong></div>
+      <p>当问题说不清、目标说不清、下一步也说不清时，大脑只能用情绪替代判断。</p>
+    </div>
+    <div class="card">
+      <h3>消除模糊，可以从三层开始</h3>
+      <div class="list">
+        <div class="item"><div class="ico">1</div><div><b>认知清晰</b><span>我到底在解决什么问题？</span></div></div>
+        <div class="item"><div class="ico">2</div><div><b>情绪清晰</b><span>我现在具体是什么感受？它来自什么？</span></div></div>
+        <div class="item"><div class="ico">3</div><div><b>行动清晰</b><span>下一步最小、最具体的动作是什么？</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">04 · METACOGNITION & FOCUS</div>
+      <h2>元认知：从“正在想”升级到“看见自己正在想”</h2>
+    </div>
+    <p>目录把元认知称为“人类的终极能力”，并把专注力放在情绪与智慧的交叉地带。citeturn706987search0turn706987search4</p>
+  </div>
+
+  <div class="focus">
+    <div class="focus-card">
+      <div class="tag">META</div>
+      <h3>元认知</h3>
+      <p>从思维中“抽离一步”，观察自己正在如何想、为什么这样想。</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">CONTROL</div>
+      <h3>自控力</h3>
+      <p>真正的自控，不只是硬撑，而是更早觉察触发点并重新设计选择。</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">ATTENTION</div>
+      <h3>情绪专注</h3>
+      <p>让注意力回到当下任务，而不是持续被焦虑、欲望和外界刺激劫持。</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">IMMERSION</div>
+      <h3>深度沉浸</h3>
+      <p>减少切换，保持长时间专注，让认知资源真正进入高质量处理状态。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">05 · LEARNING POWER</div>
+      <h2>学习不是一味努力，而是让方法匹配大脑规律</h2>
+    </div>
+    <p>书中“学习力”部分围绕匹配、深度、关联和体系展开，强调舒适区边缘、深度学习和建立知识连接。citeturn706987search0turn706987search4</p>
+  </div>
+
+  <div class="learning">
+    <div class="learn">
+      <div class="num">01 · MATCH</div>
+      <h3>舒适区边缘</h3>
+      <p>太简单没有增长，太困难容易放弃。最有效的训练通常发生在“略高于当前能力”的区域。</p>
+      <div class="use">应用：给任务增加一点难度，而不是一次跳太远。</div>
+    </div>
+    <div class="learn">
+      <div class="num">02 · DEPTH</div>
+      <h3>深度学习</h3>
+      <p>比起浅层浏览，真正理解一个概念需要投入注意力、反复加工和主动解释。</p>
+      <div class="use">应用：少一点输入，多一点消化。</div>
+    </div>
+    <div class="learn">
+      <div class="num">03 · CONNECTION</div>
+      <h3>建立关联</h3>
+      <p>高手并不只是知道更多，而是能把新知识与已有知识网络快速连接起来。</p>
+      <div class="use">应用：每学一个概念，都问“它和什么有关？”</div>
+    </div>
+    <div class="learn">
+      <div class="num">04 · SYSTEM</div>
+      <h3>形成体系</h3>
+      <p>零散知识很难调用。只有建立结构，知识才逐渐成为可迁移、可复用的认知能力。</p>
+      <div class="use">应用：从收藏知识，走向组织知识。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">06 · TURN KNOWING INTO DOING</div>
+      <h2>真正的认知升级，最终必须落到行动</h2>
+    </div>
+    <p>认知如果只停留在“我懂了”，很容易再次被旧习惯覆盖。清晰、专注、反馈与行动必须形成闭环。</p>
+  </div>
+
+  <div class="action">
+    <div class="action-map">
+      <h3 style="margin-top:0">从知道到做到</h3>
+      <div class="action-flow">
+        <div class="action-box"><b>理解规律</b><span>看见大脑与行为模式</span></div>
+        <div class="arrow">→</div>
+        <div class="action-box"><b>缩小行动</b><span>把目标变成下一步</span></div>
+        <div class="arrow">→</div>
+        <div class="action-box"><b>反馈修正</b><span>根据结果更新方法</span></div>
+      </div>
+    </div>
+    <div class="daily">
+      <h3>一个简单的每日实践</h3>
+      <ul>
+        <li>今天最值得投入注意力的一件事是什么？</li>
+        <li>我在哪一刻被情绪或惯性带走了？</li>
+        <li>今天消除了哪个模糊点？</li>
+        <li>下一次，我准备怎样做得更清晰？</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="chapter">07 · SIX QUESTIONS</div>
+      <h2>把《认知觉醒》压缩成六个随时可用的问题</h2>
+    </div>
+    <p>真正有价值的不是记住所有概念，而是在关键时刻能够重新把自己拉回清醒状态。</p>
+  </div>
+
+  <div class="questions">
+    <div class="q"><div class="id">Q1 · AWARENESS</div><h3>我现在被什么驱动？</h3><p>是长期目标，还是即时欲望、焦虑或惯性？</p></div>
+    <div class="q"><div class="id">Q2 · CLARITY</div><h3>哪里还很模糊？</h3><p>问题、情绪、目标还是下一步？</p></div>
+    <div class="q"><div class="id">Q3 · META</div><h3>我能看见自己的想法吗？</h3><p>还是已经完全被想法带走？</p></div>
+    <div class="q"><div class="id">Q4 · FOCUS</div><h3>我的注意力在哪里？</h3><p>真正重要的事情是否获得了足够的深度时间？</p></div>
+    <div class="q"><div class="id">Q5 · EDGE</div><h3>我是否在舒适区边缘？</h3><p>任务是不是既有挑战，又仍可完成？</p></div>
+    <div class="q"><div class="id">Q6 · ACTION</div><h3>下一步最小行动是什么？</h3><p>让清晰转化成一个立刻可以开始的动作。</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-quote">
+    真正的觉醒，不是突然变成另一个人，<br>
+    而是越来越能<strong>看见自己、理解自己、选择自己</strong>。
+  </div>
+  <div class="final-side">
+    <b>如果只带走一个核心：</b>
+    <p>不要把所有问题都归因于“我不够努力”。先问：<strong>我是否真正理解了自己的大脑、情绪、注意力和行动规律？</strong></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>认知觉醒 · 周岭</strong>
+  <span>大脑 · 模糊 · 元认知 · 专注力 · 学习力 · 行动力</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

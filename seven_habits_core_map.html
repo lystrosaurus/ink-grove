@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高效能人士的七个习惯｜核心知识地图</title>
+  <style>
+    :root{
+      --paper:#f4ead7;
+      --paper-2:#ead8bb;
+      --ink:#1f211d;
+      --muted:#6f675c;
+      --line:#b79c72;
+      --green:#4f6b54;
+      --green-2:#718b6f;
+      --red:#9c4d3d;
+      --gold:#b58a43;
+      --blue:#52718a;
+      --shadow:0 18px 50px rgba(60,42,20,.15);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,.75), transparent 28%),
+        linear-gradient(180deg,#efe3cf 0%,#f7efe2 48%,#ead8bd 100%);
+      line-height:1.7;
+    }
+
+    body:before{
+      content:"";
+      position:fixed; inset:0; pointer-events:none; opacity:.23;
+      background-image:
+        linear-gradient(rgba(80,60,30,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80,60,30,.03) 1px, transparent 1px);
+      background-size:24px 24px;
+      mix-blend-mode:multiply;
+    }
+
+    .page{
+      width:min(1480px,96vw);
+      margin:24px auto 60px;
+    }
+
+    .hero{
+      position:relative;
+      min-height:620px;
+      border:1px solid rgba(110,85,50,.28);
+      border-radius:28px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg,rgba(245,234,215,.7),rgba(233,215,184,.9)),
+        radial-gradient(circle at 70% 20%,rgba(210,166,89,.25),transparent 18%);
+      box-shadow:var(--shadow);
+    }
+
+    .mountains{
+      position:absolute;
+      inset:auto 0 0 0;
+      height:58%;
+      background:
+        linear-gradient(155deg,transparent 0 35%,rgba(70,88,71,.18) 35% 48%,transparent 48%),
+        linear-gradient(205deg,transparent 0 37%,rgba(64,78,67,.13) 37% 55%,transparent 55%);
+      clip-path:polygon(0 68%,12% 58%,21% 70%,33% 42%,42% 62%,52% 28%,61% 64%,71% 36%,82% 67%,93% 46%,100% 62%,100% 100%,0 100%);
+      background-color:#8fa290;
+      opacity:.45;
+    }
+
+    .sun{
+      position:absolute;
+      width:140px;height:140px;border-radius:50%;
+      background:radial-gradient(circle,#f4d47d 0 35%,rgba(244,181,73,.8) 36% 58%,rgba(244,181,73,0) 70%);
+      top:46px;left:59%;
+      filter:blur(.2px);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns: 1.05fr 1.6fr 1.1fr;
+      gap:26px;
+      padding:38px;
+    }
+
+    h1{
+      font-size:clamp(42px,5vw,78px);
+      line-height:1.05;
+      margin:0 0 14px;
+      letter-spacing:.04em;
+    }
+    .subtitle{
+      color:#514a42;
+      font-size:20px;
+      margin-bottom:28px;
+    }
+
+    .card{
+      background:rgba(247,237,219,.88);
+      border:1px solid rgba(120,93,56,.28);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 10px 25px rgba(64,47,25,.08);
+      backdrop-filter: blur(2px);
+    }
+    .card h2,.section-title{
+      margin:0 0 14px;
+      font-size:28px;
+      letter-spacing:.03em;
+    }
+
+    .quote{
+      margin-top:28px;
+      padding:22px 24px;
+      border-left:4px solid var(--red);
+      background:rgba(255,250,240,.56);
+      font-size:18px;
+    }
+    .quote b{font-size:22px}
+    .quote .by{display:block;color:var(--muted);margin-top:12px;text-align:right}
+
+    .stage{
+      display:grid;
+      gap:14px;
+    }
+    .stage-item{
+      display:grid;
+      grid-template-columns:70px 1fr;
+      gap:12px;
+      align-items:center;
+    }
+    .stage-badge{
+      width:62px;height:62px;border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid rgba(60,50,40,.2);
+      background:linear-gradient(#ede0c9,#d7c09c);
+      font-size:18px;
+      font-weight:700;
+    }
+    .stage-item strong{font-size:21px}
+    .stage-item span{display:block;color:var(--muted);font-size:14px}
+
+    .path-card{
+      position:relative;
+      min-height:550px;
+      padding:26px 24px 18px;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.02)),
+        rgba(240,228,205,.72);
+    }
+    .path{
+      position:absolute;
+      left:50%;
+      top:84px;
+      bottom:28px;
+      width:18px;
+      transform:translateX(-50%);
+      background:linear-gradient(#d8bf93,#b5986a);
+      border-radius:999px;
+      box-shadow:inset 0 0 0 1px rgba(90,70,40,.15);
+    }
+    .habit{
+      position:relative;
+      width:82%;
+      margin:0 auto 13px;
+      padding:13px 18px 13px 72px;
+      border:1px solid rgba(92,73,43,.23);
+      background:rgba(248,239,221,.95);
+      border-radius:999px;
+      box-shadow:0 8px 18px rgba(83,61,30,.08);
+    }
+    .habit:nth-of-type(even){transform:translateX(3%)}
+    .habit:nth-of-type(odd){transform:translateX(-3%)}
+    .num{
+      position:absolute;left:11px;top:50%;transform:translateY(-50%);
+      width:46px;height:46px;border-radius:50%;
+      display:grid;place-items:center;
+      background:#e8d9bd;border:1px solid rgba(90,70,40,.23);
+      font-size:26px;font-weight:700;
+    }
+    .habit strong{display:block;font-size:21px}
+    .habit small{color:var(--muted)}
+    .sign{
+      width:max-content;
+      max-width:90%;
+      margin:4px auto 18px;
+      background:#7b5835;color:#f6e8ca;
+      padding:10px 16px;
+      border-radius:8px;
+      border:4px solid #5c4028;
+      box-shadow:0 6px 0 rgba(63,45,28,.18);
+      font-weight:700;
+      text-align:center;
+    }
+
+    .cycle{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    .cycle-item{
+      text-align:center;
+      padding:16px 10px;
+      border-radius:18px;
+      background:rgba(255,255,255,.35);
+      border:1px solid rgba(110,90,60,.2);
+    }
+    .icon{
+      width:52px;height:52px;border-radius:50%;
+      display:grid;place-items:center;
+      margin:0 auto 8px;
+      background:#dcd1bc;
+      font-size:25px;
+    }
+    .cycle-center{
+      grid-column:1/-1;
+      margin:auto;
+      width:140px;height:140px;border-radius:50%;
+      display:grid;place-items:center;text-align:center;
+      background:radial-gradient(circle,#efe4d1 0 55%,#d3bea0 56% 100%);
+      border:1px solid rgba(90,72,45,.25);
+      font-weight:700;
+      font-size:20px;
+    }
+
+    .bottom-grid{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:1.1fr 1.8fr 1fr;
+      gap:24px;
+    }
+
+    .why-list,.result-list{display:grid;gap:14px}
+    .why-row,.result-row{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px 0;border-bottom:1px dashed rgba(90,70,40,.22);
+    }
+    .why-row:last-child,.result-row:last-child{border-bottom:0}
+    .bullet{
+      min-width:34px;height:34px;border-radius:50%;
+      display:grid;place-items:center;
+      background:#d8c4a4;
+    }
+
+    .flow{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      align-items:center;
+      margin-top:20px;
+    }
+    .flow-step{
+      position:relative;
+      text-align:center;
+      padding:16px 10px;
+      border-radius:18px;
+      background:rgba(255,255,255,.34);
+      border:1px solid rgba(110,90,60,.18);
+      min-height:160px;
+    }
+    .flow-step:not(:last-child):after{
+      content:"→";
+      position:absolute;
+      right:-19px;top:58px;
+      font-size:28px;color:#8a7a66;
+      z-index:4;
+    }
+    .flow-icon{
+      width:54px;height:54px;border-radius:50%;
+      display:grid;place-items:center;margin:0 auto 10px;color:white;font-size:22px;
+      background:var(--red);
+    }
+    .flow-step:nth-child(2) .flow-icon{background:var(--blue)}
+    .flow-step:nth-child(3) .flow-icon{background:var(--green)}
+    .flow-step:nth-child(4) .flow-icon{background:#c87942}
+    .flow-step:nth-child(5) .flow-icon{background:var(--gold)}
+    .flow-step b{display:block;font-size:20px}
+    .flow-step small{color:var(--muted)}
+
+    .footer-note{
+      margin-top:26px;
+      text-align:center;
+      font-size:26px;
+      font-style:italic;
+      padding:22px;
+      color:#3c352e;
+    }
+
+    @media (max-width:1100px){
+      .hero-inner,.bottom-grid{grid-template-columns:1fr}
+      .path-card{order:2}
+      .hero-inner > :last-child{order:3}
+      .flow{grid-template-columns:1fr}
+      .flow-step:not(:last-child):after{
+        content:"↓";right:auto;left:50%;top:auto;bottom:-30px;transform:translateX(-50%)
+      }
+    }
+
+    @media (max-width:640px){
+      .page{width:94vw;margin-top:10px}
+      .hero-inner{padding:18px;gap:16px}
+      .card{padding:18px}
+      .habit{width:100%;padding-left:62px}
+      .habit:nth-of-type(even),.habit:nth-of-type(odd){transform:none}
+      .cycle{grid-template-columns:1fr}
+      .cycle-center{grid-column:auto}
+      h1{font-size:44px}
+      .subtitle{font-size:17px}
+      .section-title,.card h2{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="sun"></div>
+      <div class="mountains"></div>
+
+      <div class="hero-inner">
+        <aside>
+          <h1>高效能人士的<br>七个习惯</h1>
+          <div class="subtitle">从内而外，成就更好的自己</div>
+
+          <div class="card">
+            <h2>核心理念</h2>
+            <div class="quote">
+              <b>真正的成功，来自由内而外的成长。</b><br>
+              先塑造品格，再提升能力；先改变自己，再影响世界。
+              <span class="by">—— 史蒂芬·柯维</span>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <h2>三种人生阶段</h2>
+            <div class="stage">
+              <div class="stage-item">
+                <div class="stage-badge">依赖</div>
+                <div><strong>我需要你</strong><span>获得安全感与支持</span></div>
+              </div>
+              <div class="stage-item">
+                <div class="stage-badge">独立</div>
+                <div><strong>我能做</strong><span>获得自主与责任感</span></div>
+              </div>
+              <div class="stage-item">
+                <div class="stage-badge">互赖</div>
+                <div><strong>我们可以</strong><span>通过合作创造更大成果</span></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="card path-card">
+          <div class="sign">持续精进 · 成就圆满人生</div>
+          <div class="path"></div>
+
+          <div class="habit"><span class="num">7</span><strong>不断更新</strong><small>平衡身体、心智、情感与精神</small></div>
+          <div class="habit"><span class="num">6</span><strong>统合综效</strong><small>尊重差异，创造第三选择</small></div>
+          <div class="habit"><span class="num">5</span><strong>知彼解己</strong><small>先理解别人，再争取被理解</small></div>
+          <div class="habit"><span class="num">4</span><strong>双赢思维</strong><small>寻找长期合作与共同利益</small></div>
+          <div class="habit"><span class="num">3</span><strong>要事第一</strong><small>优先处理真正重要的事情</small></div>
+          <div class="habit"><span class="num">2</span><strong>以终为始</strong><small>先定义方向，再安排路径</small></div>
+          <div class="habit"><span class="num">1</span><strong>积极主动</strong><small>把注意力放在自己能影响的事上</small></div>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h2>高效能人士的日常实践</h2>
+            <p style="margin-top:-6px;color:var(--muted)">把七个习惯融入生活，形成稳定循环。</p>
+            <div class="cycle">
+              <div class="cycle-item"><div class="icon">📖</div><strong>计划</strong><br><small>设定目标 · 安排要事</small></div>
+              <div class="cycle-item"><div class="icon">⚙️</div><strong>行动</strong><br><small>专注执行 · 持续改进</small></div>
+              <div class="cycle-center">知行合一<br>持续成长</div>
+              <div class="cycle-item"><div class="icon">🌱</div><strong>反思</strong><br><small>复盘总结 · 调整方向</small></div>
+              <div class="cycle-item"><div class="icon">♥</div><strong>平衡</strong><br><small>照顾身心 · 不断更新</small></div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <h2>一句话理解</h2>
+            <p style="font-size:20px;margin:0">习惯改变命运，品格成就高效。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="card">
+        <h2 class="section-title">为什么读这本书？（Why）</h2>
+        <div class="why-list">
+          <div class="why-row"><div class="bullet">⛰</div><div><b>提升个人效能</b><br><small>在复杂世界中保持清晰与专注</small></div></div>
+          <div class="why-row"><div class="bullet">👥</div><div><b>改善人际关系</b><br><small>建立信任、合作与长期双赢</small></div></div>
+          <div class="why-row"><div class="bullet">♥</div><div><b>实现更有意义的人生</b><br><small>从内而外成长，持续创造价值</small></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">从理念到实践的路径</h2>
+        <div class="flow">
+          <div class="flow-step"><div class="flow-icon">💡</div><b>理念</b><small>Why<br>为什么重要</small></div>
+          <div class="flow-step"><div class="flow-icon">◎</div><b>方法</b><small>What<br>做什么</small></div>
+          <div class="flow-step"><div class="flow-icon">🛠</div><b>行动</b><small>How<br>如何做</small></div>
+          <div class="flow-step"><div class="flow-icon">▤</div><b>案例</b><small>Case<br>放进真实情境</small></div>
+          <div class="flow-step"><div class="flow-icon">↗</div><b>成果</b><small>Result<br>形成持续改变</small></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">你将收获（Result）</h2>
+        <div class="result-list">
+          <div class="result-row"><div class="bullet">✓</div><div>更清晰的人生目标</div></div>
+          <div class="result-row"><div class="bullet">✓</div><div>更高效的时间管理能力</div></div>
+          <div class="result-row"><div class="bullet">✓</div><div>更和谐的人际关系</div></div>
+          <div class="result-row"><div class="bullet">✓</div><div>更强的合作与影响力</div></div>
+          <div class="result-row"><div class="bullet">✓</div><div>更健康、更平衡的生活</div></div>
+          <div class="result-row"><div class="bullet">✓</div><div>持续成长，成为更好的自己</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">改变，从一个习惯开始；更好的自己，就在前方。</div>
+  </main>
+</body>
+</html>

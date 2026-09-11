@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "naval-almanack",
+  "slug": "naval-almanack",
+  "title": "纳瓦尔宝典",
+  "subtitle": "用专长、判断与复利，换回自己的时间",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "埃里克·乔根森 / 纳瓦尔·拉维坎特",
+  "topics": [
+    "财富",
+    "哲学",
+    "自由"
+  ],
+  "concepts": [
+    "专长",
+    "杠杆",
+    "判断力",
+    "复利"
+  ],
+  "visualStyle": "black-gold-philosophy",
+  "related": [
+    "seven-habits",
+    "thinking-framework",
+    "personal-growth-os"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "extends",
+      "concept": "specific-knowledge",
+      "label": "训练让独特专长逐渐成形"
+    },
+    {
+      "target": "thinking-framework",
+      "type": "supports",
+      "concept": "judgment",
+      "label": "判断力为杠杆选择方向"
+    },
+    {
+      "target": "personal-growth-os",
+      "type": "supports",
+      "concept": "compounding",
+      "label": "把能力积累转化为长期选择权"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/naval-almanack/index.html"
+  },
+  "cover": "/artifacts/naval-almanack/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:naval_almanack_black_gold.html"
+    ],
+    "derivedFrom": []
+  }
+}

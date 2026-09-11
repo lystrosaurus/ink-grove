@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "attention-loop",
+  "slug": "attention-loop",
+  "title": "注意力的回路",
+  "subtitle": "为什么知道很多，仍然难以行动？",
+  "artifactType": "idea",
+  "sourceType": "original",
+  "author": "Ink Grove",
+  "topics": [
+    "认知",
+    "学习",
+    "行动"
+  ],
+  "concepts": [
+    "注意力",
+    "元认知",
+    "反馈",
+    "主动选择"
+  ],
+  "visualStyle": "quiet-field-notes",
+  "related": [
+    "cognitive-awakening",
+    "deliberate-practice",
+    "learning-cycle"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "derived-from",
+      "concept": "attention",
+      "label": "从觉察分心到重新分配注意力"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "derived-from",
+      "concept": "feedback",
+      "label": "用可见反馈连接理解与行动"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "applies",
+      "concept": "active-choice",
+      "label": "以一个足够小的动作开始新循环"
+    }
+  ],
+  "artifact": {
+    "renderer": "markdown",
+    "src": "/artifacts/attention-loop/index.md"
+  },
+  "cover": "/artifacts/attention-loop/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-11",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [],
+    "derivedFrom": [
+      "cognitive-awakening",
+      "deliberate-practice"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+app/dist/
+app/public/artifacts/
+app/src/generated/
+test-results/
+playwright-report/
+artifacts/browser-*-results/
+artifacts/webbridge-*.json
+*.log
+*.timestamp-*.mjs
+.workbuddy/
+.env
+.env.*
+!.env.example
