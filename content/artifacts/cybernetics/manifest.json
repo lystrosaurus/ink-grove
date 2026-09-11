@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "cybernetics",
+  "slug": "cybernetics",
+  "title": "控制论",
+  "subtitle": "把目标、信息与反馈放进同一张控制台",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Norbert Wiener · 诺伯特·维纳",
+  "topics": [
+    "系统",
+    "科学",
+    "学习"
+  ],
+  "concepts": [
+    "反馈",
+    "系统思维",
+    "信息质量"
+  ],
+  "visualStyle": "phosphor-control-console",
+  "related": [
+    "thinking-in-systems",
+    "learning-cycle",
+    "managerial-judgment",
+    "one-percent-rule"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "supports",
+      "concept": "feedback",
+      "label": "为观察回路、延迟与系统调节提供共同语言"
+    },
+    {
+      "target": "learning-cycle",
+      "type": "supports",
+      "concept": "feedback",
+      "label": "用感知、比较与修正理解学习循环"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "information-quality",
+      "label": "失真的信息与有限觉察都会影响决策修正"
+    },
+    {
+      "target": "one-percent-rule",
+      "type": "supports",
+      "concept": "feedback",
+      "label": "把结果及时送回，让微小改进能够持续"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/cybernetics/index.html"
+  },
+  "cover": "/artifacts/cybernetics/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/cybernetics_control_console.html"
+    ],
+    "derivedFrom": []
+  }
+}

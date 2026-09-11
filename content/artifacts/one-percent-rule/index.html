@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1%法则｜The 1% Solution for Work and Life</title>
+<style>
+:root{
+  --ivory:#f4efe5;
+  --paper:#fcf9f2;
+  --ink:#26251f;
+  --muted:#6e6a5f;
+  --line:#d6cdba;
+  --wine:#7d4140;
+  --wine-soft:#edddd9;
+  --bronze:#a1793f;
+  --bronze-soft:#efe2cb;
+  --blue:#5f7583;
+  --blue-soft:#e1e7ea;
+  --olive:#6f785a;
+  --olive-soft:#e5e7d9;
+  --charcoal:#2b2b27;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--ivory);
+  background-image:
+    radial-gradient(720px 480px at 6% 4%, rgba(125,65,64,.08), transparent 70%),
+    radial-gradient(680px 520px at 96% 96%, rgba(161,121,63,.08), transparent 70%);
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,.quote,.final-quote{font-family:Georgia,"Noto Serif SC","Songti SC",serif;}
+.page{width:min(1400px,94vw);margin:0 auto;padding:48px 0 40px;}
+.sheet{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:26px;
+  box-shadow:0 28px 80px rgba(38,37,31,.12);
+  overflow:hidden;
+}
+/* ---------- hero ---------- */
+.hero{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:56px;
+  padding:76px 72px 64px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.22em;
+  color:var(--wine);
+  font-weight:700;
+  margin-bottom:26px;
+}
+.hero h1{
+  font-size:clamp(64px,7.5vw,112px);
+  line-height:.95;
+  letter-spacing:-.04em;
+  margin-bottom:18px;
+}
+.hero h1 sup{
+  font-size:.32em;
+  letter-spacing:0;
+  color:var(--bronze);
+  vertical-align:1.4em;
+}
+.english{
+  font-size:15px;
+  letter-spacing:.3em;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+.author{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:34px;
+}
+.author b{color:var(--ink);font-weight:600;}
+.lead{
+  font-family:Georgia,"Noto Serif SC","Songti SC",serif;
+  font-size:24px;
+  line-height:1.65;
+  max-width:680px;
+  margin-bottom:36px;
+}
+.lead strong{color:var(--wine);font-weight:700;}
+.thesis{
+  border-left:5px solid var(--wine);
+  background:var(--wine-soft);
+  border-radius:0 14px 14px 0;
+  padding:22px 26px;
+  max-width:680px;
+}
+.thesis b{display:block;font-size:15px;margin-bottom:6px;}
+.thesis span{font-size:14px;color:#5a4a48;line-height:1.8;}
+/* hero 侧栏可视化 */
+.axis{
+  align-self:stretch;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:linear-gradient(180deg,#fbf7ec,#f6efe0);
+  padding:30px 26px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.axis .axis-title{
+  font-size:11px;
+  letter-spacing:.2em;
+  color:var(--muted);
+  text-align:center;
+  margin-bottom:4px;
+}
+.lane{
+  border-radius:14px;
+  padding:14px 16px;
+  font-size:13px;
+  line-height:1.55;
+}
+.lane .pct{
+  font-family:Georgia,serif;
+  font-size:30px;
+  line-height:1;
+  display:block;
+  margin-bottom:6px;
+}
+.lane-wine{background:var(--wine-soft);border-left:4px solid var(--wine);}
+.lane-wine .pct{color:var(--wine);}
+.lane-bronze{background:var(--bronze-soft);border-left:4px solid var(--bronze);}
+.lane-bronze .pct{color:var(--bronze);}
+.lane-blue{background:var(--blue-soft);border-left:4px solid var(--blue);}
+.lane-blue .pct{color:var(--blue);}
+.axis .axis-note{
+  font-size:12px;
+  color:var(--muted);
+  text-align:center;
+  border-top:1px dashed var(--line);
+  padding-top:14px;
+}
+/* ---------- sections ---------- */
+.section{padding:64px 72px;border-bottom:1px solid var(--line);}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:48px;
+  margin-bottom:40px;
+}
+.chapter{
+  font-size:11px;
+  letter-spacing:.2em;
+  color:var(--bronze);
+  font-weight:700;
+  margin-bottom:12px;
+}
+.section-head h2{font-size:30px;line-height:1.25;letter-spacing:-.01em;}
+.section-head p{
+  font-size:13px;
+  color:var(--muted);
+  max-width:340px;
+  line-height:1.8;
+  flex-shrink:0;
+}
+.grid{display:grid;gap:18px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fffdf8;
+  padding:24px 24px 20px;
+}
+.card .tag{
+  display:inline-block;
+  font-size:10px;
+  letter-spacing:.16em;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:99px;
+  margin-bottom:14px;
+}
+.card:nth-child(4n+1) .tag{background:var(--wine-soft);color:var(--wine);}
+.card:nth-child(4n+2) .tag{background:var(--bronze-soft);color:var(--bronze);}
+.card:nth-child(4n+3) .tag{background:var(--blue-soft);color:var(--blue);}
+.card:nth-child(4n+4) .tag{background:var(--olive-soft);color:var(--olive);}
+.card h4{font-size:17px;margin-bottom:8px;line-height:1.4;}
+.card p{font-size:13px;color:var(--muted);line-height:1.75;}
+.card .take{
+  border-top:1px dashed var(--line);
+  margin-top:14px;
+  padding-top:12px;
+  font-size:12px;
+  color:var(--ink);
+}
+.card .take b{color:var(--wine);}
+/* 分组重组：四条杠杆 */
+.groups{display:grid;gap:26px;}
+.group{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start;}
+.group-num{
+  font-family:Georgia,serif;
+  font-size:56px;
+  line-height:1;
+  color:var(--bronze);
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px 0;
+  background:#fbf7ec;
+}
+.group-num span{
+  display:block;
+  font-family:Inter,"PingFang SC",sans-serif;
+  font-size:10px;
+  letter-spacing:.18em;
+  color:var(--muted);
+  margin-top:10px;
+}
+.group-body{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+/* 步骤协议 */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch;}
+.step{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fffdf8;
+  padding:20px 18px;
+  position:relative;
+}
+.step .num{
+  font-family:Georgia,serif;
+  font-size:34px;
+  color:var(--blue);
+  line-height:1;
+  margin-bottom:12px;
+}
+.step h5{font-size:15px;margin-bottom:6px;}
+.step p{font-size:12px;color:var(--muted);line-height:1.7;}
+.step::after{
+  content:"→";
+  position:absolute;
+  right:-16px;top:44%;
+  color:var(--bronze);
+  font-size:18px;
+  z-index:1;
+}
+.step:last-child::after{display:none;}
+/* 区间 */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.zone{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fffdf8;
+  padding:0 24px 22px;
+  overflow:hidden;
+}
+.zone::before{
+  content:"";
+  display:block;
+  height:5px;
+  margin:0 -24px 18px;
+}
+.zone-z1::before{background:var(--blue);}
+.zone-z2::before{background:var(--bronze);}
+.zone-z3::before{background:var(--wine);}
+.zone h4{font-size:16px;margin-bottom:8px;}
+.zone p{font-size:13px;color:var(--muted);line-height:1.75;}
+.zone .zone-tag{
+  font-size:10px;letter-spacing:.18em;font-weight:700;
+  margin-bottom:10px;display:block;
+}
+.zone-z1 .zone-tag{color:var(--blue);}
+.zone-z2 .zone-tag{color:var(--bronze);}
+.zone-z3 .zone-tag{color:var(--wine);}
+/* 金句带 */
+.quote-band{
+  background:#fbf7ec;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:56px 72px;
+  text-align:center;
+}
+.quote{
+  font-size:26px;
+  line-height:1.8;
+  max-width:880px;
+  margin:0 auto;
+}
+.quote em{font-style:normal;color:var(--wine);}
+.quote-src{
+  margin-top:18px;
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--muted);
+}
+/* 自我提问 */
+.questions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.question{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fffdf8;
+  padding:22px;
+}
+.question .id{
+  font-family:Georgia,serif;
+  font-size:13px;
+  color:var(--bronze);
+  letter-spacing:.1em;
+  margin-bottom:10px;
+}
+.question h3{font-size:16px;line-height:1.5;margin-bottom:8px;}
+.question p{font-size:12px;color:var(--muted);line-height:1.7;}
+/* 日常实践 */
+.practice{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.check{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fffdf8;
+  padding:26px 28px;
+}
+.check h4{
+  font-size:15px;
+  letter-spacing:.06em;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.check h4::before{
+  content:"";
+  width:10px;height:10px;border-radius:50%;
+}
+.check-morning h4::before{background:var(--bronze);}
+.check-evening h4::before{background:var(--blue);}
+.check li{
+  list-style:none;
+  font-size:13px;
+  color:var(--muted);
+  padding:9px 0 9px 26px;
+  position:relative;
+  border-bottom:1px dashed var(--line);
+}
+.check li:last-child{border-bottom:none;}
+.check li::before{
+  content:"□";
+  position:absolute;left:0;
+  color:var(--bronze);
+}
+.check-evening li::before{color:var(--blue);}
+/* 适合人群 */
+.fit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.fit .card{text-align:left;}
+/* ---------- final ---------- */
+.final{
+  padding:72px;
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:56px;
+  align-items:center;
+  background:#fbf7ec;
+}
+.final-quote{
+  font-size:30px;
+  line-height:1.75;
+}
+.final-quote em{font-style:normal;color:var(--wine);}
+.final-side{
+  border-left:1px solid var(--line);
+  padding-left:40px;
+}
+.final-side b{font-size:14px;letter-spacing:.06em;display:block;margin-bottom:12px;}
+.final-side p{font-size:13px;color:var(--muted);line-height:1.9;}
+/* ---------- footer ---------- */
+.footer{
+  background:var(--charcoal);
+  color:#e9e4d6;
+  padding:34px 72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.footer strong{font-size:15px;letter-spacing:.04em;}
+.footer span{font-size:12px;color:#a9a294;letter-spacing:.12em;}
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .hero{grid-template-columns:1fr;gap:40px;padding:56px 44px;}
+  .section,.quote-band{padding:48px 44px;}
+  .final{grid-template-columns:1fr;gap:32px;padding:56px 44px;}
+  .final-side{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:32px;}
+  .grid-3,.questions,.fit,.zones{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+  .step::after{display:none;}
+  .group{grid-template-columns:1fr;}
+  .group-num{text-align:left;padding:16px 22px;font-size:40px;}
+  .group-num span{display:inline;margin-left:14px;}
+  .group-body{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  .page{width:100%;padding:0;}
+  .sheet{border-radius:0;border-left:none;border-right:none;}
+  .grid-2,.grid-3,.questions,.fit,.zones,.steps,.group-body,.practice{grid-template-columns:1fr;}
+  .section-head{flex-direction:column;align-items:flex-start;gap:18px;}
+  .footer{flex-direction:column;align-items:flex-start;gap:8px;padding:30px 44px;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">BOOK ARTIFACT · THE MARGIN BETWEEN GOOD &amp; GREAT</div>
+      <h1>1%法则<sup>THE 1% SOLUTION</sup></h1>
+      <div class="english">THE 1% SOLUTION FOR WORK AND LIFE</div>
+      <div class="author"><b>Tom Connellan 汤姆·康奈兰</b> · 2010 ｜ 中译本：九州出版社 · 2018 · 郑志娟 译</div>
+      <div class="lead">一则写给所有"已经很努力、却还差一点点"的人的寓言：<strong>优秀与卓越之间的差距，平均只有 1%</strong>——而这 1%，藏在方法里，不藏在拼命里。</div>
+      <div class="thesis">
+        <b>核心不是"再多付出一点"，而是"在正确的地方多对 1%"。</b>
+        <span>全书借陷入瓶颈的肯与足球教练吉姆的相遇展开：先行动起来，动力才会跟上；一次只攻一件事的 1%；让微小的正确行为自我强化为"自动供给式的循环"。1% 不是安慰剂，是一套可执行的杠杆系统。</span>
+      </div>
+    </div>
+    <div class="axis">
+      <div class="axis-title">THE 1% MARGIN · 差距在哪里</div>
+      <div class="lane lane-wine">
+        <span class="pct">1%</span>
+        奥运百米决赛，冠军与第四名的时间差；奖金与历史地位，却相差十倍。<b>微小差距，巨大分配。</b>
+      </div>
+      <div class="lane lane-bronze">
+        <span class="pct">×37</span>
+        每天进步 1%，复利一年是原来的 37 倍；每天退步 1%，一年后趋近于零。<b>差距在时间里放大。</b>
+      </div>
+      <div class="lane lane-blue">
+        <span class="pct">∞</span>
+        1% 的改进一旦固化成习惯，就不再消耗意志力，并开始自动供给下一次改进。<b>循环一旦建立，增长自持。</b>
+      </div>
+      <div class="axis-note">本书不承诺奇迹，只承诺斜率。</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">01 · THE CENTRAL TENSION</div>
+        <h2>努力没有错，错的是把"更用力"当成唯一变量</h2>
+      </div>
+      <p>肯是大多数奋斗者的画像：时间花满、身心俱疲，结果却停在原地。吉姆教练研究顶级运动员后发现——拉开差距的从不是努力量级，而是少数关键动作上的微小精度差。</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <span class="tag">MYTH</span>
+        <h4>迷思：卓越属于天赋者</h4>
+        <p>我们假设冠军与落选者之间存在鸿沟。真实的测量结果却显示：同一赛场上，顶尖与优秀之间的成绩差常常不到 1%。</p>
+        <div class="take"><b>修正：</b>鸿沟感是错觉，差距是可测量的毫米级变量。</div>
+      </div>
+      <div class="card">
+        <span class="tag">TRUTH</span>
+        <h4>真相：1% 的差距被系统放大</h4>
+        <p>发令枪反应快 0.01 秒、划水角度准 1 度——单看都可忽略，叠加在整场比赛里却决定奖牌归属。分配从不线性。</p>
+        <div class="take"><b>修正：</b>找到那 1% 所在的关键动作，而非全线加码。</div>
+      </div>
+      <div class="card">
+        <span class="tag">SHIFT</span>
+        <h4>转向：从"努力叙事"到"杠杆叙事"</h4>
+        <p>问自己"我还能更拼吗"没有出口；问自己"哪个环节的 1% 最值钱"才有答案。杠杆叙事把焦虑换成可操作的清单。</p>
+        <div class="take"><b>修正：</b>卓越是一道计算题，不是一场苦修。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">02 · FOUR LEVERS</div>
+        <h2>四条杠杆：1% 法则的运作结构</h2>
+      </div>
+      <p>全书的方法论可以重组成四组相互咬合的杠杆：先让车轮转起来，再校正方向；一次只拧一颗螺丝；盯住自己的曲线；最后把改进交给系统而非意志力。</p>
+    </div>
+    <div class="groups">
+      <div class="group">
+        <div class="group-num">Ⅰ<span>MOMENTUM</span></div>
+        <div class="group-body">
+          <div class="card">
+            <span class="tag">LEVER 1</span>
+            <h4>行动先于动力</h4>
+            <p>多数人等待"有状态"才开始，于是永远开始不了。书中的次序恰好相反：先迈出最小的一步，动力作为行动的副产品随后抵达。</p>
+            <div class="take"><b>要点：</b>不是"想动了才做"，而是"做了才会想动"。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 2</span>
+            <h4>一次只提升一件事</h4>
+            <p>同时改造十个习惯等于同时失败十次。选定当前回报最高的那一件事，只对它做 1% 的改进，其余维持原样。</p>
+            <div class="take"><b>要点：</b>专注是 1% 法则的保险丝。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 3</span>
+            <h4>把目标译成下一步动作</h4>
+            <p>"成为更好的销售"无法执行，"今天多打一个回访电话"可以。目标必须被翻译成今天就能完成的最小动作。</p>
+            <div class="take"><b>要点：</b>不可执行的 1%，等于 0%。</div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="group-num">Ⅱ<span>MEASUREMENT</span></div>
+        <div class="group-body">
+          <div class="card">
+            <span class="tag">LEVER 4</span>
+            <h4>与昨天的自己比较</h4>
+            <p>与冠军比较产生挫败，与昨天的自己比较产生数据。唯一有意义的参照系，是你上一次的记录。</p>
+            <div class="take"><b>要点：</b>比较的对象错了，努力的方向就会错。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 5</span>
+            <h4>庆祝微小的进步</h4>
+            <p>大脑只为被标记的进步分泌继续行动的动力。给每一个 1% 一个正式的"完成仪式"，是维持循环的燃料。</p>
+            <div class="take"><b>要点：</b>被看见的进步，才会重复发生。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 6</span>
+            <h4>用记录替代感觉</h4>
+            <p>感觉自己"没有进步"往往是记忆偏差。简单的记录——次数、时长、结果——能让 1% 现形，并指出下一个 1% 在哪里。</p>
+            <div class="take"><b>要点：</b>感觉会骗人，曲线不会。</div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="group-num">Ⅲ<span>ENVIRONMENT</span></div>
+        <div class="group-body">
+          <div class="card">
+            <span class="tag">LEVER 7</span>
+            <h4>让环境替你用力</h4>
+            <p>吉姆改造的不是队员的斗志，而是训练的流程与反馈。把正确的行为设计成环境里的默认选项，意志力就可以省下来。</p>
+            <div class="take"><b>要点：</b>设计环境，比锤炼意志更便宜。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 8</span>
+            <h4>找到你的"吉姆"</h4>
+            <p>肯的转变始于一个外部的镜子。教练、同伴、甚至一份公开承诺，都是把模糊自我感动换成清晰反馈的装置。</p>
+            <div class="take"><b>要点：</b>盲区，顾名思义，自己看不见。</div>
+          </div>
+          <div class="card">
+            <span class="tag">LEVER 9</span>
+            <h4>让循环自动供给</h4>
+            <p>改进带来正反馈，正反馈带来下一次改进——当这个回路闭合，成长就不再依赖打鸡血，而成为系统的自然输出。</p>
+            <div class="take"><b>要点：</b>终点不是更自律，而是不再需要自律。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">03 · THE PROTOCOL</div>
+        <h2>五步协议：把 1% 落到明天早上</h2>
+      </div>
+      <p>从"知道"到"做到"之间，隔着一套可重复的流程。五步协议按顺序执行，每周一轮，每轮只推进一个改进点。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h5>选定一件要提升的事</h5>
+        <p>从当前最重要、回报最高的事项中选一件——只选一件——作为本轮改进对象。</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h5>量化"现状基线"</h5>
+        <p>记录当前的真实水平：次数、时长、成功率。没有基线，就谈不上 1%。</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h5>定义"多 1%"的样子</h5>
+        <p>把改进写成具体、可观察、今天就能执行的动作：多一次、早十分钟、多问一句。</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h5>先行动，不等状态</h5>
+        <p>把动作嵌进已有的日程锚点之后——早餐后、通勤中、开会前——让触发自动发生。</p>
+      </div>
+      <div class="step">
+        <div class="num">5</div>
+        <h5>记录并庆祝</h5>
+        <p>当天打勾，每周回看曲线，公开标记每一个完成的 1%。然后，选下一个。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">04 · THREE ZONES</div>
+        <h2>三个区间：你的 1% 卡在哪一层</h2>
+      </div>
+      <p>同样知道 1% 法则，有人停在理解，有人停在执行，有人把它变成了体质。三个区间可以自测你此刻的位置。</p>
+    </div>
+    <div class="zones">
+      <div class="zone zone-z1">
+        <span class="zone-tag">ZONE 01 · KNOWING</span>
+        <h4>知道区：收藏了道理</h4>
+        <p>认同"微小改进"的逻辑，甚至能讲给别人听，但自己的基线数据一次也没记录过。知道，是距离做到最远的一种状态。</p>
+      </div>
+      <div class="zone zone-z2">
+        <span class="zone-tag">ZONE 02 · DOING</span>
+        <h4>行动区：启动了循环</h4>
+        <p>有一件正在改进的事，有记录，有每周回看；偶尔中断，但能在三天内恢复。大多数人需要的全部，就是稳定地待在这里。</p>
+      </div>
+      <div class="zone zone-z3">
+        <span class="zone-tag">ZONE 03 · BEING</span>
+        <h4>体质区：循环自动供给</h4>
+        <p>改进不再需要动员：找下一个 1% 已经成了看待一切事情的默认方式。此时 1% 不再是方法，而是操作系统。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-band">
+    <div class="quote">"你不需要一下子优秀很多，你只需要<em>在对的地方，比对昨天多对 1%</em>——然后让时间替你完成剩下的部分。"</div>
+    <div class="quote-src">AFTER TOM CONNELLAN · THE 1% SOLUTION FOR WORK AND LIFE</div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">05 · SIX QUESTIONS</div>
+        <h2>六个自我提问：开始之前先校准</h2>
+      </div>
+      <p>吉姆留给肯的不是鸡汤，而是一组每周自问的问题。回答它们，比再读一遍这本书更有用。</p>
+    </div>
+    <div class="questions">
+      <div class="question">
+        <div class="id">Q1</div>
+        <h3>此刻回报最高的那一件事，是什么？</h3>
+        <p>不是最急的，不是最轻松的——是做好之后能撬动最多后续结果的那一件。</p>
+      </div>
+      <div class="question">
+        <div class="id">Q2</div>
+        <h3>关于它，我上一次的真实数据是什么？</h3>
+        <p>次数、时长、结果，任选一个维度。说不出数字，说明你还没有基线。</p>
+      </div>
+      <div class="question">
+        <div class="id">Q3</div>
+        <h3>"多 1%"在今天长什么样？</h3>
+        <p>把它写成别人在旁边就能验证的动作。写不出来，就还没定义清楚。</p>
+      </div>
+      <div class="question">
+        <div class="id">Q4</div>
+        <h3>我在等"有动力"，还是可以现在就做两分钟？</h3>
+        <p>两分钟的最小行动，是戳破"等状态"幻觉的针。</p>
+      </div>
+      <div class="question">
+        <div class="id">Q5</div>
+        <h3>谁在替我拿着那面镜子？</h3>
+        <p>教练、同伴、公开承诺、数据看板——你的反馈装置是什么？</p>
+      </div>
+      <div class="question">
+        <div class="id">Q6</div>
+        <h3>上一个完成的 1%，我庆祝过吗？</h3>
+        <p>没有仪式感的进步会被大脑当作没发生过，循环就断在这里。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">06 · DAILY PRACTICE</div>
+        <h2>一日两度：1% 的早晚清单</h2>
+      </div>
+      <p>方法论的尽头是日程表。早晚各三分钟，是这本书最小的完整实践。</p>
+    </div>
+    <div class="practice">
+      <ul class="check check-morning">
+        <h4>MORNING · 晨间校准</h4>
+        <li>写下今天唯一要推进的那一件事（只有一件）</li>
+        <li>为它写下"多 1%"的具体动作与完成信号</li>
+        <li>把动作挂在一个已有的日程锚点之后</li>
+        <li>预想一个最可能的干扰，并写下应对方式</li>
+      </ul>
+      <ul class="check check-evening">
+        <h4>EVENING · 晚间回看</h4>
+        <li>打勾或记录今天的真实数据，不评判，只记录</li>
+        <li>为完成的 1% 做一个标记：一句话、一个勾、一次分享</li>
+        <li>若中断，写下恢复动作，安排在明天最早的锚点</li>
+        <li>每周一次：回看曲线，选出下一个 1%</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="chapter">07 · WHO IT'S FOR</div>
+        <h2>这本书适合谁</h2>
+      </div>
+      <p>它不是成功学口号集，而是一套写给"卡在平台期的人"的杠杆说明书。三类读者会获得最大回报。</p>
+    </div>
+    <div class="fit grid grid-3">
+      <div class="card">
+        <span class="tag">READER 01</span>
+        <h4>努力却停在原地的人</h4>
+        <p>时间已经花满，结果不再增长。你缺的不是更多投入，而是找到那 1% 所在的关键动作。</p>
+        <div class="take"><b>带走：</b>从"更用力"转向"更精准"的诊断框架。</div>
+      </div>
+      <div class="card">
+        <span class="tag">READER 02</span>
+        <h4>带团队的管理者</h4>
+        <p>吉姆教练的做法演示了如何不靠打鸡血提升团队：改流程、给反馈、庆祝微小胜利，让循环自己转。</p>
+        <div class="take"><b>带走：</b>一套可复制的"环境设计"激励法。</div>
+      </div>
+      <div class="card">
+        <span class="tag">READER 03</span>
+        <h4>厌倦了大道理的行动派</h4>
+        <p>篇幅短、寓言体、方法硬。五步协议与早晚清单可以直接搬进日程表，明天早上就能开始第一轮。</p>
+        <div class="take"><b>带走：</b>一份今天就能执行的五步协议。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="final-quote">"卓越不是另一座山峰，它只是你脚下这条路——<em>每天被多走对了 1%</em>——延伸出去之后的样子。"</div>
+    <div class="final-side">
+      <b>如果只带走一个核心：</b>
+      <p>不要问"我怎样才能一下子变得很优秀"，改问"在哪一件事上，我明天能比今天多对 1%"。找到它，先做两分钟，记录下来，庆祝它，然后把剩下的一切交给循环与时间。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <strong>The 1% Solution for Work and Life · Tom Connellan</strong>
+    <span>Margin · Leverage · Momentum · Compounding</span>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>

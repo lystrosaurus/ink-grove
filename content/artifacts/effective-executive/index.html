@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卓有成效的管理者｜Executive Effectiveness OS</title>
+<style>
+:root{
+  --bg:#eceff1;--paper:#f8faf9;--ink:#1d2627;--muted:#6b7778;--line:#d5dcdd;
+  --teal:#356d68;--teal2:#6b9c91;--navy:#2c3d4b;--amber:#c99a45;--red:#aa5b52;
+  --blue:#5a7488;--mint:#e3efeb;--sand:#eee5d5;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  linear-gradient(rgba(44,61,75,.025) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(44,61,75,.025) 1px,transparent 1px),var(--bg);
+  background-size:28px 28px;color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65
+}
+.wrap{width:min(1460px,95vw);margin:22px auto 56px}
+.app{background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 70px rgba(40,53,57,.12)}
+.topbar{
+  padding:11px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;
+  font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700
+}
+.hero{display:grid;grid-template-columns:1.22fr .78fr;min-height:575px;border-bottom:1px solid var(--line)}
+.hero-main{padding:48px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";position:absolute;right:-120px;bottom:-130px;width:430px;height:430px;border-radius:50%;
+  border:1px solid rgba(53,109,104,.15);box-shadow:0 0 0 60px rgba(53,109,104,.03),0 0 0 120px rgba(53,109,104,.015)
+}
+.kicker{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--teal)}
+h1{font-size:clamp(58px,7.5vw,106px);line-height:.92;letter-spacing:-.055em;margin:18px 0 16px}
+.en{font-size:16px;letter-spacing:.08em;color:var(--blue);margin-bottom:26px}
+.lead{font-size:23px;max-width:850px;color:#3d4848}.lead strong{color:var(--teal)}
+.hero-note{margin-top:28px;padding:20px 22px;border-left:5px solid var(--amber);background:#f0ebe1;max-width:850px}
+.hero-note b{display:block;font-size:20px;margin-bottom:6px}.hero-note span{color:var(--muted)}
+.hero-side{border-left:1px solid var(--line);display:grid;grid-template-rows:repeat(5,1fr)}
+.mode{padding:22px;border-bottom:1px solid var(--line)}.mode:last-child{border-bottom:0}
+.mode .n{font-size:9px;letter-spacing:.13em;font-weight:800}.mode strong{display:block;font-size:24px;margin:5px 0}.mode span{font-size:12px}
+.mode:nth-child(1){background:var(--navy);color:white}.mode:nth-child(1) span{color:#cad3d6}
+.mode:nth-child(2){background:#e0ece8}.mode:nth-child(3){background:#eee5d6}
+.mode:nth-child(4){background:#e4e9ee}.mode:nth-child(5){background:#aa5b52;color:white}.mode:nth-child(5) span{color:#eddad7}
+
+.section{padding:34px 38px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}
+.section-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:22px}
+.section h2{font-size:33px;margin:4px 0 0}.section-head p{max-width:650px;margin:0;color:var(--muted)}
+
+.boot{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.boot-card{padding:20px;border:1px solid var(--line);background:white;min-height:200px;position:relative}
+.boot-card:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--teal)}
+.boot-card:nth-child(2):before{background:var(--blue)}.boot-card:nth-child(3):before{background:var(--amber)}.boot-card:nth-child(4):before{background:var(--red)}
+.boot-card .id{font-size:9px;letter-spacing:.12em;color:var(--muted);font-weight:800}
+.boot-card h3{font-size:20px;margin:10px 0}.boot-card p{font-size:13px;color:var(--muted);margin:0}
+
+.time-os{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}
+.clock{background:var(--navy);color:white;padding:28px;min-height:360px;position:relative;overflow:hidden}
+.clock:after{content:"24";position:absolute;right:10px;bottom:-55px;font-size:190px;font-weight:900;color:rgba(255,255,255,.04)}
+.clock .kicker{color:#a8cbc4}.clock strong{display:block;font-size:40px;line-height:1.25;margin:14px 0}.clock p{color:#c8d2d3}
+.time-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.t{padding:19px;border:1px solid var(--line);background:white}.t .tag{font-size:9px;letter-spacing:.12em;color:var(--teal);font-weight:800}
+.t b{display:block;font-size:18px;margin:7px 0}.t p{margin:0;color:var(--muted);font-size:13px}
+
+.contrib{display:grid;grid-template-columns:1fr 90px 1fr;gap:12px;align-items:center}
+.box{padding:24px;border:1px solid var(--line);background:white;min-height:250px}
+.box h3{font-size:24px;margin:8px 0}.box p{color:var(--muted)}
+.arrow{text-align:center;font-size:30px;color:var(--amber)}
+.box.out{background:var(--mint)}
+.box .big{font-size:48px;font-weight:900;color:var(--teal);line-height:1;margin-top:18px}
+
+.strengths{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.strength{padding:20px;border:1px solid var(--line);background:white;min-height:210px}
+.strength .n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--teal);font-weight:800;margin-bottom:12px}
+.strength h3{font-size:19px;margin:0 0 8px}.strength p{font-size:13px;color:var(--muted);margin:0}
+
+.priority{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stop,.focus{padding:26px;border:1px solid var(--line);min-height:320px}
+.stop{background:#f2e7e4}.focus{background:#e8f0ed}
+.stop .kicker{color:var(--red)}.focus .kicker{color:var(--teal)}
+.stop h3,.focus h3{font-size:28px;margin:9px 0}
+.stop p,.focus p{color:var(--muted)}
+.rows{display:grid;gap:8px;margin-top:14px}
+.row{padding:10px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.row:first-child{border-top:0}
+
+.decision{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.d{padding:17px;border:1px solid var(--line);background:white;min-height:190px;position:relative}
+.d:not(:last-child):after{content:"→";position:absolute;right:-13px;top:45%;z-index:2;width:18px;height:18px;background:var(--paper);display:grid;place-items:center;color:var(--amber)}
+.d .n{font-size:9px;letter-spacing:.12em;color:var(--teal);font-weight:800}.d b{display:block;font-size:17px;margin:8px 0}.d span{font-size:12px;color:var(--muted)}
+
+.meeting{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.meeting-card{padding:26px;background:var(--navy);color:white;min-height:330px}.meeting-card .kicker{color:#a7cbc4}
+.meeting-card strong{display:block;font-size:34px;line-height:1.3;margin:14px 0}.meeting-card p{color:#c6d0d2}
+.meeting-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m{padding:18px;border:1px solid var(--line);background:white}.m b{font-size:18px}.m span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+
+.os{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.os-card{padding:19px;border:1px solid var(--line);background:white;min-height:200px}
+.os-card .tag{font-size:9px;letter-spacing:.12em;color:var(--teal);font-weight:800}.os-card h3{font-size:19px;margin:8px 0}.os-card p{font-size:12px;color:var(--muted)}
+
+.final{display:grid;grid-template-columns:1.18fr .82fr;gap:14px}
+.final-main{background:var(--navy);color:white;padding:30px}.final-main .kicker{color:#a7cbc4}
+.final-main strong{display:block;font-size:36px;line-height:1.35;margin:12px 0}.final-main p{color:#c7d2d3}
+.final-side{display:grid;gap:9px}.final-card{padding:16px;border:1px solid var(--line);background:white}
+.final-card b{font-size:16px}.final-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+.footer{padding:18px 38px;background:#202a2d;color:#cfd5d3;display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.08em}
+.footer a{color:#9fd0c1;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.time-os,.meeting,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .boot,.strengths{grid-template-columns:1fr 1fr}.decision{grid-template-columns:1fr 1fr}.d:after{display:none!important}.os{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}.hero-side,.boot,.time-grid,.strengths,.priority,.meeting-list,.decision,.os{grid-template-columns:1fr}
+  .contrib{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}
+  .section-head{flex-direction:column;align-items:flex-start}.topbar,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="app">
+
+<div class="topbar">
+  <span>PETER F. DRUCKER · THE EFFECTIVE EXECUTIVE</span>
+  <span>55TH ANNIVERSARY CHINESE TRANSLATION · 2022</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">EXECUTIVE EFFECTIVENESS OPERATING SYSTEM</div>
+    <h1>卓有成效的<br>管理者</h1>
+    <div class="en">THE EFFECTIVE EXECUTIVE · 55 周年新译本</div>
+    <div class="lead">
+      德鲁克讨论的不是“怎样变得更忙”，而是一个更困难的问题：
+      <strong>一个知识工作者，怎样把有限时间、有限注意力和有限资源，转化成真正对组织有意义的成果？</strong>
+    </div>
+    <div class="hero-note">
+      <b>有效不是性格，也不是天赋；有效是一组可以学习的实践。</b>
+      <span>55 周年新译本由辛弘翻译、机械工业出版社 2022 年出版，并增加“有效管理者是由什么造就的”等内容。citeturn416352search0turn416352search6</span>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="mode"><div class="n">PRACTICE 01</div><strong>认识时间</strong><span>先记录，再诊断，最后集中可自由支配的时间。</span></div>
+    <div class="mode"><div class="n">PRACTICE 02</div><strong>聚焦贡献</strong><span>从“我要做什么”转向“组织需要我贡献什么”。</span></div>
+    <div class="mode"><div class="n">PRACTICE 03</div><strong>发挥长处</strong><span>让人的优势成为组织成果，而不是执着于修补所有弱点。</span></div>
+    <div class="mode"><div class="n">PRACTICE 04</div><strong>要事优先</strong><span>不是同时做很多事，而是集中力量完成最重要的事。</span></div>
+    <div class="mode"><div class="n">PRACTICE 05</div><strong>有效决策</strong><span>识别真正问题，建立边界条件，听取不同意见，并落实行动。</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · BOOT SEQUENCE</div>
+      <h2>55 周年新译本的开机流程：管理者先做四件事</h2>
+    </div>
+    <p>新版引言把有效管理者的行为进一步压缩为四个入口：获得必需知识、制订行动计划、行动，以及用“我们”来思考和说话。citeturn416352search1turn416352search9</p>
+  </div>
+
+  <div class="boot">
+    <div class="boot-card"><div class="id">BOOT 01</div><h3>获得必需的知识</h3><p>先弄清组织需要什么、现实发生了什么，而不是立即沉入任务。</p></div>
+    <div class="boot-card"><div class="id">BOOT 02</div><h3>制订行动计划</h3><p>把知识转化成清楚的行动意图，同时保持计划可调整。</p></div>
+    <div class="boot-card"><div class="id">BOOT 03</div><h3>行动</h3><p>有效性最终要表现为结果；计划如果不能进入执行，就没有组织价值。</p></div>
+    <div class="boot-card"><div class="id">BOOT 04</div><h3>用“我们”思考</h3><p>管理者的产出依赖组织，因此沟通、责任和整体贡献必须超越个人表现。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · TIME OS</div>
+      <h2>时间不是资源之一，它是其他所有资源的容器</h2>
+    </div>
+    <p>第 2 章从“认识你的时间”展开：记录时间、诊断时间、消除浪费，并把零碎时间集中成可以真正完成工作的整块时间。citeturn416352search1turn416352search3</p>
+  </div>
+
+  <div class="time-os">
+    <div class="clock">
+      <div class="kicker">TIME IS THE LIMIT</div>
+      <strong>先别问：<br>“我该如何安排时间？”</strong>
+      <p>先问：我的时间实际上花到哪里去了？德鲁克的方法从观察事实开始，而不是从漂亮日程表开始。</p>
+    </div>
+
+    <div class="time-grid">
+      <div class="t"><div class="tag">RECORD</div><b>记录</b><p>记录真实时间使用，而不是依赖记忆和感觉。</p></div>
+      <div class="t"><div class="tag">DIAGNOSE</div><b>诊断</b><p>找出重复、协调不良、低价值会议和可以授权的工作。</p></div>
+      <div class="t"><div class="tag">ELIMINATE</div><b>清除浪费</b><p>真正高效不是把无效活动做快，而是停止做不应做的事。</p></div>
+      <div class="t"><div class="tag">CONSOLIDATE</div><b>集中</b><p>把碎片时间聚合成长块，才能完成真正需要思考和判断的工作。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · CONTRIBUTION</div>
+      <h2>有效管理者的视角：从“我的任务”转向“我的贡献”</h2>
+    </div>
+    <p>第 3 章直接以“我能做出什么贡献”为中心，并延伸到专才如何产生组织价值、人际关系与有效会议。citeturn416352search1turn416352search10</p>
+  </div>
+
+  <div class="contrib">
+    <div class="box">
+      <div class="kicker">INPUT VIEW</div>
+      <h3>任务视角</h3>
+      <p>我完成了多少邮件、会议、汇报、协调和项目？</p>
+      <div class="big">BUSY</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box out">
+      <div class="kicker">OUTPUT VIEW</div>
+      <h3>贡献视角</h3>
+      <p>这些工作真正改变了什么？谁因此能做得更好？组织因此获得了什么结果？</p>
+      <div class="big">RESULT</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · STRENGTHS</div>
+      <h2>组织的任务，不是消灭弱点，而是让长处产生结果</h2>
+    </div>
+    <p>第 4 章围绕“让长处富有成效”，包括用人所长、管理上级和让自己有效。citeturn416352search1turn416352search7</p>
+  </div>
+
+  <div class="strengths">
+    <div class="strength"><div class="n">1</div><h3>用人所长</h3><p>岗位设计要让人的优势有机会转化为成果，而不是寻找不存在的“完美员工”。</p></div>
+    <div class="strength"><div class="n">2</div><h3>让弱点变得无关紧要</h3><p>不是所有短板都值得修复；关键是避免弱点妨碍职责，并放大真正优势。</p></div>
+    <div class="strength"><div class="n">3</div><h3>管理上级</h3><p>理解上级的工作方式、长处和信息需求，让上下级关系成为成果系统的一部分。</p></div>
+    <div class="strength"><div class="n">4</div><h3>认识自己</h3><p>知道自己如何工作、如何学习、在哪里表现最好，是自我管理的基础。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · FIRST THINGS FIRST</div>
+      <h2>要事优先，本质上是有勇气决定“不做什么”</h2>
+    </div>
+    <p>第 5 章不仅讨论优先任务，也专门讨论“抛弃昨天”和延迟任务。德鲁克把优先排序理解为选择，而不是简单排日程。citeturn416352search1turn416352search4</p>
+  </div>
+
+  <div class="priority">
+    <div class="stop">
+      <div class="kicker">STOP DOING</div>
+      <h3>抛弃昨天</h3>
+      <p>昨天成功的项目、流程和产品会持续索取资源。没有主动停止，真正重要的新工作就永远得不到资源。</p>
+      <div class="rows">
+        <div class="row">已经失去意义但仍“因为一直这样做”而存在的工作</div>
+        <div class="row">不能继续产生贡献的项目</div>
+        <div class="row">只有管理者本人舍不得放手的任务</div>
+      </div>
+    </div>
+    <div class="focus">
+      <div class="kicker">FOCUS</div>
+      <h3>一次只做最重要的事</h3>
+      <p>知识工作最稀缺的不是任务，而是持续注意力。优先级意味着真正集中资源，而不是把十个项目同时称为“最高优先”。</p>
+      <div class="rows">
+        <div class="row">选择未来，而不是维护过去</div>
+        <div class="row">选择机会，而不是只处理问题</div>
+        <div class="row">选择有意义的挑战，而不是安全的小事</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · DECISION ENGINE</div>
+      <h2>有效决策：不是快速拍板，而是把问题想到可以行动</h2>
+    </div>
+    <p>第 6、7 章集中讨论决策要素与有效决策，其中包括识别问题性质、边界条件、正确方案、行动，以及用事实反馈检验结果；书中也强调不同意见对有效决策的重要性。citeturn416352search1turn416352search4</p>
+  </div>
+
+  <div class="decision">
+    <div class="d"><div class="n">01</div><b>识别问题</b><span>这是一次性事件，还是反映了更一般性的系统问题？</span></div>
+    <div class="d"><div class="n">02</div><b>定义边界</b><span>一个可接受方案必须满足哪些条件？</span></div>
+    <div class="d"><div class="n">03</div><b>先找正确答案</b><span>不要一开始就为了妥协而削弱问题定义。</span></div>
+    <div class="d"><div class="n">04</div><b>制造不同意见</b><span>不同意见提供备选方案，也迫使决策者检查自己的假设。</span></div>
+    <div class="d"><div class="n">05</div><b>变成行动</b><span>谁负责？何时执行？谁需要知道？需要改变什么工作方式？</span></div>
+    <div class="d"><div class="n">06</div><b>反馈验证</b><span>回到现实世界，检查决策是否产生预期结果。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · MEETING AS OUTPUT</div>
+      <h2>会议不是占用日历的事件，而是一个必须产生结果的工作单元</h2>
+    </div>
+  </div>
+
+  <div class="meeting">
+    <div class="meeting-card">
+      <div class="kicker">EFFECTIVE MEETING</div>
+      <strong>开会之前，先回答：<br>“这次会议要产生什么贡献？”</strong>
+      <p>如果目标不明确，会议会自然扩张并消耗组织时间。有效会议需要明确目的、参与者、结论和行动责任。</p>
+    </div>
+    <div class="meeting-list">
+      <div class="m"><b>目的明确</b><span>信息分享、讨论、决策或行动协调，不要混在一起。</span></div>
+      <div class="m"><b>正确参与者</b><span>不是越多人越好，而是让真正需要贡献的人参与。</span></div>
+      <div class="m"><b>结论可行动</b><span>会议结束时必须知道下一步是什么。</span></div>
+      <div class="m"><b>责任清楚</b><span>明确谁负责、何时完成、谁需要被通知。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">08 · EXECUTIVE OS</div>
+      <h2>把整本书压缩成五个管理动作</h2>
+    </div>
+  </div>
+
+  <div class="os">
+    <div class="os-card"><div class="tag">01 · TIME</div><h3>管理时间</h3><p>记录、诊断、清除浪费、集中可支配时间。</p></div>
+    <div class="os-card"><div class="tag">02 · CONTRIBUTION</div><h3>聚焦贡献</h3><p>用组织成果而不是个人忙碌定义工作价值。</p></div>
+    <div class="os-card"><div class="tag">03 · STRENGTH</div><h3>发挥长处</h3><p>让自己和他人的优势成为生产力。</p></div>
+    <div class="os-card"><div class="tag">04 · PRIORITY</div><h3>要事优先</h3><p>集中资源，并主动停止不能创造未来的事情。</p></div>
+    <div class="os-card"><div class="tag">05 · DECISION</div><h3>有效决策</h3><p>定义问题、形成不同意见、落实行动、用反馈检验。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE DRUCKER OS</div>
+      <strong>管理者真正需要管理的，首先不是别人，而是自己的时间、注意力、优势、优先级和判断。</strong>
+      <p>当这些东西被组织起来，个人能力才会转化为组织贡献。德鲁克所谓“卓有成效”，本质不是效率最大化，而是持续把正确的资源放在正确的事情上，并让结果发生。</p>
+    </div>
+    <div class="final-side">
+      <div class="final-card"><b>① Effectiveness can be learned</b><span>有效是一组实践，而不是天生人格。citeturn416352search0turn416352search10</span></div>
+      <div class="final-card"><b>② Time before task</b><span>先认识真实时间，再谈时间管理。</span></div>
+      <div class="final-card"><b>③ Contribution before activity</b><span>衡量工作价值看结果，不看忙碌程度。</span></div>
+      <div class="final-card"><b>④ Strength before weakness</b><span>组织存在的意义之一，就是让长处生产成果。</span></div>
+      <div class="final-card"><b>⑤ Priority requires courage</b><span>真正的优先级总意味着有些事情明确不做。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>PETER F. DRUCKER · THE EFFECTIVE EXECUTIVE · 55 周年新译本 · 辛弘译 · 机械工业出版社 · 2022</span>
+  <span><a href="https://books.google.com/books/about/%E5%8D%93%E6%9C%89%E6%88%90%E6%95%88%E7%9A%84%E7%AE%A1%E7%90%86%E8%80%85.html?id=0cxQzwEACAAJ" target="_blank">PUBLIC BOOK REFERENCE</a></span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

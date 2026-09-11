@@ -33,6 +33,8 @@ export default function ArtifactView({ artifact }) {
   const [focus, setFocus] = useState(false)
   const [visible, setVisible] = useState(true)
   const [panel, setPanel] = useState(null)
+  const [reference, setReference] = useState(null)
+  const pendingReference = useRef(null)
   const [progress, setProgress] = useState(garden.visits[artifact.id]?.progress || 0)
   const initialProgress = useRef(progress)
   const latestProgress = useRef(progress)
@@ -78,6 +80,8 @@ export default function ArtifactView({ artifact }) {
     recordVisit(artifact.id, initialProgress.current)
     wake()
     const keyAction = (key) => {
+      pendingReference.current = null
+      setReference(null)
       if (key.toLowerCase() === 'f') {
         setFocus((value) => !value)
         setPanel(null)
@@ -109,10 +113,36 @@ export default function ArtifactView({ artifact }) {
       )
         return
       const data = event.data
+      if (
+        data.type === 'ink-grove:reference' &&
+        !pendingReference.current &&
+        typeof data.href === 'string' &&
+        data.href.length <= 4096 &&
+        navigator.userActivation?.isActive
+      ) {
+        try {
+          const reference = new URL(data.href)
+          if (
+            ['http:', 'https:'].includes(reference.protocol) &&
+            !reference.username &&
+            !reference.password &&
+            reference.origin !== window.location.origin
+          ) {
+            const target = { href: reference.href, hostname: reference.hostname }
+            pendingReference.current = target
+            setReference(target)
+            setPanel('reference')
+          }
+        } catch {}
+      }
       if (data.type === 'ink-grove:ready') restore()
       if (data.type === 'ink-grove:pointer') wake()
       if (data.type === 'ink-grove:progress' && restored.current) onProgress(data.progress)
-      if (data.type === 'ink-grove:keydown' && ['f', 'F', 'Escape'].includes(data.key))
+      if (
+        !pendingReference.current &&
+        data.type === 'ink-grove:keydown' &&
+        ['f', 'F', 'Escape'].includes(data.key)
+      )
         keyAction(data.key)
     }
     const flush = () => recordVisit(artifact.id, latestProgress.current)
@@ -386,13 +416,33 @@ export default function ArtifactView({ artifact }) {
       {panel === 'collection' && (
         <CollectionPicker artifact={artifact} onClose={() => setPanel(null)} />
       )}
+      {panel === 'reference' && reference && (
+        <Modal
+          title="参考资料"
+          description={`继续阅读 ${reference.hostname} 上的来源内容。`}
+          onClose={() => {
+            pendingReference.current = null
+            setReference(null)
+            setPanel(null)
+          }}
+        >
+          <a
+            className="button primary"
+            href={reference.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            打开参考资料 <ArrowUpRight size={16} />
+          </a>
+        </Modal>
+      )}
       {panel === 'share' && (
         <Modal
           title={owned ? '分享你的作品' : '分享这份思想'}
           description={
             owned
               ? '这是保存在当前浏览器的创作。导出作品文件，就能把它带给别人。'
-              : '复制下面的链接，在当前运行此花园的设备上打开。'
+              : '复制作品链接，与他人分享这份思想。'
           }
           onClose={() => setPanel(null)}
         >

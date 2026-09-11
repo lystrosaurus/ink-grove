@@ -1,0 +1,1338 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>清醒行动实验室 · Ink Grove</title>
+    <style>
+      :root {
+        --paper: #f5f7f8;
+        --ink: #162e45;
+        --blue: #205de4;
+        --orange: #df662d;
+        --line: #cbd6df;
+        --muted: #526779;
+        --wash: #e8effa;
+        --white: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          16px/1.75 system-ui,
+          -apple-system,
+          'Segoe UI',
+          'Microsoft YaHei',
+          sans-serif;
+      }
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      button,
+      input,
+      textarea {
+        touch-action: manipulation;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--orange);
+        outline-offset: 4px;
+      }
+      button {
+        border: 1px solid var(--ink);
+        border-radius: 4px;
+        padding: 11px 17px;
+        min-height: 46px;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 650;
+      }
+      button.primary {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: #fff;
+      }
+      button:hover {
+        filter: brightness(0.95);
+      }
+      main {
+        max-width: 1160px;
+        padding: 0 48px 68px;
+        margin: auto;
+      }
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid var(--ink);
+        padding: 23px 0 15px;
+        font:
+          11px/1.5 ui-monospace,
+          Consolas,
+          monospace;
+        letter-spacing: 0.08em;
+      }
+      .brand {
+        font-weight: 800;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 32px;
+        align-items: center;
+        padding: 66px 0 54px;
+      }
+      .eyebrow {
+        color: var(--blue);
+        font:
+          11px/1.6 ui-monospace,
+          Consolas,
+          monospace;
+        letter-spacing: 0.14em;
+        font-weight: bold;
+      }
+      .hero h1 {
+        font-size: clamp(35px, 5.2vw, 62px);
+        letter-spacing: -0.06em;
+        line-height: 1.2;
+        margin: 19px 0 25px;
+        font-weight: 800;
+      }
+      .hero h1 span {
+        display: block;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--blue);
+      }
+      .lead {
+        font-size: 18px;
+        line-height: 1.95;
+        max-width: 530px;
+        color: var(--muted);
+      }
+      .hero nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 23px;
+        margin-top: 29px;
+        font-size: 13px;
+        font-weight: 650;
+      }
+      .instrument {
+        background: #eef3f9;
+        border: 1px solid var(--line);
+        padding: 20px;
+        position: relative;
+        border-radius: 5px;
+      }
+      .instrument svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .instrument-head,
+      .instrument-foot {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font:
+          10px/1.5 ui-monospace,
+          Consolas,
+          monospace;
+        color: var(--muted);
+      }
+      .instrument-foot {
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+      .pin {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background: var(--orange);
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+      .premise {
+        border-top: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 2.2fr;
+        gap: 35px;
+        margin-bottom: 65px;
+      }
+      .premise b {
+        font-size: 16px;
+      }
+      .premise p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section-head {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 15px;
+        align-items: start;
+        margin: 0 0 27px;
+      }
+      .section-number {
+        font:
+          41px/1 ui-monospace,
+          Consolas,
+          monospace;
+        color: var(--blue);
+        letter-spacing: -0.08em;
+      }
+      .section-head h2 {
+        font-size: 28px;
+        line-height: 1.35;
+        margin: 0 0 8px;
+        letter-spacing: -0.04em;
+      }
+      .section-head p {
+        margin: 0;
+        max-width: 680px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .decision-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 30px;
+        align-items: start;
+      }
+      .sheet {
+        padding: 27px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: var(--white);
+      }
+      .sheet-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 23px;
+      }
+      .sheet-top p {
+        margin: 0;
+        color: var(--muted);
+        font:
+          10px ui-monospace,
+          Consolas,
+          monospace;
+        letter-spacing: 0.1em;
+      }
+      .sheet-top button {
+        font-size: 11px;
+        padding: 7px 10px;
+        min-height: 36px;
+        border-color: var(--line);
+      }
+      .field {
+        margin-bottom: 19px;
+      }
+      .field label {
+        display: block;
+        font-size: 13px;
+        font-weight: 750;
+        margin-bottom: 7px;
+      }
+      .field small {
+        display: block;
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 5px;
+      }
+      .field input,
+      .field textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #b5c4d0;
+        border-radius: 3px;
+        background: #fcfdfe;
+        color: var(--ink);
+        padding: 10px 12px;
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      .field textarea {
+        min-height: 85px;
+        resize: vertical;
+      }
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: #778897;
+        opacity: 1;
+      }
+      .field label span {
+        color: var(--muted);
+        font-weight: 400;
+        font-size: 11px;
+      }
+      .checks {
+        border: 0;
+        border-top: 1px dashed var(--line);
+        padding: 19px 0 6px;
+        margin: 24px 0 10px;
+      }
+      .checks legend {
+        font-size: 12px;
+        font-weight: bold;
+        padding-right: 8px;
+      }
+      .checks label {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        margin: 0 0 13px;
+        line-height: 1.65;
+      }
+      .checks input {
+        accent-color: var(--blue);
+        width: 17px;
+        height: 17px;
+        flex: none;
+        margin: 2px 0;
+      }
+      .form-foot {
+        font-size: 11px;
+        color: var(--muted);
+        margin: 11px 0 0;
+      }
+      .card-output {
+        border-top: 4px solid var(--orange);
+        background: #fff;
+        position: relative;
+      }
+      .card-output h3 {
+        font-size: 20px;
+        margin: 8px 0 10px;
+      }
+      .card-output p {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+      .card-output textarea {
+        display: block;
+        width: 100%;
+        min-height: 405px;
+        resize: vertical;
+        border: 1px dashed #bac9d5;
+        border-radius: 3px;
+        padding: 15px;
+        background: #fafbfd;
+        color: var(--ink);
+        font:
+          12px/1.9 ui-monospace,
+          Consolas,
+          'Microsoft YaHei',
+          monospace;
+      }
+      .card-output button {
+        margin-top: 14px;
+      }
+      .card-output button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .card-output [role='status'] {
+        min-height: 25px;
+        margin: 10px 0 0;
+        color: var(--blue);
+      }
+      .margin-note {
+        border-left: 2px solid var(--blue);
+        padding: 3px 0 3px 17px;
+        margin-top: 24px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .margin-note b {
+        color: var(--ink);
+      }
+      .margin-note p {
+        margin: 6px 0;
+      }
+      .lab-section {
+        margin-top: 68px;
+        padding-top: 48px;
+        border-top: 1px solid var(--ink);
+      }
+      .simulation {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 28px;
+      }
+      .controls {
+        background: var(--wash);
+        border: 1px solid #c1d2ef;
+        padding: 25px;
+        border-radius: 5px;
+      }
+      .control {
+        margin-bottom: 26px;
+      }
+      .control label {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 13px;
+        font-weight: 700;
+        gap: 8px;
+      }
+      .control output {
+        font:
+          26px/1.3 ui-monospace,
+          Consolas,
+          monospace;
+        color: var(--blue);
+        white-space: nowrap;
+      }
+      .control input {
+        display: block;
+        accent-color: var(--blue);
+        width: 100%;
+        margin: 19px 0 10px;
+        min-height: 24px;
+      }
+      .control p {
+        font-size: 11px;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.7;
+      }
+      .controls button {
+        font-size: 12px;
+        width: 100%;
+      }
+      .chart-panel {
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 5px;
+        padding: 22px;
+        min-width: 0;
+      }
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .legend span:before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        border-top: 2px solid var(--blue);
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+      .legend span:last-child:before {
+        border-color: var(--orange);
+        border-top-style: dashed;
+      }
+      .chart-panel svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 15px 0 3px;
+      }
+      .chart-panel p {
+        font-size: 11px;
+        color: var(--muted);
+        margin: 5px 0;
+      }
+      .model-reading {
+        font-size: 13px !important;
+        color: var(--ink) !important;
+        border-top: 1px solid var(--line);
+        padding-top: 15px;
+        margin-top: 15px !important;
+      }
+      .model-details {
+        margin-top: 24px;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 15px;
+      }
+      .model-details summary {
+        font-size: 13px;
+        font-weight: 650;
+        cursor: pointer;
+        min-height: 35px;
+      }
+      .model-details p {
+        font-size: 12px;
+        line-height: 1.9;
+        color: var(--muted);
+      }
+      .formula {
+        font:
+          13px/1.8 ui-monospace,
+          Consolas,
+          monospace;
+        overflow-wrap: anywhere;
+        color: var(--blue);
+        background: var(--wash);
+        padding: 12px 16px;
+      }
+      .table-wrap {
+        overflow: auto;
+      }
+      table {
+        border-collapse: collapse;
+        font-size: 12px;
+        width: 100%;
+        font-variant-numeric: tabular-nums;
+      }
+      th,
+      td {
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        white-space: nowrap;
+      }
+      th {
+        font-weight: 650;
+        color: var(--muted);
+      }
+      .bridge {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 26px;
+      }
+      .book-note {
+        padding: 19px 15px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 4px;
+      }
+      .book-note .code {
+        font:
+          10px ui-monospace,
+          Consolas,
+          monospace;
+        color: var(--blue);
+      }
+      .book-note h3 {
+        font-size: 14px;
+        margin: 14px 0 9px;
+        line-height: 1.5;
+      }
+      .book-note p {
+        font-size: 12px;
+        margin: 0;
+        color: var(--muted);
+      }
+      .return-note {
+        margin: 25px 0 0;
+        font-size: 12px;
+        color: var(--muted);
+        max-width: 800px;
+      }
+      .ending {
+        margin-top: 52px;
+        border-top: 1px solid var(--ink);
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 22px;
+        color: var(--muted);
+        font:
+          10px/1.8 ui-monospace,
+          Consolas,
+          'Microsoft YaHei',
+          monospace;
+      }
+      .ending p {
+        margin: 0;
+      }
+      ::selection {
+        background: #f8cfae;
+        color: var(--ink);
+      }
+      @media (max-width: 850px) {
+        main {
+          padding: 0 28px 45px;
+        }
+        .hero {
+          gap: 22px;
+          padding-top: 45px;
+        }
+        .decision-layout {
+          grid-template-columns: 1fr 1fr;
+          gap: 19px;
+        }
+        .sheet {
+          padding: 20px;
+        }
+        .bridge {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .simulation {
+          grid-template-columns: 220px 1fr;
+          gap: 18px;
+        }
+        .controls {
+          padding: 20px;
+        }
+        .chart-panel {
+          padding: 16px;
+        }
+        .section-head h2 {
+          font-size: 25px;
+        }
+      }
+      @media (max-width: 640px) {
+        main {
+          padding: 0 20px 35px;
+        }
+        .masthead {
+          font-size: 9px;
+          align-items: start;
+        }
+        .masthead > span:last-child {
+          text-align: right;
+          max-width: 122px;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 35px 0;
+        }
+        .hero h1 {
+          font-size: 43px;
+          margin: 16px 0 20px;
+        }
+        .lead {
+          font-size: 15px;
+        }
+        .instrument {
+          padding: 16px;
+        }
+        .hero nav {
+          margin-top: 23px;
+        }
+        .premise {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          margin-bottom: 42px;
+          padding: 18px 0;
+        }
+        .premise p {
+          font-size: 12px;
+        }
+        .section-head {
+          grid-template-columns: 43px 1fr;
+          gap: 10px;
+        }
+        .section-number {
+          font-size: 30px;
+        }
+        .section-head h2 {
+          font-size: 23px;
+        }
+        .section-head p {
+          font-size: 12px;
+        }
+        .decision-layout,
+        .simulation {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .sheet {
+          padding: 20px;
+        }
+        .sheet-top {
+          gap: 8px;
+        }
+        .sheet-top p {
+          font-size: 9px;
+        }
+        .sheet-top button {
+          font-size: 10px;
+        }
+        .field input,
+        .field textarea {
+          font-size: 16px;
+        }
+        .card-output textarea {
+          font-size: 12px;
+          min-height: 380px;
+        }
+        .lab-section {
+          margin-top: 42px;
+          padding-top: 33px;
+        }
+        .controls {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          padding: 20px;
+        }
+        .controls button {
+          grid-column: 1/-1;
+        }
+        .control {
+          margin: 0;
+        }
+        .control label {
+          display: block;
+        }
+        .control output {
+          display: block;
+          font-size: 26px;
+          margin-top: 6px;
+        }
+        .control input {
+          margin-top: 11px;
+        }
+        .chart-panel {
+          padding: 16px;
+        }
+        .chart-panel svg {
+          margin-top: 8px;
+        }
+        .bridge {
+          gap: 10px;
+        }
+        .book-note {
+          padding: 15px 13px;
+        }
+        .book-note h3 {
+          font-size: 13px;
+        }
+        .book-note p {
+          font-size: 11px;
+        }
+        .ending {
+          display: block;
+        }
+        .ending p + p {
+          margin-top: 9px;
+        }
+        .model-details table {
+          font-size: 11px;
+        }
+        th,
+        td {
+          padding: 8px 7px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        main {
+          max-width: none;
+          padding: 0;
+        }
+        .hero {
+          padding: 20px 0;
+        }
+        .hero nav,
+        .controls button,
+        .sheet-top button,
+        form button,
+        .card-output button {
+          display: none;
+        }
+        .lab-section {
+          break-inside: avoid;
+        }
+        .card-output textarea {
+          height: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <span class="brand">INK GROVE / FIELD LAB</span
+        ><span>EXPERIMENT NO. 01<br />THINK → TRY → OBSERVE</span>
+      </header>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <div class="eyebrow">一本可以亲手操作的贯通笔记</div>
+          <h1 id="title" aria-label="清醒行动实验室"><span>清醒行动</span><em>实验室</em></h1>
+          <p class="lead">
+            把一个想法放上工作台。<br />让证据与反证相遇，再用一个小行动，换回下一轮判断需要的信息。
+          </p>
+          <nav aria-label="实验导航">
+            <a href="#decision">01 · 制作行动卡 ↗</a><a href="#feedback">02 · 试试反馈延迟 ↗</a>
+          </nav>
+        </div>
+        <aside class="instrument" aria-label="观察、判断、行动的循环示意">
+          <div class="instrument-head">
+            <span><i class="pin"></i>THE WORKBENCH</span><span>OPEN LOOP → CLOSED LOOP</span>
+          </div>
+          <svg
+            viewBox="0 0 400 265"
+            role="img"
+            aria-label="观察进入判断，判断产生行动，结果沿反馈线回到观察"
+          >
+            <defs>
+              <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M20 0H0V20" fill="none" stroke="#d6e0eb" stroke-width=".6" />
+              </pattern>
+              <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0 0L7 3.5L0 7" fill="none" stroke="#205de4" stroke-width="1.3" />
+              </marker>
+            </defs>
+            <rect width="400" height="265" fill="url(#grid)" />
+            <path
+              d="M115 100H150M260 100H292M339 129V206H63V129"
+              fill="none"
+              stroke="#205de4"
+              stroke-width="1.5"
+              marker-end="url(#arrow)"
+            />
+            <rect x="12" y="70" width="101" height="59" rx="2" fill="#fff" stroke="#205de4" />
+            <rect x="151" y="70" width="108" height="59" rx="2" fill="#205de4" />
+            <rect x="292" y="70" width="95" height="59" rx="2" fill="#fff" stroke="#205de4" />
+            <g
+              text-anchor="middle"
+              font-family="system-ui,sans-serif"
+              font-size="15"
+              font-weight="600"
+            >
+              <text x="63" y="106" fill="#205de4">观察</text>
+              <text x="205" y="106" fill="#fff">判断</text>
+              <text x="339" y="106" fill="#205de4">行动</text>
+            </g>
+            <circle cx="205" cy="206" r="22" fill="#df662d" />
+            <text x="205" y="211" text-anchor="middle" fill="#fff" font-size="14">↻</text>
+            <text
+              x="205"
+              y="40"
+              text-anchor="middle"
+              fill="#526779"
+              font-family="monospace"
+              font-size="10"
+            >
+              EVIDENCE IN · ASSUMPTIONS OUT
+            </text>
+            <text
+              x="205"
+              y="254"
+              text-anchor="middle"
+              fill="#526779"
+              font-family="monospace"
+              font-size="10"
+            >
+              FEEDBACK IS THE NEXT INPUT
+            </text>
+          </svg>
+          <div class="instrument-foot">
+            <span>不急着证明自己是对的</span><span>先让想法可以被检验</span>
+          </div>
+        </aside>
+      </section>
+      <div class="premise">
+        <b>四本书，合成一个动作。</b>
+        <p>
+          从《管理决策中的判断》借来反证，从《穷查理宝典》借来逆向检查，从《控制论》借来反馈，从《1%法则》借来足够小的下一步。这里是对站内素材的原创贯通练习，既不打分，也不替你决定。
+        </p>
+      </div>
+      <section id="decision" aria-labelledby="decision-title">
+        <div class="section-head">
+          <div class="section-number" aria-hidden="true">01</div>
+          <div>
+            <h2 id="decision-title">让想法可以被检验</h2>
+            <p>选一件真实的小事。先写下你目前知道什么，再为可能推翻自己的信息留一个位置。</p>
+          </div>
+        </div>
+        <div class="decision-layout">
+          <form class="sheet" id="decision-form">
+            <div class="sheet-top">
+              <p>DECISION FIELD NOTES</p>
+              <button type="button" id="example">填入一个读书会示例</button>
+            </div>
+            <div class="field">
+              <label for="decision-input">正在考虑的决定</label
+              ><input
+                id="decision-input"
+                name="decision"
+                required
+                maxlength="250"
+                placeholder="例如：要不要增加一次讨论？"
+              />
+            </div>
+            <div class="field">
+              <label for="baseline">现状基线 <span>· 可稍后补充</span></label
+              ><input
+                id="baseline"
+                name="baseline"
+                maxlength="300"
+                placeholder="目前怎样？用可核对的观察来描述。"
+              />
+            </div>
+            <div class="field">
+              <label for="evidence">已有证据</label
+              ><textarea
+                id="evidence"
+                name="evidence"
+                required
+                maxlength="1000"
+                placeholder="写事实、时间与来源；把猜测单独标明。"
+              ></textarea
+              ><small>一次鲜明的经历，可以是一条线索，但还不是普遍规律。</small>
+            </div>
+            <div class="field">
+              <label for="counter">最强反证或另一种解释</label
+              ><textarea
+                id="counter"
+                name="counter"
+                required
+                maxlength="1000"
+                placeholder="什么事实会让你改变主意？还有谁的视角缺席？"
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="action">最小可逆行动</label
+              ><textarea
+                id="action"
+                name="action"
+                required
+                maxlength="1000"
+                placeholder="先试哪一步？限制时间、范围或成本，给调整留余地。"
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="review">观察什么，何时复盘</label
+              ><textarea
+                id="review"
+                name="review"
+                required
+                maxlength="1000"
+                placeholder="记录一个信号；约定回看时间，以及何时停止或调整。"
+              ></textarea>
+            </div>
+            <fieldset class="checks">
+              <legend>提交给未来的自己之前</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="check-evidence"
+                />我区分了可核对的事实和自己的推测。</label
+              ><label
+                ><input
+                  type="checkbox"
+                  name="check-inversion"
+                />我想过这一步会怎样失败，以及如何缩小损失。</label
+              ><label
+                ><input
+                  type="checkbox"
+                  name="check-feedback"
+                />我给反馈留了时间，没有要求结果立刻出现。</label
+              >
+            </fieldset>
+            <button class="primary" type="button" id="generate-card">生成我的行动卡</button>
+            <p class="form-foot">内容仅在当前页面暂存。离开或刷新前，请复制行动卡。</p>
+          </form>
+          <aside>
+            <div class="sheet card-output">
+              <div class="eyebrow">TAKE ONE SMALL STEP</div>
+              <h3>给下一轮观察留张便条</h3>
+              <p id="card-help">
+                生成后可直接选中文字复制。这里整理你的原话，不自动补充证据或结论。
+              </p>
+              <label for="action-card" class="eyebrow">可选择复制的行动卡</label
+              ><textarea
+                id="action-card"
+                readonly
+                aria-describedby="card-help"
+                placeholder="你的决定、反证和下一步，将在这里成为一张可带走的行动卡。"
+              ></textarea
+              ><button id="select-card" type="button" disabled>选中行动卡</button>
+              <p id="card-status" role="status" aria-live="polite"></p>
+            </div>
+            <div class="margin-note">
+              <b>逆向检查 ≠ 预先否定自己</b>
+              <p>
+                问“什么会让这一步失败”，是为了设计一个更容易修正的尝试。检查项记录你的思考过程；勾选多少，不代表决策质量或成功概率。
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="lab-section" id="feedback" aria-labelledby="feedback-title">
+        <div class="section-head">
+          <div class="section-number" aria-hidden="true">02</div>
+          <div>
+            <h2 id="feedback-title">同样在努力，为什么会来回摇摆？</h2>
+            <p>
+              拖动旋钮，观察一个简化回路：每一步都朝目标修正，但依据的信息可能已经过时。先增加延迟，再试着减小修正强度。
+            </p>
+          </div>
+        </div>
+        <div class="simulation">
+          <div class="controls">
+            <div class="control">
+              <label for="gain">修正强度 <output id="gain-value" for="gain">0.4</output></label
+              ><input
+                id="gain"
+                type="range"
+                min="0.1"
+                max="1"
+                step="0.1"
+                value="0.4"
+                aria-label="修正强度"
+                aria-describedby="gain-help"
+              />
+              <p id="gain-help">每步修正“观察到的误差”的多少。数值越大，这一步的动作越大。</p>
+            </div>
+            <div class="control">
+              <label for="delay">观察延迟 <output id="delay-value" for="delay">0 步</output></label
+              ><input
+                id="delay"
+                type="range"
+                min="0"
+                max="6"
+                step="1"
+                value="0"
+                aria-label="观察延迟"
+                aria-describedby="delay-help"
+              />
+              <p id="delay-help">0 表示看到当前状态；2 表示仍在根据两步以前的状态调整。</p>
+            </div>
+            <button type="button" id="reset-model">恢复初始实验</button>
+          </div>
+          <div class="chart-panel">
+            <div class="legend"><span>计算状态</span><span>目标 = 1</span></div>
+            <svg
+              id="chart"
+              viewBox="0 0 620 290"
+              role="img"
+              aria-labelledby="chart-title"
+              aria-describedby="chart-description"
+            >
+              <title id="chart-title">延迟反馈示意曲线</title>
+              <desc id="chart-description">曲线与下方表格来自同一递推计算。</desc>
+              <g id="chart-grid"></g>
+              <path
+                id="target-line"
+                fill="none"
+                stroke="#df662d"
+                stroke-width="1.5"
+                stroke-dasharray="6 5"
+              />
+              <path
+                id="response-path"
+                fill="none"
+                stroke="#205de4"
+                stroke-width="2.6"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              />
+              <g id="chart-labels" fill="#526779" font-family="monospace" font-size="10"></g>
+            </svg>
+            <p>横轴：调整步数 · 纵轴：示意状态。纵轴随参数自动调整，请结合数值比较。</p>
+            <p id="model-reading" class="model-reading" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+        <details class="model-details" open>
+          <summary>打开模型的盖子：公式、假设与前六步</summary>
+          <p>
+            目标固定为 1，初始状态为
+            0。每一步，系统把“目标与延迟观测值的差”乘以修正强度，再加到当前状态上。共计算 24 步；第
+            0 步及此前的状态都设为 0。
+          </p>
+          <div class="formula">x[t + 1] = x[t] + g × (1 − x[max(0, t − d)])</div>
+          <p>
+            g = 修正强度，d =
+            观察延迟。这是无噪声、无限制的确定性教学模型；没有现实中的容量、惯性或环境变化。曲线用来帮助理解反馈与延迟，不能据此预测个人成长、投资收益或真实系统的表现。
+          </p>
+          <div class="table-wrap">
+            <table aria-label="反馈模型前六步数值">
+              <thead>
+                <tr>
+                  <th scope="col">步数</th>
+                  <th scope="col">0</th>
+                  <th scope="col">1</th>
+                  <th scope="col">2</th>
+                  <th scope="col">3</th>
+                  <th scope="col">4</th>
+                  <th scope="col">5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="sample-values">
+                  <th scope="row">状态</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <div class="margin-note">
+          <b>把曲线带回行动卡</b>
+          <p>
+            如果某件事的反馈需要一周，是否有必要每天大幅改方案？“何时复盘”不是形式，它决定了你会用什么时点的信息，修正下一步。现实中该等多久，仍要由具体的任务、约束和证据决定。
+          </p>
+        </div>
+      </section>
+      <section class="lab-section" aria-labelledby="sources-title">
+        <div class="section-head">
+          <div class="section-number" aria-hidden="true">↗</div>
+          <div>
+            <h2 id="sources-title">回到四本书，带着一个新问题</h2>
+            <p>
+              下面标明每个练习借用了什么。请从阅读器的作品关联继续阅读对应素材；本页是贯通创作，并非书中原有量表或作者原文。
+            </p>
+          </div>
+        </div>
+        <div class="bridge">
+          <article class="book-note">
+            <div class="code">01 / JUDGMENT</div>
+            <h3>管理决策中的判断</h3>
+            <p>
+              贡献：区分证据与直觉，主动寻找反证。<br /><br />再读时问：有哪些信息一直没有进入我的判断？
+            </p>
+          </article>
+          <article class="book-note">
+            <div class="code">02 / INVERSION</div>
+            <h3>穷查理宝典</h3>
+            <p>
+              贡献：从失败路径倒推，检查自己的理解边界。<br /><br />再读时问：哪一个错误，是我可以提前避免的？
+            </p>
+          </article>
+          <article class="book-note">
+            <div class="code">03 / FEEDBACK</div>
+            <h3>控制论</h3>
+            <p>
+              贡献：让结果返回系统，辨认信号与延迟。<br /><br />再读时问：我现在响应的，究竟是哪一刻的信息？
+            </p>
+          </article>
+          <article class="book-note">
+            <div class="code">04 / SMALL STEPS</div>
+            <h3>1%法则</h3>
+            <p>
+              贡献：记录基线，把模糊目标译成一个小动作。<br /><br />再读时问：今天哪一步足够小，也足够可观察？
+            </p>
+          </article>
+        </div>
+        <p class="return-note">
+          “1%”在这里表示缩小行动范围的提醒，不是恒定增长率。四种视角也不必总是一致：先看问题需要什么，再决定借用哪个工具。
+        </p>
+      </section>
+      <footer class="ending">
+        <p>INK GROVE · 清醒行动实验室<br />基于站内四份阅读素材的 AI 辅助原创贯通 · 2026.09</p>
+        <p>记录事实。保留反证。<br />让下一步，比上一步更容易被看见。</p>
+      </footer>
+    </main>
+    <script>
+      ;(() => {
+        'use strict'
+        const form = document.getElementById('decision-form')
+        const card = document.getElementById('action-card')
+        const status = document.getElementById('card-status')
+        const selectCard = document.getElementById('select-card')
+        const fields = ['decision', 'baseline', 'evidence', 'counter', 'action', 'review']
+        const checks = [
+          ['check-evidence', '事实与推测已区分'],
+          ['check-inversion', '已检查失败路径与可逆性'],
+          ['check-feedback', '已为反馈留出时间'],
+        ]
+        const markEdited = () => {
+          if (card.value) status.textContent = '输入已修改，请重新生成行动卡后再复制。'
+        }
+        form.addEventListener('input', markEdited)
+        function generateCard() {
+          if (!form.reportValidity()) return
+          for (const field of fields.filter((name) => name !== 'baseline')) {
+            const input = form.elements.namedItem(field)
+            if (!input.value.trim()) {
+              input.setCustomValidity('请写下具体内容。')
+              input.reportValidity()
+              input.addEventListener('input', () => input.setCustomValidity(''), { once: true })
+              return
+            }
+          }
+          const value = (name) => form.elements.namedItem(name).value.trim() || '待补充'
+          card.value = [
+            '清醒行动卡 · Ink Grove',
+            '',
+            `正在考虑：${value('decision')}`,
+            '',
+            `现状基线：${value('baseline')}`,
+            '',
+            `已有证据：${value('evidence')}`,
+            '',
+            `反证 / 另一种解释：${value('counter')}`,
+            '',
+            `最小可逆行动：${value('action')}`,
+            '',
+            `观察与复盘：${value('review')}`,
+            '',
+            '我的检查记录：',
+            ...checks.map(
+              ([name, label]) =>
+                `${form.elements.namedItem(name).checked ? '[已检查]' : '[待检查]'} ${label}`,
+            ),
+            '',
+            '这是一份待实践的思考记录，不是正确性或成功概率的证明。',
+          ].join('\n')
+          selectCard.disabled = false
+          status.textContent = '行动卡已更新。可选中后按 Ctrl / ⌘ + C，或长按文本复制。'
+        }
+        document.getElementById('generate-card').addEventListener('click', generateCard)
+        form.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' && event.target.matches('input:not([type="checkbox"])')) {
+            event.preventDefault()
+            generateCard()
+          }
+        })
+        selectCard.addEventListener('click', () => {
+          card.focus()
+          card.select()
+          card.setSelectionRange(0, card.value.length)
+          status.textContent = '已选中全文。按 Ctrl / ⌘ + C，或使用手机的复制菜单。'
+        })
+        document.getElementById('example').addEventListener('click', () => {
+          const values = {
+            decision: '要不要为读书会增加一次周中讨论？',
+            baseline: '过去 3 次周末讨论，6 位成员中各有 2 位带来了笔记。',
+            evidence: '准备笔记的成员说，提前交流问题可能有帮助；尚未询问其他成员。',
+            counter:
+              '准备不足也可能源于时间紧张。额外会议可能增加负担，需要先听听未准备成员的想法。',
+            action: '先邀请愿意参加的成员试 1 次 10 分钟交流，不增加考核；无人需要就取消。',
+            review: '下周五记录自愿参与情况，分别询问是否有帮助、是否增加负担，再决定调整或停止。',
+          }
+          fields.forEach((name) => {
+            form.elements.namedItem(name).value = values[name]
+            form.elements.namedItem(name).setCustomValidity('')
+          })
+          checks.forEach(([name]) => {
+            form.elements.namedItem(name).checked = false
+          })
+          markEdited()
+          if (!card.value)
+            status.textContent = '已填入虚构示例。请按你的真实情况修改，再生成行动卡。'
+        })
+        const gain = document.getElementById('gain')
+        const delay = document.getElementById('delay')
+        const ns = 'http://www.w3.org/2000/svg'
+        function svgElement(tag, attributes, content) {
+          const node = document.createElementNS(ns, tag)
+          Object.entries(attributes).forEach(([name, value]) => node.setAttribute(name, value))
+          if (content !== undefined) node.textContent = content
+          return node
+        }
+        function renderModel() {
+          const g = Number(gain.value),
+            d = Number(delay.value)
+          document.getElementById('gain-value').textContent = g.toFixed(1)
+          document.getElementById('delay-value').textContent = `${d} 步`
+          const values = [0]
+          for (let step = 0; step < 24; step++)
+            values.push(values[step] + g * (1 - values[Math.max(0, step - d)]))
+          const lower = Math.min(0, ...values),
+            upper = Math.max(1, ...values)
+          const padding = (upper - lower) * 0.15
+          const minimum = lower - padding,
+            maximum = upper + padding
+          const x = (step) => 50 + (step / 24) * 550
+          const y = (value) => 248 - ((value - minimum) / (maximum - minimum)) * 222
+          document
+            .getElementById('response-path')
+            .setAttribute(
+              'd',
+              values
+                .map(
+                  (value, step) =>
+                    `${step ? 'L' : 'M'}${x(step).toFixed(2)},${y(value).toFixed(2)}`,
+                )
+                .join(' '),
+            )
+          document.getElementById('target-line').setAttribute('d', `M50,${y(1)}H600`)
+          const grid = document.getElementById('chart-grid'),
+            labels = document.getElementById('chart-labels')
+          grid.replaceChildren()
+          labels.replaceChildren()
+          for (let tick = 0; tick <= 4; tick++) {
+            const value = minimum + ((maximum - minimum) * tick) / 4
+            grid.append(
+              svgElement('path', {
+                d: `M50,${y(value)}H600`,
+                fill: 'none',
+                stroke: '#dfe6ed',
+                'stroke-width': 1,
+              }),
+            )
+            labels.append(
+              svgElement(
+                'text',
+                { x: 42, y: y(value) + 3, 'text-anchor': 'end' },
+                value.toFixed(1),
+              ),
+            )
+            labels.append(
+              svgElement(
+                'text',
+                { x: x(tick * 6), y: 274, 'text-anchor': 'middle' },
+                String(tick * 6),
+              ),
+            )
+          }
+          const sampleRow = document.getElementById('sample-values')
+          ;[...sampleRow.querySelectorAll('td')].forEach((cell) => cell.remove())
+          values.slice(0, 6).forEach((value, step) => {
+            const cell = document.createElement('td')
+            cell.dataset.step = String(step)
+            cell.textContent = value.toFixed(2)
+            sampleRow.append(cell)
+          })
+          const reading = `当前设置：修正强度 ${g.toFixed(1)}，延迟 ${d} 步。第 24 步状态为 ${values[24].toFixed(2)}，目标为 1。`
+          document.getElementById('model-reading').textContent = reading
+          document.getElementById('chart-description').textContent =
+            `${reading} 前六步数值见下方表格。`
+        }
+        gain.addEventListener('input', renderModel)
+        delay.addEventListener('input', renderModel)
+        document.getElementById('reset-model').addEventListener('click', () => {
+          gain.value = '0.4'
+          delay.value = '0'
+          renderModel()
+        })
+        renderModel()
+      })()
+    </script>
+  </body>
+</html>

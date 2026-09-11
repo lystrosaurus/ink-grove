@@ -6,10 +6,10 @@
       "name": "web",
       "root": "app",
       "framework": "vite",
-      "installCommand": "npm install",
+      "installCommand": "npm ci",
       "buildCommand": "npm run build",
       "outputDir": "dist",
-      "prune": true
+      "prune": false
     }
   ]
 }

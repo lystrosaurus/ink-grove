@@ -1,0 +1,79 @@
+.field-lab-invitation {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 44px;
+  margin: 38px 0 64px;
+  padding: 34px 40px;
+  border: 1px solid #ccdce0;
+  border-radius: 8px;
+  background: #edf3f3;
+  color: #35565e;
+}
+.field-lab-copy .eyebrow {
+  color: #50696d;
+}
+.field-lab-copy h2 {
+  margin: 13px 0;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 29px);
+  font-weight: 500;
+}
+.field-lab-copy p {
+  max-width: 470px;
+  margin: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: #50696d;
+}
+.field-lab-copy small {
+  display: block;
+  margin-top: 13px;
+  font-size: 10px;
+  color: #50696d;
+  letter-spacing: 1px;
+}
+.field-lab-illustration {
+  min-width: 0;
+  padding: 22px 0;
+}
+.field-lab-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.field-lab-illustration svg {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+}
+.field-lab-caption {
+  display: block;
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.8;
+  color: #50696d;
+}
+[data-theme='dark'] .field-lab-invitation {
+  background: #203338;
+  border-color: #365057;
+  color: #c7dee0;
+}
+[data-theme='dark'] .field-lab-copy .eyebrow,
+[data-theme='dark'] .field-lab-copy p,
+[data-theme='dark'] .field-lab-copy small,
+[data-theme='dark'] .field-lab-caption {
+  color: #a5bec0;
+}
+@media (max-width: 760px) {
+  .field-lab-invitation {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 26px 23px;
+    margin-bottom: 42px;
+  }
+  .field-lab-illustration {
+    padding: 10px 0 0;
+  }
+}

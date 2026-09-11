@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "clear-thinking-lab",
+  "slug": "clear-thinking-lab",
+  "title": "清醒行动实验室",
+  "subtitle": "让证据、反证与反馈，变成一个可以亲手验证的小行动。",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove · AI 辅助创作",
+  "topics": ["认知", "决策", "行动", "系统"],
+  "concepts": ["判断力", "反馈", "系统思维", "认知偏差", "逆向思考", "微小改进"],
+  "visualStyle": "blueprint-field-laboratory",
+  "related": ["managerial-judgment", "poor-charlies-almanack", "cybernetics", "one-percent-rule"],
+  "connections": [
+    {
+      "target": "managerial-judgment",
+      "type": "derived-from",
+      "concept": "cognitive-bias",
+      "label": "把证据与反证放在同一张行动卡上"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "derived-from",
+      "concept": "inversion",
+      "label": "通过逆向检查缩小试错的代价"
+    },
+    {
+      "target": "cybernetics",
+      "type": "derived-from",
+      "concept": "feedback",
+      "label": "用可调整的示意模型理解反馈延迟"
+    },
+    {
+      "target": "one-percent-rule",
+      "type": "derived-from",
+      "concept": "small-improvements",
+      "label": "从现状基线出发，设计最小可逆行动"
+    }
+  ],
+  "artifact": { "renderer": "html", "src": "/artifacts/clear-thinking-lab/index.html" },
+  "cover": "/artifacts/clear-thinking-lab/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "artifact:managerial-judgment",
+      "artifact:poor-charlies-almanack",
+      "artifact:cybernetics",
+      "artifact:one-percent-rule"
+    ],
+    "derivedFrom": [
+      "managerial-judgment",
+      "poor-charlies-almanack",
+      "cybernetics",
+      "one-percent-rule"
+    ]
+  }
+}

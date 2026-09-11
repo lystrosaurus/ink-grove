@@ -20,6 +20,10 @@ try {
     await page.goto(`http://127.0.0.1:5173${route}`)
     await page.locator('main h1').first().waitFor()
     await page.evaluate(() => document.fonts.ready)
+    await page.locator('img').evaluateAll(async (images) => {
+      for (const image of images) image.loading = 'eager'
+      await Promise.all(images.map((image) => image.decode()))
+    })
     await page.screenshot({ path: `${output}${name}.png`, fullPage: true, animations: 'disabled' })
   }
   await page.goto('http://127.0.0.1:5173/')

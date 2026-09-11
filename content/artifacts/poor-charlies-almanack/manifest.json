@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "poor-charlies-almanack",
+  "slug": "poor-charlies-almanack",
+  "title": "穷查理宝典",
+  "subtitle": "调用多元模型，识别能力边界，先排除可避免的错误",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Charles T. Munger · 查理·芒格 / Peter D. Kaufman 编",
+  "topics": [
+    "决策",
+    "思考",
+    "长期主义"
+  ],
+  "concepts": [
+    "思维模型",
+    "逆向思考",
+    "能力圈",
+    "认知偏差",
+    "激励机制",
+    "复利"
+  ],
+  "visualStyle": "graphite-gold-decision-room",
+  "related": [
+    "great-mental-models",
+    "managerial-judgment",
+    "naval-almanack",
+    "rockefeller-wealth-archive"
+  ],
+  "connections": [
+    {
+      "target": "great-mental-models",
+      "type": "extends",
+      "concept": "mental-models",
+      "label": "把跨学科模型接成一组可反复调用的决策过滤器"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "cognitive-bias",
+      "label": "把心理误判检查落实到具体决策流程"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "compounding",
+      "label": "比较知识、信誉与关系中的长期积累"
+    },
+    {
+      "target": "rockefeller-wealth-archive",
+      "type": "related",
+      "concept": "incentives",
+      "label": "用激励与组织视角观察财富形成及其争议"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/poor-charlies-almanack/index.html"
+  },
+  "cover": "/artifacts/poor-charlies-almanack/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/poor_charlies_almanack_decision_room.html"
+    ],
+    "derivedFrom": []
+  }
+}

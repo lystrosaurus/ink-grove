@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "peter-lynch-stock-scout",
+  "slug": "peter-lynch-stock-scout",
+  "title": "彼得·林奇的成功投资",
+  "subtitle": "从生活线索走向公司分类、财务核对与持续跟踪",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Peter Lynch / John Rothchild",
+  "topics": [
+    "投资",
+    "商业",
+    "研究"
+  ],
+  "concepts": [
+    "假设验证",
+    "内在价值",
+    "判断力",
+    "能力圈"
+  ],
+  "visualStyle": "olive-stock-research-board",
+  "related": [
+    "buffett-shareholder-letters",
+    "intelligent-investor",
+    "managerial-judgment",
+    "poor-charlies-almanack"
+  ],
+  "connections": [
+    {
+      "target": "buffett-shareholder-letters",
+      "type": "related",
+      "concept": "intrinsic-value",
+      "label": "共同把股票放回企业经营与购买价格之中观察"
+    },
+    {
+      "target": "intelligent-investor",
+      "type": "related",
+      "concept": "margin-of-safety",
+      "label": "比较公司成长研究与价值防御的不同关注点"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "applies",
+      "concept": "hypothesis-testing",
+      "label": "让公司故事接受反证与数据的持续核对"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "circle-of-competence",
+      "label": "从能够理解的业务出发，辨认知识与判断的边界"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/peter-lynch-stock-scout/index.html"
+  },
+  "cover": "/artifacts/peter-lynch-stock-scout/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/peter_lynch_stock_scout.html"
+    ],
+    "derivedFrom": []
+  }
+}

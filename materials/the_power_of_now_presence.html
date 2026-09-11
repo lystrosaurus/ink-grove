@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>当下的力量｜The Power of Now</title>
+<style>
+:root{
+  --bg:#eef1eb;
+  --paper:#f8f7f1;
+  --ink:#26312d;
+  --muted:#7a847f;
+  --line:#d8ddd7;
+  --sage:#819b8b;
+  --deep:#395148;
+  --sand:#d8c6a6;
+  --mist:#e6ece8;
+  --rose:#cba8a0;
+  --white:#fffefa;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 18% 8%,rgba(255,255,255,.9),transparent 28%),
+    radial-gradient(circle at 82% 18%,rgba(129,155,139,.08),transparent 22%),
+    var(--bg);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  line-height:1.8;
+}
+.wrap{width:min(1360px,94vw);margin:24px auto 58px}
+.page{
+  background:rgba(248,247,241,.94);
+  border:1px solid var(--line);
+  box-shadow:0 25px 70px rgba(50,65,58,.10);
+  overflow:hidden;
+}
+.top{
+  display:flex;justify-content:space-between;gap:18px;
+  padding:14px 20px;border-bottom:1px solid var(--line);
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.15em;color:var(--muted)
+}
+.hero{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  min-height:620px;border-bottom:1px solid var(--line)
+}
+.hero-copy{padding:54px;display:flex;flex-direction:column;justify-content:center}
+.kicker{
+  font-family:Arial,sans-serif;font-size:11px;letter-spacing:.2em;font-weight:800;color:var(--sage)
+}
+h1{
+  font-size:clamp(64px,9vw,126px);
+  line-height:.9;letter-spacing:-.055em;margin:18px 0 16px
+}
+.en{
+  font-family:Arial,sans-serif;font-size:17px;letter-spacing:.12em;color:var(--deep);
+  margin-bottom:28px
+}
+.lead{font-size:24px;max-width:760px;color:#46534e}
+.lead strong{color:var(--deep)}
+.hero-note{
+  margin-top:32px;padding-top:22px;border-top:1px solid var(--line);
+  max-width:790px;color:var(--muted)
+}
+.hero-visual{
+  border-left:1px solid var(--line);
+  display:grid;place-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#edf1ec 0%,#e5ece7 100%)
+}
+.breathe{
+  width:min(420px,70%);
+  aspect-ratio:1;border-radius:50%;
+  display:grid;place-items:center;
+  background:radial-gradient(circle,#fafbf8 0 36%,rgba(255,255,255,.7) 37% 52%,rgba(129,155,139,.16) 53% 70%,rgba(129,155,139,.04) 71%);
+  border:1px solid rgba(129,155,139,.3);
+  animation:breathe 8s ease-in-out infinite;
+  box-shadow:0 0 0 36px rgba(129,155,139,.035),0 0 0 78px rgba(129,155,139,.02);
+}
+@keyframes breathe{
+  0%,100%{transform:scale(.93)}
+  50%{transform:scale(1.03)}
+}
+.breathe-inner{text-align:center}
+.breathe-inner b{display:block;font-size:36px;color:var(--deep)}
+.breathe-inner span{font-size:13px;color:var(--muted)}
+.now{
+  position:absolute;bottom:24px;right:28px;
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.16em;color:var(--muted)
+}
+
+.section{padding:40px 44px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:24px
+}
+.section h2{font-size:34px;margin:4px 0 0}
+.section-head p{max-width:640px;margin:0;color:var(--muted)}
+
+.axis{
+  display:grid;grid-template-columns:1fr 110px 1fr;align-items:stretch;gap:18px
+}
+.side-card{
+  min-height:320px;padding:26px;border:1px solid var(--line);background:var(--white)
+}
+.side-card.past{background:#f0ebe4}
+.side-card.future{background:#edf0f2}
+.side-card .tag{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.15em;font-weight:800;color:var(--muted)
+}
+.side-card h3{font-size:27px;margin:10px 0}
+.side-card p{color:var(--muted)}
+.side-card ul{padding-left:18px;color:var(--muted)}
+.now-column{
+  display:flex;align-items:center;justify-content:center;position:relative
+}
+.now-column:before{
+  content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--sage)
+}
+.now-pill{
+  position:relative;z-index:2;
+  writing-mode:vertical-rl;
+  padding:18px 12px;background:var(--deep);color:white;
+  font-family:Arial,sans-serif;font-size:11px;letter-spacing:.16em
+}
+
+.layers{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.layer{
+  padding:22px;border:1px solid var(--line);background:var(--white);min-height:230px
+}
+.layer .n{
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:var(--mist);color:var(--deep);font-family:Arial,sans-serif;font-weight:800
+}
+.layer h3{margin:14px 0 8px;font-size:21px}
+.layer p{margin:0;color:var(--muted);font-size:13px}
+.layer:nth-child(2){background:#f3eee7}
+.layer:nth-child(3){background:#eef3ef}
+.layer:nth-child(4){background:#edf1f4}
+
+.observe{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:14px
+}
+.mind{
+  padding:28px;background:#27312e;color:white;min-height:360px;position:relative;overflow:hidden
+}
+.mind:after{
+  content:"…";
+  position:absolute;right:20px;bottom:-80px;font-size:220px;color:rgba(255,255,255,.035)
+}
+.mind .kicker{color:#a9c5b4}
+.mind strong{display:block;font-size:36px;line-height:1.35;margin:16px 0}
+.mind p{color:#becbc5}
+.practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.practice{
+  padding:20px;border:1px solid var(--line);background:var(--white)
+}
+.practice .tag{
+  font-family:Arial,sans-serif;font-size:9px;letter-spacing:.13em;color:var(--sage);font-weight:800
+}
+.practice b{display:block;font-size:18px;margin:7px 0}
+.practice p{margin:0;color:var(--muted);font-size:13px}
+
+.pain{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.pain-card{
+  padding:26px;border:1px solid var(--line);min-height:315px
+}
+.pain-card.dark{background:#433c3a;color:white}
+.pain-card.light{background:#efe7e4}
+.pain-card .tag{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.14em;font-weight:800
+}
+.pain-card.dark .tag{color:#d4b9b1}
+.pain-card.light .tag{color:#9f6e64}
+.pain-card h3{font-size:28px;margin:10px 0}
+.pain-card.dark p,.pain-card.dark li{color:#d8cdca}
+.pain-card.light p,.pain-card.light li{color:#72635f}
+.pain-card ul{padding-left:18px}
+
+.surrender{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+}
+.s-card{
+  padding:24px;border:1px solid var(--line);background:var(--white);min-height:220px
+}
+.s-card .sym{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:#e4ece7;color:var(--deep);font-size:20px;margin-bottom:14px
+}
+.s-card b{font-size:20px}
+.s-card p{font-size:13px;color:var(--muted)}
+
+.relationship{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px
+}
+.rel{
+  padding:20px;border-top:4px solid var(--sage);background:var(--white);min-height:205px
+}
+.rel:nth-child(2){border-top-color:var(--sand)}
+.rel:nth-child(3){border-top-color:var(--rose)}
+.rel b{font-size:19px}
+.rel p{color:var(--muted);font-size:13px}
+
+.practice-strip{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:8px
+}
+.micro-practice{
+  padding:18px;border:1px solid var(--line);background:#fbfaf6;min-height:180px
+}
+.micro-practice .n{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.13em;color:var(--deep);font-weight:800
+}
+.micro-practice b{display:block;font-size:18px;margin:9px 0}
+.micro-practice span{font-size:12px;color:var(--muted)}
+
+.final{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:14px
+}
+.final-main{
+  min-height:340px;padding:30px;
+  background:linear-gradient(145deg,#dae5dd,#edf2ee);
+  border:1px solid var(--line)
+}
+.final-main .kicker{color:var(--deep)}
+.final-main strong{
+  display:block;font-size:38px;line-height:1.4;margin:12px 0;color:var(--deep)
+}
+.final-main p{color:#63706a}
+.final-side{display:grid;gap:10px}
+.final-card{
+  padding:18px;border:1px solid var(--line);background:var(--white)
+}
+.final-card b{font-size:17px}
+.final-card span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.footer{
+  padding:18px 38px;display:flex;justify-content:space-between;gap:18px;
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.08em;color:var(--muted)
+}
+.footer a{color:var(--deep);text-decoration:none}
+
+@media(max-width:1000px){
+  .hero,.observe,.pain,.final{grid-template-columns:1fr}
+  .hero-visual{border-left:0;border-top:1px solid var(--line);min-height:500px}
+  .layers,.surrender{grid-template-columns:1fr 1fr}
+  .practice-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero-copy,.section{padding:24px}
+  .axis{grid-template-columns:1fr}
+  .now-column{height:80px}
+  .now-column:before{top:50%;bottom:auto;left:0;right:0;width:auto;height:1px}
+  .now-pill{writing-mode:horizontal-tb}
+  .layers,.practice-grid,.surrender,.relationship,.practice-strip{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .top,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="page">
+
+<div class="top">
+  <span>ECKHART TOLLE · THE POWER OF NOW</span>
+  <span>PRESENCE · EGO · STILLNESS · ACCEPTANCE</span>
+</div>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">A GUIDE TO SPIRITUAL ENLIGHTENMENT</div>
+    <h1>当下的力量</h1>
+    <div class="en">THE POWER OF NOW</div>
+    <div class="lead">
+      这本书不是要求你“想得更好”，而是邀请你发现：
+      <strong>你并不等于脑中持续不断的思维。</strong>
+      当注意力从过去与未来撤回到此刻，人与生活的关系会发生变化。
+    </div>
+    <div class="hero-note">
+      官方介绍将这条路径描述为：离开分析性思维与由思维建构的“自我”，进入对 Being 与当下的直接觉察。书本身采用问答式推进，更像一次持续的引导，而不是理论教材。
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="breathe">
+      <div class="breathe-inner">
+        <b>此刻</b>
+        <span>NOW · BREATHE · NOTICE</span>
+      </div>
+    </div>
+    <div class="now">YOU ARE HERE — NOW</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · TIME & CONSCIOUSNESS</div>
+      <h2>真正折磨人的，往往不是钟表时间，而是“心理时间”</h2>
+    </div>
+    <p>过去以记忆出现，未来以想象出现；两者都只能在此刻被经验。书中的核心练习之一，就是把注意力从心理时间重新拉回当下。</p>
+  </div>
+
+  <div class="axis">
+    <div class="side-card past">
+      <div class="tag">PAST</div>
+      <h3>过去</h3>
+      <p>记忆、遗憾、身份故事、曾经发生过的事。</p>
+      <ul>
+        <li>“我为什么会变成这样？”</li>
+        <li>“那件事本不该发生。”</li>
+        <li>“过去定义了现在的我。”</li>
+      </ul>
+    </div>
+
+    <div class="now-column">
+      <div class="now-pill">NOW / 当下</div>
+    </div>
+
+    <div class="side-card future">
+      <div class="tag">FUTURE</div>
+      <h3>未来</h3>
+      <p>期待、恐惧、焦虑、假想中的某个完成时刻。</p>
+      <ul>
+        <li>“等到……我就会幸福。”</li>
+        <li>“如果发生最坏情况怎么办？”</li>
+        <li>“我必须先解决一切才能放松。”</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · FOUR LAYERS</div>
+      <h2>从思维认同，到 Presence</h2>
+    </div>
+    <p>可以把整本书理解成一条逐层松开的路径：不是摧毁思维，而是不再把思维当成“我”的全部。</p>
+  </div>
+
+  <div class="layers">
+    <div class="layer"><div class="n">01</div><h3>思维</h3><p>脑中持续出现判断、故事、比较、预测和解释。</p></div>
+    <div class="layer"><div class="n">02</div><h3>Ego</h3><p>当我们把这些故事认作“我”，身份就需要持续被维护与证明。</p></div>
+    <div class="layer"><div class="n">03</div><h3>觉察</h3><p>开始注意到：我可以观察一个念头，因此我不必完全等同于这个念头。</p></div>
+    <div class="layer"><div class="n">04</div><h3>Presence</h3><p>注意力落回此刻，感受、身体、空间与生命本身重新变得鲜明。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · WATCH THE THINKER</div>
+      <h2>关键不是“停止思考”，而是开始看见思考</h2>
+    </div>
+  </div>
+
+  <div class="observe">
+    <div class="mind">
+      <div class="kicker">THE THINKING MIND</div>
+      <strong>“如果我不跟着这个念头走，会发生什么？”</strong>
+      <p>书中反复把注意力从思维内容转向“觉察本身”。这种转向让人与念头之间出现一点空间，而空间就是选择的开始。</p>
+    </div>
+
+    <div class="practice-grid">
+      <div class="practice"><div class="tag">PRACTICE 01</div><b>听见脑中的声音</b><p>像听外面的声音一样听自己的念头，不急着判断。</p></div>
+      <div class="practice"><div class="tag">PRACTICE 02</div><b>感受身体内部</b><p>把注意力落到双手、胸口、呼吸、身体内部的生命感。</p></div>
+      <div class="practice"><div class="tag">PRACTICE 03</div><b>注意空隙</b><p>声音之间、念头之间、呼吸之间，都存在短暂的安静。</p></div>
+      <div class="practice"><div class="tag">PRACTICE 04</div><b>回到感官</b><p>真正看、听、触碰眼前，而不是只在脑中描述它。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · PAIN-BODY</div>
+      <h2>“痛苦之身”：过去的情绪如何借现在继续活着</h2>
+    </div>
+    <p>Tolle 用 pain-body 描述一种积累的情绪痛苦模式：它会被事件触发，并通过反应、冲突和新的痛苦继续强化自身。</p>
+  </div>
+
+  <div class="pain">
+    <div class="pain-card dark">
+      <div class="tag">UNCONSCIOUS LOOP</div>
+      <h3>触发 → 认同 → 反应 → 更多痛苦</h3>
+      <p>如果完全认同被触发的情绪，旧有模式就容易接管行为。</p>
+      <ul>
+        <li>一个微小事件触发强烈情绪</li>
+        <li>思维迅速为情绪寻找理由</li>
+        <li>反应制造新的冲突</li>
+        <li>新的痛苦又成为未来的材料</li>
+      </ul>
+    </div>
+
+    <div class="pain-card light">
+      <div class="tag">PRESENCE</div>
+      <h3>看见，而不是继续喂养</h3>
+      <p>改变的入口并不是和情绪搏斗，而是在它出现时保持觉察。</p>
+      <ul>
+        <li>承认：此刻有痛苦存在</li>
+        <li>感受身体中的能量，而不是只讲故事</li>
+        <li>停止把情绪自动变成身份</li>
+        <li>让觉察本身成为“容器”</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · ACCEPTANCE & SURRENDER</div>
+      <h2>接纳，不等于消极；它是先停止和事实争吵</h2>
+    </div>
+    <p>“臣服 / surrender”在书中不是放弃行动，而是先接受此刻已经存在的事实，再从更清醒的位置采取行动。</p>
+  </div>
+
+  <div class="surrender">
+    <div class="s-card"><div class="sym">1</div><b>事实</b><p>此刻已经发生了什么？先把事实和评价分开。</p></div>
+    <div class="s-card"><div class="sym">2</div><b>接纳</b><p>停止在心理上不断要求“现实不应该是这样”。</p></div>
+    <div class="s-card"><div class="sym">3</div><b>行动</b><p>接纳现实之后，仍然可以改变、离开、表达边界或解决问题。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · RELATIONSHIPS</div>
+      <h2>关系，是 Ego 和 Presence 最容易被看见的地方</h2>
+    </div>
+  </div>
+
+  <div class="relationship">
+    <div class="rel"><b>需要对方完成自己</b><p>当关系承担“让我完整”的任务，依赖、控制和恐惧更容易出现。</p></div>
+    <div class="rel"><b>冲突暴露自动模式</b><p>关系中的触发点会让 ego 与 pain-body 变得可见，因此也成为练习 Presence 的现场。</p></div>
+    <div class="rel"><b>从反应到相遇</b><p>当不再只透过自己的心理故事看对方，关系才有机会从投射走向真正的相遇。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · FIVE SMALL DOORS</div>
+      <h2>把《当下的力量》落进一天：五个很小的入口</h2>
+    </div>
+    <p>这本书的实践不要求复杂仪式，关键是反复从自动思维返回直接经验。</p>
+  </div>
+
+  <div class="practice-strip">
+    <div class="micro-practice"><div class="n">01</div><b>三次呼吸</b><span>停止输入，只感受三次完整呼吸。</span></div>
+    <div class="micro-practice"><div class="n">02</div><b>走路时走路</b><span>感受脚底、身体移动、空气和周围声音。</span></div>
+    <div class="micro-practice"><div class="n">03</div><b>情绪命名</b><span>说“这里有焦虑”，而不是“我就是焦虑”。</span></div>
+    <div class="micro-practice"><div class="n">04</div><b>暂停反应</b><span>被触发时，先感受身体，再决定是否回应。</span></div>
+    <div class="micro-practice"><div class="n">05</div><b>问：现在缺什么？</b><span>在真正的此刻，而不是脑中的未来，此刻究竟有什么问题？</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE SYNTHESIS</div>
+      <strong>你不需要抵达“当下”。你一直都在这里；真正离开的，只是注意力。</strong>
+      <p>《当下的力量》试图完成的，不是给思维更多知识，而是让读者亲自体验：在念头、身份和时间故事之外，还存在一种更安静、更直接的存在感。</p>
+    </div>
+
+    <div class="final-side">
+      <div class="final-card"><b>思维不是敌人</b><span>问题在于无意识地与所有思维认同。</span></div>
+      <div class="final-card"><b>当下不是概念</b><span>它只能被直接经验，而不是被未来“实现”。</span></div>
+      <div class="final-card"><b>觉察创造空间</b><span>念头与行动之间出现空间，选择才真正可能。</span></div>
+      <div class="final-card"><b>接纳先于改变</b><span>承认事实，不等于放弃行动。</span></div>
+      <div class="final-card"><b>Presence 是练习</b><span>不是一次顿悟后永久保持，而是一次次回来。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>THE POWER OF NOW · ECKHART TOLLE · A GUIDE TO SPIRITUAL ENLIGHTENMENT</span>
+  <span><a href="https://eckharttolle.com/books/" target="_blank">OFFICIAL BOOK REFERENCE</a></span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

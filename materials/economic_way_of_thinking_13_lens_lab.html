@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>经济学的思维方式 · 第13版｜Economic Lens Lab</title>
+<style>
+:root{
+  --bg:#edf1ee;
+  --paper:#fafbf8;
+  --ink:#1f2926;
+  --muted:#6d7873;
+  --line:#d4ddd8;
+  --green:#356d5a;
+  --mint:#dfeee7;
+  --orange:#d47a43;
+  --sand:#eee2ca;
+  --blue:#4b7184;
+  --yellow:#d2a84b;
+  --red:#b55b50;
+  --charcoal:#263230;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 10% 5%,rgba(53,109,90,.08),transparent 24%),
+    radial-gradient(circle at 90% 10%,rgba(212,122,67,.06),transparent 22%),
+    var(--bg);
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.65;
+}
+.page{
+  width:min(1460px,95vw);
+  margin:22px auto 56px;
+}
+.shell{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(41,54,49,.11);
+}
+.topbar{
+  padding:11px 16px;
+  border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;
+  font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700;
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  min-height:580px;
+  border-bottom:1px solid var(--line);
+}
+.hero-main{
+  padding:48px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-main:after{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  right:-140px;bottom:-120px;
+  border:1px solid rgba(53,109,90,.14);
+  box-shadow:0 0 0 60px rgba(53,109,90,.025),0 0 0 120px rgba(53,109,90,.015);
+}
+.kicker{
+  font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--green);
+}
+h1{
+  font-size:clamp(58px,7.8vw,112px);
+  line-height:.92;
+  letter-spacing:-.055em;
+  margin:18px 0 16px;
+}
+.en{
+  font-size:16px;letter-spacing:.08em;color:var(--blue);margin-bottom:25px;
+}
+.lead{
+  font-size:23px;
+  max-width:820px;
+  color:#3e4a46;
+}
+.lead strong{color:var(--green)}
+.hero-note{
+  margin-top:30px;
+  padding:20px 22px;
+  border-left:5px solid var(--orange);
+  background:#f2ede4;
+  max-width:850px;
+}
+.hero-note b{display:block;font-size:20px;margin-bottom:6px}
+.hero-note span{color:var(--muted)}
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;
+  grid-template-rows:repeat(5,1fr);
+}
+.lens{
+  padding:22px;
+  border-bottom:1px solid var(--line);
+}
+.lens:last-child{border-bottom:0}
+.lens .n{font-size:9px;letter-spacing:.13em;font-weight:800}
+.lens strong{display:block;font-size:24px;margin:5px 0}
+.lens span{font-size:12px}
+.lens:nth-child(1){background:var(--charcoal);color:white}.lens:nth-child(1) span{color:#cbd5d1}
+.lens:nth-child(2){background:#e1eee8}
+.lens:nth-child(3){background:#eee3cc}
+.lens:nth-child(4){background:#e3eaf0}
+.lens:nth-child(5){background:#d78655;color:white}.lens:nth-child(5) span{color:#f3ded2}
+
+.section{
+  padding:34px 38px;
+  border-bottom:1px solid var(--line);
+}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-end;
+  margin-bottom:22px;
+}
+.section h2{font-size:33px;margin:4px 0 0}
+.section-head p{max-width:650px;margin:0;color:var(--muted)}
+
+.lens-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:9px;
+}
+.lens-card{
+  min-height:205px;
+  padding:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  position:relative;
+}
+.lens-card:before{
+  content:"";
+  position:absolute;left:0;top:0;right:0;height:5px;background:var(--green);
+}
+.lens-card:nth-child(2):before{background:var(--orange)}
+.lens-card:nth-child(3):before{background:var(--blue)}
+.lens-card:nth-child(4):before{background:var(--yellow)}
+.lens-card:nth-child(5):before{background:var(--red)}
+.lens-card:nth-child(6):before{background:#72886c}
+.lens-card .id{font-size:9px;letter-spacing:.12em;color:var(--muted);font-weight:800}
+.lens-card h3{font-size:20px;margin:10px 0}
+.lens-card p{font-size:12px;color:var(--muted);margin:0}
+
+.tradeoff{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:14px;
+}
+.choice{
+  background:var(--charcoal);
+  color:white;
+  padding:28px;
+  min-height:360px;
+  position:relative;
+  overflow:hidden;
+}
+.choice:after{
+  content:"↔";
+  position:absolute;right:18px;bottom:-40px;font-size:170px;color:rgba(255,255,255,.045);
+}
+.choice .kicker{color:#a9cfc1}
+.choice strong{
+  display:block;
+  font-size:40px;
+  line-height:1.25;
+  margin:14px 0;
+}
+.choice p{color:#c7d1cd}
+.choice .formula{
+  margin-top:18px;padding:14px;border:1px solid rgba(255,255,255,.18);font-size:14px;
+}
+.trade-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.trade{
+  padding:19px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.trade .tag{
+  font-size:9px;letter-spacing:.12em;color:var(--orange);font-weight:800;
+}
+.trade b{display:block;font-size:18px;margin:7px 0}
+.trade p{font-size:13px;color:var(--muted);margin:0}
+
+.market{
+  display:grid;
+  grid-template-columns:1fr 90px 1fr 90px 1fr;
+  align-items:center;
+  gap:10px;
+}
+.market-node{
+  min-height:190px;
+  padding:20px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.market-node b{display:block;font-size:21px;margin-bottom:8px}
+.market-node p{color:var(--muted);font-size:13px;margin:0}
+.market-arrow{text-align:center;font-size:28px;color:var(--orange)}
+.market-node.price{background:#e5efe9}
+.market-node.price b{color:var(--green)}
+
+.incentives{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+}
+.inc{
+  padding:22px;
+  border:1px solid var(--line);
+  background:#fff;
+  min-height:240px;
+}
+.inc .sym{
+  width:44px;height:44px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--mint);
+  color:var(--green);
+  font-weight:800;
+  margin-bottom:12px;
+}
+.inc h3{font-size:21px;margin:0 0 8px}
+.inc p{font-size:13px;color:var(--muted)}
+.inc:nth-child(2) .sym{background:#f0e4d1;color:#a56d2b}
+.inc:nth-child(3) .sym{background:#e4e9ef;color:var(--blue)}
+
+.unintended{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:14px;
+}
+.cause{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:24px;
+}
+.cause-chain{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:16px;
+}
+.cause-box{
+  padding:16px;border:1px solid var(--line);background:#f6f5f0;min-height:150px
+}
+.cause-box .n{font-size:9px;letter-spacing:.12em;color:var(--red);font-weight:800}
+.cause-box b{display:block;font-size:17px;margin:7px 0}
+.cause-box span{font-size:12px;color:var(--muted)}
+.policy{
+  border:1px solid var(--line);
+  background:#f2e8e4;
+  padding:24px;
+}
+.policy h3{font-size:25px;margin:8px 0}
+.policy p{color:#715e58}
+.policy ul{padding-left:18px;color:#715e58}
+
+.institutions{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.inst{
+  padding:20px;
+  border:1px solid var(--line);
+  background:#fff;
+  min-height:205px;
+}
+.inst .id{font-size:9px;letter-spacing:.12em;color:var(--blue);font-weight:800}
+.inst h3{font-size:19px;margin:8px 0}
+.inst p{font-size:12px;color:var(--muted);margin:0}
+
+.chapter-map{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.chap{
+  padding:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  min-height:185px;
+}
+.chap .n{font-size:9px;letter-spacing:.12em;color:var(--green);font-weight:800}
+.chap h3{font-size:18px;margin:8px 0}
+.chap p{font-size:12px;color:var(--muted);margin:0}
+.chap:nth-child(4n+2){background:#f3eee3}
+.chap:nth-child(4n+3){background:#edf2ef}
+.chap:nth-child(4n){background:#edf0f3}
+
+.questions{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:9px;
+}
+.q{
+  padding:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  min-height:190px;
+}
+.q .n{font-size:9px;letter-spacing:.12em;color:var(--orange);font-weight:800}
+.q b{display:block;font-size:18px;margin:8px 0}
+.q span{font-size:12px;color:var(--muted)}
+
+.final{
+  display:grid;
+  grid-template-columns:1.18fr .82fr;
+  gap:14px;
+}
+.final-main{
+  padding:30px;
+  background:var(--charcoal);
+  color:white;
+}
+.final-main .kicker{color:#a8cdbf}
+.final-main strong{
+  display:block;
+  font-size:36px;
+  line-height:1.35;
+  margin:12px 0;
+}
+.final-main p{color:#c7d1cd}
+.final-side{display:grid;gap:9px}
+.final-card{
+  padding:16px;border:1px solid var(--line);background:#fff
+}
+.final-card b{font-size:16px}
+.final-card span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+
+.footer{
+  padding:18px 38px;
+  background:#202a27;
+  color:#cdd4d0;
+  display:flex;justify-content:space-between;gap:20px;
+  font-size:10px;letter-spacing:.08em;
+}
+.footer a{color:#9fd0bc;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.tradeoff,.unintended,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .lens-grid{grid-template-columns:1fr 1fr 1fr}
+  .chapter-map,.institutions{grid-template-columns:1fr 1fr}
+  .questions{grid-template-columns:1fr 1fr}
+  .market{grid-template-columns:1fr}
+  .market-arrow{transform:rotate(90deg)}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}
+  .hero-side,.lens-grid,.trade-grid,.incentives,.institutions,.chapter-map,.questions,.cause-chain{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .topbar,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="shell">
+
+<div class="topbar">
+  <span>THE ECONOMIC WAY OF THINKING · 13TH EDITION</span>
+  <span>HEYNE · BOETTKE · PRYCHITKO</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">ECONOMIC LENS LAB · THINK LIKE AN ECONOMIST</div>
+    <h1>经济学的<br>思维方式</h1>
+    <div class="en">THE ECONOMIC WAY OF THINKING · 13TH EDITION</div>
+    <div class="lead">
+      这本书真正训练的不是“背经济学名词”，而是一种看世界的方法：
+      <strong>从选择、约束、激励、价格与制度出发，理解陌生人如何在复杂社会中相互协调。</strong>
+    </div>
+    <div class="hero-note">
+      <b>经济学不是一堆结论，而是一副分析现实的镜片。</b>
+      <span>第 13 版延续了全书一贯的方法：用真实生活中的例子训练经济推理，同时专门揭示大众经济直觉中常见的错误。</span>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="lens"><div class="n">LENS 01</div><strong>稀缺</strong><span>资源有限，所以任何选择都伴随放弃。</span></div>
+    <div class="lens"><div class="n">LENS 02</div><strong>机会成本</strong><span>真正的成本，是被放弃的最佳替代方案。</span></div>
+    <div class="lens"><div class="n">LENS 03</div><strong>边际</strong><span>现实中的决定通常发生在“再多一点”或“少一点”的边界。</span></div>
+    <div class="lens"><div class="n">LENS 04</div><strong>激励</strong><span>规则改变收益与成本，人就会调整行为。</span></div>
+    <div class="lens"><div class="n">LENS 05</div><strong>制度</strong><span>产权、规则与信息结构塑造社会协作。</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · SIX ECONOMIC LENSES</div>
+      <h2>经济学家看世界的六副镜片</h2>
+    </div>
+    <p>同一个现象，换一副镜片，结论可能完全不同。经济学思维的价值在于持续追问“人会如何调整”。</p>
+  </div>
+
+  <div class="lens-grid">
+    <div class="lens-card"><div class="id">01 · SCARCITY</div><h3>稀缺</h3><p>时间、钱、注意力、土地、劳动都有限，因此“什么都要”不是可执行方案。</p></div>
+    <div class="lens-card"><div class="id">02 · TRADE-OFF</div><h3>取舍</h3><p>每一个选择都有代价；重要的是比较替代方案，而不是只看眼前收益。</p></div>
+    <div class="lens-card"><div class="id">03 · MARGIN</div><h3>边际</h3><p>现实决定往往不是“要不要”，而是“再增加一个单位值不值”。</p></div>
+    <div class="lens-card"><div class="id">04 · INCENTIVES</div><h3>激励</h3><p>人会对规则作出反应，因此政策设计必须考虑行为调整。</p></div>
+    <div class="lens-card"><div class="id">05 · COORDINATION</div><h3>协调</h3><p>价格、利润、亏损和产权把分散知识转化成行动信号。</p></div>
+    <div class="lens-card"><div class="id">06 · INSTITUTIONS</div><h3>制度</h3><p>同一群人在不同规则下，会产生完全不同的社会结果。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · CHOICE IS COST</div>
+      <h2>成本不是账单：成本存在于你放弃的选择里</h2>
+    </div>
+    <p>第 4 章把成本和选择直接联系起来，并特别讨论沉没成本为何与当前选择无关。</p>
+  </div>
+
+  <div class="tradeoff">
+    <div class="choice">
+      <div class="kicker">OPPORTUNITY COST</div>
+      <strong>真正的问题不是：<br>“它花多少钱？”</strong>
+      <p>而是：如果选择它，我放弃的最佳替代方案是什么？</p>
+      <div class="formula">成本 = 你为了这个选择而放弃的最佳机会</div>
+    </div>
+
+    <div class="trade-grid">
+      <div class="trade"><div class="tag">CAREER</div><b>读研还是工作？</b><p>不仅比较学费，还要把放弃的工资、经验和另一条职业路径算进来。</p></div>
+      <div class="trade"><div class="tag">TIME</div><b>今晚再工作两小时？</b><p>边际收益要和睡眠、家庭、学习等被放弃价值比较。</p></div>
+      <div class="trade"><div class="tag">SUNK COST</div><b>已经投入很多，所以继续？</b><p>已经无法收回的成本，不应成为继续投入的理由。</p></div>
+      <div class="trade"><div class="tag">POLICY</div><b>一项政策“免费”吗？</b><p>资源没有消失，只是成本被转移给了别人、未来或其他用途。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · PRICE AS SIGNAL</div>
+      <h2>价格不是标签，而是一种社会协调信号</h2>
+    </div>
+    <p>全书把供给与需求理解为“计划协调过程”：价格变化携带稀缺性与偏好的信息，使彼此陌生的人调整各自计划。</p>
+  </div>
+
+  <div class="market">
+    <div class="market-node">
+      <b>分散知识</b>
+      <p>消费者知道自己的需求；生产者知道自己的成本；任何中央角色都不掌握全部信息。</p>
+    </div>
+    <div class="market-arrow">→</div>
+    <div class="market-node price">
+      <b>价格</b>
+      <p>把许多人的需求、供给、稀缺与替代选择压缩成一个可行动的信号。</p>
+    </div>
+    <div class="market-arrow">→</div>
+    <div class="market-node">
+      <b>相互调整</b>
+      <p>买者减少或增加需求，卖者进入、退出或改变生产，从而让计划不断重新协调。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · INCENTIVES CHANGE BEHAVIOR</div>
+      <h2>规则一变，人不会原地不动</h2>
+    </div>
+  </div>
+
+  <div class="incentives">
+    <div class="inc"><div class="sym">$</div><h3>价格激励</h3><p>价格上涨不仅让消费者少买，也会吸引生产者寻找更多供应、替代品和新技术。</p></div>
+    <div class="inc"><div class="sym">§</div><h3>制度激励</h3><p>税收、补贴、监管、产权与法律改变行为的成本与收益，因此结果常常不同于政策初衷。</p></div>
+    <div class="inc"><div class="sym">?</div><h3>信息激励</h3><p>利润和亏损不仅是收入结果，也是告诉参与者“资源是否被他人更高评价”的信号。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · UNINTENDED CONSEQUENCES</div>
+      <h2>经济学最重要的习惯之一：继续追问“然后呢？”</h2>
+    </div>
+    <p>第 6 章直接以“非预期后果”为主题。一个政策改变规则后，人会调整，因此最终结果可能偏离最初意图。</p>
+  </div>
+
+  <div class="unintended">
+    <div class="cause">
+      <div class="kicker">THINK ONE STEP FURTHER</div>
+      <div class="cause-chain">
+        <div class="cause-box"><div class="n">01</div><b>政策 / 规则</b><span>改变价格、权利、成本或收益。</span></div>
+        <div class="cause-box"><div class="n">02</div><b>行为调整</b><span>个人和企业寻找新的最优选择。</span></div>
+        <div class="cause-box"><div class="n">03</div><b>二阶效应</b><span>供给、需求、投资与交易方式开始变化。</span></div>
+        <div class="cause-box"><div class="n">04</div><b>最终结果</b><span>可能与设计政策时想象的结果完全不同。</span></div>
+      </div>
+    </div>
+
+    <div class="policy">
+      <div class="kicker" style="color:var(--red)">ECONOMIC QUESTION</div>
+      <h3>评价政策，不只看动机。</h3>
+      <p>经济学思维会继续追问：</p>
+      <ul>
+        <li>谁承担成本？</li>
+        <li>谁获得收益？</li>
+        <li>人会如何规避规则？</li>
+        <li>短期与长期反应是否不同？</li>
+        <li>有没有被忽略的替代方案？</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · RULES OF THE GAME</div>
+      <h2>市场并不发生在真空里：规则本身就是经济变量</h2>
+    </div>
+    <p>从第一章开始，本书就把产权称为“游戏规则”，后续又把交易成本、外部性、政府与公共利益带回制度问题。</p>
+  </div>
+
+  <div class="institutions">
+    <div class="inst"><div class="id">PROPERTY RIGHTS</div><h3>产权</h3><p>谁可以使用、转让并承担后果，会直接改变资源配置方式。</p></div>
+    <div class="inst"><div class="id">TRANSACTION COSTS</div><h3>交易成本</h3><p>寻找信息、谈判、监督与执行都需要成本；中间人有时正是在降低这些成本。</p></div>
+    <div class="inst"><div class="id">EXTERNALITIES</div><h3>外部性</h3><p>当行动成本或收益落到交易之外的人身上，权利安排与制度设计就变得关键。</p></div>
+    <div class="inst"><div class="id">GOVERNMENT</div><h3>政府</h3><p>政府可以解决某些协调问题，但政府参与者同样面对信息限制、激励与政治约束。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · THE 16-CHAPTER MAP</div>
+      <h2>第 13 版的完整知识地图</h2>
+    </div>
+    <p>官方第 13 版目录共 16 章，从经济学思维与交换一路延伸到市场、政府、收入、货币、现实政治以及全球化与经济增长。</p>
+  </div>
+
+  <div class="chapter-map">
+    <div class="chap"><div class="n">CH 01</div><h3>经济学的思维方式</h3><p>秩序、社会协作、信号、规则与产权。</p></div>
+    <div class="chap"><div class="n">CH 02</div><h3>效率、交换与比较优势</h3><p>机会成本、专业化、交换与交易成本。</p></div>
+    <div class="chap"><div class="n">CH 03</div><h3>需求</h3><p>替代、边际价值、需求曲线与弹性。</p></div>
+    <div class="chap"><div class="n">CH 04</div><h3>供给</h3><p>成本、选择、沉没成本与边际成本。</p></div>
+    <div class="chap"><div class="n">CH 05</div><h3>供需协调</h3><p>市场作为计划协调过程，价格与知识。</p></div>
+    <div class="chap"><div class="n">CH 06</div><h3>非预期后果</h3><p>把供需逻辑应用到现实政策与行为调整。</p></div>
+    <div class="chap"><div class="n">CH 07</div><h3>利润与亏损</h3><p>企业家、不确定性、利润信号与货币计算。</p></div>
+    <div class="chap"><div class="n">CH 08</div><h3>价格搜索</h3><p>边际收益、定价与价格歧视。</p></div>
+    <div class="chap"><div class="n">CH 09</div><h3>竞争与政府政策</h3><p>市场竞争、规则与政策干预。</p></div>
+    <div class="chap"><div class="n">CH 10</div><h3>外部性与权利冲突</h3><p>污染、拥堵、产权与效率公平。</p></div>
+    <div class="chap"><div class="n">CH 11</div><h3>市场与政府</h3><p>搭便车、公共利益、政治激励与制度限制。</p></div>
+    <div class="chap"><div class="n">CH 12</div><h3>收入分配</h3><p>人力资本、产权、贫困、不平等与再分配。</p></div>
+    <div class="chap"><div class="n">CH 13</div><h3>经济体系绩效</h3><p>GDP、失业、通胀与经济波动。</p></div>
+    <div class="chap"><div class="n">CH 14</div><h3>货币</h3><p>货币演化、银行、中央银行与货币均衡。</p></div>
+    <div class="chap"><div class="n">CH 15</div><h3>经济表现与现实政治</h3><p>萧条、衰退、货币财政政策与政治时间视野。</p></div>
+    <div class="chap"><div class="n">CH 16</div><h3>国富、全球化与增长</h3><p>增长来源、人力资本、产权、自由与全球化。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">08 · FIVE QUESTIONS</div>
+      <h2>遇到任何经济问题，都可以先问这五个问题</h2>
+    </div>
+  </div>
+
+  <div class="questions">
+    <div class="q"><div class="n">Q01</div><b>真正的稀缺是什么？</b><span>不要只看钱，还可能是时间、注意力、信息、土地或组织能力。</span></div>
+    <div class="q"><div class="n">Q02</div><b>机会成本是什么？</b><span>这个选择排除了哪个最好的替代方案？</span></div>
+    <div class="q"><div class="n">Q03</div><b>规则改变后，人会怎么反应？</b><span>不要假设行为不变，激励会重新塑造选择。</span></div>
+    <div class="q"><div class="n">Q04</div><b>价格在告诉我什么？</b><span>价格既是成本，也是关于稀缺、偏好与替代机会的信息。</span></div>
+    <div class="q"><div class="n">Q05</div><b>然后呢？</b><span>继续追踪二阶后果、长期反应以及没有被看见的成本。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE ECONOMIC OS</div>
+      <strong>经济学的思维方式，不是教你只看钱，而是教你看见选择背后的约束、机会成本、激励与制度。</strong>
+      <p>当你开始追问“谁在选择、他面对什么约束、规则改变后会如何调整、成本被转移到哪里、然后还会发生什么”，你就已经开始像经济学家一样思考。</p>
+    </div>
+
+    <div class="final-side">
+      <div class="final-card"><b>① Everything has a trade-off</b><span>没有免费的选择，只有不同方式承担成本。</span></div>
+      <div class="final-card"><b>② Think at the margin</b><span>决定通常发生在多一点或少一点的边缘。</span></div>
+      <div class="final-card"><b>③ Incentives matter</b><span>规则一变，行为就会变。</span></div>
+      <div class="final-card"><b>④ Prices coordinate knowledge</b><span>价格承载分散信息，而不只是标价。</span></div>
+      <div class="final-card"><b>⑤ Institutions shape outcomes</b><span>人不变，规则变，结果也可能完全不同。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>PAUL HEYNE · PETER BOETTKE · DAVID PRYCHITKO · 13TH EDITION</span>
+  <span>
+    <a href="https://www.pearson.com/en-us/subject-catalog/p/Heyne-Economic-Way-of-Thinking-The-13th-Edition/P200000005920/9780137521296" target="_blank">PEARSON</a>
+    &nbsp;·&nbsp;
+    中文版：浙江文艺出版社 · 2023
+  </span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

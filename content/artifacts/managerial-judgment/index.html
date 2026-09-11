@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理决策中的判断｜Judgment in Managerial Decision Making</title>
+<style>
+:root{
+  --aged:#e9e3d2;
+  --paper:#f8f4e7;
+  --paper-2:#f2ecd9;
+  --ink:#232219;
+  --muted:#6f6a59;
+  --line:#cfc6ab;
+  --stamp:#a53824;
+  --stamp-soft:#f2ded6;
+  --slate:#3d5a6c;
+  --slate-soft:#dfe6e9;
+  --brass:#8a6d35;
+  --brass-soft:#efe5c8;
+  --dark:#26251e;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--aged);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(35,34,25,.025) 0 1px, transparent 1px 26px),
+    radial-gradient(700px 460px at 8% 2%, rgba(165,56,36,.07), transparent 70%),
+    radial-gradient(660px 500px at 95% 98%, rgba(61,90,108,.08), transparent 70%);
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,.verdict,.final-quote{font-family:Georgia,"Noto Serif SC","Songti SC",serif;}
+.mono{font-family:"Courier New",ui-monospace,monospace;}
+.page{width:min(1380px,94vw);margin:0 auto;padding:48px 0 40px;}
+.sheet{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:8px;
+  box-shadow:0 26px 70px rgba(35,34,25,.16);
+  overflow:hidden;
+  position:relative;
+}
+/* 装订线 */
+.sheet::before{
+  content:"";
+  position:absolute;left:34px;top:0;bottom:0;width:1px;
+  background:repeating-linear-gradient(180deg, var(--stamp) 0 8px, transparent 8px 18px);
+  opacity:.35;
+  pointer-events:none;
+  z-index:2;
+}
+/* ---------- 印章 ---------- */
+.stamp{
+  display:inline-block;
+  font-family:"Courier New",ui-monospace,monospace;
+  font-weight:700;
+  letter-spacing:.22em;
+  color:var(--stamp);
+  border:3px double var(--stamp);
+  border-radius:6px;
+  padding:8px 18px;
+  transform:rotate(-5deg);
+  opacity:.88;
+  font-size:15px;
+  text-transform:uppercase;
+}
+/* ---------- hero ---------- */
+.hero{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:56px;
+  padding:72px 72px 60px 96px;
+  border-bottom:2px solid var(--ink);
+}
+.eyebrow{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:12px;
+  letter-spacing:.2em;
+  color:var(--stamp);
+  font-weight:700;
+  margin-bottom:24px;
+}
+.hero h1{
+  font-size:clamp(52px,6.2vw,92px);
+  line-height:1.04;
+  letter-spacing:-.03em;
+  margin-bottom:18px;
+}
+.english{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:14px;
+  letter-spacing:.18em;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.author{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:32px;
+  line-height:1.9;
+}
+.author b{color:var(--ink);}
+.lead{
+  font-family:Georgia,"Noto Serif SC","Songti SC",serif;
+  font-size:23px;
+  line-height:1.7;
+  max-width:660px;
+  margin-bottom:34px;
+}
+.lead strong{color:var(--stamp);font-weight:700;}
+.verdict{
+  background:var(--stamp-soft);
+  border:1px solid var(--stamp);
+  border-radius:6px;
+  padding:22px 26px;
+  max-width:660px;
+  position:relative;
+}
+.verdict::before{
+  content:"VERDICT · 判决摘要";
+  position:absolute;
+  top:-11px;left:20px;
+  background:var(--paper);
+  padding:0 10px;
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:10px;
+  letter-spacing:.2em;
+  color:var(--stamp);
+  font-weight:700;
+}
+.verdict b{display:block;font-size:15px;margin-bottom:6px;}
+.verdict span{font-size:13.5px;color:#5c4a44;line-height:1.85;}
+/* hero 侧栏：档案卡 */
+.dossier{
+  align-self:start;
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:26px 26px 22px;
+  transform:rotate(1deg);
+  box-shadow:0 12px 30px rgba(35,34,25,.12);
+  position:relative;
+}
+.dossier .d-head{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;
+  letter-spacing:.18em;
+  color:var(--muted);
+  border-bottom:1px dashed var(--line);
+  padding-bottom:12px;
+  margin-bottom:14px;
+  display:flex;
+  justify-content:space-between;
+}
+.d-row{
+  display:grid;
+  grid-template-columns:88px 1fr;
+  gap:12px;
+  font-size:12.5px;
+  padding:8px 0;
+  border-bottom:1px dotted var(--line);
+}
+.d-row:last-of-type{border-bottom:none;}
+.d-row .k{
+  font-family:"Courier New",ui-monospace,monospace;
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.08em;
+  padding-top:2px;
+}
+.d-row .v b{color:var(--stamp);}
+.dossier .stamp{position:absolute;right:14px;bottom:16px;font-size:12px;padding:6px 12px;}
+.dossier .d-pad{height:54px;}
+/* ---------- sections ---------- */
+.section{padding:60px 72px 56px 96px;border-bottom:1px solid var(--line);}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:48px;
+  margin-bottom:38px;
+}
+.exhibit{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;
+  letter-spacing:.2em;
+  color:var(--brass);
+  font-weight:700;
+  margin-bottom:12px;
+}
+.section-head h2{font-size:29px;line-height:1.25;letter-spacing:-.01em;}
+.section-head p{
+  font-size:13px;color:var(--muted);
+  max-width:340px;line-height:1.85;flex-shrink:0;
+}
+/* 双系统对照 */
+.systems{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sys{
+  border-radius:8px;
+  padding:26px 28px 22px;
+  border:1px solid var(--line);
+}
+.sys-1{background:var(--stamp-soft);border-top:6px solid var(--stamp);}
+.sys-2{background:var(--slate-soft);border-top:6px solid var(--slate);}
+.sys .sys-label{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.2em;font-weight:700;
+  margin-bottom:8px;
+}
+.sys-1 .sys-label{color:var(--stamp);}
+.sys-2 .sys-label{color:var(--slate);}
+.sys h3{font-size:20px;margin-bottom:14px;}
+.sys li{
+  list-style:none;
+  font-size:13px;color:#4d4738;
+  padding:7px 0 7px 22px;
+  position:relative;
+  border-bottom:1px dashed rgba(35,34,25,.15);
+  line-height:1.65;
+}
+.sys li:last-child{border-bottom:none;}
+.sys li::before{position:absolute;left:0;font-family:"Courier New",monospace;}
+.sys-1 li::before{content:"▸";color:var(--stamp);}
+.sys-2 li::before{content:"▹";color:var(--slate);}
+.sys-note{
+  margin-top:22px;
+  border:1px dashed var(--stamp);
+  border-radius:6px;
+  padding:16px 22px;
+  font-size:14px;
+  background:rgba(165,56,36,.05);
+}
+.sys-note b{color:var(--stamp);}
+/* 偏差档案卡 */
+.cases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.case{
+  background:#fffdf5;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:20px 18px 18px;
+  position:relative;
+  box-shadow:0 6px 16px rgba(35,34,25,.07);
+}
+.case:nth-child(odd){transform:rotate(-.4deg);}
+.case:nth-child(even){transform:rotate(.35deg);}
+.case .case-no{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  padding-bottom:8px;
+  margin-bottom:12px;
+}
+.case .case-no .sev{color:var(--stamp);font-weight:700;}
+.case h4{font-size:16px;margin-bottom:2px;}
+.case .en{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:10px;letter-spacing:.12em;color:var(--brass);
+  display:block;margin-bottom:10px;
+}
+.case p{font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:10px;}
+.case .fix{
+  font-size:12px;line-height:1.65;
+  background:var(--brass-soft);
+  border-left:3px solid var(--brass);
+  padding:8px 10px;
+  border-radius:0 4px 4px 0;
+}
+.case .fix b{color:var(--brass);}
+/* 承诺升级：楼梯 */
+.stairs-wrap{
+  background:var(--dark);
+  border-radius:8px;
+  padding:36px 40px 30px;
+  color:#e9e4d0;
+}
+.stairs-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-bottom:26px;gap:24px;flex-wrap:wrap;
+}
+.stairs-head h3{font-size:19px;font-family:Georgia,"Noto Serif SC",serif;}
+.stairs-head .mono{font-size:11px;letter-spacing:.18em;color:#a39c85;}
+.stairs{
+  display:flex;align-items:flex-end;gap:14px;
+  border-bottom:1px solid #57543f;
+  padding-bottom:0;
+}
+.stair{flex:1;text-align:center;}
+.stair .bar{
+  border-radius:4px 4px 0 0;
+  margin:0 auto;
+  width:100%;
+}
+.stair:nth-child(1) .bar{height:34px;background:#7a6c46;}
+.stair:nth-child(2) .bar{height:62px;background:#8f6a41;}
+.stair:nth-child(3) .bar{height:92px;background:#a05a35;}
+.stair:nth-child(4) .bar{height:124px;background:#a84829;}
+.stair:nth-child(5) .bar{height:158px;background:var(--stamp);}
+.stair .amt{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;color:#d8d2ba;
+  padding:8px 0 6px;display:block;
+}
+.stair .lbl{font-size:11px;color:#8f8871;line-height:1.5;display:block;}
+.stairs-cap{
+  margin-top:22px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;
+}
+.stairs-cap .cap-item{font-size:12.5px;color:#b9b298;line-height:1.75;}
+.stairs-cap .cap-item b{color:#e9e4d0;display:block;margin-bottom:4px;font-size:13px;}
+.stairs-cap .cap-item .mono{color:var(--stamp);font-size:10px;letter-spacing:.16em;font-weight:700;}
+/* 有限觉察：聚光灯 */
+.spotlight{
+  background:#22211a;
+  border-radius:8px;
+  height:250px;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:22px;
+}
+.spotlight::before{
+  content:"";
+  position:absolute;
+  left:12%;top:50%;
+  width:420px;height:420px;
+  transform:translateY(-50%);
+  background:radial-gradient(circle, rgba(239,229,200,.28) 0%, rgba(239,229,200,.08) 42%, transparent 68%);
+}
+.spot-tag{
+  position:absolute;
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:10px;letter-spacing:.14em;
+  padding:5px 12px;border-radius:99px;
+  white-space:nowrap;
+}
+.spot-lit{background:#efe5c8;color:#232219;font-weight:700;}
+.spot-dim{background:transparent;color:#7d7663;border:1px dashed #57543f;}
+.spot-note{
+  position:absolute;right:20px;top:16px;
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:10px;letter-spacing:.18em;color:#7d7663;
+}
+.aware-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+/* 审计表 */
+.audit{
+  border:1.5px solid var(--ink);
+  border-radius:6px;
+  background:#fffdf5;
+  overflow:hidden;
+}
+.audit-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 26px;
+  border-bottom:1.5px solid var(--ink);
+  background:var(--paper-2);
+}
+.audit-head .t{font-family:Georgia,"Noto Serif SC",serif;font-size:17px;font-weight:700;}
+.audit-head .mono{font-size:10px;letter-spacing:.18em;color:var(--muted);}
+.audit-row{
+  display:grid;
+  grid-template-columns:46px 1fr 300px;
+  gap:18px;
+  padding:16px 26px;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.audit-row:last-of-type{border-bottom:none;}
+.audit-row .box{
+  width:20px;height:20px;
+  border:1.5px solid var(--ink);
+  border-radius:3px;
+  margin-top:2px;
+}
+.audit-row .q{font-size:14.5px;font-weight:600;line-height:1.6;}
+.audit-row .q .mono{display:block;font-size:10px;color:var(--brass);letter-spacing:.16em;margin-bottom:4px;font-weight:700;}
+.audit-row .why{font-size:12px;color:var(--muted);line-height:1.7;border-left:1px dashed var(--line);padding-left:18px;}
+.audit-sign{
+  display:flex;gap:48px;
+  padding:18px 26px;
+  border-top:1.5px solid var(--ink);
+  background:var(--paper-2);
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:12px;color:var(--muted);
+}
+.audit-sign .line{border-bottom:1px solid var(--muted);min-width:180px;display:inline-block;}
+/* 适合人群 */
+.fit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.fit .case{transform:none;}
+/* 金句带 */
+.quote-band{
+  border-top:1.5px solid var(--ink);
+  border-bottom:1.5px solid var(--ink);
+  background:var(--paper-2);
+  padding:54px 96px;
+  text-align:center;
+  position:relative;
+}
+.quote-band .stamp{position:absolute;top:22px;right:32px;font-size:11px;padding:5px 12px;}
+.quote{
+  font-family:Georgia,"Noto Serif SC","Songti SC",serif;
+  font-size:25px;line-height:1.85;
+  max-width:840px;margin:0 auto;
+}
+.quote em{font-style:normal;color:var(--stamp);}
+.quote-src{
+  margin-top:18px;
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.16em;color:var(--muted);
+}
+/* ---------- final ---------- */
+.final{
+  padding:64px 72px 64px 96px;
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:56px;
+  align-items:center;
+}
+.final-quote{font-size:29px;line-height:1.8;}
+.final-quote em{font-style:normal;color:var(--stamp);}
+.final-side{border-left:1px solid var(--line);padding-left:40px;}
+.final-side b{font-size:14px;letter-spacing:.05em;display:block;margin-bottom:12px;}
+.final-side p{font-size:13px;color:var(--muted);line-height:1.9;}
+/* ---------- footer ---------- */
+.footer{
+  background:var(--dark);
+  color:#e9e4d0;
+  padding:32px 72px 32px 96px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.footer strong{font-size:15px;letter-spacing:.03em;}
+.footer span{
+  font-family:"Courier New",ui-monospace,monospace;
+  font-size:11px;color:#a39c85;letter-spacing:.16em;
+}
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .hero{grid-template-columns:1fr;gap:40px;padding:56px 44px 48px 64px;}
+  .dossier{transform:none;}
+  .section{padding:48px 44px 44px 64px;}
+  .cases{grid-template-columns:repeat(2,1fr);}
+  .aware-grid,.fit{grid-template-columns:repeat(2,1fr);}
+  .stairs-cap{grid-template-columns:1fr;}
+  .audit-row{grid-template-columns:36px 1fr;}
+  .audit-row .why{grid-column:2;border-left:none;padding-left:0;}
+  .final{grid-template-columns:1fr;gap:32px;padding:52px 44px 52px 64px;}
+  .final-side{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:32px;}
+  .quote-band{padding:48px 64px;}
+}
+@media (max-width:720px){
+  .page{width:100%;padding:0;}
+  .sheet{border-radius:0;border-left:none;border-right:none;}
+  .sheet::before{display:none;}
+  .hero,.section,.final,.quote-band{padding-left:32px;padding-right:32px;}
+  .cases,.systems,.aware-grid,.fit{grid-template-columns:1fr;}
+  .section-head{flex-direction:column;align-items:flex-start;gap:18px;}
+  .stairs{gap:8px;}
+  .footer{flex-direction:column;align-items:flex-start;gap:8px;padding:28px 32px;}
+}
+/* Ink Grove: keep all audit signature fields visible instead of clipping them. */
+@media(max-width:1080px){
+  .audit-sign{flex-wrap:wrap;gap:16px 28px}
+  .audit-sign>span{min-width:0;max-width:100%}
+  .audit-sign .line{min-width:140px;max-width:100%}
+}
+@media(max-width:720px){
+  .audit-head{flex-direction:column;align-items:flex-start;gap:8px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="sheet">
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">CASE FILE · ON THE PSYCHOLOGY OF MANAGERIAL JUDGMENT</div>
+      <h1>管理决策<br>中的判断</h1>
+      <div class="english">JUDGMENT IN MANAGERIAL DECISION MAKING</div>
+      <div class="author">
+        <b>Max H. Bazerman 马克斯·巴泽曼</b>（哈佛商学院）· Don A. Moore 唐·摩尔（第 7 版起合著）<br>
+        Wiley · 1986 年首版，已出至第 8 版 ｜ 中译本：人民邮电出版社（第 6 版）；第 8 版中译《哈佛商学院判断与决策心理学课》· 中国青年出版社 · 2020
+      </div>
+      <div class="lead">一本教管理者<strong>先怀疑自己的判断</strong>的教材：在每一次签字、报价与任命背后，都站着一整套可命名、可预测、可审计的系统性偏差。</div>
+      <div class="verdict">
+        <b>判决：理性不是默认值，直觉经不起复核。</b>
+        <span>本书将四十余年判断与决策研究整理成管理者的案头卷宗：双系统如何瓜分你的大脑、八类偏差如何潜入日常决策、承诺升级如何让人越错越投——以及最后，如何用一份"决策审计"在签字之前拦下它们。</span>
+      </div>
+    </div>
+    <div class="dossier">
+      <div class="d-head"><span>DOSSIER · 卷宗</span><span>NO. JMDM-8E</span></div>
+      <div class="d-row"><span class="k">案件类型</span><span class="v">系统性误判（非过失，而是结构）</span></div>
+      <div class="d-row"><span class="k">主要嫌疑人</span><span class="v"><b>System 1</b> —— 快、直觉、从不请假</span></div>
+      <div class="d-row"><span class="k">共犯</span><span class="v">锚定 · 过度自信 · 确认偏误 · 框架 · 沉没成本</span></div>
+      <div class="d-row"><span class="k">证物清单</span><span class="v">8 项系统性偏差（见 EXHIBIT B）</span></div>
+      <div class="d-row"><span class="k">量刑建议</span><span class="v">不可消除，但可审计、可矫正、可设计</span></div>
+      <div class="d-row"><span class="k">社会影响</span><span class="v">查理·芒格公开推崇的误判心理学读本</span></div>
+      <div class="d-pad"></div>
+      <span class="stamp">Bias Confirmed</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT A · TWO SYSTEMS</div>
+        <h2>两位决策者：你的大脑里有一场无声轮班</h2>
+      </div>
+      <p>本书沿用的双系统框架：快系统负责你 95% 的日常判断且从不出错的感觉；慢系统负责复核，但它懒惰、耗能、经常被跳过。问题从不是用了直觉——而是你以为自己在深思。</p>
+    </div>
+    <div class="systems">
+      <div class="sys sys-1">
+        <div class="sys-label">SYSTEM 1 · 快系统</div>
+        <h3>直觉：永远在岗的自动驾驶</h3>
+        <li>快、并行、不费力：看到报价立刻有"贵/便宜"的感觉</li>
+        <li>依赖启发式：用"想得起什么"代替"概率是多少"</li>
+        <li>擅长模式识别，厌恶统计与基础比率</li>
+        <li>从不主动汇报：它给出的答案，都穿着"显然如此"的外衣</li>
+      </div>
+      <div class="sys sys-2">
+        <div class="sys-label">SYSTEM 2 · 慢系统</div>
+        <h3>审慎：懒惰但唯一可靠的复核官</h3>
+        <li>慢、串行、耗能：需要被刻意召集才出场</li>
+        <li>能做概率计算、逻辑检验与假设推翻</li>
+        <li>唯一能识别"我现在正被锚定/被框定/在过度自信"的系统</li>
+        <li>默认缺勤：没有流程强制，它很少主动介入签字时刻</li>
+      </div>
+    </div>
+    <div class="sys-note">
+      <b>本书的基本立场：</b>目标不是消灭 System 1——没有它你寸步难行——而是在重要决策上，用流程强制 System 2 到岗。后面所有偏差与审计，都是这一原则的具体化。
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT B · THE BIASES</div>
+        <h2>偏差档案：八宗可预测的系统性误判</h2>
+      </div>
+      <p>每项偏差都附一份"误判现场"与一行"矫正策略"。它们不是智商税，而是结构税——聪明人照交不误，只是交得更有自信。</p>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="case-no"><span>CASE-01</span><span class="sev">高频</span></div>
+        <h4>锚定效应</h4>
+        <span class="en">ANCHORING</span>
+        <p>误判现场：谈判桌上对方先报价 800 万，此后你所有的"独立判断"都在 800 万附近打转。</p>
+        <div class="fix"><b>矫正：</b>听对方报价前，先书面写下自己的估值与依据。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-02</span><span class="sev">高危</span></div>
+        <h4>过度自信</h4>
+        <span class="en">OVERCONFIDENCE</span>
+        <p>误判现场：并购案中 CEO 对"协同效应"的估计永远乐观，交割后才发现文化是两种生物。</p>
+        <div class="fix"><b>矫正：</b>事前验尸——"假设三年后项目失败了，讣告怎么写？"</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-03</span><span class="sev">高频</span></div>
+        <h4>确认偏误</h4>
+        <span class="en">CONFIRMATION</span>
+        <p>误判现场：立项之后，团队只汇报支持立项的数据，反对意见在会议纪要里神秘消失。</p>
+        <div class="fix"><b>矫正：</b>正式指定一位"反方辩护人"，轮流担任，有功无过。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-04</span><span class="sev">高频</span></div>
+        <h4>易得性偏差</h4>
+        <span class="en">AVAILABILITY</span>
+        <p>误判现场：同行刚爆雷，你连夜砍掉了所有类似业务——连同那些基本面健康的。</p>
+        <div class="fix"><b>矫正：</b>别问"我想得起什么"，问"基础比率是多少"。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-05</span><span class="sev">隐性</span></div>
+        <h4>代表性偏差</h4>
+        <span class="en">REPRESENTATIVENESS</span>
+        <p>误判现场：面试时以"像不像成功者"取人，忽略了应聘者基数与岗位的真实成功率先验。</p>
+        <div class="fix"><b>矫正：</b>好故事 ≠ 高概率；回到统计，再看叙事。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-06</span><span class="sev">隐性</span></div>
+        <h4>框架效应</h4>
+        <span class="en">FRAMING</span>
+        <p>误判现场："存活率 90%"的方案全票通过，"死亡率 10%"的同一方案被当场否决。</p>
+        <div class="fix"><b>矫正：</b>把同一问题用收益与损失两种框架各写一遍，再决定。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-07</span><span class="sev">高危</span></div>
+        <h4>沉没成本</h4>
+        <span class="en">SUNK COST</span>
+        <p>误判现场：项目已烧掉两年预算，"现在停就前功尽弃"成为继续注资的唯一理由。</p>
+        <div class="fix"><b>矫正：</b>问"若今天从零开始，我还会投吗？"——过去不参与投票。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>CASE-08</span><span class="sev">隐性</span></div>
+        <h4>后见之明</h4>
+        <span class="en">HINDSIGHT</span>
+        <p>误判现场：复盘会上人人"早就知道会这样"，于是没人真正学到任何东西。</p>
+        <div class="fix"><b>矫正：</b>事前书面记录预测与理由，复盘时逐条对照。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT C · ESCALATION OF COMMITMENT</div>
+        <h2>承诺升级：一段越错越投的楼梯</h2>
+      </div>
+      <p>所有偏差中最昂贵的一种：为证明当初的决定没错，继续向失败的方向追加资源。它不靠逻辑运行，靠自尊运行。</p>
+    </div>
+    <div class="stairs-wrap">
+      <div class="stairs-head">
+        <h3>"再投入一点，就能证明当初是对的。"</h3>
+        <span class="mono">CUMULATIVE COMMITMENT →</span>
+      </div>
+      <div class="stairs">
+        <div class="stair"><div class="bar"></div><span class="amt">立项</span><span class="lbl">合理的初始判断</span></div>
+        <div class="stair"><div class="bar"></div><span class="amt">+ 首轮追加</span><span class="lbl">负面信号出现，被解释掉</span></div>
+        <div class="stair"><div class="bar"></div><span class="amt">+ 二次追加</span><span class="lbl">"已经投了这么多"</span></div>
+        <div class="stair"><div class="bar"></div><span class="amt">+ 全面加码</span><span class="lbl">止损线早已越过</span></div>
+        <div class="stair"><div class="bar"></div><span class="amt">无法退出</span><span class="lbl">决策者与被证明正确绑定</span></div>
+      </div>
+      <div class="stairs-cap">
+        <div class="cap-item"><span class="mono">MECHANISM · 机制</span><b>自尊辩护，而非成本计算</b>继续投入的目的从"赢得项目"悄然变成"避免承认错误"——这是最昂贵的面子。</div>
+        <div class="cap-item"><span class="mono">DESIGN · 设计</span><b>让没投过票的人决定后续投入</b>巴泽曼的制度解法：换一位未参与初始决策的人来评估追加——自尊不在场，理性才在场。</div>
+        <div class="cap-item"><span class="mono">RULE · 规则</span><b>止损线要写在做决定之前</b>事先书面约定退出条件与评估节点，到点触发，不靠临场勇气。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT D · BOUNDED AWARENESS</div>
+        <h2>有限觉察：你看不见的那部分现实</h2>
+      </div>
+      <p>著名的"看不见的大猩猩"实验的管理学版本：专注让我们高效，也让我们对聚光灯外的信息系统性失明——而重要的威胁与机会，常常恰好站在灯外。</p>
+    </div>
+    <div class="spotlight">
+      <span class="spot-note">YOUR ATTENTION, VISUALIZED</span>
+      <span class="spot-tag spot-lit" style="left:14%;top:38%;">本季度 KPI</span>
+      <span class="spot-tag spot-lit" style="left:20%;top:62%;">眼前的危机</span>
+      <span class="spot-tag spot-lit" style="left:10%;top:78%;">老板要的方案</span>
+      <span class="spot-tag spot-dim" style="left:52%;top:18%;">竞争对手在隔壁赛道的产品</span>
+      <span class="spot-tag spot-dim" style="left:66%;top:46%;">团队里没人敢说的那个问题</span>
+      <span class="spot-tag spot-dim" style="left:56%;top:74%;">数据里不符合预期的异常值</span>
+      <span class="spot-tag spot-dim" style="left:80%;top:12%;">？</span>
+    </div>
+    <div class="aware-grid">
+      <div class="case">
+        <div class="case-no"><span>BLIND-01</span><span class="sev">机制</span></div>
+        <h4>专注的代价</h4>
+        <span class="en">INATTENTIONAL BLINDNESS</span>
+        <p>注意力是单线程的探照灯：盯紧目标时，视野内的大猩猩也会被完整跳过——不是没看，是看了没登记。</p>
+        <div class="fix"><b>矫正：</b>重大决策前，固定问一句："我现在没在看什么？"</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>BLIND-02</span><span class="sev">机制</span></div>
+        <h4>被过滤的信息链</h4>
+        <span class="en">FILTERED REALITY</span>
+        <p>层级每向上一格，坏消息就被打磨一次。领导者看到的现实，是经过全体员工善意剪辑的版本。</p>
+        <div class="fix"><b>矫正：</b>建立绕过层级的原始信息通道：一线数据、离职面谈、客户原话。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>BLIND-03</span><span class="sev">机制</span></div>
+        <h4>缺席的信息不举手</h4>
+        <span class="en">WHAT'S NOT THERE</span>
+        <p>桌面上的选项争夺你的注意，桌面外的选项永远沉默。没出现的方案不参与辩论，不等于不存在。</p>
+        <div class="fix"><b>矫正：</b>强制补一问："还有哪些选项，没有被摆上桌？"</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-band">
+    <span class="stamp">Objection Sustained</span>
+    <div class="quote">"我们无法消除偏差，但可以在签字之前<em>审计</em>它——就像我们无法消除错误，但可以给账目加上复式记账。"</div>
+    <div class="quote-src">AFTER BAZERMAN &amp; MOORE · JUDGMENT IN MANAGERIAL DECISION MAKING</div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT E · THE DECISION AUDIT</div>
+        <h2>决策审计：签字前的最后七问</h2>
+      </div>
+      <p>本书终章的改善策略——决策分析工具、去偏差训练、类比推理、外部视角——收拢成一张可在十分钟内完成的审计表。重要决策，逐条打勾后再签。</p>
+    </div>
+    <div class="audit">
+      <div class="audit-head">
+        <span class="t">重大判断审计表 · FORM DA-7</span>
+        <span class="mono">APPLIES TO: HIRING / PRICING / INVESTMENT / STRATEGY</span>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 01 · SOURCE</span>这个判断依赖直觉还是数据？哪一部分经得起复核？</div>
+        <div class="why">区分 System 1 提出的答案与 System 2 验证过的答案——前者只能作假设。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 02 · ANCHOR</span>我的参照数字从哪里来？去掉它，结论会变多少？</div>
+        <div class="why">报价、先例、去年的预算，都可能是别人替你下的锚。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 03 · DISCONFIRM</span>我主动寻找过反证吗？最强的反对理由是什么？</div>
+        <div class="why">确认偏误的默认行为是只找支持证据；反方辩护要制度化。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 04 · REFRAME</span>换一套框架表述同一问题，我的选择会变吗？</div>
+        <div class="why">收益框架与损失框架各写一遍；如果答案翻转，框架正在替你决策。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 05 · SUNK</span>我是在为未来投资，还是在为过去的投入辩护？</div>
+        <div class="why">沉没成本不参与投票；自尊也不该参与。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 06 · OUTSIDER</span>一个不了解内情的清醒外部者，会怎么建议？</div>
+        <div class="why">外部视角自动携带基础比率，绕开"我们不一样"的幻觉。</div>
+      </div>
+      <div class="audit-row">
+        <span class="box"></span>
+        <div class="q"><span class="mono">CHECK 07 · MISSING</span>有什么信息不在桌面上？有哪些选项从未被提出？</div>
+        <div class="why">有限觉察的解法只有一个：制度化地去灯外看一眼。</div>
+      </div>
+      <div class="audit-sign">
+        <span>审计人：<span class="line">&nbsp;</span></span>
+        <span>日期：<span class="line">&nbsp;</span></span>
+        <span>结论：□ 通过　□ 补充证据后再议</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="exhibit">EXHIBIT F · WHO IT'S FOR</div>
+        <h2>这份卷宗适合谁</h2>
+      </div>
+      <p>它不是心理学科普，而是一本写给"决策后果自负者"的教材。三类读者回本最快。</p>
+    </div>
+    <div class="fit">
+      <div class="case">
+        <div class="case-no"><span>READER 01</span><span class="sev">必读</span></div>
+        <h4>经常签字的管理者</h4>
+        <span class="en">THE DECISION SIGNER</span>
+        <p>定价、任命、并购、预算——你的每个签名都在为某项偏差的可能作案放行。这本书给你案发前的检查清单。</p>
+        <div class="fix"><b>带走：</b>双系统自觉 + 八项偏差的识别力。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>READER 02</span><span class="sev">必读</span></div>
+        <h4>谈判与交易从业者</h4>
+        <span class="en">THE NEGOTIATOR</span>
+        <p>对方的锚就是你的陷阱，你的框架就是对方的武器。读懂偏差的另一面，是读懂对手正在怎么用它们。</p>
+        <div class="fix"><b>带走：</b>锚定与框架的攻防手册。</div>
+      </div>
+      <div class="case">
+        <div class="case-no"><span>READER 03</span><span class="sev">推荐</span></div>
+        <h4>想少犯错、不复读道理的人</h4>
+        <span class="en">THE PRAGMATIST</span>
+        <p>读了很多思维模型却仍然照犯？本书的不同在于：它不只命名偏差，还给出审计表、制度设计与止损规则。</p>
+        <div class="fix"><b>带走：</b>一张十分钟可完成的决策审计表。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="final-quote">"优秀的判断不是天赋，它是一套<em>制度</em>——让复核强制到岗，让反方合法发言，让止损先于自尊。"</div>
+    <div class="final-side">
+      <b>如果只带走一个核心：</b>
+      <p>把重要决策当作需要审计的账目，而不是需要勇气的赌注。直觉负责提出答案，System 2 负责否决它；偏差无法消除，但在签字之前，它必须接受七问。</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <strong>Judgment in Managerial Decision Making · Max H. Bazerman</strong>
+    <span>RATIONALITY · BIAS · AWARENESS · AUDIT</span>
+  </footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "power-of-now",
+  "slug": "power-of-now",
+  "title": "当下的力量",
+  "subtitle": "在托利的觉察练习中，观察念头、接纳事实并回到此刻",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Eckhart Tolle · 埃克哈特·托利",
+  "topics": [
+    "哲学",
+    "觉察",
+    "生活"
+  ],
+  "concepts": [
+    "注意力",
+    "元认知",
+    "主动选择",
+    "不断更新"
+  ],
+  "visualStyle": "sage-presence-and-stillness",
+  "related": [
+    "cognitive-awakening",
+    "attention-loop",
+    "seven-habits",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "cognitive-awakening",
+      "type": "related",
+      "concept": "metacognition",
+      "label": "从观察念头的角度重新理解对内在过程的觉察"
+    },
+    {
+      "target": "attention-loop",
+      "type": "related",
+      "concept": "attention",
+      "label": "把注意力从自动输入带回正在发生的经验"
+    },
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "比较刺激与回应之间的觉察和选择空间"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "renewal",
+      "label": "从当下体验与内在安静延伸对自由生活的思考"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/power-of-now/index.html"
+  },
+  "cover": "/artifacts/power-of-now/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/the_power_of_now_presence.html"
+    ],
+    "derivedFrom": []
+  }
+}

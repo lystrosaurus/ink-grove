@@ -1,96 +1,140 @@
 {
-  "version": "1.0.0",
-  "checkedAt": "2026-09-11T16:51:37.6912645+08:00",
-  "sourceFilesUnchanged": 20,
+  "version": "1.1.0",
+  "checkedAt": "2026-09-12T03:06:22.9229996+08:00",
+  "sourceFilesUnchanged": 31,
   "protectedFiles": [
     {
-      "path": "12_rules_for_life_single_page.html",
-      "sha256": "07EA9C55635E3A698BDB784210479744786B4DF791915AF8038599458C421BFC"
+      "sha256": "F9AC8BCDFB240965D05B35DF801C2600F2EC41F3F741A815C8C5286E404CE083",
+      "path": "materials/1_percent_rule_single_page.html"
     },
     {
-      "path": "cognitive_awakening_editorial.html",
-      "sha256": "E090E59871EBDAE6224239927D2AC872312945E1CEB037294721C927556CDDE0"
+      "sha256": "07EA9C55635E3A698BDB784210479744786B4DF791915AF8038599458C421BFC",
+      "path": "materials/12_rules_for_life_single_page.html"
     },
     {
-      "path": "cognitive_awakening_inner_os_single_page.html",
-      "sha256": "DAB18DCE891CBFC4153367CB5FEC8195BD3BD057A5708896E7D790ACD975E8C8"
+      "sha256": "E090E59871EBDAE6224239927D2AC872312945E1CEB037294721C927556CDDE0",
+      "path": "materials/cognitive_awakening_editorial.html"
     },
     {
-      "path": "deliberate_practice_lab_style.html",
-      "sha256": "938929E13FBF0A7E5F036C16AD2108E6B0AE532FC8D641EE1BECF997EC4702F6"
+      "sha256": "DAB18DCE891CBFC4153367CB5FEC8195BD3BD057A5708896E7D790ACD975E8C8",
+      "path": "materials/cognitive_awakening_inner_os_single_page.html"
     },
     {
-      "path": "deliberate_practice_modern.html",
-      "sha256": "5964006E114A9338756BD963297EA821F7F4CA904CC1AF37B275F565BF09A5B9"
+      "sha256": "8246DF6FA9704E41C12819B8CBEB008317D5FBD03111842A5C4E6931ADFFC039",
+      "path": "materials/cybernetics_control_console.html"
     },
     {
-      "path": "great_mental_models_single_page.html",
-      "sha256": "E49077EEE73316A5B02CD1EB97F46A46B146CD2750C83F8AC5A14268F0BB80DF"
+      "sha256": "938929E13FBF0A7E5F036C16AD2108E6B0AE532FC8D641EE1BECF997EC4702F6",
+      "path": "materials/deliberate_practice_lab_style.html"
     },
     {
-      "path": "how_to_read_a_book_single_page.html",
-      "sha256": "269CAFE479824F5DE71BB17B323DF31A95820D6A4E672F1E481A574F0764E8E7"
+      "sha256": "5964006E114A9338756BD963297EA821F7F4CA904CC1AF37B275F565BF09A5B9",
+      "path": "materials/deliberate_practice_modern.html"
     },
     {
-      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part0.md",
-      "sha256": "DF7835C72206A06BBC651D4A28FDD339E6812E25602610DE2F5C61303C272CB5"
+      "sha256": "E49077EEE73316A5B02CD1EB97F46A46B146CD2750C83F8AC5A14268F0BB80DF",
+      "path": "materials/great_mental_models_single_page.html"
     },
     {
-      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part1.md",
-      "sha256": "EEBDE5C3D0D1527DB96B7968F0A27AFEA5EE31EA3EC2F60D851AD3CB8A1DDDEC"
+      "sha256": "269CAFE479824F5DE71BB17B323DF31A95820D6A4E672F1E481A574F0764E8E7",
+      "path": "materials/how_to_read_a_book_single_page.html"
     },
     {
-      "path": "Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part2.md",
-      "sha256": "4CE474B57B4594D737B06A86B37B68EE922DBD92EF766058583B6F07F1C1946C"
+      "sha256": "857A7B3F91C4178C8CB1D2873263D3ACBAD4B18B8493F3F39C7C36FD78FF2BB3",
+      "path": "materials/innovators_dilemma_single_page.html"
     },
     {
-      "path": "Ink Grove｜Visual Knowledge Garden 产品与系统设计文档.md",
-      "sha256": "0BE5A029850900D4953B404D4E0245BE00338AB78F35BCD3CE195A2173BDF5E3"
+      "sha256": "6C1BD88D275B6947F01A5211C07C10E7A1C81F718D44DF109BBAD703527391CA",
+      "path": "materials/integrated_thinking_intellectual_atlas.html"
     },
     {
-      "path": "innovators_dilemma_single_page.html",
-      "sha256": "857A7B3F91C4178C8CB1D2873263D3ACBAD4B18B8493F3F39C7C36FD78FF2BB3"
+      "sha256": "AAAFDC26D96ED245E09AD83A34758D5D5B4C9B04269F7335AFE281758011403E",
+      "path": "materials/integrated_thinking_personal_os.html"
     },
     {
-      "path": "integrated_thinking_intellectual_atlas.html",
-      "sha256": "6C1BD88D275B6947F01A5211C07C10E7A1C81F718D44DF109BBAD703527391CA"
+      "sha256": "77626B54CA31F39CA7ED8E901AFE56B23F876B2A4EA53594BC193885691F6779",
+      "path": "materials/judgment_in_managerial_decision_making.html"
     },
     {
-      "path": "integrated_thinking_personal_os.html",
-      "sha256": "AAAFDC26D96ED245E09AD83A34758D5D5B4C9B04269F7335AFE281758011403E"
+      "sha256": "16F28DCB4E6D2173A61F95CDA6CE6454B6521418F31FD1108CE65DFAA4E0D276",
+      "path": "materials/mindware_logic_thinking_single_page.html"
     },
     {
-      "path": "mindware_logic_thinking_single_page.html",
-      "sha256": "16F28DCB4E6D2173A61F95CDA6CE6454B6521418F31FD1108CE65DFAA4E0D276"
+      "sha256": "3A9D74CD807D2E3C65486EDBD22184408DC9D3E0A70146065468EBF4989FBE10",
+      "path": "materials/naval_almanack_black_gold.html"
     },
     {
-      "path": "naval_almanack_black_gold.html",
-      "sha256": "3A9D74CD807D2E3C65486EDBD22184408DC9D3E0A70146065468EBF4989FBE10"
+      "sha256": "F6C7BC5D414C76FA707E3FF7FE3CD3F2BD50076838352D7BAD58A0F9B82A1CD4",
+      "path": "materials/poor_charlies_almanack_decision_room.html"
     },
     {
-      "path": "seven_habits_core_map.html",
-      "sha256": "6CBCB812664E904AC4CA413AA34A265B45898CE2833BFD20928E957D5C986892"
+      "sha256": "16A5530582FEF8D54B6986630FB593E8EDF92AAA3E3EB64DD77548C1475BABC9",
+      "path": "materials/rockefeller_wealth_myth_archive.html"
     },
     {
-      "path": "the_mckinsey_way_single_page.html",
-      "sha256": "C6169D009493FA809B38938C2116F0D50E7091742272D169F151CD1BB351D797"
+      "sha256": "6CBCB812664E904AC4CA413AA34A265B45898CE2833BFD20928E957D5C986892",
+      "path": "materials/seven_habits_core_map.html"
     },
     {
-      "path": "thinking_in_systems_single_page.html",
-      "sha256": "A77CEC281F5A185CBA750432D6601C21448AA46F395D64CDFC517B389D7DF3C6"
+      "sha256": "C6169D009493FA809B38938C2116F0D50E7091742272D169F151CD1BB351D797",
+      "path": "materials/the_mckinsey_way_single_page.html"
     },
     {
-      "path": "thinking-framework-core-map.html",
-      "sha256": "20ADD0A545C41B217A89C6235321D2447DB78CCECD75B0E6C02CF7F6D566A3F0"
+      "sha256": "A77CEC281F5A185CBA750432D6601C21448AA46F395D64CDFC517B389D7DF3C6",
+      "path": "materials/thinking_in_systems_single_page.html"
+    },
+    {
+      "sha256": "20ADD0A545C41B217A89C6235321D2447DB78CCECD75B0E6C02CF7F6D566A3F0",
+      "path": "materials/thinking-framework-core-map.html"
+    },
+    {
+      "sha256": "DF7835C72206A06BBC651D4A28FDD339E6812E25602610DE2F5C61303C272CB5",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part0.md"
+    },
+    {
+      "sha256": "EEBDE5C3D0D1527DB96B7968F0A27AFEA5EE31EA3EC2F60D851AD3CB8A1DDDEC",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part1.md"
+    },
+    {
+      "sha256": "4CE474B57B4594D737B06A86B37B68EE922DBD92EF766058583B6F07F1C1946C",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part2.md"
+    },
+    {
+      "sha256": "0BE5A029850900D4953B404D4E0245BE00338AB78F35BCD3CE195A2173BDF5E3",
+      "path": "docs/design/Ink Grove｜Visual Knowledge Garden 产品与系统设计文档.md"
+    },
+    {
+      "sha256": "DD4AF44F501F2EFFA52885F6F344A71BACC00293465F1A0A5C4B3D81B969BFC6",
+      "path": "materials/buffett_shareholder_letters_owners_manual.html"
+    },
+    {
+      "sha256": "5DFD27A712D05E8206C15B136E17A05A4FF2617494D0CA94439E2BB35385FC67",
+      "path": "materials/economic_way_of_thinking_13_lens_lab.html"
+    },
+    {
+      "sha256": "4705B83F3514008397D178718A2DA77FEBAE36A20212DF1EA21D80FE5E917763",
+      "path": "materials/effective_executive_55_os.html"
+    },
+    {
+      "sha256": "4D202C7216BA64EB939DFFD8FE61EE95C8A530A626F0F4C6AB76645B7A695D6C",
+      "path": "materials/peter_lynch_stock_scout.html"
+    },
+    {
+      "sha256": "C3CEABE25DFA44C13C0A1D7F981B4CFE2AFDA1421BA9327437ECEE481904EC2F",
+      "path": "materials/the_intelligent_investor_fortress.html"
+    },
+    {
+      "sha256": "B081370F4735285A1503ADD2F1E8F16EE2F7A99FBC00C26B846E1AAB71CD2A0D",
+      "path": "materials/the_power_of_now_presence.html"
     }
   ],
   "content": {
-    "artifacts": 19,
-    "htmlArtifacts": 16,
-    "collections": 5,
-    "concepts": 24,
-    "connections": 82,
-    "editorialChanges": "content/EDITORIAL.md"
+    "editorialChanges": "content/EDITORIAL.md",
+    "concepts": 35,
+    "collections": 7,
+    "connections": 130,
+    "htmlArtifacts": 28,
+    "artifacts": 31
   },
   "contentAndModelTests": {
     "command": "npm test",
@@ -99,23 +143,1048 @@
   },
   "browserTests": {
     "command": "npm run test:e2e",
-    "passed": 46,
+    "passed": 65,
     "failed": 0
   },
   "productionBuild": {
     "command": "npm run build",
-    "passed": true
+    "passed": true,
+    "files": [
+      {
+        "sha256": "6184AD15DBCEAC5D772B28861D4DE39E5D91D80EEC58DE9D53CCC95AA710B43E",
+        "path": "artifacts/attention-loop/cover.svg",
+        "bytes": 2284
+      },
+      {
+        "sha256": "DA6F371F0983B09AF1F73890AE2B2DC37BAAB5BEAEB4997ADD873AD2FB6BFD6B",
+        "path": "artifacts/attention-loop/index.md",
+        "bytes": 2555
+      },
+      {
+        "sha256": "9078DBA7928662950BADAB65722B7324402B1BB2C81C27805C9B4A01AF509665",
+        "path": "artifacts/attention-loop/manifest.json",
+        "bytes": 1468
+      },
+      {
+        "sha256": "65CC0823D0A5C3E5B495A29DABE7205D1784DC72372C8271ECDEB292BEB5B6A2",
+        "path": "artifacts/buffett-shareholder-letters/cover.svg",
+        "bytes": 1818
+      },
+      {
+        "sha256": "626D9EDF65E4199B686272365219347377B081FBE7DE3CF227195B3EC1BB59BE",
+        "path": "artifacts/buffett-shareholder-letters/index.html",
+        "bytes": 26835
+      },
+      {
+        "sha256": "9530717DA8DE1DF582A860365B282E2013A5895BC9512961DA784F6629CC4033",
+        "path": "artifacts/buffett-shareholder-letters/manifest.json",
+        "bytes": 1954
+      },
+      {
+        "sha256": "013D9787365060D9B17419772273C980A830045A8212F234037E2936E44484C3",
+        "path": "artifacts/clear-thinking-lab/cover.svg",
+        "bytes": 2749
+      },
+      {
+        "sha256": "98AA6DD881201C57D47B18A7ACF1B2965643592679168759985F59A010E658C0",
+        "path": "artifacts/clear-thinking-lab/index.html",
+        "bytes": 44968
+      },
+      {
+        "sha256": "E1D99198A8AB07FEB2B75303E2D8F051D01959E8CFDE65E252C70212F731B26F",
+        "path": "artifacts/clear-thinking-lab/manifest.json",
+        "bytes": 1889
+      },
+      {
+        "sha256": "C459F4ECC9F64BC9DC0CF1CF3AD760CF9895654E87D5198DEBB5C9F1A00762CC",
+        "path": "artifacts/cognitive-awakening-inner-os/cover.svg",
+        "bytes": 2109
+      },
+      {
+        "sha256": "B10DE3FEBDC16DE9F15C8A0A2032190C60A113A5DE067527D916212974A495BE",
+        "path": "artifacts/cognitive-awakening-inner-os/index.html",
+        "bytes": 22763
+      },
+      {
+        "sha256": "02CE95AF4DE5381694E62EB0CE6A9F2FC57B6DA8C59C42A94228AF202504838E",
+        "path": "artifacts/cognitive-awakening-inner-os/manifest.json",
+        "bytes": 1865
+      },
+      {
+        "sha256": "F4207F7B2AD0D6DB7CD0EB7B9D9705C783523B3B2206F25C1106E80CCF91883A",
+        "path": "artifacts/cognitive-awakening/cover.svg",
+        "bytes": 2766
+      },
+      {
+        "sha256": "D66A0463CF8B9794464D0FEA33C830FD2B988E7FD075859BEB61961192C871F8",
+        "path": "artifacts/cognitive-awakening/index.html",
+        "bytes": 17298
+      },
+      {
+        "sha256": "036AA52DAAAB67559D5C26B2F28D8E438DE7C8072C56D739A0C46B8DF03CDA66",
+        "path": "artifacts/cognitive-awakening/manifest.json",
+        "bytes": 1706
+      },
+      {
+        "sha256": "3BE14D66A3F4DC87F8A400CA00B198398371ECB82639604B719E4D461BFB93DA",
+        "path": "artifacts/cybernetics/cover.svg",
+        "bytes": 1760
+      },
+      {
+        "sha256": "A7978265A8CCBF7319781E2B8936C11AD4CF4C86FC554A70B887F68CC04D0AA1",
+        "path": "artifacts/cybernetics/index.html",
+        "bytes": 25409
+      },
+      {
+        "sha256": "84D2233DBC1FA8888C8160CA33EB3DFEA1A4F1D1C5C645751089613FFEF3F7F7",
+        "path": "artifacts/cybernetics/manifest.json",
+        "bytes": 1705
+      },
+      {
+        "sha256": "95C9F34A68020F8D4286EF99B324F6BC77F2F33620BD58BFC4AB2FB15319540F",
+        "path": "artifacts/deliberate-practice-modern/cover.svg",
+        "bytes": 2644
+      },
+      {
+        "sha256": "43D6053F55F71B033C6FE07D5D4412292511715203926CB71EA237C5C45E0EA2",
+        "path": "artifacts/deliberate-practice-modern/index.html",
+        "bytes": 16368
+      },
+      {
+        "sha256": "11BF5DCAC404D68B1CBA7799A06C8C4F3CC09654323AEC072407049485C0DC7A",
+        "path": "artifacts/deliberate-practice-modern/manifest.json",
+        "bytes": 1391
+      },
+      {
+        "sha256": "C71C72015122AD89FABF71153B0A93C83666266C26F4494BA5BF8A719B3DB6B5",
+        "path": "artifacts/deliberate-practice/cover.svg",
+        "bytes": 3552
+      },
+      {
+        "sha256": "CD50E57B770D08AD5E5D833F759083F4AF1C48A6A1852C0D63837BF12004A767",
+        "path": "artifacts/deliberate-practice/index.html",
+        "bytes": 15008
+      },
+      {
+        "sha256": "68DF83490D6039F737CE7DA9271439631084A2F9D9B0934182B0769D159B639C",
+        "path": "artifacts/deliberate-practice/manifest.json",
+        "bytes": 1571
+      },
+      {
+        "sha256": "552C42A9BEBD78BCB55C1D1D9A168B368ED1E82305772AF22E1F98A8377225D7",
+        "path": "artifacts/economic-way-of-thinking/cover.svg",
+        "bytes": 1815
+      },
+      {
+        "sha256": "295746B4726B7EF1327B034F0AB5C7EF82CCEA209515F1C26C81EB6F30BC08B5",
+        "path": "artifacts/economic-way-of-thinking/index.html",
+        "bytes": 26692
+      },
+      {
+        "sha256": "8D001B3AA325430A7500BCF111750C7726AD617D6D7A08C819E31E36B7B37A19",
+        "path": "artifacts/economic-way-of-thinking/manifest.json",
+        "bytes": 1927
+      },
+      {
+        "sha256": "C83518D17C21F9BE5940E5B0CFB5882B3EFAE6C72BD4F6715E13E63EFDCA501A",
+        "path": "artifacts/effective-executive/cover.svg",
+        "bytes": 1928
+      },
+      {
+        "sha256": "78C6BF9E6A672D9F521125924B4E6F6391D06EE9D4DD665E333C8032EDD39A46",
+        "path": "artifacts/effective-executive/index.html",
+        "bytes": 24329
+      },
+      {
+        "sha256": "443EF3BC1521F573F7CBF68E55A7DF5992BCAB09D8593DE251F4914AB442FE8A",
+        "path": "artifacts/effective-executive/manifest.json",
+        "bytes": 1838
+      },
+      {
+        "sha256": "0AEF03826D6C951474606C0671EA3CF3CEEABC1A39029849FCAD4512BCDF9DE0",
+        "path": "artifacts/great-mental-models/cover.svg",
+        "bytes": 2680
+      },
+      {
+        "sha256": "3BB1BA0AC8C3C2A0E64D8A7F704EEA3CA051674ECBEB35C063429D2E5A73D327",
+        "path": "artifacts/great-mental-models/index.html",
+        "bytes": 21574
+      },
+      {
+        "sha256": "BC06819337309F25D3073334F7B16BFA5DE46E64E3CBDDF2D4DD12B6257FF929",
+        "path": "artifacts/great-mental-models/manifest.json",
+        "bytes": 1812
+      },
+      {
+        "sha256": "25CFC318BF4B7F3B878ADEF916D72D2DFC97FDB975A951481CA93ABCAFD065C7",
+        "path": "artifacts/how-to-read-a-book/cover.svg",
+        "bytes": 1916
+      },
+      {
+        "sha256": "26E037176D3C80676CB73B0C34ED8A833CAD1C0ED35D3E96E8533CA4F029B9C6",
+        "path": "artifacts/how-to-read-a-book/index.html",
+        "bytes": 24245
+      },
+      {
+        "sha256": "AE3DFD488B41FAADB54149589788BAF9E9B4138326A6FE2F3681C839C3FB362E",
+        "path": "artifacts/how-to-read-a-book/manifest.json",
+        "bytes": 1842
+      },
+      {
+        "sha256": "0FA2D741B553228723A93DD97F1CEF463EBBC46E93196C0131896DB21FDD4B72",
+        "path": "artifacts/innovators-dilemma/cover.svg",
+        "bytes": 1782
+      },
+      {
+        "sha256": "F538A7D9CD88E6C6CD31CE847226CD6E4DE9EA14964E9BE7C18D7F435D19C43F",
+        "path": "artifacts/innovators-dilemma/index.html",
+        "bytes": 25379
+      },
+      {
+        "sha256": "674AC046058F61774E0106474CAFFE71FB88DC0CFF59BD9D8A5307AA8124CE43",
+        "path": "artifacts/innovators-dilemma/manifest.json",
+        "bytes": 1615
+      },
+      {
+        "sha256": "A6DDBC9945E99B650E81745DD5E68FC4FCEFD28D55349261C4D6D685A180DB6A",
+        "path": "artifacts/intellectual-atlas/cover.svg",
+        "bytes": 4114
+      },
+      {
+        "sha256": "ADA7387F59DBBE99B5CF5278071B58AB774FB54FB6CB9B4D32F804F17207C4A3",
+        "path": "artifacts/intellectual-atlas/index.html",
+        "bytes": 28127
+      },
+      {
+        "sha256": "51050DEB08EF05A0F2BDD94371140684AB6C8500FCBC0BD38BA5A79707CA8C7D",
+        "path": "artifacts/intellectual-atlas/manifest.json",
+        "bytes": 4050
+      },
+      {
+        "sha256": "C59734EFC908DE4500BE807D22DF32293D49364234D587422BC88AFE743357BF",
+        "path": "artifacts/intelligent-investor/cover.svg",
+        "bytes": 1536
+      },
+      {
+        "sha256": "5AD8E14F0A90DC21F7C741A10F04E7F29B276B61EFFB42FC3298FB7868A2BA05",
+        "path": "artifacts/intelligent-investor/index.html",
+        "bytes": 27691
+      },
+      {
+        "sha256": "0069307EED18C255074D1B5A7CEE4DC5466B8626841C48DD88E650041AD972E3",
+        "path": "artifacts/intelligent-investor/manifest.json",
+        "bytes": 1882
+      },
+      {
+        "sha256": "5BE6897BE6F5E5768A4DFEA09266AEFA54A2BF8D144DA099B963546FE293CB7D",
+        "path": "artifacts/knowledge-landscape/cover.svg",
+        "bytes": 2505
+      },
+      {
+        "sha256": "3C075D439DF4BB5DA6499B51F8255DD702C7C2DA0424621D1AC9E61B73F42B5F",
+        "path": "artifacts/knowledge-landscape/landscape.svg",
+        "bytes": 2972
+      },
+      {
+        "sha256": "1ACDD755A089D3727DF2147F07064E4499733DF7AE1E122399745EE16DD08490",
+        "path": "artifacts/knowledge-landscape/manifest.json",
+        "bytes": 1312
+      },
+      {
+        "sha256": "B44710B8055BC265C18D69C86F9BAD0E7D837E81F3A7DCCB2A26AE7296693723",
+        "path": "artifacts/learning-cycle/cover.svg",
+        "bytes": 2193
+      },
+      {
+        "sha256": "4136DD9E28482CA8E459F5690D7263D68874D1FC2D0BAA04B2F2EE5CFC146483",
+        "path": "artifacts/learning-cycle/index.svg",
+        "bytes": 4336
+      },
+      {
+        "sha256": "29C91233AC119D80061B90D12394130D190EA88ABF263827A11982597DE29E52",
+        "path": "artifacts/learning-cycle/manifest.json",
+        "bytes": 1318
+      },
+      {
+        "sha256": "634C31DE5823E68B3F84C61A75C8A974AE682B5C5C16B12EA35C0884F3F973E9",
+        "path": "artifacts/managerial-judgment/cover.svg",
+        "bytes": 1766
+      },
+      {
+        "sha256": "1126036F39D6AF39B0AABA6936CBD73C4AE41176BD471D0D4572400F6CD467EC",
+        "path": "artifacts/managerial-judgment/index.html",
+        "bytes": 35888
+      },
+      {
+        "sha256": "AD60F3487FA967156D48794C030819599DAC5EBA91B55226EF759F8EC0BD2517",
+        "path": "artifacts/managerial-judgment/manifest.json",
+        "bytes": 1792
+      },
+      {
+        "sha256": "F1C90A733FA3CC0661A2841571224BB17657C55F12AF733EFF0E81EF7B42535A",
+        "path": "artifacts/mckinsey-way/cover.svg",
+        "bytes": 2546
+      },
+      {
+        "sha256": "602144847BFF7F4625942B54F406DC1C93B0DD526DE1EAE3AC2C1BCD36C77006",
+        "path": "artifacts/mckinsey-way/index.html",
+        "bytes": 22992
+      },
+      {
+        "sha256": "6C1EC88AE8AA455C1AD3389F96A39CF49CA099139121D0070BFBD435D04EF727",
+        "path": "artifacts/mckinsey-way/manifest.json",
+        "bytes": 1603
+      },
+      {
+        "sha256": "8751D522DD27B0C30FEC17F7BC23D3FD99C969D499A9267E2CCF6D6054DAB767",
+        "path": "artifacts/mindware/cover.svg",
+        "bytes": 2005
+      },
+      {
+        "sha256": "EC18D9483897C6946984904C1ECE5630E30786467ACF8936CCB3A8D10DC04FC9",
+        "path": "artifacts/mindware/index.html",
+        "bytes": 20919
+      },
+      {
+        "sha256": "A50387EF9C185002A49B0EFAD6EB81F0DF51715AF0FA049D71667B5C6CA144BE",
+        "path": "artifacts/mindware/manifest.json",
+        "bytes": 1540
+      },
+      {
+        "sha256": "7C3829EF35B35C87BE5F9240449C832A0D885EE86FFDA10320A0C0A2AC295257",
+        "path": "artifacts/naval-almanack/cover.svg",
+        "bytes": 2714
+      },
+      {
+        "sha256": "CC1CF1790E7AB011276C58183B30B7C0A87ADF068777C80CCDAF380D8AF639B7",
+        "path": "artifacts/naval-almanack/index.html",
+        "bytes": 15201
+      },
+      {
+        "sha256": "B59110AEAD43DE3D6031B7BA8016865210AA0640A7A20F36204B38D55D28D672",
+        "path": "artifacts/naval-almanack/manifest.json",
+        "bytes": 1478
+      },
+      {
+        "sha256": "9DA466BCF48A2CA56F47B29E71F5586585DFD4A6DCE24CD1A962A4B979236F38",
+        "path": "artifacts/one-percent-rule/cover.svg",
+        "bytes": 1641
+      },
+      {
+        "sha256": "DE10E0891E8C2AC6D72B8D1F2CB328F71AFAD35AF600029D9CB25B7526A075CE",
+        "path": "artifacts/one-percent-rule/index.html",
+        "bytes": 29861
+      },
+      {
+        "sha256": "BE0BB3414C62A5D0D31AFF42C2D18243AF416A1F7FBAB3CD9C14479E6A288997",
+        "path": "artifacts/one-percent-rule/manifest.json",
+        "bytes": 1743
+      },
+      {
+        "sha256": "6E61F649853EA8FE8F7F6F84DA14926B3AC1CD66CD14547698B0C619B4C21A5A",
+        "path": "artifacts/personal-growth-os/cover.svg",
+        "bytes": 3414
+      },
+      {
+        "sha256": "F0302FE120450CFDD8177D9C64B74BC9C84C18D78F51A2D9C50F20CA957FE3F7",
+        "path": "artifacts/personal-growth-os/index.html",
+        "bytes": 24952
+      },
+      {
+        "sha256": "79DFACDE338E5F803C540F32B69EC90AF6D9A51A030687ADBD3140220462FDE8",
+        "path": "artifacts/personal-growth-os/manifest.json",
+        "bytes": 2052
+      },
+      {
+        "sha256": "5E26AD8A3A6073F04E13EE29DC0F6E27C545B2A880AA22796270A2045AF5A357",
+        "path": "artifacts/peter-lynch-stock-scout/cover.svg",
+        "bytes": 1762
+      },
+      {
+        "sha256": "D9C2026083C31A15EA0B758203B7EC25E8E55EF09526CFE23B452A2A3C84489E",
+        "path": "artifacts/peter-lynch-stock-scout/index.html",
+        "bytes": 27072
+      },
+      {
+        "sha256": "D68FD652DC7A18DA9181DECF764B0E00F1A639255CCBE4A529E92E509C1ECAD8",
+        "path": "artifacts/peter-lynch-stock-scout/manifest.json",
+        "bytes": 1885
+      },
+      {
+        "sha256": "424EA120EB2C5C843B8F3E881AFA05558330DECF208C28F014FDCF4FDC0E5108",
+        "path": "artifacts/poor-charlies-almanack/cover.svg",
+        "bytes": 1948
+      },
+      {
+        "sha256": "721D565EB5774D0CD20502ADF6577E0144F54A2C951F74AA8D9E9C999FBF9F83",
+        "path": "artifacts/poor-charlies-almanack/index.html",
+        "bytes": 26307
+      },
+      {
+        "sha256": "7176D27C0536868C2382330883CEDC35F1D27A60EA05ACEE2DFC019A8B1871B5",
+        "path": "artifacts/poor-charlies-almanack/manifest.json",
+        "bytes": 1902
+      },
+      {
+        "sha256": "623C1E940E9C10F32C43E466C0271E507517BF7C610271C9F5AC6FECDA83D20C",
+        "path": "artifacts/power-of-now/cover.svg",
+        "bytes": 1349
+      },
+      {
+        "sha256": "9633F1FBDE117BE048F7C0B58ED92D5BC720C13E17DA279DDE53CE00604C1A39",
+        "path": "artifacts/power-of-now/index.html",
+        "bytes": 21628
+      },
+      {
+        "sha256": "11AE62380499E0BE7654BE111F5C46CA8B2FF0E497C1ECA350EAEA4DD7EF566D",
+        "path": "artifacts/power-of-now/manifest.json",
+        "bytes": 1756
+      },
+      {
+        "sha256": "325EB15067809A6D9E9770B8EA7FB8815CA479E6CE38DB0782841DA7D00BE094",
+        "path": "artifacts/rockefeller-wealth-archive/cover.svg",
+        "bytes": 1695
+      },
+      {
+        "sha256": "43718E7E720DDEC0C1E678AA564A2755E019AC0BC75045EC4E1978269C43B9EF",
+        "path": "artifacts/rockefeller-wealth-archive/index.html",
+        "bytes": 26999
+      },
+      {
+        "sha256": "19160FC3786B8DF84EC2F298EAC31785C5F0F38F460D4DC62426838FD7B8F285",
+        "path": "artifacts/rockefeller-wealth-archive/manifest.json",
+        "bytes": 1929
+      },
+      {
+        "sha256": "68C8B7D2FDAB55083A22DF80FEE21834701AB422707DCC7A5CB15FE7626A746E",
+        "path": "artifacts/seven-habits/cover.svg",
+        "bytes": 3787
+      },
+      {
+        "sha256": "D117F119D5EC88E71F365C386A4356AB146FB01E3477F52ABF78B751B421FF87",
+        "path": "artifacts/seven-habits/index.html",
+        "bytes": 17723
+      },
+      {
+        "sha256": "0562C729FBBD3E14E496A38B63D3F6550D160C1380D410840C5AA00FCAF8B793",
+        "path": "artifacts/seven-habits/manifest.json",
+        "bytes": 1668
+      },
+      {
+        "sha256": "1281031A2A59F47BA911A02BD69A0F025ADE2194852C3A26E3F27176B1F10E4F",
+        "path": "artifacts/thinking-framework/cover.svg",
+        "bytes": 2168
+      },
+      {
+        "sha256": "467917196469780799266A4665F73D71DA976787398760565C7CE03E576A2631",
+        "path": "artifacts/thinking-framework/index.html",
+        "bytes": 16079
+      },
+      {
+        "sha256": "2016AC6D910CC9A02090A2E6EC49552290E8743DB2C3EF21F26C0868BD010D84",
+        "path": "artifacts/thinking-framework/manifest.json",
+        "bytes": 1742
+      },
+      {
+        "sha256": "16B1545661A9029122866A2C5065D05BE6A136130EC84CA9346DA09026B03524",
+        "path": "artifacts/thinking-in-systems/cover.svg",
+        "bytes": 1946
+      },
+      {
+        "sha256": "AC79AB2EDD4C70B3B7D7E3C1DF48D0F9DB0485D61AF80BF59A908498579B12A3",
+        "path": "artifacts/thinking-in-systems/index.html",
+        "bytes": 27111
+      },
+      {
+        "sha256": "B8FF614E897951AEA303A1D8B6F258668BD0F4DAF4AA5087C6AC75A671584692",
+        "path": "artifacts/thinking-in-systems/manifest.json",
+        "bytes": 1775
+      },
+      {
+        "sha256": "996C5A5820F300DFFD83C7F021BE38C0C27D583A43A7649FF5D635DAEEE95847",
+        "path": "artifacts/twelve-rules-for-life/cover.svg",
+        "bytes": 1464
+      },
+      {
+        "sha256": "84E6567D96EE7AA02656EA9720622EE95A9D985C51FDAA23090A5CE401F6622D",
+        "path": "artifacts/twelve-rules-for-life/index.html",
+        "bytes": 25383
+      },
+      {
+        "sha256": "8116B205028CC02039A854D2DB1B03AAE38BEB3B48D06DBDB5F4593266D15169",
+        "path": "artifacts/twelve-rules-for-life/manifest.json",
+        "bytes": 1626
+      },
+      {
+        "sha256": "A5D38FE99F930275684999B462C7123FAA063D9E44E73B4B241723D884AA0F49",
+        "path": "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2",
+        "bytes": 18228
+      },
+      {
+        "sha256": "9FEA608A947E67020C33CAD9A6FE3D60C54119DFB8CFF87768A8117A15ED7543",
+        "path": "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+        "bytes": 36932
+      },
+      {
+        "sha256": "69AF883514966680F3F27C231231E46BD5B48F9C7DA84D27F8BF60E3B4F42CDE",
+        "path": "assets/index-DaK2cLws.js",
+        "bytes": 461732
+      },
+      {
+        "sha256": "B78B198E95BDD84F9BCDE5899B6C77BF050E79B6349A230175BD284BB2D7DEFE",
+        "path": "assets/index-k6z5aalE.css",
+        "bytes": 179314
+      },
+      {
+        "sha256": "10D846C3E11659C57D906AE2AB9A9D418E0AAA36B99A991A09ACA8E5BD6E3C64",
+        "path": "assets/noto-serif-sc-100-wght-normal-B_E8_y1S.woff2",
+        "bytes": 84728
+      },
+      {
+        "sha256": "139765926260131BEB5763BB8474D5441C7A504F62257CACD5B569EE39D119E4",
+        "path": "assets/noto-serif-sc-101-wght-normal-D1afnVTV.woff2",
+        "bytes": 77708
+      },
+      {
+        "sha256": "98EB7841A02D362B6B92646644D54E9A3ED296E931799F342ACC76F844024328",
+        "path": "assets/noto-serif-sc-102-wght-normal-C336twDL.woff2",
+        "bytes": 79564
+      },
+      {
+        "sha256": "AE54F03733DB84ABCACD43C967C9D6AFD647F0A1579EF3B595A807BD24F76A2F",
+        "path": "assets/noto-serif-sc-103-wght-normal-DUyihgdX.woff2",
+        "bytes": 84032
+      },
+      {
+        "sha256": "EBDA2B19FC7A325AB200E073D3152EF8761DD2E3FC6F4A36C757792BA393264E",
+        "path": "assets/noto-serif-sc-104-wght-normal-BGjsMcQX.woff2",
+        "bytes": 80996
+      },
+      {
+        "sha256": "F43C00B1E7E213ADD01D19EECF6EF2E8A96F7087B46B908DF407490B72FE09D9",
+        "path": "assets/noto-serif-sc-105-wght-normal-BgSod39R.woff2",
+        "bytes": 81516
+      },
+      {
+        "sha256": "1A6CC82F2CE03F8BBC6C78AD27BB79D1319DBABB6A016499D9042073ACABCC0E",
+        "path": "assets/noto-serif-sc-106-wght-normal-CniXU52I.woff2",
+        "bytes": 81600
+      },
+      {
+        "sha256": "2A55B026BB206504DC94A3FA0D58A1F2AF2B9B4C3DAF6DD988519458E7404876",
+        "path": "assets/noto-serif-sc-107-wght-normal-D141098S.woff2",
+        "bytes": 79852
+      },
+      {
+        "sha256": "4665F9383F65A4FB003C53808F5B91D1E93FCCCD3D2D8C799CFDA6E3D14656D7",
+        "path": "assets/noto-serif-sc-108-wght-normal-BmakWj8P.woff2",
+        "bytes": 83484
+      },
+      {
+        "sha256": "16B43B96DC859EAF9B6F2EE884C9976318D6B55720AE72B118F9EC77582361D6",
+        "path": "assets/noto-serif-sc-109-wght-normal-DomK5QIN.woff2",
+        "bytes": 79000
+      },
+      {
+        "sha256": "3616D3502701DCDF867D0C850EF50CBF19E1613B283A238FE4F8EA0C91908C6D",
+        "path": "assets/noto-serif-sc-110-wght-normal-BSy0JP4E.woff2",
+        "bytes": 79492
+      },
+      {
+        "sha256": "8164AF476B514E30654ECF3AA34EDEECBAD209782F4B026964032E4F594A2881",
+        "path": "assets/noto-serif-sc-111-wght-normal-DOsFafg3.woff2",
+        "bytes": 81144
+      },
+      {
+        "sha256": "675553F67DDA471CCC684B734A07DB465FB6BB9EC1CE5A70B6D6B0F9A36A7A26",
+        "path": "assets/noto-serif-sc-112-wght-normal-MAZT2qqq.woff2",
+        "bytes": 75996
+      },
+      {
+        "sha256": "1594E53F4AB5FE067F7BA108B65A71ED07B2FB9DA68AF01349B4966C871E4D36",
+        "path": "assets/noto-serif-sc-113-wght-normal-DyuoesZ9.woff2",
+        "bytes": 75872
+      },
+      {
+        "sha256": "F402C381CB2EB5C6D1E65A8BAE7629B5CB97FAAA42759AF6874F6D33FCC98273",
+        "path": "assets/noto-serif-sc-114-wght-normal-rN6TP-iN.woff2",
+        "bytes": 74744
+      },
+      {
+        "sha256": "1BD7A4092909A57CF3F2DF1F983980FA45D37F0F77B038A31785719FC9580668",
+        "path": "assets/noto-serif-sc-115-wght-normal-CLw93OJ2.woff2",
+        "bytes": 72536
+      },
+      {
+        "sha256": "2392F5989457174E847CC69A4EFF0FF80F5AC744B8F1FE29B0B1925299CB0A0E",
+        "path": "assets/noto-serif-sc-116-wght-normal-dLgproop.woff2",
+        "bytes": 67284
+      },
+      {
+        "sha256": "44C0C56034F2906014CD0082C42CEF587CD4E2EB24983ACA2A10D9805A0F26F6",
+        "path": "assets/noto-serif-sc-117-wght-normal-XTbr9ZZT.woff2",
+        "bytes": 66576
+      },
+      {
+        "sha256": "9A03BACC0425E420573FA8BA6B4A1468EBFE8860EF2243E41A646DEE45B67B54",
+        "path": "assets/noto-serif-sc-118-wght-normal-DgpSdJgq.woff2",
+        "bytes": 58148
+      },
+      {
+        "sha256": "28858C6C597253C4488E0CE1BDDF52D6BB5464EBCF981927EA5C7269B5C1DC17",
+        "path": "assets/noto-serif-sc-119-wght-normal-BO-8DIcz.woff2",
+        "bytes": 103768
+      },
+      {
+        "sha256": "C56FED07BAA5368C483C00D7963847CAF0F9AFF18BC78561FE8B14DB7171B572",
+        "path": "assets/noto-serif-sc-21-wght-normal-BWgIT3u9.woff2",
+        "bytes": 26040
+      },
+      {
+        "sha256": "4E943FDD06982AC9A81D192846DAB76A2797321C990774600DC65FF8FE1D4E68",
+        "path": "assets/noto-serif-sc-22-wght-normal-n_9gzBdK.woff2",
+        "bytes": 85288
+      },
+      {
+        "sha256": "E50204D9C99DEE1B284A8F5C9508295FE6209C54E089BA7146813360D9C17713",
+        "path": "assets/noto-serif-sc-23-wght-normal-PFb7vc5T.woff2",
+        "bytes": 73872
+      },
+      {
+        "sha256": "03DE62BC4C94FCF00AD2A87ED76731C95B0852B0B41C9028844E1A05C06082C0",
+        "path": "assets/noto-serif-sc-24-wght-normal-CLtoVuTx.woff2",
+        "bytes": 82664
+      },
+      {
+        "sha256": "9FA23B6CF30829D06600BDA44F2B5D31880D088EF9BD5626AAF4557941457C10",
+        "path": "assets/noto-serif-sc-25-wght-normal-CO_UFAdV.woff2",
+        "bytes": 77944
+      },
+      {
+        "sha256": "158A0BE2CBBA07D17824A5BA52319A3F914C59857F4BD70A332596BBE1B1128F",
+        "path": "assets/noto-serif-sc-26-wght-normal-CUJJnivC.woff2",
+        "bytes": 71356
+      },
+      {
+        "sha256": "DC5909D502DE13C096A9D4B6F674433F2DA1EF62F71CCE1E3F43BE499F1A4A52",
+        "path": "assets/noto-serif-sc-27-wght-normal-B9lzzaTa.woff2",
+        "bytes": 64664
+      },
+      {
+        "sha256": "93DAEB451EDFE65DAD18A468CC90933D6A5FC79E9411CE28027BACBFD7BFA0B8",
+        "path": "assets/noto-serif-sc-28-wght-normal-DpNoKRQu.woff2",
+        "bytes": 67936
+      },
+      {
+        "sha256": "D4BA29A42D58E9C71F523225D6C2257E231E4D3FE92B720BBCBF99DD08ADD33C",
+        "path": "assets/noto-serif-sc-29-wght-normal-GaECcatV.woff2",
+        "bytes": 72784
+      },
+      {
+        "sha256": "106E18D90034E75630790AD203BC69850747BF96C0A398B96BD88BCAA81E9480",
+        "path": "assets/noto-serif-sc-30-wght-normal-BthB64Y2.woff2",
+        "bytes": 76908
+      },
+      {
+        "sha256": "B9DF2CE5D328A524975728C051385E14C1C823798E084C1227101ED4ACC6174A",
+        "path": "assets/noto-serif-sc-31-wght-normal-6gH0-Plj.woff2",
+        "bytes": 64260
+      },
+      {
+        "sha256": "87FDAD598FB7AB598784E43F87F1DA2C5476F88E4A5A9ABA56ABC73973449A42",
+        "path": "assets/noto-serif-sc-32-wght-normal-BWmx-AcC.woff2",
+        "bytes": 68000
+      },
+      {
+        "sha256": "A1E18C863C00AB7E6F17FDDCC42B193FB94CCB5E3E01EE394A189C149AEF447E",
+        "path": "assets/noto-serif-sc-33-wght-normal-imYNTNMM.woff2",
+        "bytes": 66088
+      },
+      {
+        "sha256": "BA9FBD7FDBF7CCE92C1A95946A7AD7B10FF9D3098403174B2B2B11BA6B282EB0",
+        "path": "assets/noto-serif-sc-34-wght-normal-DnkERd2u.woff2",
+        "bytes": 64724
+      },
+      {
+        "sha256": "0EB731D70AA1F4966DFFFAB308B3FB11975886FD5375F45CE6B16F1EAEBAFB83",
+        "path": "assets/noto-serif-sc-35-wght-normal-DvRk4hqy.woff2",
+        "bytes": 63760
+      },
+      {
+        "sha256": "B36A86AA9D07AE91A379EF0661F723C323677FB9106457318B1194D5C5F7CBC9",
+        "path": "assets/noto-serif-sc-36-wght-normal-mA1onJjc.woff2",
+        "bytes": 57848
+      },
+      {
+        "sha256": "5B42C53AA93CC2A7FD855C85A5CA733D4DA8D06984DF8B4C9B2B76CE1090BC80",
+        "path": "assets/noto-serif-sc-37-wght-normal-LC1yyc7m.woff2",
+        "bytes": 67828
+      },
+      {
+        "sha256": "60BAE2B9A8BF65E1B4C1A06D529079CEA1824BBAB0A37840469F24B698880AAB",
+        "path": "assets/noto-serif-sc-38-wght-normal-Da_NFf6-.woff2",
+        "bytes": 75304
+      },
+      {
+        "sha256": "EF454FCA50875C2536BFBCF4E0B540F456C012A61D08FF778EA4E3E640BD938B",
+        "path": "assets/noto-serif-sc-39-wght-normal-C_Pfsj-f.woff2",
+        "bytes": 72288
+      },
+      {
+        "sha256": "92B93561D8AF27754352918934377DC09ECBF91D2D65A0951FB1D60895367330",
+        "path": "assets/noto-serif-sc-4-wght-normal-POi_Urbq.woff2",
+        "bytes": 4644
+      },
+      {
+        "sha256": "5392252C91BD0707D647DF33A9A279501A029388C7882A0AD420A40B760E5A62",
+        "path": "assets/noto-serif-sc-40-wght-normal-BjlpL5UW.woff2",
+        "bytes": 66144
+      },
+      {
+        "sha256": "0F39F0BBE9A7A450B994C3C3BD9AA0627AE2DEA8D36B67FC5A3554830F28005E",
+        "path": "assets/noto-serif-sc-41-wght-normal-CVBLXKlt.woff2",
+        "bytes": 51516
+      },
+      {
+        "sha256": "2DB79FD3AA1D48C07E30664553E9D1DDB9FC4C23FDF02D48C63E094EBF275A5D",
+        "path": "assets/noto-serif-sc-42-wght-normal-BuqGeHAE.woff2",
+        "bytes": 62740
+      },
+      {
+        "sha256": "7E94834579A87AC5BBEAE3C8D0CFC33206D7E0FC85E7C59568F75358FB000C44",
+        "path": "assets/noto-serif-sc-43-wght-normal-C2AfGZIw.woff2",
+        "bytes": 58348
+      },
+      {
+        "sha256": "3F116C05FBB0ABC3FBA86BB85B4426ECA3A41650D2763ED4C5B31FE8B28F752E",
+        "path": "assets/noto-serif-sc-44-wght-normal-Ce6e62F2.woff2",
+        "bytes": 72500
+      },
+      {
+        "sha256": "6B583A41D620C6B504CE9D451FDBB8E08D073B2573E46D444820959647D7F3E0",
+        "path": "assets/noto-serif-sc-45-wght-normal-CXgjcdJT.woff2",
+        "bytes": 91672
+      },
+      {
+        "sha256": "1581AF3BBB4E78F52DB3B1078A85595E0FFA30EE334B7DBB49BAF42BA9FBB28A",
+        "path": "assets/noto-serif-sc-46-wght-normal-zC517Lyl.woff2",
+        "bytes": 77584
+      },
+      {
+        "sha256": "A491A10A853D1FB3480D4471A275FD8824726B0E1A795FE8A98EB946001AC80E",
+        "path": "assets/noto-serif-sc-47-wght-normal-C0d1RTo9.woff2",
+        "bytes": 74000
+      },
+      {
+        "sha256": "CAD6D79EF7A000ED533559C080E92351797BB90D800243FA3A25C7064A3CE93E",
+        "path": "assets/noto-serif-sc-48-wght-normal-DdYwMBaW.woff2",
+        "bytes": 64612
+      },
+      {
+        "sha256": "CA078411DDF19A164747D6E2220B0B2022F08E1682A1DC660A8902DA13F2B0E0",
+        "path": "assets/noto-serif-sc-49-wght-normal-Cke2kJyu.woff2",
+        "bytes": 70316
+      },
+      {
+        "sha256": "405F96FC00F5DE66A11045874D0964DCB4230122F820771EE13DD329895074D8",
+        "path": "assets/noto-serif-sc-5-wght-normal-KEByyGxm.woff2",
+        "bytes": 26836
+      },
+      {
+        "sha256": "80938D29C0EFDBD634308AC52ECBBDA6707A0B3E3B7D1C84E197C28A6C8C837B",
+        "path": "assets/noto-serif-sc-50-wght-normal-zkdyL1V0.woff2",
+        "bytes": 64520
+      },
+      {
+        "sha256": "6E0E93E30AC6E513FFDB1E5DDC50337E81C5F33D54BC3BB0E044113F228F5727",
+        "path": "assets/noto-serif-sc-51-wght-normal-D9iT-1TR.woff2",
+        "bytes": 57320
+      },
+      {
+        "sha256": "6F05DD92F2F040024ED6F401C03A78EC8F8058313ECAB04B6FF195A0041A4A5A",
+        "path": "assets/noto-serif-sc-52-wght-normal-BLDAvkY6.woff2",
+        "bytes": 67828
+      },
+      {
+        "sha256": "039698B9BC16DB3439B86528C88C369086ED237F7BAA13873CA33A0922EDCE18",
+        "path": "assets/noto-serif-sc-53-wght-normal-CVEOz2md.woff2",
+        "bytes": 53856
+      },
+      {
+        "sha256": "2263F0841A3499DD34793A4B21C831760BCAE5582B047CBCAB0B55CF9B105AB5",
+        "path": "assets/noto-serif-sc-54-wght-normal-DPWdAwq4.woff2",
+        "bytes": 69316
+      },
+      {
+        "sha256": "C940BED82B2192C9A436AF93A8AE990C9E66D1384376F56878C3906C6DE35353",
+        "path": "assets/noto-serif-sc-55-wght-normal-CHCeRIrg.woff2",
+        "bytes": 61532
+      },
+      {
+        "sha256": "373D1B4D724F4EE5FA02EB5EE5474033A914A990D966F2ABBB36C96682E5E993",
+        "path": "assets/noto-serif-sc-56-wght-normal-eKWz93j7.woff2",
+        "bytes": 69656
+      },
+      {
+        "sha256": "A8E46481396F2A9E4AC4875B64645F26E4E9FF185A8503C2402C2BC9BF46219C",
+        "path": "assets/noto-serif-sc-57-wght-normal-Cor1Tvn4.woff2",
+        "bytes": 74032
+      },
+      {
+        "sha256": "4FB8AC1D7A95C72AA66DE7673A352E3E8B9046FFA90C444D0F961221F7052E40",
+        "path": "assets/noto-serif-sc-58-wght-normal-kpJ7mHnK.woff2",
+        "bytes": 82552
+      },
+      {
+        "sha256": "F69A03144D47D4987530030ECEFF2C2C4E37388CE5E45976A7A15F4DCD849D30",
+        "path": "assets/noto-serif-sc-59-wght-normal-DuU0uqw2.woff2",
+        "bytes": 69524
+      },
+      {
+        "sha256": "ABA77127699E71BC7D13FD80C4EAAEBCB5065862590F6DFBB05BA14BB0C0D2D8",
+        "path": "assets/noto-serif-sc-6-wght-normal-zG9mG1jB.woff2",
+        "bytes": 15672
+      },
+      {
+        "sha256": "952351694A0ADA3A721A73DECD3AFEAC99FAC4637E0DBD2AF987C7E147205FF1",
+        "path": "assets/noto-serif-sc-60-wght-normal-DAKYpn8o.woff2",
+        "bytes": 61376
+      },
+      {
+        "sha256": "90A9D9858975F1C073521AF5DF9A7286356FF78397D274CFE7B64CB97F719920",
+        "path": "assets/noto-serif-sc-61-wght-normal-DsFqK1wo.woff2",
+        "bytes": 61312
+      },
+      {
+        "sha256": "854A14F63241E795BC8A17E64D472F09C834A02F9B59258637063AABCA530070",
+        "path": "assets/noto-serif-sc-62-wght-normal-BetEYZyP.woff2",
+        "bytes": 79496
+      },
+      {
+        "sha256": "9D345B17AD128918A7D4EEA67714A376F8840FFDC82B77DA8DBC416071491F65",
+        "path": "assets/noto-serif-sc-63-wght-normal-CMtD-Kgv.woff2",
+        "bytes": 63936
+      },
+      {
+        "sha256": "AB7AEF1B30A10F6643F3271CB55E64C49E6D8C4B91A2E68287196CDE66AD7614",
+        "path": "assets/noto-serif-sc-64-wght-normal-CjrUC92N.woff2",
+        "bytes": 51012
+      },
+      {
+        "sha256": "24F7302E65F8ADAEC36D642AA8CAF68CDF4C50C91E54F75E9E535382366766B4",
+        "path": "assets/noto-serif-sc-65-wght-normal-BQWoNL84.woff2",
+        "bytes": 58572
+      },
+      {
+        "sha256": "5C818243CE70B138C5E7EDD2798F92D311D8D9158EB60BAD6C4F5CEBE4D46FC6",
+        "path": "assets/noto-serif-sc-66-wght-normal-C5lNsScf.woff2",
+        "bytes": 69204
+      },
+      {
+        "sha256": "A4557AB88BBC6BB5272D315402D2448F92A7E53BDF3E89F1D839E95E5B67999A",
+        "path": "assets/noto-serif-sc-67-wght-normal-YN-qC7HW.woff2",
+        "bytes": 71680
+      },
+      {
+        "sha256": "BCA8897BBF2EE33D854E2D2CB19A31C66D549C2EB585AF439E905378486DF29E",
+        "path": "assets/noto-serif-sc-68-wght-normal-DgVKmqhJ.woff2",
+        "bytes": 54196
+      },
+      {
+        "sha256": "52740303931D8B85AB9529076BF835AEAF877C56E47AEAD612281BC128318282",
+        "path": "assets/noto-serif-sc-69-wght-normal-CYLESW-L.woff2",
+        "bytes": 73588
+      },
+      {
+        "sha256": "B677122AEA77998B4B6C991CC0268585A48690A9347BD17057AC589728176C5D",
+        "path": "assets/noto-serif-sc-70-wght-normal-C1ivJfo6.woff2",
+        "bytes": 53064
+      },
+      {
+        "sha256": "6B91A10ABB4A03D31C63D528F6EF6B0FCDF4DBE7C030D67E1943F6139C115D73",
+        "path": "assets/noto-serif-sc-71-wght-normal-CvXxbzcf.woff2",
+        "bytes": 62884
+      },
+      {
+        "sha256": "713D2BB29DB38602E97E272BDAFA666C5B426B7B779DBF3BEB32313FD95B8551",
+        "path": "assets/noto-serif-sc-72-wght-normal-cGdTpPsV.woff2",
+        "bytes": 65720
+      },
+      {
+        "sha256": "C5CBBB60E77F863AF35524EC5A6674F5CE15735F05746923CAA8D07E99B55886",
+        "path": "assets/noto-serif-sc-73-wght-normal-CVaZwasb.woff2",
+        "bytes": 56040
+      },
+      {
+        "sha256": "365512FFC9E2717C81CF5D9AF42646426D657D5494B4FD04501A5BEB0AF6F2E7",
+        "path": "assets/noto-serif-sc-74-wght-normal-BbF3qCor.woff2",
+        "bytes": 74576
+      },
+      {
+        "sha256": "F0E12F7E577876BF2D554E924F0A2BBCE375B647D885A568B37DD5B042133AD1",
+        "path": "assets/noto-serif-sc-75-wght-normal-93ee-1qL.woff2",
+        "bytes": 57824
+      },
+      {
+        "sha256": "F0DBE158FA641CC4297AF81A4D44D2A9A2B775A32A96D4F665D62820EE2E6562",
+        "path": "assets/noto-serif-sc-76-wght-normal-BLbVMqvY.woff2",
+        "bytes": 65740
+      },
+      {
+        "sha256": "CFABB52E72825965EC66B18BC1BAB646D150206F2A3AA6D4FA6F29040058515E",
+        "path": "assets/noto-serif-sc-77-wght-normal-Ba02t4uH.woff2",
+        "bytes": 51780
+      },
+      {
+        "sha256": "2101D62AF080D6803513F4FE5D91ABA6831B61BC95ED172DACE75CAA2A5B8C2D",
+        "path": "assets/noto-serif-sc-78-wght-normal-8sP0MgyD.woff2",
+        "bytes": 71048
+      },
+      {
+        "sha256": "A5FDBB67E3DADEBDA5B447C1707FE47A2D9E40F095FB22DEDC63AADF969D6609",
+        "path": "assets/noto-serif-sc-79-wght-normal-3DZZprJd.woff2",
+        "bytes": 58804
+      },
+      {
+        "sha256": "0A97BD54C22ADD0CE1FD54256F20BCAFA92B8DB870B3F80CEFD3672DA29EB3AE",
+        "path": "assets/noto-serif-sc-80-wght-normal-7mf1Dpmj.woff2",
+        "bytes": 45184
+      },
+      {
+        "sha256": "5945538DCBFC11C1DB2D573E1A0889C33B90B45D8445CB9CE1F18B38DB36336C",
+        "path": "assets/noto-serif-sc-81-wght-normal-C7zVck8N.woff2",
+        "bytes": 60576
+      },
+      {
+        "sha256": "45F3ED82E9BD8231532B58A0DE47D0B26FBE8E4CEBA610615903E346E5213263",
+        "path": "assets/noto-serif-sc-82-wght-normal-BCQNdhXI.woff2",
+        "bytes": 62128
+      },
+      {
+        "sha256": "BF628DB08549CBF5090C3486717D5121D48AF1D82C79B6AB181ED9B49BA5E31B",
+        "path": "assets/noto-serif-sc-83-wght-normal-DxCiS-H8.woff2",
+        "bytes": 58812
+      },
+      {
+        "sha256": "60E71123F0B838BF4FD52CB5DE5E3D6AF8E48C8F7F32481A39DA625D1E63FD2E",
+        "path": "assets/noto-serif-sc-84-wght-normal-BqNanTR7.woff2",
+        "bytes": 42656
+      },
+      {
+        "sha256": "D8F48BBF844EADBAA2E3DB648ED6889CCB8083572437EB6F0F717F9097B9E45B",
+        "path": "assets/noto-serif-sc-85-wght-normal-zDA9V0-4.woff2",
+        "bytes": 40440
+      },
+      {
+        "sha256": "09248B343E7220AB8786B907C2D75AAF6D1A54830822070A0AB012EC03A02BB1",
+        "path": "assets/noto-serif-sc-86-wght-normal-BEBRIryH.woff2",
+        "bytes": 47336
+      },
+      {
+        "sha256": "50751CD23B3787EFF2AF23D3B9676B13CB5263E750A72FD258328F5812520B08",
+        "path": "assets/noto-serif-sc-87-wght-normal-DYrIOgtA.woff2",
+        "bytes": 7400
+      },
+      {
+        "sha256": "45CB9A16CBC13EFF333B49BFA5C63F0478078AC6BDC327DE9D69BDB6CDD8CE2B",
+        "path": "assets/noto-serif-sc-88-wght-normal-4sUXZiL0.woff2",
+        "bytes": 6892
+      },
+      {
+        "sha256": "BA142270184772C2BBC1985BF88E42D05E9462B14163001B8C253765C3F1D55E",
+        "path": "assets/noto-serif-sc-89-wght-normal-BHbmppex.woff2",
+        "bytes": 12280
+      },
+      {
+        "sha256": "5968DD127304A59F1E2EA36B875F3702DADB0A229BC87A9053727C26807A15DC",
+        "path": "assets/noto-serif-sc-90-wght-normal-CAN9aOBC.woff2",
+        "bytes": 9736
+      },
+      {
+        "sha256": "30691665669EE807F465D552B3247CD41F9097020662BC43F28DBAF243CBD883",
+        "path": "assets/noto-serif-sc-91-wght-normal-Cs76p7wD.woff2",
+        "bytes": 10568
+      },
+      {
+        "sha256": "26B9DEC17F125371D5F5089F89DE39094A11F98FFEBB061011158D7E4AA602D0",
+        "path": "assets/noto-serif-sc-98-wght-normal-Cb4Ymdjf.woff2",
+        "bytes": 4376
+      },
+      {
+        "sha256": "7BF7C8FD9809004CBA36338A94C338CFFBCE66069C2B091A7472E0B4DFA6B041",
+        "path": "assets/noto-serif-sc-99-wght-normal-Dxrjm0os.woff2",
+        "bytes": 12324
+      },
+      {
+        "sha256": "D6E6ED7B0A14B508F94072AEA3BB29ABE236FD012BA6174B49292A6C900718E6",
+        "path": "assets/noto-serif-sc-cyrillic-wght-normal-CEncxE_U.woff2",
+        "bytes": 14476
+      },
+      {
+        "sha256": "B07E7E5E090ED9220E5FD4AFC6A22339A77F63F79F1F7AC010E3B05A8849C5CE",
+        "path": "assets/noto-serif-sc-latin-ext-wght-normal-B_BpesqA.woff2",
+        "bytes": 10332
+      },
+      {
+        "sha256": "2AC76686E472DB28292EDCC26BCC201A3B40B08B2615DB7E75E03D07AB853017",
+        "path": "assets/noto-serif-sc-latin-wght-normal-C94SydbU.woff2",
+        "bytes": 32972
+      },
+      {
+        "sha256": "9826143BB6278155DE4F76910FD6EC34FE450385DD0D85DF10E4497BB174EAC7",
+        "path": "assets/noto-serif-sc-vietnamese-wght-normal-BDuesHz7.woff2",
+        "bytes": 10920
+      },
+      {
+        "sha256": "0CB1CF37F9C71105F17409C3C13297DFE6BAD65C5BA7B2F5F155AF4B7920E9D5",
+        "path": "favicon.svg",
+        "bytes": 297
+      },
+      {
+        "sha256": "89FBA14DDC3667472F077321FC577431FAE419112B50E48A6231D06C2683C94C",
+        "path": "index.html",
+        "bytes": 651
+      },
+      {
+        "sha256": "6FBD040A29C2037A765DFB9F2561E9965B5C95C6DCB5DCE516089D63D5F17AF7",
+        "path": "licenses/DM-Sans-OFL.txt",
+        "bytes": 4502
+      },
+      {
+        "sha256": "18AABF190848725E2576EEFB5C29BA06AAC1029D02132252A7F312EAC2E50CF3",
+        "path": "licenses/Noto-Serif-SC-OFL.txt",
+        "bytes": 4314
+      }
+    ]
   },
   "productionSmoke": {
+    "htmlArtifacts": 28,
     "command": "node app/scripts/verify-production.mjs",
     "passed": true,
-    "htmlArtifacts": 16,
-    "externalRequests": 0
+    "externalRequests": 0,
+    "browserErrors": 0
   },
   "urls": {
     "development": "http://127.0.0.1:5173",
-    "preview": "http://127.0.0.1:4173"
+    "preview": "http://127.0.0.1:4173",
+    "public": "https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/"
   },
   "aiGeneration": "provider interface reserved; default local and unconfigured; no real provider connected",
-  "publicDeployment": false
+  "publicDeployment": {
+    "platformFilesRetained": 6,
+    "smokePassed": true,
+    "passed": true,
+    "reportedBackupPath": ".cloudbase-backup/1789153453510/",
+    "cliVersion": "3.8.1",
+    "backupVerified": false,
+    "recoveredDeploymentIssue": "An initial explicit / cloudPath triggered a CLI 3.8.1 key-normalization error. Verification failed and automatic rollback removed overlapping app files. Redeploying the same build with cloudPath omitted restored the app and passed full CLI and public browser verification. Platform files were retained. Do not assume the reported backup is a complete previous release; rebuild a historical commit for rollback.",
+    "command": "tcb hosting deploy app/dist -e ink-d0gvorjko99e99e4d --safe --verify",
+    "smokeCommand": "node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+    "uploadedFiles": 201,
+    "remoteMd5Matches": 201,
+    "previousAttemptBackups": [
+      ".cloudbase-backup/1789152740091/",
+      ".cloudbase-backup/1789152807331/"
+    ]
+  }
 }

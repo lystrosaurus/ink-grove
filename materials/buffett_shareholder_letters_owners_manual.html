@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>巴菲特致股东的信｜Owner's Manual</title>
+<style>
+:root{
+  --bg:#ece8de;
+  --paper:#f8f5ee;
+  --ink:#1f2526;
+  --muted:#6d7472;
+  --line:#cfd1cc;
+  --navy:#253745;
+  --green:#496a5c;
+  --green2:#77968a;
+  --gold:#b79048;
+  --red:#9f564d;
+  --blue:#587188;
+  --cream:#eee6d6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    linear-gradient(rgba(40,53,69,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(40,53,69,.025) 1px,transparent 1px),
+    var(--bg);
+  background-size:28px 28px;
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.65;
+}
+.wrap{width:min(1480px,95vw);margin:22px auto 56px}
+.report{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(40,53,58,.12);
+}
+.topbar{
+  padding:11px 16px;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;
+  font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700
+}
+.hero{
+  display:grid;grid-template-columns:1.22fr .78fr;
+  min-height:590px;border-bottom:1px solid var(--line)
+}
+.hero-main{padding:48px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";
+  position:absolute;right:-120px;bottom:-150px;width:440px;height:440px;border-radius:50%;
+  border:1px solid rgba(73,106,92,.16);
+  box-shadow:0 0 0 62px rgba(73,106,92,.03),0 0 0 124px rgba(73,106,92,.016)
+}
+.kicker{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--green)}
+h1{
+  font-size:clamp(56px,7vw,104px);
+  line-height:.92;letter-spacing:-.055em;margin:18px 0 16px
+}
+.en{font-size:16px;letter-spacing:.08em;color:var(--blue);margin-bottom:26px}
+.lead{font-size:23px;max-width:840px;color:#3f4847}
+.lead strong{color:var(--navy)}
+.hero-note{
+  margin-top:28px;padding:20px 22px;border-left:5px solid var(--gold);
+  background:#efe8db;max-width:860px
+}
+.hero-note b{display:block;font-size:20px;margin-bottom:6px}
+.hero-note span{color:var(--muted)}
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;grid-template-rows:repeat(6,1fr)
+}
+.band{padding:20px;border-bottom:1px solid var(--line)}
+.band:last-child{border-bottom:0}
+.band .n{font-size:9px;letter-spacing:.13em;font-weight:800}
+.band strong{display:block;font-size:22px;margin:5px 0}
+.band span{font-size:12px}
+.band:nth-child(1){background:var(--navy);color:white}.band:nth-child(1) span{color:#cad4d7}
+.band:nth-child(2){background:#dfe9e4}
+.band:nth-child(3){background:#eee4d2}
+.band:nth-child(4){background:#e2e7ec}
+.band:nth-child(5){background:#e9ddd9}
+.band:nth-child(6){background:#4a655b;color:white}.band:nth-child(6) span{color:#d7e2dd}
+
+.section{padding:34px 38px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:22px
+}
+.section h2{font-size:33px;margin:4px 0 0}
+.section-head p{max-width:670px;margin:0;color:var(--muted)}
+
+.owner{
+  display:grid;grid-template-columns:.88fr 1.12fr;gap:14px
+}
+.owner-card{
+  background:var(--navy);color:white;padding:28px;min-height:350px;position:relative;overflow:hidden
+}
+.owner-card:after{
+  content:"OWN";
+  position:absolute;right:10px;bottom:-45px;font-size:150px;font-weight:900;color:rgba(255,255,255,.04)
+}
+.owner-card .kicker{color:#a9c9bd}
+.owner-card strong{display:block;font-size:38px;line-height:1.28;margin:14px 0}
+.owner-card p{color:#c9d3d5}
+.owner-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.owner-rule{padding:18px;border:1px solid var(--line);background:white}
+.owner-rule .tag{font-size:9px;letter-spacing:.12em;color:var(--green);font-weight:800}
+.owner-rule b{display:block;font-size:18px;margin:7px 0}
+.owner-rule p{margin:0;color:var(--muted);font-size:13px}
+
+.capital{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:9px
+}
+.cap-card{
+  padding:19px;border:1px solid var(--line);background:white;min-height:210px;position:relative
+}
+.cap-card:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--green)}
+.cap-card:nth-child(2):before{background:var(--blue)}
+.cap-card:nth-child(3):before{background:var(--gold)}
+.cap-card:nth-child(4):before{background:var(--red)}
+.cap-card:nth-child(5):before{background:#6b6d98}
+.cap-card .id{font-size:9px;letter-spacing:.12em;color:var(--muted);font-weight:800}
+.cap-card h3{font-size:20px;margin:10px 0}
+.cap-card p{font-size:12px;color:var(--muted);margin:0}
+
+.market{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:14px
+}
+.market-card{
+  padding:28px;background:#2a3538;color:white;min-height:340px;position:relative;overflow:hidden
+}
+.market-card:after{
+  content:"↕";
+  position:absolute;right:16px;bottom:-55px;font-size:190px;color:rgba(255,255,255,.045)
+}
+.market-card .kicker{color:#aec7c0}
+.market-card strong{display:block;font-size:38px;line-height:1.25;margin:14px 0}
+.market-card p{color:#c8d1d2}
+.market-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.market-rule{padding:18px;border:1px solid var(--line);background:white}
+.market-rule b{font-size:18px}
+.market-rule span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+
+.acq{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.acq-card{padding:24px;border:1px solid var(--line);background:white}
+.acq-card.good{border-top:6px solid var(--green)}
+.acq-card.bad{border-top:6px solid var(--red)}
+.acq-card h3{font-size:25px;margin:8px 0}
+.acq-card p{color:var(--muted)}
+.row{padding:11px 0;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.row:first-of-type{border-top:0}
+
+.accounting{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:14px
+}
+.bridge,.numbers{
+  padding:24px;border:1px solid var(--line);background:white
+}
+.bridge h3,.numbers h3{font-size:25px;margin:8px 0}
+.bridge p,.numbers p{color:var(--muted)}
+.bridge-flow{
+  display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:center;gap:6px;margin-top:18px
+}
+.bridge-node{padding:17px;border:1px solid var(--line);background:#f2eee5;min-height:145px}
+.bridge-node b{font-size:18px}
+.bridge-node span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.arrow{text-align:center;color:var(--gold);font-size:24px}
+.metric-list{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+.metric{padding:15px;border:1px solid var(--line);background:#f4f1e9}
+.metric .m{font-size:9px;letter-spacing:.12em;color:var(--blue);font-weight:800}
+.metric b{display:block;font-size:17px;margin:5px 0}
+.metric span{font-size:12px;color:var(--muted)}
+
+.governance{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+}
+.gov{padding:20px;border:1px solid var(--line);background:white;min-height:215px}
+.gov .n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#e3ece8;color:var(--green);font-weight:800;margin-bottom:12px}
+.gov h3{font-size:19px;margin:0 0 8px}
+.gov p{font-size:13px;color:var(--muted);margin:0}
+
+.toc{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px
+}
+.toc-card{padding:18px;border:1px solid var(--line);background:white;min-height:170px}
+.toc-card .id{font-size:9px;letter-spacing:.12em;color:var(--green);font-weight:800}
+.toc-card h3{font-size:19px;margin:8px 0}
+.toc-card p{font-size:12px;color:var(--muted);margin:0}
+.toc-card:nth-child(3n+2){background:#f3eee4}
+.toc-card:nth-child(3n){background:#eef2f0}
+
+.questions{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:9px
+}
+.q{padding:18px;border:1px solid var(--line);background:white;min-height:190px}
+.q .n{font-size:9px;letter-spacing:.12em;color:var(--gold);font-weight:800}
+.q b{display:block;font-size:18px;margin:8px 0}
+.q span{font-size:12px;color:var(--muted)}
+
+.final{display:grid;grid-template-columns:1.18fr .82fr;gap:14px}
+.final-main{padding:30px;background:var(--navy);color:white}
+.final-main .kicker{color:#aac9bd}
+.final-main strong{display:block;font-size:36px;line-height:1.35;margin:12px 0}
+.final-main p{color:#c8d2d5}
+.final-side{display:grid;gap:9px}
+.final-card{padding:16px;border:1px solid var(--line);background:white}
+.final-card b{font-size:16px}
+.final-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+.footer{
+  padding:18px 38px;background:#20292d;color:#cfd5d7;
+  display:flex;justify-content:space-between;gap:20px;
+  font-size:10px;letter-spacing:.08em
+}
+.footer a{color:#a9c9bd;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.owner,.market,.accounting,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .capital{grid-template-columns:1fr 1fr}
+  .governance{grid-template-columns:1fr 1fr}
+  .questions{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}
+  .hero-side,.owner-grid,.capital,.market-grid,.acq,.metric-list,.governance,.toc,.questions{grid-template-columns:1fr}
+  .bridge-flow{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .topbar,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="report">
+
+<div class="topbar">
+  <span>WARREN E. BUFFETT · LAWRENCE A. CUNNINGHAM</span>
+  <span>THE ESSAYS OF WARREN BUFFETT · 4TH EDITION</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">BERKSHIRE OWNER'S MANUAL · CAPITAL ALLOCATION ROOM</div>
+    <h1>巴菲特致股东的信</h1>
+    <div class="en">投资者和公司高管教程 · 原书第 4 版</div>
+    <div class="lead">
+      这本书真正独特的地方，不是“巴菲特怎么选股票”，而是：
+      <strong>如何站在长期所有者的立场上，治理公司、配置资本、理解会计、评估价值并做并购决策。</strong>
+    </div>
+    <div class="hero-note">
+      <b>把公司当成生意，把股票当成所有权，把管理者当成资本配置者。</b>
+      <span>第 4 版保留原有架构与哲学，同时加入更新年份的伯克希尔股东信内容。中文版由机械工业出版社 2018 年出版，杨天南译。citeturn754668search2turn754668search3turn754668search4</span>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="band"><div class="n">ROOM 01</div><strong>公司治理</strong><span>所有者导向、董事会、管理者责任、薪酬与企业原则。</span></div>
+    <div class="band"><div class="n">ROOM 02</div><strong>财务与投资</strong><span>市场先生、价值投资、套利与资本纪律。</span></div>
+    <div class="band"><div class="n">ROOM 03</div><strong>普通股投资</strong><span>股东结构、分红、交易成本、长期持有。</span></div>
+    <div class="band"><div class="n">ROOM 04</div><strong>并购</strong><span>好生意、好管理、合理价格与避免高价冲动。</span></div>
+    <div class="band"><div class="n">ROOM 05</div><strong>会计与估值</strong><span>所有者收益、经济商誉、内在价值、账面价值。</span></div>
+    <div class="band"><div class="n">ROOM 06</div><strong>资本配置</strong><span>留存、分红、回购、投资、收购——资本去哪里最划算？</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · OWNER MINDSET</div>
+      <h2>整本书的第一原则：像所有者，而不是像交易者</h2>
+    </div>
+    <p>英文版开篇就把 “Owner-Related Business Principles” 放在公司治理部分最前面；整本书都围绕这种所有者导向展开。citeturn754668search33</p>
+  </div>
+
+  <div class="owner">
+    <div class="owner-card">
+      <div class="kicker">OWNER-ORIENTED</div>
+      <strong>股票不是一串报价。<br>它代表企业的一部分。</strong>
+      <p>当你从所有者角度看公司，问题会从“下周股价去哪儿”转变成“这家公司未来十年的资本回报、竞争优势和资本配置会怎样”。</p>
+    </div>
+
+    <div class="owner-grid">
+      <div class="owner-rule"><div class="tag">LONG TERM</div><b>长期持有</b><p>减少交易摩擦，让优秀企业和资本配置长期复利。</p></div>
+      <div class="owner-rule"><div class="tag">PARTNERSHIP</div><b>股东是合伙人</b><p>管理者应以共同所有者的方式对待股东，而不是把他们当短期资金提供者。</p></div>
+      <div class="owner-rule"><div class="tag">TRANSPARENCY</div><b>诚实沟通</b><p>坏消息和好消息都应被清晰说明，不用会计或公关掩盖现实。</p></div>
+      <div class="owner-rule"><div class="tag">ECONOMICS</div><b>经济实质优先</b><p>会计数字重要，但最终要回到真实现金创造能力与资本回报。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · CAPITAL ALLOCATION</div>
+      <h2>CEO 最重要的工作之一：决定每一美元去哪里</h2>
+    </div>
+    <p>对伯克希尔体系而言，资本配置把投资者和公司管理者真正连在了一起：企业赚来的钱，是再投资、收购、回购、分红，还是保留？</p>
+  </div>
+
+  <div class="capital">
+    <div class="cap-card"><div class="id">OPTION 01</div><h3>再投资业务</h3><p>如果内部项目能够产生有吸引力的长期回报，利润应继续留在业务中复利。</p></div>
+    <div class="cap-card"><div class="id">OPTION 02</div><h3>收购企业</h3><p>找到经济性优秀、管理可信且价格合理的完整企业。</p></div>
+    <div class="cap-card"><div class="id">OPTION 03</div><h3>购买证券</h3><p>当部分所有权比完整收购更有吸引力时，普通股也是资本配置工具。</p></div>
+    <div class="cap-card"><div class="id">OPTION 04</div><h3>回购股票</h3><p>只有当价格低于内在价值时，回购才真正提高持续股东的每股价值。</p></div>
+    <div class="cap-card"><div class="id">OPTION 05</div><h3>分红</h3><p>当企业无法以足够高的回报继续使用资本，应把资本交还所有者。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · MARKET VS BUSINESS</div>
+      <h2>市场先生提供报价，公司本身创造价值</h2>
+    </div>
+    <p>第 4 版的财务与投资部分明确包含 Mr. Market、“Value” Investing、Intelligent Investing 等主题。citeturn754668search33</p>
+  </div>
+
+  <div class="market">
+    <div class="market-card">
+      <div class="kicker">MARKET PRICE</div>
+      <strong>价格每天变。<br>生意不会每天重写一次。</strong>
+      <p>市场波动的用途，是给长期投资者提供选择，而不是给他们下达行动命令。</p>
+    </div>
+    <div class="market-grid">
+      <div class="market-rule"><b>价格 ≠ 价值</b><span>报价是别人今天愿意成交的数字，不是企业价值本身。</span></div>
+      <div class="market-rule"><b>价值投资不是一个类别</b><span>如果不关心价值，投资这个词本身就失去意义。</span></div>
+      <div class="market-rule"><b>降低交易频率</b><span>交易成本与行为错误都会侵蚀长期复利。</span></div>
+      <div class="market-rule"><b>等待高确定性机会</b><span>巴菲特式纪律允许长时间不行动，把资本留给赔率明显有利的机会。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · ACQUISITION FILTER</div>
+      <h2>并购不是“做大”，而是购买未来现金流</h2>
+    </div>
+    <p>英文版专门用一大部分讨论 mergers and acquisitions，包括错误动机、高价收购、合理回购、杠杆收购和稳健收购政策。citeturn754668search33</p>
+  </div>
+
+  <div class="acq">
+    <div class="acq-card good">
+      <div class="kicker">GOOD ACQUISITION</div>
+      <h3>值得买的企业</h3>
+      <div class="row">业务容易理解</div>
+      <div class="row">长期经济特征良好</div>
+      <div class="row">管理层能干且可信</div>
+      <div class="row">价格合理</div>
+      <div class="row">不依赖复杂财务工程才能成立</div>
+    </div>
+    <div class="acq-card bad">
+      <div class="kicker">BAD MOTIVES</div>
+      <h3>危险的并购动机</h3>
+      <div class="row">为了规模而规模</div>
+      <div class="row">CEO 个人帝国冲动</div>
+      <div class="row">因为现金太多就急于花掉</div>
+      <div class="row">用高估股票去购买另一个高估资产</div>
+      <div class="row">把协同想象当成高价合理化工具</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · ACCOUNTING → ECONOMICS</div>
+      <h2>会计是起点，不是终点</h2>
+    </div>
+    <p>第 4 版目录专门包含 Look-Through Earnings、Economic Goodwill、Owner Earnings，以及 Intrinsic Value / Book Value / Market Price 等主题。citeturn754668search33</p>
+  </div>
+
+  <div class="accounting">
+    <div class="bridge">
+      <div class="kicker">FROM REPORTED NUMBERS TO ECONOMIC REALITY</div>
+      <h3>把财务报表翻译成“所有者真正得到了什么”</h3>
+      <div class="bridge-flow">
+        <div class="bridge-node"><b>会计利润</b><span>按照会计准则呈现的报告数字。</span></div>
+        <div class="arrow">→</div>
+        <div class="bridge-node"><b>经济调整</b><span>资本开支、非现金项目、商誉、未分配利润等重新理解。</span></div>
+        <div class="arrow">→</div>
+        <div class="bridge-node"><b>所有者收益</b><span>更接近企业长期可供所有者支配的真实经济收益。</span></div>
+      </div>
+    </div>
+
+    <div class="numbers">
+      <div class="kicker">VALUE METRICS</div>
+      <h3>三个数字，不是三个真相</h3>
+      <div class="metric-list">
+        <div class="metric"><div class="m">BOOK VALUE</div><b>账面价值</b><span>会计记录的净资产，不等于企业经济价值。</span></div>
+        <div class="metric"><div class="m">MARKET PRICE</div><b>市场价格</b><span>市场报价可以偏离价值。</span></div>
+        <div class="metric"><div class="m">INTRINSIC VALUE</div><b>内在价值</b><span>未来现金创造能力折现后的经济估计。</span></div>
+        <div class="metric"><div class="m">GOODWILL</div><b>经济商誉</b><span>优秀企业超越有形资产仍能持续创造高回报的能力。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · CORPORATE GOVERNANCE</div>
+      <h2>好公司治理：让代理人真正像所有者一样思考</h2>
+    </div>
+    <p>第 4 版第一部分即为 Corporate Governance，并涵盖 owner-related principles、董事与管理者、关闭工厂、企业慈善和高管薪酬。citeturn754668search33</p>
+  </div>
+
+  <div class="governance">
+    <div class="gov"><div class="n">1</div><h3>董事会</h3><p>真正的职责是代表所有者监督资本与管理层，而不是形式化背书。</p></div>
+    <div class="gov"><div class="n">2</div><h3>管理者</h3><p>管理层应关注每股长期经济价值，而不是短期报表漂亮程度。</p></div>
+    <div class="gov"><div class="n">3</div><h3>薪酬</h3><p>激励应与真正可控、可持续的经济成果绑定，避免奖励偶然性。</p></div>
+    <div class="gov"><div class="n">4</div><h3>股东</h3><p>吸引与公司长期哲学一致的股东，本身就是治理结构的一部分。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · FOURTH EDITION MAP</div>
+      <h2>第 4 版的知识结构</h2>
+    </div>
+    <p>中文版目录将材料重新组织成九大主题章；第 4 版相较前三版保持原架构和哲学，同时加入较新的年度股东信内容。citeturn754668search1turn754668search2turn754668search5</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-card"><div class="id">CH 01</div><h3>公司治理</h3><p>所有者原则、董事会、管理者、慈善与薪酬。</p></div>
+    <div class="toc-card"><div class="id">CH 02</div><h3>财务与投资</h3><p>市场先生、价值投资、套利、机构惯性与投资纪律。</p></div>
+    <div class="toc-card"><div class="id">CH 03</div><h3>投资替代品</h3><p>讨论不同证券与投资工具的经济属性。</p></div>
+    <div class="toc-card"><div class="id">CH 04</div><h3>普通股投资</h3><p>交易成本、股东结构、分红政策与股东策略。</p></div>
+    <div class="toc-card"><div class="id">CH 05</div><h3>兼并与收购</h3><p>并购动机、价格、回购、杠杆收购与出售企业。</p></div>
+    <div class="toc-card"><div class="id">CH 06</div><h3>估值与会计</h3><p>所有者收益、经济商誉、账面价值、市场价格与内在价值。</p></div>
+    <div class="toc-card"><div class="id">CH 07</div><h3>会计诡计</h3><p>识别报表中可能遮蔽经济现实的处理方式。</p></div>
+    <div class="toc-card"><div class="id">CH 08</div><h3>会计政策</h3><p>理解规则变化怎样影响报告，但不应改变经济实质判断。</p></div>
+    <div class="toc-card"><div class="id">CH 09</div><h3>税务问题</h3><p>税务同样属于资本配置与所有者回报的一部分。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">08 · FIVE OWNER QUESTIONS</div>
+      <h2>读完这本书，面对任何公司都可以先问五个问题</h2>
+    </div>
+  </div>
+
+  <div class="questions">
+    <div class="q"><div class="n">Q01</div><b>这是好生意吗？</b><span>长期资本回报、竞争优势和现金创造能力如何？</span></div>
+    <div class="q"><div class="n">Q02</div><b>管理层怎样配置资本？</b><span>再投资、收购、回购与分红是否真正提高每股价值？</span></div>
+    <div class="q"><div class="n">Q03</div><b>会计和经济现实一致吗？</b><span>报告利润是否能够代表所有者真正得到的经济收益？</span></div>
+    <div class="q"><div class="n">Q04</div><b>价格合理吗？</b><span>优秀企业也需要面对价格；价值判断不能被公司质量完全取代。</span></div>
+    <div class="q"><div class="n">Q05</div><b>十年后还愿意拥有吗？</b><span>如果不看明天的报价，你是否仍愿意作为长期所有者持有？</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE BUFFETT OS</div>
+      <strong>巴菲特式投资的核心，不是“预测股票”，而是用所有者思维寻找优秀企业，并让资本在最好的用途之间长期流动。</strong>
+      <p>好治理决定资本由谁配置；好业务创造现金；会计帮助你观察但不能替代判断；价格决定回报；并购与回购必须服从内在价值；最终，复利来自长期持有与持续理性配置资本。</p>
+    </div>
+
+    <div class="final-side">
+      <div class="final-card"><b>① Think like an owner</b><span>股票首先是企业所有权。</span></div>
+      <div class="final-card"><b>② Allocate capital rationally</b><span>每一美元都应该流向预期回报最高的用途。</span></div>
+      <div class="final-card"><b>③ Accounting is language</b><span>数字是理解经济现实的工具，不是现实本身。</span></div>
+      <div class="final-card"><b>④ Price still matters</b><span>优秀企业与优秀投资之间仍然隔着购买价格。</span></div>
+      <div class="final-card"><b>⑤ Let compounding work</b><span>减少不必要动作，让企业与资本长期复利。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>WARREN E. BUFFETT · EDITED BY LAWRENCE A. CUNNINGHAM · 4TH EDITION</span>
+  <span>
+    CHINESE EDITION · CHINA MACHINE PRESS · 2018 · ISBN 9787111592105
+  </span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>洛克菲勒：一个关于财富的神话｜财富帝国档案</title>
+<style>
+:root{
+  --paper:#efe5cf;
+  --paper2:#e4d6ba;
+  --ink:#221f1a;
+  --muted:#6c6254;
+  --line:#bba98a;
+  --oil:#10191a;
+  --oil2:#1f2b2b;
+  --copper:#a9683f;
+  --gold:#c99a4c;
+  --red:#8f3e32;
+  --blue:#435d68;
+  --cream:#f6efdf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    linear-gradient(rgba(66,52,31,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(66,52,31,.035) 1px,transparent 1px),
+    var(--paper);
+  background-size:30px 30px;
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  line-height:1.7;
+}
+.wrap{width:min(1500px,95vw);margin:22px auto 58px}
+.archive{
+  border:1px solid var(--line);
+  background:var(--cream);
+  box-shadow:0 24px 70px rgba(56,42,23,.16);
+}
+.top{
+  display:flex;justify-content:space-between;gap:18px;
+  padding:12px 18px;border-bottom:1px solid var(--line);
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.16em;color:var(--muted)
+}
+.hero{
+  display:grid;grid-template-columns:1.28fr .72fr;
+  min-height:590px;border-bottom:1px solid var(--line)
+}
+.hero-main{padding:46px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";
+  position:absolute;right:-90px;bottom:-130px;width:420px;height:420px;border-radius:50%;
+  border:1px solid rgba(169,104,63,.2);
+  box-shadow:0 0 0 60px rgba(169,104,63,.04),0 0 0 120px rgba(169,104,63,.025)
+}
+.kicker{
+  font-family:Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--copper)
+}
+h1{
+  font-size:clamp(62px,8.5vw,122px);
+  line-height:.88;letter-spacing:-.055em;
+  margin:20px 0 16px
+}
+.eng{
+  font-family:Arial,sans-serif;font-size:16px;letter-spacing:.06em;color:var(--blue);
+  margin-bottom:26px
+}
+.lead{
+  max-width:860px;font-size:23px;color:#3f392f
+}
+.lead strong{color:var(--red)}
+.hero-thesis{
+  margin-top:30px;display:grid;grid-template-columns:86px 1fr;gap:16px;
+  padding-top:20px;border-top:1px solid var(--line)
+}
+.hero-thesis .seal{
+  width:72px;height:72px;border-radius:50%;display:grid;place-items:center;
+  background:var(--oil);color:var(--gold);font-family:Georgia,serif;font-size:26px
+}
+.hero-thesis b{font-size:22px}
+.hero-thesis p{margin:4px 0 0;color:var(--muted)}
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;grid-template-rows:repeat(5,1fr)
+}
+.era{
+  padding:22px;border-bottom:1px solid var(--line)
+}
+.era:last-child{border-bottom:0}
+.era .n{
+  font-family:Arial,sans-serif;font-size:9px;letter-spacing:.14em;font-weight:800
+}
+.era strong{display:block;font-size:25px;line-height:1.2;margin:6px 0}
+.era span{font-size:12px}
+.era:nth-child(1){background:var(--oil);color:#f4ead7}
+.era:nth-child(1) span{color:#c7d1cb}
+.era:nth-child(2){background:#d9c7a6}
+.era:nth-child(3){background:#e6dfd0}
+.era:nth-child(4){background:#9d6443;color:white}
+.era:nth-child(4) span{color:#f1ddd1}
+.era:nth-child(5){background:#3d5560;color:white}
+.era:nth-child(5) span{color:#d8e1e5}
+
+.section{padding:34px 38px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:22px
+}
+.section h2{margin:4px 0 0;font-size:34px}
+.section-head p{max-width:650px;margin:0;color:var(--muted)}
+
+.timeline{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:9px
+}
+.time{
+  min-height:220px;padding:18px;border:1px solid var(--line);background:#faf5e9;position:relative
+}
+.time:before{
+  content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--copper)
+}
+.time:nth-child(2):before{background:var(--gold)}
+.time:nth-child(3):before{background:var(--oil2)}
+.time:nth-child(4):before{background:var(--red)}
+.time:nth-child(5):before{background:var(--blue)}
+.time:nth-child(6):before{background:#6f7b58}
+.time .year{
+  font-family:Georgia,serif;font-size:26px;color:var(--copper)
+}
+.time b{display:block;font-size:18px;margin:8px 0}
+.time p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+
+.empire{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:14px
+}
+.machine{
+  border:1px solid var(--line);background:#f8f1e3;padding:24px
+}
+.flow{
+  display:grid;grid-template-columns:1fr 42px 1fr 42px 1fr;align-items:center;gap:6px;margin-top:18px
+}
+.node{
+  padding:18px;border:1px solid var(--line);background:#efe4cf;min-height:145px
+}
+.node b{font-size:19px}
+.node span{display:block;color:var(--muted);font-size:12px;margin-top:6px}
+.arrow{text-align:center;font-size:25px;color:var(--copper)}
+.machine-note{
+  margin-top:14px;padding:14px;border-left:4px solid var(--red);background:#f1dfd8;color:#68483f
+}
+.ledger{
+  border:1px solid var(--line);background:#f8f1e3;padding:24px
+}
+.ledger-row{
+  display:grid;grid-template-columns:1fr auto;gap:12px;
+  padding:13px 0;border-top:1px solid var(--line)
+}
+.ledger-row:first-of-type{border-top:0}
+.ledger-row b{font-size:16px}
+.ledger-row span{color:var(--muted);font-size:12px}
+.stamp{
+  display:inline-block;margin-top:18px;padding:8px 12px;border:2px solid var(--red);
+  color:var(--red);font-family:Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;
+  transform:rotate(-2deg)
+}
+
+.duality{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.face{
+  min-height:360px;padding:28px;border:1px solid var(--line);position:relative;overflow:hidden
+}
+.face.dark{background:var(--oil);color:white}
+.face.light{background:#eadfc9}
+.face .tag{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.14em;font-weight:800
+}
+.face.dark .tag{color:#c9a76b}
+.face.light .tag{color:var(--red)}
+.face h3{font-size:32px;margin:10px 0}
+.face p{max-width:590px}
+.face.dark p{color:#bdc8c3}
+.face.light p{color:#675e50}
+.face ul{padding-left:18px}
+.face.dark li{color:#bdc8c3}
+.face.light li{color:#675e50}
+.face .bigword{
+  position:absolute;right:14px;bottom:-30px;font-family:Georgia,serif;font-size:130px;
+  opacity:.05;font-weight:800
+}
+
+.myth-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+}
+.myth{
+  padding:19px;border:1px solid var(--line);background:#faf5e9;min-height:200px
+}
+.myth .id{font-family:Arial,sans-serif;font-size:9px;letter-spacing:.14em;color:var(--blue);font-weight:800}
+.myth h3{font-size:20px;margin:8px 0}
+.myth p{margin:0;color:var(--muted);font-size:13px}
+.myth .split{
+  margin-top:13px;padding-top:12px;border-top:1px solid var(--line);font-size:12px
+}
+.myth .split b{color:var(--red)}
+
+.public-opinion{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:14px
+}
+.press{
+  background:#ded2bc;border:1px solid var(--line);padding:26px
+}
+.press .headline{
+  border-top:4px double var(--ink);border-bottom:4px double var(--ink);
+  padding:14px 0;margin:15px 0;font-size:28px;line-height:1.2;text-align:center;font-weight:800
+}
+.press p{color:#5f574b}
+.reputation{display:grid;gap:10px}
+.rep{
+  padding:18px;border:1px solid var(--line);background:#faf5e9;
+  display:grid;grid-template-columns:110px 1fr;gap:16px
+}
+.rep .phase{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--copper)
+}
+.rep b{font-size:18px}
+.rep p{margin:3px 0 0;color:var(--muted);font-size:12px}
+
+.philanthropy{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+}
+.phil{
+  padding:20px;border:1px solid var(--line);background:#f8f1e3;min-height:205px
+}
+.phil .sym{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:#d7c59e;color:var(--oil);font-weight:800;margin-bottom:12px
+}
+.phil b{display:block;font-size:18px}
+.phil span{font-size:12px;color:var(--muted)}
+.phil:nth-child(2) .sym{background:#c8d5d3}
+.phil:nth-child(3) .sym{background:#e1c8bb}
+.phil:nth-child(4) .sym{background:#d6d2b3}
+
+.questions{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:9px
+}
+.q{
+  min-height:185px;padding:17px;border:1px solid var(--line);background:#faf5e9
+}
+.q .n{font-family:Arial,sans-serif;font-size:9px;letter-spacing:.14em;color:var(--red);font-weight:800}
+.q b{display:block;font-size:18px;margin:8px 0}
+.q span{font-size:12px;color:var(--muted)}
+
+.final{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:14px
+}
+.final-main{
+  padding:30px;background:var(--oil);color:white
+}
+.final-main .kicker{color:#d2ae6f}
+.final-main strong{
+  display:block;font-size:37px;line-height:1.35;margin:12px 0
+}
+.final-main p{color:#c3ceca}
+.final-side{display:grid;gap:9px}
+.final-card{
+  padding:16px;border:1px solid var(--line);background:#faf5e9
+}
+.final-card b{font-size:16px}
+.final-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+.footer{
+  padding:18px 38px;background:#211e19;color:#d5ccbd;
+  display:flex;justify-content:space-between;gap:20px;
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.08em
+}
+.footer a{color:#d6ae69;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.empire,.public-opinion,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .timeline{grid-template-columns:1fr 1fr 1fr}
+  .myth-grid,.philanthropy{grid-template-columns:1fr 1fr}
+  .questions{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}
+  .hero-side,.timeline,.myth-grid,.philanthropy,.questions{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .duality{grid-template-columns:1fr}
+  .rep{grid-template-columns:1fr}
+  .top,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="archive">
+
+<div class="top">
+  <span>RON CHERNOW · TITAN / ROCKEFELLER ARCHIVE</span>
+  <span>WEALTH · MONOPOLY · REPUTATION · PHILANTHROPY</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">THE GILDED AGE · AN AMERICAN CAPITALIST PARADOX</div>
+    <h1>洛克菲勒</h1>
+    <div class="eng">一个关于财富的神话 / TITAN: THE LIFE OF JOHN D. ROCKEFELLER, SR.</div>
+    <div class="lead">
+      这不是一个简单的“从贫穷到首富”故事。
+      它更像一张美国资本主义早期的剖面图：
+      <strong>效率与垄断、纪律与冷酷、财富与宗教、公众憎恨与现代慈善</strong>
+      同时存在于一个人身上。
+    </div>
+
+    <div class="hero-thesis">
+      <div class="seal">R</div>
+      <div>
+        <b>洛克菲勒真正留下的，不只是巨额财富，而是一整套“如何组织资本、控制产业、塑造制度并重新定义财富用途”的范式。</b>
+        <p>切尔诺的传记之所以重要，正因为它拒绝把洛克菲勒写成单纯英雄或恶棍，而是把两种形象放在同一个人身上。</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="era"><div class="n">ACT I</div><strong>贫穷与纪律</strong><span>复杂家庭背景、宗教训练、账本习惯与强烈的自我控制。</span></div>
+    <div class="era"><div class="n">ACT II</div><strong>石油与秩序</strong><span>从混乱产业中寻找规模、成本、运输与控制优势。</span></div>
+    <div class="era"><div class="n">ACT III</div><strong>标准石油帝国</strong><span>整合炼油、运输、管道与分销，形成巨大工业组织。</span></div>
+    <div class="era"><div class="n">ACT IV</div><strong>垄断与反噬</strong><span>调查、舆论攻击、反托拉斯运动与 Standard Oil 的最终拆分。</span></div>
+    <div class="era"><div class="n">ACT V</div><strong>慈善与遗产</strong><span>财富从私人积累转向大学、医学与基金会式现代慈善。</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · THE LIFE ARC</div>
+      <h2>不是“发财史”，而是一个财富系统的形成与反转</h2>
+    </div>
+    <p>公开资料显示，切尔诺把洛克菲勒的私人生活、宗教、商业崛起、Standard Oil 争议以及晚年的慈善放在同一条叙事线上。</p>
+  </div>
+
+  <div class="timeline">
+    <div class="time"><div class="year">01</div><b>出身：矛盾家庭</b><p>虔诚、节制的母亲与长期缺席、充满欺骗色彩的父亲，构成他早期人格张力。</p></div>
+    <div class="time"><div class="year">02</div><b>账本：控制人生</b><p>早期工作训练强化精确、节俭、信用与记录意识；财富首先是一套纪律。</p></div>
+    <div class="time"><div class="year">03</div><b>石油：发现混乱</b><p>战后石油行业波动剧烈。洛克菲勒把机会看在炼油、运输和规模，而不只是钻井。</p></div>
+    <div class="time"><div class="year">04</div><b>帝国：标准化</b><p>Standard Oil 通过整合、谈判优势与规模经济快速扩大，成为美国最具争议的公司之一。</p></div>
+    <div class="time"><div class="year">05</div><b>反噬：公众敌人</b><p>记者、改革者与政府把 Standard Oil 视为托拉斯权力的象征，最终面临反垄断拆分。</p></div>
+    <div class="time"><div class="year">06</div><b>遗产：财富再定义</b><p>晚年大量财富流向教育、医学研究与基金会，形成现代大型慈善的重要范式。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · THE STANDARD OIL MACHINE</div>
+      <h2>洛克菲勒的核心能力：把混乱产业变成一台机器</h2>
+    </div>
+    <p>他的优势不只在“赚钱”，而在于把成本、物流、谈判、规模与组织纪律连成一个系统。</p>
+  </div>
+
+  <div class="empire">
+    <div class="machine">
+      <div class="kicker">INDUSTRIAL SYSTEM</div>
+      <div class="flow">
+        <div class="node"><b>炼油效率</b><span>重视成本、产能利用、副产品与标准化。</span></div>
+        <div class="arrow">→</div>
+        <div class="node"><b>运输优势</b><span>铁路运价、运输规模与后来的管道网络成为关键控制点。</span></div>
+        <div class="arrow">→</div>
+        <div class="node"><b>市场控制</b><span>规模带来议价能力，也带来压制竞争者的巨大力量。</span></div>
+      </div>
+      <div class="machine-note">
+        同一种“效率机器”，既可以被理解为现代企业组织能力，也可以被批评为垄断工具——这正是本书持续保留的张力。
+      </div>
+    </div>
+
+    <div class="ledger">
+      <div class="kicker">ROCKEFELLER LEDGER</div>
+      <h3 style="font-size:25px;margin:8px 0 14px">他的商业世界由什么构成？</h3>
+      <div class="ledger-row"><div><b>成本意识</b><span>不是只增加收入，而是持续压缩单位成本。</span></div><strong>↓</strong></div>
+      <div class="ledger-row"><div><b>现金纪律</b><span>重视账目、信用和财务稳健。</span></div><strong>✓</strong></div>
+      <div class="ledger-row"><div><b>规模</b><span>把固定成本、采购和运输优势放大。</span></div><strong>×N</strong></div>
+      <div class="ledger-row"><div><b>整合</b><span>把供应链多个环节纳入同一控制体系。</span></div><strong>↔</strong></div>
+      <div class="ledger-row"><div><b>耐心</b><span>财富增长依赖长期积累而不是短期炫耀。</span></div><strong>∞</strong></div>
+      <div class="stamp">CONTROL THROUGH ORGANIZATION</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · JEKYLL & HYDE</div>
+      <h2>切尔诺真正写的是“两张脸同时成立”</h2>
+    </div>
+    <p>Google Books 对本书的概括直接把洛克菲勒形容为美国资本主义的“双面人物”：既是令竞争者恐惧的托拉斯巨头，又是大规模慈善的先驱。</p>
+  </div>
+
+  <div class="duality">
+    <div class="face dark">
+      <div class="tag">THE ROBBER BARON</div>
+      <h3>工业权力</h3>
+      <p>Standard Oil 的扩张伴随着铁路优惠、激进竞争策略和巨大的产业控制力，使洛克菲勒成为改革者和反托拉斯运动的主要象征。</p>
+      <ul>
+        <li>规模效率也制造市场支配力</li>
+        <li>秘密协定与运输优势引发长期争议</li>
+        <li>公众形象逐渐从企业家变成“托拉斯怪物”</li>
+      </ul>
+      <div class="bigword">POWER</div>
+    </div>
+
+    <div class="face light">
+      <div class="tag">THE PHILANTHROPIST</div>
+      <h3>慈善秩序</h3>
+      <p>与此同时，他长期捐赠，并逐步把慈善从零散施舍变成更系统的教育、科研和公共卫生投入。</p>
+      <ul>
+        <li>宗教信念强化“财富应被使用”的责任观</li>
+        <li>支持大学、医学研究与公共卫生</li>
+        <li>财富管理逻辑被带入慈善：组织化、规模化、长期化</li>
+      </ul>
+      <div class="bigword">GIVE</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · THE MYTH OF WEALTH</div>
+      <h2>“财富神话”至少包含四个彼此冲突的故事</h2>
+    </div>
+    <p>这本书最有意思的地方，不是替其中任何一个故事站队，而是让它们同时存在。</p>
+  </div>
+
+  <div class="myth-grid">
+    <div class="myth"><div class="id">MYTH 01</div><h3>白手起家的美国梦</h3><p>纪律、节俭、工作、信用与长期积累，构成经典的个人奋斗叙事。</p><div class="split"><b>问题：</b>个人能力能解释多少，时代与产业机会又能解释多少？</div></div>
+    <div class="myth"><div class="id">MYTH 02</div><h3>效率必然代表进步</h3><p>Standard Oil 大幅提高组织效率，但效率扩大到极致后，也可能形成对市场的控制。</p><div class="split"><b>问题：</b>效率与公平的边界在哪里？</div></div>
+    <div class="myth"><div class="id">MYTH 03</div><h3>财富证明个人德性</h3><p>洛克菲勒本人把财富与宗教责任紧密联系，但财富来源和使用方式始终受到不同道德评价。</p><div class="split"><b>问题：</b>成功本身是否能证明过程正当？</div></div>
+    <div class="myth"><div class="id">MYTH 04</div><h3>慈善可以洗净商业历史</h3><p>晚年的巨额慈善确实改变社会，也改变了 Rockefeller 名字的公共意义，但它并不能自动抹掉早期争议。</p><div class="split"><b>问题：</b>如何同时评价创造与伤害？</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · REPUTATION MACHINE</div>
+      <h2>财富不仅创造公司，也创造公众叙事</h2>
+    </div>
+    <p>洛克菲勒的一生还是一场长期的“声誉战争”：媒体、调查记者、改革运动、法律诉讼和慈善共同塑造公众眼中的他。</p>
+  </div>
+
+  <div class="public-opinion">
+    <div class="press">
+      <div class="kicker">PUBLIC OPINION / EXTRA EDITION</div>
+      <div class="headline">THE TITAN<br>OR THE OCTOPUS?</div>
+      <p>在镀金时代的大众想象中，洛克菲勒可以同时代表企业组织能力、极端财富、托拉斯垄断和资本权力。这种公众形象后来又被慈善事业不断重写。</p>
+    </div>
+
+    <div class="reputation">
+      <div class="rep"><div class="phase">PHASE 01</div><div><b>成功企业家</b><p>早期被视作新工业时代高效率经营者。</p></div></div>
+      <div class="rep"><div class="phase">PHASE 02</div><div><b>托拉斯象征</b><p>Standard Oil 的支配力和商业手段使其成为反垄断改革的核心靶子。</p></div></div>
+      <div class="rep"><div class="phase">PHASE 03</div><div><b>公众恶人</b><p>调查报道与政治运动强化“robber baron”形象。</p></div></div>
+      <div class="rep"><div class="phase">PHASE 04</div><div><b>慈善巨头</b><p>教育、医学与基金会项目逐渐改变 Rockefeller 名字的社会含义。</p></div></div>
+      <div class="rep"><div class="phase">PHASE 05</div><div><b>历史悖论</b><p>后来的研究更倾向同时保留他的组织天才、商业争议和慈善贡献。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · FROM FORTUNE TO INSTITUTION</div>
+      <h2>真正改变历史的，也许不是“捐了多少钱”，而是慈善被制度化</h2>
+    </div>
+    <p>切尔诺强调洛克菲勒深厚的宗教性和持续捐赠；晚期财富则通过组织化慈善进入教育、医学研究和公共事业。</p>
+  </div>
+
+  <div class="philanthropy">
+    <div class="phil"><div class="sym">U</div><b>教育</b><span>支持高等教育，把资本投入长期人才与知识基础设施。</span></div>
+    <div class="phil"><div class="sym">+</div><b>医学研究</b><span>推动以科学研究为核心的医学机构与专业化研究体系。</span></div>
+    <div class="phil"><div class="sym">◎</div><b>公共卫生</b><span>把慈善从个体救济扩展到疾病、卫生与社会系统问题。</span></div>
+    <div class="phil"><div class="sym">F</div><b>基金会</b><span>让财富超越个人寿命，以制度持续分配资源与解决问题。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · ROCKEFELLER LENS</div>
+      <h2>读完这本书，值得留下的五个问题</h2>
+    </div>
+  </div>
+
+  <div class="questions">
+    <div class="q"><div class="n">Q01</div><b>财富来自哪里？</b><span>个人能力、行业结构、制度环境与时代窗口分别贡献了多少？</span></div>
+    <div class="q"><div class="n">Q02</div><b>效率何时变成权力？</b><span>规模优势积累到什么程度，会从竞争优势转化为市场支配？</span></div>
+    <div class="q"><div class="n">Q03</div><b>成功过程重要吗？</b><span>结果巨大，是否足以抵消获取结果过程中造成的伤害？</span></div>
+    <div class="q"><div class="n">Q04</div><b>财富应该如何使用？</b><span>私人消费、家族传承、投资社会基础设施，各自意味着什么？</span></div>
+    <div class="q"><div class="n">Q05</div><b>怎样评价复杂人物？</b><span>能否不把一个人压缩成“伟人”或“恶人”，而同时保留冲突事实？</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE SYNTHESIS</div>
+      <strong>《洛克菲勒》真正讲的不是“如何成为首富”，而是财富一旦变成制度性力量，会怎样改变企业、市场、政治、慈善和一个人的历史形象。</strong>
+      <p>财富的神话之所以迷人，是因为它同时拥有创造和破坏两种能力。切尔诺并没有替洛克菲勒洗白，也没有把他简化成恶棍，而是在同一个生命里保留这些互相冲突的事实。</p>
+    </div>
+    <div class="final-side">
+      <div class="final-card"><b>创造</b><span>用组织、规模和纪律重构一个产业。</span></div>
+      <div class="final-card"><b>控制</b><span>效率优势最终转化为巨大的市场权力。</span></div>
+      <div class="final-card"><b>反噬</b><span>公众舆论、调查与法律重新约束私人资本。</span></div>
+      <div class="final-card"><b>再分配</b><span>财富通过慈善机构进入公共领域。</span></div>
+      <div class="final-card"><b>遗产</b><span>真正留下的是一个至今仍在争论的资本主义悖论。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>RON CHERNOW · TITAN: THE LIFE OF JOHN D. ROCKEFELLER, SR. · 中文译本《洛克菲勒：一个关于财富的神话》</span>
+  <span>
+    <a href="https://books.google.com/books/about/Titan.html?id=Mleb5acWQF4C" target="_blank">GOOGLE BOOKS</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.baike.com/wikiid/442177088062439654" target="_blank">中文版本信息</a>
+  </span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

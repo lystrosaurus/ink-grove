@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "one-percent-rule",
+  "slug": "one-percent-rule",
+  "title": "1%法则",
+  "subtitle": "一次改进一个关键动作，让行动、记录与反馈形成循环",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Tom Connellan · 汤姆·康奈兰",
+  "topics": [
+    "成长",
+    "行动",
+    "学习"
+  ],
+  "concepts": [
+    "微小改进",
+    "反馈",
+    "主动选择",
+    "复利"
+  ],
+  "visualStyle": "terracotta-margin-notebook",
+  "related": [
+    "deliberate-practice",
+    "cognitive-awakening",
+    "cybernetics",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "applies",
+      "concept": "feedback",
+      "label": "把明确目标与反馈缩小成今天可执行的一步"
+    },
+    {
+      "target": "cognitive-awakening",
+      "type": "supports",
+      "concept": "active-choice",
+      "label": "从等待状态转向先开始一个最小行动"
+    },
+    {
+      "target": "cybernetics",
+      "type": "related",
+      "concept": "feedback",
+      "label": "让记录回到下一次行动，闭合改进回路"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "compounding",
+      "label": "让可以持续的正确行为参与长期积累"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/one-percent-rule/index.html"
+  },
+  "cover": "/artifacts/one-percent-rule/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/1_percent_rule_single_page.html"
+    ],
+    "derivedFrom": []
+  }
+}

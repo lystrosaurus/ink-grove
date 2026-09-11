@@ -3,6 +3,838 @@
   "artifacts": [
     {
       "schemaVersion": 1,
+      "id": "clear-thinking-lab",
+      "slug": "clear-thinking-lab",
+      "title": "清醒行动实验室",
+      "subtitle": "让证据、反证与反馈，变成一个可以亲手验证的小行动。",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove · AI 辅助创作",
+      "topics": [
+        "认知",
+        "决策",
+        "行动",
+        "系统"
+      ],
+      "concepts": [
+        "判断力",
+        "反馈",
+        "系统思维",
+        "认知偏差",
+        "逆向思考",
+        "微小改进"
+      ],
+      "visualStyle": "blueprint-field-laboratory",
+      "related": [
+        "managerial-judgment",
+        "poor-charlies-almanack",
+        "cybernetics",
+        "one-percent-rule"
+      ],
+      "connections": [
+        {
+          "target": "managerial-judgment",
+          "type": "derived-from",
+          "concept": "cognitive-bias",
+          "label": "把证据与反证放在同一张行动卡上"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "derived-from",
+          "concept": "inversion",
+          "label": "通过逆向检查缩小试错的代价"
+        },
+        {
+          "target": "cybernetics",
+          "type": "derived-from",
+          "concept": "feedback",
+          "label": "用可调整的示意模型理解反馈延迟"
+        },
+        {
+          "target": "one-percent-rule",
+          "type": "derived-from",
+          "concept": "small-improvements",
+          "label": "从现状基线出发，设计最小可逆行动"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/clear-thinking-lab/index.html"
+      },
+      "cover": "/artifacts/clear-thinking-lab/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "artifact:managerial-judgment",
+          "artifact:poor-charlies-almanack",
+          "artifact:cybernetics",
+          "artifact:one-percent-rule"
+        ],
+        "derivedFrom": [
+          "managerial-judgment",
+          "poor-charlies-almanack",
+          "cybernetics",
+          "one-percent-rule"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "buffett-shareholder-letters",
+      "slug": "buffett-shareholder-letters",
+      "title": "巴菲特致股东的信",
+      "subtitle": "以长期所有者视角，理解治理、资本配置与经济实质",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Warren E. Buffett / Lawrence A. Cunningham 编",
+      "topics": [
+        "投资",
+        "商业",
+        "管理",
+        "长期主义"
+      ],
+      "concepts": [
+        "资本配置",
+        "内在价值",
+        "激励机制",
+        "复利"
+      ],
+      "visualStyle": "navy-capital-allocation-manual",
+      "related": [
+        "intelligent-investor",
+        "poor-charlies-almanack",
+        "rockefeller-wealth-archive",
+        "effective-executive"
+      ],
+      "connections": [
+        {
+          "target": "intelligent-investor",
+          "type": "extends",
+          "concept": "intrinsic-value",
+          "label": "把价格与价值的区分延伸到企业所有权与资本用途"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "capital-allocation",
+          "label": "让多模型判断与资本纪律共同约束重大选择"
+        },
+        {
+          "target": "rockefeller-wealth-archive",
+          "type": "related",
+          "concept": "institutional-power",
+          "label": "把所有者责任与企业权力的历史叙事并置"
+        },
+        {
+          "target": "effective-executive",
+          "type": "related",
+          "concept": "judgment",
+          "label": "比较管理者如何把有限资源转化为长期贡献"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/buffett-shareholder-letters/index.html"
+      },
+      "cover": "/artifacts/buffett-shareholder-letters/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/buffett_shareholder_letters_owners_manual.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "economic-way-of-thinking",
+      "slug": "economic-way-of-thinking",
+      "title": "经济学的思维方式",
+      "subtitle": "第13版 · 透过选择、激励、价格与制度理解社会协调",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Paul Heyne / Peter Boettke / David Prychitko",
+      "topics": [
+        "经济",
+        "思考",
+        "社会",
+        "系统"
+      ],
+      "concepts": [
+        "机会成本",
+        "激励机制",
+        "制度与权力",
+        "系统思维"
+      ],
+      "visualStyle": "sage-economic-lens-laboratory",
+      "related": [
+        "poor-charlies-almanack",
+        "thinking-in-systems",
+        "rockefeller-wealth-archive",
+        "managerial-judgment"
+      ],
+      "connections": [
+        {
+          "target": "poor-charlies-almanack",
+          "type": "extends",
+          "concept": "opportunity-cost",
+          "label": "把机会成本和激励模型展开成一套经济推理语言"
+        },
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "追踪规则变化后的行为调整与非预期后果"
+        },
+        {
+          "target": "rockefeller-wealth-archive",
+          "type": "related",
+          "concept": "institutional-power",
+          "label": "从产权、交易成本和规则理解产业权力"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "supports",
+          "concept": "judgment",
+          "label": "用替代方案与沉没成本的区分检查当前选择"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/economic-way-of-thinking/index.html"
+      },
+      "cover": "/artifacts/economic-way-of-thinking/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/economic_way_of_thinking_13_lens_lab.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "effective-executive",
+      "slug": "effective-executive",
+      "title": "卓有成效的管理者",
+      "subtitle": "55周年新译本 · 让时间、优势与判断转化为组织贡献",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Peter F. Drucker · 彼得·德鲁克",
+      "topics": [
+        "管理",
+        "行动",
+        "组织"
+      ],
+      "concepts": [
+        "注意力",
+        "主动选择",
+        "判断力",
+        "反馈",
+        "责任与意义"
+      ],
+      "visualStyle": "teal-executive-operating-system",
+      "related": [
+        "seven-habits",
+        "managerial-judgment",
+        "mckinsey-way",
+        "one-percent-rule"
+      ],
+      "connections": [
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "比较要事优先如何落实为对时间和资源的真实选择"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "supports",
+          "concept": "judgment",
+          "label": "把不同意见、边界条件和结果反馈纳入决策"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "related",
+          "concept": "structured-problem-solving",
+          "label": "把问题定义与分析推进到明确责任的行动"
+        },
+        {
+          "target": "one-percent-rule",
+          "type": "related",
+          "concept": "feedback",
+          "label": "用行动记录和现实反馈检验方法是否产生结果"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/effective-executive/index.html"
+      },
+      "cover": "/artifacts/effective-executive/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/effective_executive_55_os.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "peter-lynch-stock-scout",
+      "slug": "peter-lynch-stock-scout",
+      "title": "彼得·林奇的成功投资",
+      "subtitle": "从生活线索走向公司分类、财务核对与持续跟踪",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Peter Lynch / John Rothchild",
+      "topics": [
+        "投资",
+        "商业",
+        "研究"
+      ],
+      "concepts": [
+        "假设验证",
+        "内在价值",
+        "判断力",
+        "能力圈"
+      ],
+      "visualStyle": "olive-stock-research-board",
+      "related": [
+        "buffett-shareholder-letters",
+        "intelligent-investor",
+        "managerial-judgment",
+        "poor-charlies-almanack"
+      ],
+      "connections": [
+        {
+          "target": "buffett-shareholder-letters",
+          "type": "related",
+          "concept": "intrinsic-value",
+          "label": "共同把股票放回企业经营与购买价格之中观察"
+        },
+        {
+          "target": "intelligent-investor",
+          "type": "related",
+          "concept": "margin-of-safety",
+          "label": "比较公司成长研究与价值防御的不同关注点"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "applies",
+          "concept": "hypothesis-testing",
+          "label": "让公司故事接受反证与数据的持续核对"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "circle-of-competence",
+          "label": "从能够理解的业务出发，辨认知识与判断的边界"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/peter-lynch-stock-scout/index.html"
+      },
+      "cover": "/artifacts/peter-lynch-stock-scout/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/peter_lynch_stock_scout.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "intelligent-investor",
+      "slug": "intelligent-investor",
+      "title": "聪明的投资者",
+      "subtitle": "从价格与价值的区分，读懂安全边际和行为纪律",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Benjamin Graham · 本杰明·格雷厄姆",
+      "topics": [
+        "投资",
+        "决策",
+        "长期主义"
+      ],
+      "concepts": [
+        "安全边际",
+        "内在价值",
+        "判断力",
+        "认知偏差"
+      ],
+      "visualStyle": "stone-value-investing-fortress",
+      "related": [
+        "buffett-shareholder-letters",
+        "poor-charlies-almanack",
+        "managerial-judgment",
+        "economic-way-of-thinking"
+      ],
+      "connections": [
+        {
+          "target": "buffett-shareholder-letters",
+          "type": "supports",
+          "concept": "intrinsic-value",
+          "label": "以价格、价值和市场先生理解长期所有者视角"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "margin-of-safety",
+          "label": "以允许判断出错的余量约束看似精确的预测"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "cognitive-bias",
+          "label": "把情绪与从众造成的误判纳入行为纪律"
+        },
+        {
+          "target": "economic-way-of-thinking",
+          "type": "related",
+          "concept": "opportunity-cost",
+          "label": "把资金用途放回可比较的替代选择"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/intelligent-investor/index.html"
+      },
+      "cover": "/artifacts/intelligent-investor/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/the_intelligent_investor_fortress.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "power-of-now",
+      "slug": "power-of-now",
+      "title": "当下的力量",
+      "subtitle": "在托利的觉察练习中，观察念头、接纳事实并回到此刻",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Eckhart Tolle · 埃克哈特·托利",
+      "topics": [
+        "哲学",
+        "觉察",
+        "生活"
+      ],
+      "concepts": [
+        "注意力",
+        "元认知",
+        "主动选择",
+        "不断更新"
+      ],
+      "visualStyle": "sage-presence-and-stillness",
+      "related": [
+        "cognitive-awakening",
+        "attention-loop",
+        "seven-habits",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "cognitive-awakening",
+          "type": "related",
+          "concept": "metacognition",
+          "label": "从观察念头的角度重新理解对内在过程的觉察"
+        },
+        {
+          "target": "attention-loop",
+          "type": "related",
+          "concept": "attention",
+          "label": "把注意力从自动输入带回正在发生的经验"
+        },
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "比较刺激与回应之间的觉察和选择空间"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "renewal",
+          "label": "从当下体验与内在安静延伸对自由生活的思考"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/power-of-now/index.html"
+      },
+      "cover": "/artifacts/power-of-now/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/the_power_of_now_presence.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "one-percent-rule",
+      "slug": "one-percent-rule",
+      "title": "1%法则",
+      "subtitle": "一次改进一个关键动作，让行动、记录与反馈形成循环",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Tom Connellan · 汤姆·康奈兰",
+      "topics": [
+        "成长",
+        "行动",
+        "学习"
+      ],
+      "concepts": [
+        "微小改进",
+        "反馈",
+        "主动选择",
+        "复利"
+      ],
+      "visualStyle": "terracotta-margin-notebook",
+      "related": [
+        "deliberate-practice",
+        "cognitive-awakening",
+        "cybernetics",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "applies",
+          "concept": "feedback",
+          "label": "把明确目标与反馈缩小成今天可执行的一步"
+        },
+        {
+          "target": "cognitive-awakening",
+          "type": "supports",
+          "concept": "active-choice",
+          "label": "从等待状态转向先开始一个最小行动"
+        },
+        {
+          "target": "cybernetics",
+          "type": "related",
+          "concept": "feedback",
+          "label": "让记录回到下一次行动，闭合改进回路"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "compounding",
+          "label": "让可以持续的正确行为参与长期积累"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/one-percent-rule/index.html"
+      },
+      "cover": "/artifacts/one-percent-rule/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/1_percent_rule_single_page.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cybernetics",
+      "slug": "cybernetics",
+      "title": "控制论",
+      "subtitle": "把目标、信息与反馈放进同一张控制台",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Norbert Wiener · 诺伯特·维纳",
+      "topics": [
+        "系统",
+        "科学",
+        "学习"
+      ],
+      "concepts": [
+        "反馈",
+        "系统思维",
+        "信息质量"
+      ],
+      "visualStyle": "phosphor-control-console",
+      "related": [
+        "thinking-in-systems",
+        "learning-cycle",
+        "managerial-judgment",
+        "one-percent-rule"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "supports",
+          "concept": "feedback",
+          "label": "为观察回路、延迟与系统调节提供共同语言"
+        },
+        {
+          "target": "learning-cycle",
+          "type": "supports",
+          "concept": "feedback",
+          "label": "用感知、比较与修正理解学习循环"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "information-quality",
+          "label": "失真的信息与有限觉察都会影响决策修正"
+        },
+        {
+          "target": "one-percent-rule",
+          "type": "supports",
+          "concept": "feedback",
+          "label": "把结果及时送回，让微小改进能够持续"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/cybernetics/index.html"
+      },
+      "cover": "/artifacts/cybernetics/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/cybernetics_control_console.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "managerial-judgment",
+      "slug": "managerial-judgment",
+      "title": "管理决策中的判断",
+      "subtitle": "在签字之前，用证据、反证与流程审计判断偏差",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Max H. Bazerman / Don A. Moore",
+      "topics": [
+        "决策",
+        "管理",
+        "心理"
+      ],
+      "concepts": [
+        "判断力",
+        "认知偏差",
+        "概率思维",
+        "假设验证"
+      ],
+      "visualStyle": "ivory-decision-dossier",
+      "related": [
+        "mindware",
+        "poor-charlies-almanack",
+        "mckinsey-way",
+        "cognitive-awakening"
+      ],
+      "connections": [
+        {
+          "target": "mindware",
+          "type": "extends",
+          "concept": "probability",
+          "label": "把基准率与证据检验带到定价、任命和资源分配"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "supports",
+          "concept": "cognitive-bias",
+          "label": "用偏差审计补充多模型与逆向思考"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "supports",
+          "concept": "hypothesis-testing",
+          "label": "让反证和外部视角检验团队的初始假设"
+        },
+        {
+          "target": "cognitive-awakening",
+          "type": "related",
+          "concept": "attention",
+          "label": "有限觉察提醒我们检查注意力之外的信息"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/managerial-judgment/index.html"
+      },
+      "cover": "/artifacts/managerial-judgment/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/judgment_in_managerial_decision_making.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "poor-charlies-almanack",
+      "slug": "poor-charlies-almanack",
+      "title": "穷查理宝典",
+      "subtitle": "调用多元模型，识别能力边界，先排除可避免的错误",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Charles T. Munger · 查理·芒格 / Peter D. Kaufman 编",
+      "topics": [
+        "决策",
+        "思考",
+        "长期主义"
+      ],
+      "concepts": [
+        "思维模型",
+        "逆向思考",
+        "能力圈",
+        "认知偏差",
+        "激励机制",
+        "复利"
+      ],
+      "visualStyle": "graphite-gold-decision-room",
+      "related": [
+        "great-mental-models",
+        "managerial-judgment",
+        "naval-almanack",
+        "rockefeller-wealth-archive"
+      ],
+      "connections": [
+        {
+          "target": "great-mental-models",
+          "type": "extends",
+          "concept": "mental-models",
+          "label": "把跨学科模型接成一组可反复调用的决策过滤器"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "cognitive-bias",
+          "label": "把心理误判检查落实到具体决策流程"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "compounding",
+          "label": "比较知识、信誉与关系中的长期积累"
+        },
+        {
+          "target": "rockefeller-wealth-archive",
+          "type": "related",
+          "concept": "incentives",
+          "label": "用激励与组织视角观察财富形成及其争议"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/poor-charlies-almanack/index.html"
+      },
+      "cover": "/artifacts/poor-charlies-almanack/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/poor_charlies_almanack_decision_room.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rockefeller-wealth-archive",
+      "slug": "rockefeller-wealth-archive",
+      "title": "洛克菲勒：一个关于财富的神话",
+      "subtitle": "沿切尔诺的传记叙事，观察效率、权力、声誉与慈善的张力",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Ron Chernow · 罗恩·切尔诺",
+      "topics": [
+        "传记",
+        "历史",
+        "商业",
+        "财富"
+      ],
+      "concepts": [
+        "系统思维",
+        "制度与权力",
+        "激励机制",
+        "责任与意义"
+      ],
+      "visualStyle": "sepia-industrial-archive",
+      "related": [
+        "thinking-in-systems",
+        "innovators-dilemma",
+        "poor-charlies-almanack",
+        "naval-almanack"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "applies",
+          "concept": "systems-thinking",
+          "label": "从成本、运输、规模和组织关系观察产业系统"
+        },
+        {
+          "target": "innovators-dilemma",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "比较组织优势如何受到外部环境与制度的约束"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "incentives",
+          "label": "从激励、规模和机会成本追问商业行为"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "contrasts",
+          "concept": "institutional-power",
+          "label": "把个人自由的财富观与产业权力的历史叙事并置"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/rockefeller-wealth-archive/index.html"
+      },
+      "cover": "/artifacts/rockefeller-wealth-archive/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-12",
+      "provenance": {
+        "generatedBy": "human",
+        "sources": [
+          "file:materials/rockefeller_wealth_myth_archive.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
       "id": "personal-growth-os",
       "slug": "personal-growth-os",
       "title": "贯通思考篇",
@@ -74,7 +906,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:integrated_thinking_personal_os.html"
+          "file:materials/integrated_thinking_personal_os.html"
         ],
         "derivedFrom": [
           "cognitive-awakening",
@@ -212,7 +1044,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:integrated_thinking_intellectual_atlas.html"
+          "file:materials/integrated_thinking_intellectual_atlas.html"
         ],
         "derivedFrom": [
           "cognitive-awakening-inner-os",
@@ -294,7 +1126,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:cognitive_awakening_inner_os_single_page.html"
+          "file:materials/cognitive_awakening_inner_os_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -362,7 +1194,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:thinking_in_systems_single_page.html"
+          "file:materials/thinking_in_systems_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -431,7 +1263,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:great_mental_models_single_page.html"
+          "file:materials/great_mental_models_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -493,7 +1325,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:mindware_logic_thinking_single_page.html"
+          "file:materials/mindware_logic_thinking_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -555,7 +1387,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:the_mckinsey_way_single_page.html"
+          "file:materials/the_mckinsey_way_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -623,7 +1455,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:how_to_read_a_book_single_page.html"
+          "file:materials/how_to_read_a_book_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -684,7 +1516,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:12_rules_for_life_single_page.html"
+          "file:materials/12_rules_for_life_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -746,7 +1578,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:innovators_dilemma_single_page.html"
+          "file:materials/innovators_dilemma_single_page.html"
         ],
         "derivedFrom": []
       }
@@ -815,7 +1647,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:cognitive_awakening_editorial.html"
+          "file:materials/cognitive_awakening_editorial.html"
         ],
         "derivedFrom": []
       }
@@ -884,7 +1716,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:seven_habits_core_map.html"
+          "file:materials/seven_habits_core_map.html"
         ],
         "derivedFrom": []
       }
@@ -947,7 +1779,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:deliberate_practice_lab_style.html"
+          "file:materials/deliberate_practice_lab_style.html"
         ],
         "derivedFrom": []
       }
@@ -1008,7 +1840,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:naval_almanack_black_gold.html"
+          "file:materials/naval_almanack_black_gold.html"
         ],
         "derivedFrom": []
       }
@@ -1063,7 +1895,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:deliberate_practice_modern.html"
+          "file:materials/deliberate_practice_modern.html"
         ],
         "derivedFrom": []
       }
@@ -1132,7 +1964,7 @@
       "provenance": {
         "generatedBy": "human",
         "sources": [
-          "file:thinking-framework-core-map.html"
+          "file:materials/thinking-framework-core-map.html"
         ],
         "derivedFrom": []
       }
@@ -1314,6 +2146,35 @@
   ],
   "collections": [
     {
+      "id": "judgment-to-action",
+      "title": "从判断到行动",
+      "subtitle": "A loop of clearer decisions",
+      "description": "从审计偏差和多元模型起步，经由反馈与微小改进走向管理实践，再用实验室把理解变成可验证的行动。",
+      "artifactIds": [
+        "managerial-judgment",
+        "poor-charlies-almanack",
+        "cybernetics",
+        "one-percent-rule",
+        "effective-executive",
+        "clear-thinking-lab"
+      ],
+      "color": "#577669"
+    },
+    {
+      "id": "owner-thinking",
+      "title": "像所有者一样思考",
+      "subtitle": "Value, evidence and capital",
+      "description": "从格雷厄姆的安全边际到巴菲特的资本配置，再以林奇的公司研究和芒格的多模型互相校验。围绕价格、价值与判断纪律展开一次主题阅读。",
+      "artifactIds": [
+        "intelligent-investor",
+        "buffett-shareholder-letters",
+        "peter-lynch-stock-scout",
+        "poor-charlies-almanack",
+        "economic-way-of-thinking"
+      ],
+      "color": "#526a5c"
+    },
+    {
       "id": "personal-growth",
       "title": "从觉醒到自由",
       "subtitle": "A journey of becoming",
@@ -1331,7 +2192,7 @@
       "id": "learning-laboratory",
       "title": "学习的反馈回路",
       "subtitle": "The art of getting better",
-      "description": "从注意力到主动阅读，从学习区到反馈循环。探索理解如何通过深度加工与练习，转化为真正可用的能力。",
+      "description": "从注意力到主动阅读，从练习到微小改进，再看见反馈与延迟。探索理解如何通过行动、记录和修正，转化为真正可用的能力。",
       "artifactIds": [
         "attention-loop",
         "cognitive-awakening",
@@ -1339,7 +2200,10 @@
         "deliberate-practice-modern",
         "learning-cycle",
         "cognitive-awakening-inner-os",
-        "how-to-read-a-book"
+        "how-to-read-a-book",
+        "one-percent-rule",
+        "cybernetics",
+        "power-of-now"
       ],
       "color": "#537c69"
     },
@@ -1347,14 +2211,15 @@
       "id": "connected-thinking",
       "title": "让思想彼此连接",
       "subtitle": "Where ideas meet",
-      "description": "从一张思考框架到多模型网络，再从四本书走向十一本文本的贯通。看见知识之间的关系，生长出自己的理解。",
+      "description": "从一张思考框架到多模型网络，从跨书地图到可以亲手尝试的行动实验。看见知识之间的关系，生长出自己的理解。",
       "artifactIds": [
         "thinking-framework",
         "great-mental-models",
         "thinking-in-systems",
         "personal-growth-os",
         "intellectual-atlas",
-        "knowledge-landscape"
+        "knowledge-landscape",
+        "clear-thinking-lab"
       ],
       "color": "#737094"
     },
@@ -1362,13 +2227,16 @@
       "id": "clearer-judgment",
       "title": "让判断更清醒",
       "subtitle": "Tools for clearer thinking",
-      "description": "换一副模型，检查概率与因果，用事实验证假设，再回到原文主动提问。让每一个判断都留有被现实修正的空间。",
+      "description": "换一副模型，检查概率与因果，用反证审计偏差，再识别自己的能力边界。让每一个判断都留有被现实修正的空间。",
       "artifactIds": [
         "great-mental-models",
         "mindware",
         "mckinsey-way",
         "how-to-read-a-book",
-        "thinking-framework"
+        "thinking-framework",
+        "managerial-judgment",
+        "poor-charlies-almanack",
+        "economic-way-of-thinking"
       ],
       "color": "#4d7790"
     },
@@ -1376,14 +2244,18 @@
       "id": "acting-in-complexity",
       "title": "在复杂世界中行动",
       "subtitle": "Structure, responsibility and change",
-      "description": "从系统结构看见反复出现的问题，从责任与原则校准方向，再理解组织为什么被成功经验困住。把方法放回真实世界。",
+      "description": "从系统结构看见反复出现的问题，从责任与原则校准方向，再把组织优势放回产业、历史与制度之中。把方法放回真实世界。",
       "artifactIds": [
         "thinking-in-systems",
         "twelve-rules-for-life",
         "seven-habits",
         "mckinsey-way",
         "innovators-dilemma",
-        "intellectual-atlas"
+        "intellectual-atlas",
+        "cybernetics",
+        "rockefeller-wealth-archive",
+        "economic-way-of-thinking",
+        "effective-executive"
       ],
       "color": "#9b7455"
     }
@@ -1623,6 +2495,116 @@
         "systems-thinking",
         "hypothesis-testing",
         "judgment"
+      ]
+    },
+    {
+      "id": "cognitive-bias",
+      "name": "认知偏差",
+      "description": "辨认直觉、参照与注意力造成的系统性偏差，用反证和流程帮助复核。",
+      "related": [
+        "judgment",
+        "probability",
+        "metacognition"
+      ]
+    },
+    {
+      "id": "inversion",
+      "name": "逆向思考",
+      "description": "先问哪些路径会导致失败，再据此排除可避免的错误与脆弱环节。",
+      "related": [
+        "mental-models",
+        "hypothesis-testing",
+        "judgment"
+      ]
+    },
+    {
+      "id": "circle-of-competence",
+      "name": "能力圈",
+      "description": "区分能够解释和验证的领域与尚不理解的部分，为自信划出边界。",
+      "related": [
+        "specific-knowledge",
+        "judgment",
+        "mental-models"
+      ]
+    },
+    {
+      "id": "small-improvements",
+      "name": "微小改进",
+      "description": "选定一个关键动作，记录基线和变化，用小步行动形成可以维持的改进循环。",
+      "related": [
+        "feedback",
+        "active-choice",
+        "deliberate-practice"
+      ]
+    },
+    {
+      "id": "information-quality",
+      "name": "信息质量",
+      "description": "检查信息的真实性、噪声、缺失与延迟，使反馈能够反映实际状态。",
+      "related": [
+        "feedback",
+        "cognitive-bias",
+        "systems-thinking"
+      ]
+    },
+    {
+      "id": "incentives",
+      "name": "激励机制",
+      "description": "观察奖励、约束和利益如何影响个体判断、组织行动与长期结果。",
+      "related": [
+        "cognitive-bias",
+        "systems-thinking",
+        "judgment"
+      ]
+    },
+    {
+      "id": "institutional-power",
+      "name": "制度与权力",
+      "description": "观察规模、组织和规则怎样塑造资源分配，以及私人力量如何受到公共约束。",
+      "related": [
+        "systems-thinking",
+        "responsibility",
+        "incentives"
+      ]
+    },
+    {
+      "id": "intrinsic-value",
+      "name": "内在价值",
+      "description": "区分市场报价与对企业或资产经济价值的估计，持续检查估计背后的事实与假设。",
+      "related": [
+        "judgment",
+        "hypothesis-testing",
+        "margin-of-safety"
+      ]
+    },
+    {
+      "id": "margin-of-safety",
+      "name": "安全边际",
+      "description": "承认判断可能出错，在价格、资源或结构中保留应对误差与未知的余量。",
+      "related": [
+        "intrinsic-value",
+        "circle-of-competence",
+        "judgment"
+      ]
+    },
+    {
+      "id": "capital-allocation",
+      "name": "资本配置",
+      "description": "比较再投入、收购、回购、分配与保留等用途，把有限资本的使用放回长期价值中判断。",
+      "related": [
+        "intrinsic-value",
+        "opportunity-cost",
+        "incentives"
+      ]
+    },
+    {
+      "id": "opportunity-cost",
+      "name": "机会成本",
+      "description": "理解一个选择所放弃的最佳可行替代方案，将已经无法收回的投入与当前决策分开。",
+      "related": [
+        "judgment",
+        "incentives",
+        "active-choice"
       ]
     }
   ]

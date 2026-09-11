@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "rockefeller-wealth-archive",
+  "slug": "rockefeller-wealth-archive",
+  "title": "洛克菲勒：一个关于财富的神话",
+  "subtitle": "沿切尔诺的传记叙事，观察效率、权力、声誉与慈善的张力",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Ron Chernow · 罗恩·切尔诺",
+  "topics": [
+    "传记",
+    "历史",
+    "商业",
+    "财富"
+  ],
+  "concepts": [
+    "系统思维",
+    "制度与权力",
+    "激励机制",
+    "责任与意义"
+  ],
+  "visualStyle": "sepia-industrial-archive",
+  "related": [
+    "thinking-in-systems",
+    "innovators-dilemma",
+    "poor-charlies-almanack",
+    "naval-almanack"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "applies",
+      "concept": "systems-thinking",
+      "label": "从成本、运输、规模和组织关系观察产业系统"
+    },
+    {
+      "target": "innovators-dilemma",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "比较组织优势如何受到外部环境与制度的约束"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "incentives",
+      "label": "从激励、规模和机会成本追问商业行为"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "contrasts",
+      "concept": "institutional-power",
+      "label": "把个人自由的财富观与产业权力的历史叙事并置"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/rockefeller-wealth-archive/index.html"
+  },
+  "cover": "/artifacts/rockefeller-wealth-archive/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/rockefeller_wealth_myth_archive.html"
+    ],
+    "derivedFrom": []
+  }
+}

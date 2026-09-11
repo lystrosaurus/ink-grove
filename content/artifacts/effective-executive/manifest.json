@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "effective-executive",
+  "slug": "effective-executive",
+  "title": "卓有成效的管理者",
+  "subtitle": "55周年新译本 · 让时间、优势与判断转化为组织贡献",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Peter F. Drucker · 彼得·德鲁克",
+  "topics": [
+    "管理",
+    "行动",
+    "组织"
+  ],
+  "concepts": [
+    "注意力",
+    "主动选择",
+    "判断力",
+    "反馈",
+    "责任与意义"
+  ],
+  "visualStyle": "teal-executive-operating-system",
+  "related": [
+    "seven-habits",
+    "managerial-judgment",
+    "mckinsey-way",
+    "one-percent-rule"
+  ],
+  "connections": [
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "比较要事优先如何落实为对时间和资源的真实选择"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "supports",
+      "concept": "judgment",
+      "label": "把不同意见、边界条件和结果反馈纳入决策"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "related",
+      "concept": "structured-problem-solving",
+      "label": "把问题定义与分析推进到明确责任的行动"
+    },
+    {
+      "target": "one-percent-rule",
+      "type": "related",
+      "concept": "feedback",
+      "label": "用行动记录和现实反馈检验方法是否产生结果"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/effective-executive/index.html"
+  },
+  "cover": "/artifacts/effective-executive/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/effective_executive_55_os.html"
+    ],
+    "derivedFrom": []
+  }
+}

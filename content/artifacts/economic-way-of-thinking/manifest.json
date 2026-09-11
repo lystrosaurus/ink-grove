@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "economic-way-of-thinking",
+  "slug": "economic-way-of-thinking",
+  "title": "经济学的思维方式",
+  "subtitle": "第13版 · 透过选择、激励、价格与制度理解社会协调",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Paul Heyne / Peter Boettke / David Prychitko",
+  "topics": [
+    "经济",
+    "思考",
+    "社会",
+    "系统"
+  ],
+  "concepts": [
+    "机会成本",
+    "激励机制",
+    "制度与权力",
+    "系统思维"
+  ],
+  "visualStyle": "sage-economic-lens-laboratory",
+  "related": [
+    "poor-charlies-almanack",
+    "thinking-in-systems",
+    "rockefeller-wealth-archive",
+    "managerial-judgment"
+  ],
+  "connections": [
+    {
+      "target": "poor-charlies-almanack",
+      "type": "extends",
+      "concept": "opportunity-cost",
+      "label": "把机会成本和激励模型展开成一套经济推理语言"
+    },
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "追踪规则变化后的行为调整与非预期后果"
+    },
+    {
+      "target": "rockefeller-wealth-archive",
+      "type": "related",
+      "concept": "institutional-power",
+      "label": "从产权、交易成本和规则理解产业权力"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "supports",
+      "concept": "judgment",
+      "label": "用替代方案与沉没成本的区分检查当前选择"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/economic-way-of-thinking/index.html"
+  },
+  "cover": "/artifacts/economic-way-of-thinking/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/economic_way_of_thinking_13_lens_lab.html"
+    ],
+    "derivedFrom": []
+  }
+}

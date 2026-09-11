@@ -1,6 +1,11 @@
 import { test, expect } from '@playwright/test'
+import { readFile } from 'node:fs/promises'
 
-test('the full knowledge network keeps all nineteen node targets separate on desktop and mobile', async ({
+const catalog = JSON.parse(
+  await readFile(new URL('../../../content/catalog.json', import.meta.url), 'utf8'),
+)
+
+test('the full knowledge network keeps all catalog node targets separate on desktop and mobile', async ({
   page,
 }) => {
   for (const viewport of [
@@ -9,7 +14,7 @@ test('the full knowledge network keeps all nineteen node targets separate on des
   ]) {
     await page.setViewportSize(viewport)
     await page.goto('/connections')
-    await expect(page.locator('.graph-node')).toHaveCount(19)
+    await expect(page.locator('.graph-node')).toHaveCount(catalog.artifacts.length)
     await expect
       .poll(async () =>
         page.locator('.graph-node').evaluateAll((nodes) => {

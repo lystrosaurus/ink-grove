@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>聪明的投资者｜价值投资防御工事</title>
+<style>
+:root{
+  --bg:#e9e4d8;
+  --paper:#f5f1e8;
+  --ink:#1f2524;
+  --muted:#6c736f;
+  --line:#c5c6bd;
+  --stone:#68716d;
+  --deep:#263633;
+  --green:#46695d;
+  --gold:#b18b43;
+  --red:#9a4c43;
+  --blue:#536b7a;
+  --sand:#ded0b4;
+  --cream:#fbf8f0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    linear-gradient(rgba(40,50,47,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(40,50,47,.03) 1px,transparent 1px),
+    var(--bg);
+  background-size:28px 28px;
+  color:var(--ink);
+  font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.65;
+}
+.wrap{width:min(1460px,95vw);margin:22px auto 54px}
+.fortress{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(50,55,50,.13);
+}
+.topbar{
+  padding:11px 16px;
+  border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;
+  font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700
+}
+.hero{
+  display:grid;grid-template-columns:1.25fr .75fr;
+  min-height:570px;border-bottom:1px solid var(--line)
+}
+.hero-main{padding:48px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";
+  position:absolute;right:-110px;bottom:-135px;width:430px;height:430px;
+  border:1px solid rgba(70,105,93,.16);
+  transform:rotate(45deg);
+  box-shadow:0 0 0 58px rgba(70,105,93,.03),0 0 0 116px rgba(70,105,93,.018)
+}
+.kicker{
+  font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--green)
+}
+h1{
+  font-size:clamp(58px,7.6vw,108px);
+  line-height:.92;letter-spacing:-.055em;margin:18px 0 16px
+}
+.en{
+  font-size:16px;letter-spacing:.09em;color:var(--blue);margin-bottom:26px
+}
+.lead{
+  max-width:840px;font-size:23px;color:#3f4946
+}
+.lead strong{color:var(--deep)}
+.hero-note{
+  margin-top:28px;max-width:860px;
+  padding:20px 22px;border-left:5px solid var(--gold);
+  background:#ece5d8
+}
+.hero-note b{display:block;font-size:20px;margin-bottom:6px}
+.hero-note span{color:var(--muted)}
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;grid-template-rows:repeat(5,1fr)
+}
+.wall{
+  padding:22px;border-bottom:1px solid var(--line)
+}
+.wall:last-child{border-bottom:0}
+.wall .n{font-size:9px;letter-spacing:.13em;font-weight:800}
+.wall strong{display:block;font-size:24px;margin:5px 0}
+.wall span{font-size:12px}
+.wall:nth-child(1){background:var(--deep);color:white}.wall:nth-child(1) span{color:#c9d4d0}
+.wall:nth-child(2){background:#dce5e0}
+.wall:nth-child(3){background:#e8dfca}
+.wall:nth-child(4){background:#e0e4e7}
+.wall:nth-child(5){background:#965047;color:white}.wall:nth-child(5) span{color:#ead7d4}
+
+.section{padding:34px 38px;border-bottom:1px solid var(--line)}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:22px
+}
+.section h2{margin:4px 0 0;font-size:33px}
+.section-head p{max-width:650px;margin:0;color:var(--muted)}
+
+.gate{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.gate-card{
+  border:1px solid var(--line);padding:26px;min-height:330px;position:relative;overflow:hidden
+}
+.gate-card.invest{background:#edf2ef}
+.gate-card.spec{background:#f1e5e2}
+.gate-card .tag{
+  font-size:10px;letter-spacing:.14em;font-weight:800
+}
+.gate-card.invest .tag{color:var(--green)}
+.gate-card.spec .tag{color:var(--red)}
+.gate-card h3{font-size:30px;margin:10px 0}
+.gate-card p{color:var(--muted)}
+.gate-list{display:grid;gap:8px;margin-top:15px}
+.gate-row{
+  padding:10px 0;border-top:1px solid var(--line);
+  display:flex;gap:10px;align-items:flex-start
+}
+.gate-row:first-child{border-top:0}
+.gate-row b{min-width:26px}
+.gate-card .ghost{
+  position:absolute;right:10px;bottom:-35px;font-size:140px;font-weight:900;opacity:.04
+}
+
+.mrmarket{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:14px
+}
+.market-man{
+  min-height:350px;padding:28px;background:var(--deep);color:white;position:relative;overflow:hidden
+}
+.market-man:after{
+  content:"↕";
+  position:absolute;right:18px;bottom:-45px;font-size:180px;color:rgba(255,255,255,.045)
+}
+.market-man .kicker{color:#a5c9bc}
+.market-man strong{display:block;font-size:38px;line-height:1.25;margin:14px 0}
+.market-man p{color:#c8d3d0}
+.market-rules{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rule{
+  border:1px solid var(--line);padding:18px;background:var(--cream);min-height:165px
+}
+.rule .tag{font-size:9px;letter-spacing:.12em;color:var(--gold);font-weight:800}
+.rule b{display:block;font-size:18px;margin:7px 0}
+.rule p{margin:0;color:var(--muted);font-size:13px}
+
+.paths{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.path{
+  padding:24px;border:1px solid var(--line);background:var(--cream)
+}
+.path.def{border-top:6px solid var(--green)}
+.path.ent{border-top:6px solid var(--blue)}
+.path h3{font-size:25px;margin:8px 0}
+.path p{color:var(--muted)}
+.path-list{display:grid;gap:8px;margin-top:14px}
+.path-row{padding:11px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.path-row:first-child{border-top:0}
+
+.moat{
+  display:grid;grid-template-columns:1fr 110px 1fr;gap:14px;align-items:stretch
+}
+.tower{
+  min-height:310px;padding:26px;border:1px solid var(--line);background:var(--cream)
+}
+.tower .tag{font-size:10px;letter-spacing:.13em;color:var(--green);font-weight:800}
+.tower h3{font-size:28px;margin:10px 0}
+.tower p{color:var(--muted)}
+.tower .big{
+  font-size:50px;font-weight:900;color:var(--deep);line-height:1;margin-top:22px
+}
+.moat-gap{
+  display:flex;align-items:center;justify-content:center;position:relative
+}
+.moat-gap:before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;width:54px;transform:translateX(-50%);
+  background:repeating-linear-gradient(135deg,#cbb98f 0 12px,#dfd0ad 12px 24px)
+}
+.moat-label{
+  position:relative;z-index:2;
+  writing-mode:vertical-rl;background:var(--deep);color:white;padding:12px 9px;
+  font-size:10px;letter-spacing:.12em;font-weight:800
+}
+
+.checklist{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px
+}
+.check{
+  padding:20px;border:1px solid var(--line);background:var(--cream);min-height:210px
+}
+.check .n{
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:#e1e8e4;color:var(--green);font-weight:800;margin-bottom:12px
+}
+.check h3{font-size:19px;margin:0 0 8px}
+.check p{font-size:13px;color:var(--muted);margin:0}
+
+.portfolio{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:14px
+}
+.port-card{
+  border:1px solid var(--line);padding:24px;background:var(--cream)
+}
+.bars{display:grid;gap:12px;margin-top:20px}
+.bar-row{display:grid;grid-template-columns:150px 1fr 55px;gap:10px;align-items:center}
+.bar{
+  height:16px;background:#e0ddd4;position:relative;overflow:hidden
+}
+.fill{height:100%;background:var(--green)}
+.fill.bond{background:var(--blue)}
+.fill.cash{background:var(--gold)}
+.port-card small{color:var(--muted)}
+.balance{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px
+}
+.balance-card{
+  padding:16px;border:1px solid var(--line);background:#f1eee6
+}
+.balance-card b{font-size:17px}
+.balance-card span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+
+.errors{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:9px
+}
+.error{
+  padding:18px;border:1px solid var(--line);background:var(--cream);min-height:190px
+}
+.error .tag{font-size:9px;letter-spacing:.12em;color:var(--red);font-weight:800}
+.error b{display:block;font-size:18px;margin:8px 0}
+.error span{font-size:12px;color:var(--muted)}
+
+.protocol{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:8px
+}
+.step{
+  padding:16px;border:1px solid var(--line);background:var(--cream);min-height:185px;position:relative
+}
+.step:not(:last-child):after{
+  content:"→";position:absolute;right:-13px;top:45%;z-index:2;
+  width:18px;height:18px;background:var(--paper);display:grid;place-items:center;color:var(--gold)
+}
+.step .n{font-size:9px;letter-spacing:.12em;color:var(--green);font-weight:800}
+.step b{display:block;font-size:17px;margin:8px 0}
+.step span{font-size:12px;color:var(--muted)}
+
+.final{
+  display:grid;grid-template-columns:1.18fr .82fr;gap:14px
+}
+.final-main{
+  background:var(--deep);color:white;padding:30px
+}
+.final-main .kicker{color:#a7cabc}
+.final-main strong{display:block;font-size:36px;line-height:1.35;margin:12px 0}
+.final-main p{color:#c8d4d0}
+.final-side{display:grid;gap:9px}
+.final-card{
+  padding:16px;border:1px solid var(--line);background:var(--cream)
+}
+.final-card b{font-size:16px}
+.final-card span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+.footer{
+  padding:18px 38px;background:#202827;color:#cdd3d0;
+  display:flex;justify-content:space-between;gap:20px;
+  font-size:10px;letter-spacing:.08em
+}
+.footer a{color:#a6c8bb;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.mrmarket,.portfolio,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .checklist{grid-template-columns:1fr 1fr}
+  .errors{grid-template-columns:1fr 1fr}
+  .protocol{grid-template-columns:1fr 1fr}
+  .step:after{display:none!important}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}
+  .hero-side,.gate,.market-rules,.paths,.checklist,.errors,.protocol,.balance{grid-template-columns:1fr}
+  .moat{grid-template-columns:1fr}
+  .moat-gap{height:76px}
+  .moat-gap:before{left:0;right:0;top:50%;bottom:auto;width:auto;height:44px;transform:translateY(-50%)}
+  .moat-label{writing-mode:horizontal-tb}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .topbar,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="fortress">
+
+<div class="topbar">
+  <span>BENJAMIN GRAHAM · THE INTELLIGENT INVESTOR</span>
+  <span>VALUE · DISCIPLINE · MARGIN OF SAFETY</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">THE DEFINITIVE BOOK ON VALUE INVESTING</div>
+    <h1>聪明的投资者</h1>
+    <div class="en">THE INTELLIGENT INVESTOR · BENJAMIN GRAHAM</div>
+    <div class="lead">
+      格雷厄姆真正想教的，不是“如何预测市场”，而是如何建立一套
+      <strong>即使市场疯狂、判断有误、未来不可预测，也仍然有机会活下来的投资纪律。</strong>
+    </div>
+    <div class="hero-note">
+      <b>投资的第一任务，不是赚得最多，而是避免永久性损失。</b>
+      <span>1949 年首版以来，这本书以价值投资、安全边际和长期纪律著称；新版仍把“安全边际”明确列为全书中心概念。citeturn502872search1turn502872search2turn502872search5</span>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="wall"><div class="n">WALL 01</div><strong>投资 ≠ 投机</strong><span>先知道自己在做哪一种行为。</span></div>
+    <div class="wall"><div class="n">WALL 02</div><strong>市场先生</strong><span>市场每天报价，但你没有义务每天回应。</span></div>
+    <div class="wall"><div class="n">WALL 03</div><strong>内在价值</strong><span>价格是报价，价值来自企业与资产本身。</span></div>
+    <div class="wall"><div class="n">WALL 04</div><strong>安全边际</strong><span>给判断错误与未知留下缓冲。</span></div>
+    <div class="wall"><div class="n">WALL 05</div><strong>投资纪律</strong><span>真正的风险往往来自投资者自己的行为。</span></div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · THE FRONT GATE</div>
+      <h2>进入市场前，先分清：投资还是投机？</h2>
+    </div>
+    <p>格雷厄姆把“投资”与“投机”明确区分，这是整套框架的入口。新版出版介绍也特别强调应区分真正的投资与投机。citeturn502872search5</p>
+  </div>
+
+  <div class="gate">
+    <div class="gate-card invest">
+      <div class="tag">INVESTMENT</div>
+      <h3>投资</h3>
+      <p>重点是分析、价值与本金安全，并追求合理而非幻想性的回报。</p>
+      <div class="gate-list">
+        <div class="gate-row"><b>✓</b><span>研究证券背后的真实经济价值</span></div>
+        <div class="gate-row"><b>✓</b><span>要求价格与价值之间存在缓冲</span></div>
+        <div class="gate-row"><b>✓</b><span>接受市场短期不可预测</span></div>
+        <div class="gate-row"><b>✓</b><span>以长期纪律而非市场情绪做决定</span></div>
+      </div>
+      <div class="ghost">I</div>
+    </div>
+
+    <div class="gate-card spec">
+      <div class="tag">SPECULATION</div>
+      <h3>投机</h3>
+      <p>更多依赖价格变化、市场情绪和未来预测，本身并非不可存在，但必须被清楚识别。</p>
+      <div class="gate-list">
+        <div class="gate-row"><b>!</b><span>因为“会涨”而买，而不是因为价值足够</span></div>
+        <div class="gate-row"><b>!</b><span>高度依赖短期行情预测</span></div>
+        <div class="gate-row"><b>!</b><span>忽略本金永久损失的可能</span></div>
+        <div class="gate-row"><b>!</b><span>把好运误认为投资能力</span></div>
+      </div>
+      <div class="ghost">S</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · MR. MARKET</div>
+      <h2>市场先生：把市场当报价者，而不是老师</h2>
+    </div>
+    <p>全书专门讨论“投资者与市场波动”。重点不是预测市场每天会怎样，而是学会利用波动，而不是被波动支配。citeturn502872search3turn502872search4</p>
+  </div>
+
+  <div class="mrmarket">
+    <div class="market-man">
+      <div class="kicker">MR. MARKET KNOCKS DAILY</div>
+      <strong>他每天报价。<br>你可以说：不，谢谢。</strong>
+      <p>有时市场极度乐观，有时极度悲观。聪明的投资者并不把这些情绪当作价值判断，而只是把它们当作可选择接受或拒绝的报价。</p>
+    </div>
+
+    <div class="market-rules">
+      <div class="rule"><div class="tag">RULE 01</div><b>价格下跌 ≠ 价值下跌</b><p>先问企业和资产发生了什么，而不是先看屏幕颜色。</p></div>
+      <div class="rule"><div class="tag">RULE 02</div><b>波动可以服务你</b><p>市场越情绪化，价格与价值之间出现偏差的可能性越高。</p></div>
+      <div class="rule"><div class="tag">RULE 03</div><b>不必每天交易</b><p>市场提供流动性，不意味着你必须不断响应。</p></div>
+      <div class="rule"><div class="tag">RULE 04</div><b>情绪是隐形风险</b><p>恐慌、贪婪与从众可能比证券本身更危险。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · TWO INVESTOR TYPES</div>
+      <h2>防御型 vs 进取型：不是性格标签，而是投入程度不同</h2>
+    </div>
+    <p>格雷厄姆分别为 defensive investor 和 enterprising investor 提出证券选择原则与组合政策，这是原书重要结构之一。citeturn502872search1turn502872search2turn502872search3</p>
+  </div>
+
+  <div class="paths">
+    <div class="path def">
+      <div class="kicker">DEFENSIVE INVESTOR</div>
+      <h3>防御型投资者</h3>
+      <p>目标不是持续击败市场，而是用较少时间和精力建立一个稳健、可长期坚持的组合。</p>
+      <div class="path-list">
+        <div class="path-row">简单、分散、质量优先</div>
+        <div class="path-row">避免频繁判断和频繁交易</div>
+        <div class="path-row">接受合理回报，而非追逐极端收益</div>
+        <div class="path-row">重视债券与股票之间的整体资产配置</div>
+      </div>
+    </div>
+
+    <div class="path ent">
+      <div class="kicker">ENTERPRISING INVESTOR</div>
+      <h3>进取型投资者</h3>
+      <p>愿意投入更多时间、知识与分析工作，以寻找价格明显低于价值的机会。</p>
+      <div class="path-list">
+        <div class="path-row">主动研究被低估证券</div>
+        <div class="path-row">要求比普通市场参与者更多分析与纪律</div>
+        <div class="path-row">不是“承担更多风险”，而是“做更多工作”</div>
+        <div class="path-row">仍然必须服从安全边际原则</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · PRICE / VALUE / SAFETY</div>
+      <h2>安全边际：在价值与价格之间挖一条壕沟</h2>
+    </div>
+    <p>《聪明的投资者》最终把 “Margin of Safety” 直接称为投资的中心概念。它不是一个精确公式，而是一种面对估值错误、未来不确定性与偶发坏结果的生存设计。citeturn502872search2turn502872search3turn502872search5</p>
+  </div>
+
+  <div class="moat">
+    <div class="tower">
+      <div class="tag">INTRINSIC VALUE</div>
+      <h3>内在价值</h3>
+      <p>你基于企业盈利能力、资产、财务状况和长期经济现实，对证券价值做出的理性估计。</p>
+      <div class="big">VALUE</div>
+    </div>
+
+    <div class="moat-gap">
+      <div class="moat-label">MARGIN OF SAFETY</div>
+    </div>
+
+    <div class="tower">
+      <div class="tag">MARKET PRICE</div>
+      <h3>市场价格</h3>
+      <p>今天市场愿意成交的报价。它可以高于、低于或接近你的价值估计。</p>
+      <div class="big">PRICE</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · THE DEFENSIVE WALLS</div>
+      <h2>安全边际不是一个指标，而是一整套防御结构</h2>
+    </div>
+  </div>
+
+  <div class="checklist">
+    <div class="check"><div class="n">1</div><h3>财务质量</h3><p>企业需要有足够稳定的财务基础，而不是依赖乐观预测才能生存。</p></div>
+    <div class="check"><div class="n">2</div><h3>盈利记录</h3><p>历史记录无法保证未来，但它能够帮助投资者避开纯故事型证券。</p></div>
+    <div class="check"><div class="n">3</div><h3>合理价格</h3><p>再好的企业，如果价格已经包含过度乐观预期，也可能成为糟糕投资。</p></div>
+    <div class="check"><div class="n">4</div><h3>分散</h3><p>承认自己会错，通过组合避免单一判断错误摧毁全部资本。</p></div>
+    <div class="check"><div class="n">5</div><h3>流动性</h3><p>避免把自己逼到必须在最差时点出售资产的境地。</p></div>
+    <div class="check"><div class="n">6</div><h3>低预期</h3><p>不要要求市场持续满足过高回报假设。</p></div>
+    <div class="check"><div class="n">7</div><h3>独立判断</h3><p>投资逻辑必须来自分析，而不是市场共识本身。</p></div>
+    <div class="check"><div class="n">8</div><h3>行为纪律</h3><p>再好的方法，如果恐慌时无法执行，也不会保护投资者。</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">06 · PORTFOLIO POLICY</div>
+      <h2>组合不是预测工具，而是风险结构</h2>
+    </div>
+    <p>原书大量篇幅讨论防御型投资者的整体组合政策、普通股、债券与证券选择。citeturn502872search1turn502872search3</p>
+  </div>
+
+  <div class="portfolio">
+    <div class="port-card">
+      <div class="kicker">ASSET ALLOCATION</div>
+      <h3 style="font-size:25px;margin:8px 0">不要把整个命运绑在一个预测上</h3>
+      <p style="color:var(--muted)">格雷厄姆的核心精神不是追求一个永恒正确的配置比例，而是用股债组合、分散和纪律来降低预测错误造成的伤害。</p>
+
+      <div class="bars">
+        <div class="bar-row"><b>股票</b><div class="bar"><div class="fill" style="width:58%"></div></div><span>风险资产</span></div>
+        <div class="bar-row"><b>高质量债券</b><div class="bar"><div class="fill bond" style="width:42%"></div></div><span>稳定器</span></div>
+        <div class="bar-row"><b>现金 / 流动性</b><div class="bar"><div class="fill cash" style="width:22%"></div></div><span>选择权</span></div>
+      </div>
+      <small>示意图仅表达组合思想，不代表具体配置建议。</small>
+    </div>
+
+    <div class="port-card">
+      <div class="kicker">PORTFOLIO LOGIC</div>
+      <h3 style="font-size:25px;margin:8px 0">组合真正解决的是三个问题</h3>
+      <div class="balance">
+        <div class="balance-card"><b>我会判断错</b><span>所以需要分散与安全边际。</span></div>
+        <div class="balance-card"><b>市场会波动</b><span>所以需要心理与资产结构上的缓冲。</span></div>
+        <div class="balance-card"><b>未来不可知</b><span>所以不要让单一场景成为生存前提。</span></div>
+        <div class="balance-card"><b>机会会出现</b><span>所以需要保留调整和行动的选择权。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">07 · COMMON BREACHES</div>
+      <h2>投资防线最常从哪里被攻破？</h2>
+    </div>
+  </div>
+
+  <div class="errors">
+    <div class="error"><div class="tag">BREACH 01</div><b>预测依赖</b><span>相信自己能持续预测牛市、熊市与短期价格。</span></div>
+    <div class="error"><div class="tag">BREACH 02</div><b>高价买好公司</b><span>把“优秀企业”与“任何价格都值得买”混为一谈。</span></div>
+    <div class="error"><div class="tag">BREACH 03</div><b>把投机伪装成投资</b><span>事后用长期故事解释原本的短期下注。</span></div>
+    <div class="error"><div class="tag">BREACH 04</div><b>跟随市场情绪</b><span>上涨时提高预期，下跌时降低价值判断。</span></div>
+    <div class="error"><div class="tag">BREACH 05</div><b>没有余量</b><span>把估值、现金流和未来增长都假设得过于精确。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">08 · GRAHAM PROTOCOL</div>
+      <h2>把整本书压缩成一套价值投资防守协议</h2>
+    </div>
+  </div>
+
+  <div class="protocol">
+    <div class="step"><div class="n">STEP 01</div><b>分清行为</b><span>这是投资，还是投机？不要混淆。</span></div>
+    <div class="step"><div class="n">STEP 02</div><b>判断类型</b><span>你是防御型还是愿意投入更多研究的进取型投资者？</span></div>
+    <div class="step"><div class="n">STEP 03</div><b>估算价值</b><span>从企业经济事实出发，而不是从市场报价倒推故事。</span></div>
+    <div class="step"><div class="n">STEP 04</div><b>要求折价</b><span>价格必须给估值误差留下足够安全边际。</span></div>
+    <div class="step"><div class="n">STEP 05</div><b>建立组合</b><span>承认未知，用分散与资产配置管理单点错误。</span></div>
+    <div class="step"><div class="n">STEP 06</div><b>利用市场</b><span>市场先生只是报价者，不是你的情绪指挥官。</span></div>
+    <div class="step"><div class="n">STEP 07</div><b>守住纪律</b><span>真正的聪明，往往体现在不做什么。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE GRAHAM OS</div>
+      <strong>聪明的投资者，不需要比市场预测得更准；他需要建立一种即使预测错了，也不容易被淘汰的结构。</strong>
+      <p>投资与投机的边界决定你在玩什么游戏；内在价值让你拥有独立判断；市场先生提供机会；防御型与进取型框架匹配你的投入；安全边际则让错误不至于致命。</p>
+    </div>
+
+    <div class="final-side">
+      <div class="final-card"><b>① Price ≠ Value</b><span>价格只是报价，不是真相。</span></div>
+      <div class="final-card"><b>② Market serves you</b><span>不要让市场先生替你决定情绪。</span></div>
+      <div class="final-card"><b>③ Know your type</b><span>选择与时间、能力和性格匹配的方法。</span></div>
+      <div class="final-card"><b>④ Margin of Safety</b><span>允许自己犯错，是投资系统成熟的重要标志。</span></div>
+      <div class="final-card"><b>⑤ Behavior matters</b><span>投资者最大的风险，常常就是投资者自己。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>BENJAMIN GRAHAM · THE INTELLIGENT INVESTOR · FIRST PUBLISHED 1949</span>
+  <span><a href="https://books.google.com/books/about/The_Intelligent_Investor_Third_Edition.html?id=VwvyEAAAQBAJ" target="_blank">PUBLIC BOOK REFERENCE</a></span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>穷查理宝典｜多元思维模型决策作战室</title>
+<style>
+:root{
+  --bg:#efe9dc;
+  --paper:#f8f2e8;
+  --ink:#1f211f;
+  --muted:#6e6a61;
+  --line:#cfc4b1;
+  --green:#344f45;
+  --green2:#557567;
+  --red:#9a4b3d;
+  --gold:#b6873c;
+  --navy:#38495c;
+  --cream:#f2e6cd;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 15% 8%,rgba(255,255,255,.75),transparent 25%),
+    linear-gradient(rgba(69,61,49,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(69,61,49,.025) 1px,transparent 1px),
+    var(--bg);
+  background-size:auto,26px 26px,26px 26px,auto;
+  font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  line-height:1.65;
+}
+.page{width:min(1480px,95vw);margin:24px auto 54px}
+.frame{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(61,48,31,.14);
+}
+.topbar{
+  padding:12px 18px;
+  border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;
+  font-family:Arial,sans-serif;
+  font-size:11px;letter-spacing:.15em;color:var(--muted);
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.22fr .78fr;
+  min-height:540px;
+  border-bottom:1px solid var(--line);
+}
+.hero-main{padding:46px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";
+  position:absolute;
+  width:430px;height:430px;
+  right:-140px;bottom:-170px;
+  border-radius:50%;
+  border:1px solid rgba(52,79,69,.18);
+  box-shadow:0 0 0 70px rgba(52,79,69,.035),0 0 0 140px rgba(52,79,69,.02);
+}
+.kicker{
+  font-family:Arial,sans-serif;
+  font-size:11px;letter-spacing:.2em;font-weight:800;color:var(--green);
+}
+h1{
+  font-size:clamp(62px,8.5vw,120px);
+  line-height:.9;letter-spacing:-.05em;
+  margin:18px 0 18px;
+}
+.subtitle{
+  font-family:Arial,"PingFang SC",sans-serif;
+  color:var(--gold);
+  font-size:18px;letter-spacing:.04em;
+  margin-bottom:26px;
+}
+.lead{
+  max-width:850px;
+  font-size:23px;
+  color:#3b3d39;
+}
+.lead strong{color:var(--green)}
+.hero-note{
+  margin-top:30px;
+  max-width:880px;
+  display:grid;grid-template-columns:82px 1fr;gap:16px;align-items:start;
+  padding-top:20px;border-top:1px solid var(--line)
+}
+.hero-note .mark{
+  width:70px;height:70px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--green);color:white;
+  font-size:30px;font-weight:800;
+}
+.hero-note b{font-size:22px}
+.hero-note p{margin:4px 0;color:var(--muted)}
+
+.hero-side{
+  border-left:1px solid var(--line);
+  display:grid;grid-template-rows:repeat(4,1fr);
+}
+.side{
+  padding:24px;
+  border-bottom:1px solid var(--line);
+}
+.side:last-child{border-bottom:0}
+.side .n{
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:.14em;font-weight:800
+}
+.side strong{
+  display:block;font-size:27px;line-height:1.2;margin:7px 0 5px
+}
+.side span{font-size:13px}
+.side.a{background:#344f45;color:white}
+.side.a span{color:#d9e4de}
+.side.b{background:#eadbc0}
+.side.c{background:#e5e0d4}
+.side.d{background:#9a4b3d;color:white}
+.side.d span{color:#f1d9d4}
+
+.section{
+  padding:34px 38px;
+  border-bottom:1px solid var(--line);
+}
+.section:last-child{border-bottom:0}
+.section-head{
+  display:flex;justify-content:space-between;gap:20px;align-items:flex-end;
+  margin-bottom:22px
+}
+.section h2{
+  margin:4px 0 0;
+  font-size:34px;
+}
+.section-head p{max-width:650px;margin:0;color:var(--muted)}
+
+.war-room{
+  display:grid;
+  grid-template-columns:1fr 1.08fr .92fr;
+  gap:14px;
+}
+.panel{
+  border:1px solid var(--line);
+  background:#fbf7ef;
+  min-height:500px;
+}
+.panel-title{
+  padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;
+  font-family:Arial,sans-serif;
+  font-size:11px;letter-spacing:.12em;font-weight:800;
+}
+.panel-body{padding:18px}
+
+.lattice{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.model{
+  padding:15px;
+  border:1px solid var(--line);
+  background:#f4ecdd;
+  min-height:116px;
+}
+.model .tag{
+  font-family:Arial,sans-serif;font-size:9px;letter-spacing:.12em;color:var(--green2);font-weight:800
+}
+.model b{display:block;margin:7px 0 4px;font-size:17px}
+.model span{font-size:12px;color:var(--muted)}
+.model:nth-child(3n+1){border-top:4px solid var(--green)}
+.model:nth-child(3n+2){border-top:4px solid var(--gold)}
+.model:nth-child(3n){border-top:4px solid var(--navy)}
+
+.filters{display:grid;gap:10px}
+.filter{
+  display:grid;grid-template-columns:54px 1fr auto;
+  gap:12px;align-items:center;
+  padding:13px;
+  border:1px solid var(--line);
+  background:#f5efe4;
+}
+.filter .num{
+  width:44px;height:44px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--green);color:white;
+  font-family:Arial,sans-serif;font-weight:800;
+}
+.filter b{font-size:17px}
+.filter span{display:block;color:var(--muted);font-size:12px}
+.check{
+  font-family:Arial,sans-serif;
+  font-size:10px;font-weight:800;letter-spacing:.08em;
+  color:var(--green);border:1px solid var(--green);padding:5px 7px
+}
+
+.biases{display:grid;gap:9px}
+.bias{
+  padding:13px;border-left:5px solid var(--red);
+  background:#f3e3df;
+}
+.bias b{display:block;font-size:16px}
+.bias span{font-size:12px;color:#765b56}
+.alert{
+  margin-top:12px;padding:14px;
+  background:var(--red);color:white
+}
+.alert b{display:block;font-size:18px}
+.alert span{font-size:12px;color:#f1d8d3}
+
+.inversion{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:14px;
+}
+.inversion-hero{
+  padding:28px;
+  background:var(--ink);
+  color:white;
+  position:relative;
+  min-height:340px;
+  overflow:hidden
+}
+.inversion-hero:after{
+  content:"↶";
+  position:absolute;right:20px;bottom:-35px;
+  font-size:200px;line-height:1;
+  color:rgba(255,255,255,.05);
+}
+.inversion-hero .kicker{color:#d8bc79}
+.inversion-hero strong{
+  display:block;
+  font-size:42px;
+  line-height:1.22;
+  margin:18px 0
+}
+.inversion-hero p{color:#c5c2ba;max-width:550px}
+.inversion-list{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px
+}
+.inv{
+  padding:19px;border:1px solid var(--line);background:#fbf7ef
+}
+.inv .q{
+  font-family:Arial,sans-serif;
+  font-size:10px;letter-spacing:.11em;color:var(--red);font-weight:800
+}
+.inv b{display:block;font-size:20px;margin:7px 0}
+.inv p{margin:0;color:var(--muted);font-size:13px}
+
+.compounding{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:14px;
+}
+.chart-box,.patience-box{
+  border:1px solid var(--line);background:#fbf7ef;padding:22px
+}
+.chart{
+  height:260px;
+  position:relative;
+  border-left:1px solid #9e978b;
+  border-bottom:1px solid #9e978b;
+  margin-top:18px;
+  overflow:hidden
+}
+.chart svg{position:absolute;inset:0;width:100%;height:100%}
+.compound-line{
+  fill:none;stroke:var(--green);stroke-width:4;
+  stroke-linecap:round;
+}
+.linear-line{
+  fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:7 7
+}
+.legend{display:flex;gap:18px;margin-top:10px;color:var(--muted);font-size:12px}
+.key{display:inline-block;width:24px;height:3px;margin-right:6px;vertical-align:middle}
+.key.green{background:var(--green)}
+.key.gold{background:var(--gold)}
+.patience-box{
+  display:flex;flex-direction:column;justify-content:center
+}
+.patience-box .big{
+  font-size:64px;line-height:1;color:var(--green);font-weight:800
+}
+.patience-box h3{font-size:25px;margin:10px 0}
+.patience-box p{color:var(--muted)}
+.patience-box .rule{
+  margin-top:12px;padding:14px;border-left:4px solid var(--gold);background:#f3ebdc
+}
+
+.disciplines{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:9px
+}
+.discipline{
+  padding:16px;border:1px solid var(--line);background:#fbf7ef;min-height:160px
+}
+.discipline .sym{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  background:#ebe1ce;color:var(--green);font-weight:800;margin-bottom:12px
+}
+.discipline b{display:block;font-size:17px}
+.discipline span{font-size:12px;color:var(--muted)}
+
+.protocol{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px
+}
+.step{
+  min-height:190px;
+  padding:16px;
+  border:1px solid var(--line);
+  background:#fbf7ef;
+  position:relative
+}
+.step:not(:last-child):after{
+  content:"→";
+  position:absolute;right:-13px;top:46%;z-index:2;
+  width:18px;height:18px;display:grid;place-items:center;
+  background:var(--paper);color:var(--gold);font-weight:800
+}
+.step .n{font-family:Arial,sans-serif;font-size:10px;color:var(--green2);font-weight:800}
+.step b{display:block;font-size:18px;margin:9px 0}
+.step span{font-size:12px;color:var(--muted)}
+
+.final{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px
+}
+.final-main{
+  background:var(--green);color:white;padding:28px
+}
+.final-main .kicker{color:#cbdac8}
+.final-main strong{
+  display:block;font-size:36px;line-height:1.35;margin:12px 0
+}
+.final-main p{color:#dce6e1}
+.final-side{display:grid;gap:9px}
+.mantra{
+  padding:16px;border:1px solid var(--line);background:#fbf7ef
+}
+.mantra b{font-size:16px}
+.mantra span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+
+.footer{
+  padding:18px 38px;
+  display:flex;justify-content:space-between;gap:20px;
+  background:#201f1c;color:#d8d2c8;
+  font-family:Arial,sans-serif;font-size:11px;letter-spacing:.08em
+}
+.footer a{color:#d8bc79;text-decoration:none}
+
+@media(max-width:1100px){
+  .hero,.war-room,.inversion,.compounding,.final{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .side{border-right:1px solid var(--line)}
+  .disciplines{grid-template-columns:repeat(3,1fr)}
+  .protocol{grid-template-columns:1fr 1fr}
+  .step:after{display:none!important}
+}
+@media(max-width:700px){
+  .hero-main,.section{padding:24px}
+  .hero-side,.lattice,.inversion-list,.disciplines,.protocol{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .topbar,.footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<main class="frame">
+
+<div class="topbar">
+  <span>POOR CHARLIE'S ALMANACK · DECISION ROOM</span>
+  <span>MULTIDISCIPLINARY THINKING / WORLDLY WISDOM</span>
+</div>
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="kicker">CHARLES T. MUNGER · WIT · WISDOM · RATIONALITY</div>
+    <h1>穷查理宝典</h1>
+    <div class="subtitle">POOR CHARLIE'S ALMANACK</div>
+    <div class="lead">
+      这本书真正值得带走的，不是某个“投资秘诀”，而是一套
+      <strong>避免愚蠢、跨学科思考、长期积累判断力</strong>的决策系统。
+    </div>
+
+    <div class="hero-note">
+      <div class="mark">⊕</div>
+      <div>
+        <b>不要只拥有一把锤子，然后把所有问题都看成钉子。</b>
+        <p>芒格强调用多个学科中的核心模型形成“思维模型格栅”，让不同模型彼此校验，而不是依赖单一解释。</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-side">
+    <div class="side a">
+      <div class="n">PRINCIPLE 01</div>
+      <strong>多元思维模型</strong>
+      <span>用数学、心理学、经济学、生物学、工程等视角共同判断。</span>
+    </div>
+    <div class="side b">
+      <div class="n">PRINCIPLE 02</div>
+      <strong>反过来想</strong>
+      <span>与其只问怎样成功，不如先问怎样一定会失败。</span>
+    </div>
+    <div class="side c">
+      <div class="n">PRINCIPLE 03</div>
+      <strong>能力圈</strong>
+      <span>知道自己懂什么，更要知道自己不懂什么。</span>
+    </div>
+    <div class="side d">
+      <div class="n">PRINCIPLE 04</div>
+      <strong>避免误判</strong>
+      <span>激励、从众、确认偏误等心理机制会系统性扭曲判断。</span>
+    </div>
+  </aside>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">01 · DECISION WAR ROOM</div>
+      <h2>把芒格的大脑想象成一间“决策作战室”</h2>
+    </div>
+    <p>左边调用模型，中间过滤决策，右边持续检查心理误判。三者同时工作，才接近芒格所说的理性判断。</p>
+  </div>
+
+  <div class="war-room">
+    <div class="panel">
+      <div class="panel-title"><span>MODEL LATTICEWORK</span><span>01</span></div>
+      <div class="panel-body">
+        <div class="lattice">
+          <div class="model"><div class="tag">MATHEMATICS</div><b>概率</b><span>不要只问会不会发生，要问发生概率与赔率。</span></div>
+          <div class="model"><div class="tag">ECONOMICS</div><b>机会成本</b><span>每一个选择的真实成本，是你放弃的最佳替代方案。</span></div>
+          <div class="model"><div class="tag">PSYCHOLOGY</div><b>激励机制</b><span>先看人被什么奖励，再预测他会怎样行动。</span></div>
+          <div class="model"><div class="tag">BIOLOGY</div><b>适应与竞争</b><span>环境塑造行为，优势也可能随着环境变化而失效。</span></div>
+          <div class="model"><div class="tag">ENGINEERING</div><b>安全余量</b><span>系统不要只在“正常情况”下成立，要给错误留下空间。</span></div>
+          <div class="model"><div class="tag">ACCOUNTING</div><b>真实经济性</b><span>数字是描述，不是现实本身；理解企业背后的经济实质。</span></div>
+          <div class="model"><div class="tag">PHYSICS</div><b>临界点</b><span>很多变化不是线性的，到达阈值后结果会突然不同。</span></div>
+          <div class="model"><div class="tag">SYSTEMS</div><b>反馈</b><span>行动改变环境，环境又反过来影响下一轮行动。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title"><span>DECISION FILTER</span><span>02</span></div>
+      <div class="panel-body">
+        <div class="filters">
+          <div class="filter"><div class="num">1</div><div><b>我真的理解它吗？</b><span>如果无法用简单语言解释，就可能还没有进入能力圈。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">2</div><div><b>如果反过来想呢？</b><span>什么行为会保证失败？先排除这些路径。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">3</div><div><b>激励是什么？</b><span>不要只听解释，先看每个参与者真正从什么中获益。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">4</div><div><b>概率与赔率匹配吗？</b><span>好结果不代表好决策，关键是预期价值。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">5</div><div><b>安全边际够吗？</b><span>给估计错误、环境变化和未知风险留出空间。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">6</div><div><b>值得等待吗？</b><span>没有好机会时，不行动本身就是一种决策。</span></div><div class="check">CHECK</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title"><span>MISJUDGMENT ALERTS</span><span>03</span></div>
+      <div class="panel-body">
+        <div class="biases">
+          <div class="bias"><b>激励导致的偏见</b><span>奖励结构可能改变人的判断，甚至让人相信对自己有利的解释。</span></div>
+          <div class="bias"><b>从众倾向</b><span>群体共识会制造心理安全感，却不能自动提高判断正确率。</span></div>
+          <div class="bias"><b>确认偏误</b><span>人更愿意寻找支持既有观点的信息，而忽略反例。</span></div>
+          <div class="bias"><b>承诺与一致性</b><span>投入越多，越难承认原来的判断错了。</span></div>
+          <div class="bias"><b>嫉妒与比较</b><span>相对排名会驱动不必要的竞争与风险。</span></div>
+          <div class="bias"><b>过度自信</b><span>知识不足时，反而容易低估未知与随机性。</span></div>
+        </div>
+        <div class="alert">
+          <b>最危险的不是无知，而是不知道自己无知。</b>
+          <span>判断前，先检查自己是否正在被某种心理机制操纵。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · INVERSION</div>
+      <h2>反过来想：先研究怎样失败</h2>
+    </div>
+    <p>逆向思考的力量在于，它把“如何做到最好”变成更容易回答的“怎样避免最糟”。很多时候，避免重大错误比追求精巧预测更重要。</p>
+  </div>
+
+  <div class="inversion">
+    <div class="inversion-hero">
+      <div class="kicker">INVERT, ALWAYS INVERT</div>
+      <strong>与其追求<br>聪明，不如先<br>避免愚蠢。</strong>
+      <p>芒格式决策的一个鲜明特征，是把精力放在减少可避免错误上：不懂的不碰、赔率差的不做、杠杆过高的不赌、激励扭曲的环境保持警惕。</p>
+    </div>
+
+    <div class="inversion-list">
+      <div class="inv"><div class="q">BUSINESS</div><b>怎样毁掉一家好公司？</b><p>过度负债、糟糕激励、忽视客户、频繁改变方向、在看不懂的领域扩张。</p></div>
+      <div class="inv"><div class="q">INVESTING</div><b>怎样保证长期投资表现糟糕？</b><p>频繁交易、追逐热门、忽略价格、借太多钱、在恐慌时失去理性。</p></div>
+      <div class="inv"><div class="q">LEARNING</div><b>怎样让自己越来越无知？</b><p>只读同意自己的观点、不跨学科、不复盘错误、把身份绑定在旧观点上。</p></div>
+      <div class="inv"><div class="q">LIFE</div><b>怎样制造一个糟糕的人生？</b><p>沉迷比较、持续透支健康、与不可信的人合作、把短期刺激当成长期价值。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">03 · COMPOUNDING</div>
+      <h2>复利不只发生在钱上，也发生在知识、信誉与关系上</h2>
+    </div>
+    <p>芒格反复强调持续学习与长期积累。真正强大的优势，往往不是一次性的聪明，而是长期不断变得更聪明。</p>
+  </div>
+
+  <div class="compounding">
+    <div class="chart-box">
+      <div class="kicker">COMPOUNDING CURVE</div>
+      <h3 style="font-size:24px;margin:8px 0">微小优势 × 长时间 = 巨大差距</h3>
+      <div class="chart">
+        <svg viewBox="0 0 700 260" preserveAspectRatio="none">
+          <path class="linear-line" d="M0 230 L700 72"/>
+          <path class="compound-line" d="M0 230 C170 226 270 214 360 190 C455 165 520 125 575 80 C620 43 655 21 700 10"/>
+        </svg>
+      </div>
+      <div class="legend"><span><i class="key green"></i>复利积累</span><span><i class="key gold"></i>线性努力</span></div>
+    </div>
+
+    <div class="patience-box">
+      <div class="kicker">PATIENCE</div>
+      <div class="big">WAIT</div>
+      <h3>大多数时间，真正困难的是等待。</h3>
+      <p>优秀决策不要求持续行动。很多机会应该直接跳过，把注意力留给少数真正落在能力圈内、赔率合适且有安全边际的机会。</p>
+      <div class="rule"><b>耐心不是消极。</b><br>它是在没有优势时保存资本、注意力和选择权。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · MULTIDISCIPLINARY MIND</div>
+      <h2>为什么要跨学科？因为现实问题从不按院系分类</h2>
+    </div>
+    <p>书中著名的“思维模型格栅”强调：掌握多个重要学科的核心模型，并让它们联合解释现实。</p>
+  </div>
+
+  <div class="disciplines">
+    <div class="discipline"><div class="sym">∑</div><b>数学</b><span>概率、排列组合、复利、期望值。</span></div>
+    <div class="discipline"><div class="sym">Ψ</div><b>心理学</b><span>误判机制、激励、从众、认知偏差。</span></div>
+    <div class="discipline"><div class="sym">↔</div><b>经济学</b><span>机会成本、规模效应、竞争、激励。</span></div>
+    <div class="discipline"><div class="sym">⚙</div><b>工程</b><span>冗余、安全边际、瓶颈、反馈。</span></div>
+    <div class="discipline"><div class="sym">DNA</div><b>生物学</b><span>进化、适应、生态位、竞争。</span></div>
+    <div class="discipline"><div class="sym">⌛</div><b>历史</b><span>模式、周期、制度后果与人性重复。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">05 · OPERATING PROTOCOL</div>
+      <h2>把《穷查理宝典》变成一套日常决策协议</h2>
+    </div>
+    <p>遇到重大投资、职业选择、合作或复杂问题时，可以沿着这条链路依次检查。</p>
+  </div>
+
+  <div class="protocol">
+    <div class="step"><div class="n">STEP 01</div><b>定义问题</b><span>把事实与解释分开，先说清真正要解决什么。</span></div>
+    <div class="step"><div class="n">STEP 02</div><b>确认能力圈</b><span>我真的理解核心变量吗？哪些部分其实不知道？</span></div>
+    <div class="step"><div class="n">STEP 03</div><b>调用模型</b><span>至少从几个不同学科重新解释同一个问题。</span></div>
+    <div class="step"><div class="n">STEP 04</div><b>逆向检查</b><span>怎样一定失败？先消灭这些路径。</span></div>
+    <div class="step"><div class="n">STEP 05</div><b>心理去偏</b><span>激励、从众、确认偏误是否正在影响判断？</span></div>
+    <div class="step"><div class="n">STEP 06</div><b>留安全边际</b><span>即使估计错了一部分，结果是否仍可接受？</span></div>
+    <div class="step"><div class="n">STEP 07</div><b>耐心执行</b><span>真正有优势时果断行动，没有优势时继续等待。</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final">
+    <div class="final-main">
+      <div class="kicker">ONE-MINUTE MUNGER OS</div>
+      <strong>不要试图在每件事上都很聪明。建立一套能持续减少愚蠢决策的系统。</strong>
+      <p>跨学科学习扩大你的模型库；能力圈约束你的自信；逆向思考帮你避开灾难；心理学让你看见误判；安全边际保护你免受未知伤害；复利与耐心最终放大正确选择。</p>
+    </div>
+
+    <div class="final-side">
+      <div class="mantra"><b>① 多模型</b><span>一个视角永远不够。</span></div>
+      <div class="mantra"><b>② 知边界</b><span>知道“不知道”是一种优势。</span></div>
+      <div class="mantra"><b>③ 先避错</b><span>重大错误的破坏力远大于普通成功的贡献。</span></div>
+      <div class="mantra"><b>④ 看激励</b><span>行为背后通常存在奖励结构。</span></div>
+      <div class="mantra"><b>⑤ 留余量</b><span>给不确定性留生存空间。</span></div>
+      <div class="mantra"><b>⑥ 让智慧复利</b><span>每天比醒来时更聪明一点。</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>POOR CHARLIE'S ALMANACK · CHARLES T. MUNGER · EDITED BY PETER D. KAUFMAN</span>
+  <span><a href="https://books.google.com/books/about/Poor_Charlie_s_Almanack.html?id=2unAEAAAQBAJ" target="_blank">PUBLIC BOOK REFERENCE</a></span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

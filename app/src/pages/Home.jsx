@@ -1,6 +1,7 @@
 import { ArrowRight, ArrowUpRight, Sprout, Network, Compass, MoveUpRight } from 'lucide-react'
 import { Link, useGrove, artifactUrl } from '../context.jsx'
 import { ArtifactCard, GardenIllustration, SectionHead } from '../components/Shared.jsx'
+import FieldLabInvitation from '../components/FieldLabInvitation.jsx'
 
 const journey = [
   ['01', '觉醒', '看见自己的内在', 'cognitive-awakening', 'AWARENESS'],
@@ -20,7 +21,7 @@ export default function Home() {
     .slice(0, 4)
   const selections = recent.length
     ? recent
-    : ['intellectual-atlas', 'how-to-read-a-book', 'thinking-in-systems', 'great-mental-models']
+    : ['intellectual-atlas', 'effective-executive', 'intelligent-investor', 'power-of-now']
         .map((id) => artifacts.find((item) => item.id === id))
         .filter(Boolean)
   return (
@@ -136,6 +137,7 @@ export default function Home() {
           </div>
         </Link>
       </section>
+      <FieldLabInvitation artifact={artifacts.find((item) => item.id === 'clear-thinking-lab')} />
       <section className="home-discover">
         <SectionHead
           eyebrow={recent.length ? 'CONTINUE EXPLORING' : 'NEW BRANCHES OF UNDERSTANDING'}
@@ -143,7 +145,7 @@ export default function Home() {
           description={
             recent.length
               ? '回到熟悉的思想，也许会有新的发现。'
-              : '从主动阅读到系统思考，再把十一部作品连接成一张思想地图。'
+              : '从多元判断到小步行动，让新读到的思想进入下一轮反馈。'
           }
           to="/explore"
         />

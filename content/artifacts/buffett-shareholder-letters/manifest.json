@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "buffett-shareholder-letters",
+  "slug": "buffett-shareholder-letters",
+  "title": "巴菲特致股东的信",
+  "subtitle": "以长期所有者视角，理解治理、资本配置与经济实质",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Warren E. Buffett / Lawrence A. Cunningham 编",
+  "topics": [
+    "投资",
+    "商业",
+    "管理",
+    "长期主义"
+  ],
+  "concepts": [
+    "资本配置",
+    "内在价值",
+    "激励机制",
+    "复利"
+  ],
+  "visualStyle": "navy-capital-allocation-manual",
+  "related": [
+    "intelligent-investor",
+    "poor-charlies-almanack",
+    "rockefeller-wealth-archive",
+    "effective-executive"
+  ],
+  "connections": [
+    {
+      "target": "intelligent-investor",
+      "type": "extends",
+      "concept": "intrinsic-value",
+      "label": "把价格与价值的区分延伸到企业所有权与资本用途"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "capital-allocation",
+      "label": "让多模型判断与资本纪律共同约束重大选择"
+    },
+    {
+      "target": "rockefeller-wealth-archive",
+      "type": "related",
+      "concept": "institutional-power",
+      "label": "把所有者责任与企业权力的历史叙事并置"
+    },
+    {
+      "target": "effective-executive",
+      "type": "related",
+      "concept": "judgment",
+      "label": "比较管理者如何把有限资源转化为长期贡献"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/buffett-shareholder-letters/index.html"
+  },
+  "cover": "/artifacts/buffett-shareholder-letters/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/buffett_shareholder_letters_owners_manual.html"
+    ],
+    "derivedFrom": []
+  }
+}

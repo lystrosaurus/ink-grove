@@ -220,6 +220,17 @@ export const HTML_BRIDGE = `<script data-ink-grove-bridge>
     const now = Date.now();
     if (now - lastPointer >= 500) { lastPointer = now; send({ type: 'ink-grove:pointer' }); }
   }, { passive: true });
+  document.addEventListener('click', event => {
+    if (!event.isTrusted || event.defaultPrevented || event.button !== 0) return;
+    const link = event.target.closest?.('a[href]');
+    if (!link || link.hasAttribute('download')) return;
+    try {
+      const url = new URL(link.href, document.baseURI);
+      if (!['https:', 'http:'].includes(url.protocol) || url.origin === parentOrigin) return;
+      event.preventDefault();
+      send({ type: 'ink-grove:reference', href: url.href });
+    } catch {}
+  });
   window.addEventListener('keydown', event => {
     const target = event.target;
     if (event.repeat || event.ctrlKey || event.metaKey || event.altKey || (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)))) return;

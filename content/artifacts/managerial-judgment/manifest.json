@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "managerial-judgment",
+  "slug": "managerial-judgment",
+  "title": "管理决策中的判断",
+  "subtitle": "在签字之前，用证据、反证与流程审计判断偏差",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Max H. Bazerman / Don A. Moore",
+  "topics": [
+    "决策",
+    "管理",
+    "心理"
+  ],
+  "concepts": [
+    "判断力",
+    "认知偏差",
+    "概率思维",
+    "假设验证"
+  ],
+  "visualStyle": "ivory-decision-dossier",
+  "related": [
+    "mindware",
+    "poor-charlies-almanack",
+    "mckinsey-way",
+    "cognitive-awakening"
+  ],
+  "connections": [
+    {
+      "target": "mindware",
+      "type": "extends",
+      "concept": "probability",
+      "label": "把基准率与证据检验带到定价、任命和资源分配"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "supports",
+      "concept": "cognitive-bias",
+      "label": "用偏差审计补充多模型与逆向思考"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "supports",
+      "concept": "hypothesis-testing",
+      "label": "让反证和外部视角检验团队的初始假设"
+    },
+    {
+      "target": "cognitive-awakening",
+      "type": "related",
+      "concept": "attention",
+      "label": "有限觉察提醒我们检查注意力之外的信息"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/managerial-judgment/index.html"
+  },
+  "cover": "/artifacts/managerial-judgment/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/judgment_in_managerial_decision_making.html"
+    ],
+    "derivedFrom": []
+  }
+}

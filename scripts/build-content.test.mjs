@@ -68,7 +68,7 @@ test('duplicate ids, broken connections and nonlocal resources are rejected', as
   }
 })
 
-test('build preserves each protected root HTML byte for byte in the content source', async () => {
+test('build preserves the original material bytes for unchanged presentation copies', async () => {
   const sources = {
     'cognitive-awakening': 'materials/cognitive_awakening_editorial.html',
     'seven-habits': 'materials/seven_habits_core_map.html',
@@ -87,29 +87,54 @@ test('build preserves each protected root HTML byte for byte in the content sour
   }
 })
 
-test('every root HTML is indexed and unedited presentation copies retain the original bytes', async () => {
+test('every HTML material is indexed with a portable source path and preserved unless an edit is recorded', async () => {
   const catalog = JSON.parse(await readFile(resolve(workspace, 'content/catalog.json'), 'utf8'))
   const originals = (await readdir(resolve(workspace, 'materials')))
     .filter((name) => name.endsWith('.html'))
+    .map((name) => `materials/${name}`)
     .sort()
   const indexed = []
-  const edited = new Set(['thinking-in-systems', 'intellectual-atlas'])
+  const edited = new Set([
+    'thinking-in-systems',
+    'intellectual-atlas',
+    'cybernetics',
+    'managerial-judgment',
+    'intelligent-investor',
+  ])
+  const editorial = await readFile(resolve(workspace, 'content/EDITORIAL.md'), 'utf8')
   for (const entry of catalog.artifacts) {
     const manifest = JSON.parse(
       await readFile(resolve(workspace, 'content/artifacts', entry.id, 'manifest.json'), 'utf8'),
     )
     if (manifest.artifact.renderer !== 'html') continue
     const source = manifest.provenance.sources.find((item) => item.startsWith('file:'))?.slice(5)
-    assert.ok(source, `${entry.id} needs its original filename`)
+    if (!source) {
+      assert.equal(
+        manifest.provenance.generatedBy,
+        'ai',
+        `${entry.id} needs an original or explicit AI provenance`,
+      )
+      assert.ok(
+        manifest.provenance.derivedFrom.length >= 2,
+        `${entry.id} needs actual synthesis sources`,
+      )
+      continue
+    }
+    assert.match(source, /^materials\/[^/]+\.html$/, `${entry.id} needs a portable material path`)
     indexed.push(source)
     if (!edited.has(entry.id)) {
       assert.deepEqual(
-        await readFile(resolve(workspace, 'materials', source)),
+        await readFile(resolve(workspace, source)),
         await readFile(resolve(workspace, 'content/artifacts', entry.id, 'index.html')),
+      )
+    } else {
+      assert.ok(
+        editorial.includes(`content/artifacts/${entry.id}/index.html`),
+        `${entry.id} needs a documented editorial change`,
       )
     }
   }
-  assert.deepEqual(indexed.sort(), originals, 'every original HTML needs exactly one catalog entry')
+  assert.deepEqual(indexed.sort(), originals, 'every material HTML needs exactly one catalog entry')
 })
 
 test('HTML presentation removes unresolved citation tokens while preserving real references and interactions', async () => {

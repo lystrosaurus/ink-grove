@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "intelligent-investor",
+  "slug": "intelligent-investor",
+  "title": "聪明的投资者",
+  "subtitle": "从价格与价值的区分，读懂安全边际和行为纪律",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Benjamin Graham · 本杰明·格雷厄姆",
+  "topics": [
+    "投资",
+    "决策",
+    "长期主义"
+  ],
+  "concepts": [
+    "安全边际",
+    "内在价值",
+    "判断力",
+    "认知偏差"
+  ],
+  "visualStyle": "stone-value-investing-fortress",
+  "related": [
+    "buffett-shareholder-letters",
+    "poor-charlies-almanack",
+    "managerial-judgment",
+    "economic-way-of-thinking"
+  ],
+  "connections": [
+    {
+      "target": "buffett-shareholder-letters",
+      "type": "supports",
+      "concept": "intrinsic-value",
+      "label": "以价格、价值和市场先生理解长期所有者视角"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "margin-of-safety",
+      "label": "以允许判断出错的余量约束看似精确的预测"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "cognitive-bias",
+      "label": "把情绪与从众造成的误判纳入行为纪律"
+    },
+    {
+      "target": "economic-way-of-thinking",
+      "type": "related",
+      "concept": "opportunity-cost",
+      "label": "把资金用途放回可比较的替代选择"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/intelligent-investor/index.html"
+  },
+  "cover": "/artifacts/intelligent-investor/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-12",
+  "provenance": {
+    "generatedBy": "human",
+    "sources": [
+      "file:materials/the_intelligent_investor_fortress.html"
+    ],
+    "derivedFrom": []
+  }
+}
