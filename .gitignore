@@ -9,6 +9,8 @@ artifacts/webbridge-*.json
 *.log
 *.timestamp-*.mjs
 .workbuddy/
+.cloudbase/
+.tcb/
 .env
 .env.*
 !.env.example

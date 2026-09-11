@@ -1,0 +1,15 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "envId": "ink-d0gvorjko99e99e4d",
+  "hosting": [
+    {
+      "name": "web",
+      "root": "app",
+      "framework": "vite",
+      "installCommand": "npm install",
+      "buildCommand": "npm run build",
+      "outputDir": "dist",
+      "prune": true
+    }
+  ]
+}

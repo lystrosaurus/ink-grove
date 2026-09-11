@@ -70,13 +70,13 @@ test('duplicate ids, broken connections and nonlocal resources are rejected', as
 
 test('build preserves each protected root HTML byte for byte in the content source', async () => {
   const sources = {
-    'cognitive-awakening': 'cognitive_awakening_editorial.html',
-    'seven-habits': 'seven_habits_core_map.html',
-    'deliberate-practice': 'deliberate_practice_lab_style.html',
-    'deliberate-practice-modern': 'deliberate_practice_modern.html',
-    'naval-almanack': 'naval_almanack_black_gold.html',
-    'personal-growth-os': 'integrated_thinking_personal_os.html',
-    'thinking-framework': 'thinking-framework-core-map.html',
+    'cognitive-awakening': 'materials/cognitive_awakening_editorial.html',
+    'seven-habits': 'materials/seven_habits_core_map.html',
+    'deliberate-practice': 'materials/deliberate_practice_lab_style.html',
+    'deliberate-practice-modern': 'materials/deliberate_practice_modern.html',
+    'naval-almanack': 'materials/naval_almanack_black_gold.html',
+    'personal-growth-os': 'materials/integrated_thinking_personal_os.html',
+    'thinking-framework': 'materials/thinking-framework-core-map.html',
   }
   for (const [id, name] of Object.entries(sources)) {
     const [source, copy] = await Promise.all([
@@ -89,7 +89,9 @@ test('build preserves each protected root HTML byte for byte in the content sour
 
 test('every root HTML is indexed and unedited presentation copies retain the original bytes', async () => {
   const catalog = JSON.parse(await readFile(resolve(workspace, 'content/catalog.json'), 'utf8'))
-  const originals = (await readdir(workspace)).filter((name) => name.endsWith('.html')).sort()
+  const originals = (await readdir(resolve(workspace, 'materials')))
+    .filter((name) => name.endsWith('.html'))
+    .sort()
   const indexed = []
   const edited = new Set(['thinking-in-systems', 'intellectual-atlas'])
   for (const entry of catalog.artifacts) {
@@ -102,7 +104,7 @@ test('every root HTML is indexed and unedited presentation copies retain the ori
     indexed.push(source)
     if (!edited.has(entry.id)) {
       assert.deepEqual(
-        await readFile(resolve(workspace, source)),
+        await readFile(resolve(workspace, 'materials', source)),
         await readFile(resolve(workspace, 'content/artifacts', entry.id, 'index.html')),
       )
     }
