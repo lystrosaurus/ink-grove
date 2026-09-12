@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { chromium } from '@playwright/test'
+import { chromium, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 
 const catalog = JSON.parse(
@@ -37,6 +37,19 @@ try {
     await page.locator('main h1').first().waitFor()
     assert.equal(await page.locator('script[type="module"]').getAttribute('src'), entry)
   }
+  await page.goto(base.href)
+  await page
+    .getByRole('navigation', { name: '主导航', exact: true })
+    .getByRole('link', { name: 'Seed Grove · 小小思考家', exact: true })
+    .click()
+  await expect(page.getByRole('navigation', { name: '花园地图', exact: true })).toBeVisible()
+  await expect(page.getByRole('combobox', { name: '阅读年龄' })).toHaveCount(0)
+  await page.goto(base.href)
+  await page
+    .getByRole('region', { name: '和孩子一起，让好奇心发芽' })
+    .getByRole('link', { name: '走进 Seed Grove' })
+    .click()
+  await expect(page.getByRole('navigation', { name: '花园地图', exact: true })).toBeVisible()
   for (const artifact of catalog.artifacts.filter((item) => item.artifact.renderer === 'html')) {
     const response = await page.goto(new URL(`/artifact/${artifact.slug}`, base).href)
     assert.equal(response.status(), 200)
@@ -60,7 +73,7 @@ try {
   assert.deepEqual(failures, [])
   assert.deepEqual(external, [])
   console.log(
-    `Production smoke passed at ${base.origin}: matching build entry, SPA deep links, ${catalog.artifacts.filter((item) => item.artifact.renderer === 'html').length} HTML titles and sandboxes, interactive lab, no browser errors or external resource requests.`,
+    `Production smoke passed at ${base.origin}: matching build entry, SPA deep links, both adult-to-Seed entrances, ${catalog.artifacts.filter((item) => item.artifact.renderer === 'html').length} HTML titles and sandboxes, interactive lab, no browser errors or external resource requests.`,
   )
 } finally {
   await browser.close()

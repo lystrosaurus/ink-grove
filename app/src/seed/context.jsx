@@ -123,14 +123,9 @@ export function SeedProvider({ children }) {
     location,
     go,
     setDirty,
-    setAge(age) {
-      if (age === saved.current.garden.age) return true
-      if (!canLeave()) return false
-      return commit({ ...saved.current.garden, age }, '换一种适合你的读法。')
-    },
     recordEvent(input) {
       try {
-        const event = model.createGrowthEvent(input, saved.current.garden.age)
+        const event = model.createGrowthEvent(input)
         return commit(
           { ...saved.current.garden, events: [...saved.current.garden.events, event] },
           '这次发现，已经种在小花园里。',

@@ -3,6 +3,7 @@ import { mkdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 
 const output = fileURLToPath(new URL('../../artifacts/screenshots/', import.meta.url))
+const base = new URL(process.argv[2] || 'http://127.0.0.1:5173')
 await mkdir(output, { recursive: true })
 const browser = await chromium.launch({ channel: 'msedge', headless: true })
 try {
@@ -17,7 +18,7 @@ try {
     ['/journeys/personal-growth', 'journey-desktop'],
     ['/create?mode=synthesis&from=cognitive-awakening,deliberate-practice', 'create-desktop'],
   ]) {
-    await page.goto(`http://127.0.0.1:5173${route}`)
+    await page.goto(new URL(route, base).href)
     await page.locator('main h1').first().waitFor()
     await page.evaluate(() => document.fonts.ready)
     await page.locator('img').evaluateAll(async (images) => {
@@ -26,7 +27,7 @@ try {
     })
     await page.screenshot({ path: `${output}${name}.png`, fullPage: true, animations: 'disabled' })
   }
-  await page.goto('http://127.0.0.1:5173/')
+  await page.goto(base.href)
   await page.getByRole('button', { name: '切换主题，当前浅色' }).click()
   await page.evaluate(() => window.scrollTo(0, 0))
   await page.screenshot({ path: `${output}home-dark.png`, fullPage: true, animations: 'disabled' })

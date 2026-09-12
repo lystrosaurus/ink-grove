@@ -6,7 +6,7 @@
   <title>我的情绪天气 · Seed Grove</title>
   <style>
     :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#34473e;background:#f7f5ec;font-synthesis:none;line-height:1.75}*{box-sizing:border-box}body{margin:0}main{max-width:860px;margin:auto;padding:30px 24px 42px}header{text-align:center}.eyebrow{font-size:12px;letter-spacing:.18em;color:#687c6c}h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(28px,5vw,44px);font-weight:500;margin:5px 0}p{margin:8px 0}.story{max-width:540px;margin:12px auto 20px;font-size:16px}.window{max-width:610px;margin:20px auto;background:#e2ece4;border:5px solid #baac87;border-radius:48% 48% 18px 18px;overflow:hidden;box-shadow:0 7px 0 #dbd3bb}.window svg{display:block;width:100%;height:235px}.cloud{fill:#b5c6c1}.rain,.bolt{opacity:0}.window[data-weather=rain] .rain,.window[data-weather=storm] .rain,.window[data-weather=storm] .bolt{opacity:1}.window[data-weather=sun] .cloud{opacity:.35}.window[data-weather=rain] .sun,.window[data-weather=storm] .sun{opacity:.25}.window[data-weather=mixed] .rain{opacity:1}.window[data-weather=storm] .cloud{fill:#849994}.sill{text-align:center;background:#ebe6d7;padding:7px;font-size:13px;color:#657468}.question-card{max-width:650px;margin:24px auto 0;text-align:center}h2{font-size:21px;font-weight:600;margin:10px 0}.choices{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}button{font:inherit;min-height:48px;border:1px solid #bac6b7;border-radius:16px 13px 17px 11px;padding:10px 17px;background:#fffdf7;color:inherit;cursor:pointer}button:hover{background:#edf3e9}button[aria-pressed=true]{background:#dce9d9;border:2px solid #527558;padding:9px 16px}button:focus-visible{outline:3px solid #927543;outline-offset:4px}.next{background:#55735c;color:#fff;margin:10px}button.next:hover{background:#44604b}#result{min-height:58px;color:#546b59;font-size:15px;max-width:540px;margin:auto}.reflection{background:#eeeade;border-left:3px solid #a3b195;padding:16px 20px;border-radius:4px 17px 17px 4px;margin:25px auto 0;max-width:620px}.reflection p:first-child{font-size:12px;letter-spacing:.1em;color:#69765e}.save-note{font-size:12px;color:#6d786b}footer{text-align:center;color:#7c8578;font-size:12px;margin-top:30px}[hidden]{display:none!important}@media(max-width:480px){main{padding:20px 15px 32px}.window svg{height:190px}.choices{gap:8px}button{padding:10px 13px}.story{font-size:15px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-  </style>
+  details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border-radius:14px;max-width:700px}summary{cursor:pointer;min-height:44px;padding:9px 0;font-weight:600}summary:focus-visible{outline:3px solid #96713f;outline-offset:4px}details p{margin:12px 0}details button{margin:4px 4px 4px 0}#deeper-result{min-height:28px}details[open] summary{margin-bottom:10px}</style>
 </head>
 <body>
 <main>
@@ -25,20 +25,23 @@
   </div>
   <section class="question-card" aria-labelledby="question"><h2 id="question" tabindex="-1"></h2><div id="choices" class="choices"></div><p id="result" role="status" aria-live="polite"></p><button id="next" class="next" hidden>再往里看一点</button><button id="again" hidden>再看看天气</button></section>
   <aside id="reflection" class="reflection" hidden><p>带回今天</p><p id="real-life"></p><p class="save-note">想留下一句话，可以在花园页面的反思框里写下，再亲手保存。</p></aside>
+  <details><summary>再想一步</summary><p>小鹿想：“他们不想和我玩。”这是已经发生的事，还是心里冒出的猜想？点一句看看。</p><button id="guess">他们不想和我玩</button><button id="fact">下雨了，野餐取消了</button><p id="deeper-result" role="status" aria-live="polite"></p><p>感受是真的，原因可以再问一问。同一场雨里，也可以既失望又轻松。</p></details>
   <footer>感受没有标准答案，也不用把每一天都变成晴天。</footer>
 </main>
 <script>
 (() => {
-  const age = new URLSearchParams(location.search).get('age');
-  const stage = age === '6-8' ? 0 : age === '12-15' ? 2 : 1;
-  const data = [
-    {story:'小鹿的野餐遇到了雨。篮子收好了，心里还留着一点小天气。',weather:'如果是你，心里像哪种天气？',body:'你的身体哪里有感觉？',bodies:['肚子紧紧的','肩膀松松的','还说不清'],action:'现在想给自己什么？',actions:['安静坐一会儿','找人陪一陪','慢慢喝口水'],life:'今天心里有小天气时，你想先停下来看看哪里？'},
-    {story:'盼了很久的野餐因为下雨取消了。小鹿有些失望，又松了口气：今天终于能休息了。',weather:'此刻的心里，哪种天气更靠近你？',body:'哪一个身体信号最明显？',bodies:['胸口有点闷','手握得很紧','呼吸慢下来','还不确定'],action:'你想先试一个怎样的小照顾？',actions:['先停一停，留意呼吸','告诉信任的人我的感受','换个舒服的位置'],life:'下一次计划改变时，你想先观察身体的哪个信号？'},
-    {story:'你准备了小组展示，临时被通知换人发言。失落和轻松可能同时出现；“他们不信任我”仍是一个需要核实的想法。',weather:'先不解释原因，哪种天气像此刻的感受？',body:'暂时放下解释，你能观察到哪个身体信号？',bodies:['肩膀绷紧，呼吸变短','心跳比平时快','身体轻下来','几种信号同时出现','暂时没有明显感觉'],action:'在决定怎样回应前，你想留出哪一点空间？',actions:['先给感受起个临时名字','找信任的人说说，再核实情况','先缓一会儿，稍后再回应'],life:'下次遇到类似变化，哪个是你观察到的感受，哪个是尚未核实的解释？'}
-  ][stage];
+  const data = {
+    story:'野餐遇到下雨，大家收起了篮子。小鹿心里有点失望，也想回家歇一歇。如果是你呢？',
+    weather:'你的心里像哪种天气？',
+    body:'身体哪里有感觉？',
+    bodies:['胸口有点闷','肩膀松松的','还说不清'],
+    action:'想给自己一个什么小照顾？',
+    actions:['安静坐一会儿','找人陪一陪','慢慢喝口水'],
+    life:'下次计划变了，你想先看看身体的哪里，再怎样照顾自己？'
+  };
   const $ = id => document.getElementById(id);
   let step = 0;
-  const weather = [['sun','☀ 晴朗'],['cloud','☁ 阴阴的'],['rain','☂ 下小雨'],['storm','ϟ 雷阵雨'],['mixed','☀☂ 晴雨交织']].slice(0, stage === 0 ? 3 : stage === 1 ? 4 : 5);
+  const weather = [['sun','☀ 晴朗'],['cloud','☁ 阴阴的'],['rain','☂ 下小雨'],['mixed','☀☂ 晴雨交织']];
   $('story').textContent = data.story;
   $('real-life').textContent = data.life;
   function draw(focus = false) {
@@ -63,6 +66,8 @@
   }
   $('next').addEventListener('click', () => { step += 1; draw(true); });
   $('again').addEventListener('click', () => { step = 0; draw(true); });
+  $('guess').addEventListener('click', () => { $('deeper-result').textContent = '这是一个猜想，现在还不能确定。可以问问同伴，也可以先让自己缓一会儿。'; });
+  $('fact').addEventListener('click', () => { $('deeper-result').textContent = '这是能看见或核实的事情。它和“他们不想和我玩”不是同一句话。'; });
   draw();
 })();
 </script>

@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 
-test('the garden map opens every available region without course locks', async ({ page }) => {
+test('the garden map opens a shared seed without an age preference or frame parameter', async ({
+  page,
+}) => {
   await page.goto('/seed')
   const map = page.getByRole('navigation', { name: '花园地图' })
   await expect(map.getByRole('link')).toHaveCount(4)
@@ -8,11 +10,10 @@ test('the garden map opens every available region without course locks', async (
   await expect(page).toHaveURL(/\/seed\/layer\/5$/)
   await page.getByRole('link', { name: /错误是线索/ }).click()
   await expect(page.locator('iframe')).toHaveAttribute('sandbox', 'allow-scripts')
-  await expect(page.locator('iframe')).toHaveAttribute('src', /age=9-11/)
-  await page.getByLabel('阅读年龄').selectOption('6-8')
-  await expect(page.locator('iframe')).toHaveAttribute('src', /age=6-8/)
+  await expect(page.locator('iframe')).not.toHaveAttribute('src', /[?&]age=/)
+  await expect(page.getByRole('combobox', { name: '阅读年龄' })).toHaveCount(0)
   await page.reload()
-  await expect(page.getByLabel('阅读年龄')).toHaveValue('6-8')
+  await expect(page.locator('iframe')).not.toHaveAttribute('src', /[?&]age=/)
 })
 
 test('Think 8 gives different feedback and records only an explicitly saved discovery', async ({
@@ -48,6 +49,13 @@ test('all eight thinking tools offer a choice, feedback and a real-life reflecti
     await expect(choices).toHaveCount(i === 2 ? 2 : 3)
     await choices.first().click()
     await expect(page.getByRole('button', { name: '换一个想法试试' })).toBeVisible()
+    await page.getByRole('button', { name: '再想一步', exact: true }).click()
+    const deeper = page.getByRole('region', { name: '再想一步' })
+    await expect(deeper).toBeVisible()
+    await expect(deeper.getByRole('heading')).toBeVisible()
+    await expect(
+      page.getByRole('group', { name: '试一试' }).getByRole('button').first(),
+    ).toHaveAttribute('aria-pressed', 'true')
     await page.getByRole('button', { name: '带回生活里' }).click()
     await expect(page.getByLabel('我想记下')).toBeVisible()
   }
@@ -82,15 +90,31 @@ test('parent records distinguish real-life use and deletion requires confirmatio
   await expect(page.getByRole('heading', { name: '最近 7 天还没有记录' })).toBeVisible()
 })
 
-test('thinking prompts adapt by age and malformed seed links offer a way home', async ({
+test('optional deeper thinking stays in one scene and never saves a discovery', async ({
   page,
 }) => {
   await page.goto('/seed/think/q1')
-  await expect(page.getByText('准备了很久的比赛没有获奖。回家时，你不太想说话。')).toBeVisible()
-  await page.getByLabel('阅读年龄').selectOption('6-8')
-  await expect(page.getByText('积木倒了，小熊的手握得紧紧的。')).toBeVisible()
-  await page.getByLabel('阅读年龄').selectOption('12-15')
-  await expect(page.getByText('小组展示结束，你既松了口气，又一直想起讲错的那一句。')).toBeVisible()
+  const scene = page.locator('.seed-scene')
+  const firstScene = await scene.textContent()
+  await expect(page.getByRole('region', { name: '再想一步' })).toHaveCount(0)
+  await page.getByRole('button', { name: '一场小雨，有点难过' }).click()
+  await page.getByRole('button', { name: '再想一步', exact: true }).click()
+  await expect(page.getByRole('region', { name: '再想一步' })).toBeVisible()
+  await expect(scene).toHaveText(firstScene)
+  await expect(page.getByRole('button', { name: '一场小雨，有点难过' })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  )
+  await page.getByRole('button', { name: '收起这一步' }).click()
+  await expect(page.getByRole('region', { name: '再想一步' })).toHaveCount(0)
+  await page.getByRole('button', { name: '带回生活里' }).click()
+  await expect(page.getByLabel('我想记下')).toBeVisible()
+  await page.getByRole('link', { name: '我的小脚印', exact: true }).first().click()
+  await expect(page.getByText('这里还没有记录')).toBeVisible()
+})
+
+test('malformed seed links offer a way home', async ({ page }) => {
+  await page.goto('/seed/think/q1')
   // Vite rejects malformed encodings before serving the application. Exercise
   // the client route directly, as a static host's SPA fallback can serve it.
   await page.evaluate(() => {

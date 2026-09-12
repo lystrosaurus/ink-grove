@@ -35,12 +35,18 @@ test('switching gardens preserves adult data and theme without carrying its shel
   }, adult)
   await page.reload()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
-  await page.getByRole('link', { name: 'Seed Grove · 小小思考家', exact: true }).click()
+  await page
+    .getByRole('navigation', { name: '主导航', exact: true })
+    .getByRole('link', { name: 'Seed Grove · 小小思考家', exact: true })
+    .click()
   await expect(page.getByRole('navigation', { name: '花园地图', exact: true })).toBeVisible()
   await expect(page.locator('.site-header')).toHaveCount(0)
   await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark')
   await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', '/seed-icon.svg')
-  await page.getByLabel('阅读年龄').selectOption('6-8')
+  await page.goto('/seed/play/emotion-weather')
+  await page.getByLabel('我想记下').fill('一起走进同一座小花园。')
+  await page.getByRole('button', { name: '保存这片小叶子' }).click()
+  await expect(page.getByLabel('我想记下')).toHaveValue('')
   expect(
     await page.evaluate(() => JSON.parse(localStorage.getItem('ink-grove:garden:v1'))),
   ).toEqual(adult)
@@ -49,8 +55,35 @@ test('switching gardens preserves adult data and theme without carrying its shel
   await expect(page.locator('.seed-app')).toHaveCount(0)
   await expect(page.getByRole('button', { name: '搜索作品', exact: true })).toBeVisible()
   expect(
-    await page.evaluate(() => JSON.parse(localStorage.getItem('seed-grove:garden:v1')).age),
-  ).toBe('6-8')
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('seed-grove:garden:v1')).events[0].note,
+    ),
+  ).toBe('一起走进同一座小花园。')
+})
+
+test('the adult home invites children into Seed and mobile navigation keeps the entrance available', async ({
+  page,
+}) => {
+  await page.goto('/')
+  const invitation = page.getByRole('region', { name: '和孩子一起，让好奇心发芽' })
+  await expect(invitation).toBeVisible()
+  await invitation.getByRole('link', { name: '走进 Seed Grove' }).click()
+  await expect(page).toHaveURL(/\/seed$/)
+  await expect(page.getByRole('navigation', { name: '花园地图', exact: true })).toBeVisible()
+  for (const width of [390, 768, 1024]) {
+    await page.setViewportSize({ width, height: 844 })
+    await page.goto('/')
+    if (width === 390) await page.getByRole('button', { name: '展开导航' }).click()
+    const entrance = page
+      .getByRole('navigation', { name: '主导航', exact: true })
+      .getByRole('link', { name: 'Seed Grove · 小小思考家', exact: true })
+    await expect(entrance).toBeVisible()
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
+      true,
+    )
+    await entrance.click()
+    await expect(page).toHaveURL(/\/seed$/)
+  }
 })
 
 test('reader messages never count as a child reporting a discovery', async ({ page }) => {

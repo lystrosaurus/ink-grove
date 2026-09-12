@@ -6,11 +6,6 @@
   "subtitle": "让感受有地方停一停",
   "layer": 1,
   "goal": "看见自己",
-  "age": [
-    "6-8",
-    "9-11",
-    "12-15"
-  ],
   "type": "interactive-story",
   "duration": 5,
   "questions": [

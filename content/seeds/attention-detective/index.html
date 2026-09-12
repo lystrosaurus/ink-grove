@@ -3,26 +3,27 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>注意力小侦探 · Seed Grove</title>
 <style>
   :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#39473b;background:#f3f0df;line-height:1.7}*{box-sizing:border-box}body{margin:0}main{max-width:900px;margin:auto;padding:30px 24px 40px}.label{font-size:12px;letter-spacing:.18em;color:#6d7961}h1{font:500 clamp(28px,5vw,42px) Georgia,"Songti SC",serif;margin:8px 0}p{margin:8px 0}header{max-width:610px}.desk{margin-top:25px;background:#e2d1ad;border:1px solid #bbab89;border-radius:22px 11px 25px 15px;padding:22px;box-shadow:0 6px 0 #cec19f}.case{display:flex;align-items:center;gap:18px;background:#fffbee;border:1px dashed #a9af95;padding:16px;border-radius:3px 15px 3px 13px;margin-bottom:18px}.lens{width:54px;height:54px;border:5px solid #617b60;border-radius:50%;flex:none;position:relative;background:#edf0d9}.lens:after{content:"";width:25px;height:7px;background:#617b60;position:absolute;right:-17px;bottom:-8px;transform:rotate(45deg)}h2{font-size:19px;margin:0}#hint{font-size:13px;color:#63735c}.surface{display:grid;grid-template-columns:1fr 135px;gap:15px}.tray{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.sample{background:#f8f3df;border:1px solid #b7b99a;border-radius:14px 18px 11px 20px;min-height:95px;position:relative}.sample svg{width:60px;height:65px;display:block;margin:0 auto}.sample[aria-pressed=true]{background:#d1e0bd;border:3px solid #496644}.sample[aria-pressed=true]:after{content:"已放进观察框";display:block;font-size:10px}.toys{border-left:1px dashed #b7a783;display:flex;align-items:center;justify-content:space-around;flex-direction:column;font-size:32px;min-height:220px;background:repeating-linear-gradient(35deg,transparent,transparent 13px,#d7c49c 14px,#d7c49c 15px)}.toys span{display:block;transform:rotate(-12deg)}.surface.tidy{grid-template-columns:1fr}.surface.focused .sample[data-target=false]{opacity:.24}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0}button{font:inherit;min-height:46px;padding:9px 15px;color:inherit;background:#fffbee;border:1px solid #a7b397;border-radius:12px;cursor:pointer}button:hover{background:#e9efd9}button:focus-visible{outline:3px solid #8e703b;outline-offset:4px}button[aria-pressed=true]{background:#d5e3c7}#result{padding:18px 5px;min-height:90px;color:#405b43}.reflection{max-width:650px;border-top:2px dashed #c4c6a7;padding-top:17px;margin-top:15px}.reflection small{color:#707b65}#again{margin-top:12px}[hidden]{display:none!important}@media(max-width:520px){main{padding:20px 15px}.desk{padding:13px}.surface{grid-template-columns:1fr 48px;gap:7px}.tray{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.sample{padding:5px;min-height:85px}.sample svg{width:48px;height:55px}.toys{font-size:23px}.case{padding:12px;gap:15px}.lens{width:40px;height:40px}.lens:after{width:18px}h2{font-size:17px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style></head>
+details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border-radius:14px;max-width:700px}summary{cursor:pointer;min-height:44px;padding:9px 0;font-weight:600}summary:focus-visible{outline:3px solid #96713f;outline-offset:4px}details p{margin:12px 0}details button{margin:4px 4px 4px 0}#deeper-result{min-height:28px}details[open] summary{margin-bottom:10px}</style></head>
 <body><main>
 <header><p class="label">内心花园 / 观察事务所</p><h1>注意力小侦探</h1><p id="story"></p></header>
 <section class="desk" aria-labelledby="question"><div class="case"><div class="lens" aria-hidden="true"></div><div><h2 id="question"></h2><p id="hint"></p></div></div><div id="surface" class="surface"><div id="tray" class="tray" aria-label="标本观察桌"></div><aside id="toys" class="toys" aria-label="桌边的玩具"><span aria-hidden="true">✈</span><span aria-hidden="true">✿</span><span aria-hidden="true">♫</span></aside></div><div class="toolbar"><button id="tidy" aria-pressed="false">收起桌边玩具</button><button id="focus" aria-pressed="false">用观察框遮住无关标本</button></div></section>
 <p id="result" role="status" aria-live="polite">不用赶时间。可以先看看任务，再动手。</p>
 <aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>想留下一句话，可以回到花园页面的反思框里写下，再亲手保存。</small><div><button id="again">重新观察</button></div></aside>
+<details><summary>再想一步</summary><p>同一张桌子，如果问题变成“哪片叶子有小洞”，你的目光会怎样变？</p><button id="change-question" aria-pressed="false">只找有小洞的叶子</button><p>观察框会跟着问题改变。它帮你省了什么，又让你暂时少看到了什么？</p></details>
 </main><script>
 (() => {
-  const age = new URLSearchParams(location.search).get('age');
-  const stage = age === '6-8' ? 0 : age === '12-15' ? 2 : 1;
-  const settings = [
-    {story:'松鼠想做一本叶子小册子。桌上混进了花和石头，玩具也来凑热闹。',question:'把叶子找出来，好吗？',hint:'点叶子，放进观察框。',count:6,life:'刚才什么吸引了你的眼睛？下次你想先把桌上的什么收起来？'},
-    {story:'观察站要收集被虫子咬出小洞的叶子。桌面有点乱，你可以改变观察环境，再比较自己的感受。',question:'哪些叶子上有一个小洞？',hint:'先看形状，再看叶片中间。没有计时器。',count:9,life:'收起玩具或遮住无关标本后，你观察时有什么不同？下次做自己的任务时想试哪种调整？'},
-    {story:'你在整理一份自然观察记录。只有同时带锯齿边缘和小洞的叶片才属于这次样本；显眼的东西未必与目标有关。',question:'哪些叶子同时有锯齿边缘和小洞？',hint:'需要同时检查两个条件。观察框可以帮忙，但会替你筛掉一部分线索。',count:12,life:'缩小观察范围帮你省了什么，又让你少看到了什么？在自己的任务中，什么信息值得保留？'}
-  ][stage];
+  const settings = {
+    story:'松鼠想做一本叶子小册子。桌上混进了花和石头。先把叶子找出来，再看看什么能帮你专心。',
+    question:'把叶子放进观察框，好吗？',
+    hint:'不必赶时间。点一片你认出的叶子。',
+    life:'收起玩具或用观察框后，你的目光有什么不同？今天做自己的事时，想先调整哪里？'
+  };
+  let holesOnly = false;
   const $ = id => document.getElementById(id);
   $('story').textContent = settings.story; $('question').textContent = settings.question; $('hint').textContent = settings.hint; $('real-life').textContent = settings.life;
-  const samples = stage === 0 ? ['plain','flower','hole','stone','saw','flower'] : stage === 1 ? ['hole','plain','flower','saw-hole','stone','saw','plain','hole','flower'] : ['saw-hole','hole','saw','plain','flower','saw-hole','stone','hole','saw','plain','saw-hole','flower'];
+  const samples = ['plain','flower','hole','stone','saw-hole','flower'];
   const labels = {plain:'边缘平滑的完整叶子',hole:'边缘平滑、有小洞的叶子',saw:'锯齿边缘的完整叶子','saw-hole':'锯齿边缘、有小洞的叶子',flower:'一朵小花',stone:'一块石头'};
-  const target = kind => stage === 0 ? !['flower','stone'].includes(kind) : stage === 1 ? kind.includes('hole') : kind === 'saw-hole';
+  const target = kind => holesOnly ? kind.includes('hole') : !['flower','stone'].includes(kind);
   const found = new Set();
   function art(kind) {
     if (kind === 'flower') return '<svg viewBox="0 0 70 70" aria-hidden="true"><path d="M34 42v23" stroke="#6c8256" stroke-width="3"/><g fill="#d5a091"><circle cx="34" cy="21" r="12"/><circle cx="47" cy="32" r="12"/><circle cx="39" cy="46" r="12"/><circle cx="23" cy="42" r="12"/><circle cx="21" cy="26" r="12"/></g><circle cx="33" cy="33" r="9" fill="#dec577"/></svg>';
@@ -33,7 +34,7 @@
   samples.forEach((kind,index) => {
     const button = document.createElement('button'); button.className = 'sample'; button.dataset.target = String(target(kind)); button.setAttribute('aria-label',labels[kind]+'，标本'+(index+1)); button.setAttribute('aria-pressed','false'); button.innerHTML = art(kind);
     button.addEventListener('click', () => {
-      if (!target(kind)) { $('result').textContent = stage === 0 ? '这次在找叶子。再看看叶子的形状。' : '这片标本没有同时符合这次的观察条件。回头看看任务，或用观察框帮忙。'; return; }
+      if (!target(kind)) { $('result').textContent = holesOnly ? '这次在找带小洞的叶子。再看看叶片中间。' : '这次在找叶子。再看看叶子的形状。'; return; }
       found.add(index); button.setAttribute('aria-pressed','true');
       const complete = found.size === samples.filter(target).length;
       $('result').textContent = complete ? '这次需要的叶子都放进观察框了。停一下，留意刚才你的目光是怎样移动的。' : '这片叶子已经放进观察框。你可以慢慢找下一片。';
@@ -42,6 +43,16 @@
   });
   $('tidy').addEventListener('click', () => { const tidy = $('tidy').getAttribute('aria-pressed') !== 'true'; $('tidy').setAttribute('aria-pressed',String(tidy)); $('tidy').textContent = tidy ? '把玩具放回桌边' : '收起桌边玩具'; $('toys').hidden = tidy; $('surface').classList.toggle('tidy',tidy); $('result').textContent = tidy ? '桌边空出来了。留意这对你的观察有没有帮助；每个人的感受可能不同。' : '玩具回来了。你仍然可以按自己的节奏观察。'; });
   $('focus').addEventListener('click', () => { const focused = $('focus').getAttribute('aria-pressed') !== 'true'; $('focus').setAttribute('aria-pressed',String(focused)); $('surface').classList.toggle('focused',focused); $('focus').textContent = focused ? '拿开观察框' : '用观察框遮住无关标本'; $('result').textContent = focused ? '无关标本被淡淡的纸遮住了。这是借助环境帮忙，你仍然可以自己核对特征。' : '所有标本重新清晰了。试着记住这次要找的特征。'; });
+  $('change-question').addEventListener('click', () => {
+    holesOnly = !holesOnly; found.clear();
+    $('change-question').setAttribute('aria-pressed',String(holesOnly));
+    $('change-question').textContent = holesOnly ? '回到找全部叶子' : '只找有小洞的叶子';
+    $('question').textContent = holesOnly ? '哪些叶子上有小洞？' : settings.question;
+    $('hint').textContent = holesOnly ? '还是这六件标本。这次再看看叶片中间。' : settings.hint;
+    [...$('tray').children].forEach((button,index) => { button.dataset.target = String(target(samples[index])); button.setAttribute('aria-pressed','false'); });
+    $('reflection').hidden = true;
+    $('result').textContent = '标本没有换，观察的问题变了。重新看看哪些叶子符合现在的条件。';
+  });
   $('again').addEventListener('click', () => { found.clear(); for (const button of $('tray').children) button.setAttribute('aria-pressed','false'); $('reflection').hidden = true; $('result').textContent = '观察框清空了。保留刚才的环境调整，再观察一次。'; $('tray').querySelector('button').focus(); });
 })();
 </script></body></html>

@@ -38,7 +38,7 @@ node app/scripts/verify-production.mjs
 node app/scripts/verify-seed-production.mjs
 ```
 
-两个脚本不传参数均默认检查 `http://127.0.0.1:4173`，也接受站点根 URL。前者检查 Ink 的深链接、全部 HTML 正文和交互；后者检查 Seed 的四区、六个互动与三档实际内容、Think 8、记录保存及手机版。Seed 截图使用 `node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture` 生成。
+两个脚本不传参数均默认检查 `http://127.0.0.1:4173`，也接受站点根 URL。前者检查 Ink 的深链接、全部 HTML 正文和交互；后者检查 Seed 的四区、六个统一活动与可选延伸、Think 8、记录保存及手机版。Seed 截图使用 `node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture` 生成。
 
 确认生产检查通过，再发布同一份 `app/dist`：
 
@@ -53,11 +53,11 @@ node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.
 node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
 ```
 
-以上命令用于重复执行发布流程；1.2 的 CLI 校验和公网页面检查结果见 [两套体验发布验收](../artifacts/verification-1.2.json)，1.1 的历史记录保存在 [上一版验收](../artifacts/verification.json)。
+以上命令用于重复执行发布流程；本版 CLI 校验和公网页面检查状态见 [1.3 发布验收](../artifacts/verification-1.3.json)，历史结果保存在 [1.2 两套体验验收](../artifacts/verification-1.2.json)和 [1.1 验收](../artifacts/verification.json)。
 
 此命令只上传已构建产物，不重复安装或构建，不上传 `materials/`、设计文档、源码或本地花园数据。`--safe` 在覆盖前创建云端备份；`--verify` 检查本地产物与远端文件。入口 HTML 在资源文件上传完成后上传。发布失败时 CLI 尝试从备份恢复覆盖文件，并移除此轮新增文件。[CLI 静态托管文档](https://docs.cloudbase.net/cli-v1/hosting)提供参数和一致性发布说明。
 
-**CLI 3.8.1 的根路径参数必须省略。**不要给上述命令增加第二个 `/` 或 `.` 参数。该版本对显式 `/` 生成 `/index.html` 等本地清单 Key，远端列举却返回 `index.html`，造成全部文件被报为 `missing`。回滚比较使用同样的不一致 Key，会把覆盖文件误判为新增文件并删除；即使输出「已自动回滚」，也必须检查实际站点文件。省略参数会令本地清单、上传路径和远端 Key 保持一致，本次发布已验证这种调用方式可同时通过 `--safe --verify`。
+**CLI 3.8.1 的根路径参数必须省略。**不要给上述命令增加第二个 `/` 或 `.` 参数。该版本对显式 `/` 生成 `/index.html` 等本地清单 Key，远端列举却返回 `index.html`，造成全部文件被报为 `missing`。回滚比较使用同样的不一致 Key，会把覆盖文件误判为新增文件并删除；即使输出「已自动回滚」，也必须检查实际站点文件。省略参数会令本地清单、上传路径和远端 Key 保持一致；历史发布已验证这种调用方式可同时通过 `--safe --verify`，每轮仍须检查当次结果。
 
 这次发布不使用 `--prune`。环境根路径还保存 CloudBase 的 `__auth/`、`cloud-admin/` 等文件，不能把它们作为本站的旧产物删除。该命令覆盖同名作品和入口文件，并保留远端其他文件；旧的带哈希 CSS/JS 也保留，已经打开的旧页面仍可请求它们。不要对整个云端根目录执行清空操作。
 
@@ -76,7 +76,7 @@ node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-130303
 3. 验证本轮新增作品标题、正文和封面确实出现；HTML 仍在 `sandbox="allow-scripts"` iframe 中读取。
 4. 确认没有应用控制台错误，并保留 CLI 输出中的备份路径与校验结果。
 
-1.2 新增的 Seed 验收还包括：年龄切换后实际故事和任务变化；积木从倾倒到站立、时间分配与拆分步骤等真实互动；八张思考工具可操作；仅显式保存生成成长记录；手机地图不溢出；Seed 与 Ink 样式、备份独立。原有 31 件 Ink 作品仍需回归。
+1.3 的 Seed 验收还包括：从 Ink 顶部导航和首页邀请进入 Seed；地图、六个 Seed 与八张思考工具提供无年龄分组的统一体验；「再想一步」自由可用；积木从倾倒到站立、时间分配与拆分步骤等真实互动正常；仅显式保存生成记录，导出为无年龄字段的 v2；手机地图不溢出；Seed 与 Ink 样式、备份独立。发布前还需验证有效 v1 数据和备份兼容、加载不自动回写，以及损坏数据与存储失败保护。原有 31 件 Ink 作品仍需回归。
 
 1.1.0 的目录基准是 31 件作品、28 件 HTML、7 个集合、35 个概念，其中 27 件 HTML 来自 `materials/`，另有《清醒行动实验室》。追加的六件作品覆盖股东信、经济学、管理效能、价值投资与当下觉察；公网验收须包含它们，不能沿用扩容前的作品数量或产物清单。参考资料应先在父页显示目标域名，点击「打开参考资料」后再打开新页，不能通过增加 iframe 弹窗权限来适配线上环境。
 
@@ -91,6 +91,8 @@ tcb domains ls -e ink-d0gvorjko99e99e4d --filter 'DomainType=STATIC_STORE' --jso
 ```
 
 ## 回滚
+
+1.3 的 Seed 数据格式升级为 v2，但存储键仍是 `seed-grove:garden:v1`。静态站点回滚不会将访问者已保存的数据降为旧格式；1.2 无法读取 v2，会按未知版本进入原始恢复保护。涉及回退到 1.2 时，先保留当前 Seed 导出，并验证该数据在计划部署版本中的处理方式；优先修复后发布仍兼容 v2 的版本，不把旧程序能加载等同于用户记录可用。
 
 优先从已验证的历史提交重新构建上一版，避免依赖完整性未知的云端快照。在仓库外建立独立工作树，替换下列 `<提交号>`：
 

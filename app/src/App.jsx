@@ -257,6 +257,12 @@ export default function App({ onReady } = {}) {
                     {label}
                   </Link>
                 ))}
+                <a className="nav-seed-entry" href="/seed" aria-label="Seed Grove · 小小思考家">
+                  <Sprout size={15} aria-hidden="true" />
+                  <span>
+                    Seed<span className="nav-seed-full"> Grove</span>
+                  </span>
+                </a>
               </nav>
               <div className="header-actions">
                 <button

@@ -6,11 +6,6 @@
   "subtitle": "把有限的时间交给在意的事",
   "layer": 2,
   "goal": "做出选择",
-  "age": [
-    "6-8",
-    "9-11",
-    "12-15"
-  ],
   "type": "choice-simulation",
   "duration": 6,
   "questions": [

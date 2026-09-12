@@ -1,7 +1,8 @@
 import { readStoredJson, preserveStoredData, writeStoredJson } from '../core/storage.js'
 
 export const SEED_STORAGE_KEY = 'seed-grove:garden:v1'
-export const SEED_AGES = ['6-8', '9-11', '12-15']
+// Keep the storage key stable so existing local records can be read without a destructive move.
+const LEGACY_AGES = ['6-8', '9-11', '12-15']
 const MAX_BYTES = 1024 * 1024
 const forbidden = new Set(['__proto__', 'constructor', 'prototype'])
 const check = (condition, message) => {
@@ -39,10 +40,19 @@ function isoDate(value) {
 export function createSeedGardenModel({ seedIds }) {
   const knownSeeds = new Set(seedIds)
   function emptySeedGarden() {
-    return { schemaVersion: 1, product: 'seed-grove', revision: 0, age: '9-11', events: [] }
+    return { schemaVersion: 2, product: 'seed-grove', revision: 0, events: [] }
   }
-  function validateEvent(value) {
-    object(value, ['id', 'seedId', 'questionId', 'kind', 'note', 'source', 'age', 'at'])
+  function validateEvent(value, legacy = false) {
+    object(value, [
+      'id',
+      'seedId',
+      'questionId',
+      'kind',
+      'note',
+      'source',
+      'at',
+      ...(legacy ? ['age'] : []),
+    ])
     check(
       typeof value.id === 'string' && /^[a-z0-9][a-z0-9-]{0,79}$/.test(value.id),
       '成长记录标识不正确。',
@@ -56,7 +66,7 @@ export function createSeedGardenModel({ seedIds }) {
     )
     check(['discovery', 'real-life'].includes(value.kind), '不支持这种成长记录。')
     check(['child', 'parent'].includes(value.source), '记录来源不正确。')
-    check(SEED_AGES.includes(value.age), '阅读年龄不正确。')
+    if (legacy) check(LEGACY_AGES.includes(value.age), '旧版记录的阅读年龄不正确。')
     return {
       id: value.id,
       seedId: value.seedId,
@@ -64,14 +74,14 @@ export function createSeedGardenModel({ seedIds }) {
       kind: value.kind,
       note: text(value.note),
       source: value.source,
-      age: value.age,
       at: isoDate(value.at),
     }
   }
   function validateSeedGarden(value) {
-    object(value, ['schemaVersion', 'product', 'revision', 'age', 'events'])
+    const legacy = value?.schemaVersion === 1
+    object(value, ['schemaVersion', 'product', 'revision', 'events', ...(legacy ? ['age'] : [])])
     check(
-      value.schemaVersion === 1 && value.product === 'seed-grove',
+      [1, 2].includes(value.schemaVersion) && value.product === 'seed-grove',
       '这不是支持的 Seed Grove 备份版本。',
     )
     check(
@@ -80,18 +90,17 @@ export function createSeedGardenModel({ seedIds }) {
         value.revision < Number.MAX_SAFE_INTEGER,
       '记录版本不正确。',
     )
-    check(SEED_AGES.includes(value.age), '阅读年龄不正确。')
+    if (legacy) check(LEGACY_AGES.includes(value.age), '旧版备份的阅读年龄不正确。')
     check(
       Array.isArray(value.events) && value.events.length <= 1000,
       '最多保留 1000 条成长记录，请先导出备份。',
     )
-    const events = value.events.map(validateEvent)
+    const events = value.events.map((event) => validateEvent(event, legacy))
     check(new Set(events.map((event) => event.id)).size === events.length, '备份含有重复记录。')
     return {
-      schemaVersion: 1,
+      schemaVersion: 2,
       product: 'seed-grove',
       revision: value.revision,
-      age: value.age,
       events,
     }
   }
@@ -119,7 +128,7 @@ export function createSeedGardenModel({ seedIds }) {
         garden: emptySeedGarden(),
         raw,
         unreadable: true,
-        warning: '暂时读不到成长记录。原始数据会保留，可以到家长小站导出。',
+        warning: '暂时读不到成长记录。原始数据会保留，可以到家长小角落导出。',
       }
     }
   }
@@ -147,7 +156,7 @@ export function createSeedGardenModel({ seedIds }) {
       }
     }
   }
-  function createGrowthEvent(input, age) {
+  function createGrowthEvent(input) {
     return validateEvent({
       id: `growth-${crypto.randomUUID()}`,
       seedId: input.seedId ?? '',
@@ -155,7 +164,6 @@ export function createSeedGardenModel({ seedIds }) {
       kind: input.kind,
       note: input.note ?? '',
       source: input.source ?? 'child',
-      age,
       at: new Date().toISOString(),
     })
   }

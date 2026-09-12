@@ -332,6 +332,132 @@ kbd {
   align-items: center;
   gap: 23px;
 }
+.main-nav .nav-seed-entry {
+  gap: 5px;
+  white-space: nowrap;
+  color: var(--green);
+  letter-spacing: 0;
+}
+.seed-garden-invitation {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 22px 30px;
+  margin: 4px 0 32px;
+  border: 1px solid var(--line);
+  border-radius: 8px 30px 8px 8px;
+  background: #edf0e6;
+}
+.seed-invitation-art {
+  width: 82px;
+  min-width: 82px;
+  height: 80px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: #638157;
+  background: #f7f6ec;
+  border-radius: 50% 50% 40% 45%;
+}
+.seed-invitation-art > svg {
+  transform: rotate(-9deg);
+  z-index: 1;
+}
+.seed-invitation-sun {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 11px;
+  top: 8px;
+  border-radius: 50%;
+  background: #e5cb7c;
+}
+.seed-invitation-ground {
+  position: absolute;
+  width: 52px;
+  height: 15px;
+  bottom: 14px;
+  border-radius: 50%;
+  background: #dce5cf;
+}
+.seed-invitation-copy {
+  flex: 1;
+}
+.seed-invitation-copy > .eyebrow {
+  color: #6e815f;
+  font-size: 9px;
+}
+.seed-invitation-copy > h2 {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 7px 0 8px;
+}
+.seed-invitation-copy > p {
+  margin: 0;
+  font-size: 12px;
+  color: #6c7864;
+  line-height: 1.9;
+}
+.seed-invitation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  border-bottom: 1px solid #a7b598;
+  padding: 10px 0;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.seed-invitation-link:hover {
+  border-color: currentColor;
+}
+[data-theme='dark'] .seed-garden-invitation {
+  background: #242e26;
+}
+[data-theme='dark'] .seed-invitation-copy > .eyebrow,
+[data-theme='dark'] .seed-invitation-copy > p {
+  color: #b0bda4;
+}
+@media (max-width: 1150px) {
+  .nav-seed-full {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .seed-garden-invitation {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px 15px;
+    padding: 22px 18px;
+    margin-top: 18px;
+  }
+  .seed-invitation-art {
+    width: 48px;
+    min-width: 48px;
+    height: 56px;
+  }
+  .seed-invitation-art > svg {
+    width: 30px;
+  }
+  .seed-invitation-ground {
+    width: 38px;
+    bottom: 5px;
+  }
+  .seed-invitation-sun {
+    width: 11px;
+    height: 11px;
+    right: 3px;
+    top: 1px;
+  }
+  .seed-invitation-copy > h2 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .seed-invitation-link {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
 .header-search {
   display: flex;
   align-items: center;

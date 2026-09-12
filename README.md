@@ -4,7 +4,7 @@
 
 两座可在本机使用、也可通过 CloudBase 静态分发的花园。Ink Grove 让成人发现、阅读与连接知识；Seed Grove 让孩子在情境、尝试和现实行动中练习思考。
 
-**1.2.0 · One Core, Two Experiences。**保留 Ink Grove 的 31 件作品、7 个精选集合与 35 个概念，新增 Seed Grove 的四区地图、六个独立互动 Seed 与 Think 8。两者共用安全渲染、构建和存储保护，各自保留产品个性与本地数据。AI 接口默认关闭。发行内容见 [CHANGELOG](CHANGELOG.md)，仓库协作约定见 [AGENTS.md](AGENTS.md)。
+**1.3.0 · 一起走进小小思考家的花园。**Ink Grove 顶部导航和首页增加 Seed Grove 入口；Seed 的六个独立互动与 Think 8 改为不分年龄的统一体验，以具体尝试和可自由探索的「再想一步」承接不同思考深度。保留 Ink 的 31 件作品、7 个精选集合与 35 个概念，以及 Seed 的四区地图。两者共用安全渲染、构建和存储保护，各自保留产品个性与本地数据。AI 接口默认关闭。发行内容见 [CHANGELOG](CHANGELOG.md)，仓库协作约定见 [AGENTS.md](AGENTS.md)。
 
 ## 启动
 
@@ -28,7 +28,7 @@ npm run preview  # 本机查看生产版 http://127.0.0.1:4173
 
 ## CloudBase 展示
 
-同一站点提供 [Ink Grove 在线花园](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/) 与 [Seed Grove 小小思考家](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/seed) 两个入口。两套体验使用同一份构建产物发布；测试与公网检查见 [1.2 发布验收记录](artifacts/verification-1.2.json)，上一版记录保存在 [1.1 验收记录](artifacts/verification.json)。默认测试域名首次访问会显示平台提示，等待倒计时后点击「确定访问」即可继续。
+同一站点提供 [Ink Grove 在线花园](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/) 与 [Seed Grove 小小思考家](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/seed) 两个入口。两套体验使用同一份构建产物发布；本版测试与公网检查状态见 [1.3 发布验收记录](artifacts/verification-1.3.json)，历史结果保存在 [1.2 验收记录](artifacts/verification-1.2.json)和 [1.1 验收记录](artifacts/verification.json)。默认测试域名首次访问会显示平台提示，等待倒计时后点击「确定访问」即可继续。
 
 在根目录完成测试、构建与生产预览检查后，使用 TCB 上传同一份产物：
 
@@ -48,7 +48,7 @@ node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-130303
 
 ## 走一遍花园
 
-1. **首页 `/`**：从思想树、精选贯通作品与成长小径开始。访问作品后，首页会出现真实的「继续探索」。
+1. **首页 `/`**：从思想树、精选贯通作品与成长小径开始。访问作品后，首页会出现真实的「继续探索」。顶部导航与首页邀请卡均可进入 Seed Grove。
 2. **探索 `/explore`**：类型与主题组合筛选，中文多关键词搜索，排序、网格与列表视图。搜索词与筛选保留在链接中，刷新可恢复。`Ctrl/Cmd + K` 打开搜索；上下键选择，Enter 进入作品。
 3. **作品 `/artifact/:slug`**：完整展示作品原有视觉。移动鼠标唤回工具栏，`F` 进入专注，`Esc` 退出。作品内部同样支持快捷键，阅读位置自动恢复。触屏提供专注退出按钮。点击 HTML 中的外部参考链接后，阅读器显示目标域名，再点击「打开参考资料」访问来源。
 4. **集合 `/collections`**：收藏心仪作品，创建、编辑与移除自己的集合。
@@ -59,7 +59,7 @@ node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-130303
 
 ## 走进 Seed Grove
 
-Seed Grove 实现原设计 §45–46 的首版：从 `/seed` 地图自由进入**内心花园、选择路口、学习山谷、反馈实验室**，没有课程锁、积分或排名。默认 9–11 岁，可切换 6–8、12–15 岁；三档会改变故事、问题和互动任务。
+Seed Grove 从 `/seed` 地图自由进入**内心花园、选择路口、学习山谷、反馈实验室**，没有课程锁、积分或排名。2026-09-13 按用户设计调整取消年龄分组：所有人直接进入同一份具体活动，再按兴趣探索「再想一步」。内容仍从原设计 §45–46 的首版范围演进，原始设计资料保持原文。
 
 | 小种子             | 可以做什么                                               |
 | ------------------ | -------------------------------------------------------- |
@@ -70,9 +70,9 @@ Seed Grove 实现原设计 §45–46 的首版：从 `/seed` 地图自由进入*
 | 把大问题拆小       | 把具体任务拆成能行动的小步骤                             |
 | 错误是线索         | 改变积木实验中的条件，根据结果寻找下一次调整             |
 
-**Think 8 `/seed/think`** 提供八张可随手使用的问题卡，每张都有年龄对应的情境、选择、反馈和现实反思。**我的小脚印 `/seed/growth`** 收集亲手保存的发现与生活尝试。**家长小角落 `/seed/parent`** 提供陪伴问题、最近七天真实记录与数据管理。
+**Think 8 `/seed/think`** 提供八张可随手使用的问题卡，每张都有统一的情境、选择、反馈、现实反思与「再想一步」。**我的小脚印 `/seed/growth`** 收集亲手保存的发现与生活尝试。**家长小角落 `/seed/parent`** 提供陪伴问题、最近七天真实记录与数据管理。
 
-记录留在当前浏览器，最多 1000 条，每条最多 600 个字符；备份限 1 MB，恢复和清除需要明确确认。浏览或答题不会自动生成“已掌握”结论。十层完整内容、十二 Seed 全集、长期能力推断、账号同步与 AI 对话尚未实现。设计对应关系、内容来源、路由和数据契约见 [Seed Grove 实装与验收](docs/seed-grove.md)。
+记录留在当前浏览器，最多 1000 条，每条最多 600 个字符；备份限 1 MB，恢复和清除需要明确确认。新记录与导出使用不含年龄的 v2 格式；有效的旧记录只在内存转换，下一次明确保存成功后才写入新格式，也支持恢复旧备份。浏览或答题不会自动生成“已掌握”结论。十层完整内容、十二 Seed 全集、长期能力推断、账号同步与 AI 对话尚未实现。设计对应关系、内容来源、路由和数据契约见 [Seed Grove 实装与验收](docs/seed-grove.md)。
 
 ## Ink Grove 已有作品
 
@@ -140,17 +140,17 @@ HTML 用 `sandbox="allow-scripts"` iframe，允许作品自己的 JavaScript；�
 
 ## 展示截图
 
-[Seed 花园地图](artifacts/screenshots/seed-home-desktop.png) · [Seed 手机版](artifacts/screenshots/seed-home-mobile.png) · [Think 8](artifacts/screenshots/seed-think-desktop.png) · [反馈实验](artifacts/screenshots/seed-feedback-desktop.png) · [家长小角落](artifacts/screenshots/seed-parent-desktop.png)
+[Seed 花园地图](artifacts/screenshots/seed-home-desktop.png) · [Seed 手机版](artifacts/screenshots/seed-home-mobile.png) · [Think 8](artifacts/screenshots/seed-think-desktop.png) · [再想一步](artifacts/screenshots/seed-think-depth-desktop.png) · [反馈实验](artifacts/screenshots/seed-feedback-desktop.png) · [家长小角落](artifacts/screenshots/seed-parent-desktop.png)
 
 [首页](artifacts/screenshots/home-desktop.png) · [探索](artifacts/screenshots/explore-desktop.png) · [知识连接](artifacts/screenshots/connections-desktop.png) · [成长旅程](artifacts/screenshots/journey-desktop.png) · [创作](artifacts/screenshots/create-desktop.png) · [深色](artifacts/screenshots/home-dark.png) · [手机](artifacts/screenshots/home-mobile.png)
 
 [清醒行动实验室](artifacts/screenshots/clear-thinking-lab-desktop.png) · [行动卡](artifacts/screenshots/clear-thinking-lab-action.png) · [反馈实验](artifacts/screenshots/clear-thinking-lab-feedback.png) · [实验室手机版](artifacts/screenshots/clear-thinking-lab-mobile.png)
 
-[1.2 发布验收记录](artifacts/verification-1.2.json)记录两套体验的测试、生产检查、远端产物校验与发布状态；[1.1 记录](artifacts/verification.json)保留上一版的 CloudBase 备份限制。
+[1.3 发布验收记录](artifacts/verification-1.3.json)记录本版两套体验的测试、生产检查、远端产物校验与发布状态；[1.2 记录](artifacts/verification-1.2.json)保留首次双体验发布证据，[1.1 记录](artifacts/verification.json)保留当时的 CloudBase 备份限制。
 
-服务运行时，可重新生成截图：
+生产预览服务运行时，可重新生成两套体验的截图：
 
 ```powershell
-node app/scripts/capture.mjs
+node app/scripts/capture.mjs http://127.0.0.1:4173
 node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture
 ```

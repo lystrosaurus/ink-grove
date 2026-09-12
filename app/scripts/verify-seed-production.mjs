@@ -49,20 +49,17 @@ try {
   }
   for (const seed of catalog.seeds) {
     await visit(`/seed/play/${seed.slug}`)
-    const stories = new Set()
-    for (const age of ['6-8', '9-11', '12-15']) {
-      await page.getByLabel('阅读年龄').selectOption(age)
-      const frame = page.frameLocator('iframe')
-      await expect(page.locator('iframe')).toHaveAttribute('sandbox', 'allow-scripts')
-      await expect(page.locator('iframe')).toHaveAttribute('src', new RegExp(`age=${age}`))
-      await expect(frame.locator('h1')).toHaveText(seed.title)
-      await expect(frame.locator('#story')).not.toHaveText('')
-      stories.add(await frame.locator('#story').innerText())
-      assert.ok((await frame.locator('body').innerText()).length > 100, seed.id)
-    }
-    assert.equal(stories.size, 3, `${seed.id}: age must change the actual story`)
+    const frame = page.frameLocator('iframe')
+    await expect(page.getByLabel('阅读年龄')).toHaveCount(0)
+    await expect(page.locator('iframe')).toHaveAttribute('sandbox', 'allow-scripts')
+    await expect(page.locator('iframe')).not.toHaveAttribute('src', /[?&]age=/)
+    await expect(frame.locator('h1')).toHaveText(seed.title)
+    await expect(frame.locator('#story')).not.toHaveText('')
+    assert.ok((await frame.locator('body').innerText()).length > 100, seed.id)
+    const deeper = frame.locator('details').filter({ hasText: '再想一步' })
+    await frame.locator('summary').filter({ hasText: '再想一步' }).click()
+    await expect(deeper).toHaveAttribute('open', '')
   }
-  await page.getByLabel('阅读年龄').selectOption('9-11')
   for (const seed of catalog.seeds) {
     await visit(`/seed/play/${seed.slug}`)
     const frame = page.frameLocator('iframe')
@@ -84,8 +81,8 @@ try {
       await expect(frame.locator('#result')).toContainText('这次留下：玩游戏')
     } else if (seed.id === 'just-right-challenge') {
       await frame.locator('#show-hint').click()
-      await frame.getByRole('button', { name: '试试 15', exact: true }).click()
-      await expect(frame.locator('#result')).toContainText('这一块接上了')
+      await frame.getByRole('button', { name: '试试 ○', exact: true }).click()
+      await expect(frame.locator('#result')).toContainText('又开始一组')
     } else if (seed.id === 'break-it-down') {
       await frame.locator('#split').click()
       for (let i = 0; i < 4; i += 1) await frame.locator('.step').nth(i).click()
@@ -104,12 +101,15 @@ try {
     await visit(`/seed/think/q${number}`)
     await page.getByRole('group', { name: '试一试' }).getByRole('button').first().click()
     await expect(page.getByRole('button', { name: '换一个想法试试' })).toBeVisible()
+    await page.getByRole('button', { name: '再想一步', exact: true }).click()
+    await expect(page.getByRole('region', { name: '再想一步' }).getByRole('heading')).toBeVisible()
     await page.getByRole('button', { name: '带回生活里' }).click()
     await expect(page.getByLabel('我想记下')).toBeVisible()
   }
   assert.equal(
     await page.evaluate(
-      () => JSON.parse(localStorage.getItem('seed-grove:garden:v1')).events.length,
+      () =>
+        JSON.parse(localStorage.getItem('seed-grove:garden:v1') || '{"events":[]}').events.length,
     ),
     0,
     'Exploring must not create growth claims',
@@ -118,6 +118,10 @@ try {
   await page.getByRole('button', { name: '保存这片小叶子' }).click()
   await visit('/seed/growth')
   await expect(page.getByText('我给现在和未来，各留了一点时间。')).toBeVisible()
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('seed-grove:garden:v1')))
+  assert.equal(saved.schemaVersion, 2)
+  assert.equal(Object.hasOwn(saved, 'age'), false)
+  assert.equal(Object.hasOwn(saved.events[0], 'age'), false)
 
   await page.setViewportSize({ width: 390, height: 844 })
   for (const path of ['/seed', '/seed/think', '/seed/parent', '/seed/play/mistakes-are-clues']) {
@@ -140,11 +144,17 @@ try {
     for (const [path, name] of [
       ['/seed', 'seed-home-desktop'],
       ['/seed/think', 'seed-think-desktop'],
+      ['/seed/think/q1', 'seed-think-depth-desktop'],
       ['/seed/play/mistakes-are-clues', 'seed-feedback-desktop'],
       ['/seed/parent', 'seed-parent-desktop'],
     ]) {
       await visit(path)
       if (path.includes('/play/')) await page.frameLocator('iframe').locator('#story').waitFor()
+      if (path === '/seed/think/q1') {
+        await page.getByRole('group', { name: '试一试' }).getByRole('button').first().click()
+        await page.getByRole('button', { name: '再想一步', exact: true }).click()
+        await expect(page.getByRole('region', { name: '再想一步' })).toBeVisible()
+      }
       await page.screenshot({
         path: fileURLToPath(new URL(`${name}.png`, directory)),
         fullPage: true,
@@ -154,7 +164,7 @@ try {
   assert.deepEqual(failures, [])
   assert.deepEqual(external, [])
   console.log(
-    `Seed production passed at ${base.origin}: matching build, 4 regions, 6 sandboxed Seed interactions × 3 actual age stories, 8 thinking interactions, local save/reload, mobile routes, no browser errors or external requests.`,
+    `Seed production passed at ${base.origin}: matching build, 4 regions, 6 unified sandboxed interactions with optional deeper questions, 8 thinking interactions with optional depth, age-free local save/reload, mobile routes, no browser errors or external requests.`,
   )
 } finally {
   await browser.close()

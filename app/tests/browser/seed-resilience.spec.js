@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { readFile } from 'node:fs/promises'
 
 const SEED_KEY = 'seed-grove:garden:v1'
 const INK_KEY = 'ink-grove:garden:v1'
@@ -141,7 +142,7 @@ test('failed deletion keeps saved records and its confirmation open until a succ
   expect((await readSeed(page)).events).toEqual([])
 })
 
-test('failed backup replacement keeps the preview, saved data, age and unfinished parent note', async ({
+test('failed legacy backup replacement keeps the preview, saved data and unfinished parent note', async ({
   page,
 }) => {
   const original = JSON.stringify(backup())
@@ -163,7 +164,7 @@ test('failed backup replacement keeps the preview, saved data, age and unfinishe
   await expect(confirm).toBeVisible()
   await expect(page.getByRole('dialog').getByRole('alert')).toBeVisible()
   await expect(reflection(page)).toHaveValue('家长还没写完的生活记录。')
-  await expect(page.getByLabel('阅读年龄')).toHaveValue('9-11')
+  await expect(page.getByLabel('阅读年龄')).toHaveCount(0)
   expect(await readRaw(page)).toBe(original)
 
   await page.evaluate(() => window.restoreSeedWrites())
@@ -171,11 +172,49 @@ test('failed backup replacement keeps the preview, saved data, age and unfinishe
   await confirm.click()
   await expect(confirm).toHaveCount(0)
   await expect(reflection(page)).toHaveValue('')
-  await expect(page.getByLabel('阅读年龄')).toHaveValue('6-8')
+  await expect(page.getByLabel('阅读年龄')).toHaveCount(0)
+  expect((await readSeed(page)).schemaVersion).toBe(2)
+  expect(await readSeed(page)).not.toHaveProperty('age')
   await expect(page.getByText('从另一台设备带来的记录。', { exact: true })).toBeVisible()
   expect((await readSeed(page)).events.map((event) => event.note)).toEqual([
     '从另一台设备带来的记录。',
   ])
+})
+
+test('legacy local records can be read and exported before an explicit save upgrades storage', async ({
+  page,
+}) => {
+  const legacy = backup('旧版里留下的小发现。')
+  const raw = JSON.stringify(legacy)
+  await page.goto('/')
+  await page.evaluate(({ key, raw }) => localStorage.setItem(key, raw), { key: SEED_KEY, raw })
+  await page.goto('/seed/growth')
+  await expect(page.getByText(legacy.events[0].note, { exact: true })).toBeVisible()
+  expect(await readRaw(page)).toBe(raw)
+  await page.goto('/seed/parent')
+  const pending = page.waitForEvent('download')
+  await page.getByRole('button', { name: '导出 Seed Grove 备份', exact: true }).click()
+  const download = await pending
+  const exported = JSON.parse(await readFile(await download.path(), 'utf8'))
+  expect(exported.schemaVersion).toBe(2)
+  expect(exported).not.toHaveProperty('age')
+  expect(exported.events[0]).not.toHaveProperty('age')
+  expect(exported.events[0]).toMatchObject({
+    id: legacy.events[0].id,
+    note: legacy.events[0].note,
+    at: legacy.events[0].at,
+    source: 'parent',
+    kind: 'real-life',
+  })
+  expect(await readRaw(page)).toBe(raw)
+  await reflection(page).fill('新版继续留下同一段探索。')
+  await saveReflection(page).click()
+  await expect(reflection(page)).toHaveValue('')
+  expect((await readSeed(page)).schemaVersion).toBe(2)
+  expect((await readSeed(page)).events).toHaveLength(2)
+  await page.reload()
+  await expect(page.getByText(legacy.events[0].note, { exact: true })).toBeVisible()
+  await expect(page.getByText('新版继续留下同一段探索。', { exact: true })).toBeVisible()
 })
 
 test('adult and unknown-version backup files cannot replace existing Seed records', async ({

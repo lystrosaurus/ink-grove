@@ -6,11 +6,6 @@
   "subtitle": "让一次结果带我们走到下一次",
   "layer": 5,
   "goal": "理解反馈",
-  "age": [
-    "6-8",
-    "9-11",
-    "12-15"
-  ],
   "type": "feedback-experiment",
   "duration": 7,
   "questions": [

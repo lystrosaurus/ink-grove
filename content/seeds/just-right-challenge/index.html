@@ -1,38 +1,46 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>刚刚好的难 · Seed Grove</title>
 <style>
-  :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#364e58;background:#f0f5f1;line-height:1.7}*{box-sizing:border-box}body{margin:0}main{max-width:900px;margin:auto;padding:28px 24px 40px}header{text-align:center}h1{font:500 clamp(29px,5vw,43px) Georgia,"Songti SC",serif;margin:8px 0}.kicker{font-size:12px;letter-spacing:.16em;color:#67808a}#story{max-width:650px;margin:12px auto 20px}.mountains{height:190px;position:relative;overflow:hidden;max-width:760px;margin:auto}.mountains svg{display:block;width:100%;height:100%}.paths{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:-3px}.paths button{background:#f5f7eb}button{font:inherit;color:inherit;min-height:47px;padding:10px 18px;border:1px solid #9eb6b8;background:#fffdf4;border-radius:15px 10px 16px 12px;cursor:pointer}button:hover{background:#ddebea}button:focus-visible{outline:3px solid #b48d43;outline-offset:4px}button[aria-pressed=true]{border:2px solid #5b8190;background:#d6e6e9;padding:9px 17px}.notebook{max-width:700px;background:#fffcf3;border:1px solid #c7d1ca;border-left:6px solid #9db4b4;border-radius:5px 20px 14px 5px;margin:24px auto 0;padding:20px 24px}h2{font-size:21px;margin:4px 0 18px}#pattern{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}.tile{width:54px;min-height:56px;background:#e3ece8;border:1px solid #a6bdb6;border-radius:12px 9px 14px 10px;display:grid;place-items:center;font-size:23px}.tile.blank{border:2px dashed #a3b5ad;background:transparent}.answers{display:flex;gap:12px;flex-wrap:wrap}.answers button{font-size:20px;min-width:64px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.tools button{font-size:14px;padding:9px 13px}#hint{font-size:14px;padding:12px;background:#f0edd8;border-radius:10px}#result{min-height:65px;margin:18px 0 0;color:#506e77}.reflection{max-width:700px;margin:22px auto 0;background:#e3ede7;padding:20px 24px;border-radius:14px}.reflection small{color:#61776d}.legend{font-size:12px;text-align:center;margin:12px 0;color:#728583}[hidden]{display:none!important}@media(max-width:480px){main{padding:20px 15px}.notebook{padding:18px 16px}.mountains{height:155px}.paths{gap:8px}.paths button{padding:9px 12px}.paths button[aria-pressed=true]{padding:8px 11px}.tile{width:43px;min-height:49px;font-size:20px}#pattern{gap:7px}h2{font-size:19px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style></head><body><main>
+  :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#364e58;background:#f0f5f1;line-height:1.7}*{box-sizing:border-box}body{margin:0}main{max-width:900px;margin:auto;padding:28px 24px 40px}header{text-align:center}h1{font:500 clamp(29px,5vw,43px) Georgia,"Songti SC",serif;margin:8px 0}.kicker{font-size:12px;letter-spacing:.16em;color:#67808a}#story{max-width:650px;margin:12px auto 20px}.mountains{height:190px;position:relative;overflow:hidden;max-width:760px;margin:auto}.mountains svg{display:block;width:100%;height:100%}.paths{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:-3px}.paths button{background:#f5f7eb}button{font:inherit;color:inherit;min-height:47px;padding:10px 18px;border:1px solid #9eb6b8;background:#fffdf4;border-radius:15px 10px 16px 12px;cursor:pointer}button:hover{background:#ddebea}button:focus-visible{outline:3px solid #b48d43;outline-offset:4px}button[aria-pressed=true]{border:2px solid #5b8190;background:#d6e6e9;padding:9px 17px}.notebook{max-width:700px;background:#fffcf3;border:1px solid #c7d1ca;border-left:6px solid #9db4b4;border-radius:5px 20px 14px 5px;margin:24px auto 0;padding:20px 24px}h2{font-size:21px;margin:4px 0 18px}#pattern,#deeper-pattern{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}.tile{width:54px;min-height:56px;background:#e3ece8;border:1px solid #a6bdb6;border-radius:12px 9px 14px 10px;display:grid;place-items:center;font-size:23px}.tile.blank{border:2px dashed #a3b5ad;background:transparent}.answers{display:flex;gap:12px;flex-wrap:wrap}.answers button{font-size:20px;min-width:64px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.tools button{font-size:14px;padding:9px 13px}#hint{font-size:14px;padding:12px;background:#f0edd8;border-radius:10px}#result{min-height:65px;margin:18px 0 0;color:#506e77}.reflection{max-width:700px;margin:22px auto 0;background:#e3ede7;padding:20px 24px;border-radius:14px}.reflection small{color:#61776d}.legend{font-size:12px;text-align:center;margin:12px 0;color:#728583}[hidden]{display:none!important}@media(max-width:480px){main{padding:20px 15px}.notebook{padding:18px 16px}.mountains{height:155px}.paths{gap:8px}.paths button{padding:9px 12px}.paths button[aria-pressed=true]{padding:8px 11px}.tile{width:43px;min-height:49px;font-size:20px}#pattern,#deeper-pattern{gap:7px}h2{font-size:19px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border-radius:14px;max-width:700px}summary{cursor:pointer;min-height:44px;padding:9px 0;font-weight:600}summary:focus-visible{outline:3px solid #96713f;outline-offset:4px}details p{margin:12px 0}details button{margin:4px 4px 4px 0}#deeper-result{min-height:28px}details[open] summary{margin-bottom:10px}</style></head><body><main>
 <header><p class="kicker">学习山谷 / 找到今天的坡度</p><h1>刚刚好的难</h1><p id="story"></p></header>
-<div class="mountains"><svg viewBox="0 0 780 200" role="img" aria-label="三条不同坡度的山路，随时可以换路"><circle cx="645" cy="41" r="22" fill="#e0c582"/><path d="M0 190L141 96 293 190Z" fill="#b9cebd"/><path d="M184 190L388 51 552 190Z" fill="#92b1af"/><path d="M454 190L616 13 780 190Z" fill="#72949a"/><path d="M582 50l34-37 36 39-24-11-12 14-15-16Z" fill="#eaf1e8"/><g fill="none" stroke="#f1e2bd" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 10"><path d="M134 190Q212 170 155 148T141 102"/><path d="M382 190Q310 163 388 140T383 85L388 60"/><path d="M635 190Q560 170 616 144T612 108L616 58"/></g><path d="M0 190q175-12 290 1t490-2" fill="none" stroke="#a6bea9" stroke-width="5"/></svg></div>
-<nav class="paths" aria-label="选择练习难度"><button data-level="0" aria-pressed="false">缓缓的小坡</button><button data-level="1" aria-pressed="true">有点弯的山路</button><button data-level="2" aria-pressed="false">更陡的一段</button></nav><p class="legend">今天换路，明天也可以再换。坡度不代表你是谁。</p>
-<section class="notebook"><h2 id="question" tabindex="-1">路标的下一块会是什么？</h2><div id="pattern" aria-label="路标规律"></div><div id="answers" class="answers" aria-label="尝试下一块路标"></div><div class="tools"><button id="show-hint">借一个提示</button><button id="easier">把这一步调小一点</button></div><p id="hint" hidden></p><p id="result" role="status" aria-live="polite">可以猜，也可以先观察。卡住的时候，允许自己换个办法。</p></section>
+<div class="mountains"><svg viewBox="0 0 780 200" role="img" aria-label="山谷里的小路，路边摆着一块块路标"><circle cx="645" cy="41" r="22" fill="#e0c582"/><path d="M0 190L141 96 293 190Z" fill="#b9cebd"/><path d="M184 190L388 51 552 190Z" fill="#92b1af"/><path d="M454 190L616 13 780 190Z" fill="#72949a"/><path d="M582 50l34-37 36 39-24-11-12 14-15-16Z" fill="#eaf1e8"/><g fill="none" stroke="#f1e2bd" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 10"><path d="M134 190Q212 170 155 148T141 102"/><path d="M382 190Q310 163 388 140T383 85L388 60"/><path d="M635 190Q560 170 616 144T612 108L616 58"/></g><path d="M0 190q175-12 290 1t490-2" fill="none" stroke="#a6bea9" stroke-width="5"/></svg></div>
+<p class="legend">先看眼前这一步。借提示、拆小步，或休息一下，都可以。</p>
+<section class="notebook"><h2 id="question" tabindex="-1">路标的下一块会是什么？</h2><div id="pattern" aria-label="路标规律"></div><div id="answers" class="answers" aria-label="尝试下一块路标"></div><div class="tools"><button id="show-hint">借一个提示</button><button id="easier">把这一步调小一点</button></div><p id="hint" hidden></p><p id="small-step" hidden></p><p id="result" role="status" aria-live="polite">可以猜，也可以先观察。卡住的时候，允许自己换个办法。</p></section>
 <aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>想把这次发现留下，可以在花园页面的反思框里写一句，再亲手保存。</small></aside>
+<details><summary>再想一步</summary><p>小熊在同一条路上换了一个约定：这次是“圆、圆、三角”一组。刚才的分组办法还能用吗？</p><div id="deeper-pattern" class="pattern" aria-label="新的路标约定"></div><div id="deeper-answers" class="answers"></div><p id="deeper-result" role="status" aria-live="polite"></p><p>一段有限的路标，也可以编出别的规则。说清你的约定，请同伴接下一块。</p></details>
 </main><script>
 (() => {
-  const age = new URLSearchParams(location.search).get('age'); const stage = age === '6-8' ? 0 : age === '12-15' ? 2 : 1;
-  const stories = ['小熊要给山路摆上小路标。一步太大时，可以换一条小路，也可以找个提示。','小熊在设计有规律的路标。有的很熟悉，有的要想一想。你可以改变坡度，看看哪里值得练一小步。','你在设计登山路线的数字标记。练习的难度可以调整；这一次的结果只能说明这一个任务，不能定义一个人。'];
-  const tasks = [
-    [{pattern:['○','○','○'],choices:['○','△'],answer:'○',hint:'每一块都是同一个形状。'}, {pattern:['○','△','○','△'],choices:['△','○','□'],answer:'○',hint:'把“圆、三角”当成一小组。下一组从哪里开始？'}, {pattern:['○','○','△','○','○'],choices:['○','□','△'],answer:'△',hint:'每小组是“圆、圆、三角”。最后一组还差谁？'}],
-    [{pattern:['2','4','6'],choices:['7','8','10'],answer:'8',hint:'从一块到下一块，每次加 2。'}, {pattern:['1','3','6','10'],choices:['12','14','15'],answer:'15',hint:'每次增加的数是 2、3、4。接下来会增加多少？'}, {pattern:['2','4','3','6','5'],choices:['7','10','9'],answer:'10',hint:'试着交替使用“乘 2”和“减 1”：2 → 4 → 3。'}],
-    [{pattern:['3','6','9','12'],choices:['14','15','18'],answer:'15',hint:'观察相邻两块之间的差。'}, {pattern:['2','3','5','9','17'],choices:['25','33','34'],answer:'33',hint:'相邻的差是 1、2、4、8。每个差又在怎样变化？'}, {pattern:['1','2','6','15','31'],choices:['47','56','62'],answer:'56',hint:'相邻的差是 1、4、9、16，它们是 1×1、2×2、3×3、4×4。'}]
-  ][stage];
-  const $ = id => document.getElementById(id); let level = 1;
-  $('story').textContent = stories[stage];
-  $('real-life').textContent = ['今天有哪件事有点难？你想把它变小一点，还是找人给个小提示？','刚才哪里太熟悉，哪里需要帮助？今天做自己的事时，你想怎样调一格？','刚才的线索让你发现了哪一个具体缺口？在真实任务里，什么帮助能让你先练这一小步？'][stage];
-  function render(message) {
-    const task = tasks[level]; $('pattern').replaceChildren(); $('answers').replaceChildren(); $('hint').hidden = true; $('reflection').hidden = true;
-    document.querySelectorAll('[data-level]').forEach(button => button.setAttribute('aria-pressed',String(Number(button.dataset.level) === level)));
-    for (const item of [...task.pattern,'?']) { const tile = document.createElement('span'); tile.className = 'tile'+(item === '?' ? ' blank' : ''); tile.textContent = item; $('pattern').append(tile); }
-    task.choices.forEach(choice => { const button = document.createElement('button'); button.textContent = choice; button.setAttribute('aria-label','试试 '+choice); button.addEventListener('click', () => {
-      if (choice === task.answer) { $('pattern').lastElementChild.textContent = choice; $('result').textContent = '这一块接上了这条规律。留意自己是直接看出来，还是借了什么办法。'+(stage === 2 ? '有限的路标也可能有别的延续规则；这里在练习提示里的这一条。' : ''); $('reflection').hidden = false; }
-      else { $('pattern').lastElementChild.textContent = '?'; $('result').textContent = '这块暂时接不上我们正在试的规律。可以看相邻的变化、借个提示，或把这一步调小。'; $('reflection').hidden = false; }
-    }); $('answers').append(button); });
-    $('result').textContent = message || '可以猜，也可以先观察。卡住的时候，允许自己换个办法。';
+  const $ = id => document.getElementById(id);
+  $('story').textContent = '小熊给山路摆路标：一个圆，一个三角。下一块放什么？看不出时，借个提示，或只看一小组。';
+  $('real-life').textContent = '今天哪件事让你卡住了？你想先看一个小步骤，借一点帮助，还是休息一下再来？';
+  function makePattern(container, answers, pattern, answer, prefix, result, optional = false) {
+    for (const item of [...pattern,'?']) {
+      const tile = document.createElement('span'); tile.className = 'tile'+(item === '?' ? ' blank' : ''); tile.textContent = item; $(container).append(tile);
+    }
+    for (const choice of ['○','△','□']) {
+      const button = document.createElement('button'); button.textContent = choice; button.setAttribute('aria-label',prefix+choice);
+      button.addEventListener('click', () => {
+        const matches = choice === answer;
+        $(container).lastElementChild.textContent = matches ? choice : '?';
+        $(result).textContent = matches
+          ? (optional ? '“圆、圆、三角”接成了一组。还是同一种分组办法，这次每组有三块。' : '“圆、三角”又开始一组了。留意刚才什么帮你看见了规律。')
+          : (optional ? '先看这次的约定：两个圆后面跟一个三角。最后一组还差谁？' : '先按“圆、三角”一组试试。可以借提示，或把眼前这一步拆小。');
+        if (!optional) $('reflection').hidden = false;
+      });
+      $(answers).append(button);
+    }
   }
-  document.querySelectorAll('[data-level]').forEach(button => button.addEventListener('click', () => { level = Number(button.dataset.level); render('换了一段坡度。这次只观察眼前这一步。'); }));
-  $('show-hint').addEventListener('click', () => { $('hint').hidden = false; $('hint').textContent = tasks[level].hint; $('result').textContent = '提示就在这里。借一点帮助，也是调整练习的方法。'; });
-  $('easier').addEventListener('click', () => { if (level > 0) { level--; render('这一步变小了。先试眼前的路标，再决定要不要继续。'); } else { $('hint').hidden = false; $('hint').textContent = tasks[level].hint; $('result').textContent = '已经在小坡上了。可以借提示，也可以先停下来，请人陪你一起看。'; } });
-  render();
+  makePattern('pattern','answers',['○','△','○','△'],'○','试试 ','result');
+  makePattern('deeper-pattern','deeper-answers',['○','○','△','○','○'],'△','新路标试试 ','deeper-result',true);
+  $('show-hint').addEventListener('click', () => {
+    $('hint').hidden = false; $('hint').textContent = '把“圆、三角”看成一小组。下一组从圆开始。';
+    $('result').textContent = '提示在这里。借一点帮助，也是照顾自己的练习。';
+  });
+  $('easier').addEventListener('click', () => {
+    $('small-step').hidden = false; $('small-step').textContent = '先只看前两块：○、△。再看第二组：○、△。现在只问：下一组的第一块是谁？';
+    $('pattern').querySelectorAll('.tile').forEach((tile,index) => { if (index < 4) tile.style.background = index < 2 ? '#d4e4db' : '#f1e5c6'; });
+    $('result').textContent = '同一条路标拆成了两小组。只试着开始下一组就好。';
+  });
 })();
 </script></body></html>

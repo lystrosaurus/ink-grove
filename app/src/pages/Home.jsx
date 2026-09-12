@@ -67,6 +67,21 @@ export default function Home() {
           <span className="hero-art-note">EVERY IDEA IS A SEED.</span>
         </div>
       </section>
+      <section className="seed-garden-invitation" aria-labelledby="seed-invitation-title">
+        <div className="seed-invitation-art" aria-hidden="true">
+          <span className="seed-invitation-sun" />
+          <Sprout size={38} strokeWidth={1.25} />
+          <span className="seed-invitation-ground" />
+        </div>
+        <div className="seed-invitation-copy">
+          <span className="eyebrow">SEED GROVE · 小小思考家</span>
+          <h2 id="seed-invitation-title">和孩子一起，让好奇心发芽</h2>
+          <p>从一个小故事、一次动手尝试开始。看看情绪，试试选择，把发现带回生活。</p>
+        </div>
+        <a className="seed-invitation-link" href="/seed">
+          走进 Seed Grove <ArrowUpRight size={17} aria-hidden="true" />
+        </a>
+      </section>
       <section className="featured-section">
         <div className="section-mini">
           <span className="eyebrow">THE EDITOR’S PICK</span>

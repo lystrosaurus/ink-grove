@@ -30,9 +30,84 @@ const event = (overrides = {}) => ({
   kind: 'discovery',
   note: '底座宽一点，积木就站稳了。',
   source: 'child',
-  age: '9-11',
   at: '2026-09-12T08:00:00.000Z',
   ...overrides,
+})
+
+const legacyGarden = () => ({
+  schemaVersion: 1,
+  product: 'seed-grove',
+  revision: 7,
+  age: '6-8',
+  events: [event({ age: '12-15' })],
+})
+
+test('a new garden and new exports have one experience without age fields', () => {
+  const garden = emptySeedGarden()
+  assert.deepEqual(garden, { schemaVersion: 2, product: 'seed-grove', revision: 0, events: [] })
+  assert.deepEqual(JSON.parse(exportSeedGarden(garden)), garden)
+})
+
+test('valid legacy records migrate in memory without changing the stored original', () => {
+  const original = JSON.stringify(legacyGarden())
+  const storage = store({ [SEED_STORAGE_KEY]: original })
+  const loaded = loadSeedGarden(storage)
+  assert.equal(loaded.warning, null)
+  assert.deepEqual(loaded.garden, {
+    schemaVersion: 2,
+    product: 'seed-grove',
+    revision: 7,
+    events: [event()],
+  })
+  assert.equal(storage.getItem(SEED_STORAGE_KEY), original)
+  assert.deepEqual(JSON.parse(exportSeedGarden(legacyGarden())), loaded.garden)
+  const saved = commitSeedGarden(storage, loaded, {
+    ...loaded.garden,
+    events: [...loaded.garden.events, event({ id: 'growth-new' })],
+  })
+  assert.equal(saved.saved, true)
+  assert.equal(saved.garden.revision, 8)
+  assert.deepEqual(saved.garden.events, [event(), event({ id: 'growth-new' })])
+  assert.equal(JSON.parse(storage.getItem(SEED_STORAGE_KEY)).schemaVersion, 2)
+})
+
+test('legacy migration retains original bytes after failed writes and retries without losing old records', () => {
+  const original = JSON.stringify(legacyGarden())
+  const storage = store({
+    [SEED_STORAGE_KEY]: original,
+    [SEED_STORAGE_KEY + ':recovery']: 'older protected data',
+  })
+  const current = loadSeedGarden(storage)
+  const write = storage.setItem
+  storage.setItem = () => {
+    throw new DOMException('full', 'QuotaExceededError')
+  }
+  const next = {
+    ...current.garden,
+    events: [...current.garden.events, event({ id: 'growth-new' })],
+  }
+  const failed = commitSeedGarden(storage, current, next)
+  assert.equal(failed.saved, false)
+  assert.equal(storage.getItem(SEED_STORAGE_KEY), original)
+  assert.deepEqual(failed.garden.events, [event()])
+  storage.setItem = write
+  const retried = commitSeedGarden(storage, failed, next)
+  assert.equal(retried.saved, true)
+  assert.equal(retried.garden.events.length, 2)
+  assert.equal(storage.getItem(SEED_STORAGE_KEY + ':recovery'), 'older protected data')
+})
+
+test('legacy migration validates the entire old contract before discarding age categorization', () => {
+  for (const value of [
+    { ...legacyGarden(), age: 'unknown' },
+    { ...legacyGarden(), age: undefined },
+    { ...legacyGarden(), events: [event({ age: 'unknown' })] },
+    { ...legacyGarden(), events: [event()] },
+    { ...legacyGarden(), events: [event({ age: '6-8', score: 100 })] },
+    { ...emptySeedGarden(), age: '9-11' },
+    { ...emptySeedGarden(), events: [event({ age: '9-11' })] },
+  ])
+    assert.throws(() => validateSeedGarden(value))
 })
 
 test('Seed backups round trip without reading or modifying the adult garden', () => {
@@ -49,7 +124,7 @@ test('Seed backups round trip without reading or modifying the adult garden', ()
   assert.equal(loadSeedGarden(storage).garden.events[0].note, '底座宽一点，积木就站稳了。')
 })
 
-test('failed storage writes never advance age or remove recorded discoveries', () => {
+test('failed storage writes never advance the revision or remove recorded discoveries', () => {
   const current = { ...emptySeedGarden(), events: [event()] }
   const raw = exportSeedGarden(current)
   const storage = store({ [SEED_STORAGE_KEY]: raw })
@@ -57,7 +132,7 @@ test('failed storage writes never advance age or remove recorded discoveries', (
   storage.setItem = () => {
     throw new DOMException('full', 'QuotaExceededError')
   }
-  const result = commitSeedGarden(storage, loaded, { ...emptySeedGarden(), age: '6-8' })
+  const result = commitSeedGarden(storage, loaded, emptySeedGarden())
   assert.equal(result.saved, false)
   assert.deepEqual(result.garden, current)
   assert.equal(storage.getItem(SEED_STORAGE_KEY), raw)
@@ -88,7 +163,10 @@ test('a stale tab cannot erase a discovery saved by another tab', () => {
   const tabA = loadSeedGarden(storage)
   const tabB = loadSeedGarden(storage)
   assert.equal(commitSeedGarden(storage, tabB, { ...tabB.garden, events: [event()] }).saved, true)
-  const result = commitSeedGarden(storage, tabA, { ...tabA.garden, age: '6-8' })
+  const result = commitSeedGarden(storage, tabA, {
+    ...tabA.garden,
+    events: [event({ id: 'growth-other' })],
+  })
   assert.equal(result.saved, false)
   assert.equal(result.conflict, true)
   assert.equal(loadSeedGarden(storage).garden.events.length, 1)
@@ -98,7 +176,7 @@ test('validation rejects adult backups, bad references, duplicate events and fab
   const bad = [
     { schemaVersion: 1, favorites: [], visits: {}, collections: [], artifacts: [] },
     { ...emptySeedGarden(), product: 'ink-grove' },
-    { ...emptySeedGarden(), schemaVersion: 2 },
+    { ...emptySeedGarden(), schemaVersion: 99 },
     { ...emptySeedGarden(), age: '3-5' },
     { ...emptySeedGarden(), revision: -1 },
     { ...emptySeedGarden(), events: [event({ seedId: 'adult-investing' })] },
@@ -113,20 +191,22 @@ test('validation rejects adult backups, bad references, duplicate events and fab
 })
 
 test('a growth event records the declared action without inferring skill attainment', () => {
-  const created = createGrowthEvent(
-    { questionId: 'q2', kind: 'real-life', note: '先问了朋友。', source: 'parent' },
-    '6-8',
-  )
+  const created = createGrowthEvent({
+    questionId: 'q2',
+    kind: 'real-life',
+    note: '先问了朋友。',
+    source: 'parent',
+  })
   assert.equal(created.seedId, '')
   assert.equal(created.questionId, 'q2')
   assert.equal(created.source, 'parent')
   assert.equal(created.kind, 'real-life')
-  assert.equal(created.age, '6-8')
+  assert.equal(Object.hasOwn(created, 'age'), false)
   assert.deepEqual(
     Object.keys(created).sort(),
-    ['age', 'at', 'id', 'kind', 'note', 'questionId', 'seedId', 'source'].sort(),
+    ['at', 'id', 'kind', 'note', 'questionId', 'seedId', 'source'].sort(),
   )
-  assert.throws(() => createGrowthEvent({ seedId: 'emotion-weather', kind: 'viewed' }, '9-11'))
+  assert.throws(() => createGrowthEvent({ seedId: 'emotion-weather', kind: 'viewed' }))
 })
 
 test('oversized imports and unavailable storage keep the current state intact', () => {

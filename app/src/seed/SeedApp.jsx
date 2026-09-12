@@ -7,11 +7,6 @@ import './seed.css'
 
 const seeds = catalog.seeds
 const layers = catalog.layers
-const ageNames = {
-  '6-8': '6–8 岁 · 一起发现',
-  '9-11': '9–11 岁 · 自己试试',
-  '12-15': '12–15 岁 · 多想一步',
-}
 const layerIcons = { 1: 'weather', 2: 'paths', 4: 'mountain', 5: 'flask' }
 const layerColors = { 1: 'green', 2: 'yellow', 4: 'blue', 5: 'orange' }
 const seedUrl = (seed) => `/seed/play/${encodeURIComponent(seed.slug)}`
@@ -361,7 +356,7 @@ function Home() {
             <br className="seed-mobile-break" />
             今天想去哪儿？<span className="seed-title-spark">✳</span>
           </h1>
-          <p>带上好奇心，种下一颗自己的小发现。</p>
+          <p>先试一试，想继续时再想一步。</p>
         </div>
         <span className="seed-hand-note">
           慢慢来，
@@ -556,18 +551,10 @@ function RecordForm({
 }
 
 function SeedDetail({ slug }) {
-  const { garden } = useSeed()
   const frameRef = useRef(null)
   const seed = seeds.find((item) => item.slug === slug)
   if (!seed) return <NotFound />
   const layer = layers.find((item) => Number(item.id) === seed.layer)
-  const artifact = {
-    ...seed,
-    artifact: {
-      ...seed.artifact,
-      src: `${seed.artifact.src}${seed.artifact.src.includes('?') ? '&' : '?'}age=${garden.age}`,
-    },
-  }
   return (
     <>
       <SeedLink className="seed-back" to={`/seed/layer/${seed.layer}`}>
@@ -587,19 +574,12 @@ function SeedDetail({ slug }) {
       </div>
       <div className="seed-reading-hint">
         <Icon name="book" />
-        <p>
-          {garden.age === '6-8'
-            ? '可以请大人陪你读。每次只试一小步就好。'
-            : garden.age === '12-15'
-              ? '带着自己的经验来试。也可以留意，换一种条件，结果是否会不同。'
-              : '读一个小故事，动手试一试，再带一个问题回到生活里。'}
-        </p>
-        <span>{ageNames[garden.age].split(' · ')[0]}</span>
+        <p>先试一试，想继续时再想一步。可以请大人陪着读，也可以随时停下来。</p>
       </div>
       <section className="seed-reader" aria-label={`${seed.title}互动作品`}>
         <ArtifactRenderer
-          key={`${seed.id}-${garden.age}`}
-          artifact={artifact}
+          key={seed.id}
+          artifact={seed}
           frameRef={frameRef}
           frameTitle={`${seed.title} · 思考小种子`}
         />
@@ -682,12 +662,11 @@ function ThinkHub() {
 }
 
 function ThinkDetail({ id }) {
-  const { garden } = useSeed()
   const [selected, setSelected] = useState(null)
   const [phase, setPhase] = useState('play')
+  const [deeper, setDeeper] = useState(false)
   const question = questionById[id]
   if (!question) return <NotFound />
-  const [scene, prompt] = question.ages[garden.age]
   return (
     <div className="seed-thinking-page">
       <SeedLink className="seed-back" to="/seed/think">
@@ -703,11 +682,11 @@ function ThinkDetail({ id }) {
       </PageIntro>
       {phase === 'play' ? (
         <section className={`seed-playground seed-color-${question.color}`}>
-          <span className="seed-eyebrow">一个小情境</span>
-          <p className="seed-scene">{scene}</p>
+          <span className="seed-eyebrow">一个小情境 · 先试一试</span>
+          <p className="seed-scene">{question.scene}</p>
           <div className="seed-game-question">
             <Icon name={question.icon} />
-            <h2>{prompt}</h2>
+            <h2>{question.prompt}</h2>
           </div>
           <div className="seed-choice-group" role="group" aria-label="试一试">
             {question.choices.map(([label], index) => (
@@ -731,14 +710,44 @@ function ThinkDetail({ id }) {
             </div>
           )}
           {selected !== null && (
-            <div className="seed-play-actions">
-              <button className="seed-text-button" onClick={() => setSelected(null)}>
-                换一个想法试试
-              </button>
-              <button className="seed-button" onClick={() => setPhase('life')}>
-                带回生活里 <Icon name="arrow" />
-              </button>
-            </div>
+            <>
+              <div className="seed-depth-invitation">
+                <span>想停在这里也可以</span>
+                <button
+                  className="seed-button seed-button-light"
+                  aria-expanded={deeper}
+                  aria-controls={`seed-deeper-${id}`}
+                  onClick={() => setDeeper((value) => !value)}
+                >
+                  <Icon name="spark" /> {deeper ? '收起这一步' : '再想一步'}
+                </button>
+              </div>
+              {deeper && (
+                <section
+                  id={`seed-deeper-${id}`}
+                  className="seed-deeper-question"
+                  aria-label="再想一步"
+                >
+                  <span className="seed-eyebrow">沿着刚才的发现</span>
+                  <h3>{question.deeper.prompt}</h3>
+                  <p>{question.deeper.invitation}</p>
+                </section>
+              )}
+              <div className="seed-play-actions">
+                <button
+                  className="seed-text-button"
+                  onClick={() => {
+                    setSelected(null)
+                    setDeeper(false)
+                  }}
+                >
+                  换一个想法试试
+                </button>
+                <button className="seed-button" onClick={() => setPhase('life')}>
+                  带回生活里 <Icon name="arrow" />
+                </button>
+              </div>
+            </>
           )}
         </section>
       ) : (
@@ -755,7 +764,7 @@ function ThinkDetail({ id }) {
         </section>
       )}
       <p className="seed-gentle-text">
-        可以换一个想法，也可以先停在这里。试一试的选择不会变成分数或成长记录。
+        先试一试，想继续时再想一步。只有你愿意记下的发现，才会成为一片小叶子。
       </p>
     </div>
   )
@@ -1036,10 +1045,7 @@ function ParentPage() {
           }}
         >
           <p>文件：{pendingImport.name}</p>
-          <p>
-            包含 {pendingImport.value.events.length}{' '}
-            条记录。替换成功后，将显示备份里的阅读年龄和记录。
-          </p>
+          <p>包含 {pendingImport.value.events.length} 条记录。替换成功后，将显示备份里的记录。</p>
           <p>建议先导出需要保留的本机记录。</p>
         </ConfirmDialog>
       )}
@@ -1057,7 +1063,7 @@ function ParentPage() {
           }}
         >
           <p>Seed Grove 的成长记录将清空。请先导出需要保留的记录。</p>
-          <p>阅读年龄将保留，Ink Grove 数据不受影响。</p>
+          <p>Ink Grove 数据不受影响。</p>
         </ConfirmDialog>
       )}
     </>
@@ -1078,7 +1084,7 @@ function NotFound() {
 }
 
 function SeedShell() {
-  const { garden, location, setAge, warning, notice } = useSeed()
+  const { location, warning, notice } = useSeed()
   const pathname = location.split('?')[0].replace(/\/$/, '') || '/seed'
   let content
   if (pathname === '/seed') content = <Home />
@@ -1137,20 +1143,6 @@ function SeedShell() {
             ))}
           </nav>
           <div className="seed-header-tools">
-            <label className="seed-age-select">
-              <span>阅读年龄</span>
-              <select
-                aria-label="阅读年龄"
-                value={garden.age}
-                onChange={(event) => setAge(event.target.value)}
-              >
-                {Object.entries(ageNames).map(([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
             <SeedLink
               className="seed-parent-link"
               to="/seed/parent"
@@ -1173,7 +1165,7 @@ function SeedShell() {
             {notice}
           </p>
         )}
-        <div key={`${pathname}:${garden.age}`}>{content}</div>
+        <div key={pathname}>{content}</div>
       </main>
       <footer className="seed-footer">
         <div>
