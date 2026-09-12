@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "seeds": [
+    {
+      "id": "emotion-weather"
+    },
+    {
+      "id": "attention-detective"
+    },
+    {
+      "id": "time-store"
+    },
+    {
+      "id": "just-right-challenge"
+    },
+    {
+      "id": "break-it-down"
+    },
+    {
+      "id": "mistakes-are-clues"
+    }
+  ],
+  "layers": [
+    {
+      "id": 1,
+      "name": "内心花园",
+      "goal": "看见自己",
+      "description": "天气、身体和小光点，陪你发现此刻的自己。",
+      "color": "#66866b"
+    },
+    {
+      "id": 2,
+      "name": "选择路口",
+      "goal": "做出选择",
+      "description": "每条路都有风景，也有这一次暂时告别的风景。",
+      "color": "#bf8c48"
+    },
+    {
+      "id": 4,
+      "name": "学习山谷",
+      "goal": "学会学习",
+      "description": "把山路拆成小步，试着找到适合此刻的坡度。",
+      "color": "#628a9a"
+    },
+    {
+      "id": 5,
+      "name": "反馈实验室",
+      "goal": "理解反馈",
+      "description": "试一试，看一看，让结果带来下一条线索。",
+      "color": "#a3796a"
+    }
+  ]
+}

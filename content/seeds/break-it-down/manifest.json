@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "break-it-down",
+  "slug": "break-it-down",
+  "title": "把大问题拆小",
+  "subtitle": "为一件大事找到第一小步",
+  "layer": 4,
+  "goal": "学会学习",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "planning-game",
+  "duration": 6,
+  "questions": [
+    "这个问题可以拆小一点吗？",
+    "哪一步现在就能开始？"
+  ],
+  "skills": [
+    "problem-solving",
+    "planning"
+  ],
+  "parentPrompt": "选一件孩子想做的大事，请孩子说一个五分钟内能开始的小动作，陪做这一步即可。",
+  "realLifePrompt": "今天哪件大事，可以拆出一个马上能开始的小动作？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/break-it-down/index.html"
+  },
+  "cover": "/seeds/break-it-down/cover.svg",
+  "related": [
+    "just-right-challenge",
+    "time-store"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}

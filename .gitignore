@@ -1,6 +1,7 @@
 node_modules/
 app/dist/
 app/public/artifacts/
+app/public/seeds/
 app/src/generated/
 test-results/
 playwright-report/

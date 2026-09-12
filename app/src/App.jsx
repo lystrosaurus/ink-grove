@@ -50,7 +50,7 @@ function initialState() {
   }
 }
 
-export default function App() {
+export default function App({ onReady } = {}) {
   const { preference, cycleTheme } = useTheme()
   const ThemeIcon = preference === 'dark' ? Moon : preference === 'system' ? Monitor : Sun
   const [location, setLocation] = useState(() => window.location.pathname + window.location.search)
@@ -113,6 +113,7 @@ export default function App() {
     window.addEventListener('keydown', key)
     window.addEventListener('storage', sync)
     window.addEventListener('beforeunload', beforeUnload)
+    onReady?.(() => setSearchOpen(true))
     return () => {
       window.removeEventListener('popstate', pop)
       window.removeEventListener('keydown', key)
@@ -337,6 +338,9 @@ export default function App() {
             <Link className="footer-journey" to="/journeys">
               探索旅程
             </Link>
+            <a className="footer-journey" href="/seed">
+              Seed Grove · 小小思考家
+            </a>
             <span className="footer-live">
               <i />
               一座持续生长的花园

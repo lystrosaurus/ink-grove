@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "mistakes-are-clues",
+  "slug": "mistakes-are-clues",
+  "title": "错误是线索",
+  "subtitle": "让一次结果带我们走到下一次",
+  "layer": 5,
+  "goal": "理解反馈",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "feedback-experiment",
+  "duration": 7,
+  "questions": [
+    "结果告诉了我什么？",
+    "下一次可以只改哪一点？"
+  ],
+  "skills": [
+    "feedback",
+    "observation",
+    "learning"
+  ],
+  "parentPrompt": "一起描述发生了什么，暂不评价孩子，试着问：“这次结果给了我们哪条线索？下一次只改哪一点？”",
+  "realLifePrompt": "今天有件事没按预想发生时，我想观察什么，再改哪一点？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/mistakes-are-clues/index.html"
+  },
+  "cover": "/seeds/mistakes-are-clues/cover.svg",
+  "related": [
+    "just-right-challenge",
+    "emotion-weather"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}

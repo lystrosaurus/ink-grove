@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "time-store",
+  "slug": "time-store",
+  "title": "每一个选择都有交换",
+  "subtitle": "把有限的时间交给在意的事",
+  "layer": 2,
+  "goal": "做出选择",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "choice-simulation",
+  "duration": 6,
+  "questions": [
+    "如果我选择这个，我会放弃什么？",
+    "这次我最在意什么？"
+  ],
+  "skills": [
+    "choice",
+    "tradeoffs"
+  ],
+  "parentPrompt": "和孩子安排一段自由时间，分别说出各自想保留的事，再一起看看需要暂时放下什么。",
+  "realLifePrompt": "今天的一段空闲时间，我愿意给什么，也愿意暂时放下什么？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/time-store/index.html"
+  },
+  "cover": "/seeds/time-store/cover.svg",
+  "related": [
+    "just-right-challenge",
+    "break-it-down"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}

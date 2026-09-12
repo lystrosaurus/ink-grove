@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "attention-detective",
+  "slug": "attention-detective",
+  "title": "注意力小侦探",
+  "subtitle": "给眼前的小任务腾一点地方",
+  "layer": 1,
+  "goal": "看见自己",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "observation-game",
+  "duration": 6,
+  "questions": [
+    "我的注意力去了哪里？",
+    "我能调整哪个小地方？"
+  ],
+  "skills": [
+    "attention-awareness",
+    "observation"
+  ],
+  "parentPrompt": "一起做一个小任务，问：“刚才什么把我们的注意力带走了？要不要换个环境试试？”",
+  "realLifePrompt": "下次想专心做一件事，我可以先移动桌上的什么？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/attention-detective/index.html"
+  },
+  "cover": "/seeds/attention-detective/cover.svg",
+  "related": [
+    "emotion-weather",
+    "break-it-down"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}

@@ -1,6 +1,6 @@
 # CloudBase 部署
 
-Ink Grove 以静态文件部署到现有 CloudBase 环境。上线后仍使用访问者浏览器的本地存储；没有账号、云同步、数据库或真实 AI 服务。本站不会把本地花园备份上传到云端。
+Ink Grove 与 Seed Grove 以同一份静态产物部署到现有 CloudBase 环境，分别从 `/` 与 `/seed` 进入。上线后仍使用访问者浏览器中各自独立的本地存储；没有账号、云同步、数据库或真实 AI 服务，花园备份和儿童输入不会上传到云端。
 
 ## 当前目标
 
@@ -35,9 +35,10 @@ npm run preview
 
 ```powershell
 node app/scripts/verify-production.mjs
+node app/scripts/verify-seed-production.mjs
 ```
 
-不传参数默认检查 `http://127.0.0.1:4173`。脚本也接受一个站点 URL，便于在发布后验收同一版本的线上作品。
+两个脚本不传参数均默认检查 `http://127.0.0.1:4173`，也接受站点根 URL。前者检查 Ink 的深链接、全部 HTML 正文和交互；后者检查 Seed 的四区、六个互动与三档实际内容、Think 8、记录保存及手机版。Seed 截图使用 `node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture` 生成。
 
 确认生产检查通过，再发布同一份 `app/dist`：
 
@@ -49,9 +50,10 @@ tcb hosting deploy app/dist -e ink-d0gvorjko99e99e4d --safe --verify
 
 ```powershell
 node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
+node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
 ```
 
-以上命令用于重复执行发布流程；本轮 CLI 校验和公网页面检查结果见 [发布验收记录](../artifacts/verification.json)。
+以上命令用于重复执行发布流程；1.2 的 CLI 校验和公网页面检查结果见 [两套体验发布验收](../artifacts/verification-1.2.json)，1.1 的历史记录保存在 [上一版验收](../artifacts/verification.json)。
 
 此命令只上传已构建产物，不重复安装或构建，不上传 `materials/`、设计文档、源码或本地花园数据。`--safe` 在覆盖前创建云端备份；`--verify` 检查本地产物与远端文件。入口 HTML 在资源文件上传完成后上传。发布失败时 CLI 尝试从备份恢复覆盖文件，并移除此轮新增文件。[CLI 静态托管文档](https://docs.cloudbase.net/cli-v1/hosting)提供参数和一致性发布说明。
 
@@ -63,9 +65,9 @@ node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.
 
 ## 路由与上线检查
 
-本站使用 History 路由，直接打开或刷新 `/explore`、`/artifact/:slug`、`/journeys/personal-growth` 必须进入应用。现有环境已能把这些地址返回为入口页面；`tcb hosting detail` 的错误文档为空，并不能单独证明回退失效，必须以公网响应和浏览器结果为准。
+本站使用 History 路由，直接打开或刷新 `/explore`、`/artifact/:slug`、`/journeys/personal-growth`，以及 `/seed`、`/seed/layer/:id`、`/seed/play/:slug`、`/seed/think/q2`、`/seed/parent` 必须进入对应体验。`tcb hosting detail` 的错误文档为空，并不能单独证明回退失效，必须以公网响应和浏览器结果为准。`/seeds/` 是作品静态资源前缀，不是 `/seed` 应用路由。
 
-现有环境对不存在的资源也会回退到入口 HTML。因此当前 CDN 的资源 404 语义不完整，不能仅凭 HTTP 200 判定作品或脚本已部署成功。上线检查应同时验证 HTML 作品正文、脚本内容类型与实际页面交互。后续配置自定义域名或精细路由时，应把回退限制在应用路由，令不存在的 `/assets/`、`/artifacts/` 资源返回 404。
+现有环境对不存在的资源也会回退到入口 HTML。因此当前 CDN 的资源 404 语义不完整，不能仅凭 HTTP 200 判定作品或脚本已部署成功。上线检查应同时验证 HTML 作品正文、脚本内容类型与实际页面交互。后续配置自定义域名或精细路由时，应把回退限制在应用路由，令不存在的 `/assets/`、`/artifacts/`、`/seeds/` 资源返回 404。
 
 每轮发布后：
 
@@ -73,6 +75,8 @@ node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.
 2. 直接打开并刷新探索页、作品页和旅程页；确认路由、筛选、作品内部交互正常。
 3. 验证本轮新增作品标题、正文和封面确实出现；HTML 仍在 `sandbox="allow-scripts"` iframe 中读取。
 4. 确认没有应用控制台错误，并保留 CLI 输出中的备份路径与校验结果。
+
+1.2 新增的 Seed 验收还包括：年龄切换后实际故事和任务变化；积木从倾倒到站立、时间分配与拆分步骤等真实互动；八张思考工具可操作；仅显式保存生成成长记录；手机地图不溢出；Seed 与 Ink 样式、备份独立。原有 31 件 Ink 作品仍需回归。
 
 1.1.0 的目录基准是 31 件作品、28 件 HTML、7 个集合、35 个概念，其中 27 件 HTML 来自 `materials/`，另有《清醒行动实验室》。追加的六件作品覆盖股东信、经济学、管理效能、价值投资与当下觉察；公网验收须包含它们，不能沿用扩容前的作品数量或产物清单。参考资料应先在父页显示目标域名，点击「打开参考资料」后再打开新页，不能通过增加 iframe 弹窗权限来适配线上环境。
 

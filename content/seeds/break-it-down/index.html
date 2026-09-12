@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>把大问题拆小 · Seed Grove</title>
+<style>
+  :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#3c555a;background:#f6f5ec;line-height:1.7}*{box-sizing:border-box}body{margin:0}main{max-width:860px;margin:auto;padding:30px 24px 42px}.kicker{font-size:12px;letter-spacing:.15em;color:#75827a}h1{font:500 clamp(29px,5vw,43px) Georgia,"Songti SC",serif;margin:10px 0}header{max-width:640px}#story{margin:12px 0 24px}.big-rock{max-width:590px;background:#dce5e0;border:2px solid #92aaa2;border-radius:39% 29% 24% 31%;padding:35px 25px;text-align:center;margin:25px auto;box-shadow:8px 9px 0 #e5e6d9}.big-rock span{font-size:12px;color:#71867f}.big-rock strong{display:block;font-size:23px;font-weight:500;margin:10px}.big-rock.open{border-style:dashed;background:#eef0e5;padding:18px 25px;border-radius:20px}.big-rock.open strong{font-size:20px}.start{text-align:center}.path-board{margin:25px auto;background:repeating-linear-gradient(0deg,#fffdf4,#fffdf4 30px,#ebeee3 31px,#ebeee3 32px);border:1px solid #c9d2c2;border-radius:12px 18px 9px 17px;padding:22px 24px}.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.step{text-align:left;background:#eef1e5;border:1px solid #b3c4ae;padding:14px}.step span{display:block;font-size:12px;color:#718271;margin-top:5px}.step[aria-pressed=true]{background:#d8e4d5;border:2px solid #74916f;padding:13px}.step[aria-disabled=true]{border-style:dashed}.path{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}.pebble{display:grid;place-items:center;min-width:43px;min-height:43px;padding:7px 11px;background:#9fb8a1;border:1px solid #6f8a78;border-radius:50% 40% 47% 43%;color:#fff;font-size:14px}.arrow{color:#a8b7a8}button{font:inherit;color:inherit;min-height:48px;padding:10px 18px;border:1px solid #a8bab0;background:#fffdf4;border-radius:13px 9px 14px 11px;cursor:pointer}button:hover{background:#e2ecdf}button:focus-visible{outline:3px solid #a68240;outline-offset:4px}.primary{background:#5b7c72;color:#fff}.primary:hover{background:#49685f}h2{font-size:21px;margin:0 0 16px}#result{min-height:85px;padding:15px 0;margin:0}.tools{display:flex;gap:10px;flex-wrap:wrap}.small-step{padding:14px 18px;background:#f0e9d3;border-left:3px solid #c1aa6f;border-radius:0 12px 12px 0;margin:15px 0}.reflection{padding:20px 22px;background:#e7ece0;border-radius:15px}.reflection small{color:#768373}.note{font-size:12px;color:#7a877d}[hidden]{display:none!important}@media(max-width:500px){main{padding:20px 15px}.steps{grid-template-columns:1fr;gap:9px}.path-board{padding:18px 15px}.big-rock{padding:23px 18px}.big-rock strong{font-size:21px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body><main>
+<header><p class="kicker">学习山谷 / 大石头旁的小路</p><h1>把大问题拆小</h1><p id="story"></p></header>
+<div id="rock" class="big-rock"><span>眼前的一件大事</span><strong id="goal"></strong></div><div id="start" class="start"><button id="split" class="primary">把大问题拆小</button></div>
+<section id="board" class="path-board" hidden><h2 id="question" tabindex="-1">哪一个小动作可以先开始？</h2><div id="steps" class="steps"></div><div id="path" class="path" aria-label="你排出的小步计划"></div><div class="tools"><button id="smaller">把下一步再缩小一点</button><button id="undo" hidden>拿回最后一步</button></div><p id="small-step" class="small-step" hidden></p><p class="note">这里排的是一份小计划。现实中的尝试，留给你自己决定。</p></section>
+<p id="result" role="status" aria-live="polite">一件事看起来很大时，可以先找一个手能动起来的小动作。</p>
+<aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>可以在花园页面的反思框里写下自己的第一小步，再亲手保存。</small><p><button id="again">换个顺序试试</button></p></aside>
+</main><script>
+(() => {
+  const age = new URLSearchParams(location.search).get('age'); const stage = age === '6-8' ? 0 : age === '12-15' ? 2 : 1;
+  const settings = [
+    {story:'小熊想画画，可桌上挤满了彩笔和纸。“把桌子收好”像一块大石头，先挪动一小块试试。',goal:'收好画画的小桌子',tasks:[['把彩笔放进笔筒',[],'先拿起一支彩笔。'],['把画纸叠到一边',[],'先找到一张画纸，放到桌角。'],['擦出一块画画的地方',[0,1],'先拿一块可以擦桌子的布。']],life:'今天你想做的一件大事，能拆出一个用手就能开始的小动作吗？'},
+    {story:'观察站要办一场小小种子展。小熊一直在想“我要把展览做好”，却不知道从哪里开始。有些步骤可以交换，有些需要等前一步。',goal:'办一次小小种子观察展',tasks:[['选一颗想观察的种子',[],'先看看手边有哪些种子，暂时选一颗。'],['画下种子的外形',[0],'先画一个外轮廓，不必一次画完整。'],['写一句亲眼看到的特点',[0],'先说出一个颜色或形状，再把它写下来。'],['把图和文字摆到展示卡上',[1,2],'先拿一张空白卡，试摆一幅图。']],life:'你自己的大任务里，哪两步可以交换，哪一步需要先等一等？今天准备从哪个小动作开始？'},
+    {story:'你想比较不同光照下幼苗的变化。“做一个完整研究”很大；拆出可执行动作，还需要看清哪些步骤互相依赖。这个小模型只练习安排步骤。',goal:'准备一份植物光照观察计划',tasks:[['确定这次只比较光照',[],'先写一句：这次想观察光照和什么变化的关系。'],['准备相同的花盆与同种种子',[],'先列出一对需要保持一致的材料。'],['安排一处有光、一处背光的位置',[0,1],'先在纸上标出两个准备观察的位置。'],['约定同一时段、同一方式记录',[2],'先画一行包含日期和高度的记录格。'],['约定根据记录再决定调整',[3],'先约定观察几天，再回看记录，而不是看到一次变化就改。']],life:'你正在做的一个项目，最小可行动的一步是什么？哪条依赖关系会影响后面的安排？'}
+  ][stage];
+  const $ = id => document.getElementById(id); const order = [];
+  $('story').textContent = settings.story; $('goal').textContent = settings.goal; $('real-life').textContent = settings.life;
+  function render() {
+    $('steps').replaceChildren(); $('path').replaceChildren(); $('small-step').hidden = true;
+    settings.tasks.forEach(([label,needs],index) => {
+      const done = order.includes(index); const ready = needs.every(id => order.includes(id)); const button = document.createElement('button'); button.className = 'step'; button.setAttribute('aria-pressed',String(done)); button.setAttribute('aria-disabled',String(done || !ready)); button.textContent = label;
+      const note = document.createElement('span'); note.textContent = done ? '已放进计划 · 第 '+(order.indexOf(index)+1)+' 步' : ready ? '可以放进计划' : '需要等前面的小步'; button.append(note);
+      button.addEventListener('click', () => {
+        if (done) { $('result').textContent = '这一步已经放进计划了。想调整顺序，可以拿回最后一步。'; return; }
+        if (!ready) { $('result').textContent = '这一步要先等：“'+needs.filter(id => !order.includes(id)).map(id => settings.tasks[id][0]).join('”、“')+'”。先让这些小步有地方落脚。'; return; }
+        order.push(index); render();
+        const complete = order.length === settings.tasks.length;
+        $('result').textContent = complete ? '小路排出来了。第一步是“'+settings.tasks[order[0]][0]+'”。计划可以在尝试后调整，不需要一次想得完美。' : '“'+label+'”放进了计划。有了它，再看看下一小步是否能开始。';
+        $('reflection').hidden = !complete; $('question').textContent = complete ? '一条可以试着走的小路' : '现在，哪个小动作可以接上？';
+      }); $('steps').append(button);
+    });
+    order.forEach((index,position) => { if (position) { const arrow = document.createElement('span'); arrow.className = 'arrow'; arrow.textContent = '→'; arrow.setAttribute('aria-hidden','true'); $('path').append(arrow); } const pebble = document.createElement('span'); pebble.className = 'pebble'; pebble.textContent = String(position+1); pebble.setAttribute('aria-label','第 '+(position+1)+' 步：'+settings.tasks[index][0]); $('path').append(pebble); });
+    $('undo').hidden = !order.length; $('smaller').hidden = order.length === settings.tasks.length;
+  }
+  $('split').addEventListener('click', () => { $('start').hidden = true; $('rock').classList.add('open'); $('board').hidden = false; render(); $('question').focus(); $('result').textContent = '大事拆成了几个看得见的小动作。点一个小动作，把它放到计划里。'; });
+  $('smaller').addEventListener('click', () => { const next = settings.tasks.findIndex(([,needs],index) => !order.includes(index) && needs.every(id => order.includes(id))); if (next < 0) return; $('small-step').hidden = false; $('small-step').textContent = '把“'+settings.tasks[next][0]+'”再缩小：'+settings.tasks[next][2]; $('result').textContent = '小到可以开始，就已经有用。之后再决定下一步。'; });
+  $('undo').addEventListener('click', () => { const index = order.pop(); render(); $('reflection').hidden = true; $('question').textContent = '现在，哪个小动作可以接上？'; $('result').textContent = '拿回了“'+settings.tasks[index][0]+'”。前面的安排保留着，你可以试试另一种顺序。'; });
+  $('again').addEventListener('click', () => { order.length = 0; render(); $('reflection').hidden = true; $('question').textContent = '哪一个小动作可以先开始？'; $('result').textContent = '计划清空了。看看有没有另一种同样可行的小路。'; $('question').focus(); });
+})();
+</script></body></html>

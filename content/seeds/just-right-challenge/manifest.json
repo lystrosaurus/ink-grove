@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "just-right-challenge",
+  "slug": "just-right-challenge",
+  "title": "刚刚好的难",
+  "subtitle": "试一小步，换一条适合此刻的路",
+  "layer": 4,
+  "goal": "学会学习",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "pattern-experiment",
+  "duration": 7,
+  "questions": [
+    "哪里是我还不会的一小步？",
+    "我想调整难度还是借一点帮助？"
+  ],
+  "skills": [
+    "learning",
+    "strategy",
+    "reflection"
+  ],
+  "parentPrompt": "当孩子说“太难了”，问：“是哪里卡住了？我们可以拆一小步，还是加一个提示？”",
+  "realLifePrompt": "今天遇到一件太难或太容易的事，我能怎样调一格？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/just-right-challenge/index.html"
+  },
+  "cover": "/seeds/just-right-challenge/cover.svg",
+  "related": [
+    "break-it-down",
+    "mistakes-are-clues"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}

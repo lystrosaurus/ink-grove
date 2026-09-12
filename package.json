@@ -1,7 +1,7 @@
 {
   "name": "ink-grove",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "npm --prefix app run dev",
@@ -9,6 +9,6 @@
     "preview": "npm --prefix app run preview",
     "test": "npm --prefix app test",
     "test:e2e": "npm --prefix app run test:e2e",
-    "content": "node scripts/build-content.mjs"
+    "content": "node scripts/build-all.mjs"
   }
 }

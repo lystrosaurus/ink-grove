@@ -1,3 +1,5 @@
+import { readStoredJson, preserveStoredData, writeStoredJson } from '../core/storage.js'
+
 export const STORAGE_KEY = 'ink-grove:garden:v1'
 
 const CONTENT_BYTES = 2 * 1024 * 1024
@@ -225,17 +227,11 @@ export function validateGarden(value, { catalogIds = [] } = {}) {
 
 export function loadGarden(storage) {
   try {
-    if (!storage || typeof storage.getItem !== 'function') fail('浏览器存储暂不可用。')
-    const raw = storage.getItem(STORAGE_KEY)
-    if (raw === null || raw === undefined) return { garden: emptyGarden(), warning: null }
-    if (
-      typeof raw !== 'string' ||
-      raw.length > BACKUP_BYTES ||
-      encoder.encode(raw).byteLength > BACKUP_BYTES
-    ) {
-      fail('保存的数据过大，无法读取。')
-    }
-    return { garden: validateGarden(JSON.parse(raw)), warning: null }
+    const { value } = readStoredJson(storage, STORAGE_KEY, {
+      maxBytes: BACKUP_BYTES,
+      validate: validateGarden,
+    })
+    return { garden: value ?? emptyGarden(), warning: null }
   } catch (error) {
     const detail = error instanceof SyntaxError ? '数据格式损坏。' : error?.message
     return {
@@ -248,8 +244,7 @@ export function loadGarden(storage) {
 export function saveGarden(storage, garden) {
   try {
     const payload = exportGarden(garden)
-    if (!storage || typeof storage.setItem !== 'function') fail('浏览器存储暂不可用。')
-    storage.setItem(STORAGE_KEY, payload)
+    writeStoredJson(storage, STORAGE_KEY, payload)
     return null
   } catch (error) {
     if (error?.name === 'QuotaExceededError' || error?.code === 22 || error?.code === 1014) {
@@ -268,23 +263,7 @@ export function commitGarden(
   const failed = (warning) => ({ garden: atomic ? current : next, warning, saved: false })
   if (preserveUnreadable) {
     try {
-      if (
-        !storage ||
-        typeof storage.getItem !== 'function' ||
-        typeof storage.setItem !== 'function'
-      ) {
-        fail('浏览器存储暂不可用。')
-      }
-      const original = storage.getItem(STORAGE_KEY)
-      if (original !== null && original !== undefined) {
-        if (typeof original !== 'string') fail('原始数据格式异常。')
-        const recoveryKey = `${STORAGE_KEY}:recovery`
-        const recovery = storage.getItem(recoveryKey)
-        if (recovery !== null && recovery !== undefined && recovery !== original) {
-          fail('已有另一份恢复备份，请先导出并处理原始数据后再保存。')
-        }
-        if (recovery === null || recovery === undefined) storage.setItem(recoveryKey, original)
-      }
+      preserveStoredData(storage, STORAGE_KEY)
     } catch (error) {
       return failed(
         `未能备份原始数据，已停止覆盖保存。${error?.message || '请先导出备份并检查浏览器存储空间。'}`,

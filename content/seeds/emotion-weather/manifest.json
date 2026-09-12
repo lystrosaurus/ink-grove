@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "emotion-weather",
+  "slug": "emotion-weather",
+  "title": "我的情绪天气",
+  "subtitle": "让感受有地方停一停",
+  "layer": 1,
+  "goal": "看见自己",
+  "age": [
+    "6-8",
+    "9-11",
+    "12-15"
+  ],
+  "type": "interactive-story",
+  "duration": 5,
+  "questions": [
+    "我现在是什么感觉？",
+    "我的身体在提醒什么？"
+  ],
+  "skills": [
+    "emotion-awareness",
+    "reflection"
+  ],
+  "parentPrompt": "先听孩子描述感受，再问：“你希望我陪着，还是帮你想一个小办法？”",
+  "realLifePrompt": "今天情绪来的时候，我想先留意身体的哪个变化？",
+  "artifact": {
+    "renderer": "html",
+    "src": "/seeds/emotion-weather/index.html"
+  },
+  "cover": "/seeds/emotion-weather/cover.svg",
+  "related": [
+    "attention-detective",
+    "mistakes-are-clues"
+  ],
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "file:docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md"
+    ],
+    "derivedFrom": []
+  }
+}
