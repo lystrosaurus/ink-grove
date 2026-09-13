@@ -1,0 +1,65 @@
+[
+  {
+    "id": "methods-with-boundaries",
+    "kind": "new",
+    "summary": "围绕主张、可结算预测、不可逆后果与价值分歧组织十份作品，保留模型使用条件",
+    "changes": [
+      "围绕真实问题对读来源作品，明确原创情境与推论",
+      "独立视觉、可操作情境与明确的适用边界",
+      "提供返回各书来源的关联"
+    ],
+    "sources": [
+      {
+        "title": "Good Judgment：可结算的问题与预测问题组",
+        "url": "https://goodjudgment.com/question_clusters/"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-situation]",
+      "action": "切换预测、不可逆承诺等四个问题",
+      "expected": "分别显示结算条件、损失边界、迁移或价值协商提示"
+    }
+  },
+  {
+    "id": "a-life-that-fits",
+    "kind": "new",
+    "summary": "对读效率、心流、技能、意义与时间有限性，避免把所有生活都解释为能力投资",
+    "changes": [
+      "围绕真实问题对读来源作品，明确原创情境与推论",
+      "独立视觉、可操作情境与明确的适用边界",
+      "提供返回各书来源的关联"
+    ],
+    "sources": [
+      {
+        "title": "Oliver Burkeman：Four Thousand Weeks",
+        "url": "https://www.oliverburkeman.com/fourthousandweeks"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-promise]",
+      "action": "选择25、20、45分钟，再取消45分钟项",
+      "expected": "提示超出30分钟，取消后留下15分钟，时间条同步"
+    }
+  },
+  {
+    "id": "shared-ground",
+    "kind": "new",
+    "summary": "用共享工作桌原创案例连接系统、制度、设计、沟通与战略，突出受影响者和规则可修改性",
+    "changes": [
+      "围绕真实问题对读来源作品，明确原创情境与推论",
+      "独立视觉、可操作情境与明确的适用边界",
+      "提供返回各书来源的关联"
+    ],
+    "sources": [
+      {
+        "title": "Elinor Ostrom：Beyond Markets and States 诺奖演讲",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-rule]",
+      "action": "切换先到、预约、自由三条规则",
+      "expected": "显示晚班参与者、例外申请、维护成本等不同遗漏"
+    }
+  }
+]

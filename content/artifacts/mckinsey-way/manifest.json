@@ -53,9 +53,11 @@
   "featured": false,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/the_mckinsey_way_single_page.html"
+      "file:materials/the_mckinsey_way_single_page.html",
+      "https://www.mheducation.com/highered/mhp/product/mckinsey-way.html",
+      "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
     ],
     "derivedFrom": []
   }

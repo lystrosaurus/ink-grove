@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { spawnSync } from 'node:child_process'
 import { readFile, readdir } from 'node:fs/promises'
 import { resolve } from 'node:path'
@@ -68,24 +69,40 @@ test('duplicate ids, broken connections and nonlocal resources are rejected', as
   }
 })
 
-test('build preserves the original material bytes for unchanged presentation copies', async () => {
-  const sources = {
-    'cognitive-awakening': 'materials/cognitive_awakening_editorial.html',
-    'seven-habits': 'materials/seven_habits_core_map.html',
-    'deliberate-practice': 'materials/deliberate_practice_lab_style.html',
-    'deliberate-practice-modern': 'materials/deliberate_practice_modern.html',
-    'naval-almanack': 'materials/naval_almanack_black_gold.html',
-    'personal-growth-os': 'materials/integrated_thinking_personal_os.html',
-    'thinking-framework': 'materials/thinking-framework-core-map.html',
-  }
-  for (const [id, name] of Object.entries(sources)) {
-    const [source, copy] = await Promise.all([
-      readFile(resolve(workspace, name)),
-      readFile(resolve(workspace, 'content/artifacts', id, 'index.html')),
-    ])
-    assert.deepEqual(copy, source, `${id} must retain the complete original document`)
+test('editorial revisions preserve every user original against the pre-edit release hashes', async () => {
+  const integrity = JSON.parse(
+    await readFile(resolve(workspace, 'content/source-integrity.json'), 'utf8'),
+  )
+  const previous = JSON.parse(
+    await readFile(resolve(workspace, 'artifacts/verification-1.3.json'), 'utf8'),
+  )
+  assert.deepEqual(
+    integrity.files,
+    previous.protectedFiles,
+    'baseline hashes must not follow edited files',
+  )
+  for (const file of integrity.files) {
+    const bytes = await readFile(resolve(workspace, file.path))
+    assert.equal(
+      createHash('sha256').update(bytes).digest('hex').toUpperCase(),
+      file.sha256,
+      file.path,
+    )
   }
 })
+
+async function editorialRecords() {
+  const files = (await readdir(resolve(workspace, 'content/reviews'))).filter((name) =>
+    name.endsWith('.json'),
+  )
+  return (
+    await Promise.all(
+      files.map(async (name) =>
+        JSON.parse(await readFile(resolve(workspace, 'content/reviews', name), 'utf8')),
+      ),
+    )
+  ).flat()
+}
 
 test('every HTML material is indexed with a portable source path and preserved unless an edit is recorded', async () => {
   const catalog = JSON.parse(await readFile(resolve(workspace, 'content/catalog.json'), 'utf8'))
@@ -94,13 +111,7 @@ test('every HTML material is indexed with a portable source path and preserved u
     .map((name) => `materials/${name}`)
     .sort()
   const indexed = []
-  const edited = new Set([
-    'thinking-in-systems',
-    'intellectual-atlas',
-    'cybernetics',
-    'managerial-judgment',
-    'intelligent-investor',
-  ])
+  const records = await editorialRecords()
   const editorial = await readFile(resolve(workspace, 'content/EDITORIAL.md'), 'utf8')
   for (const entry of catalog.artifacts) {
     const manifest = JSON.parse(
@@ -114,20 +125,39 @@ test('every HTML material is indexed with a portable source path and preserved u
         'ai',
         `${entry.id} needs an original or explicit AI provenance`,
       )
-      assert.ok(
-        manifest.provenance.derivedFrom.length >= 2,
-        `${entry.id} needs actual synthesis sources`,
-      )
+      if (manifest.artifactType === 'book') {
+        const sources = manifest.provenance.sources.filter((source) => /^https:\/\//.test(source))
+        assert.ok(
+          new Set(sources).size >= 2,
+          `${entry.id} needs public research sources for its book interpretation`,
+        )
+      } else {
+        assert.ok(
+          manifest.provenance.derivedFrom.length >= 2,
+          `${entry.id} needs actual synthesis sources`,
+        )
+        for (const id of manifest.provenance.derivedFrom) {
+          assert.ok(catalog.artifacts.some((artifact) => artifact.id === id))
+          assert.ok(manifest.provenance.sources.includes(`artifact:${id}`))
+        }
+      }
       continue
     }
     assert.match(source, /^materials\/[^/]+\.html$/, `${entry.id} needs a portable material path`)
     indexed.push(source)
-    if (!edited.has(entry.id)) {
-      assert.deepEqual(
-        await readFile(resolve(workspace, source)),
-        await readFile(resolve(workspace, 'content/artifacts', entry.id, 'index.html')),
+    const [original, copy] = await Promise.all([
+      readFile(resolve(workspace, source)),
+      readFile(resolve(workspace, 'content/artifacts', entry.id, 'index.html')),
+    ])
+    if (!original.equals(copy)) {
+      const record = records.find((item) => item.id === entry.id)
+      assert.equal(record?.kind, 'revised', `${entry.id} needs an explicit revision record`)
+      assert.ok(record.changes.length >= 2, `${entry.id} needs concrete editorial reasons`)
+      assert.equal(
+        manifest.provenance.generatedBy,
+        'hybrid',
+        `${entry.id} must retain human and AI participation`,
       )
-    } else {
       assert.ok(
         editorial.includes(`content/artifacts/${entry.id}/index.html`),
         `${entry.id} needs a documented editorial change`,
@@ -135,6 +165,31 @@ test('every HTML material is indexed with a portable source path and preserved u
     }
   }
   assert.deepEqual(indexed.sort(), originals, 'every material HTML needs exactly one catalog entry')
+})
+
+test('the editorial inventory accounts for each published work and every work has a reading route', async () => {
+  const catalog = JSON.parse(await readFile(resolve(workspace, 'content/catalog.json'), 'utf8'))
+  const seedCatalog = JSON.parse(
+    await readFile(resolve(workspace, 'content/seed-catalog.json'), 'utf8'),
+  )
+  const records = await editorialRecords()
+  assert.equal(
+    new Set(records.map((item) => item.id)).size,
+    records.length,
+    'each work has one editorial record',
+  )
+  for (const item of [...catalog.artifacts, ...seedCatalog.seeds]) {
+    assert.ok(
+      records.some((record) => record.id === item.id && record.summary && record.changes.length),
+      `${item.id} needs its actual editorial review`,
+    )
+  }
+  for (const item of catalog.artifacts) {
+    assert.ok(
+      catalog.collections.some((collection) => collection.artifactIds.includes(item.id)),
+      `${item.id} is missing from the reading routes`,
+    )
+  }
 })
 
 test('HTML presentation removes unresolved citation tokens while preserving real references and interactions', async () => {

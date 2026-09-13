@@ -53,7 +53,9 @@
   "createdAt": "2026-09-11",
   "provenance": {
     "generatedBy": "ai",
-    "sources": [],
+    "sources": [
+      "https://www.retrievalpractice.org/feedback/"
+    ],
     "derivedFrom": [
       "cognitive-awakening",
       "deliberate-practice"

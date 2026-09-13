@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "asking-right-questions",
+  "slug": "asking-right-questions",
+  "title": "学会提问",
+  "subtitle": "把一项建议拆成结论、证据与尚未证明的桥梁",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "M. Neil Browne / Stuart M. Keeley",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "主动阅读",
+    "假设验证",
+    "信息质量"
+  ],
+  "visualStyle": "annotated-argument-desk",
+  "related": [
+    "how-to-read-a-book",
+    "mindware",
+    "managerial-judgment"
+  ],
+  "connections": [
+    {
+      "target": "how-to-read-a-book",
+      "type": "extends",
+      "concept": "active-reading",
+      "label": "把分析阅读推进到每一项论证的支持关系"
+    },
+    {
+      "target": "mindware",
+      "type": "supports",
+      "concept": "causal-reasoning",
+      "label": "用替代解释检验相关与因果"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "judgment",
+      "label": "把隐含假设带进决策复核"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/asking-right-questions/index.html"
+  },
+  "cover": "/artifacts/asking-right-questions/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731",
+      "https://www.bgsu.edu/content/dam/BGSU/honors-college/documents/dr-neil-browne.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

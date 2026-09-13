@@ -1,0 +1,99 @@
+.image-reader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #edf1e7;
+  color: #3a513d;
+}
+.reader-shell .image-reader {
+  padding-top: 72px;
+}
+.image-reader .image-controls {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px 4px;
+}
+.image-reader .image-controls button {
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #bccbb2;
+  border-radius: 6px;
+  background: #fafbf5;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.image-reader .image-controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.image-reader .image-controls button:focus-visible {
+  outline: 2px solid #345b38;
+  outline-offset: 2px;
+}
+.image-reader .image-controls output {
+  min-width: 48px;
+  text-align: center;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.image-reader .image-scroll-hint {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 4px 16px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+.image-reader .image-artifact {
+  display: block;
+  flex: 1 1 0;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 0 24px 24px;
+}
+.image-reader .image-artifact:focus-visible {
+  outline: 2px solid #345b38;
+  outline-offset: -3px;
+}
+.image-reader .image-canvas {
+  min-width: 100%;
+}
+.image-reader .image-artifact img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  box-shadow: 0 5px 30px #36461c12;
+}
+.focus-mode .image-reader {
+  padding-top: 8px;
+}
+.focus-mode .image-reader .image-artifact {
+  padding: 0;
+}
+.image-reader.preview-image {
+  height: 100%;
+  padding-top: 0;
+}
+.seed-reader .image-reader {
+  height: min(790px, 87vh);
+  min-height: 560px;
+}
+@media (max-width: 600px) {
+  .image-reader .image-artifact {
+    padding: 0 0 12px;
+  }
+}

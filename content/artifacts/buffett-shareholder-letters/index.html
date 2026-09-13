@@ -234,6 +234,7 @@ h1{
   .section-head{flex-direction:column;align-items:flex-start}
   .topbar,.footer{flex-direction:column}
 }
+.edition-note{margin-top:26px;padding:22px;border:1px solid var(--line);border-left:4px solid var(--gold,var(--wine,var(--deep)));line-height:1.8;text-align:left}.edition-note h3{font-size:22px;margin:0 0 12px}.edition-note p{font-size:15px;margin:12px 0;max-width:960px}.edition-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.edition-note label{display:block;font-size:15px;margin:14px 0 8px}.edition-note button,.edition-note select,.edition-note input{font:inherit;padding:10px;max-width:100%;color:inherit;background:transparent;border:1px solid currentColor;border-radius:4px}.edition-note select{background:var(--paper,#171612)}.edition-note button{cursor:pointer;min-height:44px;margin:10px 8px 0 0}.edition-note output{display:block;padding:16px;border:1px solid var(--line);margin-top:16px;font-size:16px}.edition-note :focus-visible{outline:3px solid var(--gold,var(--wine,var(--deep)));outline-offset:3px}.edition-sources{margin:20px 0;font-size:14px}.edition-sources a{color:inherit;overflow-wrap:anywhere}.edition-note strong{font-weight:800}@media(max-width:600px){.edition-note{padding:18px 14px}.edition-note input,.edition-note select{width:100%}}
 </style>
 </head>
 <body>
@@ -256,7 +257,7 @@ h1{
     </div>
     <div class="hero-note">
       <b>把公司当成生意，把股票当成所有权，把管理者当成资本配置者。</b>
-      <span>第 4 版保留原有架构与哲学，同时加入更新年份的伯克希尔股东信内容。中文版由机械工业出版社 2018 年出版，杨天南译。citeturn754668search2turn754668search3turn754668search4</span>
+      <span>本页保留原稿的第 4 版书目身份；章节结构核对英文第 4 版出版方目录，历史实例核对伯克希尔公开股东信，不声称复现某一中译版章节。</span>
     </div>
   </div>
 
@@ -276,7 +277,7 @@ h1{
       <div class="kicker">01 · OWNER MINDSET</div>
       <h2>整本书的第一原则：像所有者，而不是像交易者</h2>
     </div>
-    <p>英文版开篇就把 “Owner-Related Business Principles” 放在公司治理部分最前面；整本书都围绕这种所有者导向展开。citeturn754668search33</p>
+    <p>英文第 4 版把 “Owner-Related Business Principles” 单列为序篇，位于第一章公司治理之前。它为后续主题提供所有者视角，不属于公司治理章内的小节。章节归属见<a href="https://cap-press.com/pdf/9781611637588.pdf" target="_blank" rel="noopener noreferrer">出版方公开目录</a>。</p>
   </div>
 
   <div class="owner">
@@ -287,7 +288,7 @@ h1{
     </div>
 
     <div class="owner-grid">
-      <div class="owner-rule"><div class="tag">LONG TERM</div><b>长期持有</b><p>减少交易摩擦，让优秀企业和资本配置长期复利。</p></div>
+      <div class="owner-rule"><div class="tag">LONG TERM</div><b>长期持有</b><p>降低无依据的交易频率，同时复核业务、治理和估值；长期持有不保证企业持续优秀。</p></div>
       <div class="owner-rule"><div class="tag">PARTNERSHIP</div><b>股东是合伙人</b><p>管理者应以共同所有者的方式对待股东，而不是把他们当短期资金提供者。</p></div>
       <div class="owner-rule"><div class="tag">TRANSPARENCY</div><b>诚实沟通</b><p>坏消息和好消息都应被清晰说明，不用会计或公关掩盖现实。</p></div>
       <div class="owner-rule"><div class="tag">ECONOMICS</div><b>经济实质优先</b><p>会计数字重要，但最终要回到真实现金创造能力与资本回报。</p></div>
@@ -305,12 +306,14 @@ h1{
   </div>
 
   <div class="capital">
-    <div class="cap-card"><div class="id">OPTION 01</div><h3>再投资业务</h3><p>如果内部项目能够产生有吸引力的长期回报，利润应继续留在业务中复利。</p></div>
+    <div class="cap-card"><div class="id">OPTION 01</div><h3>再投资业务</h3><p>比较新增投入的长期经济回报、风险与替代用途；历史高回报不能证明新项目同样有效。</p></div>
     <div class="cap-card"><div class="id">OPTION 02</div><h3>收购企业</h3><p>找到经济性优秀、管理可信且价格合理的完整企业。</p></div>
     <div class="cap-card"><div class="id">OPTION 03</div><h3>购买证券</h3><p>当部分所有权比完整收购更有吸引力时，普通股也是资本配置工具。</p></div>
-    <div class="cap-card"><div class="id">OPTION 04</div><h3>回购股票</h3><p>只有当价格低于内在价值时，回购才真正提高持续股东的每股价值。</p></div>
+    <div class="cap-card"><div class="id">OPTION 04</div><h3>回购股票</h3><p>回购需低于审慎估计的内在价值，并保留偿债和经营余量；只看每股收益上升会漏掉高价和负债成本。</p></div>
     <div class="cap-card"><div class="id">OPTION 05</div><h3>分红</h3><p>当企业无法以足够高的回报继续使用资本，应把资本交还所有者。</p></div>
   </div>
+
+<aside class="edition-note"><h3>历史反例：改善成本，为何没有改善行业回报</h3><p>1985 年股东信回顾纺织业务关闭：单个设备项目似乎能降低成本，但竞争者也进行类似投入，成本下降转成行业降价，追加资本没有带来原来想象的优势。这里的错误不只是执行差，而是忽视竞争回应。<a href="https://www.berkshirehathaway.com/letters/1985.html">伯克希尔 1985 年原信</a></p><p>本站的延伸检查：项目评估不要只写“我们的成本能下降多少”，还要写“若同行都做同一件事，客户价格、产能与回报会怎样”。资本配置也包含员工与社区后果，不能把关闭业务简化成一道无人的回报率算术题。</p></aside>
 </section>
 
 <section class="section">
@@ -319,7 +322,7 @@ h1{
       <div class="kicker">03 · MARKET VS BUSINESS</div>
       <h2>市场先生提供报价，公司本身创造价值</h2>
     </div>
-    <p>第 4 版的财务与投资部分明确包含 Mr. Market、“Value” Investing、Intelligent Investing 等主题。citeturn754668search33</p>
+    <p>第 4 版的财务与投资部分明确包含 Mr. Market、“Value” Investing、Intelligent Investing 等主题。</p>
   </div>
 
   <div class="market">
@@ -332,7 +335,7 @@ h1{
       <div class="market-rule"><b>价格 ≠ 价值</b><span>报价是别人今天愿意成交的数字，不是企业价值本身。</span></div>
       <div class="market-rule"><b>价值投资不是一个类别</b><span>如果不关心价值，投资这个词本身就失去意义。</span></div>
       <div class="market-rule"><b>降低交易频率</b><span>交易成本与行为错误都会侵蚀长期复利。</span></div>
-      <div class="market-rule"><b>等待高确定性机会</b><span>巴菲特式纪律允许长时间不行动，把资本留给赔率明显有利的机会。</span></div>
+      <div class="market-rule"><b>等待能够解释的机会</b><span>不行动也要检查机会成本。所谓有利必须来自可核查假设，不能把自信误认成确定性。</span></div>
     </div>
   </div>
 </section>
@@ -343,7 +346,7 @@ h1{
       <div class="kicker">04 · ACQUISITION FILTER</div>
       <h2>并购不是“做大”，而是购买未来现金流</h2>
     </div>
-    <p>英文版专门用一大部分讨论 mergers and acquisitions，包括错误动机、高价收购、合理回购、杠杆收购和稳健收购政策。citeturn754668search33</p>
+    <p>英文版专门用一大部分讨论 mergers and acquisitions，包括错误动机、高价收购、合理回购、杠杆收购和稳健收购政策。</p>
   </div>
 
   <div class="acq">
@@ -374,7 +377,7 @@ h1{
       <div class="kicker">05 · ACCOUNTING → ECONOMICS</div>
       <h2>会计是起点，不是终点</h2>
     </div>
-    <p>第 4 版目录专门包含 Look-Through Earnings、Economic Goodwill、Owner Earnings，以及 Intrinsic Value / Book Value / Market Price 等主题。citeturn754668search33</p>
+    <p>第 4 版目录专门包含 Look-Through Earnings、Economic Goodwill、Owner Earnings，以及 Intrinsic Value / Book Value / Market Price 等主题。</p>
   </div>
 
   <div class="accounting">
@@ -384,7 +387,7 @@ h1{
       <div class="bridge-flow">
         <div class="bridge-node"><b>会计利润</b><span>按照会计准则呈现的报告数字。</span></div>
         <div class="arrow">→</div>
-        <div class="bridge-node"><b>经济调整</b><span>资本开支、非现金项目、商誉、未分配利润等重新理解。</span></div>
+        <div class="bridge-node"><b>经济调整</b><span>区分非现金费用、维持竞争地位的投入与营运资本需求；每项调整都要写清理由。</span></div>
         <div class="arrow">→</div>
         <div class="bridge-node"><b>所有者收益</b><span>更接近企业长期可供所有者支配的真实经济收益。</span></div>
       </div>
@@ -401,6 +404,8 @@ h1{
       </div>
     </div>
   </div>
+
+<aside class="edition-note"><h3>所有者收益桥：最难的是被减去的部分</h3><p>1986 年原信把报告收益加回部分非现金费用，再扣除维持竞争地位与业务量所需的平均资本开支；必要的营运资本增加也应考虑。巴菲特明确承认维持投入需要估计，不能把“净利润＋折旧”直接当作自由支配的钱。<a href="https://www.berkshirehathaway.com/letters/1986.html">1986 年原信附录</a></p><p>本站虚构示意，单位相同：报告收益 100＋非现金费用 30−维持投入−营运资本增加 10。其他条件固定，只改变最容易被低估的维持投入。</p><label for="maintenance-cost">估计维持投入（0—200）</label><input id="maintenance-cost" type="number" min="0" max="200" value="50"><button id="owner-calculate">重算收益桥</button><output id="owner-result" aria-live="polite">示意所有者收益 70。数字用于检查假设，不是公司估值或交易建议。</output><p>若利润看起来稳定，而设备、渠道或营运资金持续消耗现金，模型需要重做。这里也没有自动分清维持与增长投入；真正分析时应回到业务和报表附注，保留估计区间。</p></aside>
 </section>
 
 <section class="section">
@@ -409,7 +414,7 @@ h1{
       <div class="kicker">06 · CORPORATE GOVERNANCE</div>
       <h2>好公司治理：让代理人真正像所有者一样思考</h2>
     </div>
-    <p>第 4 版第一部分即为 Corporate Governance，并涵盖 owner-related principles、董事与管理者、关闭工厂、企业慈善和高管薪酬。citeturn754668search33</p>
+    <p>英文第 4 版第一章为 Corporate Governance，目录列有充分而公允的披露、董事与管理者、业务变化、社会约定、企业慈善、高管薪酬、风险与声誉监督、企业文化。所有者相关经营原则另列在此前的序篇。</p>
   </div>
 
   <div class="governance">
@@ -424,21 +429,21 @@ h1{
   <div class="section-head">
     <div>
       <div class="kicker">07 · FOURTH EDITION MAP</div>
-      <h2>第 4 版的知识结构</h2>
+      <h2>英文第 4 版：序篇与九章</h2>
     </div>
-    <p>中文版目录将材料重新组织成九大主题章；第 4 版相较前三版保持原架构和哲学，同时加入较新的年度股东信内容。citeturn754668search1turn754668search2turn754668search5</p>
+    <p>以下按出版方公开的 2015 年英文第 4 版目录排列；中文章名为本站译写，不代表特定中译版目录。九章之前另有“所有者相关经营原则”序篇（书内第 27 页）。</p>
   </div>
 
   <div class="toc">
-    <div class="toc-card"><div class="id">CH 01</div><h3>公司治理</h3><p>所有者原则、董事会、管理者、慈善与薪酬。</p></div>
+    <div class="toc-card"><div class="id">CH 01</div><h3>公司治理</h3><p>信息披露、董事与管理者、企业慈善、薪酬、风险监督与文化。</p></div>
     <div class="toc-card"><div class="id">CH 02</div><h3>财务与投资</h3><p>市场先生、价值投资、套利、机构惯性与投资纪律。</p></div>
     <div class="toc-card"><div class="id">CH 03</div><h3>投资替代品</h3><p>讨论不同证券与投资工具的经济属性。</p></div>
     <div class="toc-card"><div class="id">CH 04</div><h3>普通股投资</h3><p>交易成本、股东结构、分红政策与股东策略。</p></div>
     <div class="toc-card"><div class="id">CH 05</div><h3>兼并与收购</h3><p>并购动机、价格、回购、杠杆收购与出售企业。</p></div>
     <div class="toc-card"><div class="id">CH 06</div><h3>估值与会计</h3><p>所有者收益、经济商誉、账面价值、市场价格与内在价值。</p></div>
     <div class="toc-card"><div class="id">CH 07</div><h3>会计诡计</h3><p>识别报表中可能遮蔽经济现实的处理方式。</p></div>
-    <div class="toc-card"><div class="id">CH 08</div><h3>会计政策</h3><p>理解规则变化怎样影响报告，但不应改变经济实质判断。</p></div>
-    <div class="toc-card"><div class="id">CH 09</div><h3>税务问题</h3><p>税务同样属于资本配置与所有者回报的一部分。</p></div>
+    <div class="toc-card"><div class="id">CH 08</div><h3>税务</h3><p>Taxation：企业税负的分担，以及税务与投资哲学。</p></div>
+    <div class="toc-card"><div class="id">CH 09</div><h3>伯克希尔五十年及未来</h3><p>Berkshire at Fifty and Beyond：企业集团与接班、芒格谈伯克希尔体系，以及“玛土撒拉的遗产”。</p></div>
   </div>
 </section>
 
@@ -457,6 +462,8 @@ h1{
     <div class="q"><div class="n">Q04</div><b>价格合理吗？</b><span>优秀企业也需要面对价格；价值判断不能被公司质量完全取代。</span></div>
     <div class="q"><div class="n">Q05</div><b>十年后还愿意拥有吗？</b><span>如果不看明天的报价，你是否仍愿意作为长期所有者持有？</span></div>
   </div>
+
+<aside class="edition-note"><h3>留下一页可以复核的所有者笔记</h3><p>选取一份历史年报，把“管理层说了什么”“报表支持什么”“什么仍需估计”分三列。至少给一个关键假设写反证和复查日期。若只记录支持长期持有的理由，这套所有者语言也可能成为拖延承认错误的工具。</p></aside>
 </section>
 
 <section class="section">
@@ -469,7 +476,7 @@ h1{
 
     <div class="final-side">
       <div class="final-card"><b>① Think like an owner</b><span>股票首先是企业所有权。</span></div>
-      <div class="final-card"><b>② Allocate capital rationally</b><span>每一美元都应该流向预期回报最高的用途。</span></div>
+      <div class="final-card"><b>② Allocate capital rationally</b><span>在风险、流动性和责任约束下比较资本的可行用途。</span></div>
       <div class="final-card"><b>③ Accounting is language</b><span>数字是理解经济现实的工具，不是现实本身。</span></div>
       <div class="final-card"><b>④ Price still matters</b><span>优秀企业与优秀投资之间仍然隔着购买价格。</span></div>
       <div class="final-card"><b>⑤ Let compounding work</b><span>减少不必要动作，让企业与资本长期复利。</span></div>
@@ -477,6 +484,7 @@ h1{
   </div>
 </section>
 
+<aside class="edition-note edition-sources"><h3>本次深化的公开依据</h3><p>原视觉稿保留，相关章节由人与 AI 共同编辑。公开原书观点、历史资料与本站原创例子在邻近段落中区分；互动为本站设计，不代表原书原有工具。</p><ul><li><a href="https://www.berkshirehathaway.com/letters/1985.html" target="_blank" rel="noopener noreferrer">Berkshire Hathaway：1985 年股东信，纺织业务关闭</a></li><li><a href="https://www.berkshirehathaway.com/letters/1986.html" target="_blank" rel="noopener noreferrer">Berkshire Hathaway：1986 年股东信，所有者收益附录</a></li><li><a href="https://cap-press.com/pdf/9781611637588.pdf" target="_blank" rel="noopener noreferrer">Carolina Academic Press：英文第 4 版扉页与目录（PDF 第 5、6、9、10 页）</a></li></ul></aside>
 <footer class="footer">
   <span>WARREN E. BUFFETT · EDITED BY LAWRENCE A. CUNNINGHAM · 4TH EDITION</span>
   <span>
@@ -486,5 +494,6 @@ h1{
 
 </main>
 </div>
+<script>document.querySelector('#owner-calculate').addEventListener('click',()=>{const field=document.querySelector('#maintenance-cost'),n=Number(field.value);document.querySelector('#owner-result').textContent=field.value.trim()===''||!Number.isFinite(n)||n<0||n>200?'请输入0—200之间的维持投入。':'示意所有者收益 '+(120-n)+'。维持投入越高，可支配收益越少；这仍是依赖假设的示意。';});</script>
 </body>
 </html>

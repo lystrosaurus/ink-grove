@@ -59,9 +59,11 @@
   "featured": false,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/1_percent_rule_single_page.html"
+      "file:materials/1_percent_rule_single_page.html",
+      "https://tomconnellan.com/tomconnellanbooks.html",
+      "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674"
     ],
     "derivedFrom": []
   }

@@ -11,6 +11,7 @@
 ## 内容与权威来源
 
 - `materials/*.html` 与用户提供的 `docs/design/` 文档保留原文、原字节。HTML 默认直接复制原稿；必要修复仅修改内容副本，在 [内容编辑记录](content/EDITORIAL.md) 记下差异与理由并验证行为。原创 Seed 可采用故事、游戏、实验或思考卡，不强制套用成人作品形式。
+- 1.4 内容深化后的发布源已有逐件审稿记录，见 `content/reviews/`；原稿校验基线在 `content/source-integrity.json`，不能随展示副本更新。后续编辑应修改既有审稿记录或补充明确记录，并同步 `content/EDITORIAL.md`。书籍解读优先核对作者、出版方及原始研究，区分公开信息可支持的范围、本站原创案例和跨书推论；不声称仅凭简介完成全书精读，不把教学模型、修辞比喻或传记个案当成普遍规律。
 - 单件元数据分别以 `content/artifacts/<id>/manifest.json`、`content/seeds/<id>/manifest.json` 为准；对应的 `content/catalog.json`、`content/seed-catalog.json` 管理各自索引与组织信息。构建重新读取 manifest，不只修改索引里重复的作品字段。
 - 新内容使用稳定且唯一的 id/slug，补齐 Renderer、本地资源、封面、主题／能力与来源，加入所属索引；Seed 另补思考问题和家长提示，不新增年龄元数据或年龄版本。关系必须有明确含义且指向实际存在的内容，派生关系须有真实来源。AI 原创在 provenance 标明 `generatedBy: "ai"`，人与 AI 共同创作按实际参与标为 `hybrid`，保留真实依据，不能因概念相似虚构成人书派生来源。
 - `app/src/generated/`、`app/public/artifacts/`、`app/public/seeds/` 和 `app/dist/` 是生成目录，不手动编辑或提交；用 `npm run content` 或 `npm run build` 重建。阅读桥注入、引用占位标记清理等展示适配只作用于构建输出，范围明确且有测试，不借此改写正文或视觉。

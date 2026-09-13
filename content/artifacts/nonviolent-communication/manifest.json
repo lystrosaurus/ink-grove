@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "nonviolent-communication",
+  "slug": "nonviolent-communication",
+  "title": "非暴力沟通",
+  "subtitle": "听见“不”之后，对话才真正接受检验",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Marshall B. Rosenberg",
+  "topics": [
+    "设计",
+    "沟通"
+  ],
+  "concepts": [
+    "主动选择",
+    "反馈",
+    "责任与意义"
+  ],
+  "visualStyle": "rose-dialogue-listening-room",
+  "related": [
+    "seven-habits",
+    "fifth-discipline"
+  ],
+  "connections": [
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "把先理解再表达落实为具体对话"
+    },
+    {
+      "target": "fifth-discipline",
+      "type": "related",
+      "concept": "feedback",
+      "label": "让团队对话显露假设并容纳不同声音"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/nonviolent-communication/index.html"
+  },
+  "cover": "/artifacts/nonviolent-communication/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://nonviolentcommunication.com/product/nvc/",
+      "https://www.nonviolentcommunication.com/bookshare/4_components_of_NVC_4_rev_6.20.19.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

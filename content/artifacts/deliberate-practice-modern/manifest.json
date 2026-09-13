@@ -46,9 +46,11 @@
   "featured": false,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/deliberate_practice_modern.html"
+      "file:materials/deliberate_practice_modern.html",
+      "https://www.penguin.co.uk/books/421170/peak-by-anders-ericsson/9780099598473",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745/"
     ],
     "derivedFrom": []
   }

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "emotion-weather",
+    "kind": "revised",
+    "summary": "说明情绪天气只是隐喻，不把身体信号固定配对",
+    "changes": [
+      "说明情绪天气只是隐喻，不把身体信号固定配对",
+      "为事实/猜想辨认提供可实际说出口的核实问题",
+      "家长提示避免替孩子命名或纠正感受"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "attention-detective",
+    "kind": "revised",
+    "summary": "将找到目标推进为指出判断特征",
+    "changes": [
+      "将找到目标推进为指出判断特征",
+      "增加观察框遗漏与任务改变的反例",
+      "明确环境调整的效果需要孩子自己观察"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "time-store",
+    "kind": "revised",
+    "summary": "澄清票面时长是游戏约定，现实可协商且有转换成本",
+    "changes": [
+      "澄清票面时长是游戏约定，现实可协商且有转换成本",
+      "将机会成本指向最看重的未选替代，避免累加所有放弃项",
+      "保留空白与休息的价值"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "just-right-challenge",
+    "kind": "revised",
+    "summary": "把看见答案推进为解释分组与核对共同约定",
+    "changes": [
+      "把看见答案推进为解释分组与核对共同约定",
+      "强调局部练习结果不能定义能力或要求硬撑",
+      "提示与家长话语支持真实选择"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "break-it-down",
+    "kind": "revised",
+    "summary": "区分计划约定与真实依赖，允许草稿先试摆",
+    "changes": [
+      "区分计划约定与真实依赖，允许草稿先试摆",
+      "增加工具准备与他人支持的漏项检查",
+      "明确排计划与实际完成不同"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "mistakes-are-clues",
+    "kind": "revised",
+    "summary": "揭示确定性教学模型边界，避免误读为物理规律",
+    "changes": [
+      "揭示确定性教学模型边界，避免误读为物理规律",
+      "结果变化后提示现实重复观察",
+      "将日志标题与只保留最近4条的真实行为对齐"
+    ],
+    "sources": [],
+    "interaction": null
+  }
+]

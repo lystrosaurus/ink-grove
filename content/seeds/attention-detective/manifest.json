@@ -16,7 +16,7 @@
     "attention-awareness",
     "observation"
   ],
-  "parentPrompt": "一起做一个小任务，问：“刚才什么把我们的注意力带走了？要不要换个环境试试？”",
+  "parentPrompt": "先问孩子这次在找什么，再请他指一个符合条件的特征。收起干扰不一定对每个人都有同样效果；也一起看看观察框遗漏了什么。",
   "realLifePrompt": "下次想专心做一件事，我可以先移动桌上的什么？",
   "artifact": {
     "renderer": "html",

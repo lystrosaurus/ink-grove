@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "shared-ground",
+  "slug": "shared-ground",
+  "title": "从自己的花园，到共同的花园",
+  "subtitle": "把系统、设计与沟通放回真实的参与者、规则和维护",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove · AI 辅助创作",
+  "topics": [
+    "系统",
+    "合作",
+    "设计"
+  ],
+  "concepts": [
+    "系统思维",
+    "制度与权力",
+    "激励机制",
+    "反馈",
+    "责任与意义"
+  ],
+  "visualStyle": "civic-garden-rulebook",
+  "related": [
+    "thinking-in-systems",
+    "governing-commons",
+    "fifth-discipline",
+    "economic-way-of-thinking",
+    "nonviolent-communication",
+    "design-everyday-things",
+    "non-designers-design-book",
+    "nudge",
+    "good-strategy-bad-strategy",
+    "complexity-guided-tour",
+    "pyramid-principle"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "synthesizes",
+      "concept": "systems-thinking",
+      "label": "把共享工作桌的占用、等待与退出作为待检验的回路"
+    },
+    {
+      "target": "governing-commons",
+      "type": "synthesizes",
+      "concept": "institutional-power",
+      "label": "围绕参与、维护、争议与修改权讨论共同资源规则"
+    },
+    {
+      "target": "fifth-discipline",
+      "type": "synthesizes",
+      "concept": "feedback",
+      "label": "让不同成员的观察进入共同学习与规则修正"
+    },
+    {
+      "target": "economic-way-of-thinking",
+      "type": "synthesizes",
+      "concept": "incentives",
+      "label": "检查有限资源、激励与被隐藏的维护成本"
+    },
+    {
+      "target": "nonviolent-communication",
+      "type": "synthesizes",
+      "concept": "active-choice",
+      "label": "听见具体需要，也承认礼貌不能代替公平的权限"
+    },
+    {
+      "target": "design-everyday-things",
+      "type": "synthesizes",
+      "concept": "feedback",
+      "label": "让第一次使用者看懂操作线索及预约后的反馈"
+    },
+    {
+      "target": "non-designers-design-book",
+      "type": "synthesizes",
+      "concept": "information-quality",
+      "label": "用视觉层级呈现占用状态，仍需真实使用检验"
+    },
+    {
+      "target": "nudge",
+      "type": "synthesizes",
+      "concept": "active-choice",
+      "label": "说明默认分配服务谁、是否透明并容易退出"
+    },
+    {
+      "target": "good-strategy-bad-strategy",
+      "type": "synthesizes",
+      "concept": "structured-problem-solving",
+      "label": "让宣传与容量围绕同一个关键困难协调"
+    },
+    {
+      "target": "complexity-guided-tour",
+      "type": "synthesizes",
+      "concept": "systems-thinking",
+      "label": "观察局部规则的相互作用，不把画出的箭头当已证实因果"
+    },
+    {
+      "target": "pyramid-principle",
+      "type": "synthesizes",
+      "concept": "structured-problem-solving",
+      "label": "把待决定事项写清楚，但不让清楚表达替代证据"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/shared-ground/index.html"
+  },
+  "cover": "/artifacts/shared-ground/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "artifact:thinking-in-systems",
+      "artifact:governing-commons",
+      "artifact:fifth-discipline",
+      "artifact:economic-way-of-thinking",
+      "artifact:nonviolent-communication",
+      "artifact:design-everyday-things",
+      "artifact:non-designers-design-book",
+      "artifact:nudge",
+      "artifact:good-strategy-bad-strategy",
+      "artifact:complexity-guided-tour",
+      "artifact:pyramid-principle",
+      "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
+    ],
+    "derivedFrom": [
+      "thinking-in-systems",
+      "governing-commons",
+      "fifth-discipline",
+      "economic-way-of-thinking",
+      "nonviolent-communication",
+      "design-everyday-things",
+      "non-designers-design-book",
+      "nudge",
+      "good-strategy-bad-strategy",
+      "complexity-guided-tour",
+      "pyramid-principle"
+    ]
+  }
+}

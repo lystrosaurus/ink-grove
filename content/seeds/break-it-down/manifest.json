@@ -16,7 +16,7 @@
     "problem-solving",
     "planning"
   ],
-  "parentPrompt": "选一件孩子想做的大事，请孩子说一个五分钟内能开始的小动作，陪做这一步即可。",
+  "parentPrompt": "让孩子说出第一小步实际要动什么、需要什么。区分真实依赖与可修改的安排；排完计划不等于做完事情，亲手尝试后允许重排。",
   "realLifePrompt": "今天哪件大事，可以拆出一个马上能开始的小动作？",
   "artifact": {
     "renderer": "html",

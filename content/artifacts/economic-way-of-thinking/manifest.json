@@ -60,9 +60,12 @@
   "featured": false,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/economic_way_of_thinking_13_lens_lab.html"
+      "file:materials/economic_way_of_thinking_13_lens_lab.html",
+      "https://www.pearson.com/en-ca/subject-catalog/p/economic-way-of-thinking-the/P200000005920/9780132992589",
+      "https://www.pearson.de/media/muster/ext/9781292053608.pdf",
+      "https://www.pearson.de/media/muster/toc/toc_9781292053608.pdf"
     ],
     "derivedFrom": []
   }

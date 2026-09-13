@@ -1,0 +1,2481 @@
+{
+  "version": "1.4.0",
+  "checkedAt": "2026-09-13T05:05:35.666Z",
+  "previousCommit": "d36d44c1cb5e65e598692668e5c92bc1dde5be2e",
+  "previousVerification": "artifacts/verification-1.3.json",
+  "scope": "逐份深化原有成人与 Seed 内容；基于公开原始资料为推荐清单23本书创作独立作品；新增3篇贯通文章，整理阅读路线并改善图片与深色阅读体验。",
+  "sourceFilesUnchanged": 32,
+  "protectedFiles": [
+    {
+      "sha256": "F9AC8BCDFB240965D05B35DF801C2600F2EC41F3F741A815C8C5286E404CE083",
+      "path": "materials/1_percent_rule_single_page.html"
+    },
+    {
+      "sha256": "07EA9C55635E3A698BDB784210479744786B4DF791915AF8038599458C421BFC",
+      "path": "materials/12_rules_for_life_single_page.html"
+    },
+    {
+      "sha256": "E090E59871EBDAE6224239927D2AC872312945E1CEB037294721C927556CDDE0",
+      "path": "materials/cognitive_awakening_editorial.html"
+    },
+    {
+      "sha256": "DAB18DCE891CBFC4153367CB5FEC8195BD3BD057A5708896E7D790ACD975E8C8",
+      "path": "materials/cognitive_awakening_inner_os_single_page.html"
+    },
+    {
+      "sha256": "8246DF6FA9704E41C12819B8CBEB008317D5FBD03111842A5C4E6931ADFFC039",
+      "path": "materials/cybernetics_control_console.html"
+    },
+    {
+      "sha256": "938929E13FBF0A7E5F036C16AD2108E6B0AE532FC8D641EE1BECF997EC4702F6",
+      "path": "materials/deliberate_practice_lab_style.html"
+    },
+    {
+      "sha256": "5964006E114A9338756BD963297EA821F7F4CA904CC1AF37B275F565BF09A5B9",
+      "path": "materials/deliberate_practice_modern.html"
+    },
+    {
+      "sha256": "E49077EEE73316A5B02CD1EB97F46A46B146CD2750C83F8AC5A14268F0BB80DF",
+      "path": "materials/great_mental_models_single_page.html"
+    },
+    {
+      "sha256": "269CAFE479824F5DE71BB17B323DF31A95820D6A4E672F1E481A574F0764E8E7",
+      "path": "materials/how_to_read_a_book_single_page.html"
+    },
+    {
+      "sha256": "857A7B3F91C4178C8CB1D2873263D3ACBAD4B18B8493F3F39C7C36FD78FF2BB3",
+      "path": "materials/innovators_dilemma_single_page.html"
+    },
+    {
+      "sha256": "6C1BD88D275B6947F01A5211C07C10E7A1C81F718D44DF109BBAD703527391CA",
+      "path": "materials/integrated_thinking_intellectual_atlas.html"
+    },
+    {
+      "sha256": "AAAFDC26D96ED245E09AD83A34758D5D5B4C9B04269F7335AFE281758011403E",
+      "path": "materials/integrated_thinking_personal_os.html"
+    },
+    {
+      "sha256": "77626B54CA31F39CA7ED8E901AFE56B23F876B2A4EA53594BC193885691F6779",
+      "path": "materials/judgment_in_managerial_decision_making.html"
+    },
+    {
+      "sha256": "16F28DCB4E6D2173A61F95CDA6CE6454B6521418F31FD1108CE65DFAA4E0D276",
+      "path": "materials/mindware_logic_thinking_single_page.html"
+    },
+    {
+      "sha256": "3A9D74CD807D2E3C65486EDBD22184408DC9D3E0A70146065468EBF4989FBE10",
+      "path": "materials/naval_almanack_black_gold.html"
+    },
+    {
+      "sha256": "F6C7BC5D414C76FA707E3FF7FE3CD3F2BD50076838352D7BAD58A0F9B82A1CD4",
+      "path": "materials/poor_charlies_almanack_decision_room.html"
+    },
+    {
+      "sha256": "16A5530582FEF8D54B6986630FB593E8EDF92AAA3E3EB64DD77548C1475BABC9",
+      "path": "materials/rockefeller_wealth_myth_archive.html"
+    },
+    {
+      "sha256": "6CBCB812664E904AC4CA413AA34A265B45898CE2833BFD20928E957D5C986892",
+      "path": "materials/seven_habits_core_map.html"
+    },
+    {
+      "sha256": "C6169D009493FA809B38938C2116F0D50E7091742272D169F151CD1BB351D797",
+      "path": "materials/the_mckinsey_way_single_page.html"
+    },
+    {
+      "sha256": "A77CEC281F5A185CBA750432D6601C21448AA46F395D64CDFC517B389D7DF3C6",
+      "path": "materials/thinking_in_systems_single_page.html"
+    },
+    {
+      "sha256": "20ADD0A545C41B217A89C6235321D2447DB78CCECD75B0E6C02CF7F6D566A3F0",
+      "path": "materials/thinking-framework-core-map.html"
+    },
+    {
+      "sha256": "DF7835C72206A06BBC651D4A28FDD339E6812E25602610DE2F5C61303C272CB5",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part0.md"
+    },
+    {
+      "sha256": "EEBDE5C3D0D1527DB96B7968F0A27AFEA5EE31EA3EC2F60D851AD3CB8A1DDDEC",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part1.md"
+    },
+    {
+      "sha256": "4CE474B57B4594D737B06A86B37B68EE922DBD92EF766058583B6F07F1C1946C",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part2.md"
+    },
+    {
+      "sha256": "0BE5A029850900D4953B404D4E0245BE00338AB78F35BCD3CE195A2173BDF5E3",
+      "path": "docs/design/Ink Grove｜Visual Knowledge Garden 产品与系统设计文档.md"
+    },
+    {
+      "sha256": "DD4AF44F501F2EFFA52885F6F344A71BACC00293465F1A0A5C4B3D81B969BFC6",
+      "path": "materials/buffett_shareholder_letters_owners_manual.html"
+    },
+    {
+      "sha256": "5DFD27A712D05E8206C15B136E17A05A4FF2617494D0CA94439E2BB35385FC67",
+      "path": "materials/economic_way_of_thinking_13_lens_lab.html"
+    },
+    {
+      "sha256": "4705B83F3514008397D178718A2DA77FEBAE36A20212DF1EA21D80FE5E917763",
+      "path": "materials/effective_executive_55_os.html"
+    },
+    {
+      "sha256": "4D202C7216BA64EB939DFFD8FE61EE95C8A530A626F0F4C6AB76645B7A695D6C",
+      "path": "materials/peter_lynch_stock_scout.html"
+    },
+    {
+      "sha256": "C3CEABE25DFA44C13C0A1D7F981B4CFE2AFDA1421BA9327437ECEE481904EC2F",
+      "path": "materials/the_intelligent_investor_fortress.html"
+    },
+    {
+      "sha256": "B081370F4735285A1503ADD2F1E8F16EE2F7A99FBC00C26B846E1AAB71CD2A0D",
+      "path": "materials/the_power_of_now_presence.html"
+    },
+    {
+      "path": "docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md",
+      "sha256": "E03CE53F3419B3B69F2005AD72667416184B653A393A037FCF217C0A281B2087"
+    }
+  ],
+  "content": {
+    "ink": {
+      "artifacts": 57,
+      "htmlArtifacts": 54,
+      "bookArtifacts": 47,
+      "distinctBooks": 45,
+      "collections": 10,
+      "concepts": 35,
+      "connections": 222,
+      "revisedWorks": 31,
+      "newRecommendedBooks": 23,
+      "newSyntheses": 3,
+      "homeProblemRoutes": 6
+    },
+    "seed": {
+      "regions": 4,
+      "seeds": 6,
+      "thinkingTools": 8,
+      "ageCategories": false,
+      "unifiedActivities": 6,
+      "optionalSeedActivities": 6,
+      "optionalThinkingPrompts": 8,
+      "editorialChanges": "content/reviews/edition-seed.json",
+      "revisedWorks": 6
+    },
+    "editorialRecords": 63,
+    "editorialIndex": "content/EDITORIAL.md",
+    "researchIndex": "docs/research/content-renewal.md",
+    "evidenceBoundary": "公开简介、作者及出版机构资料、论文和公开节选支持有限主题与框架；不声称完整复述或精读未取得的全书。本站场景、互动与跨书推演明确标识。"
+  },
+  "contentAndModelTests": {
+    "command": "npm test",
+    "passed": 75,
+    "failed": 0
+  },
+  "browserTests": {
+    "command": "npm run test:e2e",
+    "passed": 172,
+    "failed": 0,
+    "coverage": [
+      "全部54件 HTML 的正文、脚本错误、外部资源和沙箱检查",
+      "23件新书及修订作品的真实互动、320px与390px布局",
+      "3篇贯通文章的计算、取舍与规则反馈",
+      "图片和SVG缩放、键盘滚动、阅读进度、切换重置、安全及导入预览",
+      "延迟基础样式加载时的深色配色与字体",
+      "两套体验的入口、Think8、六Seed与延伸、本地数据、v1兼容、存储失败和冲突保护"
+    ]
+  },
+  "productionBuild": {
+    "command": "npm run build",
+    "passed": true,
+    "entry": "/assets/index-BMDlwaHn.js",
+    "fileCount": 307,
+    "manifestSha256": "d85918d7e87b4a4a6172da675f6fc37421336ec57caa5d8c77898bd26a252af3",
+    "manifestHashFormat": "SHA256 of UTF-8 JSON.stringify(files), keys in recorded order, files sorted by path.",
+    "files": [
+      {
+        "path": "artifacts/a-life-that-fits/cover.svg",
+        "bytes": 759,
+        "sha256": "4bd74cebdd510bcb8765c6247fa2ef18ea92ca369b5e2633406e7e54cf19a233",
+        "md5": "323368e5e6510a44d981e9061a0acffe"
+      },
+      {
+        "path": "artifacts/a-life-that-fits/index.html",
+        "bytes": 12469,
+        "sha256": "d92d78c15e4f79cc987e42d23ae1fb44837209563b68a079bbde656b910974d0",
+        "md5": "296c562f8edc705035c6716a77f43506"
+      },
+      {
+        "path": "artifacts/a-life-that-fits/manifest.json",
+        "bytes": 3653,
+        "sha256": "ff78691155b88453ac8f09445947e16a0523237208fd066980623461a2921645",
+        "md5": "d57e267856ce1e4a42e6beb22590e683"
+      },
+      {
+        "path": "artifacts/antifragile/cover.svg",
+        "bytes": 860,
+        "sha256": "5798147272609de20feff023a67a44f20fd691cab0151a9d684c1c19e14d58c9",
+        "md5": "83ab9bb25aaa4799cee1e7d7f81f7535"
+      },
+      {
+        "path": "artifacts/antifragile/index.html",
+        "bytes": 12023,
+        "sha256": "b57ee811b1aa2be9a07d5ddc0a2a9e404f5c8d55cc6e88166d54e0b46e72e107",
+        "md5": "dd9b7553bc5f0eb1edb8dba71db9a62c"
+      },
+      {
+        "path": "artifacts/antifragile/manifest.json",
+        "bytes": 1352,
+        "sha256": "bcd3a839112153f88d1368c83d84b9e519e26f4db6b62511a8c591747a29c03a",
+        "md5": "e593facb11c64b7f5061f5dd3d0a9dde"
+      },
+      {
+        "path": "artifacts/asking-right-questions/cover.svg",
+        "bytes": 622,
+        "sha256": "941bf41fcf74df3c25bc994b59001e45bd6d3dc8ab650aaad82fc09eb7793feb",
+        "md5": "147f95e1996badf66d1a3afc056631cb"
+      },
+      {
+        "path": "artifacts/asking-right-questions/index.html",
+        "bytes": 12045,
+        "sha256": "888115d6560c33c9fa6d81800d21f3c17d34d1e7ba76d8bf8dbfc847134a2d15",
+        "md5": "a711136e135a5330dc28b05c954d556a"
+      },
+      {
+        "path": "artifacts/asking-right-questions/manifest.json",
+        "bytes": 1647,
+        "sha256": "4a3a650773c3f381ddf74890f96712607ea1d5bf0f0be287c35b32c19a4492cd",
+        "md5": "ea57bbf86fc06923ffb69cbf37a348ec"
+      },
+      {
+        "path": "artifacts/attention-loop/cover.svg",
+        "bytes": 2284,
+        "sha256": "6184ad15dbceac5d772b28861d4de39e5d91d80eec58de9d53ccc95aa710b43e",
+        "md5": "839cf875783a23532ecd99a62521ab8a"
+      },
+      {
+        "path": "artifacts/attention-loop/index.md",
+        "bytes": 3955,
+        "sha256": "ca7b41a577c16c34782806c49aac248053273a046e0fa9ebbe85406d4283d25c",
+        "md5": "00350ecaf7ab43d8cde4b645f2bf7fba"
+      },
+      {
+        "path": "artifacts/attention-loop/manifest.json",
+        "bytes": 1463,
+        "sha256": "2342d1ed1703686247c44c86a0c66031abe2c3e65521a3e5a0ea67cabec73fcb",
+        "md5": "440cd2b9c01806775e697fff0fbfc615"
+      },
+      {
+        "path": "artifacts/black-swan/cover.svg",
+        "bytes": 844,
+        "sha256": "3b966792db089bf0cf06424ddbf45edce2da9f0a0e05a28ecae3b3752d5e62cf",
+        "md5": "48810bbc1dffab2419d26de9e38750f8"
+      },
+      {
+        "path": "artifacts/black-swan/index.html",
+        "bytes": 12172,
+        "sha256": "9bb025fc4194f27a8dee37e229dec5aebe21a67d18867702f7bf828dc8313d65",
+        "md5": "f407ffe5f056b6a4a5b9b36ff8075bda"
+      },
+      {
+        "path": "artifacts/black-swan/manifest.json",
+        "bytes": 1387,
+        "sha256": "a780ca941ae5977990a8a467337b525ae93c6852104d2b0e4fdf0f062b8367be",
+        "md5": "4a3f596bbb76df1e596be48988105e89"
+      },
+      {
+        "path": "artifacts/buffett-shareholder-letters/cover.svg",
+        "bytes": 1818,
+        "sha256": "65cc0823d0a5c3e5b495a29dabe7205d1784dc72372c8271ecdeb292beb5b6a2",
+        "md5": "1e3ae5a766fdd21a9aea7cba46c9bf83"
+      },
+      {
+        "path": "artifacts/buffett-shareholder-letters/index.html",
+        "bytes": 32367,
+        "sha256": "dbe54ce77f26fdb9f779d235635053f013709b0d2e626539cd139b87b5f1a2e0",
+        "md5": "f1db58153119c87b1c8a628efde16bd4"
+      },
+      {
+        "path": "artifacts/buffett-shareholder-letters/manifest.json",
+        "bytes": 2061,
+        "sha256": "95e4f881995d92e692c85543e51b377def4fe47ae1bd6669b771b95a9ad5294d",
+        "md5": "029a12db0c3f65f922da598b77746c7e"
+      },
+      {
+        "path": "artifacts/clear-thinking-lab/cover.svg",
+        "bytes": 2749,
+        "sha256": "013d9787365060d9b17419772273c980a830045a8212f234037e2936e44484c3",
+        "md5": "f139fe863a6e8de59acd10ffd188acc0"
+      },
+      {
+        "path": "artifacts/clear-thinking-lab/index.html",
+        "bytes": 47959,
+        "sha256": "0af5e52d8ea2a00789a7856162cbb2c893809db3b21d80d9433f755a04d145bd",
+        "md5": "7b0d88947d723d552cb4c5098b98e398"
+      },
+      {
+        "path": "artifacts/clear-thinking-lab/manifest.json",
+        "bytes": 1967,
+        "sha256": "658a9d4c59ca718896c64238b7c43a59f83e0779f58a2a02f4f814df54db828b",
+        "md5": "d61df4f0c7ca3c6d6d0c09302bcfc346"
+      },
+      {
+        "path": "artifacts/cognitive-awakening-inner-os/cover.svg",
+        "bytes": 2109,
+        "sha256": "c459f4ecc9f64bc9dc0cf1cf3ad760cf9895654e87d5198debb5c9f1a00762cc",
+        "md5": "9f2377467786437775fe2b73ce55d3a4"
+      },
+      {
+        "path": "artifacts/cognitive-awakening-inner-os/index.html",
+        "bytes": 26407,
+        "sha256": "6fa92e939928ec489ffe4112946d0346b1b46b876f215f097c32684fd5ff43b1",
+        "md5": "42344a674d72511194583f73194cfa16"
+      },
+      {
+        "path": "artifacts/cognitive-awakening-inner-os/manifest.json",
+        "bytes": 1934,
+        "sha256": "c9ce107ffdabc5d450db6a2f6ac2449999f077a906c81f1ec6f32f12ab649b75",
+        "md5": "04736cfca6a3686390c7385e02debc7b"
+      },
+      {
+        "path": "artifacts/cognitive-awakening/cover.svg",
+        "bytes": 2766,
+        "sha256": "f4207f7b2ad0d6db7cd0eb7b9d9705c783523b3b2206f25c1106e80ccf91883a",
+        "md5": "3a76058d5670df9fc0c75771adf698bb"
+      },
+      {
+        "path": "artifacts/cognitive-awakening/index.html",
+        "bytes": 21173,
+        "sha256": "9a29470a33c10c92d5e9644a4f14d60b379c4e2884497f4a8748c87b38eec68b",
+        "md5": "d0cf71899290213ba3df44575f63ff15"
+      },
+      {
+        "path": "artifacts/cognitive-awakening/manifest.json",
+        "bytes": 1776,
+        "sha256": "7369de7991fd97a2b787db01210aec405e5fb87a92578a834ed3e9b4fc22ae27",
+        "md5": "b3c944b8cbb595ee6c8ab9bbb0ea51b2"
+      },
+      {
+        "path": "artifacts/complexity-guided-tour/cover.svg",
+        "bytes": 4802,
+        "sha256": "582707d40d1257befa5603d5898c1c37bd46f84221610912d1e0f76bdc070d3d",
+        "md5": "7df1e3a39a35a82ffd5b69bb4e60ddfc"
+      },
+      {
+        "path": "artifacts/complexity-guided-tour/index.html",
+        "bytes": 12671,
+        "sha256": "19f1f40713513351363f1b0156528fd2e1bf796d5e42ea235384dc506765ea51",
+        "md5": "f4f1c86c2d172e2688c3b2a82e4c937d"
+      },
+      {
+        "path": "artifacts/complexity-guided-tour/manifest.json",
+        "bytes": 1548,
+        "sha256": "8e952698399c26f1c02805e93370cc3e06597576f6e85d61a8db4f0da478d39e",
+        "md5": "0cd5ebd5d4dcb51f4cf60b833676164a"
+      },
+      {
+        "path": "artifacts/cybernetics/cover.svg",
+        "bytes": 1760,
+        "sha256": "3be14d66a3f4dc87f8a400ca00b198398371ecb82639604b719e4d461bfb93da",
+        "md5": "e4bcd15adc2d791c2d49515e60925875"
+      },
+      {
+        "path": "artifacts/cybernetics/index.html",
+        "bytes": 29226,
+        "sha256": "70306c2ae41189cac37eebf0d19f638977a172b2a4e16a3191a4be16cdc536b4",
+        "md5": "f41c7213ef0cb278e58522ededdb698a"
+      },
+      {
+        "path": "artifacts/cybernetics/manifest.json",
+        "bytes": 1827,
+        "sha256": "20a393ffec2c6ba2cae5ed9009457f11242b6b9ef1dc0d1c0f6be190e68c5e0d",
+        "md5": "2cb6296b4aa7ed4bfd28e652c9501271"
+      },
+      {
+        "path": "artifacts/damn-right/cover.svg",
+        "bytes": 808,
+        "sha256": "9986538c7ddab9733677648cc0a22727b4dfc23a6322e73f958137fd9f6ee2b4",
+        "md5": "14d9e75184eef869e3e3453cbe3ca942"
+      },
+      {
+        "path": "artifacts/damn-right/index.html",
+        "bytes": 12353,
+        "sha256": "6d01ad57f294743c755455ff3ac34e5d928f5371a7820308bd407e45ff4a3e85",
+        "md5": "447b7cfb097d05eb4ab2a706f1bf267f"
+      },
+      {
+        "path": "artifacts/damn-right/manifest.json",
+        "bytes": 1360,
+        "sha256": "9b58b2519ce7e3e02c371102fd9494de09ea60b4c31bfb70a605f96ab50cd786",
+        "md5": "4423392a5bdfc4ab18f2fe0dea96ff65"
+      },
+      {
+        "path": "artifacts/deliberate-practice-modern/cover.svg",
+        "bytes": 2644,
+        "sha256": "95c9f34a68020f8d4286ef99b324f6bc77f2f33620bd58bfc4ab2fb15319540f",
+        "md5": "48c5b52c650ff55012a875aa8a7ebe7f"
+      },
+      {
+        "path": "artifacts/deliberate-practice-modern/index.html",
+        "bytes": 20279,
+        "sha256": "7e954db99aba0d4f28caeb3455dbdff9443c357f4404c6b534182a2d011e24f2",
+        "md5": "5666650d9c9beddc9dfe6631fd704416"
+      },
+      {
+        "path": "artifacts/deliberate-practice-modern/manifest.json",
+        "bytes": 1482,
+        "sha256": "68853e65b98e190f039800c6069a35d27298d0080334bac9bef96a7a049a73be",
+        "md5": "79dee70a65bca0f6957ea5b791a65ff2"
+      },
+      {
+        "path": "artifacts/deliberate-practice/cover.svg",
+        "bytes": 3552,
+        "sha256": "c71c72015122ad89fabf71153b0a93c83666266c26f4494ba5bf8a719b3db6b5",
+        "md5": "e604357cf780d11723cc5aa5def78e57"
+      },
+      {
+        "path": "artifacts/deliberate-practice/index.html",
+        "bytes": 18953,
+        "sha256": "6a6a603bf1792c367d0bc7c82a5bc4245d616ab81ac0063fc56a515fab147c44",
+        "md5": "df719deb2b9d59927f1844b3492bac91"
+      },
+      {
+        "path": "artifacts/deliberate-practice/manifest.json",
+        "bytes": 1654,
+        "sha256": "b5be87741542b26d32c39a99eaea677114a03c95c99a6f676a841c57b1d530d7",
+        "md5": "5828bf1f9497c8b595c95ac5bcbaab90"
+      },
+      {
+        "path": "artifacts/design-everyday-things/cover.svg",
+        "bytes": 702,
+        "sha256": "79ad814420a0314b2421dd2bd829ae36e27b10eb802347ae19ed3f7f84e0e2ac",
+        "md5": "b0f54ab6b37737acf965594e4bab828c"
+      },
+      {
+        "path": "artifacts/design-everyday-things/index.html",
+        "bytes": 11985,
+        "sha256": "533a20c18ff9d3fbd7fb217a9173436a4bf821ca136d785aae865a630d716d97",
+        "md5": "67e54204fdcca636d9ba503fff4a737b"
+      },
+      {
+        "path": "artifacts/design-everyday-things/manifest.json",
+        "bytes": 1510,
+        "sha256": "639124b6a9871d67846b599d691c858b7d9444fda0d04356347fbe027bb7a83b",
+        "md5": "787df708b75decd98f1a14b0d5f3705c"
+      },
+      {
+        "path": "artifacts/economic-way-of-thinking/cover.svg",
+        "bytes": 1815,
+        "sha256": "552c42a9bebd78bcb55c1d1d9a168b368ed1e82305772af22e1f98a8377225d7",
+        "md5": "ebedc14d7be1dd6b07ac2d51436af20a"
+      },
+      {
+        "path": "artifacts/economic-way-of-thinking/index.html",
+        "bytes": 30754,
+        "sha256": "18aac06a06f44f5df71ec0a7c29931049d6a843ddca7b1442a8f98aefd592ecf",
+        "md5": "661ee60380f1e9215c30b43dd1536feb"
+      },
+      {
+        "path": "artifacts/economic-way-of-thinking/manifest.json",
+        "bytes": 2111,
+        "sha256": "cc047cf04c0507a76ead77f61d13cc6f6d7ae668a9df1a8a815b5c6770b94e23",
+        "md5": "58d191083cc0be022a0cac82b96fd2de"
+      },
+      {
+        "path": "artifacts/effective-executive/cover.svg",
+        "bytes": 1928,
+        "sha256": "c83518d17c21f9be5940e5b0cfb5882b3efae6c72bd4f6715e13e63efdca501a",
+        "md5": "f59507a2c059589997f9c3000209eb84"
+      },
+      {
+        "path": "artifacts/effective-executive/index.html",
+        "bytes": 27884,
+        "sha256": "840eaf401d1633346d61bbd00dc7748e053b06a3f93d5a8caf7ac05ba8c2445a",
+        "md5": "eef85a661dd95caace62af2a68b61623"
+      },
+      {
+        "path": "artifacts/effective-executive/manifest.json",
+        "bytes": 1925,
+        "sha256": "213e1f35b516c3cedc3744b1b3155b281091f8dcce20c7dd1eb034531e26e3d6",
+        "md5": "38703c7f81ecad64ad44f6feb8447f79"
+      },
+      {
+        "path": "artifacts/factfulness/cover.svg",
+        "bytes": 529,
+        "sha256": "ac4815cd25097e7481150e8ca013fec0e9a868bd2887b9699a64f14d95e5690b",
+        "md5": "ce1e4f8ee2781cb47037b06a546db8cb"
+      },
+      {
+        "path": "artifacts/factfulness/index.html",
+        "bytes": 12507,
+        "sha256": "0aa96a9cfa3f8e70985ffb2d40ec1551294b004bce657df14124587e935a8314",
+        "md5": "eaddcde62faf902eb4d7cd43a0b08a92"
+      },
+      {
+        "path": "artifacts/factfulness/manifest.json",
+        "bytes": 1499,
+        "sha256": "639e9a8e6074f115232962f035e0db40ccd678e2bce7bdcaefd6578a9fcfd0b8",
+        "md5": "9fd1ba53f2683e5c71a2badceb10422a"
+      },
+      {
+        "path": "artifacts/fifth-discipline/cover.svg",
+        "bytes": 873,
+        "sha256": "bfc4ea752f1c54585c89d034c071b977d108ea902b754cbe232cc32341c8b88f",
+        "md5": "651713c22a596ce5dc77e65f7782f5cc"
+      },
+      {
+        "path": "artifacts/fifth-discipline/index.html",
+        "bytes": 12757,
+        "sha256": "a3527a7f0a5b5905cdcd686f088f11e601a69072e978a9a41d7e00f076640939",
+        "md5": "bc610249750fdcceec4871a3ca01a988"
+      },
+      {
+        "path": "artifacts/fifth-discipline/manifest.json",
+        "bytes": 1623,
+        "sha256": "0e3647ba8cd3428cd9bbdda6228a19bb72b7dadfc7fd5fba4832ca58d008c227",
+        "md5": "e928a6df315198af3bb41ae734a0b047"
+      },
+      {
+        "path": "artifacts/flow/cover.svg",
+        "bytes": 684,
+        "sha256": "47a4145194f26377a7014c13ba9dc456b035765df2b7d686b27dd40593d7ef97",
+        "md5": "d60ec8084942de0e67e6ae675c06d143"
+      },
+      {
+        "path": "artifacts/flow/index.html",
+        "bytes": 12836,
+        "sha256": "4db73bae5ff9ec1feb7b6073376d37b12321a6d2acb43d58c66c22681e7887fa",
+        "md5": "ee85dfecdcb2bca5956d85353657c68f"
+      },
+      {
+        "path": "artifacts/flow/manifest.json",
+        "bytes": 1553,
+        "sha256": "08adaab36bcda7c655181e0304a20d4eab40f8edcc24acf0eda86f72e959bfd3",
+        "md5": "11183d9b7009192d08568dc811a25f4a"
+      },
+      {
+        "path": "artifacts/four-thousand-weeks/cover.svg",
+        "bytes": 5865,
+        "sha256": "2fcde8057dc07e5dd9e593ff9778abc63261b9f46817de3522a8d80744ecf1f2",
+        "md5": "72fa0a3286e0e80038d79d3671e03873"
+      },
+      {
+        "path": "artifacts/four-thousand-weeks/index.html",
+        "bytes": 12022,
+        "sha256": "1204c196e682948bbe2248c516d2b5ad676bad774a35dc3c90d02cd9eeb5b5fa",
+        "md5": "0701cc63400889ca7199cbc08b2a36e4"
+      },
+      {
+        "path": "artifacts/four-thousand-weeks/manifest.json",
+        "bytes": 1339,
+        "sha256": "b37f22a9c85bc5d51773c0b6862f3f4251fe11fac8a8236be2f626cb7ddcb952",
+        "md5": "3cc25b7a0739ecf509414e97059695e5"
+      },
+      {
+        "path": "artifacts/good-strategy-bad-strategy/cover.svg",
+        "bytes": 658,
+        "sha256": "2f4d9b0ee270358c52d79e1a8c283732a986d2031d040973cc3fd52bc93ac7b2",
+        "md5": "87557facdfdcc7d4000543b6027cac09"
+      },
+      {
+        "path": "artifacts/good-strategy-bad-strategy/index.html",
+        "bytes": 11747,
+        "sha256": "08c20d7989cb038757f2fcf67d9d79d99f227f523095a7d1f3c86bbecd7705e6",
+        "md5": "08c5a8dcf8daefce912c61fda100a8ae"
+      },
+      {
+        "path": "artifacts/good-strategy-bad-strategy/manifest.json",
+        "bytes": 1664,
+        "sha256": "bf046bfed7bc3f1599ff7543fe8e056884d8b3d7a1afce14996b6c618e3ea692",
+        "md5": "ed5db8a760f72f0eee136d9cd1a2c116"
+      },
+      {
+        "path": "artifacts/governing-commons/cover.svg",
+        "bytes": 685,
+        "sha256": "acbf5bc67869df663dea87e844a886eb4aeae543689a5f334c7640eac286d25f",
+        "md5": "f099d861e9d5e01346f75c7814594f80"
+      },
+      {
+        "path": "artifacts/governing-commons/index.html",
+        "bytes": 12770,
+        "sha256": "f2a5029b17b3b58986178b009069dfbaa12e85e7cc77b0e39d6b08cf81ca5ed2",
+        "md5": "71afdcce5c1ce4ff5e96ed7ee97e0eff"
+      },
+      {
+        "path": "artifacts/governing-commons/manifest.json",
+        "bytes": 1710,
+        "sha256": "7ba156e785d06b4ec7f32ed68382f350c2c394668c47c7ece767b2349d10a3b9",
+        "md5": "2c954c92f223cb31c8ee1e1e5381787d"
+      },
+      {
+        "path": "artifacts/great-mental-models/cover.svg",
+        "bytes": 2680,
+        "sha256": "0aef03826d6c951474606c0671ea3cf3ceeabc1a39029849fcad4512bcdf9de0",
+        "md5": "042d65512231da1e4a48636247ae09bf"
+      },
+      {
+        "path": "artifacts/great-mental-models/index.html",
+        "bytes": 25853,
+        "sha256": "7017a49b99679e1a35f02fc42d4fa3ce508b2cbcb17c85449939ccfb3b957a4b",
+        "md5": "32311c9bb39307f1041d350baa236ae6"
+      },
+      {
+        "path": "artifacts/great-mental-models/manifest.json",
+        "bytes": 1838,
+        "sha256": "5c03026eb0e11495e9102b4e2f5d811d03d348b3cf6c7e2875ea1c87431c14dd",
+        "md5": "8971378fbe53f7801ed873cced873d82"
+      },
+      {
+        "path": "artifacts/how-to-read-a-book/cover.svg",
+        "bytes": 1916,
+        "sha256": "25cfc318bf4b7f3b878adef916d72d2dfc97fdb975a951481ca93abcafd065c7",
+        "md5": "2c2ff251dc8ac5357225aafc4da514fb"
+      },
+      {
+        "path": "artifacts/how-to-read-a-book/index.html",
+        "bytes": 28652,
+        "sha256": "2cf965156095b6a245b271aba22492e6bf40ccf7b4709b50d115d9ec4104536c",
+        "md5": "632be1687efbc3e8460674762ed60ad7"
+      },
+      {
+        "path": "artifacts/how-to-read-a-book/manifest.json",
+        "bytes": 2047,
+        "sha256": "d536b4ff6927a985983b2fdecd1c1c60eb26540d6e0ae3d3de991b059b45ffbb",
+        "md5": "a608def38645203dd2149eca721e5b3e"
+      },
+      {
+        "path": "artifacts/innovators-dilemma/cover.svg",
+        "bytes": 1782,
+        "sha256": "0fa2d741b553228723a93dd97f1cef463ebbc46e93196c0131896db21fdd4b72",
+        "md5": "e609ed3e2e675576bb12065cea4ab750"
+      },
+      {
+        "path": "artifacts/innovators-dilemma/index.html",
+        "bytes": 29379,
+        "sha256": "c09f96163b56d88152a34607d940e551fea039b8b765c929952dd19b55c2845a",
+        "md5": "9e3d70fecdd64e2958f0769d6ed7a12c"
+      },
+      {
+        "path": "artifacts/innovators-dilemma/manifest.json",
+        "bytes": 1705,
+        "sha256": "43d0c7b5fcb1038a5720a3b406134b8a400e2cda50b929036ea88fa1518cfc12",
+        "md5": "b26f5bc7740132ac7f4f7b6436d6ccaf"
+      },
+      {
+        "path": "artifacts/intellectual-atlas/cover.svg",
+        "bytes": 4114,
+        "sha256": "a6ddbc9945e99b650e81745dd5e68fc4fcefd28d55349261c4d6d685a180db6a",
+        "md5": "89a9b049b74941061a54845fb4e7211a"
+      },
+      {
+        "path": "artifacts/intellectual-atlas/index.html",
+        "bytes": 31937,
+        "sha256": "66df176f8ddc3f20de07a91fbf93c1b1421038a2ed44f8f733b102a6153b86f6",
+        "md5": "72c1e5cf87222026ce183c78a04d18c0"
+      },
+      {
+        "path": "artifacts/intellectual-atlas/manifest.json",
+        "bytes": 3906,
+        "sha256": "689982d9225867c48a07c986539d82af675b2ee4f24d7348bafce5087b49614e",
+        "md5": "2c4943ed69acacc2e6f012b4efaa0cb5"
+      },
+      {
+        "path": "artifacts/intelligent-investor/cover.svg",
+        "bytes": 1536,
+        "sha256": "c59734efc908de4500be807d22df32293d49364234d587422bc88afe743357bf",
+        "md5": "d98adfe88a82fe3aa324f7267ee0c20d"
+      },
+      {
+        "path": "artifacts/intelligent-investor/index.html",
+        "bytes": 32783,
+        "sha256": "d3a04e0f5af6f81bb3e5370f4b149a68e957bda8a07feef193b8c93affe75de6",
+        "md5": "27c53617699ae116fb81316630df77cc"
+      },
+      {
+        "path": "artifacts/intelligent-investor/manifest.json",
+        "bytes": 1972,
+        "sha256": "9695dd14a61272306730171926b005c72dc49b2728695f29c689a4f84454ca85",
+        "md5": "e56e5efc19ba55d25d1848f793d95140"
+      },
+      {
+        "path": "artifacts/knowledge-landscape/cover.svg",
+        "bytes": 2505,
+        "sha256": "5be6897be6f5e5768a4dfea09266aefa54a2bf8d144da099b963546fe293cb7d",
+        "md5": "b268aff3e8873426b9dcd1816dd4f469"
+      },
+      {
+        "path": "artifacts/knowledge-landscape/landscape.svg",
+        "bytes": 3310,
+        "sha256": "687ceb2c59bbee9e6b1a6cabf7ec1c37e724d0455c91edf34e62c5b57dc0b3c7",
+        "md5": "befc226482e55aac81b448508774a080"
+      },
+      {
+        "path": "artifacts/knowledge-landscape/manifest.json",
+        "bytes": 1312,
+        "sha256": "1acdd755a089d3727df2147f07064e4499733df7ae1e122399745ee16dd08490",
+        "md5": "6fdc1d41246087e7ed44671f7d6e6591"
+      },
+      {
+        "path": "artifacts/learning-cycle/cover.svg",
+        "bytes": 2193,
+        "sha256": "b44710b8055bc265c18d69c86f9bad0e7d837e81f3a7dccb2a26ae7296693723",
+        "md5": "f97a25b284b5bb119b576d28e7fe87b7"
+      },
+      {
+        "path": "artifacts/learning-cycle/index.svg",
+        "bytes": 5374,
+        "sha256": "da31ef62bb4566bad44b3a479ab13ef9efe8fac92a3f712e6d08ebea88decde0",
+        "md5": "c840d0f333a44e3fc9f46d3f1a651cbf"
+      },
+      {
+        "path": "artifacts/learning-cycle/manifest.json",
+        "bytes": 1318,
+        "sha256": "29c91233ac119d80061b90d12394130d190ea88abf263827a11982597de29e52",
+        "md5": "39338456fb4fb19699cf480f4dd377d0"
+      },
+      {
+        "path": "artifacts/make-it-stick/cover.svg",
+        "bytes": 840,
+        "sha256": "2324c0e1add8977d441e54ddb55af77038ef9cd2ed2a8106f06b6e48a9fc8509",
+        "md5": "64b0e66fb2ba2d49b29ce3f75152043f"
+      },
+      {
+        "path": "artifacts/make-it-stick/index.html",
+        "bytes": 12263,
+        "sha256": "c44d3534f738bd409fcc7e8a01493f58eaf7829675d98be0af6aa6bae54178fc",
+        "md5": "a35c1d7b9159349bd81e549e22a43dc2"
+      },
+      {
+        "path": "artifacts/make-it-stick/manifest.json",
+        "bytes": 1584,
+        "sha256": "db42e36a775bb411b9858056527a91a6fcd42e1816e777c6d1f8c7f928fd15e6",
+        "md5": "95ee3059c9bf100c64f50d7527f15c01"
+      },
+      {
+        "path": "artifacts/managerial-judgment/cover.svg",
+        "bytes": 1766,
+        "sha256": "634c31de5823e68b3f84c61a75c8a974ae682b5c5c16b12ea35c0884f3f973e9",
+        "md5": "93987302d2e683f642af857b89a822df"
+      },
+      {
+        "path": "artifacts/managerial-judgment/index.html",
+        "bytes": 40368,
+        "sha256": "a9ec5b494fc07900d6742b3f5b63b82bbebd810f3ae4b0473a7eb954e70b64b6",
+        "md5": "24cafbbb96917247cc65a0e1ba893d55"
+      },
+      {
+        "path": "artifacts/managerial-judgment/manifest.json",
+        "bytes": 1975,
+        "sha256": "6076d5712f40a69295f617c8480b263c86c8cf0f965591af44255645b2b222b4",
+        "md5": "716dbd06f3b84a427dfa0b6cb8bfd595"
+      },
+      {
+        "path": "artifacts/mans-search-for-meaning/cover.svg",
+        "bytes": 809,
+        "sha256": "e4765ea812689b323c5e4dbba8258bd59a0a2055f6c66e07441ef5b4da0b2ac6",
+        "md5": "938bc5afd64e08626120a6494c85d76f"
+      },
+      {
+        "path": "artifacts/mans-search-for-meaning/index.html",
+        "bytes": 11968,
+        "sha256": "6a060de1a092a264d6ff110b2b06a3184f583ff6486fa0949d6fca5ac02a95f3",
+        "md5": "21e6c6590c8d881fc2535f155ce7dbed"
+      },
+      {
+        "path": "artifacts/mans-search-for-meaning/manifest.json",
+        "bytes": 1344,
+        "sha256": "55b03477808f8957cec1d63fd0a48e79cf21a8125d28f5ac475d96b928576416",
+        "md5": "429a006135b1763def3f400b76497927"
+      },
+      {
+        "path": "artifacts/mckinsey-way/cover.svg",
+        "bytes": 2546,
+        "sha256": "f1c90a733fa3cc0661a2841571224bb17657c55f12af733eff0e81ef7b42535a",
+        "md5": "c7a755efded1e60d894d7b8607de9700"
+      },
+      {
+        "path": "artifacts/mckinsey-way/index.html",
+        "bytes": 26767,
+        "sha256": "5a2e68787b5b05b04c1821d0c750d5dbc794e5912c879180bc6660bb54307c00",
+        "md5": "77b4cd64e13571aeb29d87c93971b55d"
+      },
+      {
+        "path": "artifacts/mckinsey-way/manifest.json",
+        "bytes": 1763,
+        "sha256": "a3175b287f7e93cffe3b93d8660821f68ddf84466d23833aa60664dff8d4d87e",
+        "md5": "582a119cbf70107744f7917739c15bb5"
+      },
+      {
+        "path": "artifacts/methods-with-boundaries/cover.svg",
+        "bytes": 747,
+        "sha256": "65d34c749e44d4d0b22376ff5273affcd39e03f092d3f4c8c9130bf39e9239c6",
+        "md5": "796c3151e271bb4d84ca76eb7854a52b"
+      },
+      {
+        "path": "artifacts/methods-with-boundaries/index.html",
+        "bytes": 12695,
+        "sha256": "63db557ea017bf33080f0fa44173747d1fbc94e751bd81954450b2e4de42f999",
+        "md5": "b9ee3bdabce00e227a9ae5801c9a1d3b"
+      },
+      {
+        "path": "artifacts/methods-with-boundaries/manifest.json",
+        "bytes": 3720,
+        "sha256": "77c67ac627ff13519eead7b74a78ddb0c3e04aaab56765c927f37ce3e5ce99e7",
+        "md5": "922836fabeaa16d0b4381fa3774fef99"
+      },
+      {
+        "path": "artifacts/mindware/cover.svg",
+        "bytes": 2005,
+        "sha256": "8751d522dd27b0c30fec17f7bc23d3fd99c969d499a9267e2ccf6d6054dab767",
+        "md5": "8d110d92134d41a667bb71b676175500"
+      },
+      {
+        "path": "artifacts/mindware/index.html",
+        "bytes": 24919,
+        "sha256": "79f066ac5a1bc478af0cbc01d90e29bb5ee9012ffaea2a218ce50b667fa04791",
+        "md5": "810d7fdd203c069b160be1ff96b1c62d"
+      },
+      {
+        "path": "artifacts/mindware/manifest.json",
+        "bytes": 1592,
+        "sha256": "c1fd1e7d5a7b2366bf51aa205aee903f12e1b9ffe5f4f87e4221c07a084e1e4b",
+        "md5": "0362643f9e2a4ff255ee421eed2f1ffe"
+      },
+      {
+        "path": "artifacts/naval-almanack/cover.svg",
+        "bytes": 2714,
+        "sha256": "7c3829ef35b35c87be5f9240449c832a0d885ee86ffda10320a0c0a2ac295257",
+        "md5": "f142beaf9a76452b5511d1905c47736b"
+      },
+      {
+        "path": "artifacts/naval-almanack/index.html",
+        "bytes": 20411,
+        "sha256": "a21bd3aa696b7c4c15247614384b786abe4aa0639b521cec2c6fa7a40fdfec6e",
+        "md5": "dd970e17fae72b9ae940d4ab1c1a3d01"
+      },
+      {
+        "path": "artifacts/naval-almanack/manifest.json",
+        "bytes": 1548,
+        "sha256": "2a5cf62c3bf8f32d829a8e248b7ba724b3599d3bb5d2b3975be59619d9d31b9a",
+        "md5": "bfc13b9522625cd9dec2685b2de83992"
+      },
+      {
+        "path": "artifacts/non-designers-design-book/cover.svg",
+        "bytes": 763,
+        "sha256": "88a25ec09118b1fce3eb8cdcca94a508c627a456952b3cf4f352464d328addb4",
+        "md5": "91388d5dcc836d435b2982991b980bb9"
+      },
+      {
+        "path": "artifacts/non-designers-design-book/index.html",
+        "bytes": 13131,
+        "sha256": "b30ad964589a6037b562484770468f39e6848064ea553a6d66cab6d54838d3c0",
+        "md5": "9793d849419895d619189ff5c55d11a8"
+      },
+      {
+        "path": "artifacts/non-designers-design-book/manifest.json",
+        "bytes": 1644,
+        "sha256": "e1d5e3a6b3b8fa25059cfd235a3f080c2a9d216e48416806fcbc168c78663b7a",
+        "md5": "645d820ab31d6287824f23b16c8ab7a7"
+      },
+      {
+        "path": "artifacts/nonviolent-communication/cover.svg",
+        "bytes": 668,
+        "sha256": "74052f3815033efc04bb14592a109228de969dfdd4a1f64f4c53300b534c52e8",
+        "md5": "ce645c47e0575e53929feb96e06fa09b"
+      },
+      {
+        "path": "artifacts/nonviolent-communication/index.html",
+        "bytes": 11254,
+        "sha256": "1d4fe496cd65049a727c38af3ec3ef72b87fd7ed5fe53977d9dfae5a78b61292",
+        "md5": "0bedca85547e2ba23675291cb9117590"
+      },
+      {
+        "path": "artifacts/nonviolent-communication/manifest.json",
+        "bytes": 1339,
+        "sha256": "f3aa9635547230636eccd0e07672f58025a2a0bfcf7745da0815afab6959a5fe",
+        "md5": "536d75e9bb35c84d1c8b3d98437468c6"
+      },
+      {
+        "path": "artifacts/nudge/cover.svg",
+        "bytes": 846,
+        "sha256": "f4e3e0569fea3a5aa6d250c583588a4cf602ae20408a42d99bc9a2dc7a38ab93",
+        "md5": "123b8f80c5847025b120bdf9535afd12"
+      },
+      {
+        "path": "artifacts/nudge/index.html",
+        "bytes": 12409,
+        "sha256": "bcb4d07ec352bcedff5260dd44fb4d1c2b018c27d8dd3cccec09fef293b4678b",
+        "md5": "a2217f1775793be073410502b49a1532"
+      },
+      {
+        "path": "artifacts/nudge/manifest.json",
+        "bytes": 1591,
+        "sha256": "5b97bc4ff80fd8c9788acc70e3e3b596446e1c76c130bcf0e42ba25ba32a3dc8",
+        "md5": "391c96a4021ba7a560d394752c40d5cb"
+      },
+      {
+        "path": "artifacts/one-percent-rule/cover.svg",
+        "bytes": 1641,
+        "sha256": "9da466bcf48a2ca56f47b29e71f5586585dfd4a6dce24cd1a962a4b979236f38",
+        "md5": "e9b541282b01eee31d6b46681c24e0e8"
+      },
+      {
+        "path": "artifacts/one-percent-rule/index.html",
+        "bytes": 34663,
+        "sha256": "754978bada801b6d8752cc93849d998223c92a36ff101a2c0615892cc3a777a6",
+        "md5": "802d480ded2f2d86e86723d57ba28a25"
+      },
+      {
+        "path": "artifacts/one-percent-rule/manifest.json",
+        "bytes": 1795,
+        "sha256": "4d718cae877fb5c373d75ab7ad295bef707ddfad9fe3af648e1226ef950e6a26",
+        "md5": "a0aa985b7ff6a42b80a5eb5973ced3ed"
+      },
+      {
+        "path": "artifacts/personal-growth-os/cover.svg",
+        "bytes": 3414,
+        "sha256": "6e61f649853ea8fe8f7f6f84da14926b3ac1cd66cd14547698b0c619b4c21a5a",
+        "md5": "cbea49a82d74a5efceea6e060a57991c"
+      },
+      {
+        "path": "artifacts/personal-growth-os/index.html",
+        "bytes": 29503,
+        "sha256": "ec1f84d3622f35f2943cc99e37a58bbfbc0164bf981933fbb99d4e8dc5d3e30b",
+        "md5": "5d44ef3c379777777767a3100a8836ae"
+      },
+      {
+        "path": "artifacts/personal-growth-os/manifest.json",
+        "bytes": 2064,
+        "sha256": "1878ace71e31c1305cc60154825d80a7ed5cc6412f709dd986fcf311f4150615",
+        "md5": "2cbf3f92fdfb261cecbd33e81a100a0b"
+      },
+      {
+        "path": "artifacts/peter-lynch-stock-scout/cover.svg",
+        "bytes": 1762,
+        "sha256": "5e26ad8a3a6073f04e13ee29dc0f6e27c545b2a880aa22796270a2045af5a357",
+        "md5": "e9c068ff4795dc8e2f3b785c0e3be664"
+      },
+      {
+        "path": "artifacts/peter-lynch-stock-scout/index.html",
+        "bytes": 32149,
+        "sha256": "64c8572934f959555e77da7c2f74a203372a555c2b5dd7b04f30dfdbc9b4da17",
+        "md5": "a1130541e4aab2e10cf423eabf7698b8"
+      },
+      {
+        "path": "artifacts/peter-lynch-stock-scout/manifest.json",
+        "bytes": 2044,
+        "sha256": "dec12b3fefdd0cbe4065bcb5f948da106edaa99afb63cd22d7938dcc1da0fc1c",
+        "md5": "b998fe89b8920342c9c44c476372efa5"
+      },
+      {
+        "path": "artifacts/poor-charlies-almanack/cover.svg",
+        "bytes": 1948,
+        "sha256": "424ea120eb2c5c843b8f3e881afa05558330decf208c28f014fdcf4fdc0e5108",
+        "md5": "30775cbc56e95d5583bf80fcd48c6b63"
+      },
+      {
+        "path": "artifacts/poor-charlies-almanack/index.html",
+        "bytes": 31744,
+        "sha256": "894c1eabdceb040467df60a78b1ccba6d1c845a82321fba0ac54bbaeaf4399ff",
+        "md5": "92c2e9ed7c5a898dc896d79f08640fd6"
+      },
+      {
+        "path": "artifacts/poor-charlies-almanack/manifest.json",
+        "bytes": 1950,
+        "sha256": "f0db7e5dadc574d6d914ce535058e57336de2c312854533c6c4761bd7885b9ca",
+        "md5": "53d5b1b54725e64e3b767b0811aa8a7b"
+      },
+      {
+        "path": "artifacts/poor-richards-almanack/cover.svg",
+        "bytes": 889,
+        "sha256": "4d743f33dcfe815903cde44569c696fec57fbebf1808fb26fb01398ccd696ba1",
+        "md5": "eda425d3cac98b1d3d58e0cd88194866"
+      },
+      {
+        "path": "artifacts/poor-richards-almanack/index.html",
+        "bytes": 12424,
+        "sha256": "2f43bd1dc9bde706979339c782278e4e161eeaad7d40b2814fdf86a98eb96da2",
+        "md5": "c114abb5908859ca82243054e5778ca2"
+      },
+      {
+        "path": "artifacts/poor-richards-almanack/manifest.json",
+        "bytes": 1416,
+        "sha256": "c7f33b583543399792fdbada53590094868fbd558c0380aadc5a0c8131f82e5f",
+        "md5": "637341b42156f8fc2ba7d6a1944d2907"
+      },
+      {
+        "path": "artifacts/power-of-now/cover.svg",
+        "bytes": 1349,
+        "sha256": "623c1e940e9c10f32c43e466c0271e507517bf7c610271c9f5ac6fecda83d20c",
+        "md5": "3c655be9eddc5b43d3a6aaf67a4c1c92"
+      },
+      {
+        "path": "artifacts/power-of-now/index.html",
+        "bytes": 26433,
+        "sha256": "980151817aa9b73c6a8656ac2f857a175a6d72c60b6ae98bf3566edfc665c07b",
+        "md5": "bdd80cdafbfdeaa898f72ff8304008d8"
+      },
+      {
+        "path": "artifacts/power-of-now/manifest.json",
+        "bytes": 1807,
+        "sha256": "d19345445cd239d795b580a360d35a0d5a70262b407b1f870f6edcaa8c471ea1",
+        "md5": "6d33ba3c09726f5ae21d9e21d71b4af5"
+      },
+      {
+        "path": "artifacts/principles-life-work/cover.svg",
+        "bytes": 1429,
+        "sha256": "9f991135305a2c80344316e80608150550383b94a7944382247879a76e3bb607",
+        "md5": "972ebc3e865f57a49a33b91ce7417721"
+      },
+      {
+        "path": "artifacts/principles-life-work/index.html",
+        "bytes": 11669,
+        "sha256": "eaa63d6b2f2ecba5e45aba65076c60c4f92089efbefc12c88aa52c36b0dc4289",
+        "md5": "067f7b373b66612340a15874e893cb50"
+      },
+      {
+        "path": "artifacts/principles-life-work/manifest.json",
+        "bytes": 1365,
+        "sha256": "a9efcf1561a11e53cf278916ea00383c4a5ca042355a5877552321a2a3167d66",
+        "md5": "1bb7410622570aed9ec229a0d26df0d7"
+      },
+      {
+        "path": "artifacts/pyramid-principle/cover.svg",
+        "bytes": 688,
+        "sha256": "61864db74e09e13ecbcab17faeda63c64d860364bac4e3d64f67fe4ef5d58aa3",
+        "md5": "cfe3ad5acb7edac16671b7ada8f3140f"
+      },
+      {
+        "path": "artifacts/pyramid-principle/index.html",
+        "bytes": 11148,
+        "sha256": "b3233c70894f4ec2e20c6c65c28f5b2aed0e4d85a990a3953da73c05ffe91ede",
+        "md5": "1f24aed1b6ec72310132ffb5171bb221"
+      },
+      {
+        "path": "artifacts/pyramid-principle/manifest.json",
+        "bytes": 1523,
+        "sha256": "48f6bb0b7a7639218ef2400834f89fc78bd48585c6b7ac6f6149a4388eb7a855",
+        "md5": "051ed4ed820399ca48b61daee6b74acb"
+      },
+      {
+        "path": "artifacts/rockefeller-wealth-archive/cover.svg",
+        "bytes": 1695,
+        "sha256": "325eb15067809a6d9e9770b8ea7fb8815ca479e6ce38db0782841da7d00be094",
+        "md5": "35bc42e84ccb6728788fd2a0ea6f28c3"
+      },
+      {
+        "path": "artifacts/rockefeller-wealth-archive/index.html",
+        "bytes": 31847,
+        "sha256": "6309d869bb7d6afa24aad08f8346e22fcfc7d6ba8a0e52b26cca56145f0fc6ec",
+        "md5": "50e7fb5d2f1aafc08ef15803c83905ed"
+      },
+      {
+        "path": "artifacts/rockefeller-wealth-archive/manifest.json",
+        "bytes": 2040,
+        "sha256": "50021fd517ddff2f879a65afcd3b11fb011722bd4ad76d22c1e91a4942033ae8",
+        "md5": "07f5b7155357ca2756afd82a4df48702"
+      },
+      {
+        "path": "artifacts/scientific-revolutions/cover.svg",
+        "bytes": 670,
+        "sha256": "9a0619f644198196f0e7e9d3274c96259938b05b044c2010456af123056a5b1f",
+        "md5": "8d81766015a5e29dc44a8a80b6f0c3f6"
+      },
+      {
+        "path": "artifacts/scientific-revolutions/index.html",
+        "bytes": 12642,
+        "sha256": "0a679ee5d4662b02191839176fdfc209bc201664ab3cf9eedb389ab56fa0e85c",
+        "md5": "28e8117f9f5fe2be8906243c3b69757c"
+      },
+      {
+        "path": "artifacts/scientific-revolutions/manifest.json",
+        "bytes": 1614,
+        "sha256": "b794675e7f0489be6ad41d93aa06d436443d5f1cb67a7806cd1e9e1b59580e8a",
+        "md5": "50ab31269a6af34048359f9ad4e02ccc"
+      },
+      {
+        "path": "artifacts/seven-habits/cover.svg",
+        "bytes": 3787,
+        "sha256": "68c8b7d2fdab55083a22df80fee21834701ab422707dcc7a5cb15fe7626a746e",
+        "md5": "9d9785fa76c8d03b15da73b45dd07160"
+      },
+      {
+        "path": "artifacts/seven-habits/index.html",
+        "bytes": 22075,
+        "sha256": "3a6a53fdf794d764d68dadf327686c488f76effbebf14df35c37822729b3fcbf",
+        "md5": "216f6fdb3bc2e6d68c74fdfe67a02a8c"
+      },
+      {
+        "path": "artifacts/seven-habits/manifest.json",
+        "bytes": 1779,
+        "sha256": "f8f2c976fef3d828da674b306309f9aa1d6d7d354f9bf773d78ba5164a2d2f19",
+        "md5": "b85021a74d636b58a7ce71448a17bc47"
+      },
+      {
+        "path": "artifacts/shared-ground/cover.svg",
+        "bytes": 943,
+        "sha256": "68353d41446629eda0dd51061e5d71d56598386144ab1070f99b4cbaee594c96",
+        "md5": "cdf5c8a56b68355b02f3f36d55b3e381"
+      },
+      {
+        "path": "artifacts/shared-ground/index.html",
+        "bytes": 12989,
+        "sha256": "384b48ca5311fdaa826de8824d1401179ca9e133900d42ed855e1259cd9478aa",
+        "md5": "617351553b8a1f430e620a55fe5e19d1"
+      },
+      {
+        "path": "artifacts/shared-ground/manifest.json",
+        "bytes": 4192,
+        "sha256": "f6a6680d4c15974c6fd9feaa48f02c7cd03f8126255fd0ff0b89435cde3afb9e",
+        "md5": "ca9d0704d895b7c96cf7da9c21c28434"
+      },
+      {
+        "path": "artifacts/superforecasting/cover.svg",
+        "bytes": 717,
+        "sha256": "eef3022844710222bd22f91f03b4e4a28234990201cc40ded205d5e2b2850205",
+        "md5": "f066e00f1fd85394ba46b8dd6d68ee52"
+      },
+      {
+        "path": "artifacts/superforecasting/index.html",
+        "bytes": 12248,
+        "sha256": "2879cea88d06debb4d34e28d215ceb9c2260e705390c66f62b4010ca2f621b35",
+        "md5": "4eb7df6e101aa3fba99d33c981c08bf6"
+      },
+      {
+        "path": "artifacts/superforecasting/manifest.json",
+        "bytes": 1616,
+        "sha256": "b28293ed924a2e8c45df20feb9316ae8037c334d31a3e361543f20d451cbc394",
+        "md5": "f72ad64a5ae7246ee84ee474e4afe154"
+      },
+      {
+        "path": "artifacts/thinking-fast-slow/cover.svg",
+        "bytes": 654,
+        "sha256": "f55af0e97599bcfa9ce6f0ba7d3d6690e98442a92d5aaf9286944e1afcdbb6e9",
+        "md5": "f5ed152844e5189d5eb5b878b2cd441b"
+      },
+      {
+        "path": "artifacts/thinking-fast-slow/index.html",
+        "bytes": 11694,
+        "sha256": "9e611c95baef4a7f55548cc183e869564d0b53d4788800e7a233723682e919b8",
+        "md5": "41c1871a9f11547201888a392d98a667"
+      },
+      {
+        "path": "artifacts/thinking-fast-slow/manifest.json",
+        "bytes": 1558,
+        "sha256": "6d49d0cac03c4e98fea8bbfd21494ce99fdad5fa77af18a3a2c63e1c3162a141",
+        "md5": "e009c5450350417cb13f41648e60198d"
+      },
+      {
+        "path": "artifacts/thinking-framework/cover.svg",
+        "bytes": 2168,
+        "sha256": "1281031a2a59f47ba911a02bd69a0f025ade2194852c3a26e3f27176b1f10e4f",
+        "md5": "9a75642b5d50af52aa541a96b33c155c"
+      },
+      {
+        "path": "artifacts/thinking-framework/index.html",
+        "bytes": 20496,
+        "sha256": "19b2edd00a5bda12ee2644d4f7f1f31620b544f03af4b2cda662b000545fa6e4",
+        "md5": "d27e5e6bf0d33b235680c393d5c83034"
+      },
+      {
+        "path": "artifacts/thinking-framework/manifest.json",
+        "bytes": 1886,
+        "sha256": "85caaa95991f7b30fb7096baf417653013783bec2d47016f44806b2647a908b1",
+        "md5": "e3b29c37a1497202e474183846757e9a"
+      },
+      {
+        "path": "artifacts/thinking-in-systems/cover.svg",
+        "bytes": 1946,
+        "sha256": "16b1545661a9029122866a2c5065d05be6a136130ec84ca9346da09026b03524",
+        "md5": "9f7f19229f0571b0cb5e8223317c28ad"
+      },
+      {
+        "path": "artifacts/thinking-in-systems/index.html",
+        "bytes": 30868,
+        "sha256": "468a37eb300faa6c151c373db0e7be198e95b1696ad3d9194c44a513d9ecc461",
+        "md5": "a260c8e2d9144595ca3789c5b00ceecc"
+      },
+      {
+        "path": "artifacts/thinking-in-systems/manifest.json",
+        "bytes": 1869,
+        "sha256": "c1162c90131c8f22bd762a33ff5291b118978349d40267347eb9d2b603f1e65a",
+        "md5": "bbdcd885a7c73e723a88d4b8f96cc20a"
+      },
+      {
+        "path": "artifacts/twelve-rules-for-life/cover.svg",
+        "bytes": 1464,
+        "sha256": "996c5a5820f300dffd83c7f021be38c0c27d583a43a7649ff5d635daeee95847",
+        "md5": "c5e3c018b94b343dc25cfe163583099b"
+      },
+      {
+        "path": "artifacts/twelve-rules-for-life/index.html",
+        "bytes": 30708,
+        "sha256": "0f106d17d25a675695b77e870840473a0b06e0cbdbcf00931289759e92c2b117",
+        "md5": "792c9257ac3e1f8a1b540485f2a1c54f"
+      },
+      {
+        "path": "artifacts/twelve-rules-for-life/manifest.json",
+        "bytes": 1745,
+        "sha256": "32f4fba7bce920d774db1eb9d845f2470f32b8a817a19ba6ae20aa6eb8d8b37f",
+        "md5": "8fa4e043ff3709b50f247abcdbd2be86"
+      },
+      {
+        "path": "assets/App-Cd4Pu-j7.js",
+        "bytes": 199491,
+        "sha256": "431d2e1e86b0266f67ab688004d1c4eadd5d0a2ac5a0f285e2cd57f7b57d5128",
+        "md5": "a51baf0d79251de94964689ca42e08e8"
+      },
+      {
+        "path": "assets/App-NRz7jI9L.css",
+        "bytes": 13780,
+        "sha256": "77f2ba4cbac6118e1ae6c927487d204dce3b5ecc695880bbd9529ccb3e155323",
+        "md5": "c4b190f94e5bab766aed9b59daf9d05e"
+      },
+      {
+        "path": "assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2",
+        "bytes": 18228,
+        "sha256": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+        "md5": "49935c4b623536eb645c61103b8e6cae"
+      },
+      {
+        "path": "assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+        "bytes": 36932,
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+        "md5": "7c87a648293fbb5b2924aafaa59e8aea"
+      },
+      {
+        "path": "assets/index-BMDlwaHn.js",
+        "bytes": 145165,
+        "sha256": "67361748aaa9dda7ffaf55f305668134c004cc9de77c15db5c5e4f0d6256f538",
+        "md5": "f72a7d2b056aafb1ed743adfc1aae053"
+      },
+      {
+        "path": "assets/index-BzFpKU6l.css",
+        "bytes": 99410,
+        "sha256": "f1398981bb3b9355598e31a7329f587da21d176e4fddc0aea3959fdcadeb05e8",
+        "md5": "e6f36aefe1e59ad571ddecc3ee411069"
+      },
+      {
+        "path": "assets/index-Dqr6y4op.css",
+        "bytes": 729,
+        "sha256": "195d2e678d2d12293719ccedce688a3804e176a01aaaeeaec1bd9f7617e0a848",
+        "md5": "23e9605c36f0dbd1c1fd55facd068a9c"
+      },
+      {
+        "path": "assets/noto-serif-sc-100-wght-normal-B_E8_y1S.woff2",
+        "bytes": 84728,
+        "sha256": "10d846c3e11659c57d906ae2ab9a9d418e0aaa36b99a991a09aca8e5bd6e3c64",
+        "md5": "4f67362626018cff4d849554c84a72ca"
+      },
+      {
+        "path": "assets/noto-serif-sc-101-wght-normal-D1afnVTV.woff2",
+        "bytes": 77708,
+        "sha256": "139765926260131beb5763bb8474d5441c7a504f62257cacd5b569ee39d119e4",
+        "md5": "8c1bb821e249c5fa54c66ef82fbb70ed"
+      },
+      {
+        "path": "assets/noto-serif-sc-102-wght-normal-C336twDL.woff2",
+        "bytes": 79564,
+        "sha256": "98eb7841a02d362b6b92646644d54e9a3ed296e931799f342acc76f844024328",
+        "md5": "dbb344f6a3026d59d037770875f49d9e"
+      },
+      {
+        "path": "assets/noto-serif-sc-103-wght-normal-DUyihgdX.woff2",
+        "bytes": 84032,
+        "sha256": "ae54f03733db84abcacd43c967c9d6afd647f0a1579ef3b595a807bd24f76a2f",
+        "md5": "0e12cbc066cbeb29da2bd31b57f4e9c0"
+      },
+      {
+        "path": "assets/noto-serif-sc-104-wght-normal-BGjsMcQX.woff2",
+        "bytes": 80996,
+        "sha256": "ebda2b19fc7a325ab200e073d3152ef8761dd2e3fc6f4a36c757792ba393264e",
+        "md5": "f7c3a11ee2fee6db46bd0210fcbd07fc"
+      },
+      {
+        "path": "assets/noto-serif-sc-105-wght-normal-BgSod39R.woff2",
+        "bytes": 81516,
+        "sha256": "f43c00b1e7e213add01d19eecf6ef2e8a96f7087b46b908df407490b72fe09d9",
+        "md5": "0e278b2a03a77b78d2a90f9201450c68"
+      },
+      {
+        "path": "assets/noto-serif-sc-106-wght-normal-CniXU52I.woff2",
+        "bytes": 81600,
+        "sha256": "1a6cc82f2ce03f8bbc6c78ad27bb79d1319dbabb6a016499d9042073acabcc0e",
+        "md5": "dda8c85116abe08a9524d7f893eb2703"
+      },
+      {
+        "path": "assets/noto-serif-sc-107-wght-normal-D141098S.woff2",
+        "bytes": 79852,
+        "sha256": "2a55b026bb206504dc94a3fa0d58a1f2af2b9b4c3daf6dd988519458e7404876",
+        "md5": "f9adf99fb8619c061f1819e25370045b"
+      },
+      {
+        "path": "assets/noto-serif-sc-108-wght-normal-BmakWj8P.woff2",
+        "bytes": 83484,
+        "sha256": "4665f9383f65a4fb003c53808f5b91d1e93fcccd3d2d8c799cfda6e3d14656d7",
+        "md5": "98fa4785bd60ec08c6dafa60b4631467"
+      },
+      {
+        "path": "assets/noto-serif-sc-109-wght-normal-DomK5QIN.woff2",
+        "bytes": 79000,
+        "sha256": "16b43b96dc859eaf9b6f2ee884c9976318d6b55720ae72b118f9ec77582361d6",
+        "md5": "c2106c2c6c29069bfced99d79d89d694"
+      },
+      {
+        "path": "assets/noto-serif-sc-110-wght-normal-BSy0JP4E.woff2",
+        "bytes": 79492,
+        "sha256": "3616d3502701dcdf867d0c850ef50cbf19e1613b283a238fe4f8ea0c91908c6d",
+        "md5": "393d2c6cbf0315d5f82f19a82efd5558"
+      },
+      {
+        "path": "assets/noto-serif-sc-111-wght-normal-DOsFafg3.woff2",
+        "bytes": 81144,
+        "sha256": "8164af476b514e30654ecf3aa34edeecbad209782f4b026964032e4f594a2881",
+        "md5": "759cba2ca24fd824f33f8d72de3ce7b0"
+      },
+      {
+        "path": "assets/noto-serif-sc-112-wght-normal-MAZT2qqq.woff2",
+        "bytes": 75996,
+        "sha256": "675553f67dda471ccc684b734a07db465fb6bb9ec1ce5a70b6d6b0f9a36a7a26",
+        "md5": "1da3465c0fe90348831bd8463cc491b2"
+      },
+      {
+        "path": "assets/noto-serif-sc-113-wght-normal-DyuoesZ9.woff2",
+        "bytes": 75872,
+        "sha256": "1594e53f4ab5fe067f7ba108b65a71ed07b2fb9da68af01349b4966c871e4d36",
+        "md5": "e477d6346ed139d47fb8b8c4a026f5da"
+      },
+      {
+        "path": "assets/noto-serif-sc-114-wght-normal-rN6TP-iN.woff2",
+        "bytes": 74744,
+        "sha256": "f402c381cb2eb5c6d1e65a8bae7629b5cb97faaa42759af6874f6d33fcc98273",
+        "md5": "1f3a98652e0f9c63faadd83175dc79f1"
+      },
+      {
+        "path": "assets/noto-serif-sc-115-wght-normal-CLw93OJ2.woff2",
+        "bytes": 72536,
+        "sha256": "1bd7a4092909a57cf3f2df1f983980fa45d37f0f77b038a31785719fc9580668",
+        "md5": "d755d398e3f05e15acefedd89d91fdd8"
+      },
+      {
+        "path": "assets/noto-serif-sc-116-wght-normal-dLgproop.woff2",
+        "bytes": 67284,
+        "sha256": "2392f5989457174e847cc69a4eff0ff80f5ac744b8f1fe29b0b1925299cb0a0e",
+        "md5": "0bd6fcd4eb4b68200ab8c53e842e5a4c"
+      },
+      {
+        "path": "assets/noto-serif-sc-117-wght-normal-XTbr9ZZT.woff2",
+        "bytes": 66576,
+        "sha256": "44c0c56034f2906014cd0082c42cef587cd4e2eb24983aca2a10d9805a0f26f6",
+        "md5": "3fd0660d41c27348cb8322cd41ba805b"
+      },
+      {
+        "path": "assets/noto-serif-sc-118-wght-normal-DgpSdJgq.woff2",
+        "bytes": 58148,
+        "sha256": "9a03bacc0425e420573fa8ba6b4a1468ebfe8860ef2243e41a646dee45b67b54",
+        "md5": "9e40e14e7313b8ece9d7a844da317e30"
+      },
+      {
+        "path": "assets/noto-serif-sc-119-wght-normal-BO-8DIcz.woff2",
+        "bytes": 103768,
+        "sha256": "28858c6c597253c4488e0ce1bddf52d6bb5464ebcf981927ea5c7269b5c1dc17",
+        "md5": "e15441d3cdfa380dbf30122a94d122b5"
+      },
+      {
+        "path": "assets/noto-serif-sc-21-wght-normal-BWgIT3u9.woff2",
+        "bytes": 26040,
+        "sha256": "c56fed07baa5368c483c00d7963847caf0f9aff18bc78561fe8b14db7171b572",
+        "md5": "7d9267c2ffddf7db78a5a7efea16d84e"
+      },
+      {
+        "path": "assets/noto-serif-sc-22-wght-normal-n_9gzBdK.woff2",
+        "bytes": 85288,
+        "sha256": "4e943fdd06982ac9a81d192846dab76a2797321c990774600dc65ff8fe1d4e68",
+        "md5": "aab91ad8b848e57d94c7c9fe2621d430"
+      },
+      {
+        "path": "assets/noto-serif-sc-23-wght-normal-PFb7vc5T.woff2",
+        "bytes": 73872,
+        "sha256": "e50204d9c99dee1b284a8f5c9508295fe6209c54e089ba7146813360d9c17713",
+        "md5": "b83d5b513242e58f19d74188411fd315"
+      },
+      {
+        "path": "assets/noto-serif-sc-24-wght-normal-CLtoVuTx.woff2",
+        "bytes": 82664,
+        "sha256": "03de62bc4c94fcf00ad2a87ed76731c95b0852b0b41c9028844e1a05c06082c0",
+        "md5": "a68f3f7919fcefde6d4af21dea4d4baf"
+      },
+      {
+        "path": "assets/noto-serif-sc-25-wght-normal-CO_UFAdV.woff2",
+        "bytes": 77944,
+        "sha256": "9fa23b6cf30829d06600bda44f2b5d31880d088ef9bd5626aaf4557941457c10",
+        "md5": "4937b16a94f0ac4169a9df667cd984fb"
+      },
+      {
+        "path": "assets/noto-serif-sc-26-wght-normal-CUJJnivC.woff2",
+        "bytes": 71356,
+        "sha256": "158a0be2cbba07d17824a5ba52319a3f914c59857f4bd70a332596bbe1b1128f",
+        "md5": "85719f5d21ecb801d9777aa0a1a69e1b"
+      },
+      {
+        "path": "assets/noto-serif-sc-27-wght-normal-B9lzzaTa.woff2",
+        "bytes": 64664,
+        "sha256": "dc5909d502de13c096a9d4b6f674433f2da1ef62f71cce1e3f43be499f1a4a52",
+        "md5": "0129340b72690e5667cc1e8d1cdd4d5d"
+      },
+      {
+        "path": "assets/noto-serif-sc-28-wght-normal-DpNoKRQu.woff2",
+        "bytes": 67936,
+        "sha256": "93daeb451edfe65dad18a468cc90933d6a5fc79e9411ce28027bacbfd7bfa0b8",
+        "md5": "a036befa478f3897bb5dbbf80d721d36"
+      },
+      {
+        "path": "assets/noto-serif-sc-29-wght-normal-GaECcatV.woff2",
+        "bytes": 72784,
+        "sha256": "d4ba29a42d58e9c71f523225d6c2257e231e4d3fe92b720bbcbf99dd08add33c",
+        "md5": "509bfdc7cb5b0f501f8a3d920e4fd010"
+      },
+      {
+        "path": "assets/noto-serif-sc-30-wght-normal-BthB64Y2.woff2",
+        "bytes": 76908,
+        "sha256": "106e18d90034e75630790ad203bc69850747bf96c0a398b96bd88bcaa81e9480",
+        "md5": "c0d11c35eeb548d9806b5a399de65250"
+      },
+      {
+        "path": "assets/noto-serif-sc-31-wght-normal-6gH0-Plj.woff2",
+        "bytes": 64260,
+        "sha256": "b9df2ce5d328a524975728c051385e14c1c823798e084c1227101ed4acc6174a",
+        "md5": "3764074d9f76bb7a817dba21d353d40e"
+      },
+      {
+        "path": "assets/noto-serif-sc-32-wght-normal-BWmx-AcC.woff2",
+        "bytes": 68000,
+        "sha256": "87fdad598fb7ab598784e43f87f1da2c5476f88e4a5a9aba56abc73973449a42",
+        "md5": "94bf08f0c6d4c66281724467a95c754b"
+      },
+      {
+        "path": "assets/noto-serif-sc-33-wght-normal-imYNTNMM.woff2",
+        "bytes": 66088,
+        "sha256": "a1e18c863c00ab7e6f17fddcc42b193fb94ccb5e3e01ee394a189c149aef447e",
+        "md5": "9e9d84437ca9b43bdc2e5c92e2d3d58f"
+      },
+      {
+        "path": "assets/noto-serif-sc-34-wght-normal-DnkERd2u.woff2",
+        "bytes": 64724,
+        "sha256": "ba9fbd7fdbf7cce92c1a95946a7ad7b10ff9d3098403174b2b2b11ba6b282eb0",
+        "md5": "ce715360f03463456cf2ba8439acc0ee"
+      },
+      {
+        "path": "assets/noto-serif-sc-35-wght-normal-DvRk4hqy.woff2",
+        "bytes": 63760,
+        "sha256": "0eb731d70aa1f4966dfffab308b3fb11975886fd5375f45ce6b16f1eaebafb83",
+        "md5": "c7f2c1e97ef351d8b0555a13c61ce107"
+      },
+      {
+        "path": "assets/noto-serif-sc-36-wght-normal-mA1onJjc.woff2",
+        "bytes": 57848,
+        "sha256": "b36a86aa9d07ae91a379ef0661f723c323677fb9106457318b1194d5c5f7cbc9",
+        "md5": "ff99ac5c58fb6eb5ec1682e47d900677"
+      },
+      {
+        "path": "assets/noto-serif-sc-37-wght-normal-LC1yyc7m.woff2",
+        "bytes": 67828,
+        "sha256": "5b42c53aa93cc2a7fd855c85a5ca733d4da8d06984df8b4c9b2b76ce1090bc80",
+        "md5": "b39b5d86a4a9322329a5624714b1dfd6"
+      },
+      {
+        "path": "assets/noto-serif-sc-38-wght-normal-Da_NFf6-.woff2",
+        "bytes": 75304,
+        "sha256": "60bae2b9a8bf65e1b4c1a06d529079cea1824bbab0a37840469f24b698880aab",
+        "md5": "266f53bc5befc2a8c25f789c1f654292"
+      },
+      {
+        "path": "assets/noto-serif-sc-39-wght-normal-C_Pfsj-f.woff2",
+        "bytes": 72288,
+        "sha256": "ef454fca50875c2536bfbcf4e0b540f456c012a61d08ff778ea4e3e640bd938b",
+        "md5": "adc04e1006c7cbe7365025680a911f8b"
+      },
+      {
+        "path": "assets/noto-serif-sc-4-wght-normal-POi_Urbq.woff2",
+        "bytes": 4644,
+        "sha256": "92b93561d8af27754352918934377dc09ecbf91d2d65a0951fb1d60895367330",
+        "md5": "62ddad63596926ba2b4d892a14fcfcd8"
+      },
+      {
+        "path": "assets/noto-serif-sc-40-wght-normal-BjlpL5UW.woff2",
+        "bytes": 66144,
+        "sha256": "5392252c91bd0707d647df33a9a279501a029388c7882a0ad420a40b760e5a62",
+        "md5": "8ec6152896576f46a9fbe3ef404e3318"
+      },
+      {
+        "path": "assets/noto-serif-sc-41-wght-normal-CVBLXKlt.woff2",
+        "bytes": 51516,
+        "sha256": "0f39f0bbe9a7a450b994c3c3bd9aa0627ae2dea8d36b67fc5a3554830f28005e",
+        "md5": "717ebb09ffc7ec43b0e467304769329b"
+      },
+      {
+        "path": "assets/noto-serif-sc-42-wght-normal-BuqGeHAE.woff2",
+        "bytes": 62740,
+        "sha256": "2db79fd3aa1d48c07e30664553e9d1ddb9fc4c23fdf02d48c63e094ebf275a5d",
+        "md5": "9140510232b84c226ad933478a889f13"
+      },
+      {
+        "path": "assets/noto-serif-sc-43-wght-normal-C2AfGZIw.woff2",
+        "bytes": 58348,
+        "sha256": "7e94834579a87ac5bbeae3c8d0cfc33206d7e0fc85e7c59568f75358fb000c44",
+        "md5": "94c0146b87a19ac66572e2fc6ef12844"
+      },
+      {
+        "path": "assets/noto-serif-sc-44-wght-normal-Ce6e62F2.woff2",
+        "bytes": 72500,
+        "sha256": "3f116c05fbb0abc3fba86bb85b4426eca3a41650d2763ed4c5b31fe8b28f752e",
+        "md5": "8796331aede316dfa88621334fd9b39e"
+      },
+      {
+        "path": "assets/noto-serif-sc-45-wght-normal-CXgjcdJT.woff2",
+        "bytes": 91672,
+        "sha256": "6b583a41d620c6b504ce9d451fdbb8e08d073b2573e46d444820959647d7f3e0",
+        "md5": "0a0c9cc3fa283d5ee72aa86f442a88f4"
+      },
+      {
+        "path": "assets/noto-serif-sc-46-wght-normal-zC517Lyl.woff2",
+        "bytes": 77584,
+        "sha256": "1581af3bbb4e78f52db3b1078a85595e0ffa30ee334b7dbb49baf42ba9fbb28a",
+        "md5": "eda28201a6a0391dc955f7534a8856b2"
+      },
+      {
+        "path": "assets/noto-serif-sc-47-wght-normal-C0d1RTo9.woff2",
+        "bytes": 74000,
+        "sha256": "a491a10a853d1fb3480d4471a275fd8824726b0e1a795fe8a98eb946001ac80e",
+        "md5": "94be817eabc816009ec61676647778a3"
+      },
+      {
+        "path": "assets/noto-serif-sc-48-wght-normal-DdYwMBaW.woff2",
+        "bytes": 64612,
+        "sha256": "cad6d79ef7a000ed533559c080e92351797bb90d800243fa3a25c7064a3ce93e",
+        "md5": "54085fed69ebb9f0d31056831d314c5f"
+      },
+      {
+        "path": "assets/noto-serif-sc-49-wght-normal-Cke2kJyu.woff2",
+        "bytes": 70316,
+        "sha256": "ca078411ddf19a164747d6e2220b0b2022f08e1682a1dc660a8902da13f2b0e0",
+        "md5": "2477bbd5effd9b8dce047550f61ca506"
+      },
+      {
+        "path": "assets/noto-serif-sc-5-wght-normal-KEByyGxm.woff2",
+        "bytes": 26836,
+        "sha256": "405f96fc00f5de66a11045874d0964dcb4230122f820771ee13dd329895074d8",
+        "md5": "fe8b61bad7f3cc76ee4c7312189ae963"
+      },
+      {
+        "path": "assets/noto-serif-sc-50-wght-normal-zkdyL1V0.woff2",
+        "bytes": 64520,
+        "sha256": "80938d29c0efdbd634308ac52ecbbda6707a0b3e3b7d1c84e197c28a6c8c837b",
+        "md5": "a7d9a196f96d8c77b47e3a4290f31ae9"
+      },
+      {
+        "path": "assets/noto-serif-sc-51-wght-normal-D9iT-1TR.woff2",
+        "bytes": 57320,
+        "sha256": "6e0e93e30ac6e513ffdb1e5ddc50337e81c5f33d54bc3bb0e044113f228f5727",
+        "md5": "3648e44e7d17f13cbc58ce91589f4085"
+      },
+      {
+        "path": "assets/noto-serif-sc-52-wght-normal-BLDAvkY6.woff2",
+        "bytes": 67828,
+        "sha256": "6f05dd92f2f040024ed6f401c03a78ec8f8058313ecab04b6ff195a0041a4a5a",
+        "md5": "4d0d9ac715167ee376f1d47a5df47f75"
+      },
+      {
+        "path": "assets/noto-serif-sc-53-wght-normal-CVEOz2md.woff2",
+        "bytes": 53856,
+        "sha256": "039698b9bc16db3439b86528c88c369086ed237f7baa13873ca33a0922edce18",
+        "md5": "aa5627e6c57a77a3a8b40a1ff333e747"
+      },
+      {
+        "path": "assets/noto-serif-sc-54-wght-normal-DPWdAwq4.woff2",
+        "bytes": 69316,
+        "sha256": "2263f0841a3499dd34793a4b21c831760bcae5582b047cbcab0b55cf9b105ab5",
+        "md5": "57018578e4919ab5ea07b9edce730117"
+      },
+      {
+        "path": "assets/noto-serif-sc-55-wght-normal-CHCeRIrg.woff2",
+        "bytes": 61532,
+        "sha256": "c940bed82b2192c9a436af93a8ae990c9e66d1384376f56878c3906c6de35353",
+        "md5": "fcf44288fceb22612afddec1f18c1f0e"
+      },
+      {
+        "path": "assets/noto-serif-sc-56-wght-normal-eKWz93j7.woff2",
+        "bytes": 69656,
+        "sha256": "373d1b4d724f4ee5fa02eb5ee5474033a914a990d966f2abbb36c96682e5e993",
+        "md5": "f6bc67c173c5068b5624ff3cffc90a5c"
+      },
+      {
+        "path": "assets/noto-serif-sc-57-wght-normal-Cor1Tvn4.woff2",
+        "bytes": 74032,
+        "sha256": "a8e46481396f2a9e4ac4875b64645f26e4e9ff185a8503c2402c2bc9bf46219c",
+        "md5": "caa412a767c3064e1be47bca762553bc"
+      },
+      {
+        "path": "assets/noto-serif-sc-58-wght-normal-kpJ7mHnK.woff2",
+        "bytes": 82552,
+        "sha256": "4fb8ac1d7a95c72aa66de7673a352e3e8b9046ffa90c444d0f961221f7052e40",
+        "md5": "aa4391bcf08f7b8cc2c9cbab2c9ad7f6"
+      },
+      {
+        "path": "assets/noto-serif-sc-59-wght-normal-DuU0uqw2.woff2",
+        "bytes": 69524,
+        "sha256": "f69a03144d47d4987530030eceff2c2c4e37388ce5e45976a7a15f4dcd849d30",
+        "md5": "78c70feb57db0722de6a89ec53d39f54"
+      },
+      {
+        "path": "assets/noto-serif-sc-6-wght-normal-zG9mG1jB.woff2",
+        "bytes": 15672,
+        "sha256": "aba77127699e71bc7d13fd80c4eaaebcb5065862590f6dfbb05ba14bb0c0d2d8",
+        "md5": "7e68c91c476f3b26befb19acc10ae096"
+      },
+      {
+        "path": "assets/noto-serif-sc-60-wght-normal-DAKYpn8o.woff2",
+        "bytes": 61376,
+        "sha256": "952351694a0ada3a721a73decd3afeac99fac4637e0dbd2af987c7e147205ff1",
+        "md5": "d0c82b3ba0b3b1f3d19cdda7e739fcfe"
+      },
+      {
+        "path": "assets/noto-serif-sc-61-wght-normal-DsFqK1wo.woff2",
+        "bytes": 61312,
+        "sha256": "90a9d9858975f1c073521af5df9a7286356ff78397d274cfe7b64cb97f719920",
+        "md5": "2829cfee59e5b3add8bab794934aa8c4"
+      },
+      {
+        "path": "assets/noto-serif-sc-62-wght-normal-BetEYZyP.woff2",
+        "bytes": 79496,
+        "sha256": "854a14f63241e795bc8a17e64d472f09c834a02f9b59258637063aabca530070",
+        "md5": "751e823c240cb83428fc39d7f58af81d"
+      },
+      {
+        "path": "assets/noto-serif-sc-63-wght-normal-CMtD-Kgv.woff2",
+        "bytes": 63936,
+        "sha256": "9d345b17ad128918a7d4eea67714a376f8840ffdc82b77da8dbc416071491f65",
+        "md5": "5f7989060cf46f293d70f06e7fdfff9f"
+      },
+      {
+        "path": "assets/noto-serif-sc-64-wght-normal-CjrUC92N.woff2",
+        "bytes": 51012,
+        "sha256": "ab7aef1b30a10f6643f3271cb55e64c49e6d8c4b91a2e68287196cde66ad7614",
+        "md5": "dc5d5ffc36a42ad6577bcb1747388661"
+      },
+      {
+        "path": "assets/noto-serif-sc-65-wght-normal-BQWoNL84.woff2",
+        "bytes": 58572,
+        "sha256": "24f7302e65f8adaec36d642aa8caf68cdf4c50c91e54f75e9e535382366766b4",
+        "md5": "ee76b73b1f1b1ec6aa05cac4a76c2d89"
+      },
+      {
+        "path": "assets/noto-serif-sc-66-wght-normal-C5lNsScf.woff2",
+        "bytes": 69204,
+        "sha256": "5c818243ce70b138c5e7edd2798f92d311d8d9158eb60bad6c4f5cebe4d46fc6",
+        "md5": "d174097d3adf6e141097f1f3ec13e4ee"
+      },
+      {
+        "path": "assets/noto-serif-sc-67-wght-normal-YN-qC7HW.woff2",
+        "bytes": 71680,
+        "sha256": "a4557ab88bbc6bb5272d315402d2448f92a7e53bdf3e89f1d839e95e5b67999a",
+        "md5": "3383442a2b2230e95fde7625827b01e4"
+      },
+      {
+        "path": "assets/noto-serif-sc-68-wght-normal-DgVKmqhJ.woff2",
+        "bytes": 54196,
+        "sha256": "bca8897bbf2ee33d854e2d2cb19a31c66d549c2eb585af439e905378486df29e",
+        "md5": "3e110124e8d0de573efa9a11a8fe3b98"
+      },
+      {
+        "path": "assets/noto-serif-sc-69-wght-normal-CYLESW-L.woff2",
+        "bytes": 73588,
+        "sha256": "52740303931d8b85ab9529076bf835aeaf877c56e47aead612281bc128318282",
+        "md5": "118654b5c50e9cb5fe10c7dabfc47500"
+      },
+      {
+        "path": "assets/noto-serif-sc-70-wght-normal-C1ivJfo6.woff2",
+        "bytes": 53064,
+        "sha256": "b677122aea77998b4b6c991cc0268585a48690a9347bd17057ac589728176c5d",
+        "md5": "69c8ce833dd41457d699510ddc3895e4"
+      },
+      {
+        "path": "assets/noto-serif-sc-71-wght-normal-CvXxbzcf.woff2",
+        "bytes": 62884,
+        "sha256": "6b91a10abb4a03d31c63d528f6ef6b0fcdf4dbe7c030d67e1943f6139c115d73",
+        "md5": "070513c78f46faada41c218f39ad4acd"
+      },
+      {
+        "path": "assets/noto-serif-sc-72-wght-normal-cGdTpPsV.woff2",
+        "bytes": 65720,
+        "sha256": "713d2bb29db38602e97e272bdafa666c5b426b7b779dbf3beb32313fd95b8551",
+        "md5": "08cbb4cc5ef73ae5f3325804615fcaaf"
+      },
+      {
+        "path": "assets/noto-serif-sc-73-wght-normal-CVaZwasb.woff2",
+        "bytes": 56040,
+        "sha256": "c5cbbb60e77f863af35524ec5a6674f5ce15735f05746923caa8d07e99b55886",
+        "md5": "a4e2f767e9ce96f15332b1799e258c1a"
+      },
+      {
+        "path": "assets/noto-serif-sc-74-wght-normal-BbF3qCor.woff2",
+        "bytes": 74576,
+        "sha256": "365512ffc9e2717c81cf5d9af42646426d657d5494b4fd04501a5beb0af6f2e7",
+        "md5": "af763c653920b6efefe7869205ad9b0b"
+      },
+      {
+        "path": "assets/noto-serif-sc-75-wght-normal-93ee-1qL.woff2",
+        "bytes": 57824,
+        "sha256": "f0e12f7e577876bf2d554e924f0a2bbce375b647d885a568b37dd5b042133ad1",
+        "md5": "580496137ab3894423062a3cb49268e1"
+      },
+      {
+        "path": "assets/noto-serif-sc-76-wght-normal-BLbVMqvY.woff2",
+        "bytes": 65740,
+        "sha256": "f0dbe158fa641cc4297af81a4d44d2a9a2b775a32a96d4f665d62820ee2e6562",
+        "md5": "83ce8b332341f19d19559a661d465107"
+      },
+      {
+        "path": "assets/noto-serif-sc-77-wght-normal-Ba02t4uH.woff2",
+        "bytes": 51780,
+        "sha256": "cfabb52e72825965ec66b18bc1bab646d150206f2a3aa6d4fa6f29040058515e",
+        "md5": "ee3bee7e6fc5581c82cf2cc60e5f165f"
+      },
+      {
+        "path": "assets/noto-serif-sc-78-wght-normal-8sP0MgyD.woff2",
+        "bytes": 71048,
+        "sha256": "2101d62af080d6803513f4fe5d91aba6831b61bc95ed172dace75caa2a5b8c2d",
+        "md5": "d8c406e52e5cf55af40c7d8f0909d2b3"
+      },
+      {
+        "path": "assets/noto-serif-sc-79-wght-normal-3DZZprJd.woff2",
+        "bytes": 58804,
+        "sha256": "a5fdbb67e3dadebda5b447c1707fe47a2d9e40f095fb22dedc63aadf969d6609",
+        "md5": "b54512e74aa46d997fa4a31c8ad1bcae"
+      },
+      {
+        "path": "assets/noto-serif-sc-80-wght-normal-7mf1Dpmj.woff2",
+        "bytes": 45184,
+        "sha256": "0a97bd54c22add0ce1fd54256f20bcafa92b8db870b3f80cefd3672da29eb3ae",
+        "md5": "3495562e8dc0198d0833b195eb9a2abb"
+      },
+      {
+        "path": "assets/noto-serif-sc-81-wght-normal-C7zVck8N.woff2",
+        "bytes": 60576,
+        "sha256": "5945538dcbfc11c1db2d573e1a0889c33b90b45d8445cb9ce1f18b38db36336c",
+        "md5": "4e4a9426c8ce1b2571e166fb20f99bd4"
+      },
+      {
+        "path": "assets/noto-serif-sc-82-wght-normal-BCQNdhXI.woff2",
+        "bytes": 62128,
+        "sha256": "45f3ed82e9bd8231532b58a0de47d0b26fbe8e4ceba610615903e346e5213263",
+        "md5": "46eaf254eb66a6e94bc2235a67d139cf"
+      },
+      {
+        "path": "assets/noto-serif-sc-83-wght-normal-DxCiS-H8.woff2",
+        "bytes": 58812,
+        "sha256": "bf628db08549cbf5090c3486717d5121d48af1d82c79b6ab181ed9b49ba5e31b",
+        "md5": "df17a57f16b40fc1ec3b5eb265f1e30f"
+      },
+      {
+        "path": "assets/noto-serif-sc-84-wght-normal-BqNanTR7.woff2",
+        "bytes": 42656,
+        "sha256": "60e71123f0b838bf4fd52cb5de5e3d6af8e48c8f7f32481a39da625d1e63fd2e",
+        "md5": "c6a94a044d36c166bdda6a2e028e5d36"
+      },
+      {
+        "path": "assets/noto-serif-sc-85-wght-normal-zDA9V0-4.woff2",
+        "bytes": 40440,
+        "sha256": "d8f48bbf844eadbaa2e3db648ed6889ccb8083572437eb6f0f717f9097b9e45b",
+        "md5": "2d890488bf9a0e13ead3367fead108f2"
+      },
+      {
+        "path": "assets/noto-serif-sc-86-wght-normal-BEBRIryH.woff2",
+        "bytes": 47336,
+        "sha256": "09248b343e7220ab8786b907c2d75aaf6d1a54830822070a0ab012ec03a02bb1",
+        "md5": "917d011fd078fa9a172989f6fc6aa64b"
+      },
+      {
+        "path": "assets/noto-serif-sc-87-wght-normal-DYrIOgtA.woff2",
+        "bytes": 7400,
+        "sha256": "50751cd23b3787eff2af23d3b9676b13cb5263e750a72fd258328f5812520b08",
+        "md5": "83e357b9fd5049de3331e994fd899d1e"
+      },
+      {
+        "path": "assets/noto-serif-sc-88-wght-normal-4sUXZiL0.woff2",
+        "bytes": 6892,
+        "sha256": "45cb9a16cbc13eff333b49bfa5c63f0478078ac6bdc327de9d69bdb6cdd8ce2b",
+        "md5": "9ae69bd519c7c14ec0e2b282950a52a9"
+      },
+      {
+        "path": "assets/noto-serif-sc-89-wght-normal-BHbmppex.woff2",
+        "bytes": 12280,
+        "sha256": "ba142270184772c2bbc1985bf88e42d05e9462b14163001b8c253765c3f1d55e",
+        "md5": "898351c600c0b567782fa41967342fba"
+      },
+      {
+        "path": "assets/noto-serif-sc-90-wght-normal-CAN9aOBC.woff2",
+        "bytes": 9736,
+        "sha256": "5968dd127304a59f1e2ea36b875f3702dadb0a229bc87a9053727c26807a15dc",
+        "md5": "905e293d1a9741da6079af511fa74883"
+      },
+      {
+        "path": "assets/noto-serif-sc-91-wght-normal-Cs76p7wD.woff2",
+        "bytes": 10568,
+        "sha256": "30691665669ee807f465d552b3247cd41f9097020662bc43f28dbaf243cbd883",
+        "md5": "3f2359368307fb166fd1e5e81dbcea9b"
+      },
+      {
+        "path": "assets/noto-serif-sc-98-wght-normal-Cb4Ymdjf.woff2",
+        "bytes": 4376,
+        "sha256": "26b9dec17f125371d5f5089f89de39094a11f98ffebb061011158d7e4aa602d0",
+        "md5": "12909432da2cdf29fb46b6a937c3252e"
+      },
+      {
+        "path": "assets/noto-serif-sc-99-wght-normal-Dxrjm0os.woff2",
+        "bytes": 12324,
+        "sha256": "7bf7c8fd9809004cba36338a94c338cffbce66069c2b091a7472e0b4dfa6b041",
+        "md5": "797fa40be90412326c45214bf6be86b4"
+      },
+      {
+        "path": "assets/noto-serif-sc-cyrillic-wght-normal-CEncxE_U.woff2",
+        "bytes": 14476,
+        "sha256": "d6e6ed7b0a14b508f94072aea3bb29abe236fd012ba6174b49292a6c900718e6",
+        "md5": "dc6ab53ab01c6e7fb91517e74c95990c"
+      },
+      {
+        "path": "assets/noto-serif-sc-latin-ext-wght-normal-B_BpesqA.woff2",
+        "bytes": 10332,
+        "sha256": "b07e7e5e090ed9220e5fd4afc6a22339a77f63f79f1f7ac010e3b05a8849c5ce",
+        "md5": "cfc2935a2047f479ce76de250eb15eae"
+      },
+      {
+        "path": "assets/noto-serif-sc-latin-wght-normal-C94SydbU.woff2",
+        "bytes": 32972,
+        "sha256": "2ac76686e472db28292edcc26bcc201a3b40b08b2615db7e75e03d07ab853017",
+        "md5": "33f942b0fd405660ae0a1e130a280b67"
+      },
+      {
+        "path": "assets/noto-serif-sc-vietnamese-wght-normal-BDuesHz7.woff2",
+        "bytes": 10920,
+        "sha256": "9826143bb6278155de4f76910fd6ec34fe450385dd0d85df10e4497bb174eac7",
+        "md5": "eb70023c9cd60a5d9454436b38575840"
+      },
+      {
+        "path": "assets/SeedApp-BHI8xQyy.js",
+        "bytes": 51864,
+        "sha256": "2c6f695115957d7a636370498a42ce148ca53b4ebb09843d2c296f90b3d0bded",
+        "md5": "c8314b657eb377ae3647916f8f274af3"
+      },
+      {
+        "path": "assets/SeedApp-Cmgnp0JG.css",
+        "bytes": 32592,
+        "sha256": "c7a3db334c701b4dd7647f18f8f3d1092f049601a87feee454b0361fafcfcb32",
+        "md5": "c89892350741ce0528ff79727a0a90ed"
+      },
+      {
+        "path": "assets/storage-BgP9hnT-.css",
+        "bytes": 1635,
+        "sha256": "e8cf4510af64255664c817937932d7f7be8c196f1feabb62de0660690d80e7e4",
+        "md5": "af806bc7998432481ff892b774c73460"
+      },
+      {
+        "path": "assets/storage-BoInmhoZ.js",
+        "bytes": 165154,
+        "sha256": "14eccac5a302a0f0a5bbe72bef5b9fa17e67218fd1b8aeb6b38295983ad67501",
+        "md5": "073b14fb7527b6b3951b4605fd544d3f"
+      },
+      {
+        "path": "assets/styles-BsrTobKL.css",
+        "bytes": 58847,
+        "sha256": "be355a7fcf46efefcd977a5024b7d12d328a69cdaed253675945a069de7c3ab5",
+        "md5": "3c1c759efe8c3a1f44008bf1800e50a5"
+      },
+      {
+        "path": "assets/theme-Bpmq33_5.css",
+        "bytes": 9373,
+        "sha256": "87ad3a7423cd7ecc510e8084d9b06c4189d67e2a785e5048a4d2c451489683e8",
+        "md5": "0c82020e849ecabf9042daa73c99ff3a"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 297,
+        "sha256": "0cb1cf37f9c71105f17409c3c13297dfe6bad65c5ba7b2f5f155af4b7920e9d5",
+        "md5": "a073383466a78514a2000c09da56636d"
+      },
+      {
+        "path": "index.html",
+        "bytes": 579,
+        "sha256": "c342b59b8d26def1f16e436be0bdd8b2cf9b3dccffcf7f1847a8da3334233b40",
+        "md5": "1bef116fca6a401360626adf8ae86f2d"
+      },
+      {
+        "path": "licenses/DM-Sans-OFL.txt",
+        "bytes": 4502,
+        "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7",
+        "md5": "ac821d006ff11ef371e634cd6dae7470"
+      },
+      {
+        "path": "licenses/Noto-Serif-SC-OFL.txt",
+        "bytes": 4314,
+        "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+        "md5": "4538a5afdd18ccebd224405ffe3dee4b"
+      },
+      {
+        "path": "seed-icon.svg",
+        "bytes": 500,
+        "sha256": "f3dd930923bc33a6565131f175453664ebd1cdfc93c743231e7861598f9fef22",
+        "md5": "632b74911a3d7ed394d616b96685a757"
+      },
+      {
+        "path": "seeds/attention-detective/cover.svg",
+        "bytes": 1227,
+        "sha256": "c6fc871f6f8c85938edfed970f75fe0ea92bdee2ca285ddf2837a6e1f51c8ee3",
+        "md5": "57e55924de5107c26139c7431f481c91"
+      },
+      {
+        "path": "seeds/attention-detective/index.html",
+        "bytes": 13173,
+        "sha256": "64a17f8571dddfc0edb50ba3b76288c69c1c2dc609bec421b9fa4b2949144a5c",
+        "md5": "a0d1285923db2eca5cca65ae2f19816b"
+      },
+      {
+        "path": "seeds/attention-detective/manifest.json",
+        "bytes": 1104,
+        "sha256": "633391e6db84224a67ba8b98f9155df1284f88831c323d599f3de3ed3db1851d",
+        "md5": "bf84058dd2f1726c27be5d97dbbb0316"
+      },
+      {
+        "path": "seeds/break-it-down/cover.svg",
+        "bytes": 1228,
+        "sha256": "fabc694fbcdc60004366d9e534bedde3d23744fb722f4a30119309249d12ec7d",
+        "md5": "878aee45e0b19004402c931e619558c7"
+      },
+      {
+        "path": "seeds/break-it-down/index.html",
+        "bytes": 12799,
+        "sha256": "33a4781c34aacc01d4f2b77661e6d81ab9dc5896d3968fef786d70743de9e4d3",
+        "md5": "79e33533c1eb23882f0497a0ec5ce4f5"
+      },
+      {
+        "path": "seeds/break-it-down/manifest.json",
+        "bytes": 1078,
+        "sha256": "036028e65d0f85a30dde05d643f3a3fe0271793911d7b4ae1cd5a22645d5efd3",
+        "md5": "81dba5910a15801feab718422594b452"
+      },
+      {
+        "path": "seeds/emotion-weather/cover.svg",
+        "bytes": 1063,
+        "sha256": "9942f791d153159a7a12f8cd20f26095c5505a0e838e8450555d6f1000f7e28d",
+        "md5": "8713bb4b8c47291c88f302e7c91f8573"
+      },
+      {
+        "path": "seeds/emotion-weather/index.html",
+        "bytes": 11088,
+        "sha256": "bc486f329ba6cdae04bab47e3e4dd9ea8251f2dc5e867d4115be735216d2020a",
+        "md5": "314559784dae8dfafa8c5ec48cee7ccf"
+      },
+      {
+        "path": "seeds/emotion-weather/manifest.json",
+        "bytes": 1065,
+        "sha256": "bd370255d058131982ba548e72f8e88315c4ce1079a22bcab2146540e2009ae6",
+        "md5": "2ff5c94f4b468ae463487932f66365c1"
+      },
+      {
+        "path": "seeds/just-right-challenge/cover.svg",
+        "bytes": 1079,
+        "sha256": "ec5e40a7e31ac404630afd9bf8a40b1a88818d9da5e92f57a0ff18072cbc6c39",
+        "md5": "e44bc1fe79cd57d7bab37ec685813d60"
+      },
+      {
+        "path": "seeds/just-right-challenge/index.html",
+        "bytes": 10653,
+        "sha256": "1b29898ccb7a206a1f35107849f2f080416a46b7b4bd3a69844a570dfd28f63b",
+        "md5": "cae3cdfd7902ea6417d696ac54962c66"
+      },
+      {
+        "path": "seeds/just-right-challenge/manifest.json",
+        "bytes": 1165,
+        "sha256": "b8f5a7940b06a764a9c6a1de30b2599f72b7237c291ec9a5bd6e2f6104004c19",
+        "md5": "e734dc44981d532598a42bffc4cae228"
+      },
+      {
+        "path": "seeds/mistakes-are-clues/cover.svg",
+        "bytes": 1444,
+        "sha256": "8e96d50b80bed1792b194e637a3ff6a45bf545efe51e4196dcb40197db0b4f47",
+        "md5": "b1cce2d87453674e8ccbcc06fc8c2fb1"
+      },
+      {
+        "path": "seeds/mistakes-are-clues/index.html",
+        "bytes": 12632,
+        "sha256": "319a6f768e63b4053bbafe30cc9b15b23507a475d456ba977e9f280a663c5519",
+        "md5": "eb1e572764f48f70a8a4a841590d38e9"
+      },
+      {
+        "path": "seeds/mistakes-are-clues/manifest.json",
+        "bytes": 1139,
+        "sha256": "849bd393c3ddbdb9eb53cacd568bf40af610dcd171330289a8be734b589184e3",
+        "md5": "254388f3f1ba4ca9d3f082ac2708bd3d"
+      },
+      {
+        "path": "seeds/time-store/cover.svg",
+        "bytes": 1200,
+        "sha256": "8a305197d64a1992f30c31525fda4664512be7268fbd8ebb422a756aa74ccbf2",
+        "md5": "71a759200ad07633a3d0f8f9016f42a0"
+      },
+      {
+        "path": "seeds/time-store/index.html",
+        "bytes": 12377,
+        "sha256": "b4aed95aff117972c3da0fe986ed840ba826bcf40154c160d432593cf13dd968",
+        "md5": "29ce8da340a97c2a89a600e3d838dff5"
+      },
+      {
+        "path": "seeds/time-store/manifest.json",
+        "bytes": 1107,
+        "sha256": "80ca5ecabdcd905217cecfd1a92a42fb3e98d3b36127e746cf4f89621262aa24",
+        "md5": "f95106521ae127da703883a2296c63b0"
+      }
+    ]
+  },
+  "productionSmoke": {
+    "local": {
+      "baseUrl": "http://127.0.0.1:4173/",
+      "commands": [
+        "node app/scripts/verify-production.mjs",
+        "node app/scripts/verify-seed-production.mjs",
+        "node app/scripts/verify-edition.mjs"
+      ],
+      "passed": true,
+      "editionReport": {
+        "base": "http://127.0.0.1:4173/",
+        "checkedAt": "2026-09-13T04:58:47.018Z",
+        "entry": "/assets/index-BMDlwaHn.js",
+        "homeEssays": 3,
+        "problemRoutes": 6,
+        "darkPalette": true,
+        "diagrams": [
+          {
+            "id": "learning-cycle",
+            "zoom400": true,
+            "keyboardPan": true,
+            "mobile320": true
+          },
+          {
+            "id": "knowledge-landscape",
+            "zoom400": true,
+            "keyboardPan": true,
+            "mobile320": true
+          }
+        ],
+        "works": [
+          {
+            "id": "asking-right-questions",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "make-it-stick",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "superforecasting",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "thinking-fast-slow",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "factfulness",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "flow",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "scientific-revolutions",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "non-designers-design-book",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "good-strategy-bad-strategy",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "design-everyday-things",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "nonviolent-communication",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "pyramid-principle",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "complexity-guided-tour",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "governing-commons",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "fifth-discipline",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "nudge",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "four-thousand-weeks",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "mans-search-for-meaning",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "principles-life-work",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "damn-right",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "black-swan",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "antifragile",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "poor-richards-almanack",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "methods-with-boundaries",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "a-life-that-fits",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "shared-ground",
+            "interaction": true,
+            "mobile390": true
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    "public": {
+      "baseUrl": "https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+      "commands": [
+        "node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+        "node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+        "node app/scripts/verify-edition.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/"
+      ],
+      "passed": true,
+      "editionReport": {
+        "base": "https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+        "checkedAt": "2026-09-13T05:04:40.524Z",
+        "entry": "/assets/index-BMDlwaHn.js",
+        "homeEssays": 3,
+        "problemRoutes": 6,
+        "darkPalette": true,
+        "diagrams": [
+          {
+            "id": "learning-cycle",
+            "zoom400": true,
+            "keyboardPan": true,
+            "mobile320": true
+          },
+          {
+            "id": "knowledge-landscape",
+            "zoom400": true,
+            "keyboardPan": true,
+            "mobile320": true
+          }
+        ],
+        "works": [
+          {
+            "id": "asking-right-questions",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "make-it-stick",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "superforecasting",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "thinking-fast-slow",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "factfulness",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "flow",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "scientific-revolutions",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "non-designers-design-book",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "good-strategy-bad-strategy",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "design-everyday-things",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "nonviolent-communication",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "pyramid-principle",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "complexity-guided-tour",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "governing-commons",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "fifth-discipline",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "nudge",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "four-thousand-weeks",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "mans-search-for-meaning",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "principles-life-work",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "damn-right",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "black-swan",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "antifragile",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "poor-richards-almanack",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "methods-with-boundaries",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "a-life-that-fits",
+            "interaction": true,
+            "mobile390": true
+          },
+          {
+            "id": "shared-ground",
+            "interaction": true,
+            "mobile390": true
+          }
+        ],
+        "errors": [],
+        "external": []
+      }
+    },
+    "checks": {
+      "matchingBuildEntry": true,
+      "spaDeepLinksAndRefresh": true,
+      "bothAdultToSeedEntrances": true,
+      "inkHtmlTitlesAndSandboxes": 54,
+      "inkInteractiveLab": true,
+      "seedRegions": 4,
+      "seedInteractions": 6,
+      "optionalSeedSectionsOpen": 6,
+      "thinkingInteractionsAndOptionalPrompts": 8,
+      "ageControlsAbsent": true,
+      "iframeAgeParametersAbsent": true,
+      "explicitV2SaveAndReload": true,
+      "noAutomaticGrowthClaims": true,
+      "mobileRoutes": true,
+      "browserErrors": 0,
+      "externalRequests": 0,
+      "newBookAndEssayInteractions": 26,
+      "mobile390Works": 26,
+      "imageZoom400AndKeyboardPan": 2,
+      "darkPalette": true
+    },
+    "screenshotCommands": [
+      "node app/scripts/capture.mjs http://127.0.0.1:4173",
+      "node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture",
+      "node app/scripts/verify-edition.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/ --capture"
+    ],
+    "screenshots": [
+      "artifacts/screenshots/home-desktop.png",
+      "artifacts/screenshots/home-mobile.png",
+      "artifacts/screenshots/home-dark.png",
+      "artifacts/screenshots/explore-desktop.png",
+      "artifacts/screenshots/connections-desktop.png",
+      "artifacts/screenshots/journey-desktop.png",
+      "artifacts/screenshots/create-desktop.png",
+      "artifacts/screenshots/seed-home-desktop.png",
+      "artifacts/screenshots/seed-home-mobile.png",
+      "artifacts/screenshots/seed-think-desktop.png",
+      "artifacts/screenshots/seed-think-depth-desktop.png",
+      "artifacts/screenshots/seed-feedback-desktop.png",
+      "artifacts/screenshots/seed-parent-desktop.png",
+      "artifacts/screenshots/home-edition-desktop.png",
+      "artifacts/screenshots/methods-with-boundaries-mobile.png",
+      "artifacts/screenshots/a-life-that-fits-mobile.png",
+      "artifacts/screenshots/shared-ground-mobile.png"
+    ],
+    "screenshotData": "独立浏览器上下文与虚构记录；Seed截图前清除测试记录。主要系统截图来自生产预览，阅读专题与三篇文章截图来自公网。",
+    "resolvedHarnessIssue": "首次公网检查出现一次选择菜单未响应。用相同原始HTML和sandbox分段解析可确定性复现：readyState loading时操作早于尾部监听脚本，change事件丢失；等待complete后操作的对照通过。验收脚本改为等待子文档 readyState complete，再操作一次；全套26件公网互动通过。部署产物未因检查脚本修正改变。"
+  },
+  "publicDeployment": {
+    "passed": true,
+    "cliVersion": "3.8.1",
+    "command": "tcb hosting deploy app/dist -e ink-d0gvorjko99e99e4d --safe --verify",
+    "uploadedFiles": 307,
+    "cliConsistencyVerification": true,
+    "remoteMd5AndSizeMatches": 307,
+    "localFilesUnchangedAfterDeployment": 307,
+    "remoteAuditCommand": "tcb hosting list -e ink-d0gvorjko99e99e4d --json",
+    "remoteFileCount": 330,
+    "platformFilesRetained": 6,
+    "platformFiles": [
+      {
+        "path": "__auth/device/index.html",
+        "md5": "9cfbd6e6c5a45f502a25b7a782def475",
+        "bytes": 327
+      },
+      {
+        "path": "__auth/env/login.config.json",
+        "md5": "a2e62d9d829efe6dc46ef57eacba6269",
+        "bytes": 1344
+      },
+      {
+        "path": "__auth/env/logo.svg",
+        "md5": "bef3893c07e302680db23208169e2c5b",
+        "bytes": 2222
+      },
+      {
+        "path": "__auth/index.html",
+        "md5": "2cb9c2fe155a20844b5444588df5f543",
+        "bytes": 468
+      },
+      {
+        "path": "__auth/oauth/index.html",
+        "md5": "cbd8c725536eb2a610e27bb75df2a669",
+        "bytes": 326
+      },
+      {
+        "path": "cloud-admin/index.html",
+        "md5": "21ec0eb1e8df699ee57b947605659c13",
+        "bytes": 2743
+      }
+    ],
+    "reportedBackupPath": ".cloudbase-backup/1789275539492/",
+    "backupVerified": false,
+    "cloudPathArgument": "omitted",
+    "prune": false,
+    "rollback": "优先从上一已验证提交 d36d44c1cb5e65e598692668e5c92bc1dde5be2e 重建；CLI所报备份未核验完整性。保留Seed v2存储兼容和用户当前备份。"
+  },
+  "urls": {
+    "ink": "https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/",
+    "seed": "https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/seed"
+  },
+  "seedData": {
+    "storageKey": "seed-grove:garden:v1",
+    "schemaVersion": 2,
+    "legacyVersionAccepted": 1,
+    "loadWrites": false,
+    "legacyMigration": "Strictly validate v1 before removing age categorization in memory; retain IDs, references, kind, note, source, timestamps and revision. New exports use v2; explicit successful commits persist v2.",
+    "unknownDataProtection": true
+  },
+  "dataBoundary": "Browser local only; separate Ink and Seed data and backups. No account, cloud sync or child-input upload.",
+  "aiGeneration": "Existing provider interface reserved and unconfigured; no real provider or Seed free-form chat."
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "four-thousand-weeks",
+    "kind": "new",
+    "summary": "把有限的一生，交给真正愿意承诺的事",
+    "changes": [
+      "区分四千周约数和寿命预测，以入口开放解释效率陷阱并给出反例",
+      "承诺桌限制三项并支持取消，明确暂缓的机会成本",
+      "加入照护与排班约束，实践以日历中可观察行为复看"
+    ],
+    "sources": [
+      {
+        "title": "Oliver Burkeman：Four Thousand Weeks 作者说明",
+        "url": "https://www.oliverburkeman.com/fourthousandweeks"
+      },
+      {
+        "title": "Macmillan：Four Thousand Weeks 书介",
+        "url": "https://us.macmillan.com/books/9780374159122/fourthousandweeks/"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-commit]",
+      "action": "依次选入4件，取消1件后再选",
+      "expected": "第四件被限制，取消后释放容量"
+    }
+  },
+  {
+    "id": "mans-search-for-meaning",
+    "kind": "new",
+    "summary": "在具体处境中回应生活，也保留悲伤和求助的位置",
+    "changes": [
+      "分开历史见证与因果证据，不以幸存推断德性或意义强弱",
+      "以有限自由和具体处境解释意义，加入现实伤害优先求助的边界",
+      "设计四种处境切换，不作诊断或治疗效果承诺"
+    ],
+    "sources": [
+      {
+        "title": "Beacon Press：Man’s Search for Meaning",
+        "url": "https://www.beacon.org/Mans-Search-for-Meaning-P602.aspx"
+      },
+      {
+        "title": "Viktor Frankl Institute：Logotherapy and Existential Analysis",
+        "url": "https://www.viktorfrankl.org/logotherapy.html"
+      }
+    ],
+    "interaction": {
+      "selector": "#meaning-situation",
+      "action": "切换持续伤害与失去处境",
+      "expected": "分别提示保护求助和允许悲伤"
+    }
+  },
+  {
+    "id": "principles-life-work",
+    "kind": "new",
+    "summary": "把经验写成可检验、可修订的判断依据",
+    "changes": [
+      "把作者五步过程与本站条件—行动—反证卡分开",
+      "加入透明的隐私成本、可信度领域边界和权力固化反例",
+      "三字段生成操作原则并提示空输入，可继续修订"
+    ],
+    "sources": [
+      {
+        "title": "Simon & Schuster：Principles: Life and Work",
+        "url": "https://www.simonandschuster.com/books/Principles/Ray-Dalio/Principles/9781501124020"
+      },
+      {
+        "title": "Ray Dalio：Use the 5-Step Process",
+        "url": "https://www.principles.com/principles/689e0214-1e50-4ca0-a5d2-5e223599badf/"
+      }
+    ],
+    "interaction": {
+      "selector": "#principle-build",
+      "action": "先空提交再补齐情境、行动、例外",
+      "expected": "空项提醒；补齐后生成包含例外的原则"
+    }
+  },
+  {
+    "id": "damn-right",
+    "kind": "new",
+    "summary": "从成功叙事中拆出判断、关系与时代条件",
+    "changes": [
+      "确认Janet Lowe独立传记书目，只按公开目录讨论范围，不捏造章节事件",
+      "以巴菲特1959相识与合作回顾为一手对读，说明来源晚于传记及纪念文本局限",
+      "证据抽屉分开同伴证词、目录与缺失对照，补充制度代价"
+    ],
+    "sources": [
+      {
+        "title": "Wiley：Damn Right! 扉页、致谢与目录",
+        "url": "https://catalogimages.wiley.com/images/db/pdf/R0471244732.fm.pdf"
+      },
+      {
+        "title": "Warren Buffett：2023 年股东信中的芒格纪念文字",
+        "url": "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-evidence]",
+      "action": "分别查看同伴证词和缺席对照",
+      "expected": "显示亲历证词限制与幸存偏差问题"
+    }
+  },
+  {
+    "id": "black-swan",
+    "kind": "new",
+    "summary": "当历史样本漏掉关键事件，判断该留下什么余量",
+    "changes": [
+      "区分观察者预期、重大影响和事后叙事，不把所有意外泛称黑天鹅",
+      "用九次+1与一次−99演示样本遗漏，不暗示真实概率或收益",
+      "保留可预测领域的校准价值，实践聚焦共同失效与恢复能力"
+    ],
+    "sources": [
+      {
+        "title": "Penguin Random House：The Black Swan 书介与作者访谈",
+        "url": "https://www.penguinrandomhouse.com/books/176226/the-black-swan-second-edition-by-nassim-nicholas-taleb/hardcover/"
+      },
+      {
+        "title": "Taleb & Douady：Mathematical Definition, Mapping, and Detection of (Anti)Fragility",
+        "url": "https://arxiv.org/abs/1208.1189"
+      }
+    ],
+    "interaction": {
+      "selector": "#tail-add",
+      "action": "纳入−99冲击再重置",
+      "expected": "平均由1.00变为−9.00，重置恢复"
+    }
+  },
+  {
+    "id": "antifragile",
+    "kind": "new",
+    "summary": "先问谁从波动中受益，再问代价由谁承担",
+    "changes": [
+      "把脆弱、稳健、反脆弱绑定到对象指标与范围，反对所有压力都有益",
+      "数学互动固定均值比较凸凹响应，同时以明确人为阈值中止失效外推",
+      "加入试错总预算、恢复时间和谁承担损失的制度检查"
+    ],
+    "sources": [
+      {
+        "title": "Penguin Random House：Antifragile",
+        "url": "https://www.penguinrandomhouse.com/books/176227/antifragile-by-nassim-nicholas-taleb/hardcover/"
+      },
+      {
+        "title": "Taleb & Douady：Mathematical Definition, Mapping, and Detection of (Anti)Fragility",
+        "url": "https://arxiv.org/abs/1208.1189"
+      }
+    ],
+    "interaction": {
+      "selector": "#response-shape, #stress-spread",
+      "action": "切换凸凹函数并把半幅提高到9",
+      "expected": "输出±25变化，再提示越过失效阈值"
+    }
+  },
+  {
+    "id": "poor-richards-almanack",
+    "kind": "new",
+    "summary": "让十八世纪的格言，接受今天生活条件的追问",
+    "changes": [
+      "明确现代选本与历年年鉴的区别，恢复笔名及印刷文化语境",
+      "格言采用原创改写，配对适用条件与反例，不以财富或忙碌评判德性",
+      "校样台按照护、耐用品总成本和过劳给出不同改写"
+    ],
+    "sources": [
+      {
+        "title": "Modern Library：Wit and Wisdom from Poor Richard’s Almanack",
+        "url": "https://www.penguinrandomhouse.com/books/55619/wit-and-wisdom-from-poor-richards-almanack-by-benjamin-franklin/"
+      },
+      {
+        "title": "Library of Congress：Benjamin Franklin, Printer and Writer",
+        "url": "https://www.loc.gov/exhibits/franklin/franklin-printer.html"
+      }
+    ],
+    "interaction": {
+      "selector": "#almanack-context",
+      "action": "切换照护与易损物品处境",
+      "expected": "显示照护劳动约束与总成本核算"
+    }
+  },
+  {
+    "id": "buffett-shareholder-letters",
+    "kind": "revised",
+    "summary": "让资本配置与所有者收益接受成本、竞争和估计误差的检验",
+    "changes": [
+      "直接重写长期持有、增量资本回报、回购流动性与确定性表述",
+      "资本配置章节加入纺织业务竞争回应的历史反例",
+      "会计章节增加所有者收益估计结构及维持投入互动",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构",
+      "按出版方英文第 4 版目录原位修正独立序篇、第八章税务和第九章伯克希尔五十年及未来，标明中文章名为本站译写"
+    ],
+    "sources": [
+      {
+        "title": "Berkshire Hathaway：1985 年股东信，纺织业务关闭",
+        "url": "https://www.berkshirehathaway.com/letters/1985.html"
+      },
+      {
+        "title": "Berkshire Hathaway：1986 年股东信，所有者收益附录",
+        "url": "https://www.berkshirehathaway.com/letters/1986.html"
+      },
+      {
+        "title": "Carolina Academic Press：英文第 4 版扉页与目录",
+        "url": "https://cap-press.com/pdf/9781611637588.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#maintenance-cost, #owner-calculate",
+      "action": "维持投入改成80后重算",
+      "expected": "示意所有者收益40"
+    }
+  },
+  {
+    "id": "peter-lynch-stock-scout",
+    "kind": "revised",
+    "summary": "把生活线索推进到财务证伪，限制十倍股与长期持有叙事",
+    "changes": [
+      "直接修订十倍股、周期估值及只等故事改变的退出表述",
+      "用作者公开序言的购物经历说明熟悉经验也会限制观察",
+      "研究台按排队、收入、现金流、负债切换证伪问题",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构"
+    ],
+    "sources": [
+      {
+        "title": "Simon & Schuster：One Up On Wall Street，公开序言",
+        "url": "https://www.simonandschuster.com/books/One-Up-On-Wall-Street/Peter-Lynch/9780743200400"
+      },
+      {
+        "title": "Fidelity：Investing legends 教学逐字稿",
+        "url": "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Transcript_Investing%20legends_v2.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#lynch-evidence",
+      "action": "选择经营现金流下降",
+      "expected": "提示现金流与利润分离，检查营运资本与季节性"
+    }
+  },
+  {
+    "id": "intelligent-investor",
+    "kind": "revised",
+    "summary": "把安全边际从漂亮折价图推进到估值误差与失效结构",
+    "changes": [
+      "修订进取型风险、价格波动及低价等于安全的简化",
+      "安全边际章节增加价值下限敏感性互动，拒绝非正输入",
+      "组合章节区分分散、流动性与估值纪律，保留bar-row布局选择器",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构",
+      "末尾安全边际改为部分估计误差缓冲，补充集中度、流动性、共同失效及永久损失边界"
+    ],
+    "sources": [
+      {
+        "title": "HarperCollins：The Intelligent Investor, Revised Edition",
+        "url": "https://www.harpercollins.com/products/the-intelligent-investor-rev-ed-benjamin-graham"
+      },
+      {
+        "title": "Berkshire Hathaway：1987 年股东信",
+        "url": "https://www.berkshirehathaway.com/letters/1987.html"
+      }
+    ],
+    "interaction": {
+      "selector": "#value-low, #safety-check",
+      "action": "价值下限从80改为60",
+      "expected": "缓冲变为−25.0%，不形成交易建议"
+    }
+  },
+  {
+    "id": "poor-charlies-almanack",
+    "kind": "revised",
+    "summary": "把模型清单转为互相冲突也能接受证据检验的决策过程",
+    "changes": [
+      "直接修正逆向必胜、预期价值足够和时间必然复利等表述",
+      "订单例子让激励、机会成本、因果对照与失效提出不同问题",
+      "能力圈以可核查经验、预测反馈和不知道校准",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构",
+      "末尾逆向检查与安全边际取消一定失败和免受未知伤害保证，说明未知冲击及耐心复用的条件"
+    ],
+    "sources": [
+      {
+        "title": "PCA Publications：Poor Charlie’s Almanack",
+        "url": "https://www.poorcharliesalmanack.com/pca.php"
+      },
+      {
+        "title": "Berkshire Hathaway：2023 年股东信中的合作回顾",
+        "url": "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#model-view",
+      "action": "从激励切换因果对照",
+      "expected": "提出未采用奖励团队、季节及客户结构等反证"
+    }
+  },
+  {
+    "id": "rockefeller-wealth-archive",
+    "kind": "revised",
+    "summary": "让效率、垄断与慈善分别接受事实和公共问责的检验",
+    "changes": [
+      "替换单人财富范式和未经限定的研究概括，区分效率与市场权力",
+      "加入1896日常退出、1911拆分及1913基金会建制事实",
+      "透镜切换覆盖竞争者和公共议程决定权，补充幸存偏差实践",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构"
+    ],
+    "sources": [
+      {
+        "title": "Rockefeller Archive Center：John D. Rockefeller 人物档案",
+        "url": "https://rockarch.org/resources/about-the-rockefellers/john-d-rockefeller-sr/"
+      },
+      {
+        "title": "Rockefeller Archive Center：基金会机构史",
+        "url": "https://resource.rockarch.org/story/rockefeller-foundation-history-origins-to-2013/"
+      }
+    ],
+    "interaction": {
+      "selector": "#archive-lens",
+      "action": "切换慈善与公共决定",
+      "expected": "询问谁有决定权、谁提出需求及谁评价效果"
+    }
+  },
+  {
+    "id": "naval-almanack",
+    "kind": "revised",
+    "summary": "把专长和低复制成本放回需求、维护与生活约束",
+    "changes": [
+      "直接修订不需许可、所有回报来自复利及幸福仅在内部的绝对表述",
+      "在专长章节增加真实用户反馈，在杠杆章节加入制作＋支持成本比较",
+      "保留黑金网格，补充生活资源约束和复利类比局限",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构"
+    ],
+    "sources": [
+      {
+        "title": "Almanack of Naval Ravikant：编辑与全书说明",
+        "url": "https://www.navalmanack.com/"
+      },
+      {
+        "title": "Find a Position of Leverage：公开整理原文",
+        "url": "https://www.navalmanack.com/almanack-of-naval-ravikant/find-a-position-of-leverage"
+      }
+    ],
+    "interaction": {
+      "selector": "#reuse-count, #reuse-calculate",
+      "action": "人数改为30后比较",
+      "expected": "可复用说明总投入9.0小时"
+    }
+  },
+  {
+    "id": "power-of-now",
+    "kind": "revised",
+    "summary": "把灵性觉察与事实、情绪及行动区分，避免医学化和压制性理解",
+    "changes": [
+      "直接标明pain-body为灵性隐喻，取消实体化和医学化理解",
+      "时间与接纳章节补上合理计划、事实不等于认可、边界和求助",
+      "三步注意力练习可以睁眼、停止和重来，不要求压制情绪或停止思考",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构"
+    ],
+    "sources": [
+      {
+        "title": "Eckhart Tolle：The Power of Now 公开节选",
+        "url": "https://eckharttolle.com/power-of-now-excerpt/"
+      },
+      {
+        "title": "New World Library：The Power of Now",
+        "url": "https://newworldlibrary.com/product/the-power-of-now"
+      }
+    ],
+    "interaction": {
+      "selector": "#presence-next",
+      "action": "点击两次",
+      "expected": "从看见到分开，再转向具体行动"
+    }
+  },
+  {
+    "id": "twelve-rules-for-life",
+    "kind": "revised",
+    "summary": "把十二条人生主张放回证据层次、互相制约的价值与行动边界",
+    "changes": [
+      "将四成长阶段改为本站阅读视角，将隐藏法则标成非第十三条",
+      "直接修订姿态等于勇气、先完善自己才批评和牺牲等于意义的暗示",
+      "情境辨认区分个人约定、公共制度、对话与挑战，补充非羞辱边界",
+      "清理内容副本遗留引用占位符，保留原稿和现有视觉结构"
+    ],
+    "sources": [
+      {
+        "title": "Penguin Random House：12 Rules for Life 书介与目录",
+        "url": "https://penguinrandomhousehighereducation.com/book/?isbn=9780345816023"
+      },
+      {
+        "title": "Jordan B. Peterson：公开前置页及目录",
+        "url": "https://www.jordanbpeterson.com/wp-content/uploads/2017/12/12_Rules_Christmas_Package.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#rule-scene",
+      "action": "切换团队不公平分工",
+      "expected": "明确无需先把个人生活完善才可提出公共问题"
+    }
+  }
+]

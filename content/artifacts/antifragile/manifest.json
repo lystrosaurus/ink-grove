@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "antifragile",
+  "slug": "antifragile",
+  "title": "反脆弱",
+  "subtitle": "先问谁从波动中受益，再问代价由谁承担",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Nassim Nicholas Taleb",
+  "topics": [
+    "风险",
+    "系统",
+    "决策"
+  ],
+  "concepts": [
+    "系统思维",
+    "安全边际",
+    "反馈",
+    "激励机制"
+  ],
+  "visualStyle": "copper-convexity-workshop",
+  "related": [
+    "thinking-in-systems",
+    "poor-charlies-almanack"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "以系统边界和反馈检查反脆弱发生在哪一层"
+    },
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "margin-of-safety",
+      "label": "用安全余量约束试错和不可逆损失"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/antifragile/index.html"
+  },
+  "cover": "/artifacts/antifragile/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.penguinrandomhouse.com/books/176227/antifragile-by-nassim-nicholas-taleb/hardcover/",
+      "https://arxiv.org/abs/1208.1189"
+    ],
+    "derivedFrom": []
+  }
+}

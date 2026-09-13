@@ -60,9 +60,11 @@
   "featured": false,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/thinking-framework-core-map.html"
+      "file:materials/thinking-framework-core-map.html",
+      "https://donellameadows.org/archives/dancing-with-systems/",
+      "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
     ],
     "derivedFrom": []
   }

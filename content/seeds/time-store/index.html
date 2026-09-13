@@ -5,7 +5,7 @@
 details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border-radius:14px;max-width:700px}summary{cursor:pointer;min-height:44px;padding:9px 0;font-weight:600}summary:focus-visible{outline:3px solid #96713f;outline-offset:4px}details p{margin:12px 0}details button{margin:4px 4px 4px 0}#deeper-result{min-height:28px}details[open] summary{margin-bottom:10px}</style></head><body><main>
 <header><p class="kicker">选择路口 / 今天的时间商店</p><h1>每一个选择都有交换</h1><p id="story"></p></header>
 <div class="awning" aria-hidden="true"></div><section class="shop"><div class="budget"><span id="budget-label"></span><div id="coins" class="coins" aria-hidden="true"></div></div><p id="commitment" hidden></p><div id="planning"><h2 id="question">你想怎样安排这段时间？</h2><div id="activities" class="activities"></div><details><summary>再想一步</summary><p>如果想给自己留十分钟，等一等、慢慢收拾，原来的安排要怎样交换？</p><button id="reserve" aria-pressed="false">预留十分钟</button><p>可以先放回一件事，再留时间；也可以取消预留。哪件事是你最想保留的？</p></details><button id="checkout" class="checkout">看看这次交换</button></div></section>
-<section class="receipt" aria-label="时间小票"><p id="result" role="status" aria-live="polite">每一种安排都可以有理由。时间票用过之后，可以点同一件事把它放回。</p></section>
+<section class="receipt" aria-label="时间小票"><p id="result" role="status" aria-live="polite">每一种安排都可以有理由。时间票是这里的约定，现实活动用多久可以和家人商量，也给换活动留一点时间。点同一件事能把票放回。</p></section>
 <aside id="reflection" class="reflection" hidden><h2 id="reflection-question" tabindex="-1">这次的交换，哪一点是你愿意的？</h2><p id="real-life"></p><small>可以在花园页面的反思框里记下你的理由，再亲手保存。</small><button id="again">换一种安排</button></aside>
 </main><script>
 (() => {
@@ -51,7 +51,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
     const chosen = [...selected].map(index => settings.options[index][1]);
     const left = settings.total-spent();
     const other = settings.options.filter((_,index) => !selected.has(index)).map(([,label]) => label);
-    $('result').textContent = '这次留下：'+chosen.join('、')+'。'+(left ? '还保留了 '+left*settings.unit+' 分钟空白。' : '时间票都安排好了。')+'这份安排暂时没有包含：'+(other.join('、') || '没有其他项目')+'。'+'这些事没有变得不好，只是这一次没有选。'+(settings.fixed ? '另外预留了 10 分钟，可以慢慢收拾或等一等。' : '');
+    $('result').textContent = '这次留下：'+chosen.join('、')+'。'+(left ? '还保留了 '+left*settings.unit+' 分钟空白。' : '时间票都安排好了。')+'这份安排暂时没有包含：'+(other.join('、') || '没有其他项目')+'。'+'这些事没有变得不好，只是这一次没有选。里面最想做的那一件，是这次交换时特别值得想一想的；不用把所有没选的事加成一份遗憾。'+(settings.fixed ? '另外预留了 10 分钟，可以慢慢收拾或等一等。' : '');
     $('planning').hidden = true; $('reflection').hidden = false; $('reflection-question').focus();
   });
   $('again').addEventListener('click', () => { $('planning').hidden = false; $('reflection').hidden = true; $('result').textContent = '保留这份安排作起点。点一件已选的事，就可以把时间票拿回来再交换。'; $('activities').querySelector('button').focus(); });

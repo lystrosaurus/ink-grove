@@ -96,4 +96,6 @@ Seed 的本地记录是用户报告，不能证明孩子已经在生活中形成
 | 异常保护   | 错误产品／版本／损坏备份拒绝覆盖；配额或存储失败不显示保存成功；冲突不静默丢失；原始恢复数据可导出         |
 | 发布       | 对同一份产物做本机生产检查，再用 CloudBase `--safe --verify` 发布；公网验证 `/seed` 深链接、实际正文和互动 |
 
-内容与模型测试执行 `npm test`，浏览器验证执行 `npm run test:e2e`，发布前执行 `npm run build` 并检查生产预览。本版执行状态维护在 [1.3 发布验收记录](../artifacts/verification-1.3.json)，[1.2 记录](../artifacts/verification-1.2.json)保留历史验证结果。共用 Renderer 或存储机制变化时同时运行 Ink 回归；操作步骤、CLI 3.8.1 根路径限制和回滚流程统一维护在[部署说明](deployment.md)。
+1.4进一步校准六个Seed的隐喻、任务约定、现实迁移与家长提示：天气不固定对应情绪，观察框也会遗漏信息，时间票并非现实活动标准时长，分组须说明约定，计划可调整，积木预设模型不是真实物理。统一体验与数据契约保持不变，逐件说明见 [内容编辑记录](../content/EDITORIAL.md)。
+
+内容与模型测试执行 `npm test`，浏览器验证执行 `npm run test:e2e`，发布前执行 `npm run build` 并检查生产预览。本版状态维护在 [1.4发布验收记录](../artifacts/verification-1.4.json)，[1.3记录](../artifacts/verification-1.3.json)保留统一体验的历史结果。共用Renderer或存储机制变化时同时运行Ink回归；CLI根路径限制和回滚流程统一维护在[部署说明](deployment.md)。

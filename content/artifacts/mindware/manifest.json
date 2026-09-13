@@ -53,9 +53,11 @@
   "featured": false,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/mindware_logic_thinking_single_page.html"
+      "file:materials/mindware_logic_thinking_single_page.html",
+      "https://us.macmillan.com/books/9780374536244/mindware/",
+      "https://www.coursera.org/learn/mindware"
     ],
     "derivedFrom": []
   }

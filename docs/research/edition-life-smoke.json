@@ -1,0 +1,97 @@
+[
+  {
+    "id": "four-thousand-weeks",
+    "steps": [
+      {
+        "selector": "[data-commit]:first-of-type",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#commit-result",
+    "expectedText": "本阶段投入 1 件"
+  },
+  {
+    "id": "mans-search-for-meaning",
+    "steps": [
+      {
+        "selector": "#meaning-situation",
+        "action": "select",
+        "value": "harm"
+      }
+    ],
+    "resultSelector": "#meaning-response",
+    "expectedText": "保护与求助"
+  },
+  {
+    "id": "principles-life-work",
+    "steps": [
+      {
+        "selector": "#principle-if",
+        "action": "fill",
+        "value": "需求有两处未确认"
+      },
+      {
+        "selector": "#principle-then",
+        "action": "fill",
+        "value": "先澄清验收条件"
+      },
+      {
+        "selector": "#principle-unless",
+        "action": "fill",
+        "value": "已有书面确认"
+      },
+      {
+        "selector": "#principle-build",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#principle-result",
+    "expectedText": "已有书面确认"
+  },
+  {
+    "id": "damn-right",
+    "steps": [
+      {
+        "selector": "[data-evidence=\"tribute\"]",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#evidence-result",
+    "expectedText": "亲历者证词"
+  },
+  {
+    "id": "black-swan",
+    "steps": [
+      {
+        "selector": "#tail-add",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#tail-result",
+    "expectedText": "-9.00"
+  },
+  {
+    "id": "antifragile",
+    "steps": [
+      {
+        "selector": "#response-shape",
+        "action": "select",
+        "value": "concave"
+      }
+    ],
+    "resultSelector": "#convex-result",
+    "expectedText": "凹性损失 25"
+  },
+  {
+    "id": "poor-richards-almanack",
+    "steps": [
+      {
+        "selector": "#almanack-context",
+        "action": "select",
+        "value": "care"
+      }
+    ],
+    "resultSelector": "#maxim-result",
+    "expectedText": "照护劳动"
+  }
+]

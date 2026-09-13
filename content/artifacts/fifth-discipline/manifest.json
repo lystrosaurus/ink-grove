@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "fifth-discipline",
+  "slug": "fifth-discipline",
+  "title": "第五项修炼",
+  "subtitle": "团队如何看见自己共同制造的结果",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Peter M. Senge",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "系统思维",
+    "反馈",
+    "不断更新",
+    "思维模型"
+  ],
+  "visualStyle": "forest-organizational-learning-studio",
+  "related": [
+    "thinking-in-systems",
+    "governing-commons",
+    "seven-habits"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "用存量、延迟与回路理解团队问题"
+    },
+    {
+      "target": "governing-commons",
+      "type": "related",
+      "concept": "institutional-power",
+      "label": "区分共同学习和制度安排的边界"
+    },
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "renewal",
+      "label": "从个人更新走向团队持续学习"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/fifth-discipline/index.html"
+  },
+  "cover": "/artifacts/fifth-discipline/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.penguinrandomhouse.com/books/163984/the-fifth-discipline-by-peter-m-senge/",
+      "https://www.solonline.org/foundations-for-leadership-fall-2020/",
+      "https://www.solonline.org/wp-content/uploads/2019/03/sol_reflections_14.3.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

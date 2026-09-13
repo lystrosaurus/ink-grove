@@ -1,0 +1,115 @@
+[
+  {
+    "id": "good-strategy-bad-strategy",
+    "steps": [
+      {
+        "selector": "#action-guide",
+        "action": "click"
+      },
+      {
+        "selector": "#action-measure",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#strategy-result",
+    "expectedText": "相互支持"
+  },
+  {
+    "id": "design-everyday-things",
+    "steps": [
+      {
+        "selector": "#door-push",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#door-result",
+    "expectedText": "门已打开"
+  },
+  {
+    "id": "nonviolent-communication",
+    "steps": [
+      {
+        "selector": "#request-kind",
+        "action": "select",
+        "value": "request"
+      },
+      {
+        "selector": "#hear-no",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#dialogue-result",
+    "expectedText": "另一种安排"
+  },
+  {
+    "id": "pyramid-principle",
+    "steps": [
+      {
+        "selector": "#claim-scope",
+        "action": "select",
+        "value": "all"
+      }
+    ],
+    "resultSelector": "#pyramid-result",
+    "expectedText": "越过证据范围"
+  },
+  {
+    "id": "complexity-guided-tour",
+    "steps": [
+      {
+        "selector": "#evolve-step",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#automaton-status",
+    "expectedText": "第 1 代 · 活跃 2"
+  },
+  {
+    "id": "governing-commons",
+    "steps": [
+      {
+        "selector": "#harvest",
+        "action": "fill",
+        "value": "10"
+      },
+      {
+        "selector": "#commons-step",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#commons-stock",
+    "expectedText": "80"
+  },
+  {
+    "id": "fifth-discipline",
+    "steps": [
+      {
+        "selector": "#team-action",
+        "action": "select",
+        "value": "learn"
+      },
+      {
+        "selector": "#learning-step",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#team-backlog",
+    "expectedText": "44"
+  },
+  {
+    "id": "nudge",
+    "steps": [
+      {
+        "selector": "#default-mode",
+        "action": "select",
+        "value": "off"
+      },
+      {
+        "selector": "#confirm-choice",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#choice-result",
+    "expectedText": "不接收"
+  }
+]

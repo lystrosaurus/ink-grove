@@ -59,9 +59,11 @@
   "featured": false,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/peter_lynch_stock_scout.html"
+      "file:materials/peter_lynch_stock_scout.html",
+      "https://www.simonandschuster.com/books/One-Up-On-Wall-Street/Peter-Lynch/9780743200400",
+      "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Transcript_Investing%20legends_v2.pdf"
     ],
     "derivedFrom": []
   }

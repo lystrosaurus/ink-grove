@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "poor-richards-almanack",
+  "slug": "poor-richards-almanack",
+  "title": "穷理查年鉴选读",
+  "subtitle": "让十八世纪的格言，接受今天生活条件的追问",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Benjamin Franklin",
+  "topics": [
+    "历史",
+    "生活",
+    "哲学"
+  ],
+  "concepts": [
+    "微小改进",
+    "机会成本",
+    "责任与意义",
+    "判断力"
+  ],
+  "visualStyle": "letterpress-almanac",
+  "related": [
+    "naval-almanack",
+    "seven-habits"
+  ],
+  "connections": [
+    {
+      "target": "naval-almanack",
+      "type": "related",
+      "concept": "compounding",
+      "label": "对照印刷时代勤勉格言与数字时代的杠杆观"
+    },
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "principles",
+      "label": "比较日常德性格言与原则导向的行动"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/poor-richards-almanack/index.html"
+  },
+  "cover": "/artifacts/poor-richards-almanack/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.penguinrandomhouse.com/books/55619/wit-and-wisdom-from-poor-richards-almanack-by-benjamin-franklin/",
+      "https://www.loc.gov/exhibits/franklin/franklin-printer.html"
+    ],
+    "derivedFrom": []
+  }
+}

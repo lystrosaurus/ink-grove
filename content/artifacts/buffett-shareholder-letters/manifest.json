@@ -60,9 +60,12 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/buffett_shareholder_letters_owners_manual.html"
+      "file:materials/buffett_shareholder_letters_owners_manual.html",
+      "https://www.berkshirehathaway.com/letters/1985.html",
+      "https://www.berkshirehathaway.com/letters/1986.html",
+      "https://cap-press.com/pdf/9781611637588.pdf"
     ],
     "derivedFrom": []
   }

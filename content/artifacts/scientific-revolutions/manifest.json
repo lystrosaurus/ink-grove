@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "scientific-revolutions",
+  "slug": "scientific-revolutions",
+  "title": "科学革命的结构",
+  "subtitle": "观察科学共同体如何定义问题、处理异常与比较框架",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Thomas S. Kuhn",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "思维模型",
+    "假设验证",
+    "主题阅读",
+    "信息质量"
+  ],
+  "visualStyle": "scientific-strata-archive",
+  "related": [
+    "great-mental-models",
+    "how-to-read-a-book",
+    "mindware"
+  ],
+  "connections": [
+    {
+      "target": "great-mental-models",
+      "type": "extends",
+      "concept": "mental-models",
+      "label": "追问解释框架如何在共同体与历史中形成"
+    },
+    {
+      "target": "how-to-read-a-book",
+      "type": "supports",
+      "concept": "syntopical-reading",
+      "label": "比较术语和问题，保留历史论证之间的分歧"
+    },
+    {
+      "target": "mindware",
+      "type": "related",
+      "concept": "hypothesis-testing",
+      "label": "区分一次偏离、辅助假设与解释框架的检验"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/scientific-revolutions/index.html"
+  },
+  "cover": "/artifacts/scientific-revolutions/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html",
+      "https://press.uchicago.edu/ucp/books/book/chicago/L/bo181541288.html"
+    ],
+    "derivedFrom": []
+  }
+}

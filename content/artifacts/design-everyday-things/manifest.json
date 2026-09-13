@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "design-everyday-things",
+  "slug": "design-everyday-things",
+  "title": "设计心理学 1",
+  "subtitle": "让人看得出、做得到，也能知道发生了什么",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Don Norman",
+  "topics": [
+    "设计",
+    "沟通"
+  ],
+  "concepts": [
+    "心理表征",
+    "反馈",
+    "主动选择"
+  ],
+  "visualStyle": "cobalt-object-museum",
+  "related": [
+    "cybernetics",
+    "nudge",
+    "thinking-framework"
+  ],
+  "connections": [
+    {
+      "target": "cybernetics",
+      "type": "related",
+      "concept": "feedback",
+      "label": "控制反馈怎样成为人能理解的操作反馈"
+    },
+    {
+      "target": "nudge",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "区分让操作清楚与引导人作出特定选择"
+    },
+    {
+      "target": "thinking-framework",
+      "type": "related",
+      "concept": "mental-models",
+      "label": "用概念模型解释用户对系统行为的预期"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/design-everyday-things/index.html"
+  },
+  "cover": "/artifacts/design-everyday-things/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://mitpress.mit.edu/9780262525671/the-design-of-everyday-things/",
+      "https://jnd.org/preface-design-of-everyday-things-revised-edition/"
+    ],
+    "derivedFrom": []
+  }
+}

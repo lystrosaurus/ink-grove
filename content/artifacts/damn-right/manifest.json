@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "damn-right",
+  "slug": "damn-right",
+  "title": "查理·芒格传",
+  "subtitle": "从成功叙事中拆出判断、关系与时代条件",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Janet Lowe",
+  "topics": [
+    "传记",
+    "商业",
+    "决策"
+  ],
+  "concepts": [
+    "判断力",
+    "能力圈",
+    "制度与权力",
+    "认知偏差"
+  ],
+  "visualStyle": "sepia-biography-dossier",
+  "related": [
+    "poor-charlies-almanack",
+    "rockefeller-wealth-archive"
+  ],
+  "connections": [
+    {
+      "target": "poor-charlies-almanack",
+      "type": "related",
+      "concept": "mental-models",
+      "label": "用独立传记情境检视演讲中的模型与判断"
+    },
+    {
+      "target": "rockefeller-wealth-archive",
+      "type": "related",
+      "concept": "institutional-power",
+      "label": "比较人物能力与制度环境对成功叙事的作用"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/damn-right/index.html"
+  },
+  "cover": "/artifacts/damn-right/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://catalogimages.wiley.com/images/db/pdf/R0471244732.fm.pdf",
+      "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

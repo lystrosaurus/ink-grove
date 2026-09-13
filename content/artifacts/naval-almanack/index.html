@@ -228,6 +228,7 @@ h1{
   .framework,.principles,.compare{grid-template-columns:1fr}
   .footer{flex-direction:column;align-items:flex-start}
 }
+.edition-note{margin-top:26px;padding:22px;border:1px solid var(--line);border-left:4px solid var(--gold,var(--wine,var(--deep)));line-height:1.8;text-align:left}.edition-note h3{font-size:22px;margin:0 0 12px}.edition-note p{font-size:15px;margin:12px 0;max-width:960px}.edition-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.edition-note label{display:block;font-size:15px;margin:14px 0 8px}.edition-note button,.edition-note select,.edition-note input{font:inherit;padding:10px;max-width:100%;color:inherit;background:transparent;border:1px solid currentColor;border-radius:4px}.edition-note select{background:var(--paper,#171612)}.edition-note button{cursor:pointer;min-height:44px;margin:10px 8px 0 0}.edition-note output{display:block;padding:16px;border:1px solid var(--line);margin-top:16px;font-size:16px}.edition-note :focus-visible{outline:3px solid var(--gold,var(--wine,var(--deep)));outline-offset:3px}.edition-sources{margin:20px 0;font-size:14px}.edition-sources a{color:inherit;overflow-wrap:anywhere}.edition-note strong{font-weight:800}@media(max-width:600px){.edition-note{padding:18px 14px}.edition-note input,.edition-note select{width:100%}}
 </style>
 </head>
 <body>
@@ -299,11 +300,13 @@ h1{
       <div class="principle"><b>难以替代</b><span>不是简单流程，而是判断、创造与经验。</span></div>
       <div class="principle"><b>可被放大</b><span>能借助杠杆触达更多人。</span></div>
     </div>
-  </article>
+
+<aside class="edition-note"><h3>专长不是天赋标签</h3><p>纳瓦尔的公开整理强调好奇心、特定知识、需求与可扩展交付之间的关系。本站把它改写为一个可试验的问题：别人愿意反复请你解决什么困难，你又愿意长期研究哪一部分？<a href="https://www.navalmanack.com/almanack-of-naval-ravikant/find-a-position-of-leverage">公开原文</a></p><p>例如能把复杂说明写成别人真能使用的工具，可能来自专业知识、表达和用户反馈的组合。只觉得自己独特不够，需要让 3 位真实使用者尝试并指出卡住的位置；失败反馈不等于你没有天赋，而可能意味着需求理解尚不准确。</p></aside>
+</article>
 
   <article class="card span6">
     <div class="kicker">04 / LEVERAGE</div>
-    <h2>最重要的杠杆，是“不需要许可”的杠杆</h2>
+    <h2>低复制成本的杠杆，也需要需求与维护</h2>
     <div class="compare">
       <div class="col bad">
         <h3>传统杠杆</h3>
@@ -318,7 +321,9 @@ h1{
         <div class="row">产品可以低成本复制</div>
       </div>
     </div>
-  </article>
+
+<aside class="edition-note"><h3>本站复制实验：内容免费复制，服务并不免费</h3><p>虚构任务：每次一对一讲解需要 30 分钟；做一份可复用说明需要 4 小时，每位使用者仍需 10 分钟支持。固定制作成本加持续支持，才是此处的完整时间成本。传播、授权与质量成本尚未计入。</p><label for="reuse-count">实际使用人数（1—1000）</label><input id="reuse-count" type="number" min="1" max="1000" value="10"><button id="reuse-calculate">比较总投入</button><output id="reuse-result" aria-live="polite">10 人：逐次讲解 5.0 小时，可复用说明 5.7 小时。使用不足时，制作未必更省时。</output><p>“不需许可”主要讨论启动代码、媒体等作品时较少依赖资本与雇佣批准，并不表示分发平台、版权、用户信任或持续维护不存在。可复制也不等于有人需要；把没有需求的东西复制一万次，仍可能没有产生可用价值。</p></aside>
+</article>
 
   <article class="card span4">
     <div class="kicker">05 / JUDGMENT</div>
@@ -331,16 +336,18 @@ h1{
 
   <article class="card span8">
     <div class="kicker">06 / LONG-TERM GAMES</div>
-    <h2>所有真正巨大的回报，都来自复利</h2>
+    <h2>复用与长期合作，有机会形成累积效应</h2>
     <div class="principles">
       <div class="principle"><b>关系复利</b><span>长期合作减少交易成本，增加信任。</span></div>
-      <div class="principle"><b>能力复利</b><span>长期专注会形成越来越难被替代的优势。</span></div>
-      <div class="principle"><b>声誉复利</b><span>持续兑现承诺，会让机会主动找到你。</span></div>
+      <div class="principle"><b>能力复利</b><span>专注配合反馈可能形成优势；知识过时或方向错误也会削弱积累。</span></div>
+      <div class="principle"><b>声誉复利</b><span>持续兑现承诺可能积累信任，仍受环境与机会分配影响。</span></div>
       <div class="principle"><b>资本复利</b><span>让资产持续产生回报，而不是只依赖工资。</span></div>
       <div class="principle"><b>知识复利</b><span>基础理解越深，新知识吸收越快。</span></div>
       <div class="principle"><b>时间复利</b><span>减少低价值选择，把时间留给高杠杆事项。</span></div>
     </div>
-  </article>
+
+<aside class="edition-note"><h3>不要把人生画成恒定回报曲线</h3><p>数学复利需要能够再投入且不中断的回报。知识、声誉、关系在这里是类比，增长可能停滞、折损或受他人选择影响。本站的实践是留下一份可复用成果，并在 1 个月后检查谁真正使用、维护花了多久、它是否换回了你想要的时间。</p></aside>
+</article>
 
   <article class="card span6">
     <div class="kicker">07 / FREEDOM</div>
@@ -358,37 +365,41 @@ h1{
 
   <article class="card span6">
     <div class="kicker">08 / HAPPINESS</div>
-    <h2>幸福不是外部奖励，而是一种内部状态</h2>
+    <h2>纳瓦尔的幸福观：减少比较，观察欲望</h2>
     <p>
       当一个人的幸福完全依赖外部比较、身份和未来奖励时，就很难真正稳定。
       纳瓦尔强调减少欲望、减少比较、重视当下。
     </p>
     <div class="principles">
       <div class="principle"><b>少比较</b><span>地位竞争几乎没有终点。</span></div>
-      <div class="principle"><b>少欲望</b><span>每一个欲望，都是对当前状态“不够好”的承诺。</span></div>
+      <div class="principle"><b>少欲望</b><span>区分来自比较的欲望与真实需要；安全、照护与基本生活不能靠放下欲望代替。</span></div>
       <div class="principle"><b>活在当下</b><span>幸福更接近一种不再抗拒此刻的状态。</span></div>
     </div>
-  </article>
+
+<aside class="edition-note"><h3>一种个人哲学，不是幸福的统一成因</h3><p>这本书由 Eric Jorgenson 编辑，汇集纳瓦尔的公开表达。幸福部分提供可对读的生活观点，不构成普遍心理机制的证明。<a href="https://www.navalmanack.com/">编辑与全书说明</a></p><p>本站认为减少比较可能给注意力留空间，但幸福也受关系、健康、劳动和生活条件影响。收入不稳定或照护责任繁重时，更多时间自主权需要实际资源和支持。不能把无法自由安排时间归结为当事人欲望太多。</p></aside>
+</article>
 
   <article class="card span12">
     <div class="kicker">09 / OPERATING SYSTEM</div>
     <h2>把《纳瓦尔宝典》压缩成一套人生操作系统</h2>
     <div class="framework">
-      <div class="box"><div class="tag">STEP 01</div><b>找到专长</b><p>做那些最像你自己的事情。</p></div>
+      <div class="box"><div class="tag">STEP 01</div><b>找到专长</b><p>从好奇心与真实需要交汇处试做，靠外部反馈辨认专长。</p></div>
       <div class="box"><div class="tag">STEP 02</div><b>建立信誉</b><p>对结果负责，让别人愿意长期合作。</p></div>
       <div class="box"><div class="tag">STEP 03</div><b>使用杠杆</b><p>让一次努力可以被复制和放大。</p></div>
-      <div class="box"><div class="tag">STEP 04</div><b>长期复利</b><p>少换方向，少换伙伴，让优势不断累积。</p></div>
+      <div class="box"><div class="tag">STEP 04</div><b>长期复利</b><p>在价值与合作条件仍成立时持续投入，出现重大反证就调整。</p></div>
       <div class="box"><div class="tag">STEP 05</div><b>换取自由</b><p>最终目标不是忙碌，而是时间与选择权。</p></div>
     </div>
   </article>
 
 </section>
 
+<aside class="edition-note edition-sources"><h3>本次深化的公开依据</h3><p>原视觉稿保留，相关章节由人与 AI 共同编辑。公开原书观点、历史资料与本站原创例子在邻近段落中区分；互动为本站设计，不代表原书原有工具。</p><ul><li><a href="https://www.navalmanack.com/" target="_blank" rel="noopener noreferrer">Almanack of Naval Ravikant：编辑与全书说明</a></li><li><a href="https://www.navalmanack.com/almanack-of-naval-ravikant/find-a-position-of-leverage" target="_blank" rel="noopener noreferrer">Find a Position of Leverage：公开整理原文</a></li></ul></aside>
 <footer class="footer">
   <strong>赚取财富的目的，不是炫耀，而是买回自己的时间。</strong>
   <div class="stamp">WEALTH · FREEDOM · PEACE</div>
 </footer>
 
 </main>
+<script>document.querySelector('#reuse-calculate').addEventListener('click',()=>{const f=document.querySelector('#reuse-count'),n=Number(f.value);document.querySelector('#reuse-result').textContent=f.value.trim()===''||!Number.isInteger(n)||n<1||n>1000?'请输入1—1000之间的整数人数。':n+' 人：逐次讲解 '+(n/2).toFixed(1)+' 小时，可复用说明 '+(4+n/6).toFixed(1)+' 小时。另需核对真实需求、维护和分发成本。';});</script>
 </body>
 </html>

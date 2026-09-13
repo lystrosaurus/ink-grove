@@ -59,9 +59,11 @@
   "featured": false,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/the_intelligent_investor_fortress.html"
+      "file:materials/the_intelligent_investor_fortress.html",
+      "https://www.harpercollins.com/products/the-intelligent-investor-rev-ed-benjamin-graham",
+      "https://www.berkshirehathaway.com/letters/1987.html"
     ],
     "derivedFrom": []
   }

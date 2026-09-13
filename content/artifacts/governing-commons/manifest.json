@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "governing-commons",
+  "slug": "governing-commons",
+  "title": "公共事物的治理之道",
+  "subtitle": "共享的水，怎样成为共同维护的制度",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Elinor Ostrom",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "制度与权力",
+    "激励机制",
+    "系统思维"
+  ],
+  "visualStyle": "watershed-institutional-fieldmap",
+  "related": [
+    "thinking-in-systems",
+    "economic-way-of-thinking",
+    "fifth-discipline"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "让公共资源存量与制度反馈出现在同一张图"
+    },
+    {
+      "target": "economic-way-of-thinking",
+      "type": "related",
+      "concept": "incentives",
+      "label": "追踪取用收益与维护成本由谁承担"
+    },
+    {
+      "target": "fifth-discipline",
+      "type": "related",
+      "concept": "institutional-power",
+      "label": "比较共同学习与规则执行各自的作用"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/governing-commons/index.html"
+  },
+  "cover": "/artifacts/governing-commons/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+      "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
+      "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/164465-ostrom-williamson-interview-transcript/"
+    ],
+    "derivedFrom": []
+  }
+}

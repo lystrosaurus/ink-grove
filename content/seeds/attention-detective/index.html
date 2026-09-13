@@ -9,7 +9,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
 <section class="desk" aria-labelledby="question"><div class="case"><div class="lens" aria-hidden="true"></div><div><h2 id="question"></h2><p id="hint"></p></div></div><div id="surface" class="surface"><div id="tray" class="tray" aria-label="标本观察桌"></div><aside id="toys" class="toys" aria-label="桌边的玩具"><span aria-hidden="true">✈</span><span aria-hidden="true">✿</span><span aria-hidden="true">♫</span></aside></div><div class="toolbar"><button id="tidy" aria-pressed="false">收起桌边玩具</button><button id="focus" aria-pressed="false">用观察框遮住无关标本</button></div></section>
 <p id="result" role="status" aria-live="polite">不用赶时间。可以先看看任务，再动手。</p>
 <aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>想留下一句话，可以回到花园页面的反思框里写下，再亲手保存。</small><div><button id="again">重新观察</button></div></aside>
-<details><summary>再想一步</summary><p>同一张桌子，如果问题变成“哪片叶子有小洞”，你的目光会怎样变？</p><button id="change-question" aria-pressed="false">只找有小洞的叶子</button><p>观察框会跟着问题改变。它帮你省了什么，又让你暂时少看到了什么？</p></details>
+<details><summary>再想一步</summary><p>同一张桌子，如果问题变成“哪片叶子有小洞”，你的目光会怎样变？</p><button id="change-question" aria-pressed="false">只找有小洞的叶子</button><p>观察框会跟着问题改变。它帮你省了什么，又让你暂时少看到了什么？拿开框，再看看被遮住的标本：如果想研究小花，现在的框还合适吗？</p></details>
 </main><script>
 (() => {
   const settings = {
@@ -37,7 +37,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
       if (!target(kind)) { $('result').textContent = holesOnly ? '这次在找带小洞的叶子。再看看叶片中间。' : '这次在找叶子。再看看叶子的形状。'; return; }
       found.add(index); button.setAttribute('aria-pressed','true');
       const complete = found.size === samples.filter(target).length;
-      $('result').textContent = complete ? '这次需要的叶子都放进观察框了。停一下，留意刚才你的目光是怎样移动的。' : '这片叶子已经放进观察框。你可以慢慢找下一片。';
+      $('result').textContent = complete ? '这次需要的叶子都放进观察框了。停一下，留意刚才你的目光是怎样移动的。' : '这片叶子已经放进观察框。它的哪一个特征符合这次的问题？再慢慢找下一片。';
       $('reflection').hidden = !complete;
     }); $('tray').append(button);
   });

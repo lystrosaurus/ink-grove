@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "non-designers-design-book",
+  "slug": "non-designers-design-book",
+  "title": "写给大家看的设计书",
+  "subtitle": "第4版 · 用对比、重复、对齐与亲密性让关系被看见",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Robin Williams",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "信息质量",
+    "注意力",
+    "结构化问题解决",
+    "反馈"
+  ],
+  "visualStyle": "typography-print-studio",
+  "related": [
+    "cybernetics",
+    "how-to-read-a-book",
+    "mckinsey-way"
+  ],
+  "connections": [
+    {
+      "target": "cybernetics",
+      "type": "related",
+      "concept": "feedback",
+      "label": "把页面中的行动与反馈联系到可观察的信息设计"
+    },
+    {
+      "target": "how-to-read-a-book",
+      "type": "related",
+      "concept": "active-reading",
+      "label": "让结构、层级与分组帮助读者主动理解"
+    },
+    {
+      "target": "mckinsey-way",
+      "type": "supports",
+      "concept": "structured-problem-solving",
+      "label": "先明确表达目的与内容关系，再组织视觉呈现"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/non-designers-design-book/index.html"
+  },
+  "cover": "/artifacts/non-designers-design-book/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.peachpit.com/store/non-designers-design-book-9780133966152",
+      "https://www.peachpit.com/content/images/9780133966152/samplepages/9780133966152.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

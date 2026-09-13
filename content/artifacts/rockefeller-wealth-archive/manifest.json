@@ -60,9 +60,11 @@
   "featured": false,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/rockefeller_wealth_myth_archive.html"
+      "file:materials/rockefeller_wealth_myth_archive.html",
+      "https://rockarch.org/resources/about-the-rockefellers/john-d-rockefeller-sr/",
+      "https://resource.rockarch.org/story/rockefeller-foundation-history-origins-to-2013/"
     ],
     "derivedFrom": []
   }

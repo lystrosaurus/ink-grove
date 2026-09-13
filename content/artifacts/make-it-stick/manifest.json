@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "make-it-stick",
+  "slug": "make-it-stick",
+  "title": "认知天性",
+  "subtitle": "从熟悉感转向能够独立提取、辨别与应用",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Peter C. Brown / Henry L. Roediger III / Mark A. McDaniel",
+  "topics": [
+    "思考",
+    "学习"
+  ],
+  "concepts": [
+    "主动阅读",
+    "反馈",
+    "心理表征",
+    "刻意练习"
+  ],
+  "visualStyle": "retrieval-card-workbench",
+  "related": [
+    "how-to-read-a-book",
+    "deliberate-practice",
+    "cognitive-awakening"
+  ],
+  "connections": [
+    {
+      "target": "how-to-read-a-book",
+      "type": "extends",
+      "concept": "active-reading",
+      "label": "在理解书后增加闭卷提取与延迟检查"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "related",
+      "concept": "deliberate-practice",
+      "label": "比较知识保持与技能纠错的训练目标"
+    },
+    {
+      "target": "cognitive-awakening",
+      "type": "supports",
+      "concept": "metacognition",
+      "label": "用实际提取校准自我理解的感觉"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/make-it-stick/index.html"
+  },
+  "cover": "/artifacts/make-it-stick/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.makeitstick.com/about-make-it-stick",
+      "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/"
+    ],
+    "derivedFrom": []
+  }
+}

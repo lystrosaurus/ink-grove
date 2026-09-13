@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "superforecasting",
+  "slug": "superforecasting",
+  "title": "超预测",
+  "subtitle": "给判断写上概率、截止时间和可以核对的结果",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Philip E. Tetlock / Dan Gardner",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "概率思维",
+    "判断力",
+    "反馈",
+    "信息质量"
+  ],
+  "visualStyle": "probability-weather-station",
+  "related": [
+    "mindware",
+    "managerial-judgment",
+    "great-mental-models"
+  ],
+  "connections": [
+    {
+      "target": "mindware",
+      "type": "extends",
+      "concept": "probability",
+      "label": "将基准率与统计推理落到可结算的预测"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "supports",
+      "concept": "cognitive-bias",
+      "label": "用事前概率记录约束后见之明"
+    },
+    {
+      "target": "great-mental-models",
+      "type": "extends",
+      "concept": "judgment",
+      "label": "为概率模型增加时间与评分条件"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/superforecasting/index.html"
+  },
+  "cover": "/artifacts/superforecasting/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/",
+      "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf"
+    ],
+    "derivedFrom": []
+  }
+}

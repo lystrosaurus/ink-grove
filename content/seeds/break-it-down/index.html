@@ -8,7 +8,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
 <section id="board" class="path-board" hidden><h2 id="question" tabindex="-1">哪一个小动作可以先开始？</h2><div id="steps" class="steps"></div><div id="path" class="path" aria-label="你排出的小步计划"></div><div class="tools"><button id="smaller">把下一步再缩小一点</button><button id="undo" hidden>拿回最后一步</button></div><p id="small-step" class="small-step" hidden></p><p class="note">这里排的是一份小计划。现实中的尝试，留给你自己决定。</p></section>
 <p id="result" role="status" aria-live="polite">一件事看起来很大时，可以先找一个手能动起来的小动作。</p>
 <aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>可以在花园页面的反思框里写下自己的第一小步，再亲手保存。</small><p><button id="again">换个顺序试试</button></p></aside>
-<details><summary>再想一步</summary><p>选好同一颗种子后，先画还是先写，有关系吗？把画和写都放进计划，再交换看看。</p><button id="swap">交换画和写的位置</button><p id="deeper-result" role="status" aria-live="polite"></p><p>卡片要等图和文字都准备好。你自己的计划中，哪些能交换，哪些需要等一等？</p></details>
+<details><summary>再想一步</summary><p>选好同一颗种子后，先画还是先写，有关系吗？把画和写都放进计划，再交换看看。</p><button id="swap">交换画和写的位置</button><p id="deeper-result" role="status" aria-live="polite"></p><p>这份计划约定先有图和文字，再摆到卡片上。现实中也可以先试摆草稿。你自己的计划中，哪些是确实需要等，哪些只是暂时的安排？</p></details>
 </main><script>
 (() => {
   const settings = {
@@ -34,7 +34,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
         if (!ready) { $('result').textContent = '这一步要先等：“'+needs.filter(id => !order.includes(id)).map(id => settings.tasks[id][0]).join('”、“')+'”。先让这些小步有地方落脚。'; return; }
         order.push(index); render();
         const complete = order.length === settings.tasks.length;
-        $('result').textContent = complete ? '小路排出来了。第一步是“'+settings.tasks[order[0]][0]+'”。计划可以在尝试后调整，不需要一次想得完美。' : '“'+label+'”放进了计划。有了它，再看看下一小步是否能开始。';
+        $('result').textContent = complete ? '小路排出来了。第一步是“'+settings.tasks[order[0]][0]+'”。计划可以在尝试后调整，不需要一次想得完美。等亲手试过，再看看有没有漏掉准备工具或请人帮忙。' : '“'+label+'”放进了计划。有了它，再看看下一小步是否能开始。';
         $('reflection').hidden = !complete; $('question').textContent = complete ? '一条可以试着走的小路' : '现在，哪个小动作可以接上？';
       }); $('steps').append(button);
     });

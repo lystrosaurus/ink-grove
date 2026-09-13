@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "good-strategy-bad-strategy",
+  "slug": "good-strategy-bad-strategy",
+  "title": "好战略，坏战略",
+  "subtitle": "面对关键障碍，把有限行动连成同一条路",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Richard P. Rumelt",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "结构化问题解决",
+    "假设验证",
+    "机会成本"
+  ],
+  "visualStyle": "ochre-strategy-briefing",
+  "related": [
+    "mckinsey-way",
+    "innovators-dilemma",
+    "effective-executive"
+  ],
+  "connections": [
+    {
+      "target": "mckinsey-way",
+      "type": "related",
+      "concept": "structured-problem-solving",
+      "label": "从问题树前进一步：把诊断转成协调行动"
+    },
+    {
+      "target": "innovators-dilemma",
+      "type": "related",
+      "concept": "judgment",
+      "label": "先判断竞争难题，再选择适配的组织行动"
+    },
+    {
+      "target": "effective-executive",
+      "type": "related",
+      "concept": "opportunity-cost",
+      "label": "战略取舍需要真实释放时间与资源"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/good-strategy-bad-strategy/index.html"
+  },
+  "cover": "/artifacts/good-strategy-bad-strategy/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-perils-of-bad-strategy",
+      "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/"
+    ],
+    "derivedFrom": []
+  }
+}

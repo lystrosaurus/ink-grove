@@ -1,0 +1,398 @@
+[
+  {
+    "id": "thinking-in-systems",
+    "kind": "revised",
+    "summary": "以维修任务池补足存量流量推演，并收紧杠杆点与公共资源表述",
+    "changes": [
+      "保留完整十二杠杆点和 leverage-note 选择器",
+      "明确流入下降仍可能积压增加与单位换算",
+      "用竞争回路和数据观察区分解释与证据",
+      "删除高杠杆必有效、共同资源必衰竭的暗示"
+    ],
+    "sources": [
+      {
+        "title": "Meadows：十二个杠杆点",
+        "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
+      },
+      {
+        "title": "Meadows：与系统共舞",
+        "url": "https://donellameadows.org/archives/dancing-with-systems/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "cybernetics",
+    "kind": "revised",
+    "summary": "用可手算的稳定与振荡例子深化控制机制，明确工程和组织类比边界",
+    "changes": [
+      "纠正高质量负反馈必然稳定",
+      "增加 k=0.5、2、2.2 三组离散响应与收敛条件",
+      "历史精神病理章节不作当代医学依据",
+      "标识静态示意波形，区分纠偏与学习"
+    ],
+    "sources": [
+      {
+        "title": "MIT Press：维纳《控制论》",
+        "url": "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/"
+      },
+      {
+        "title": "Åström 与 Murray：反馈系统教材",
+        "url": "https://www.cds.caltech.edu/~murray/FBS/First_Edition.html"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "innovators-dilemma",
+    "kind": "revised",
+    "summary": "从新技术标签改为可观察的市场进入路径与组织筛选机制",
+    "changes": [
+      "区分持续性竞争与新市场立足点",
+      "移除低利润、客户拒绝即机会的过强暗示",
+      "用组织收入门槛解释资源依赖",
+      "标明后续理论术语和失败样本的重要性"
+    ],
+    "sources": [
+      {
+        "title": "Christensen Institute：原书书目",
+        "url": "https://www.christenseninstitute.org/book/the-innovators-dilemma/"
+      },
+      {
+        "title": "Christensen Institute：破坏性创新理论",
+        "url": "https://www.christenseninstitute.org/theory/disruptive-innovation/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "mckinsey-way",
+    "kind": "revised",
+    "summary": "原位修正利润树的重复归因，并让问题解决流程可被证伪",
+    "changes": [
+      "产品组合下沉为收入成本的解释维度",
+      "增加可手算利润变化与竞争假设",
+      "区分访谈事实、解释和建议",
+      "把 80/20 明确为启发并增加调查停止条件"
+    ],
+    "sources": [
+      {
+        "title": "McGraw Hill：The McKinsey Way",
+        "url": "https://www.mheducation.com/highered/mhp/product/mckinsey-way.html"
+      },
+      {
+        "title": "McKinsey：不确定情境的问题解决心态",
+        "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "effective-executive",
+    "kind": "revised",
+    "summary": "用时间审计与接收者检验深化有效性，限制优势和停止工作的误读",
+    "changes": [
+      "将四个入口标为编辑教学归组",
+      "增加 40 小时时间账与碎片到连续窗口的区别",
+      "授权与停止工作需验证组织成本",
+      "优势原则不豁免安全诚信与岗位必需能力"
+    ],
+    "sources": [
+      {
+        "title": "Routledge：The Effective Executive",
+        "url": "https://www.routledge.com/The-Effective-Executive/Drucker/p/book/9780750685078"
+      },
+      {
+        "title": "Drucker：2004 年有效管理者文章",
+        "url": "https://hbr.org/2004/06/what-makes-an-effective-executive"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "economic-way-of-thinking",
+    "kind": "revised",
+    "summary": "用增量决策与账外成本区分机会成本、沉没成本和福利判断",
+    "changes": [
+      "增加可手算继续或取消工作坊例子",
+      "机会成本只计最佳可行替代项",
+      "价格和利润不等于完整社会价值",
+      "价格反应补充其他条件、弹性和时段限制"
+    ],
+    "sources": [
+      {
+        "title": "Pearson：第十三版出版资料",
+        "url": "https://www.pearson.com/en-ca/subject-catalog/p/economic-way-of-thinking-the/P200000005920/9780132992589"
+      },
+      {
+        "title": "Pearson：第十三版样章",
+        "url": "https://www.pearson.de/media/muster/ext/9781292053608.pdf"
+      },
+      {
+        "title": "Pearson：第十三版目录",
+        "url": "https://www.pearson.de/media/muster/toc/toc_9781292053608.pdf"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "seven-habits",
+    "kind": "revised",
+    "summary": "以真实约束与关系协商深化七个习惯，去除人格阶梯和成果保证",
+    "changes": [
+      "伪署名引句标为编辑转述",
+      "依赖独立互赖改为关系位置而非人生评分",
+      "周末协商案例连接选择、方向、倾听与双赢",
+      "将成果承诺改为可观察变化，更新允许休息"
+    ],
+    "sources": [
+      {
+        "title": "FranklinCovey：七个习惯的公开说明",
+        "url": "https://ir.franklincovey.com/news-releases/news-release-details/7-habits-highly-effective-people-25th-anniversary-edition"
+      },
+      {
+        "title": "FranklinCovey：双赢思维",
+        "url": "https://www.franklincovey.com/habit-4/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "thinking-framework",
+    "kind": "revised",
+    "summary": "明确非已知书籍身份，以流程选择情境替换未证实名人故事",
+    "changes": [
+      "未知作者与书籍身份在正文明确",
+      "虚构目录和金句身份改为编辑路径与提醒",
+      "三个名人因果故事改为标注的假设情境",
+      "六种工具围绕同一真实决定分别说明机制与边界"
+    ],
+    "sources": [
+      {
+        "title": "Meadows：系统思考的观察与边界",
+        "url": "https://donellameadows.org/archives/dancing-with-systems/"
+      },
+      {
+        "title": "McKinsey：开放假设与不确定性",
+        "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "good-strategy-bad-strategy",
+    "kind": "new",
+    "summary": "用资源取舍练习解释诊断、指导方针与协调行动",
+    "changes": [
+      "将增长目标与可检验诊断分开",
+      "以三人周案例检查行动配合与预算",
+      "提供诊断失效后的重审条件"
+    ],
+    "sources": [
+      {
+        "title": "作者文章：坏战略的危险",
+        "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-perils-of-bad-strategy"
+      },
+      {
+        "title": "Penguin Random House 出版资料",
+        "url": "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/"
+      }
+    ],
+    "interaction": {
+      "selector": "#action-guide",
+      "action": "勾选引导和测量，再加广告",
+      "expected": "先提示相互支持，随后提示预算超出"
+    }
+  },
+  {
+    "id": "design-everyday-things",
+    "kind": "new",
+    "summary": "以一扇门区分可供性、示意符、映射与反馈",
+    "changes": [
+      "标明修订扩充版身份",
+      "可操作的推拉门保持固定机械关系",
+      "将执行失手与错误概念模型分别处理"
+    ],
+    "sources": [
+      {
+        "title": "MIT Press：修订扩充版",
+        "url": "https://mitpress.mit.edu/9780262525671/the-design-of-everyday-things/"
+      },
+      {
+        "title": "Don Norman：修订版前言",
+        "url": "https://jnd.org/preface-design-of-everyday-things-revised-edition/"
+      }
+    ],
+    "interaction": {
+      "selector": "#door-pull",
+      "action": "拉门、显示提示、再推门",
+      "expected": "错误动作保持关闭，推门打开并解释示意符"
+    }
+  },
+  {
+    "id": "nonviolent-communication",
+    "kind": "new",
+    "summary": "用拒绝之后的回应检验请求是否仍是请求",
+    "changes": [
+      "以观察与评价、需要与策略构建对话",
+      "不提供人格评分或疗效保证",
+      "交互并列展示惩罚与协商的不同回应"
+    ],
+    "sources": [
+      {
+        "title": "PuddleDancer Press：第三版",
+        "url": "https://nonviolentcommunication.com/product/nvc/"
+      },
+      {
+        "title": "出版方提供：四个要素与关键区别",
+        "url": "https://www.nonviolentcommunication.com/bookshare/4_components_of_NVC_4_rev_6.20.19.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#request-kind",
+      "action": "分别选择两种意图并点击听见拒绝",
+      "expected": "指出惩罚式要求，或提出允许拒绝的另一种安排"
+    }
+  },
+  {
+    "id": "pyramid-principle",
+    "kind": "new",
+    "summary": "让试点案例暴露表达结构与证据力度之间的差别",
+    "changes": [
+      "搭建中心建议—理由—依据的可见层次",
+      "区分同类归组、推导和研究日志",
+      "交互限制小样本结论的适用范围"
+    ],
+    "sources": [
+      {
+        "title": "Barbara Minto 作者网站",
+        "url": "https://www.barbaraminto.com/"
+      },
+      {
+        "title": "Pearson 出版资料",
+        "url": "https://www.pearson.com/en-gb/subject-catalog/p/the-pyramid-principle/P200000015259/9781292763255"
+      }
+    ],
+    "interaction": {
+      "selector": "#claim-scope",
+      "action": "从局部试点切换全面确定推广",
+      "expected": "指出越过证据范围，并保留试点的效果不确定性"
+    }
+  },
+  {
+    "id": "complexity-guided-tour",
+    "kind": "new",
+    "summary": "以确定性元胞自动机理解局部互动、涌现和模型边界",
+    "changes": [
+      "实现规则 0、90、150 的同步演化",
+      "显式记录初始条件、固定边界和代数限制",
+      "区分随机、混沌、涌现与适应"
+    ],
+    "sources": [
+      {
+        "title": "Oxford University Press：Complexity",
+        "url": "https://academic.oup.com/book/51004"
+      },
+      {
+        "title": "Melanie Mitchell 作者网站与配套程序",
+        "url": "https://melaniemitchell.me/"
+      },
+      {
+        "title": "Santa Fe Institute：虚拟实验室",
+        "url": "https://www.complexityexplorer.org/explore/virtual-laboratory"
+      }
+    ],
+    "interaction": {
+      "selector": "#evolve-step",
+      "action": "运行规则 90 一代，再重置并运行规则 0",
+      "expected": "活跃格由 1 变 2；规则 0 变 0"
+    }
+  },
+  {
+    "id": "governing-commons",
+    "kind": "new",
+    "summary": "把资源约束和治理机制分开检验",
+    "changes": [
+      "展示共同池资源的可减性与排除成本",
+      "将八项原则按制度问题归组并标出情境限制",
+      "可重置的三家庭资源账注明不模拟遵约"
+    ],
+    "sources": [
+      {
+        "title": "Cambridge University Press：Governing the Commons",
+        "url": "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79"
+      },
+      {
+        "title": "Ostrom 诺贝尔讲座",
+        "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf"
+      },
+      {
+        "title": "Ostrom 访谈：设计原则不是统一处方",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/164465-ostrom-williamson-interview-transcript/"
+      }
+    ],
+    "interaction": {
+      "selector": "#harvest",
+      "action": "取用 40 后运行，再重置以 10 运行",
+      "expected": "资源先降至 0，重置后的低取用轮剩余 80"
+    }
+  },
+  {
+    "id": "fifth-discipline",
+    "kind": "new",
+    "summary": "以救急与学习的延迟效应解释五项修炼的联系",
+    "changes": [
+      "五项修炼保留各自作用与共同关系",
+      "积压模型允许逐轮选择并保留轨迹",
+      "明确培训不必然有效与权力环境限制"
+    ],
+    "sources": [
+      {
+        "title": "Penguin Random House：The Fifth Discipline",
+        "url": "https://www.penguinrandomhouse.com/books/163984/the-fifth-discipline-by-peter-m-senge/"
+      },
+      {
+        "title": "SoL：Peter Senge 主持的五项修炼课程",
+        "url": "https://www.solonline.org/foundations-for-leadership-fall-2020/"
+      },
+      {
+        "title": "SoL：作者的二十五周年反思",
+        "url": "https://www.solonline.org/wp-content/uploads/2019/03/sol_reflections_14.3.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#team-action",
+      "action": "选择学习推进一轮，然后正常处理",
+      "expected": "首次积压 44、能力 11，下一轮积压 43"
+    }
+  },
+  {
+    "id": "nudge",
+    "kind": "new",
+    "summary": "用可撤回的默认值示意检查助推与选择权",
+    "changes": [
+      "明确 2021 Final Edition 身份",
+      "修改默认值不会被解释为同意且需重新确认",
+      "加入收益归属、透明、退出与反效果观察"
+    ],
+    "sources": [
+      {
+        "title": "Penguin：2021 The Final Edition",
+        "url": "https://penguinrandomhousehighereducation.com/book/?isbn=9780143137009"
+      },
+      {
+        "title": "作者新版前言：Nudge",
+        "url": "https://www.chicagobooth.edu/review/nudge-preface-final-edition"
+      },
+      {
+        "title": "Richard Thaler：Nudges and Sludge",
+        "url": "https://www.chicagobooth.edu/review/words-live-flops-nudges-and-sludge"
+      }
+    ],
+    "interaction": {
+      "selector": "#default-mode",
+      "action": "切换默认接收后取消勾选并确认",
+      "expected": "默认变更仍未确认，最终明确不接收且无实际订阅"
+    }
+  }
+]

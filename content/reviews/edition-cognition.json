@@ -1,0 +1,388 @@
+[
+  {
+    "id": "asking-right-questions",
+    "kind": "new",
+    "summary": "把一项建议拆成结论、证据与尚未证明的桥梁",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Pearson：Asking the Right Questions（目录与主题）",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731"
+      },
+      {
+        "title": "BGSU：M. Neil Browne 作者履历与书目",
+        "url": "https://www.bgsu.edu/content/dam/BGSU/honors-college/documents/dr-neil-browne.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#argument-role",
+      "action": "选证据检查，再选假设检查",
+      "expected": "从reconsider转correct，解释因果与推广缺口"
+    }
+  },
+  {
+    "id": "make-it-stick",
+    "kind": "new",
+    "summary": "从熟悉感转向能够独立提取、辨别与应用",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "作者官网：Make It Stick",
+        "url": "https://www.makeitstick.com/about-make-it-stick"
+      },
+      {
+        "title": "Roediger 与 Karpicke：Test-Enhanced Learning，2006",
+        "url": "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/"
+      }
+    ],
+    "interaction": {
+      "selector": "#reveal-answer",
+      "action": "揭示解释后切换回忆自评",
+      "expected": "解释展开，遗忘与独立想起产生不同示例复习间隔"
+    }
+  },
+  {
+    "id": "superforecasting",
+    "kind": "new",
+    "summary": "给判断写上概率、截止时间和可以核对的结果",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Penguin Random House：Superforecasting",
+        "url": "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/"
+      },
+      {
+        "title": "Mellers 等：预测竞赛研究，2014",
+        "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#forecast-probability",
+      "action": "输入80，分别选发生/未发生计算，再输入101",
+      "expected": "0.040、0.640；越界输入显示invalid"
+    }
+  },
+  {
+    "id": "thinking-fast-slow",
+    "kind": "new",
+    "summary": "辨认直觉如何形成，再给重要判断安排复核",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Macmillan：Thinking, Fast and Slow",
+        "url": "https://us.macmillan.com/books/9780374275631/thinkingfastandslow/"
+      },
+      {
+        "title": "Kahneman：Maps of Bounded Rationality，诺贝尔演讲",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
+      }
+    ],
+    "interaction": {
+      "selector": "#reference-point",
+      "action": "依次选择80与120",
+      "expected": "相对多20与少20，但最终金额始终100"
+    }
+  },
+  {
+    "id": "factfulness",
+    "kind": "new",
+    "summary": "给醒目的数字补上分母、分布、日期与趋势",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Macmillan：Factfulness",
+        "url": "https://us.macmillan.com/books/9781250123824/factfulness/"
+      },
+      {
+        "title": "Gapminder：Factfulness 与十种本能",
+        "url": "https://www.gapminder.org/factfulness-book/"
+      }
+    ],
+    "interaction": {
+      "selector": "#denominator-mode",
+      "action": "切换总数与每万人",
+      "expected": "总数A较高，比例B较高，比例值分别2和4"
+    }
+  },
+  {
+    "id": "flow",
+    "kind": "new",
+    "summary": "在挑战、技能与反馈之间，为投入创造条件",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "HarperAcademic：Flow",
+        "url": "https://www.harperacademic.com/book/9780061339202/flow/"
+      },
+      {
+        "title": "Csikszentmihalyi：Flow and the Foundations of Positive Psychology",
+        "url": "https://link.springer.com/book/10.1007/978-94-017-9088-8"
+      },
+      {
+        "title": "Cowley 等：心流与技能学习实验，2019",
+        "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.01126/full"
+      }
+    ],
+    "interaction": {
+      "selector": "#flow-check",
+      "action": "输入准备2挑战8，再匹配8与8但取消反馈，最后补回反馈",
+      "expected": "overload→feedback→matched；明确只是示意"
+    }
+  },
+  {
+    "id": "scientific-revolutions",
+    "kind": "new",
+    "summary": "观察科学共同体如何定义问题、处理异常与比较框架",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Chicago：The Structure of Scientific Revolutions，50周年版",
+        "url": "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html"
+      },
+      {
+        "title": "Chicago：库恩晚期著作与不可通约性",
+        "url": "https://press.uchicago.edu/ucp/books/book/chicago/L/bo181541288.html"
+      }
+    ],
+    "interaction": {
+      "selector": "#evidence-context",
+      "action": "切换单次偏离、重复异常、竞争框架",
+      "expected": "check→anomaly→compare；不会自动宣布科学革命"
+    }
+  },
+  {
+    "id": "non-designers-design-book",
+    "kind": "new",
+    "summary": "第4版 · 用对比、重复、对齐与亲密性让关系被看见",
+    "changes": [
+      "原创书籍专属视觉结构与概念图",
+      "区分公开来源主题、独立推演与示例假设",
+      "实现并测试作品专属互动"
+    ],
+    "sources": [
+      {
+        "title": "Peachpit：The Non-Designer’s Design Book，第4版",
+        "url": "https://www.peachpit.com/store/non-designers-design-book-9780133966152"
+      },
+      {
+        "title": "Peachpit：作者授权公开样章",
+        "url": "https://www.peachpit.com/content/images/9780133966152/samplepages/9780133966152.pdf"
+      }
+    ],
+    "interaction": {
+      "selector": "#align-control",
+      "action": "切换对齐与亲密性，观察真实文字与间距",
+      "expected": "text-align改变，时间地点相邻，联系信息组间距离增大"
+    }
+  },
+  {
+    "id": "cognitive-awakening",
+    "kind": "revised",
+    "summary": "把单因成长叙事改为受情境约束的自我观察",
+    "changes": [
+      "把单因成长叙事改为受情境约束的自我观察",
+      "改写大脑、情绪、反馈的绝对断言",
+      "新增四次写作安排的原创对照案例与复盘口径",
+      "保留报纸特刊网格与原始来源，补公开研究链接"
+    ],
+    "sources": [
+      {
+        "title": "人民邮电出版社：认知觉醒",
+        "url": "https://detail.youzan.com/show/goods?alias=3f1jmx11cd4mp&from_source=gbox_seo"
+      },
+      {
+        "title": "The Brain Is Adaptive Not Triune，2022",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35432041/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "cognitive-awakening-inner-os",
+    "kind": "revised",
+    "summary": "把三类脑功能表述明确改为行为观察隐喻",
+    "changes": [
+      "把三类脑功能表述明确改为行为观察隐喻",
+      "改写模糊造成焦虑与理性接管等过度解释",
+      "新增资料整理的任务调节实例，区分元认知监测和控制",
+      "保留薄荷环形操作系统视觉并补来源边界"
+    ],
+    "sources": [
+      {
+        "title": "人民邮电出版社：认知觉醒",
+        "url": "https://detail.youzan.com/show/goods?alias=3f1jmx11cd4mp&from_source=gbox_seo"
+      },
+      {
+        "title": "The Brain Is Adaptive Not Triune，2022",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35432041/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "deliberate-practice",
+    "kind": "revised",
+    "summary": "补足严格刻意练习与有目的练习的区别",
+    "changes": [
+      "补足严格刻意练习与有目的练习的区别",
+      "修正舒适区、反馈时机与专家判断的绝对表述，撤下无比例依据的大多数练习概括",
+      "加入八小节演奏的原创完整训练记录与迁移检查",
+      "引用复核研究说明时长并非充分解释"
+    ],
+    "sources": [
+      {
+        "title": "Penguin：Peak",
+        "url": "https://www.penguin.co.uk/books/421170/peak-by-anders-ericsson/9780099598473"
+      },
+      {
+        "title": "Macnamara 与 Maitra：复核刻意练习研究，2019",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "deliberate-practice-modern",
+    "kind": "revised",
+    "summary": "将知识系统版深化为表征、反馈与真实迁移的训练设计",
+    "changes": [
+      "将知识系统版深化为表征、反馈与真实迁移的训练设计",
+      "移除普通重复无价值与反馈越快越好的判断，把概览中的即时反馈同步改为可用反馈",
+      "新增客服问题识别的原创训练推演",
+      "保留暗色知识网络视觉与原始稿来源"
+    ],
+    "sources": [
+      {
+        "title": "Penguin：Peak",
+        "url": "https://www.penguin.co.uk/books/421170/peak-by-anders-ericsson/9780099598473"
+      },
+      {
+        "title": "Macnamara 与 Maitra：复核刻意练习研究，2019",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "mindware",
+    "kind": "revised",
+    "summary": "将跨学科工具落到样本、基准率、混杂和可判别预测",
+    "changes": [
+      "将跨学科工具落到样本、基准率、混杂和可判别预测",
+      "修正文化思维二分、自然实验与逻辑矛盾的简化",
+      "加入分组构成导致汇总反转的原创数值案例",
+      "保留蓝色电路图并连接作者亲授课程"
+    ],
+    "sources": [
+      {
+        "title": "Macmillan：Mindware",
+        "url": "https://us.macmillan.com/books/9780374536244/mindware/"
+      },
+      {
+        "title": "Richard Nisbett：密歇根大学 Mindware 课程",
+        "url": "https://www.coursera.org/learn/mindware"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "great-mental-models",
+    "kind": "revised",
+    "summary": "给九个模型补适用条件与相互检验方式",
+    "changes": [
+      "给九个模型补适用条件与相互检验方式",
+      "修正第一性原理与汉隆剃刀的过度断言",
+      "加入响应速度指标的原创多模型决策推演",
+      "明确流程与支撑镜片是编辑组织而非原书固定章节"
+    ],
+    "sources": [
+      {
+        "title": "Farnam Street：第一卷九个模型",
+        "url": "https://fs.blog/books/mental-models-vol1/"
+      },
+      {
+        "title": "Farnam Street：第一性原理的情境边界",
+        "url": "https://fs.blog/first-principles/"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "how-to-read-a-book",
+    "kind": "revised",
+    "summary": "把阅读层次深化为不同产物与有限时间取舍",
+    "changes": [
+      "把阅读层次深化为不同产物与有限时间取舍",
+      "改写理解后才有资格批评等门槛表述",
+      "新增远程协作主题阅读的原创问题矩阵",
+      "区分作者术语、读者共同语言与实证评价"
+    ],
+    "sources": [
+      {
+        "title": "Simon & Schuster：How to Read a Book",
+        "url": "https://www.simonandschuster.com/books/How-to-Read-a-Book/Mortimer-J-Adler/9780671212094"
+      },
+      {
+        "title": "Pearson：论证、理由与隐含假设的检查",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731"
+      }
+    ],
+    "interaction": null
+  },
+  {
+    "id": "managerial-judgment",
+    "kind": "revised",
+    "summary": "清除95%脑占比、双系统脑区化与慢思维唯一可靠等错误",
+    "changes": [
+      "清除95%脑占比、双系统脑区化与慢思维唯一可靠等错误",
+      "撤下伪作者引语、未核实版次历史与名人背书",
+      "把七问审计及读者带走的检查提纲一致标为本站练习，撤下十分钟完成承诺",
+      "把有限觉察的探照灯标明为编辑隐喻，移除从单个视觉实验直接外推管理规律的表述",
+      "新增项目追加资源的原创案例，区分沉没成本与未来退出成本",
+      "保留卷宗、阶梯、聚光灯、七问表的独立视觉"
+    ],
+    "sources": [
+      {
+        "title": "Wiley：Judgment in Managerial Decision Making，第8版",
+        "url": "https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=7506&itemId=1118065700"
+      },
+      {
+        "title": "Moore 与 Bazerman：Leadership & overconfidence，2022",
+        "url": "https://www.hbs.edu/ris/download.aspx?name=Moore+Bazerman+2022+BSP.pdf"
+      },
+      {
+        "title": "Kahneman：有限理性演讲",
+        "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
+      }
+    ],
+    "interaction": null
+  }
+]

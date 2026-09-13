@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "mans-search-for-meaning",
+  "slug": "mans-search-for-meaning",
+  "title": "活出生命的意义",
+  "subtitle": "在具体处境中回应生活，也保留悲伤和求助的位置",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Viktor E. Frankl",
+  "topics": [
+    "哲学",
+    "意义",
+    "生活"
+  ],
+  "concepts": [
+    "责任与意义",
+    "主动选择",
+    "不断更新"
+  ],
+  "visualStyle": "quiet-three-windows",
+  "related": [
+    "twelve-rules-for-life",
+    "power-of-now"
+  ],
+  "connections": [
+    {
+      "target": "twelve-rules-for-life",
+      "type": "related",
+      "concept": "responsibility",
+      "label": "比较责任与意义的不同思想和历史背景"
+    },
+    {
+      "target": "power-of-now",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "比较觉察当下与回应具体处境"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/mans-search-for-meaning/index.html"
+  },
+  "cover": "/artifacts/mans-search-for-meaning/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.beacon.org/Mans-Search-for-Meaning-P602.aspx",
+      "https://www.viktorfrankl.org/logotherapy.html"
+    ],
+    "derivedFrom": []
+  }
+}

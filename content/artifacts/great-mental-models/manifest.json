@@ -60,9 +60,11 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/great_mental_models_single_page.html"
+      "file:materials/great_mental_models_single_page.html",
+      "https://fs.blog/books/mental-models-vol1/",
+      "https://fs.blog/first-principles/"
     ],
     "derivedFrom": []
   }

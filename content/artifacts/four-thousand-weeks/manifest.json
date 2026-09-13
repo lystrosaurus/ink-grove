@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "four-thousand-weeks",
+  "slug": "four-thousand-weeks",
+  "title": "四千周",
+  "subtitle": "把有限的一生，交给真正愿意承诺的事",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Oliver Burkeman",
+  "topics": [
+    "时间",
+    "哲学",
+    "行动"
+  ],
+  "concepts": [
+    "机会成本",
+    "主动选择",
+    "注意力",
+    "责任与意义"
+  ],
+  "visualStyle": "clay-time-ledger",
+  "related": [
+    "effective-executive",
+    "power-of-now"
+  ],
+  "connections": [
+    {
+      "target": "effective-executive",
+      "type": "related",
+      "concept": "opportunity-cost",
+      "label": "把时间管理中的效能问题延伸到有限性与取舍"
+    },
+    {
+      "target": "power-of-now",
+      "type": "related",
+      "concept": "attention",
+      "label": "比较当下觉察与有限人生中的实际承诺"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/four-thousand-weeks/index.html"
+  },
+  "cover": "/artifacts/four-thousand-weeks/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.oliverburkeman.com/fourthousandweeks",
+      "https://us.macmillan.com/books/9780374159122/fourthousandweeks/"
+    ],
+    "derivedFrom": []
+  }
+}

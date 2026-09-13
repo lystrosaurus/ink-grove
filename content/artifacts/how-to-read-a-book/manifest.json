@@ -59,9 +59,11 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/how_to_read_a_book_single_page.html"
+      "file:materials/how_to_read_a_book_single_page.html",
+      "https://www.simonandschuster.com/books/How-to-Read-a-Book/Mortimer-J-Adler/9780671212094",
+      "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731"
     ],
     "derivedFrom": []
   }

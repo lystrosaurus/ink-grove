@@ -60,9 +60,11 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/cognitive_awakening_editorial.html"
+      "file:materials/cognitive_awakening_editorial.html",
+      "https://detail.youzan.com/show/goods?alias=3f1jmx11cd4mp&from_source=gbox_seo",
+      "https://pubmed.ncbi.nlm.nih.gov/35432041/"
     ],
     "derivedFrom": []
   }

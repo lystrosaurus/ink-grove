@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "a-life-that-fits",
+  "slug": "a-life-that-fits",
+  "title": "让成长，装得进生活",
+  "subtitle": "能力、效率、意义与有限时间：给取舍和在场留出位置",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove · AI 辅助创作",
+  "topics": [
+    "成长",
+    "生活",
+    "选择"
+  ],
+  "concepts": [
+    "主动选择",
+    "不断更新",
+    "责任与意义",
+    "机会成本",
+    "刻意练习"
+  ],
+  "visualStyle": "linen-time-margin-journal",
+  "related": [
+    "four-thousand-weeks",
+    "effective-executive",
+    "seven-habits",
+    "flow",
+    "deliberate-practice",
+    "mans-search-for-meaning",
+    "power-of-now",
+    "naval-almanack",
+    "one-percent-rule",
+    "nonviolent-communication"
+  ],
+  "connections": [
+    {
+      "target": "four-thousand-weeks",
+      "type": "synthesizes",
+      "concept": "opportunity-cost",
+      "label": "用时间有限性检验新增承诺与效率的关系"
+    },
+    {
+      "target": "effective-executive",
+      "type": "synthesizes",
+      "concept": "active-choice",
+      "label": "从贡献与优先次序辨认值得投入的事务"
+    },
+    {
+      "target": "seven-habits",
+      "type": "synthesizes",
+      "concept": "renewal",
+      "label": "把原则、关系与恢复放进时间取舍"
+    },
+    {
+      "target": "flow",
+      "type": "synthesizes",
+      "concept": "attention",
+      "label": "区分投入体验与能力长期改善"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "synthesizes",
+      "concept": "deliberate-practice",
+      "label": "训练可以不流畅，仍需要清楚目标与恢复"
+    },
+    {
+      "target": "mans-search-for-meaning",
+      "type": "synthesizes",
+      "concept": "responsibility",
+      "label": "把意义保留为自己的追问，不成为要求别人忍受伤害的命令"
+    },
+    {
+      "target": "power-of-now",
+      "type": "synthesizes",
+      "concept": "metacognition",
+      "label": "观察当下不排除解决现实问题或寻求支持"
+    },
+    {
+      "target": "naval-almanack",
+      "type": "synthesizes",
+      "concept": "leverage",
+      "label": "检验可复用成果的边界，保留照护与在场的价值"
+    },
+    {
+      "target": "one-percent-rule",
+      "type": "synthesizes",
+      "concept": "small-improvements",
+      "label": "缩小行动范围，不把日程写成恒定增长曲线"
+    },
+    {
+      "target": "nonviolent-communication",
+      "type": "synthesizes",
+      "concept": "active-choice",
+      "label": "让请求、拒绝与工作量协商进入承诺的边界"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/a-life-that-fits/index.html"
+  },
+  "cover": "/artifacts/a-life-that-fits/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "artifact:four-thousand-weeks",
+      "artifact:effective-executive",
+      "artifact:seven-habits",
+      "artifact:flow",
+      "artifact:deliberate-practice",
+      "artifact:mans-search-for-meaning",
+      "artifact:power-of-now",
+      "artifact:naval-almanack",
+      "artifact:one-percent-rule",
+      "artifact:nonviolent-communication",
+      "https://www.oliverburkeman.com/fourthousandweeks"
+    ],
+    "derivedFrom": [
+      "four-thousand-weeks",
+      "effective-executive",
+      "seven-habits",
+      "flow",
+      "deliberate-practice",
+      "mans-search-for-meaning",
+      "power-of-now",
+      "naval-almanack",
+      "one-percent-rule",
+      "nonviolent-communication"
+    ]
+  }
+}

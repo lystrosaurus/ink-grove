@@ -59,9 +59,12 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/judgment_in_managerial_decision_making.html"
+      "file:materials/judgment_in_managerial_decision_making.html",
+      "https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=7506&itemId=1118065700",
+      "https://www.hbs.edu/ris/download.aspx?name=Moore+Bazerman+2022+BSP.pdf",
+      "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
     ],
     "derivedFrom": []
   }

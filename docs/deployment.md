@@ -36,9 +36,10 @@ npm run preview
 ```powershell
 node app/scripts/verify-production.mjs
 node app/scripts/verify-seed-production.mjs
+node app/scripts/verify-edition.mjs
 ```
 
-两个脚本不传参数均默认检查 `http://127.0.0.1:4173`，也接受站点根 URL。前者检查 Ink 的深链接、全部 HTML 正文和交互；后者检查 Seed 的四区、六个统一活动与可选延伸、Think 8、记录保存及手机版。Seed 截图使用 `node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture` 生成。
+三个脚本不传参数均默认检查 `http://127.0.0.1:4173`，也接受站点根URL。production检查Ink深链接与全部HTML正文；seed-production检查Seed四区、六个统一活动与延伸、Think8、保存和手机版；edition逐一操作23本新书和3篇贯通文章，同时检查首页入口、深色配色、390px宽度、两份图解的320px缩放与键盘滚动，以及自动外部请求。后两者支持 `--capture` 保存展示截图。
 
 确认生产检查通过，再发布同一份 `app/dist`：
 
@@ -51,9 +52,10 @@ tcb hosting deploy app/dist -e ink-d0gvorjko99e99e4d --safe --verify
 ```powershell
 node app/scripts/verify-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
 node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
+node app/scripts/verify-edition.mjs https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/
 ```
 
-以上命令用于重复执行发布流程；本版 CLI 校验和公网页面检查状态见 [1.3 发布验收](../artifacts/verification-1.3.json)，历史结果保存在 [1.2 两套体验验收](../artifacts/verification-1.2.json)和 [1.1 验收](../artifacts/verification.json)。
+以上命令用于重复执行发布流程；本版CLI校验和公网页面检查状态见 [1.4发布验收](../artifacts/verification-1.4.json)，历史结果保存在 [1.3验收](../artifacts/verification-1.3.json)及更早发行记录中。
 
 此命令只上传已构建产物，不重复安装或构建，不上传 `materials/`、设计文档、源码或本地花园数据。`--safe` 在覆盖前创建云端备份；`--verify` 检查本地产物与远端文件。入口 HTML 在资源文件上传完成后上传。发布失败时 CLI 尝试从备份恢复覆盖文件，并移除此轮新增文件。[CLI 静态托管文档](https://docs.cloudbase.net/cli-v1/hosting)提供参数和一致性发布说明。
 
@@ -76,7 +78,7 @@ node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-130303
 3. 验证本轮新增作品标题、正文和封面确实出现；HTML 仍在 `sandbox="allow-scripts"` iframe 中读取。
 4. 确认没有应用控制台错误，并保留 CLI 输出中的备份路径与校验结果。
 
-1.3 的 Seed 验收还包括：从 Ink 顶部导航和首页邀请进入 Seed；地图、六个 Seed 与八张思考工具提供无年龄分组的统一体验；「再想一步」自由可用；积木从倾倒到站立、时间分配与拆分步骤等真实互动正常；仅显式保存生成记录，导出为无年龄字段的 v2；手机地图不溢出；Seed 与 Ink 样式、备份独立。发布前还需验证有效 v1 数据和备份兼容、加载不自动回写，以及损坏数据与存储失败保护。原有 31 件 Ink 作品仍需回归。
+继续覆盖1.3引入的Seed统一体验与数据保护：从Ink进入Seed，四区、六活动与八张思考工具没有年龄分组；延伸自由可用；实际互动与显式保存正常；v1兼容、损坏保护及两套备份独立。1.4在此基础上覆盖57件Ink作品（54件HTML）、10个集合、35个概念，检查23本新书与3篇文章的实际互动，不沿用旧数量判断发布完整性。
 
 1.1.0 的目录基准是 31 件作品、28 件 HTML、7 个集合、35 个概念，其中 27 件 HTML 来自 `materials/`，另有《清醒行动实验室》。追加的六件作品覆盖股东信、经济学、管理效能、价值投资与当下觉察；公网验收须包含它们，不能沿用扩容前的作品数量或产物清单。参考资料应先在父页显示目标域名，点击「打开参考资料」后再打开新页，不能通过增加 iframe 弹窗权限来适配线上环境。
 

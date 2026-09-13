@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "pyramid-principle",
+  "slug": "pyramid-principle",
+  "title": "金字塔原理",
+  "subtitle": "让每层理由都承担得起上层结论",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Barbara Minto",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "结构化问题解决",
+    "信息质量",
+    "假设验证"
+  ],
+  "visualStyle": "ivory-editorial-pyramid",
+  "related": [
+    "mckinsey-way",
+    "mindware",
+    "good-strategy-bad-strategy"
+  ],
+  "connections": [
+    {
+      "target": "mckinsey-way",
+      "type": "related",
+      "concept": "structured-problem-solving",
+      "label": "把分析树转换为读者能够追问的论证"
+    },
+    {
+      "target": "mindware",
+      "type": "related",
+      "concept": "information-quality",
+      "label": "清楚表达仍须检查统计证据的范围"
+    },
+    {
+      "target": "good-strategy-bad-strategy",
+      "type": "related",
+      "concept": "hypothesis-testing",
+      "label": "战略简报的每项行动需要理由支持"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/pyramid-principle/index.html"
+  },
+  "cover": "/artifacts/pyramid-principle/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.barbaraminto.com/",
+      "https://www.pearson.com/en-gb/subject-catalog/p/the-pyramid-principle/P200000015259/9781292763255"
+    ],
+    "derivedFrom": []
+  }
+}

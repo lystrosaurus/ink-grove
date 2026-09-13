@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "flow",
+  "slug": "flow",
+  "title": "心流",
+  "subtitle": "在挑战、技能与反馈之间，为投入创造条件",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Mihaly Csikszentmihalyi",
+  "topics": [
+    "思考",
+    "学习"
+  ],
+  "concepts": [
+    "注意力",
+    "学习区",
+    "反馈",
+    "不断更新"
+  ],
+  "visualStyle": "river-challenge-terrain",
+  "related": [
+    "deliberate-practice",
+    "cognitive-awakening-inner-os",
+    "seven-habits"
+  ],
+  "connections": [
+    {
+      "target": "deliberate-practice",
+      "type": "related",
+      "concept": "learning-zone",
+      "label": "比较投入体验与技能纠错的不同目标"
+    },
+    {
+      "target": "cognitive-awakening-inner-os",
+      "type": "extends",
+      "concept": "attention",
+      "label": "把专注放回任务条件与主观体验"
+    },
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "renewal",
+      "label": "在投入之外保留恢复与持续生活"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/flow/index.html"
+  },
+  "cover": "/artifacts/flow/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.harperacademic.com/book/9780061339202/flow/",
+      "https://link.springer.com/book/10.1007/978-94-017-9088-8",
+      "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.01126/full"
+    ],
+    "derivedFrom": []
+  }
+}

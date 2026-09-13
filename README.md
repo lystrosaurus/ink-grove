@@ -4,7 +4,7 @@
 
 两座可在本机使用、也可通过 CloudBase 静态分发的花园。Ink Grove 让成人发现、阅读与连接知识；Seed Grove 让孩子在情境、尝试和现实行动中练习思考。
 
-**1.3.0 · 一起走进小小思考家的花园。**Ink Grove 顶部导航和首页增加 Seed Grove 入口；Seed 的六个独立互动与 Think 8 改为不分年龄的统一体验，以具体尝试和可自由探索的「再想一步」承接不同思考深度。保留 Ink 的 31 件作品、7 个精选集合与 35 个概念，以及 Seed 的四区地图。两者共用安全渲染、构建和存储保护，各自保留产品个性与本地数据。AI 接口默认关闭。发行内容见 [CHANGELOG](CHANGELOG.md)，仓库协作约定见 [AGENTS.md](AGENTS.md)。
+**1.4.0 · 让方法接受追问。**逐份深化原有31件成人作品与6个Seed，补齐推荐书单23本书的独立解读，新增3篇贯通文章。Ink Grove现有57件作品、10个集合与35个概念；首页提供三篇专题与六条问题路线。书籍采用适合内容的独立视觉与互动，并区分公开依据、原创推演和适用边界。Seed仍为不分年龄的统一体验。两套产品共享安全基础设施，分别保存本地数据；AI接口仍默认关闭。发行变化见 [CHANGELOG](CHANGELOG.md)，逐件修订见 [内容编辑记录](content/EDITORIAL.md)。
 
 ## 启动
 
@@ -28,7 +28,7 @@ npm run preview  # 本机查看生产版 http://127.0.0.1:4173
 
 ## CloudBase 展示
 
-同一站点提供 [Ink Grove 在线花园](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/) 与 [Seed Grove 小小思考家](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/seed) 两个入口。两套体验使用同一份构建产物发布；本版测试与公网检查状态见 [1.3 发布验收记录](artifacts/verification-1.3.json)，历史结果保存在 [1.2 验收记录](artifacts/verification-1.2.json)和 [1.1 验收记录](artifacts/verification.json)。默认测试域名首次访问会显示平台提示，等待倒计时后点击「确定访问」即可继续。
+同一站点提供 [Ink Grove 在线花园](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/) 与 [Seed Grove 小小思考家](https://ink-d0gvorjko99e99e4d-1303038884.tcloudbaseapp.com/seed) 两个入口。两套体验使用同一份构建产物发布；本版测试与公网检查状态见 [1.4 发布验收记录](artifacts/verification-1.4.json)，历史结果保存在 [1.3 验收记录](artifacts/verification-1.3.json)、[1.2 验收记录](artifacts/verification-1.2.json)和 [1.1 验收记录](artifacts/verification.json)。默认测试域名首次访问会显示平台提示，等待倒计时后点击「确定访问」即可继续。
 
 在根目录完成测试、构建与生产预览检查后，使用 TCB 上传同一份产物：
 
@@ -48,7 +48,7 @@ node app/scripts/verify-seed-production.mjs https://ink-d0gvorjko99e99e4d-130303
 
 ## 走一遍花园
 
-1. **首页 `/`**：从思想树、精选贯通作品与成长小径开始。访问作品后，首页会出现真实的「继续探索」。顶部导航与首页邀请卡均可进入 Seed Grove。
+1. **首页 `/`**：从三篇贯通专题、六条问题路线与精选作品开始。访问作品后，首页会出现真实的「继续探索」。顶部导航与首页邀请卡均可进入 Seed Grove。
 2. **探索 `/explore`**：类型与主题组合筛选，中文多关键词搜索，排序、网格与列表视图。搜索词与筛选保留在链接中，刷新可恢复。`Ctrl/Cmd + K` 打开搜索；上下键选择，Enter 进入作品。
 3. **作品 `/artifact/:slug`**：完整展示作品原有视觉。移动鼠标唤回工具栏，`F` 进入专注，`Esc` 退出。作品内部同样支持快捷键，阅读位置自动恢复。触屏提供专注退出按钮。点击 HTML 中的外部参考链接后，阅读器显示目标域名，再点击「打开参考资料」访问来源。
 4. **集合 `/collections`**：收藏心仪作品，创建、编辑与移除自己的集合。
@@ -76,9 +76,9 @@ Seed Grove 从 `/seed` 地图自由进入**内心花园、选择路口、学习�
 
 ## Ink Grove 已有作品
 
-内置 31 件作品，其中 28 件 HTML 保留各自的视觉与交互：27 件来自 `materials/` 原始素材，1 件为新增的 AI 辅助贯通作品。作品已接入探索、精选集合、概念与语义关系网络。
+内置57件作品，其中54件HTML保留各自的视觉与交互，另有Markdown、SVG与图片表达各1件。原有31件全部深化，新增23本书籍解读和3篇贯通文章；作品接入探索、10个集合、35个概念与语义关系网络。
 
-去重后的 22 本已有书籍、23 本候选推荐及 6 条阅读路线见 [书单清单](materials/书单清单.md)。候选书目按优先级与阅读问题组织，并附书目来源。
+去重后的45个书目、47份书籍作品与6条问题路线见 [书单清单](materials/书单清单.md)。原推荐的23本已全部入站，书名链接进入对应作品，公开来源与本站思考分别标注。
 
 | 内容               | 作品                                                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,6 +89,10 @@ Seed Grove 从 `/seed` 地图自由进入**内心花园、选择路口、学习�
 | 1.1 效能与觉察     | 《卓有成效的管理者》《当下的力量》                                                                                              |
 | 贯通作品           | 《贯通思考篇》：个人成长操作系统；《贯通思考 II》：从多本书连接成思想地图；《清醒行动实验室》：把判断变成可验证的行动           |
 | 其他表达形式       | 《注意力的回路》（Markdown）、《学习如何真正发生》（SVG）、《知识生长的地形》（image）                                          |
+| 1.4 学习与判断 | 《学会提问》《认知天性》《超预测》《思考，快与慢》《事实》《心流》《科学革命的结构》 |
+| 1.4 组织与设计 | 《好战略，坏战略》《设计心理学1》《写给大家看的设计书》《非暴力沟通》《金字塔原理》《复杂》《公共事物的治理之道》《第五项修炼》《助推》 |
+| 1.4 人生与风险 | 《四千周》《活出生命的意义》《原则》《查理·芒格传》《黑天鹅》《反脆弱》《穷理查年鉴选读》 |
+| 1.4 贯通文章 | 《方法有边界，思考才开始》《让成长，装得进生活》《从自己的花园，到共同的花园》 |
 
 《清醒行动实验室》连接《管理决策中的判断》《穷查理宝典》《控制论》《1%法则》：填写证据、反证与下一步，整理可复制的行动卡；调节修正强度和观察延迟，查看简化反馈模型的曲线与数值。它是带有明确来源的 AI 辅助贯通创作，不是书中原有量表，也不调用在线模型。实验输入只在当前页面暂存，离开前可复制行动卡。
 
@@ -120,7 +124,7 @@ artifacts/screenshots/          系统展示截图
 
 内容目录中的 `manifest.json` 是各作品的权威描述；生成给应用的目录会重新读取这些 manifest，`content/catalog.json` 提供顺序索引、集合和概念。新增作品放入独立目录，提供 `schemaVersion: 1`、唯一 id/slug、有效 renderer、本地作品资源、概念与关系，并把作品 ID 加入 catalog 的 artifacts 索引；运行 `npm run content`。无效关系、重复标识和越界路径会在构建时明确报错。只验证内容而不生成文件时，运行 `node scripts/build-all.mjs --check`。
 
-`materials/` 中的 27 件原始 HTML 保持原字节，内容目录默认直接复制原稿。五件展示副本记录了明确修复：《系统之美》的层级遗漏、《贯通思考 II》的移动端矩阵标签，以及 1.1.0 修复的《控制论》手机闭环图、《管理决策中的判断》窄屏签名区和《聪明的投资者》手机资产示意条。具体差异见 [内容编辑记录](content/EDITORIAL.md)。阅读通信桥和无效引用占位标记清理作用于构建输出，不回写原稿或内容副本。
+`materials/` 中的27件原始HTML与 `docs/design/` 中的5份设计文档保持原字节，校验基线在 `content/source-integrity.json`。1.4按授权逐份深化内容副本，保留历史修复、稳定ID和独立视觉；实际内容取舍与来源见 [内容编辑记录](content/EDITORIAL.md) 和 [研究索引](docs/research/content-renewal.md)。阅读通信桥和无效引用占位标记清理只作用于构建输出。
 
 HTML 用 `sandbox="allow-scripts"` iframe，允许作品自己的 JavaScript；不授予同源、弹窗、表单或顶层导航权限。系统与作品通过验证窗口身份的消息桥传递阅读进度、快捷键和参考资料请求。外部参考须校验 HTTP(S) 地址并由父页展示目标域名，用户再次点击父页链接后才打开，使用 `noopener noreferrer` 隔离新页。SVG 通过图片呈现，Markdown 禁用原始 HTML。
 
@@ -140,17 +144,20 @@ HTML 用 `sandbox="allow-scripts"` iframe，允许作品自己的 JavaScript；�
 
 ## 展示截图
 
+[深化阅读专题](artifacts/screenshots/home-edition-desktop.png) · [方法的边界](artifacts/screenshots/methods-with-boundaries-mobile.png) · [成长与生活](artifacts/screenshots/a-life-that-fits-mobile.png) · [共同的花园](artifacts/screenshots/shared-ground-mobile.png)
+
 [Seed 花园地图](artifacts/screenshots/seed-home-desktop.png) · [Seed 手机版](artifacts/screenshots/seed-home-mobile.png) · [Think 8](artifacts/screenshots/seed-think-desktop.png) · [再想一步](artifacts/screenshots/seed-think-depth-desktop.png) · [反馈实验](artifacts/screenshots/seed-feedback-desktop.png) · [家长小角落](artifacts/screenshots/seed-parent-desktop.png)
 
 [首页](artifacts/screenshots/home-desktop.png) · [探索](artifacts/screenshots/explore-desktop.png) · [知识连接](artifacts/screenshots/connections-desktop.png) · [成长旅程](artifacts/screenshots/journey-desktop.png) · [创作](artifacts/screenshots/create-desktop.png) · [深色](artifacts/screenshots/home-dark.png) · [手机](artifacts/screenshots/home-mobile.png)
 
 [清醒行动实验室](artifacts/screenshots/clear-thinking-lab-desktop.png) · [行动卡](artifacts/screenshots/clear-thinking-lab-action.png) · [反馈实验](artifacts/screenshots/clear-thinking-lab-feedback.png) · [实验室手机版](artifacts/screenshots/clear-thinking-lab-mobile.png)
 
-[1.3 发布验收记录](artifacts/verification-1.3.json)记录本版两套体验的测试、生产检查、远端产物校验与发布状态；[1.2 记录](artifacts/verification-1.2.json)保留首次双体验发布证据，[1.1 记录](artifacts/verification.json)保留当时的 CloudBase 备份限制。
+[1.4发布验收记录](artifacts/verification-1.4.json)记录本版两套体验的测试、生产检查、远端产物校验与发布状态；[1.3记录](artifacts/verification-1.3.json)保留统一Seed体验的发布证据，更早记录保留在 artifacts 中。
 
 生产预览服务运行时，可重新生成两套体验的截图：
 
 ```powershell
 node app/scripts/capture.mjs http://127.0.0.1:4173
 node app/scripts/verify-seed-production.mjs http://127.0.0.1:4173 --capture
+node app/scripts/verify-edition.mjs http://127.0.0.1:4173 --capture
 ```

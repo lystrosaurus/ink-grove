@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "thinking-fast-slow",
+  "slug": "thinking-fast-slow",
+  "title": "思考，快与慢",
+  "subtitle": "辨认直觉如何形成，再给重要判断安排复核",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Daniel Kahneman",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "认知偏差",
+    "判断力",
+    "概率思维",
+    "元认知"
+  ],
+  "visualStyle": "split-reference-ledger",
+  "related": [
+    "managerial-judgment",
+    "mindware",
+    "cognitive-awakening"
+  ],
+  "connections": [
+    {
+      "target": "managerial-judgment",
+      "type": "supports",
+      "concept": "cognitive-bias",
+      "label": "为管理偏差复核提供直觉与审慎处理的概念背景"
+    },
+    {
+      "target": "mindware",
+      "type": "related",
+      "concept": "probability",
+      "label": "用统计与因果工具检查直觉回答"
+    },
+    {
+      "target": "cognitive-awakening",
+      "type": "related",
+      "concept": "metacognition",
+      "label": "比较觉察的个人隐喻与判断研究的边界"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/thinking-fast-slow/index.html"
+  },
+  "cover": "/artifacts/thinking-fast-slow/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://us.macmillan.com/books/9780374275631/thinkingfastandslow/",
+      "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
+    ],
+    "derivedFrom": []
+  }
+}

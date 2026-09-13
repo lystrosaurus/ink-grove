@@ -2787,32 +2787,8 @@ kbd {
   border-radius: 7px;
   margin: 30px auto;
 }
-.image-artifact {
-  background: #eeeedd;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 85px 35px 40px;
-}
-.image-artifact img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 5px 30px #36461c12;
-}
-.image-artifact.svg {
-  background: #edf1e7;
-  padding: 80px 25px 30px;
-}
 .focus-mode .markdown-content {
   padding-top: 55px;
-}
-.focus-mode .image-artifact {
-  padding: 0;
-}
-.focus-mode .image-artifact img {
-  width: 100%;
-  box-shadow: none;
 }
 .reader-menu {
   position: absolute;
@@ -4263,12 +4239,6 @@ kbd {
   }
   .markdown-content blockquote {
     padding: 8px 17px;
-  }
-  .image-artifact {
-    padding: 72px 12px 30px;
-  }
-  .image-artifact.svg {
-    padding: 65px 0 10px;
   }
   .storage-warning {
     font-size: 9px;

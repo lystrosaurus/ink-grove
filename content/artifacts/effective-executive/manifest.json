@@ -60,9 +60,11 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/effective_executive_55_os.html"
+      "file:materials/effective_executive_55_os.html",
+      "https://www.routledge.com/The-Effective-Executive/Drucker/p/book/9780750685078",
+      "https://hbr.org/2004/06/what-makes-an-effective-executive"
     ],
     "derivedFrom": []
   }

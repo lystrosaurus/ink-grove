@@ -16,7 +16,7 @@
     "emotion-awareness",
     "reflection"
   ],
-  "parentPrompt": "先听孩子描述感受，再问：“你希望我陪着，还是帮你想一个小办法？”",
+  "parentPrompt": "先接住孩子说的感受，不替他认定天气对应哪一种情绪。可以问：“你希望我陪着，还是帮你问一问发生了什么？”",
   "realLifePrompt": "今天情绪来的时候，我想先留意身体的哪个变化？",
   "artifact": {
     "renderer": "html",

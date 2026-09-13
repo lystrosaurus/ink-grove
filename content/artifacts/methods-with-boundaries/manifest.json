@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "methods-with-boundaries",
+  "slug": "methods-with-boundaries",
+  "title": "方法有边界，思考才开始",
+  "subtitle": "让证据、预测、练习与风险各就其位：一张跨书使用地图",
+  "artifactType": "synthesis",
+  "sourceType": "synthesis",
+  "author": "Ink Grove · AI 辅助创作",
+  "topics": [
+    "思考",
+    "决策",
+    "学习"
+  ],
+  "concepts": [
+    "主题阅读",
+    "判断力",
+    "概率思维",
+    "假设验证",
+    "安全边际"
+  ],
+  "visualStyle": "slate-editorial-decision-desk",
+  "related": [
+    "asking-right-questions",
+    "mindware",
+    "thinking-fast-slow",
+    "superforecasting",
+    "black-swan",
+    "antifragile",
+    "factfulness",
+    "scientific-revolutions",
+    "make-it-stick",
+    "deliberate-practice"
+  ],
+  "connections": [
+    {
+      "target": "asking-right-questions",
+      "type": "synthesizes",
+      "concept": "judgment",
+      "label": "先区分主张、理由与桥梁假设，避免用标签代替证据"
+    },
+    {
+      "target": "mindware",
+      "type": "synthesizes",
+      "concept": "causal-reasoning",
+      "label": "用样本与替代解释检验读书会安排的因果主张"
+    },
+    {
+      "target": "thinking-fast-slow",
+      "type": "synthesizes",
+      "concept": "cognitive-bias",
+      "label": "认识判断偏差，也避免据一句话诊断他人"
+    },
+    {
+      "target": "superforecasting",
+      "type": "synthesizes",
+      "concept": "probability",
+      "label": "将可结算问题与概率更新从宽泛价值判断中分开"
+    },
+    {
+      "target": "black-swan",
+      "type": "synthesizes",
+      "concept": "margin-of-safety",
+      "label": "考虑模型遗漏与极端后果，不能只优化日常预测"
+    },
+    {
+      "target": "antifragile",
+      "type": "synthesizes",
+      "concept": "margin-of-safety",
+      "label": "先检查暴露结构和不可承受损失，再讨论试错"
+    },
+    {
+      "target": "factfulness",
+      "type": "synthesizes",
+      "concept": "information-quality",
+      "label": "同时检查比例、分布与时间，不把总体趋势当作每个人的处境"
+    },
+    {
+      "target": "scientific-revolutions",
+      "type": "synthesizes",
+      "concept": "mental-models",
+      "label": "保留科学史中的范式条件，不把反常立即当成革命"
+    },
+    {
+      "target": "make-it-stick",
+      "type": "synthesizes",
+      "concept": "feedback",
+      "label": "区分参与、熟悉感与之后在新情境中的应用"
+    },
+    {
+      "target": "deliberate-practice",
+      "type": "synthesizes",
+      "concept": "deliberate-practice",
+      "label": "让具体技能目标与可用反馈进入学习判断"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/methods-with-boundaries/index.html"
+  },
+  "cover": "/artifacts/methods-with-boundaries/cover.svg",
+  "featured": true,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "artifact:asking-right-questions",
+      "artifact:mindware",
+      "artifact:thinking-fast-slow",
+      "artifact:superforecasting",
+      "artifact:black-swan",
+      "artifact:antifragile",
+      "artifact:factfulness",
+      "artifact:scientific-revolutions",
+      "artifact:make-it-stick",
+      "artifact:deliberate-practice",
+      "https://goodjudgment.com/question_clusters/"
+    ],
+    "derivedFrom": [
+      "asking-right-questions",
+      "mindware",
+      "thinking-fast-slow",
+      "superforecasting",
+      "black-swan",
+      "antifragile",
+      "factfulness",
+      "scientific-revolutions",
+      "make-it-stick",
+      "deliberate-practice"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "principles-life-work",
+  "slug": "principles-life-work",
+  "title": "原则",
+  "subtitle": "把经验写成可检验、可修订的判断依据",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Ray Dalio",
+  "topics": [
+    "管理",
+    "决策",
+    "行动"
+  ],
+  "concepts": [
+    "原则",
+    "反馈",
+    "假设验证",
+    "激励机制"
+  ],
+  "visualStyle": "red-decision-notebook",
+  "related": [
+    "seven-habits",
+    "managerial-judgment"
+  ],
+  "connections": [
+    {
+      "target": "seven-habits",
+      "type": "related",
+      "concept": "principles",
+      "label": "比较个人价值原则与可修订的操作原则"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "cognitive-bias",
+      "label": "用判断偏差检查经验抽象和可信度加权"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/principles-life-work/index.html"
+  },
+  "cover": "/artifacts/principles-life-work/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.simonandschuster.com/books/Principles/Ray-Dalio/Principles/9781501124020",
+      "https://www.principles.com/principles/689e0214-1e50-4ca0-a5d2-5e223599badf/"
+    ],
+    "derivedFrom": []
+  }
+}

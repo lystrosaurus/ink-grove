@@ -26,7 +26,7 @@
   <section class="question-card" aria-labelledby="question"><h2 id="question" tabindex="-1"></h2><div id="choices" class="choices"></div><p id="result" role="status" aria-live="polite"></p><button id="next" class="next" hidden>再往里看一点</button><button id="again" hidden>再看看天气</button></section>
   <aside id="reflection" class="reflection" hidden><p>带回今天</p><p id="real-life"></p><p class="save-note">想留下一句话，可以在花园页面的反思框里写下，再亲手保存。</p></aside>
   <details><summary>再想一步</summary><p>小鹿想：“他们不想和我玩。”这是已经发生的事，还是心里冒出的猜想？点一句看看。</p><button id="guess">他们不想和我玩</button><button id="fact">下雨了，野餐取消了</button><p id="deeper-result" role="status" aria-live="polite"></p><p>感受是真的，原因可以再问一问。同一场雨里，也可以既失望又轻松。</p></details>
-  <footer>感受没有标准答案，也不用把每一天都变成晴天。</footer>
+  <footer>感受没有标准答案，也不用把每一天都变成晴天。天气只是比喻；同一种感受，在不同人的身体里也可能不一样。</footer>
 </main>
 <script>
 (() => {
@@ -66,7 +66,7 @@
   }
   $('next').addEventListener('click', () => { step += 1; draw(true); });
   $('again').addEventListener('click', () => { step = 0; draw(true); });
-  $('guess').addEventListener('click', () => { $('deeper-result').textContent = '这是一个猜想，现在还不能确定。可以问问同伴，也可以先让自己缓一会儿。'; });
+  $('guess').addEventListener('click', () => { $('deeper-result').textContent = '这是一个猜想，现在还不能确定。可以问：“刚才为什么收起篮子？”听听同伴怎样说，也可以先让自己缓一会儿。'; });
   $('fact').addEventListener('click', () => { $('deeper-result').textContent = '这是能看见或核实的事情。它和“他们不想和我玩”不是同一句话。'; });
   draw();
 })();

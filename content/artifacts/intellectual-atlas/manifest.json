@@ -124,7 +124,7 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
       "file:materials/integrated_thinking_intellectual_atlas.html"
     ],

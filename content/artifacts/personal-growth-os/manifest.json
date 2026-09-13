@@ -69,9 +69,10 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/integrated_thinking_personal_os.html"
+      "file:materials/integrated_thinking_personal_os.html",
+      "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
     ],
     "derivedFrom": [
       "cognitive-awakening",

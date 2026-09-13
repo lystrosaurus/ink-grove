@@ -1,7 +1,75 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import bridge from '../generated/bridge.js'
+import './image-reader.css'
+
+function ImageReader({ artifact, imageUrl, scrollRef, onReady, onScroll, onError, preview }) {
+  const [scale, setScale] = useState(1)
+  const viewport = useRef(null)
+  const hintId = useId()
+  const attachViewport = useCallback(
+    (node) => {
+      viewport.current = node
+      if (typeof scrollRef === 'function') scrollRef(node)
+      else if (scrollRef) scrollRef.current = node
+    },
+    [scrollRef],
+  )
+  function reset() {
+    setScale(1)
+    viewport.current?.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }
+  return (
+    <div className={`image-reader ${preview ? 'preview-image' : ''}`}>
+      <div className="image-controls" role="group" aria-label="图片缩放">
+        <button
+          type="button"
+          aria-label="缩小图片"
+          disabled={scale === 1}
+          onClick={() => setScale((value) => Math.max(1, value - 1))}
+        >
+          − 缩小
+        </button>
+        <output aria-live="polite" aria-label="图片缩放比例">
+          {scale * 100}%
+        </output>
+        <button
+          type="button"
+          aria-label="放大图片"
+          disabled={scale === 4}
+          onClick={() => setScale((value) => Math.min(4, value + 1))}
+        >
+          ＋ 放大
+        </button>
+        <button type="button" aria-label="还原图片大小" onClick={reset}>
+          还原
+        </button>
+      </div>
+      <p className="image-scroll-hint" id={hintId}>
+        放大后可在图片内滚动查看，也可聚焦图片后用方向键移动。
+      </p>
+      <div
+        ref={attachViewport}
+        className={`image-artifact renderer-scroll ${artifact.artifact.renderer}`}
+        role="region"
+        aria-label="图片阅读区域"
+        aria-describedby={hintId}
+        tabIndex={0}
+        onScroll={onScroll}
+      >
+        <div className="image-canvas" style={{ width: `${scale * 100}%` }}>
+          <img
+            src={imageUrl}
+            alt={artifact.subtitle || artifact.title}
+            onLoad={onReady}
+            onError={onError}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function MarkdownLink({ node, href, children, InternalLink, ...props }) {
   if (!href) return <span {...props}>{children}</span>
@@ -140,18 +208,16 @@ export default function ArtifactRenderer({
     )
   if (renderer === 'image' || renderer === 'svg')
     return (
-      <div
-        ref={scrollRef}
-        className={`image-artifact renderer-scroll ${renderer}`}
+      <ImageReader
+        key={`${artifact.id}:${imageUrl}`}
+        artifact={artifact}
+        imageUrl={imageUrl}
+        scrollRef={scrollRef}
+        onReady={onReady}
         onScroll={onScroll}
-      >
-        <img
-          src={imageUrl}
-          alt={artifact.subtitle || artifact.title}
-          onLoad={onReady}
-          onError={() => setError('无法读取图片内容，请检查作品文件。')}
-        />
-      </div>
+        onError={() => setError('无法读取图片内容，请检查作品文件。')}
+        preview={preview}
+      />
     )
   return (
     <div className="renderer-error" role="alert">

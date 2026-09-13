@@ -52,9 +52,11 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/naval_almanack_black_gold.html"
+      "file:materials/naval_almanack_black_gold.html",
+      "https://www.navalmanack.com/",
+      "https://www.navalmanack.com/almanack-of-naval-ravikant/find-a-position-of-leverage"
     ],
     "derivedFrom": []
   }

@@ -59,9 +59,11 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/the_power_of_now_presence.html"
+      "file:materials/the_power_of_now_presence.html",
+      "https://eckharttolle.com/power-of-now-excerpt/",
+      "https://newworldlibrary.com/product/the-power-of-now"
     ],
     "derivedFrom": []
   }

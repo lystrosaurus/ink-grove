@@ -1,0 +1,134 @@
+{
+  "baselineCommit": "d36d44c1cb5e65e598692668e5c92bc1dde5be2e",
+  "description": "User supplied HTML materials and design documents: retain exact bytes while editing publication copies.",
+  "files": [
+    {
+      "sha256": "F9AC8BCDFB240965D05B35DF801C2600F2EC41F3F741A815C8C5286E404CE083",
+      "path": "materials/1_percent_rule_single_page.html"
+    },
+    {
+      "sha256": "07EA9C55635E3A698BDB784210479744786B4DF791915AF8038599458C421BFC",
+      "path": "materials/12_rules_for_life_single_page.html"
+    },
+    {
+      "sha256": "E090E59871EBDAE6224239927D2AC872312945E1CEB037294721C927556CDDE0",
+      "path": "materials/cognitive_awakening_editorial.html"
+    },
+    {
+      "sha256": "DAB18DCE891CBFC4153367CB5FEC8195BD3BD057A5708896E7D790ACD975E8C8",
+      "path": "materials/cognitive_awakening_inner_os_single_page.html"
+    },
+    {
+      "sha256": "8246DF6FA9704E41C12819B8CBEB008317D5FBD03111842A5C4E6931ADFFC039",
+      "path": "materials/cybernetics_control_console.html"
+    },
+    {
+      "sha256": "938929E13FBF0A7E5F036C16AD2108E6B0AE532FC8D641EE1BECF997EC4702F6",
+      "path": "materials/deliberate_practice_lab_style.html"
+    },
+    {
+      "sha256": "5964006E114A9338756BD963297EA821F7F4CA904CC1AF37B275F565BF09A5B9",
+      "path": "materials/deliberate_practice_modern.html"
+    },
+    {
+      "sha256": "E49077EEE73316A5B02CD1EB97F46A46B146CD2750C83F8AC5A14268F0BB80DF",
+      "path": "materials/great_mental_models_single_page.html"
+    },
+    {
+      "sha256": "269CAFE479824F5DE71BB17B323DF31A95820D6A4E672F1E481A574F0764E8E7",
+      "path": "materials/how_to_read_a_book_single_page.html"
+    },
+    {
+      "sha256": "857A7B3F91C4178C8CB1D2873263D3ACBAD4B18B8493F3F39C7C36FD78FF2BB3",
+      "path": "materials/innovators_dilemma_single_page.html"
+    },
+    {
+      "sha256": "6C1BD88D275B6947F01A5211C07C10E7A1C81F718D44DF109BBAD703527391CA",
+      "path": "materials/integrated_thinking_intellectual_atlas.html"
+    },
+    {
+      "sha256": "AAAFDC26D96ED245E09AD83A34758D5D5B4C9B04269F7335AFE281758011403E",
+      "path": "materials/integrated_thinking_personal_os.html"
+    },
+    {
+      "sha256": "77626B54CA31F39CA7ED8E901AFE56B23F876B2A4EA53594BC193885691F6779",
+      "path": "materials/judgment_in_managerial_decision_making.html"
+    },
+    {
+      "sha256": "16F28DCB4E6D2173A61F95CDA6CE6454B6521418F31FD1108CE65DFAA4E0D276",
+      "path": "materials/mindware_logic_thinking_single_page.html"
+    },
+    {
+      "sha256": "3A9D74CD807D2E3C65486EDBD22184408DC9D3E0A70146065468EBF4989FBE10",
+      "path": "materials/naval_almanack_black_gold.html"
+    },
+    {
+      "sha256": "F6C7BC5D414C76FA707E3FF7FE3CD3F2BD50076838352D7BAD58A0F9B82A1CD4",
+      "path": "materials/poor_charlies_almanack_decision_room.html"
+    },
+    {
+      "sha256": "16A5530582FEF8D54B6986630FB593E8EDF92AAA3E3EB64DD77548C1475BABC9",
+      "path": "materials/rockefeller_wealth_myth_archive.html"
+    },
+    {
+      "sha256": "6CBCB812664E904AC4CA413AA34A265B45898CE2833BFD20928E957D5C986892",
+      "path": "materials/seven_habits_core_map.html"
+    },
+    {
+      "sha256": "C6169D009493FA809B38938C2116F0D50E7091742272D169F151CD1BB351D797",
+      "path": "materials/the_mckinsey_way_single_page.html"
+    },
+    {
+      "sha256": "A77CEC281F5A185CBA750432D6601C21448AA46F395D64CDFC517B389D7DF3C6",
+      "path": "materials/thinking_in_systems_single_page.html"
+    },
+    {
+      "sha256": "20ADD0A545C41B217A89C6235321D2447DB78CCECD75B0E6C02CF7F6D566A3F0",
+      "path": "materials/thinking-framework-core-map.html"
+    },
+    {
+      "sha256": "DF7835C72206A06BBC651D4A28FDD339E6812E25602610DE2F5C61303C272CB5",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part0.md"
+    },
+    {
+      "sha256": "EEBDE5C3D0D1527DB96B7968F0A27AFEA5EE31EA3EC2F60D851AD3CB8A1DDDEC",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part1.md"
+    },
+    {
+      "sha256": "4CE474B57B4594D737B06A86B37B68EE922DBD92EF766058583B6F07F1C1946C",
+      "path": "docs/design/Ink Grove — Visual Knowledge Garden 产品与系统设计文档-part2.md"
+    },
+    {
+      "sha256": "0BE5A029850900D4953B404D4E0245BE00338AB78F35BCD3CE195A2173BDF5E3",
+      "path": "docs/design/Ink Grove｜Visual Knowledge Garden 产品与系统设计文档.md"
+    },
+    {
+      "sha256": "DD4AF44F501F2EFFA52885F6F344A71BACC00293465F1A0A5C4B3D81B969BFC6",
+      "path": "materials/buffett_shareholder_letters_owners_manual.html"
+    },
+    {
+      "sha256": "5DFD27A712D05E8206C15B136E17A05A4FF2617494D0CA94439E2BB35385FC67",
+      "path": "materials/economic_way_of_thinking_13_lens_lab.html"
+    },
+    {
+      "sha256": "4705B83F3514008397D178718A2DA77FEBAE36A20212DF1EA21D80FE5E917763",
+      "path": "materials/effective_executive_55_os.html"
+    },
+    {
+      "sha256": "4D202C7216BA64EB939DFFD8FE61EE95C8A530A626F0F4C6AB76645B7A695D6C",
+      "path": "materials/peter_lynch_stock_scout.html"
+    },
+    {
+      "sha256": "C3CEABE25DFA44C13C0A1D7F981B4CFE2AFDA1421BA9327437ECEE481904EC2F",
+      "path": "materials/the_intelligent_investor_fortress.html"
+    },
+    {
+      "sha256": "B081370F4735285A1503ADD2F1E8F16EE2F7A99FBC00C26B846E1AAB71CD2A0D",
+      "path": "materials/the_power_of_now_presence.html"
+    },
+    {
+      "path": "docs/design/Seed Grove｜小小思考家儿童底层认知系统设计文档.md",
+      "sha256": "E03CE53F3419B3B69F2005AD72667416184B653A393A037FCF217C0A281B2087"
+    }
+  ]
+}

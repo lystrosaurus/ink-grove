@@ -367,6 +367,7 @@ h1{
   .section-head{flex-direction:column;align-items:flex-start}
   .topbar,.footer{flex-direction:column}
 }
+.edition-note{margin-top:26px;padding:22px;border:1px solid var(--line);border-left:4px solid var(--gold,var(--wine,var(--deep)));line-height:1.8;text-align:left}.edition-note h3{font-size:22px;margin:0 0 12px}.edition-note p{font-size:15px;margin:12px 0;max-width:960px}.edition-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.edition-note label{display:block;font-size:15px;margin:14px 0 8px}.edition-note button,.edition-note select,.edition-note input{font:inherit;padding:10px;max-width:100%;color:inherit;background:transparent;border:1px solid currentColor;border-radius:4px}.edition-note select{background:var(--paper,#171612)}.edition-note button{cursor:pointer;min-height:44px;margin:10px 8px 0 0}.edition-note output{display:block;padding:16px;border:1px solid var(--line);margin-top:16px;font-size:16px}.edition-note :focus-visible{outline:3px solid var(--gold,var(--wine,var(--deep)));outline-offset:3px}.edition-sources{margin:20px 0;font-size:14px}.edition-sources a{color:inherit;overflow-wrap:anywhere}.edition-note strong{font-weight:800}@media(max-width:600px){.edition-note{padding:18px 14px}.edition-note input,.edition-note select{width:100%}}
 </style>
 </head>
 <body>
@@ -452,9 +453,9 @@ h1{
       <div class="panel-body">
         <div class="filters">
           <div class="filter"><div class="num">1</div><div><b>我真的理解它吗？</b><span>如果无法用简单语言解释，就可能还没有进入能力圈。</span></div><div class="check">CHECK</div></div>
-          <div class="filter"><div class="num">2</div><div><b>如果反过来想呢？</b><span>什么行为会保证失败？先排除这些路径。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">2</div><div><b>如果反过来想呢？</b><span>哪些路径最可能造成不可承受的失败？检查证据，再缩小暴露。</span></div><div class="check">CHECK</div></div>
           <div class="filter"><div class="num">3</div><div><b>激励是什么？</b><span>不要只听解释，先看每个参与者真正从什么中获益。</span></div><div class="check">CHECK</div></div>
-          <div class="filter"><div class="num">4</div><div><b>概率与赔率匹配吗？</b><span>好结果不代表好决策，关键是预期价值。</span></div><div class="check">CHECK</div></div>
+          <div class="filter"><div class="num">4</div><div><b>概率与赔率匹配吗？</b><span>区分决策过程与偶然结果；预期价值之外，还要检查估计误差与不可承受的损失。</span></div><div class="check">CHECK</div></div>
           <div class="filter"><div class="num">5</div><div><b>安全边际够吗？</b><span>给估计错误、环境变化和未知风险留出空间。</span></div><div class="check">CHECK</div></div>
           <div class="filter"><div class="num">6</div><div><b>值得等待吗？</b><span>没有好机会时，不行动本身就是一种决策。</span></div><div class="check">CHECK</div></div>
         </div>
@@ -479,6 +480,8 @@ h1{
       </div>
     </div>
   </div>
+
+<aside class="edition-note"><h3>模型不是多贴几个标签</h3><p>《穷查理宝典》是演讲与思想的整理，模型格栅强调跨学科理解。出版方的公开介绍可核对其编辑与演讲背景。本站把“决策作战室”视作阅读隐喻，并不声称复现芒格实际脑内过程。<a href="https://www.poorcharliesalmanack.com/pca.php">原出版方介绍</a></p><p>一个模型真正有用，至少应改变一个可观察问题。说某公司“有复利、有护城河、有规模”可能只是三种赞美；问新增客户是否降低单位成本、复购是否持续、价格下降后仍能否盈利，才开始让模型接受现实审查。</p></aside>
 </section>
 
 <section class="section">
@@ -499,11 +502,13 @@ h1{
 
     <div class="inversion-list">
       <div class="inv"><div class="q">BUSINESS</div><b>怎样毁掉一家好公司？</b><p>过度负债、糟糕激励、忽视客户、频繁改变方向、在看不懂的领域扩张。</p></div>
-      <div class="inv"><div class="q">INVESTING</div><b>怎样保证长期投资表现糟糕？</b><p>频繁交易、追逐热门、忽略价格、借太多钱、在恐慌时失去理性。</p></div>
+      <div class="inv"><div class="q">INVESTING</div><b>哪些行为容易破坏长期投资纪律？</b><p>频繁交易、追逐热门、忽略价格、借太多钱、在恐慌时失去理性。</p></div>
       <div class="inv"><div class="q">LEARNING</div><b>怎样让自己越来越无知？</b><p>只读同意自己的观点、不跨学科、不复盘错误、把身份绑定在旧观点上。</p></div>
       <div class="inv"><div class="q">LIFE</div><b>怎样制造一个糟糕的人生？</b><p>沉迷比较、持续透支健康、与不可信的人合作、把短期刺激当成长期价值。</p></div>
     </div>
   </div>
+
+<aside class="edition-note"><h3>本站多模型审问：订单增加，真的是好消息吗</h3><p>虚构业务本月有 100 笔订单，但销售奖励只按签单数发放。仅凭订单增加还不能判断改善。选一个视角，看看它要求补充什么证据。</p><label for="model-view">切换审问视角</label><select id="model-view"><option value="incentive">激励机制</option><option value="cost">机会成本</option><option value="counter">因果对照</option><option value="failure">逆向失效</option></select><output id="model-result" aria-live="polite">激励视角：退货和违约由谁承担？签单奖励是否鼓励承诺无法交付的条件？</output><p>这些问题可能导向不同结论。大客户也许带来规模，也可能挤掉更可靠的客户；奖金也许提升行动，也可能诱发虚报。模型之间的张力应促使补证据，不能用多数模型“投票”来替代判断。</p></aside>
 </section>
 
 <section class="section">
@@ -512,20 +517,20 @@ h1{
       <div class="kicker">03 · COMPOUNDING</div>
       <h2>复利不只发生在钱上，也发生在知识、信誉与关系上</h2>
     </div>
-    <p>芒格反复强调持续学习与长期积累。真正强大的优势，往往不是一次性的聪明，而是长期不断变得更聪明。</p>
+    <p>芒格反复强调持续学习与长期积累。真正强大的优势，往往不是一次性的聪明，而是持续学习、接纳反证并修订理解；年限本身不保证判断改善。</p>
   </div>
 
   <div class="compounding">
     <div class="chart-box">
       <div class="kicker">COMPOUNDING CURVE</div>
-      <h3 style="font-size:24px;margin:8px 0">微小优势 × 长时间 = 巨大差距</h3>
+      <h3 style="font-size:24px;margin:8px 0">可持续积累，需要正反馈与不被中断的条件</h3>
       <div class="chart">
         <svg viewBox="0 0 700 260" preserveAspectRatio="none">
           <path class="linear-line" d="M0 230 L700 72"/>
           <path class="compound-line" d="M0 230 C170 226 270 214 360 190 C455 165 520 125 575 80 C620 43 655 21 700 10"/>
         </svg>
       </div>
-      <div class="legend"><span><i class="key green"></i>复利积累</span><span><i class="key gold"></i>线性努力</span></div>
+      <div class="legend"><span><i class="key green"></i>复利示意（非数据）</span><span><i class="key gold"></i>线性努力</span></div>
     </div>
 
     <div class="patience-box">
@@ -555,6 +560,8 @@ h1{
     <div class="discipline"><div class="sym">DNA</div><b>生物学</b><span>进化、适应、生态位、竞争。</span></div>
     <div class="discipline"><div class="sym">⌛</div><b>历史</b><span>模式、周期、制度后果与人性重复。</span></div>
   </div>
+
+<aside class="edition-note"><h3>能力圈要靠反馈校准</h3><p>“我能讲得很简单”不能独自证明我懂。本站建议为一个判断列出最近的同类经验、预测记录和不熟悉的部分，再让有相关知识的人检查。语言流畅可以来自理解，也可以来自过度简化。</p><p>巴菲特在 2023 年原信回顾芒格长期纠正其旧习惯，说明学习并不总是直线积累；原有偏好可能反复回来。这是后续一手对读，不能拿合作的最终成功证明每条模型都正确。<a href="https://www.berkshirehathaway.com/letters/2023ltr.pdf">伯克希尔纪念文字</a></p><p>实践时保留一条“目前无法判断”，并给它安排核查渠道。逆向思考能减少可避免错误，却不能证明剩下的方案必定成功；未知风险、机会成本与他人的代价仍要留在讨论里。</p></aside>
 </section>
 
 <section class="section">
@@ -569,8 +576,8 @@ h1{
   <div class="protocol">
     <div class="step"><div class="n">STEP 01</div><b>定义问题</b><span>把事实与解释分开，先说清真正要解决什么。</span></div>
     <div class="step"><div class="n">STEP 02</div><b>确认能力圈</b><span>我真的理解核心变量吗？哪些部分其实不知道？</span></div>
-    <div class="step"><div class="n">STEP 03</div><b>调用模型</b><span>至少从几个不同学科重新解释同一个问题。</span></div>
-    <div class="step"><div class="n">STEP 04</div><b>逆向检查</b><span>怎样一定失败？先消灭这些路径。</span></div>
+    <div class="step"><div class="n">STEP 03</div><b>调用模型</b><span>挑选会产生不同可检验问题的模型，避免用多个术语重复同一解释。</span></div>
+    <div class="step"><div class="n">STEP 04</div><b>逆向检查</b><span>哪些路径可能导致不可承受的失败？检查依据，再减少暴露。</span></div>
     <div class="step"><div class="n">STEP 05</div><b>心理去偏</b><span>激励、从众、确认偏误是否正在影响判断？</span></div>
     <div class="step"><div class="n">STEP 06</div><b>留安全边际</b><span>即使估计错了一部分，结果是否仍可接受？</span></div>
     <div class="step"><div class="n">STEP 07</div><b>耐心执行</b><span>真正有优势时果断行动，没有优势时继续等待。</span></div>
@@ -582,7 +589,7 @@ h1{
     <div class="final-main">
       <div class="kicker">ONE-MINUTE MUNGER OS</div>
       <strong>不要试图在每件事上都很聪明。建立一套能持续减少愚蠢决策的系统。</strong>
-      <p>跨学科学习扩大你的模型库；能力圈约束你的自信；逆向思考帮你避开灾难；心理学让你看见误判；安全边际保护你免受未知伤害；复利与耐心最终放大正确选择。</p>
+      <p>跨学科学习提供更多可比较的解释，能力圈帮助约束自信，逆向检查有助于发现可避免的失效路径。心理学可以提示误判线索；安全边际能为部分误差留下缓冲，却不能覆盖所有未知冲击。复用与耐心的价值仍取决于方向、反馈及能否承受中断。</p>
     </div>
 
     <div class="final-side">
@@ -596,6 +603,7 @@ h1{
   </div>
 </section>
 
+<aside class="edition-note edition-sources"><h3>本次深化的公开依据</h3><p>原视觉稿保留，相关章节由人与 AI 共同编辑。公开原书观点、历史资料与本站原创例子在邻近段落中区分；互动为本站设计，不代表原书原有工具。</p><ul><li><a href="https://www.poorcharliesalmanack.com/pca.php" target="_blank" rel="noopener noreferrer">PCA Publications：Poor Charlie’s Almanack</a></li><li><a href="https://www.berkshirehathaway.com/letters/2023ltr.pdf" target="_blank" rel="noopener noreferrer">Berkshire Hathaway：2023 年股东信中的合作回顾</a></li></ul></aside>
 <footer class="footer">
   <span>POOR CHARLIE'S ALMANACK · CHARLES T. MUNGER · EDITED BY PETER D. KAUFMAN</span>
   <span><a href="https://books.google.com/books/about/Poor_Charlie_s_Almanack.html?id=2unAEAAAQBAJ" target="_blank">PUBLIC BOOK REFERENCE</a></span>
@@ -603,5 +611,6 @@ h1{
 
 </main>
 </div>
+<script>const models={incentive:'激励视角：退货和违约由谁承担？签单奖励是否鼓励承诺无法交付的条件？',cost:'机会成本：满足新增订单会挤占谁的服务、多少交付时间与资金？最好的可行替代用途是什么？',counter:'因果对照：没有新奖励的同类团队是否也增长？促销、季节和客户结构变化可能是替代解释。',failure:'逆向失效：若退货集中发生，现金与交付是否撑得住？先定义不可承受后果，不把增长当成唯一目标。'};document.querySelector('#model-view').addEventListener('change',e=>document.querySelector('#model-result').textContent=models[e.target.value]);</script>
 </body>
 </html>

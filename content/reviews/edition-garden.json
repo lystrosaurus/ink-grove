@@ -1,0 +1,116 @@
+[
+  {
+    "id": "one-percent-rule",
+    "kind": "revised",
+    "summary": "修正37倍能力增长、无限自动化与无出处赛事数字",
+    "changes": [
+      "修正37倍能力增长、无限自动化与无出处赛事数字",
+      "区分作者主题与本站重组协议，撤去伪神经科学因果",
+      "增加退回数量/比例互动及任务差异、成本、停用条件",
+      "按实际结构改为三组九项，移除行动与仪式的必然性及早晚三分钟原书归属"
+    ],
+    "sources": [
+      {
+        "title": "Tom Connellan：作者书目与小差距案例",
+        "url": "https://tomconnellan.com/tomconnellanbooks.html"
+      },
+      {
+        "title": "Lally 等：现实中的习惯形成研究",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674"
+      }
+    ],
+    "interaction": {
+      "selector": "#compare-rates",
+      "action": "比较30/100与18/60，再改为12/60",
+      "expected": "比例先相同，再下降10个百分点；拒绝零分母"
+    }
+  },
+  {
+    "id": "personal-growth-os",
+    "kind": "revised",
+    "summary": "将单向成长阶梯改为可回溯的多入口地图",
+    "changes": [
+      "将单向成长阶梯改为可回溯的多入口地图",
+      "补充技能、目标协商、结构约束分流互动",
+      "用周报案例说明练习与杠杆的边界、现实停止条件",
+      "移除出售时间低于复利的人生等级暗示，保留照护与在场价值"
+    ],
+    "sources": [
+      {
+        "title": "Donella Meadows：系统的杠杆点",
+        "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
+      }
+    ],
+    "interaction": {
+      "selector": "[data-bottleneck]",
+      "action": "依次选择技能与结构阻力",
+      "expected": "建议从拆技能变为协商工作量，选中状态同步"
+    }
+  },
+  {
+    "id": "intellectual-atlas",
+    "kind": "revised",
+    "summary": "修正反馈必然改善、消除情绪与单一意义来源",
+    "changes": [
+      "修正反馈必然改善、消除情绪与单一意义来源",
+      "增加读书会竞争解释、预期证据和反证路径",
+      "为跨书箭头补充条件，保留个人责任与结构解释的分歧",
+      "将创新者的窘境限定为组织约束视角，不作为个人自由与复利的直接依据"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "clear-thinking-lab",
+    "kind": "revised",
+    "summary": "增加指标替代目的的读书会反例",
+    "changes": [
+      "增加指标替代目的的读书会反例",
+      "补充结果、代价、参与者退出与继续/修改/停止三种复盘结论",
+      "明确固定目标教学模型不能代替现实价值判断"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "learning-cycle",
+    "kind": "revised",
+    "summary": "把装饰性循环深化为有方向和检验条件的学习图",
+    "changes": [
+      "增加六步方向箭头及继续/修改/停止分支语义",
+      "增加概念解释的完整例子，区分表现与保留迁移",
+      "标明本站综合图解，补充反馈噪声、支持与恢复条件"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "knowledge-landscape",
+    "kind": "revised",
+    "summary": "让风景里的连线表达可检验的联系而非必然进步",
+    "changes": [
+      "修正每一个连接都促进理解的绝对表述",
+      "为观察、核对、返回与沉淀路径添加语义",
+      "明确虚线是待检验联系，保留插画与图片Renderer"
+    ],
+    "sources": [],
+    "interaction": null
+  },
+  {
+    "id": "attention-loop",
+    "kind": "revised",
+    "summary": "将专注札记深化为竞争解释与可检验的学习尝试",
+    "changes": [
+      "区分刺激吸引与缺少背景知识两种分心解释",
+      "区分投入、当下表现、保留与迁移",
+      "加入解释性反馈来源和无效果时的调整路径"
+    ],
+    "sources": [
+      {
+        "title": "Retrieval Practice：反馈与元认知",
+        "url": "https://www.retrievalpractice.org/feedback/"
+      }
+    ],
+    "interaction": null
+  }
+]

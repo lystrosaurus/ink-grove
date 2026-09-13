@@ -3,6 +3,766 @@
   "artifacts": [
     {
       "schemaVersion": 1,
+      "id": "methods-with-boundaries",
+      "slug": "methods-with-boundaries",
+      "title": "方法有边界，思考才开始",
+      "subtitle": "让证据、预测、练习与风险各就其位：一张跨书使用地图",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove · AI 辅助创作",
+      "topics": [
+        "思考",
+        "决策",
+        "学习"
+      ],
+      "concepts": [
+        "主题阅读",
+        "判断力",
+        "概率思维",
+        "假设验证",
+        "安全边际"
+      ],
+      "visualStyle": "slate-editorial-decision-desk",
+      "related": [
+        "asking-right-questions",
+        "mindware",
+        "thinking-fast-slow",
+        "superforecasting",
+        "black-swan",
+        "antifragile",
+        "factfulness",
+        "scientific-revolutions",
+        "make-it-stick",
+        "deliberate-practice"
+      ],
+      "connections": [
+        {
+          "target": "asking-right-questions",
+          "type": "synthesizes",
+          "concept": "judgment",
+          "label": "先区分主张、理由与桥梁假设，避免用标签代替证据"
+        },
+        {
+          "target": "mindware",
+          "type": "synthesizes",
+          "concept": "causal-reasoning",
+          "label": "用样本与替代解释检验读书会安排的因果主张"
+        },
+        {
+          "target": "thinking-fast-slow",
+          "type": "synthesizes",
+          "concept": "cognitive-bias",
+          "label": "认识判断偏差，也避免据一句话诊断他人"
+        },
+        {
+          "target": "superforecasting",
+          "type": "synthesizes",
+          "concept": "probability",
+          "label": "将可结算问题与概率更新从宽泛价值判断中分开"
+        },
+        {
+          "target": "black-swan",
+          "type": "synthesizes",
+          "concept": "margin-of-safety",
+          "label": "考虑模型遗漏与极端后果，不能只优化日常预测"
+        },
+        {
+          "target": "antifragile",
+          "type": "synthesizes",
+          "concept": "margin-of-safety",
+          "label": "先检查暴露结构和不可承受损失，再讨论试错"
+        },
+        {
+          "target": "factfulness",
+          "type": "synthesizes",
+          "concept": "information-quality",
+          "label": "同时检查比例、分布与时间，不把总体趋势当作每个人的处境"
+        },
+        {
+          "target": "scientific-revolutions",
+          "type": "synthesizes",
+          "concept": "mental-models",
+          "label": "保留科学史中的范式条件，不把反常立即当成革命"
+        },
+        {
+          "target": "make-it-stick",
+          "type": "synthesizes",
+          "concept": "feedback",
+          "label": "区分参与、熟悉感与之后在新情境中的应用"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "synthesizes",
+          "concept": "deliberate-practice",
+          "label": "让具体技能目标与可用反馈进入学习判断"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/methods-with-boundaries/index.html"
+      },
+      "cover": "/artifacts/methods-with-boundaries/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "artifact:asking-right-questions",
+          "artifact:mindware",
+          "artifact:thinking-fast-slow",
+          "artifact:superforecasting",
+          "artifact:black-swan",
+          "artifact:antifragile",
+          "artifact:factfulness",
+          "artifact:scientific-revolutions",
+          "artifact:make-it-stick",
+          "artifact:deliberate-practice",
+          "https://goodjudgment.com/question_clusters/"
+        ],
+        "derivedFrom": [
+          "asking-right-questions",
+          "mindware",
+          "thinking-fast-slow",
+          "superforecasting",
+          "black-swan",
+          "antifragile",
+          "factfulness",
+          "scientific-revolutions",
+          "make-it-stick",
+          "deliberate-practice"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "a-life-that-fits",
+      "slug": "a-life-that-fits",
+      "title": "让成长，装得进生活",
+      "subtitle": "能力、效率、意义与有限时间：给取舍和在场留出位置",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove · AI 辅助创作",
+      "topics": [
+        "成长",
+        "生活",
+        "选择"
+      ],
+      "concepts": [
+        "主动选择",
+        "不断更新",
+        "责任与意义",
+        "机会成本",
+        "刻意练习"
+      ],
+      "visualStyle": "linen-time-margin-journal",
+      "related": [
+        "four-thousand-weeks",
+        "effective-executive",
+        "seven-habits",
+        "flow",
+        "deliberate-practice",
+        "mans-search-for-meaning",
+        "power-of-now",
+        "naval-almanack",
+        "one-percent-rule",
+        "nonviolent-communication"
+      ],
+      "connections": [
+        {
+          "target": "four-thousand-weeks",
+          "type": "synthesizes",
+          "concept": "opportunity-cost",
+          "label": "用时间有限性检验新增承诺与效率的关系"
+        },
+        {
+          "target": "effective-executive",
+          "type": "synthesizes",
+          "concept": "active-choice",
+          "label": "从贡献与优先次序辨认值得投入的事务"
+        },
+        {
+          "target": "seven-habits",
+          "type": "synthesizes",
+          "concept": "renewal",
+          "label": "把原则、关系与恢复放进时间取舍"
+        },
+        {
+          "target": "flow",
+          "type": "synthesizes",
+          "concept": "attention",
+          "label": "区分投入体验与能力长期改善"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "synthesizes",
+          "concept": "deliberate-practice",
+          "label": "训练可以不流畅，仍需要清楚目标与恢复"
+        },
+        {
+          "target": "mans-search-for-meaning",
+          "type": "synthesizes",
+          "concept": "responsibility",
+          "label": "把意义保留为自己的追问，不成为要求别人忍受伤害的命令"
+        },
+        {
+          "target": "power-of-now",
+          "type": "synthesizes",
+          "concept": "metacognition",
+          "label": "观察当下不排除解决现实问题或寻求支持"
+        },
+        {
+          "target": "naval-almanack",
+          "type": "synthesizes",
+          "concept": "leverage",
+          "label": "检验可复用成果的边界，保留照护与在场的价值"
+        },
+        {
+          "target": "one-percent-rule",
+          "type": "synthesizes",
+          "concept": "small-improvements",
+          "label": "缩小行动范围，不把日程写成恒定增长曲线"
+        },
+        {
+          "target": "nonviolent-communication",
+          "type": "synthesizes",
+          "concept": "active-choice",
+          "label": "让请求、拒绝与工作量协商进入承诺的边界"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/a-life-that-fits/index.html"
+      },
+      "cover": "/artifacts/a-life-that-fits/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "artifact:four-thousand-weeks",
+          "artifact:effective-executive",
+          "artifact:seven-habits",
+          "artifact:flow",
+          "artifact:deliberate-practice",
+          "artifact:mans-search-for-meaning",
+          "artifact:power-of-now",
+          "artifact:naval-almanack",
+          "artifact:one-percent-rule",
+          "artifact:nonviolent-communication",
+          "https://www.oliverburkeman.com/fourthousandweeks"
+        ],
+        "derivedFrom": [
+          "four-thousand-weeks",
+          "effective-executive",
+          "seven-habits",
+          "flow",
+          "deliberate-practice",
+          "mans-search-for-meaning",
+          "power-of-now",
+          "naval-almanack",
+          "one-percent-rule",
+          "nonviolent-communication"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "shared-ground",
+      "slug": "shared-ground",
+      "title": "从自己的花园，到共同的花园",
+      "subtitle": "把系统、设计与沟通放回真实的参与者、规则和维护",
+      "artifactType": "synthesis",
+      "sourceType": "synthesis",
+      "author": "Ink Grove · AI 辅助创作",
+      "topics": [
+        "系统",
+        "合作",
+        "设计"
+      ],
+      "concepts": [
+        "系统思维",
+        "制度与权力",
+        "激励机制",
+        "反馈",
+        "责任与意义"
+      ],
+      "visualStyle": "civic-garden-rulebook",
+      "related": [
+        "thinking-in-systems",
+        "governing-commons",
+        "fifth-discipline",
+        "economic-way-of-thinking",
+        "nonviolent-communication",
+        "design-everyday-things",
+        "non-designers-design-book",
+        "nudge",
+        "good-strategy-bad-strategy",
+        "complexity-guided-tour",
+        "pyramid-principle"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "synthesizes",
+          "concept": "systems-thinking",
+          "label": "把共享工作桌的占用、等待与退出作为待检验的回路"
+        },
+        {
+          "target": "governing-commons",
+          "type": "synthesizes",
+          "concept": "institutional-power",
+          "label": "围绕参与、维护、争议与修改权讨论共同资源规则"
+        },
+        {
+          "target": "fifth-discipline",
+          "type": "synthesizes",
+          "concept": "feedback",
+          "label": "让不同成员的观察进入共同学习与规则修正"
+        },
+        {
+          "target": "economic-way-of-thinking",
+          "type": "synthesizes",
+          "concept": "incentives",
+          "label": "检查有限资源、激励与被隐藏的维护成本"
+        },
+        {
+          "target": "nonviolent-communication",
+          "type": "synthesizes",
+          "concept": "active-choice",
+          "label": "听见具体需要，也承认礼貌不能代替公平的权限"
+        },
+        {
+          "target": "design-everyday-things",
+          "type": "synthesizes",
+          "concept": "feedback",
+          "label": "让第一次使用者看懂操作线索及预约后的反馈"
+        },
+        {
+          "target": "non-designers-design-book",
+          "type": "synthesizes",
+          "concept": "information-quality",
+          "label": "用视觉层级呈现占用状态，仍需真实使用检验"
+        },
+        {
+          "target": "nudge",
+          "type": "synthesizes",
+          "concept": "active-choice",
+          "label": "说明默认分配服务谁、是否透明并容易退出"
+        },
+        {
+          "target": "good-strategy-bad-strategy",
+          "type": "synthesizes",
+          "concept": "structured-problem-solving",
+          "label": "让宣传与容量围绕同一个关键困难协调"
+        },
+        {
+          "target": "complexity-guided-tour",
+          "type": "synthesizes",
+          "concept": "systems-thinking",
+          "label": "观察局部规则的相互作用，不把画出的箭头当已证实因果"
+        },
+        {
+          "target": "pyramid-principle",
+          "type": "synthesizes",
+          "concept": "structured-problem-solving",
+          "label": "把待决定事项写清楚，但不让清楚表达替代证据"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/shared-ground/index.html"
+      },
+      "cover": "/artifacts/shared-ground/cover.svg",
+      "featured": true,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "artifact:thinking-in-systems",
+          "artifact:governing-commons",
+          "artifact:fifth-discipline",
+          "artifact:economic-way-of-thinking",
+          "artifact:nonviolent-communication",
+          "artifact:design-everyday-things",
+          "artifact:non-designers-design-book",
+          "artifact:nudge",
+          "artifact:good-strategy-bad-strategy",
+          "artifact:complexity-guided-tour",
+          "artifact:pyramid-principle",
+          "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/"
+        ],
+        "derivedFrom": [
+          "thinking-in-systems",
+          "governing-commons",
+          "fifth-discipline",
+          "economic-way-of-thinking",
+          "nonviolent-communication",
+          "design-everyday-things",
+          "non-designers-design-book",
+          "nudge",
+          "good-strategy-bad-strategy",
+          "complexity-guided-tour",
+          "pyramid-principle"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "asking-right-questions",
+      "slug": "asking-right-questions",
+      "title": "学会提问",
+      "subtitle": "把一项建议拆成结论、证据与尚未证明的桥梁",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "M. Neil Browne / Stuart M. Keeley",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "主动阅读",
+        "假设验证",
+        "信息质量"
+      ],
+      "visualStyle": "annotated-argument-desk",
+      "related": [
+        "how-to-read-a-book",
+        "mindware",
+        "managerial-judgment"
+      ],
+      "connections": [
+        {
+          "target": "how-to-read-a-book",
+          "type": "extends",
+          "concept": "active-reading",
+          "label": "把分析阅读推进到每一项论证的支持关系"
+        },
+        {
+          "target": "mindware",
+          "type": "supports",
+          "concept": "causal-reasoning",
+          "label": "用替代解释检验相关与因果"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "judgment",
+          "label": "把隐含假设带进决策复核"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/asking-right-questions/index.html"
+      },
+      "cover": "/artifacts/asking-right-questions/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731",
+          "https://www.bgsu.edu/content/dam/BGSU/honors-college/documents/dr-neil-browne.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "make-it-stick",
+      "slug": "make-it-stick",
+      "title": "认知天性",
+      "subtitle": "从熟悉感转向能够独立提取、辨别与应用",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Peter C. Brown / Henry L. Roediger III / Mark A. McDaniel",
+      "topics": [
+        "思考",
+        "学习"
+      ],
+      "concepts": [
+        "主动阅读",
+        "反馈",
+        "心理表征",
+        "刻意练习"
+      ],
+      "visualStyle": "retrieval-card-workbench",
+      "related": [
+        "how-to-read-a-book",
+        "deliberate-practice",
+        "cognitive-awakening"
+      ],
+      "connections": [
+        {
+          "target": "how-to-read-a-book",
+          "type": "extends",
+          "concept": "active-reading",
+          "label": "在理解书后增加闭卷提取与延迟检查"
+        },
+        {
+          "target": "deliberate-practice",
+          "type": "related",
+          "concept": "deliberate-practice",
+          "label": "比较知识保持与技能纠错的训练目标"
+        },
+        {
+          "target": "cognitive-awakening",
+          "type": "supports",
+          "concept": "metacognition",
+          "label": "用实际提取校准自我理解的感觉"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/make-it-stick/index.html"
+      },
+      "cover": "/artifacts/make-it-stick/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.makeitstick.com/about-make-it-stick",
+          "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "superforecasting",
+      "slug": "superforecasting",
+      "title": "超预测",
+      "subtitle": "给判断写上概率、截止时间和可以核对的结果",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Philip E. Tetlock / Dan Gardner",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "概率思维",
+        "判断力",
+        "反馈",
+        "信息质量"
+      ],
+      "visualStyle": "probability-weather-station",
+      "related": [
+        "mindware",
+        "managerial-judgment",
+        "great-mental-models"
+      ],
+      "connections": [
+        {
+          "target": "mindware",
+          "type": "extends",
+          "concept": "probability",
+          "label": "将基准率与统计推理落到可结算的预测"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "supports",
+          "concept": "cognitive-bias",
+          "label": "用事前概率记录约束后见之明"
+        },
+        {
+          "target": "great-mental-models",
+          "type": "extends",
+          "concept": "judgment",
+          "label": "为概率模型增加时间与评分条件"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/superforecasting/index.html"
+      },
+      "cover": "/artifacts/superforecasting/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.penguinrandomhouse.com/books/227815/superforecasting-by-philip-e-tetlock-and-dan-gardner/",
+          "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "good-strategy-bad-strategy",
+      "slug": "good-strategy-bad-strategy",
+      "title": "好战略，坏战略",
+      "subtitle": "面对关键障碍，把有限行动连成同一条路",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Richard P. Rumelt",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "结构化问题解决",
+        "假设验证",
+        "机会成本"
+      ],
+      "visualStyle": "ochre-strategy-briefing",
+      "related": [
+        "mckinsey-way",
+        "innovators-dilemma",
+        "effective-executive"
+      ],
+      "connections": [
+        {
+          "target": "mckinsey-way",
+          "type": "related",
+          "concept": "structured-problem-solving",
+          "label": "从问题树前进一步：把诊断转成协调行动"
+        },
+        {
+          "target": "innovators-dilemma",
+          "type": "related",
+          "concept": "judgment",
+          "label": "先判断竞争难题，再选择适配的组织行动"
+        },
+        {
+          "target": "effective-executive",
+          "type": "related",
+          "concept": "opportunity-cost",
+          "label": "战略取舍需要真实释放时间与资源"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/good-strategy-bad-strategy/index.html"
+      },
+      "cover": "/artifacts/good-strategy-bad-strategy/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-perils-of-bad-strategy",
+          "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "design-everyday-things",
+      "slug": "design-everyday-things",
+      "title": "设计心理学 1",
+      "subtitle": "让人看得出、做得到，也能知道发生了什么",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Don Norman",
+      "topics": [
+        "设计",
+        "沟通"
+      ],
+      "concepts": [
+        "心理表征",
+        "反馈",
+        "主动选择"
+      ],
+      "visualStyle": "cobalt-object-museum",
+      "related": [
+        "cybernetics",
+        "nudge",
+        "thinking-framework"
+      ],
+      "connections": [
+        {
+          "target": "cybernetics",
+          "type": "related",
+          "concept": "feedback",
+          "label": "控制反馈怎样成为人能理解的操作反馈"
+        },
+        {
+          "target": "nudge",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "区分让操作清楚与引导人作出特定选择"
+        },
+        {
+          "target": "thinking-framework",
+          "type": "related",
+          "concept": "mental-models",
+          "label": "用概念模型解释用户对系统行为的预期"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/design-everyday-things/index.html"
+      },
+      "cover": "/artifacts/design-everyday-things/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://mitpress.mit.edu/9780262525671/the-design-of-everyday-things/",
+          "https://jnd.org/preface-design-of-everyday-things-revised-edition/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "nonviolent-communication",
+      "slug": "nonviolent-communication",
+      "title": "非暴力沟通",
+      "subtitle": "听见“不”之后，对话才真正接受检验",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Marshall B. Rosenberg",
+      "topics": [
+        "设计",
+        "沟通"
+      ],
+      "concepts": [
+        "主动选择",
+        "反馈",
+        "责任与意义"
+      ],
+      "visualStyle": "rose-dialogue-listening-room",
+      "related": [
+        "seven-habits",
+        "fifth-discipline"
+      ],
+      "connections": [
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "把先理解再表达落实为具体对话"
+        },
+        {
+          "target": "fifth-discipline",
+          "type": "related",
+          "concept": "feedback",
+          "label": "让团队对话显露假设并容纳不同声音"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/nonviolent-communication/index.html"
+      },
+      "cover": "/artifacts/nonviolent-communication/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://nonviolentcommunication.com/product/nvc/",
+          "https://www.nonviolentcommunication.com/bookshare/4_components_of_NVC_4_rev_6.20.19.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
       "id": "clear-thinking-lab",
       "slug": "clear-thinking-lab",
       "title": "清醒行动实验室",
@@ -142,9 +902,12 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/buffett_shareholder_letters_owners_manual.html"
+          "file:materials/buffett_shareholder_letters_owners_manual.html",
+          "https://www.berkshirehathaway.com/letters/1985.html",
+          "https://www.berkshirehathaway.com/letters/1986.html",
+          "https://cap-press.com/pdf/9781611637588.pdf"
         ],
         "derivedFrom": []
       }
@@ -211,9 +974,12 @@
       "featured": false,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/economic_way_of_thinking_13_lens_lab.html"
+          "file:materials/economic_way_of_thinking_13_lens_lab.html",
+          "https://www.pearson.com/en-ca/subject-catalog/p/economic-way-of-thinking-the/P200000005920/9780132992589",
+          "https://www.pearson.de/media/muster/ext/9781292053608.pdf",
+          "https://www.pearson.de/media/muster/toc/toc_9781292053608.pdf"
         ],
         "derivedFrom": []
       }
@@ -280,9 +1046,11 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/effective_executive_55_os.html"
+          "file:materials/effective_executive_55_os.html",
+          "https://www.routledge.com/The-Effective-Executive/Drucker/p/book/9780750685078",
+          "https://hbr.org/2004/06/what-makes-an-effective-executive"
         ],
         "derivedFrom": []
       }
@@ -348,9 +1116,11 @@
       "featured": false,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/peter_lynch_stock_scout.html"
+          "file:materials/peter_lynch_stock_scout.html",
+          "https://www.simonandschuster.com/books/One-Up-On-Wall-Street/Peter-Lynch/9780743200400",
+          "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Transcript_Investing%20legends_v2.pdf"
         ],
         "derivedFrom": []
       }
@@ -416,9 +1186,11 @@
       "featured": false,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/the_intelligent_investor_fortress.html"
+          "file:materials/the_intelligent_investor_fortress.html",
+          "https://www.harpercollins.com/products/the-intelligent-investor-rev-ed-benjamin-graham",
+          "https://www.berkshirehathaway.com/letters/1987.html"
         ],
         "derivedFrom": []
       }
@@ -484,9 +1256,11 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/the_power_of_now_presence.html"
+          "file:materials/the_power_of_now_presence.html",
+          "https://eckharttolle.com/power-of-now-excerpt/",
+          "https://newworldlibrary.com/product/the-power-of-now"
         ],
         "derivedFrom": []
       }
@@ -552,9 +1326,11 @@
       "featured": false,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/1_percent_rule_single_page.html"
+          "file:materials/1_percent_rule_single_page.html",
+          "https://tomconnellan.com/tomconnellanbooks.html",
+          "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674"
         ],
         "derivedFrom": []
       }
@@ -619,9 +1395,11 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/cybernetics_control_console.html"
+          "file:materials/cybernetics_control_console.html",
+          "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/",
+          "https://www.cds.caltech.edu/~murray/FBS/First_Edition.html"
         ],
         "derivedFrom": []
       }
@@ -687,9 +1465,12 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/judgment_in_managerial_decision_making.html"
+          "file:materials/judgment_in_managerial_decision_making.html",
+          "https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=7506&itemId=1118065700",
+          "https://www.hbs.edu/ris/download.aspx?name=Moore+Bazerman+2022+BSP.pdf",
+          "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
         ],
         "derivedFrom": []
       }
@@ -757,9 +1538,11 @@
       "featured": true,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/poor_charlies_almanack_decision_room.html"
+          "file:materials/poor_charlies_almanack_decision_room.html",
+          "https://www.poorcharliesalmanack.com/pca.php",
+          "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
         ],
         "derivedFrom": []
       }
@@ -826,9 +1609,11 @@
       "featured": false,
       "createdAt": "2026-09-12",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/rockefeller_wealth_myth_archive.html"
+          "file:materials/rockefeller_wealth_myth_archive.html",
+          "https://rockarch.org/resources/about-the-rockefellers/john-d-rockefeller-sr/",
+          "https://resource.rockarch.org/story/rockefeller-foundation-history-origins-to-2013/"
         ],
         "derivedFrom": []
       }
@@ -904,9 +1689,10 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/integrated_thinking_personal_os.html"
+          "file:materials/integrated_thinking_personal_os.html",
+          "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
         ],
         "derivedFrom": [
           "cognitive-awakening",
@@ -1042,7 +1828,7 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
           "file:materials/integrated_thinking_intellectual_atlas.html"
         ],
@@ -1124,9 +1910,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/cognitive_awakening_inner_os_single_page.html"
+          "file:materials/cognitive_awakening_inner_os_single_page.html",
+          "https://detail.youzan.com/show/goods?alias=3f1jmx11cd4mp&from_source=gbox_seo",
+          "https://pubmed.ncbi.nlm.nih.gov/35432041/"
         ],
         "derivedFrom": []
       }
@@ -1192,9 +1980,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/thinking_in_systems_single_page.html"
+          "file:materials/thinking_in_systems_single_page.html",
+          "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/",
+          "https://donellameadows.org/archives/dancing-with-systems/"
         ],
         "derivedFrom": []
       }
@@ -1261,9 +2051,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/great_mental_models_single_page.html"
+          "file:materials/great_mental_models_single_page.html",
+          "https://fs.blog/books/mental-models-vol1/",
+          "https://fs.blog/first-principles/"
         ],
         "derivedFrom": []
       }
@@ -1323,9 +2115,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/mindware_logic_thinking_single_page.html"
+          "file:materials/mindware_logic_thinking_single_page.html",
+          "https://us.macmillan.com/books/9780374536244/mindware/",
+          "https://www.coursera.org/learn/mindware"
         ],
         "derivedFrom": []
       }
@@ -1385,9 +2179,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/the_mckinsey_way_single_page.html"
+          "file:materials/the_mckinsey_way_single_page.html",
+          "https://www.mheducation.com/highered/mhp/product/mckinsey-way.html",
+          "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
         ],
         "derivedFrom": []
       }
@@ -1453,9 +2249,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/how_to_read_a_book_single_page.html"
+          "file:materials/how_to_read_a_book_single_page.html",
+          "https://www.simonandschuster.com/books/How-to-Read-a-Book/Mortimer-J-Adler/9780671212094",
+          "https://www.pearson.com/en-us/subject-catalog/p/Browne-Asking-the-Right-Questions-A-Guide-to-Critical-Thinking-Subscription-12th-Edition/P200000002371/9780137501731"
         ],
         "derivedFrom": []
       }
@@ -1514,9 +2312,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/12_rules_for_life_single_page.html"
+          "file:materials/12_rules_for_life_single_page.html",
+          "https://penguinrandomhousehighereducation.com/book/?isbn=9780345816023",
+          "https://www.jordanbpeterson.com/wp-content/uploads/2017/12/12_Rules_Christmas_Package.pdf"
         ],
         "derivedFrom": []
       }
@@ -1576,9 +2376,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/innovators_dilemma_single_page.html"
+          "file:materials/innovators_dilemma_single_page.html",
+          "https://www.christenseninstitute.org/book/the-innovators-dilemma/",
+          "https://www.christenseninstitute.org/theory/disruptive-innovation/"
         ],
         "derivedFrom": []
       }
@@ -1645,9 +2447,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/cognitive_awakening_editorial.html"
+          "file:materials/cognitive_awakening_editorial.html",
+          "https://detail.youzan.com/show/goods?alias=3f1jmx11cd4mp&from_source=gbox_seo",
+          "https://pubmed.ncbi.nlm.nih.gov/35432041/"
         ],
         "derivedFrom": []
       }
@@ -1714,9 +2518,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/seven_habits_core_map.html"
+          "file:materials/seven_habits_core_map.html",
+          "https://ir.franklincovey.com/news-releases/news-release-details/7-habits-highly-effective-people-25th-anniversary-edition",
+          "https://www.franklincovey.com/habit-4/"
         ],
         "derivedFrom": []
       }
@@ -1777,9 +2583,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/deliberate_practice_lab_style.html"
+          "file:materials/deliberate_practice_lab_style.html",
+          "https://www.penguin.co.uk/books/421170/peak-by-anders-ericsson/9780099598473",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745/"
         ],
         "derivedFrom": []
       }
@@ -1838,9 +2646,11 @@
       "featured": true,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/naval_almanack_black_gold.html"
+          "file:materials/naval_almanack_black_gold.html",
+          "https://www.navalmanack.com/",
+          "https://www.navalmanack.com/almanack-of-naval-ravikant/find-a-position-of-leverage"
         ],
         "derivedFrom": []
       }
@@ -1893,9 +2703,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/deliberate_practice_modern.html"
+          "file:materials/deliberate_practice_modern.html",
+          "https://www.penguin.co.uk/books/421170/peak-by-anders-ericsson/9780099598473",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745/"
         ],
         "derivedFrom": []
       }
@@ -1962,9 +2774,11 @@
       "featured": false,
       "createdAt": "2026-09-11",
       "provenance": {
-        "generatedBy": "human",
+        "generatedBy": "hybrid",
         "sources": [
-          "file:materials/thinking-framework-core-map.html"
+          "file:materials/thinking-framework-core-map.html",
+          "https://donellameadows.org/archives/dancing-with-systems/",
+          "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/six-problem-solving-mindsets-for-very-uncertain-times"
         ],
         "derivedFrom": []
       }
@@ -2024,7 +2838,9 @@
       "createdAt": "2026-09-11",
       "provenance": {
         "generatedBy": "ai",
-        "sources": [],
+        "sources": [
+          "https://www.retrievalpractice.org/feedback/"
+        ],
         "derivedFrom": [
           "cognitive-awakening",
           "deliberate-practice"
@@ -2142,6 +2958,1000 @@
           "personal-growth-os"
         ]
       }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "antifragile",
+      "slug": "antifragile",
+      "title": "反脆弱",
+      "subtitle": "先问谁从波动中受益，再问代价由谁承担",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Nassim Nicholas Taleb",
+      "topics": [
+        "风险",
+        "系统",
+        "决策"
+      ],
+      "concepts": [
+        "系统思维",
+        "安全边际",
+        "反馈",
+        "激励机制"
+      ],
+      "visualStyle": "copper-convexity-workshop",
+      "related": [
+        "thinking-in-systems",
+        "poor-charlies-almanack"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "以系统边界和反馈检查反脆弱发生在哪一层"
+        },
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "margin-of-safety",
+          "label": "用安全余量约束试错和不可逆损失"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/antifragile/index.html"
+      },
+      "cover": "/artifacts/antifragile/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.penguinrandomhouse.com/books/176227/antifragile-by-nassim-nicholas-taleb/hardcover/",
+          "https://arxiv.org/abs/1208.1189"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "black-swan",
+      "slug": "black-swan",
+      "title": "黑天鹅",
+      "subtitle": "当历史样本漏掉关键事件，判断该留下什么余量",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Nassim Nicholas Taleb",
+      "topics": [
+        "风险",
+        "决策",
+        "概率"
+      ],
+      "concepts": [
+        "概率思维",
+        "信息质量",
+        "安全边际",
+        "认知偏差"
+      ],
+      "visualStyle": "midnight-tail-observatory",
+      "related": [
+        "intelligent-investor",
+        "managerial-judgment"
+      ],
+      "connections": [
+        {
+          "target": "intelligent-investor",
+          "type": "related",
+          "concept": "margin-of-safety",
+          "label": "把安全边际放到模型遗漏与尾部冲击中检验"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "cognitive-bias",
+          "label": "比较叙事错觉与判断偏差如何造成过度自信"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/black-swan/index.html"
+      },
+      "cover": "/artifacts/black-swan/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.penguinrandomhouse.com/books/176226/the-black-swan-second-edition-by-nassim-nicholas-taleb/hardcover/",
+          "https://arxiv.org/abs/1208.1189"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "complexity-guided-tour",
+      "slug": "complexity-guided-tour",
+      "title": "复杂",
+      "subtitle": "从局部规则出发，观察整体图案如何长出来",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Melanie Mitchell",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "系统思维",
+        "思维模型",
+        "假设验证"
+      ],
+      "visualStyle": "midnight-cellular-observatory",
+      "related": [
+        "thinking-in-systems",
+        "cybernetics",
+        "great-mental-models"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "从反馈结构延伸到计算、适应与涌现"
+        },
+        {
+          "target": "cybernetics",
+          "type": "related",
+          "concept": "feedback",
+          "label": "比较调节机制与局部互动形成的整体模式"
+        },
+        {
+          "target": "great-mental-models",
+          "type": "related",
+          "concept": "mental-models",
+          "label": "用明确规则和初始条件限制模型类比"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/complexity-guided-tour/index.html"
+      },
+      "cover": "/artifacts/complexity-guided-tour/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://academic.oup.com/book/51004",
+          "https://melaniemitchell.me/",
+          "https://www.complexityexplorer.org/explore/virtual-laboratory"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "damn-right",
+      "slug": "damn-right",
+      "title": "查理·芒格传",
+      "subtitle": "从成功叙事中拆出判断、关系与时代条件",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Janet Lowe",
+      "topics": [
+        "传记",
+        "商业",
+        "决策"
+      ],
+      "concepts": [
+        "判断力",
+        "能力圈",
+        "制度与权力",
+        "认知偏差"
+      ],
+      "visualStyle": "sepia-biography-dossier",
+      "related": [
+        "poor-charlies-almanack",
+        "rockefeller-wealth-archive"
+      ],
+      "connections": [
+        {
+          "target": "poor-charlies-almanack",
+          "type": "related",
+          "concept": "mental-models",
+          "label": "用独立传记情境检视演讲中的模型与判断"
+        },
+        {
+          "target": "rockefeller-wealth-archive",
+          "type": "related",
+          "concept": "institutional-power",
+          "label": "比较人物能力与制度环境对成功叙事的作用"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/damn-right/index.html"
+      },
+      "cover": "/artifacts/damn-right/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://catalogimages.wiley.com/images/db/pdf/R0471244732.fm.pdf",
+          "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "factfulness",
+      "slug": "factfulness",
+      "title": "事实",
+      "subtitle": "给醒目的数字补上分母、分布、日期与趋势",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Hans Rosling / Ola Rosling / Anna Rosling Rönnlund",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "信息质量",
+        "概率思维",
+        "判断力"
+      ],
+      "visualStyle": "denominator-data-newsroom",
+      "related": [
+        "mindware",
+        "superforecasting",
+        "thinking-in-systems"
+      ],
+      "connections": [
+        {
+          "target": "mindware",
+          "type": "extends",
+          "concept": "information-quality",
+          "label": "将样本与概率思维推进到公共统计的分母和分布"
+        },
+        {
+          "target": "superforecasting",
+          "type": "related",
+          "concept": "probability",
+          "label": "区分历史数据核对与未来概率判断"
+        },
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "在时间尺度和结构中阅读指标变化"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/factfulness/index.html"
+      },
+      "cover": "/artifacts/factfulness/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://us.macmillan.com/books/9781250123824/factfulness/",
+          "https://www.gapminder.org/factfulness-book/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fifth-discipline",
+      "slug": "fifth-discipline",
+      "title": "第五项修炼",
+      "subtitle": "团队如何看见自己共同制造的结果",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Peter M. Senge",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "系统思维",
+        "反馈",
+        "不断更新",
+        "思维模型"
+      ],
+      "visualStyle": "forest-organizational-learning-studio",
+      "related": [
+        "thinking-in-systems",
+        "governing-commons",
+        "seven-habits"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "用存量、延迟与回路理解团队问题"
+        },
+        {
+          "target": "governing-commons",
+          "type": "related",
+          "concept": "institutional-power",
+          "label": "区分共同学习和制度安排的边界"
+        },
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "renewal",
+          "label": "从个人更新走向团队持续学习"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/fifth-discipline/index.html"
+      },
+      "cover": "/artifacts/fifth-discipline/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.penguinrandomhouse.com/books/163984/the-fifth-discipline-by-peter-m-senge/",
+          "https://www.solonline.org/foundations-for-leadership-fall-2020/",
+          "https://www.solonline.org/wp-content/uploads/2019/03/sol_reflections_14.3.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "flow",
+      "slug": "flow",
+      "title": "心流",
+      "subtitle": "在挑战、技能与反馈之间，为投入创造条件",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Mihaly Csikszentmihalyi",
+      "topics": [
+        "思考",
+        "学习"
+      ],
+      "concepts": [
+        "注意力",
+        "学习区",
+        "反馈",
+        "不断更新"
+      ],
+      "visualStyle": "river-challenge-terrain",
+      "related": [
+        "deliberate-practice",
+        "cognitive-awakening-inner-os",
+        "seven-habits"
+      ],
+      "connections": [
+        {
+          "target": "deliberate-practice",
+          "type": "related",
+          "concept": "learning-zone",
+          "label": "比较投入体验与技能纠错的不同目标"
+        },
+        {
+          "target": "cognitive-awakening-inner-os",
+          "type": "extends",
+          "concept": "attention",
+          "label": "把专注放回任务条件与主观体验"
+        },
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "renewal",
+          "label": "在投入之外保留恢复与持续生活"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/flow/index.html"
+      },
+      "cover": "/artifacts/flow/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.harperacademic.com/book/9780061339202/flow/",
+          "https://link.springer.com/book/10.1007/978-94-017-9088-8",
+          "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.01126/full"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "four-thousand-weeks",
+      "slug": "four-thousand-weeks",
+      "title": "四千周",
+      "subtitle": "把有限的一生，交给真正愿意承诺的事",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Oliver Burkeman",
+      "topics": [
+        "时间",
+        "哲学",
+        "行动"
+      ],
+      "concepts": [
+        "机会成本",
+        "主动选择",
+        "注意力",
+        "责任与意义"
+      ],
+      "visualStyle": "clay-time-ledger",
+      "related": [
+        "effective-executive",
+        "power-of-now"
+      ],
+      "connections": [
+        {
+          "target": "effective-executive",
+          "type": "related",
+          "concept": "opportunity-cost",
+          "label": "把时间管理中的效能问题延伸到有限性与取舍"
+        },
+        {
+          "target": "power-of-now",
+          "type": "related",
+          "concept": "attention",
+          "label": "比较当下觉察与有限人生中的实际承诺"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/four-thousand-weeks/index.html"
+      },
+      "cover": "/artifacts/four-thousand-weeks/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.oliverburkeman.com/fourthousandweeks",
+          "https://us.macmillan.com/books/9780374159122/fourthousandweeks/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "governing-commons",
+      "slug": "governing-commons",
+      "title": "公共事物的治理之道",
+      "subtitle": "共享的水，怎样成为共同维护的制度",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Elinor Ostrom",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "制度与权力",
+        "激励机制",
+        "系统思维"
+      ],
+      "visualStyle": "watershed-institutional-fieldmap",
+      "related": [
+        "thinking-in-systems",
+        "economic-way-of-thinking",
+        "fifth-discipline"
+      ],
+      "connections": [
+        {
+          "target": "thinking-in-systems",
+          "type": "related",
+          "concept": "systems-thinking",
+          "label": "让公共资源存量与制度反馈出现在同一张图"
+        },
+        {
+          "target": "economic-way-of-thinking",
+          "type": "related",
+          "concept": "incentives",
+          "label": "追踪取用收益与维护成本由谁承担"
+        },
+        {
+          "target": "fifth-discipline",
+          "type": "related",
+          "concept": "institutional-power",
+          "label": "比较共同学习与规则执行各自的作用"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/governing-commons/index.html"
+      },
+      "cover": "/artifacts/governing-commons/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+          "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
+          "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/164465-ostrom-williamson-interview-transcript/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mans-search-for-meaning",
+      "slug": "mans-search-for-meaning",
+      "title": "活出生命的意义",
+      "subtitle": "在具体处境中回应生活，也保留悲伤和求助的位置",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Viktor E. Frankl",
+      "topics": [
+        "哲学",
+        "意义",
+        "生活"
+      ],
+      "concepts": [
+        "责任与意义",
+        "主动选择",
+        "不断更新"
+      ],
+      "visualStyle": "quiet-three-windows",
+      "related": [
+        "twelve-rules-for-life",
+        "power-of-now"
+      ],
+      "connections": [
+        {
+          "target": "twelve-rules-for-life",
+          "type": "related",
+          "concept": "responsibility",
+          "label": "比较责任与意义的不同思想和历史背景"
+        },
+        {
+          "target": "power-of-now",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "比较觉察当下与回应具体处境"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/mans-search-for-meaning/index.html"
+      },
+      "cover": "/artifacts/mans-search-for-meaning/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.beacon.org/Mans-Search-for-Meaning-P602.aspx",
+          "https://www.viktorfrankl.org/logotherapy.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "non-designers-design-book",
+      "slug": "non-designers-design-book",
+      "title": "写给大家看的设计书",
+      "subtitle": "第4版 · 用对比、重复、对齐与亲密性让关系被看见",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Robin Williams",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "信息质量",
+        "注意力",
+        "结构化问题解决",
+        "反馈"
+      ],
+      "visualStyle": "typography-print-studio",
+      "related": [
+        "cybernetics",
+        "how-to-read-a-book",
+        "mckinsey-way"
+      ],
+      "connections": [
+        {
+          "target": "cybernetics",
+          "type": "related",
+          "concept": "feedback",
+          "label": "把页面中的行动与反馈联系到可观察的信息设计"
+        },
+        {
+          "target": "how-to-read-a-book",
+          "type": "related",
+          "concept": "active-reading",
+          "label": "让结构、层级与分组帮助读者主动理解"
+        },
+        {
+          "target": "mckinsey-way",
+          "type": "supports",
+          "concept": "structured-problem-solving",
+          "label": "先明确表达目的与内容关系，再组织视觉呈现"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/non-designers-design-book/index.html"
+      },
+      "cover": "/artifacts/non-designers-design-book/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.peachpit.com/store/non-designers-design-book-9780133966152",
+          "https://www.peachpit.com/content/images/9780133966152/samplepages/9780133966152.pdf"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "nudge",
+      "slug": "nudge",
+      "title": "助推",
+      "subtitle": "默认选项改变起点，选择权仍属于人",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Richard H. Thaler、Cass R. Sunstein",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "主动选择",
+        "认知偏差",
+        "激励机制"
+      ],
+      "visualStyle": "mint-choice-architecture-counter",
+      "related": [
+        "design-everyday-things",
+        "managerial-judgment",
+        "economic-way-of-thinking"
+      ],
+      "connections": [
+        {
+          "target": "design-everyday-things",
+          "type": "related",
+          "concept": "active-choice",
+          "label": "区别操作可理解性与选择环境的影响"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "cognitive-bias",
+          "label": "从判断偏差延伸到实际决策环境"
+        },
+        {
+          "target": "economic-way-of-thinking",
+          "type": "related",
+          "concept": "incentives",
+          "label": "区分选择呈现与显著改变经济激励"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/nudge/index.html"
+      },
+      "cover": "/artifacts/nudge/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://penguinrandomhousehighereducation.com/book/?isbn=9780143137009",
+          "https://www.chicagobooth.edu/review/nudge-preface-final-edition",
+          "https://www.chicagobooth.edu/review/words-live-flops-nudges-and-sludge"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "poor-richards-almanack",
+      "slug": "poor-richards-almanack",
+      "title": "穷理查年鉴选读",
+      "subtitle": "让十八世纪的格言，接受今天生活条件的追问",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Benjamin Franklin",
+      "topics": [
+        "历史",
+        "生活",
+        "哲学"
+      ],
+      "concepts": [
+        "微小改进",
+        "机会成本",
+        "责任与意义",
+        "判断力"
+      ],
+      "visualStyle": "letterpress-almanac",
+      "related": [
+        "naval-almanack",
+        "seven-habits"
+      ],
+      "connections": [
+        {
+          "target": "naval-almanack",
+          "type": "related",
+          "concept": "compounding",
+          "label": "对照印刷时代勤勉格言与数字时代的杠杆观"
+        },
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "principles",
+          "label": "比较日常德性格言与原则导向的行动"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/poor-richards-almanack/index.html"
+      },
+      "cover": "/artifacts/poor-richards-almanack/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.penguinrandomhouse.com/books/55619/wit-and-wisdom-from-poor-richards-almanack-by-benjamin-franklin/",
+          "https://www.loc.gov/exhibits/franklin/franklin-printer.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "principles-life-work",
+      "slug": "principles-life-work",
+      "title": "原则",
+      "subtitle": "把经验写成可检验、可修订的判断依据",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Ray Dalio",
+      "topics": [
+        "管理",
+        "决策",
+        "行动"
+      ],
+      "concepts": [
+        "原则",
+        "反馈",
+        "假设验证",
+        "激励机制"
+      ],
+      "visualStyle": "red-decision-notebook",
+      "related": [
+        "seven-habits",
+        "managerial-judgment"
+      ],
+      "connections": [
+        {
+          "target": "seven-habits",
+          "type": "related",
+          "concept": "principles",
+          "label": "比较个人价值原则与可修订的操作原则"
+        },
+        {
+          "target": "managerial-judgment",
+          "type": "related",
+          "concept": "cognitive-bias",
+          "label": "用判断偏差检查经验抽象和可信度加权"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/principles-life-work/index.html"
+      },
+      "cover": "/artifacts/principles-life-work/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.simonandschuster.com/books/Principles/Ray-Dalio/Principles/9781501124020",
+          "https://www.principles.com/principles/689e0214-1e50-4ca0-a5d2-5e223599badf/"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pyramid-principle",
+      "slug": "pyramid-principle",
+      "title": "金字塔原理",
+      "subtitle": "让每层理由都承担得起上层结论",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Barbara Minto",
+      "topics": [
+        "思考",
+        "决策"
+      ],
+      "concepts": [
+        "结构化问题解决",
+        "信息质量",
+        "假设验证"
+      ],
+      "visualStyle": "ivory-editorial-pyramid",
+      "related": [
+        "mckinsey-way",
+        "mindware",
+        "good-strategy-bad-strategy"
+      ],
+      "connections": [
+        {
+          "target": "mckinsey-way",
+          "type": "related",
+          "concept": "structured-problem-solving",
+          "label": "把分析树转换为读者能够追问的论证"
+        },
+        {
+          "target": "mindware",
+          "type": "related",
+          "concept": "information-quality",
+          "label": "清楚表达仍须检查统计证据的范围"
+        },
+        {
+          "target": "good-strategy-bad-strategy",
+          "type": "related",
+          "concept": "hypothesis-testing",
+          "label": "战略简报的每项行动需要理由支持"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/pyramid-principle/index.html"
+      },
+      "cover": "/artifacts/pyramid-principle/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://www.barbaraminto.com/",
+          "https://www.pearson.com/en-gb/subject-catalog/p/the-pyramid-principle/P200000015259/9781292763255"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "scientific-revolutions",
+      "slug": "scientific-revolutions",
+      "title": "科学革命的结构",
+      "subtitle": "观察科学共同体如何定义问题、处理异常与比较框架",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Thomas S. Kuhn",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "思维模型",
+        "假设验证",
+        "主题阅读",
+        "信息质量"
+      ],
+      "visualStyle": "scientific-strata-archive",
+      "related": [
+        "great-mental-models",
+        "how-to-read-a-book",
+        "mindware"
+      ],
+      "connections": [
+        {
+          "target": "great-mental-models",
+          "type": "extends",
+          "concept": "mental-models",
+          "label": "追问解释框架如何在共同体与历史中形成"
+        },
+        {
+          "target": "how-to-read-a-book",
+          "type": "supports",
+          "concept": "syntopical-reading",
+          "label": "比较术语和问题，保留历史论证之间的分歧"
+        },
+        {
+          "target": "mindware",
+          "type": "related",
+          "concept": "hypothesis-testing",
+          "label": "区分一次偏离、辅助假设与解释框架的检验"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/scientific-revolutions/index.html"
+      },
+      "cover": "/artifacts/scientific-revolutions/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html",
+          "https://press.uchicago.edu/ucp/books/book/chicago/L/bo181541288.html"
+        ],
+        "derivedFrom": []
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "thinking-fast-slow",
+      "slug": "thinking-fast-slow",
+      "title": "思考，快与慢",
+      "subtitle": "辨认直觉如何形成，再给重要判断安排复核",
+      "artifactType": "book",
+      "sourceType": "book",
+      "author": "Daniel Kahneman",
+      "topics": [
+        "思考",
+        "判断"
+      ],
+      "concepts": [
+        "认知偏差",
+        "判断力",
+        "概率思维",
+        "元认知"
+      ],
+      "visualStyle": "split-reference-ledger",
+      "related": [
+        "managerial-judgment",
+        "mindware",
+        "cognitive-awakening"
+      ],
+      "connections": [
+        {
+          "target": "managerial-judgment",
+          "type": "supports",
+          "concept": "cognitive-bias",
+          "label": "为管理偏差复核提供直觉与审慎处理的概念背景"
+        },
+        {
+          "target": "mindware",
+          "type": "related",
+          "concept": "probability",
+          "label": "用统计与因果工具检查直觉回答"
+        },
+        {
+          "target": "cognitive-awakening",
+          "type": "related",
+          "concept": "metacognition",
+          "label": "比较觉察的个人隐喻与判断研究的边界"
+        }
+      ],
+      "artifact": {
+        "renderer": "html",
+        "src": "/artifacts/thinking-fast-slow/index.html"
+      },
+      "cover": "/artifacts/thinking-fast-slow/cover.svg",
+      "featured": false,
+      "createdAt": "2026-09-13",
+      "provenance": {
+        "generatedBy": "ai",
+        "sources": [
+          "https://us.macmillan.com/books/9780374275631/thinkingfastandslow/",
+          "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/"
+        ],
+        "derivedFrom": []
+      }
     }
   ],
   "collections": [
@@ -2164,12 +3974,16 @@
       "id": "owner-thinking",
       "title": "像所有者一样思考",
       "subtitle": "Value, evidence and capital",
-      "description": "从格雷厄姆的安全边际到巴菲特的资本配置，再以林奇的公司研究和芒格的多模型互相校验。围绕价格、价值与判断纪律展开一次主题阅读。",
+      "description": "比较估值、资本配置、企业研究与风险边界。传记提供历史与选择情境，不能直接充当收益规律；所有数字工具都是明示假设的教学示例。",
       "artifactIds": [
         "intelligent-investor",
         "buffett-shareholder-letters",
         "peter-lynch-stock-scout",
         "poor-charlies-almanack",
+        "damn-right",
+        "rockefeller-wealth-archive",
+        "black-swan",
+        "antifragile",
         "economic-way-of-thinking"
       ],
       "color": "#526a5c"
@@ -2178,7 +3992,7 @@
       "id": "personal-growth",
       "title": "从觉醒到自由",
       "subtitle": "A journey of becoming",
-      "description": "看见自己，建立原则，训练能力，再让长期积累带来更多选择。五件作品，连成一条持续生长的路径。",
+      "description": "从觉察、原则、练习与杠杆出发，也检查现实条件与支持。这是一条可选的经典路线，可以返回、跳读或暂停。",
       "artifactIds": [
         "cognitive-awakening",
         "seven-habits",
@@ -2192,18 +4006,18 @@
       "id": "learning-laboratory",
       "title": "学习的反馈回路",
       "subtitle": "The art of getting better",
-      "description": "从注意力到主动阅读，从练习到微小改进，再看见反馈与延迟。探索理解如何通过行动、记录和修正，转化为真正可用的能力。",
+      "description": "先从《如何阅读一本书》、提取练习与具体技能开始。再对照心流、注意力和恢复，区分熟悉感、当前表现、之后保留与迁移。",
       "artifactIds": [
-        "attention-loop",
-        "cognitive-awakening",
-        "deliberate-practice",
-        "deliberate-practice-modern",
-        "learning-cycle",
-        "cognitive-awakening-inner-os",
         "how-to-read-a-book",
-        "one-percent-rule",
-        "cybernetics",
-        "power-of-now"
+        "make-it-stick",
+        "deliberate-practice",
+        "flow",
+        "attention-loop",
+        "learning-cycle",
+        "cognitive-awakening",
+        "cognitive-awakening-inner-os",
+        "deliberate-practice-modern",
+        "one-percent-rule"
       ],
       "color": "#537c69"
     },
@@ -2211,11 +4025,12 @@
       "id": "connected-thinking",
       "title": "让思想彼此连接",
       "subtitle": "Where ideas meet",
-      "description": "从一张思考框架到多模型网络，从跨书地图到可以亲手尝试的行动实验。看见知识之间的关系，生长出自己的理解。",
+      "description": "先读三篇新的问题文章，再回到早期贯通地图。观察方法在哪里互补、在哪里冲突，给每一条跨书联系写上条件和可以反驳它的信息。",
       "artifactIds": [
+        "methods-with-boundaries",
+        "a-life-that-fits",
+        "shared-ground",
         "thinking-framework",
-        "great-mental-models",
-        "thinking-in-systems",
         "personal-growth-os",
         "intellectual-atlas",
         "knowledge-landscape",
@@ -2227,16 +4042,18 @@
       "id": "clearer-judgment",
       "title": "让判断更清醒",
       "subtitle": "Tools for clearer thinking",
-      "description": "换一副模型，检查概率与因果，用反证审计偏差，再识别自己的能力边界。让每一个判断都留有被现实修正的空间。",
+      "description": "沿着论证、概率、统计与模型变化，追问事实支持到哪一步。可从《学会提问》进入，再用超预测和极端风险对读，保留各自适用范围。",
       "artifactIds": [
-        "great-mental-models",
+        "asking-right-questions",
         "mindware",
-        "mckinsey-way",
-        "how-to-read-a-book",
-        "thinking-framework",
+        "superforecasting",
+        "factfulness",
+        "thinking-fast-slow",
         "managerial-judgment",
-        "poor-charlies-almanack",
-        "economic-way-of-thinking"
+        "great-mental-models",
+        "scientific-revolutions",
+        "black-swan",
+        "methods-with-boundaries"
       ],
       "color": "#4d7790"
     },
@@ -2244,20 +4061,68 @@
       "id": "acting-in-complexity",
       "title": "在复杂世界中行动",
       "subtitle": "Structure, responsibility and change",
-      "description": "从系统结构看见反复出现的问题，从责任与原则校准方向，再把组织优势放回产业、历史与制度之中。把方法放回真实世界。",
+      "description": "项目忙却缺少方向时，从贡献、诊断、协调行动与表达开始。再把战略放回组织惯性、资源与不确定性；一份清楚的建议仍需要真实证据。",
       "artifactIds": [
-        "thinking-in-systems",
-        "twelve-rules-for-life",
-        "seven-habits",
+        "effective-executive",
+        "good-strategy-bad-strategy",
+        "pyramid-principle",
         "mckinsey-way",
         "innovators-dilemma",
-        "intellectual-atlas",
-        "cybernetics",
-        "rockefeller-wealth-archive",
-        "economic-way-of-thinking",
-        "effective-executive"
+        "principles-life-work",
+        "thinking-in-systems",
+        "complexity-guided-tour",
+        "clear-thinking-lab"
       ],
       "color": "#9b7455"
+    },
+    {
+      "id": "designed-understanding",
+      "title": "让理解有一个好入口",
+      "subtitle": "Signals, hierarchy and choice",
+      "description": "从反馈到操作线索、视觉层级与默认设置。好看、易用和尊重选择需要分别检验：请一个真实使用者试一试，看看哪里与预期不同。",
+      "artifactIds": [
+        "cybernetics",
+        "design-everyday-things",
+        "non-designers-design-book",
+        "nudge",
+        "shared-ground"
+      ],
+      "color": "#6e7c8d"
+    },
+    {
+      "id": "shared-resources",
+      "title": "共同使用，一起照料",
+      "subtitle": "Rules we can reconsider",
+      "description": "从资源与激励看见参与者的处境，再比较共同治理、团队学习和请求。规则需要可理解、能执行，也需要允许例外、争议处理与修正。",
+      "artifactIds": [
+        "thinking-in-systems",
+        "governing-commons",
+        "fifth-discipline",
+        "economic-way-of-thinking",
+        "nonviolent-communication",
+        "complexity-guided-tour",
+        "shared-ground"
+      ],
+      "color": "#597956"
+    },
+    {
+      "id": "intentional-living",
+      "title": "给有限生活留出位置",
+      "subtitle": "Attention, meaning and enough",
+      "description": "从需要与请求进入取舍，再比较效率、投入、意义和在场。方法帮助生活，也需要给关系、恢复与没有产出目标的时间留位置。",
+      "artifactIds": [
+        "nonviolent-communication",
+        "four-thousand-weeks",
+        "seven-habits",
+        "a-life-that-fits",
+        "flow",
+        "mans-search-for-meaning",
+        "power-of-now",
+        "twelve-rules-for-life",
+        "naval-almanack",
+        "poor-richards-almanack"
+      ],
+      "color": "#ae8266"
     }
   ],
   "concepts": [

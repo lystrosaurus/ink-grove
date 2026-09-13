@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "nudge",
+  "slug": "nudge",
+  "title": "助推",
+  "subtitle": "默认选项改变起点，选择权仍属于人",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Richard H. Thaler、Cass R. Sunstein",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "主动选择",
+    "认知偏差",
+    "激励机制"
+  ],
+  "visualStyle": "mint-choice-architecture-counter",
+  "related": [
+    "design-everyday-things",
+    "managerial-judgment",
+    "economic-way-of-thinking"
+  ],
+  "connections": [
+    {
+      "target": "design-everyday-things",
+      "type": "related",
+      "concept": "active-choice",
+      "label": "区别操作可理解性与选择环境的影响"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "cognitive-bias",
+      "label": "从判断偏差延伸到实际决策环境"
+    },
+    {
+      "target": "economic-way-of-thinking",
+      "type": "related",
+      "concept": "incentives",
+      "label": "区分选择呈现与显著改变经济激励"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/nudge/index.html"
+  },
+  "cover": "/artifacts/nudge/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://penguinrandomhousehighereducation.com/book/?isbn=9780143137009",
+      "https://www.chicagobooth.edu/review/nudge-preface-final-edition",
+      "https://www.chicagobooth.edu/review/words-live-flops-nudges-and-sludge"
+    ],
+    "derivedFrom": []
+  }
+}

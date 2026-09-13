@@ -30,8 +30,8 @@ const Experience = lazy(async () => {
   if (seedExperience) return import('./seed/SeedApp.jsx')
   const [app] = await Promise.all([
     import('./App.jsx'),
-    import('./styles.css'),
-    import('./theme.css'),
+    // The theme overrides the base palette, so stylesheet arrival order must be stable.
+    import('./styles.css').then(() => import('./theme.css')),
     import('@fontsource-variable/dm-sans'),
     import('@fontsource-variable/noto-serif-sc'),
   ])

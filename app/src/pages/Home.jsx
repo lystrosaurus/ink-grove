@@ -2,6 +2,7 @@ import { ArrowRight, ArrowUpRight, Sprout, Network, Compass, MoveUpRight } from 
 import { Link, useGrove, artifactUrl } from '../context.jsx'
 import { ArtifactCard, GardenIllustration, SectionHead } from '../components/Shared.jsx'
 import FieldLabInvitation from '../components/FieldLabInvitation.jsx'
+import ReadingEdition from '../components/ReadingEdition.jsx'
 
 const journey = [
   ['01', '觉醒', '看见自己的内在', 'cognitive-awakening', 'AWARENESS'],
@@ -99,16 +100,16 @@ export default function Home() {
               构建你的成长操作系统。
             </h2>
             <p>
-              当四本书的思想相遇，一条完整的成长路径浮现。
+              把四本书放在一起，寻找眼前问题的不同入口。
               <br className="desktop-only" />
-              觉醒、选择、原则、训练、能力、杠杆，自由。
+              觉察、原则、训练与结构，也需要条件、支持与取舍。
             </p>
             <span className="featured-link">
               探索《贯通思考篇》
               <ArrowUpRight size={17} />
             </span>
             <span className="featured-source">
-              4 个知识来源<span>·</span>7 个成长阶段<span>·</span>1 套个人系统
+              4 个知识来源<span>·</span>多种问题入口<span>·</span>可回头修改的地图
             </span>
           </div>
           <div className="featured-visual">
@@ -153,6 +154,7 @@ export default function Home() {
         </Link>
       </section>
       <FieldLabInvitation artifact={artifacts.find((item) => item.id === 'clear-thinking-lab')} />
+      <ReadingEdition />
       <section className="home-discover">
         <SectionHead
           eyebrow={recent.length ? 'CONTINUE EXPLORING' : 'NEW BRANCHES OF UNDERSTANDING'}

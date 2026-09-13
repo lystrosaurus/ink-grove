@@ -7,10 +7,27 @@
   "artifactType": "synthesis",
   "sourceType": "synthesis",
   "author": "Ink Grove · AI 辅助创作",
-  "topics": ["认知", "决策", "行动", "系统"],
-  "concepts": ["判断力", "反馈", "系统思维", "认知偏差", "逆向思考", "微小改进"],
+  "topics": [
+    "认知",
+    "决策",
+    "行动",
+    "系统"
+  ],
+  "concepts": [
+    "判断力",
+    "反馈",
+    "系统思维",
+    "认知偏差",
+    "逆向思考",
+    "微小改进"
+  ],
   "visualStyle": "blueprint-field-laboratory",
-  "related": ["managerial-judgment", "poor-charlies-almanack", "cybernetics", "one-percent-rule"],
+  "related": [
+    "managerial-judgment",
+    "poor-charlies-almanack",
+    "cybernetics",
+    "one-percent-rule"
+  ],
   "connections": [
     {
       "target": "managerial-judgment",
@@ -37,7 +54,10 @@
       "label": "从现状基线出发，设计最小可逆行动"
     }
   ],
-  "artifact": { "renderer": "html", "src": "/artifacts/clear-thinking-lab/index.html" },
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/clear-thinking-lab/index.html"
+  },
   "cover": "/artifacts/clear-thinking-lab/cover.svg",
   "featured": true,
   "createdAt": "2026-09-12",

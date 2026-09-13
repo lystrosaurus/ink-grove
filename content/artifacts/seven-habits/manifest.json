@@ -60,9 +60,11 @@
   "featured": true,
   "createdAt": "2026-09-11",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/seven_habits_core_map.html"
+      "file:materials/seven_habits_core_map.html",
+      "https://ir.franklincovey.com/news-releases/news-release-details/7-habits-highly-effective-people-25th-anniversary-edition",
+      "https://www.franklincovey.com/habit-4/"
     ],
     "derivedFrom": []
   }

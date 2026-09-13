@@ -8,7 +8,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
 <p class="legend">先看眼前这一步。借提示、拆小步，或休息一下，都可以。</p>
 <section class="notebook"><h2 id="question" tabindex="-1">路标的下一块会是什么？</h2><div id="pattern" aria-label="路标规律"></div><div id="answers" class="answers" aria-label="尝试下一块路标"></div><div class="tools"><button id="show-hint">借一个提示</button><button id="easier">把这一步调小一点</button></div><p id="hint" hidden></p><p id="small-step" hidden></p><p id="result" role="status" aria-live="polite">可以猜，也可以先观察。卡住的时候，允许自己换个办法。</p></section>
 <aside id="reflection" class="reflection" hidden><p id="real-life"></p><small>想把这次发现留下，可以在花园页面的反思框里写一句，再亲手保存。</small></aside>
-<details><summary>再想一步</summary><p>小熊在同一条路上换了一个约定：这次是“圆、圆、三角”一组。刚才的分组办法还能用吗？</p><div id="deeper-pattern" class="pattern" aria-label="新的路标约定"></div><div id="deeper-answers" class="answers"></div><p id="deeper-result" role="status" aria-live="polite"></p><p>一段有限的路标，也可以编出别的规则。说清你的约定，请同伴接下一块。</p></details>
+<details><summary>再想一步</summary><p>小熊在同一条路上换了一个约定：这次是“圆、圆、三角”一组。刚才的分组办法还能用吗？</p><div id="deeper-pattern" class="pattern" aria-label="新的路标约定"></div><div id="deeper-answers" class="answers"></div><p id="deeper-result" role="status" aria-live="polite"></p><p>一段有限的路标，也可以编出别的规则。说清你的约定，请同伴接下一块，再看看你们理解的是不是同一个约定。这里能接对路标，不表示每一种难题都该继续硬试。</p></details>
 </main><script>
 (() => {
   const $ = id => document.getElementById(id);
@@ -35,7 +35,7 @@ details{margin:24px auto;padding:15px 18px;border:1px dashed currentColor;border
   makePattern('deeper-pattern','deeper-answers',['○','○','△','○','○'],'△','新路标试试 ','deeper-result',true);
   $('show-hint').addEventListener('click', () => {
     $('hint').hidden = false; $('hint').textContent = '把“圆、三角”看成一小组。下一组从圆开始。';
-    $('result').textContent = '提示在这里。借一点帮助，也是照顾自己的练习。';
+    $('result').textContent = '提示在这里。你可以用自己的话说说“一组”是什么，再决定要不要继续。借帮助或停下来都可以。';
   });
   $('easier').addEventListener('click', () => {
     $('small-step').hidden = false; $('small-step').textContent = '先只看前两块：○、△。再看第二组：○、△。现在只问：下一组的第一块是谁？';

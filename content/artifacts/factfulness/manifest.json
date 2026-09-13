@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "factfulness",
+  "slug": "factfulness",
+  "title": "事实",
+  "subtitle": "给醒目的数字补上分母、分布、日期与趋势",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Hans Rosling / Ola Rosling / Anna Rosling Rönnlund",
+  "topics": [
+    "思考",
+    "判断"
+  ],
+  "concepts": [
+    "信息质量",
+    "概率思维",
+    "判断力"
+  ],
+  "visualStyle": "denominator-data-newsroom",
+  "related": [
+    "mindware",
+    "superforecasting",
+    "thinking-in-systems"
+  ],
+  "connections": [
+    {
+      "target": "mindware",
+      "type": "extends",
+      "concept": "information-quality",
+      "label": "将样本与概率思维推进到公共统计的分母和分布"
+    },
+    {
+      "target": "superforecasting",
+      "type": "related",
+      "concept": "probability",
+      "label": "区分历史数据核对与未来概率判断"
+    },
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "在时间尺度和结构中阅读指标变化"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/factfulness/index.html"
+  },
+  "cover": "/artifacts/factfulness/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://us.macmillan.com/books/9781250123824/factfulness/",
+      "https://www.gapminder.org/factfulness-book/"
+    ],
+    "derivedFrom": []
+  }
+}

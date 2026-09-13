@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "complexity-guided-tour",
+  "slug": "complexity-guided-tour",
+  "title": "复杂",
+  "subtitle": "从局部规则出发，观察整体图案如何长出来",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Melanie Mitchell",
+  "topics": [
+    "思考",
+    "决策"
+  ],
+  "concepts": [
+    "系统思维",
+    "思维模型",
+    "假设验证"
+  ],
+  "visualStyle": "midnight-cellular-observatory",
+  "related": [
+    "thinking-in-systems",
+    "cybernetics",
+    "great-mental-models"
+  ],
+  "connections": [
+    {
+      "target": "thinking-in-systems",
+      "type": "related",
+      "concept": "systems-thinking",
+      "label": "从反馈结构延伸到计算、适应与涌现"
+    },
+    {
+      "target": "cybernetics",
+      "type": "related",
+      "concept": "feedback",
+      "label": "比较调节机制与局部互动形成的整体模式"
+    },
+    {
+      "target": "great-mental-models",
+      "type": "related",
+      "concept": "mental-models",
+      "label": "用明确规则和初始条件限制模型类比"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/complexity-guided-tour/index.html"
+  },
+  "cover": "/artifacts/complexity-guided-tour/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://academic.oup.com/book/51004",
+      "https://melaniemitchell.me/",
+      "https://www.complexityexplorer.org/explore/virtual-laboratory"
+    ],
+    "derivedFrom": []
+  }
+}

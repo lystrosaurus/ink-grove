@@ -58,9 +58,11 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/cybernetics_control_console.html"
+      "file:materials/cybernetics_control_console.html",
+      "https://mitpress.mit.edu/9780262537841/cybernetics-or-control-and-communication-in-the-animal-and-the-machine/",
+      "https://www.cds.caltech.edu/~murray/FBS/First_Edition.html"
     ],
     "derivedFrom": []
   }

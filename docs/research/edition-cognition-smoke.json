@@ -1,0 +1,123 @@
+[
+  {
+    "id": "asking-right-questions",
+    "steps": [
+      {
+        "selector": "#argument-role",
+        "action": "select",
+        "value": "assumption"
+      },
+      {
+        "selector": "#argument-check",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#argument-feedback",
+    "expectedText": "这是隐含假设"
+  },
+  {
+    "id": "make-it-stick",
+    "steps": [
+      {
+        "selector": "#reveal-answer",
+        "action": "click"
+      },
+      {
+        "selector": "#recall-rating",
+        "action": "select",
+        "value": "independent"
+      }
+    ],
+    "resultSelector": "#review-plan",
+    "expectedText": "7 天后"
+  },
+  {
+    "id": "superforecasting",
+    "steps": [
+      {
+        "selector": "#forecast-probability",
+        "action": "fill",
+        "value": "80"
+      },
+      {
+        "selector": "#forecast-outcome",
+        "action": "select",
+        "value": "1"
+      },
+      {
+        "selector": "#score-forecast",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#forecast-score",
+    "expectedText": "0.040"
+  },
+  {
+    "id": "thinking-fast-slow",
+    "steps": [
+      {
+        "selector": "#reference-point",
+        "action": "select",
+        "value": "120"
+      }
+    ],
+    "resultSelector": "#reference-result",
+    "expectedText": "少 20"
+  },
+  {
+    "id": "factfulness",
+    "steps": [
+      {
+        "selector": "#denominator-mode",
+        "action": "select",
+        "value": "rate"
+      }
+    ],
+    "resultSelector": "#comparison-result",
+    "expectedText": "B 城较高：4 对 2"
+  },
+  {
+    "id": "flow",
+    "steps": [
+      {
+        "selector": "#skill-level",
+        "action": "fill",
+        "value": "2"
+      },
+      {
+        "selector": "#challenge-level",
+        "action": "fill",
+        "value": "8"
+      },
+      {
+        "selector": "#flow-check",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#flow-guidance",
+    "expectedText": "挑战明显高于准备"
+  },
+  {
+    "id": "scientific-revolutions",
+    "steps": [
+      {
+        "selector": "#evidence-context",
+        "action": "select",
+        "value": "alternative"
+      }
+    ],
+    "resultSelector": "#paradigm-reading",
+    "expectedText": "开始比较竞争框架"
+  },
+  {
+    "id": "non-designers-design-book",
+    "steps": [
+      {
+        "selector": "#align-control",
+        "action": "click"
+      }
+    ],
+    "resultSelector": "#design-note",
+    "expectedText": "左边界对齐"
+  }
+]

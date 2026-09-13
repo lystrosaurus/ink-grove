@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "black-swan",
+  "slug": "black-swan",
+  "title": "黑天鹅",
+  "subtitle": "当历史样本漏掉关键事件，判断该留下什么余量",
+  "artifactType": "book",
+  "sourceType": "book",
+  "author": "Nassim Nicholas Taleb",
+  "topics": [
+    "风险",
+    "决策",
+    "概率"
+  ],
+  "concepts": [
+    "概率思维",
+    "信息质量",
+    "安全边际",
+    "认知偏差"
+  ],
+  "visualStyle": "midnight-tail-observatory",
+  "related": [
+    "intelligent-investor",
+    "managerial-judgment"
+  ],
+  "connections": [
+    {
+      "target": "intelligent-investor",
+      "type": "related",
+      "concept": "margin-of-safety",
+      "label": "把安全边际放到模型遗漏与尾部冲击中检验"
+    },
+    {
+      "target": "managerial-judgment",
+      "type": "related",
+      "concept": "cognitive-bias",
+      "label": "比较叙事错觉与判断偏差如何造成过度自信"
+    }
+  ],
+  "artifact": {
+    "renderer": "html",
+    "src": "/artifacts/black-swan/index.html"
+  },
+  "cover": "/artifacts/black-swan/cover.svg",
+  "featured": false,
+  "createdAt": "2026-09-13",
+  "provenance": {
+    "generatedBy": "ai",
+    "sources": [
+      "https://www.penguinrandomhouse.com/books/176226/the-black-swan-second-edition-by-nassim-nicholas-taleb/hardcover/",
+      "https://arxiv.org/abs/1208.1189"
+    ],
+    "derivedFrom": []
+  }
+}

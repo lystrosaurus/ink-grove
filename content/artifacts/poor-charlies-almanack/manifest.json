@@ -61,9 +61,11 @@
   "featured": true,
   "createdAt": "2026-09-12",
   "provenance": {
-    "generatedBy": "human",
+    "generatedBy": "hybrid",
     "sources": [
-      "file:materials/poor_charlies_almanack_decision_room.html"
+      "file:materials/poor_charlies_almanack_decision_room.html",
+      "https://www.poorcharliesalmanack.com/pca.php",
+      "https://www.berkshirehathaway.com/letters/2023ltr.pdf"
     ],
     "derivedFrom": []
   }

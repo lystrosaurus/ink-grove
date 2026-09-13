@@ -244,6 +244,7 @@ h1{
   .cell[data-label]::before{content:attr(data-label);display:block;margin-bottom:6px;color:var(--amber);font-size:12px;font-weight:800}
   .footer{padding:18px 22px;flex-direction:column;align-items:flex-start}
 }
+.edition-note{margin:32px 0;padding:clamp(20px,4vw,42px);border:1px solid currentColor;border-radius:12px;line-height:1.85}.edition-note h2{font-size:clamp(23px,3vw,32px);margin:0 0 18px}.edition-note h3{font-size:19px;margin:24px 0 8px}.edition-note p{margin:12px 0;max-width:78ch}.edition-note .edition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.edition-note article{padding:18px;border:1px dashed currentColor;border-radius:8px}.edition-note button,.edition-note input{font:inherit;padding:10px 12px;max-width:100%;min-height:44px;border:1px solid currentColor;border-radius:6px;color:inherit;background:transparent}.edition-note button{cursor:pointer;margin:6px 6px 6px 0}.edition-note button[aria-pressed=true]{outline:2px solid currentColor;outline-offset:2px}.edition-note :focus-visible{outline:3px solid #bb8865;outline-offset:4px}.edition-note label{display:grid;gap:6px;margin:10px 0}.edition-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.edition-note output{display:block;margin:16px 0;padding:16px;border-left:3px solid currentColor}.edition-source{font-size:13px;opacity:.85}@media(max-width:600px){.edition-note .edition-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -304,7 +305,7 @@ h1{
 <section class="section">
   <div class="section-head">
     <div><div class="chapter">02 · CROSS-BOOK MATRIX</div><h2>同一个现实问题，不同书分别解决哪一层？</h2></div>
-    <p>真正强大的地方不是“选一本最对的书”，而是让不同工具在正确层次上协同。</p>
+    <p>先问模型在这里凭什么适用，再决定是否组合；不同解释也可能竞争，不能仅因都听起来合理就相加。</p>
   </div>
 
   <div class="matrix">
@@ -323,7 +324,7 @@ h1{
     <div class="cell" data-label="长期结构"><p>七个习惯：让长期原则优先于即时反应。</p></div>
 
     <div class="cell rowhead">一个复杂问题怎么解决？</div>
-    <div class="cell" data-label="看自己"><p>认知觉醒：先消除自己的情绪和模糊。</p></div>
+    <div class="cell" data-label="看自己"><p>认知觉醒：先辨认情绪、事实与解释，不要求消除情绪。</p></div>
     <div class="cell" data-label="看世界"><p>系统之美：寻找结构、反馈和延迟。</p></div>
     <div class="cell" data-label="做判断"><p>思维模型：换多个模型重新看问题。</p></div>
     <div class="cell" data-label="采取行动"><p>麦肯锡方法：假设驱动 + MECE + 事实验证。</p></div>
@@ -355,7 +356,7 @@ h1{
 <section class="section">
   <div class="section-head">
     <div><div class="chapter">03 · THE INTEGRATED LOOP</div><h2>把这些书真正串起来：一个完整的认知—行动闭环</h2></div>
-    <p>这条闭环不是一次走完，而是不断重复。每次循环都会让你的模型、判断和能力稍微变好。</p>
+    <p>这条闭环不是一次走完，而是不断重复。每次循环都可能带来信息，但也可能强化错误；必须检查反馈质量、替代解释与模型失效。</p>
   </div>
 
   <div class="engine">
@@ -374,8 +375,8 @@ h1{
       <div class="rule"><b>原则 01｜先把现实看清，再急着行动</b><span>认知觉醒 + 系统之美 + 逻辑思维</span></div>
       <div class="rule"><b>原则 02｜不要只用一个模型解释世界</b><span>思维模型 + 如何阅读一本书</span></div>
       <div class="rule"><b>原则 03｜问题必须进入可验证状态</b><span>麦肯锡方法 + 刻意练习</span></div>
-      <div class="rule"><b>原则 04｜能力必须通过反馈获得</b><span>刻意练习 + 七个习惯</span></div>
-      <div class="rule"><b>原则 05｜长期自由来自能力、结构与杠杆</b><span>纳瓦尔宝典 + 创新者的窘境</span></div>
+      <div class="rule"><b>原则 04｜能力训练需要可解释的反馈</b><span>刻意练习 + 七个习惯</span></div>
+      <div class="rule"><b>原则 05｜让能力与结构接受现实检验</b><span>纳瓦尔宝典 + 创新者的窘境</span></div>
     </div>
   </div>
 </section>
@@ -391,13 +392,13 @@ h1{
     <div class="transition"><div class="tag">SHIFT 02</div><h3>从答案 → 模型</h3><p>不再执着一个标准答案，而是建立多个能够互相校验的解释框架。</p><div class="fromto">思维模型 · 逻辑思维</div></div>
     <div class="transition"><div class="tag">SHIFT 03</div><h3>从知道 → 能力</h3><p>不再满足于“我懂了”，而是让知识经过练习、反馈和复盘变成稳定能力。</p><div class="fromto">刻意练习 · 如何阅读一本书</div></div>
     <div class="transition"><div class="tag">SHIFT 04</div><h3>从效率 → 原则</h3><p>不再只追求做得快，而是先判断什么值得做、什么必须承担。</p><div class="fromto">七个习惯 · 人生十二法则</div></div>
-    <div class="transition"><div class="tag">SHIFT 05</div><h3>从劳动 → 复利</h3><p>不再把成长等同于投入更多时间，而是积累专长、系统、关系、作品与杠杆。</p><div class="fromto">纳瓦尔宝典 · 创新者的窘境</div></div>
+    <div class="transition"><div class="tag">SHIFT 05</div><h3>从加码 → 重看结构</h3><p>纳瓦尔的视角讨论专长与可复用成果；《创新者的窘境》检查组织的资源依赖与筛选标准。它们需要分别核对情境，不能共同推出个人财务自由。</p><div class="fromto">纳瓦尔宝典 · 创新者的窘境</div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="section-head">
-    <div><div class="chapter">05 · TWELVE QUESTIONS</div><h2>如果只保留一张卡片：这 12 个问题足够长期使用</h2></div>
+    <div><div class="chapter">05 · TWELVE QUESTIONS</div><h2>如果只保留一张卡片：这 12 个问题帮助开始，也需要随情境删改</h2></div>
     <p>它们不是书摘，而是一套可以直接带进工作、学习和人生决策里的通用提问框架。</p>
   </div>
 
@@ -411,7 +412,7 @@ h1{
     <div class="q"><div class="id">Q7</div><h3>哪一项能力限制了结果？</h3><p>把抽象目标拆成可训练技能。</p></div>
     <div class="q"><div class="id">Q8</div><h3>我怎样更快获得反馈？</h3><p>导师、数据、市场、作品、实验。</p></div>
     <div class="q"><div class="id">Q9</div><h3>什么是真正的要事？</h3><p>别让紧急事项替代长期重要事项。</p></div>
-    <div class="q"><div class="id">Q10</div><h3>什么值得我承担？</h3><p>意义通常来自责任而非便利。</p></div>
+    <div class="q"><div class="id">Q10</div><h3>什么值得我承担？</h3><p>责任可以提供意义；意义也可能来自关系、创造与体验，不必以承受更多为唯一答案。</p></div>
     <div class="q"><div class="id">Q11</div><h3>这套成功逻辑会不会过期？</h3><p>过去优势是否正在变成未来约束？</p></div>
     <div class="q"><div class="id">Q12</div><h3>如何让这次努力产生复利？</h3><p>沉淀为能力、作品、系统、关系或资产。</p></div>
   </div>
@@ -449,6 +450,7 @@ h1{
   </div>
 </section>
 
+<section class="edition-note"><p class="chapter">07 · WHEN MAPS DISAGREE</p><h2>十一种视角，怎样避免变成十一种借口？</h2><p>假设一家社区读书会的参与人数减少。一个人说“注意力变差了”，一个人说“反馈回路失效”，另一个人说“缺少激励”。这三句话都像解释，却还没有说明需要看什么证据。给问题贴上书名标签，并不会让原因变得更确定。</p><div class="edition-grid"><article><h3>解释甲：内容太难</h3><p>可检查的预期：首次参加的人在讨论概念时明显卡住，而老成员仍能参与。下一步：给同一主题补一张例子卡，询问哪里更容易进入；不能仅看人数变化。</p></article><article><h3>解释乙：时间安排冲突</h3><p>可检查的预期：缺席者仍想来，却在同一时段承担其他任务。下一步：向缺席者核实原因，比较可参加时段；先改课程难度可能完全无效。</p></article></div><h3>一次反证，比再加一个模型更有用</h3><p>如果访谈发现参与者都理解材料，只是晚班安排改变，应下调“内容太难”的解释。若改时段仍无人来，再看邀请方式、话语空间与退出体验。不要把所有不符合预期的现象都解释为“系统很复杂”，否则模型失去了被现实纠正的可能。</p><h3>给箭头写上条件</h3><p>“反馈 → 能力”之间，补上：任务目标足够明确、反馈与动作相关、能再次尝试。“杠杆 → 自由”之间，补上：风险有边界、收入与时间之间确有可持续的转化、没有把代价转给别人。没有这些条件，箭头只是愿望。地图负责提醒去哪里找证据，不替你省略证据。</p><p>需要认真保留的分歧：个人承担能改变部分行动，无法替代制度改变；结构解释能发现约束，也不能自动免除具体行为的责任。好的贯通，是把两者放进同一件真实事情，说明各自解释到哪一步。</p><p class="edition-source">本站原创综合案例，依据本页所列十一份站内作品的问题域整理；不是这些作者共同认可的理论。关系矩阵表示编辑选取的视角，不代表因果已被验证。</p></section>
 <footer class="footer">
   <strong>贯通思考 II · Intellectual Atlas</strong>
   <span>Awareness · Systems · Models · Logic · Problem Solving · Practice · Principles · Responsibility · Innovation · Leverage</span>
